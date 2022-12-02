@@ -1,0 +1,22 @@
+#!/usr/bin/env xonsh
+
+from rich.console import Console
+console = Console()
+
+version = "37"
+
+source_path = p"~/Projects/viperos"
+destination_path = pf"/var/lib/mock/viperos-{version}-x86_64/root/builddir/custom-config"
+
+console.rule(f"[bold cyan]Synchronizing config files to {destination_path}...", style="cyan")
+
+# Delete the destination
+sudo rm -rf @(destination_path)
+
+# Create the destination path
+sudo mkdir -p @(destination_path)
+
+# BTRFS copy the files
+sudo cp -rv --reflink=auto @(source_path) @(destination_path)
+
+console.print("Done", style="cyan")
