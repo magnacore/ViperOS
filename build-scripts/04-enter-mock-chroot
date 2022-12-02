@@ -9,4 +9,6 @@ mock_config_path = pf"~/Projects/viperos/mock-config/viperos-{version}-x86_64.cf
 
 console.rule(f"[bold cyan]Entering mock chroot...", style="cyan")
 
+sudo setenforce 0
+
 mock -r @(mock_config_path) --shell --isolation=simple --enable-network

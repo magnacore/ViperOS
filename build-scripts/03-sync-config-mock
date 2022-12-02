@@ -10,6 +10,8 @@ destination_path = pf"/var/lib/mock/viperos-{version}-x86_64/root/builddir/custo
 
 console.rule(f"[bold cyan]Synchronizing config files to {destination_path}...", style="cyan")
 
+sudo setenforce 0
+
 # Delete the destination
 sudo rm -rf @(destination_path)
 
@@ -18,5 +20,7 @@ sudo mkdir -p @(destination_path)
 
 # BTRFS copy the files
 sudo cp -rv --reflink=auto @(source_path) @(destination_path)
+
+sudo setenforce 1
 
 console.print("Done", style="cyan")
