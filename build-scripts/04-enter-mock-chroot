@@ -1,0 +1,12 @@
+#!/usr/bin/env xonsh
+
+from rich.console import Console
+console = Console()
+
+version = "37"
+
+mock_config_path = pf"~/Projects/viperos/mock-config/viperos-{version}-x86_64.cfg"
+
+console.rule(f"[bold cyan]Entering mock chroot...", style="cyan")
+
+mock -r @(mock_config_path) --shell --isolation=simple --enable-network

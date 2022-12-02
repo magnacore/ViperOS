@@ -1,6 +1,8 @@
 #!/usr/bin/env xonsh
 
-mock_config_path = p"~/Projects/viperos/mock-config/viperos-37-x86_64.cfg"
+version = "37"
+
+mock_config_path = pf"~/Projects/viperos/mock-config/viperos-{version}-x86_64.cfg"
 
 mock -r @(mock_config_path) --init
 mock -r @(mock_config_path) --install lorax-lmc-novirt vim-minimal pykickstart git
