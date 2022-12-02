@@ -1,0 +1,5 @@
+#!/usr/bin/env xonsh
+
+sudo dnf install mock pykickstart -y
+
+sudo usermod -a -G mock @($(whoami).strip())
