@@ -1,0 +1,55 @@
+###############################################################################
+# DEFAULT LIST OF PLACES 
+###############################################################################
+#
+# This file contains a list of default Places (or servers) that will be added
+# automatically to the list of available Places in CmapTools (for ALL users).
+#
+# Each server is specified using a set of properties with prefix "serverN.",
+# where N is 0,1,2,3,...,M.
+#
+# serverN.type=<the type of the server>
+# serverN.name=<the name of the server>
+# serverN.host=<the hostname or IP address of the server>
+# serverN.port=<the port of the server> (Defaults to 4447)
+# serverN.webserverport=<the web server port of the server> (Defaults to 80)
+#
+###############################################################################
+
+server0.type=cmapV3
+server0.name=IHMC Public Cmaps
+server0.host=cmapspublic.ihmc.us
+server0.port=8080
+server0.webserverport=443
+
+server1.type=cmapV3
+server1.name=IHMC Public Cmaps (2)
+server1.host=cmapspublic2.ihmc.us
+server1.port=8080
+server1.webserverport=443
+
+server2.type=cmapV3
+server2.name=IHMC Public Cmaps (3)
+server2.host=cmapspublic3.ihmc.us
+server2.port=8080
+server2.webserverport=443
+
+server3.type=cmapV3
+server3.name=IHMC Sample Knowledge Models
+server3.host=cmapskm.ihmc.us
+server3.port=8080
+server3.webserverport=443
+
+server4.type=wordnetService
+server4.name=IHMC Wordnet Server
+server4.host=cmapwn.ihmc.us
+server4.port=5000
+server4.webserverport=80
+
+server5.type=cmapV3
+server5.name=IHMC CmapCloud
+server5.host=cmapscloud.ihmc.us
+server5.port=80
+server5.webserverport=443
+server5.preferred=false
+server5.hideInMyPlaces=true

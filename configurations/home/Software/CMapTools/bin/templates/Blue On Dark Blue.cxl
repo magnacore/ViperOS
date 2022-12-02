@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns:dcterms="http://purl.org/dc/terms/" xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+    <map>
+        <style-sheet-list>
+            <style-sheet id="_Default_">
+                <map-style background-image="___Undefined___" background-color="0,0,61,255" image-style="not-drawn" image-top-left="0,0"/>
+                <concept-style font-name="Arial" font-size="13" font-style="bold" font-color="255,255,255,255" text-margin="4" background-color="62,121,196,255" background-image-style="full" border-color="11,18,122,255" border-style="solid"
+                    border-thickness="2" border-shape="rounded-rectangle" text-alignment="center" shadow-color="none" min-width="-1" min-height="-1"/>
+                <linking-phrase-style font-name="Arial" font-size="12" font-style="bold" font-color="215,234,237,255" text-margin="1" background-color="0,0,255,0" background-image-style="full" border-color="0,0,0,255" border-style="none" border-thickness="1"
+                    border-shape="rectangle" text-alignment="center" shadow-color="none" min-width="-1" min-height="-1"/>
+                <connection-style color="215,234,237,255" style="solid" thickness="1" type="straight" arrowhead="if-to-concept-and-slopes-up"/>
+                <resource-style font-name="SanSerif" font-size="12" font-style="plain" font-color="0,0,0,255" background-color="192,192,192,255"/>
+            </style-sheet>
+        </style-sheet-list>
+    </map>
+</cmap>

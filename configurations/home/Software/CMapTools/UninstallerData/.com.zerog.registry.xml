@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registry install_date="2020-07-11 18:58:15" version="1.1" last_modified="2020-07-11 18:58:21">
+	<products>
+		<product name="IHMC CmapTools v6.04" id="dda6c534-1ec1-11b2-be59-eb78986748b5" upgrade_id="dda6c534-1ec1-11b2-be59-eb78986748b5" version="6.0.4.0" copyright="2019" info_url="http://cmap.ihmc.us" support_url="cmapsupport@ihmc.us" location="/home/manuj/APPS/CMapTools" last_modified="2020-07-11 18:58:19">
+		<![CDATA[The CmapTools program empowers users to construct, navigate, share and criticize knowledge models represented as concept maps. It allows users to, among many other features, construct their Cmaps in their personal computer, share them on servers (CmapServers) anywhere on the Internet, link their Cmaps to other Cmaps on servers, automatically create web pages of their concept maps on servers, edit their maps synchronously (at the same time) with other users on the Internet, and search the web for information relevant to a concept map.]]>
+			<vendor name="Institute for Human &amp; Machine Cognition" id="dda6c535-1ec1-11b2-be58-eb78986748b5" home_page="http://www.ihmc.us" email="cmapsupport@ihmc.us"/>
+			<feature short_name="Applica" name="Application" last_modified="2020-07-11 18:58:19">
+			<![CDATA[This installs the application components.]]>
+				<component ref_id="dda6d66c-1ec1-11b2-be81-eb78986748b5" version="1.0.0.0" location="/home/manuj/APPS/CMapTools/UninstallerData/Change CmapTools Installation"/>
+				<component ref_id="1ed51126-1ed6-11b2-bf49-8511ab1fa994" version="1.0.0.0" location="/home/manuj/APPS/CMapTools/jre"/>
+				<component ref_id="dda6d66c-1ec1-11b2-be80-eb78986748b5" version="1.0.0.0" location="/home/manuj/APPS/CMapTools/bin/CmapTools"/>
+			</feature>
+			<feature short_name="Advance" name="Advance Configuration" last_modified="2020-07-11 18:58:19">
+			<![CDATA[Advance Configuration for network environments.]]>
+				<component ref_id="dda6d66c-1ec1-11b2-be81-eb78986748b5" version="1.0.0.0" location="/home/manuj/APPS/CMapTools/UninstallerData/Change CmapTools Installation"/>
+				<component ref_id="1ed51126-1ed6-11b2-bf49-8511ab1fa994" version="1.0.0.0" location="/home/manuj/APPS/CMapTools/jre"/>
+				<component ref_id="dda6d66c-1ec1-11b2-be80-eb78986748b5" version="1.0.0.0" location="/home/manuj/APPS/CMapTools/bin/CmapTools"/>
+			</feature>
+		</product>
+	</products>
+	<components>
+		<component id="dda6d66c-1ec1-11b2-be81-eb78986748b5" version="1.0.0.0" name="InstallAnywhere Uninstall Component" location="/home/manuj/APPS/CMapTools/UninstallerData/Change CmapTools Installation" vendor="Institute for Human &amp; Machine Cognition">
+			<resource keyfile="false" name="IHMC_CmapTools_v6.04_Install_07_11_2020_18_58_15.log" location="/home/manuj/APPS/CMapTools/logs/IHMC_CmapTools_v6.04_Install_07_11_2020_18_58_15.log" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="CMapTools" location="/home/manuj/APPS/CMapTools" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="jre" location="/home/manuj/APPS/CMapTools/jre" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="UninstallerData" location="/home/manuj/APPS/CMapTools/UninstallerData" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="logs" location="/home/manuj/APPS/CMapTools/logs" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="uninstaller.jar" location="/home/manuj/APPS/CMapTools/UninstallerData/uninstaller.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="true" name="Change CmapTools Installation" location="/home/manuj/APPS/CMapTools/UninstallerData/Change CmapTools Installation" type="executable" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Change CmapTools Installation.lax" location="/home/manuj/APPS/CMapTools/UninstallerData/Change CmapTools Installation.lax" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name=".com.zerog.registry.xml" location="/home/manuj/APPS/CMapTools/UninstallerData/.com.zerog.registry.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+		</component>
+		<component id="1ed51126-1ed6-11b2-bf49-8511ab1fa994" version="1.0.0.0" name="InstallAnywhere VM Component" location="/home/manuj/APPS/CMapTools/jre" vendor="Institute for Human &amp; Machine Cognition">
+			<resource keyfile="true" name="jre" location="/home/manuj/APPS/CMapTools/jre" type="post_processed_dir" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+		</component>
+		<component id="dda6d66c-1ec1-11b2-be80-eb78986748b5" version="1.0.0.0" name="C- Applica" location="/home/manuj/APPS/CMapTools/bin/CmapTools">
+			<resource keyfile="false" name="classes" location="/home/manuj/APPS/CMapTools/classes" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="core.jar" location="/home/manuj/APPS/CMapTools/classes/core.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="nlk.jar" location="/home/manuj/APPS/CMapTools/classes/nlk.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="slp.jar" location="/home/manuj/APPS/CMapTools/classes/slp.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="updater.jar" location="/home/manuj/APPS/CMapTools/classes/updater.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="wordnetClient.jar" location="/home/manuj/APPS/CMapTools/classes/wordnetClient.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="wsServer-client.jar" location="/home/manuj/APPS/CMapTools/classes/wsServer-client.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="AppleStubs.jar" location="/home/manuj/APPS/CMapTools/classes/AppleStubs.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="activation.jar" location="/home/manuj/APPS/CMapTools/classes/activation.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="winlaf-0.5.jar" location="/home/manuj/APPS/CMapTools/classes/winlaf-0.5.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="JimiProClasses.zip" location="/home/manuj/APPS/CMapTools/classes/JimiProClasses.zip" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jmyspell-1.0.0-beta1.jar" location="/home/manuj/APPS/CMapTools/classes/jmyspell-1.0.0-beta1.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="mail.jar" location="/home/manuj/APPS/CMapTools/classes/mail.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xercesImpl.jar" location="/home/manuj/APPS/CMapTools/classes/xercesImpl.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xml-apis.jar" location="/home/manuj/APPS/CMapTools/classes/xml-apis.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="tm-extractors-0.4.jar" location="/home/manuj/APPS/CMapTools/classes/tm-extractors-0.4.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="lucene-core-2.4-dev.jar" location="/home/manuj/APPS/CMapTools/classes/lucene-core-2.4-dev.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="PDFBox-0.7.3-dev.jar" location="/home/manuj/APPS/CMapTools/classes/PDFBox-0.7.3-dev.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="FontBox-0.1.0-dev.jar" location="/home/manuj/APPS/CMapTools/classes/FontBox-0.1.0-dev.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="log4j-1.2.12.jar" location="/home/manuj/APPS/CMapTools/classes/log4j-1.2.12.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="symantec.jar" location="/home/manuj/APPS/CMapTools/classes/symantec.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jniregistry.jar" location="/home/manuj/APPS/CMapTools/classes/jniregistry.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="socks.jar" location="/home/manuj/APPS/CMapTools/classes/socks.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="concurrent.jar" location="/home/manuj/APPS/CMapTools/classes/concurrent.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="poi-scratchpad-2.5.1-final-20040804.jar" location="/home/manuj/APPS/CMapTools/classes/poi-scratchpad-2.5.1-final-20040804.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="poi-2.5.1-final-20040804.jar" location="/home/manuj/APPS/CMapTools/classes/poi-2.5.1-final-20040804.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="poi-contrib-2.5.1-final-20040804.jar" location="/home/manuj/APPS/CMapTools/classes/poi-contrib-2.5.1-final-20040804.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="commons-digester.jar" location="/home/manuj/APPS/CMapTools/classes/commons-digester.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="commons-collections.jar" location="/home/manuj/APPS/CMapTools/classes/commons-collections.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="commons-beanutils.jar" location="/home/manuj/APPS/CMapTools/classes/commons-beanutils.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="commons-beanutils-bean-collections.jar" location="/home/manuj/APPS/CMapTools/classes/commons-beanutils-bean-collections.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="commons-beanutils-core.jar" location="/home/manuj/APPS/CMapTools/classes/commons-beanutils-core.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="commons-logging.jar" location="/home/manuj/APPS/CMapTools/classes/commons-logging.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="commons-io-2.2.jar" location="/home/manuj/APPS/CMapTools/classes/commons-io-2.2.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="commons-codec-1.6.jar" location="/home/manuj/APPS/CMapTools/classes/commons-codec-1.6.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ldapbp.jar" location="/home/manuj/APPS/CMapTools/classes/ldapbp.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="mscrypto.jar" location="/home/manuj/APPS/CMapTools/classes/mscrypto.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="wstx-asl-2.9.3.jar" location="/home/manuj/APPS/CMapTools/classes/wstx-asl-2.9.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="stax-api-1.0.jar" location="/home/manuj/APPS/CMapTools/classes/stax-api-1.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="axiom-impl.jar" location="/home/manuj/APPS/CMapTools/classes/axiom-impl.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="axiom-api.jar" location="/home/manuj/APPS/CMapTools/classes/axiom-api.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="openide-lookup-1.9-patched-1.0.jar" location="/home/manuj/APPS/CMapTools/classes/openide-lookup-1.9-patched-1.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jdom-1.0.jar" location="/home/manuj/APPS/CMapTools/classes/jdom-1.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jas-plotter-2.2.jar" location="/home/manuj/APPS/CMapTools/classes/jas-plotter-2.2.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="freehep-io-2.2.2.jar" location="/home/manuj/APPS/CMapTools/classes/freehep-io-2.2.2.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="freehep-graphicsio-swf-2.3.jar" location="/home/manuj/APPS/CMapTools/classes/freehep-graphicsio-swf-2.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="freehep-graphicsio-svg-2.3.jar" location="/home/manuj/APPS/CMapTools/classes/freehep-graphicsio-svg-2.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="freehep-graphicsio-ps-2.3.jar" location="/home/manuj/APPS/CMapTools/classes/freehep-graphicsio-ps-2.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="freehep-graphicsio-pdf-2.3.jar" location="/home/manuj/APPS/CMapTools/classes/freehep-graphicsio-pdf-2.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="freehep-graphicsio-java-2.3.jar" location="/home/manuj/APPS/CMapTools/classes/freehep-graphicsio-java-2.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="freehep-graphicsio-emf-2.3.jar" location="/home/manuj/APPS/CMapTools/classes/freehep-graphicsio-emf-2.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="freehep-graphicsio-2.3.jar" location="/home/manuj/APPS/CMapTools/classes/freehep-graphicsio-2.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="freehep-graphicsbase-2.3.jar" location="/home/manuj/APPS/CMapTools/classes/freehep-graphicsbase-2.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="freehep-graphics2d-2.3.jar" location="/home/manuj/APPS/CMapTools/classes/freehep-graphics2d-2.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="java-json.jar" location="/home/manuj/APPS/CMapTools/classes/java-json.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="lib" location="/home/manuj/APPS/CMapTools/lib" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="libwmflite-0.2.so.7" location="/home/manuj/APPS/CMapTools/lib/libwmflite-0.2.so.7" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libtiff.so.4" location="/home/manuj/APPS/CMapTools/lib/libtiff.so.4" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libSM.so.6" location="/home/manuj/APPS/CMapTools/lib/libSM.so.6" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libpng12.so.0" location="/home/manuj/APPS/CMapTools/lib/libpng12.so.0" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libjpeg.so.62" location="/home/manuj/APPS/CMapTools/lib/libjpeg.so.62" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libjasper.so.1" location="/home/manuj/APPS/CMapTools/lib/libjasper.so.1" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libICE.so.6" location="/home/manuj/APPS/CMapTools/lib/libICE.so.6" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libgomp.so.1" location="/home/manuj/APPS/CMapTools/lib/libgomp.so.1" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libfreetype.so.6" location="/home/manuj/APPS/CMapTools/lib/libfreetype.so.6" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ImageMagick-6.4.3" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="config" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/config" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="configure.xml" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/config/configure.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="delegates.xml" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/config/delegates.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="english.xml" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/config/english.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="francais.xml" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/config/francais.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ghostscript" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/config/ghostscript" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="fonts" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/config/ghostscript/fonts" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="n019003l.pfb" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/config/ghostscript/fonts/n019003l.pfb" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="locale.xml" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/config/locale.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="type-ghostscript.xml" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/config/type-ghostscript.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="type-solaris.xml" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/config/type-solaris.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="type-windows.xml" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/config/type-windows.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="type.xml" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/config/type.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="modules-Q16" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/modules-Q16" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="coders" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/modules-Q16/coders" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="filters" location="/home/manuj/APPS/CMapTools/lib/ImageMagick-6.4.3/modules-Q16/filters" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="pkgconfig" location="/home/manuj/APPS/CMapTools/lib/pkgconfig" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="libavcodec.pc" location="/home/manuj/APPS/CMapTools/lib/pkgconfig/libavcodec.pc" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libavdevice.pc" location="/home/manuj/APPS/CMapTools/lib/pkgconfig/libavdevice.pc" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libavfilter.pc" location="/home/manuj/APPS/CMapTools/lib/pkgconfig/libavfilter.pc" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libavformat.pc" location="/home/manuj/APPS/CMapTools/lib/pkgconfig/libavformat.pc" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libavutil.pc" location="/home/manuj/APPS/CMapTools/lib/pkgconfig/libavutil.pc" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libswresample.pc" location="/home/manuj/APPS/CMapTools/lib/pkgconfig/libswresample.pc" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libswscale.pc" location="/home/manuj/APPS/CMapTools/lib/pkgconfig/libswscale.pc" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libswscale.a" location="/home/manuj/APPS/CMapTools/lib/libswscale.a" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libswresample.a" location="/home/manuj/APPS/CMapTools/lib/libswresample.a" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libavutil.a" location="/home/manuj/APPS/CMapTools/lib/libavutil.a" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libavformat.a" location="/home/manuj/APPS/CMapTools/lib/libavformat.a" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libavfilter.a" location="/home/manuj/APPS/CMapTools/lib/libavfilter.a" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libavdevice.a" location="/home/manuj/APPS/CMapTools/lib/libavdevice.a" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libavcodec.a" location="/home/manuj/APPS/CMapTools/lib/libavcodec.a" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="share" location="/home/manuj/APPS/CMapTools/share" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="ImageMagick-6.4.3" location="/home/manuj/APPS/CMapTools/share/ImageMagick-6.4.3" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="ChangeLog" location="/home/manuj/APPS/CMapTools/share/ImageMagick-6.4.3/ChangeLog" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="config" location="/home/manuj/APPS/CMapTools/share/ImageMagick-6.4.3/config" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="coder.xml" location="/home/manuj/APPS/CMapTools/share/ImageMagick-6.4.3/config/coder.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="colors.xml" location="/home/manuj/APPS/CMapTools/share/ImageMagick-6.4.3/config/colors.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="log.xml" location="/home/manuj/APPS/CMapTools/share/ImageMagick-6.4.3/config/log.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="magic.xml" location="/home/manuj/APPS/CMapTools/share/ImageMagick-6.4.3/config/magic.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="mime.xml" location="/home/manuj/APPS/CMapTools/share/ImageMagick-6.4.3/config/mime.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sRGB.icm" location="/home/manuj/APPS/CMapTools/share/ImageMagick-6.4.3/config/sRGB.icm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="thresholds.xml" location="/home/manuj/APPS/CMapTools/share/ImageMagick-6.4.3/config/thresholds.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="LICENSE" location="/home/manuj/APPS/CMapTools/share/ImageMagick-6.4.3/LICENSE" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="NEWS.txt" location="/home/manuj/APPS/CMapTools/share/ImageMagick-6.4.3/NEWS.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ffmpeg" location="/home/manuj/APPS/CMapTools/share/ffmpeg" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="ffprobe.xsd" location="/home/manuj/APPS/CMapTools/share/ffmpeg/ffprobe.xsd" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libvpx-1080p.ffpreset" location="/home/manuj/APPS/CMapTools/share/ffmpeg/libvpx-1080p.ffpreset" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libvpx-1080p50_60.ffpreset" location="/home/manuj/APPS/CMapTools/share/ffmpeg/libvpx-1080p50_60.ffpreset" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libvpx-360p.ffpreset" location="/home/manuj/APPS/CMapTools/share/ffmpeg/libvpx-360p.ffpreset" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libvpx-720p.ffpreset" location="/home/manuj/APPS/CMapTools/share/ffmpeg/libvpx-720p.ffpreset" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libvpx-720p50_60.ffpreset" location="/home/manuj/APPS/CMapTools/share/ffmpeg/libvpx-720p50_60.ffpreset" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libx264-ipod320.ffpreset" location="/home/manuj/APPS/CMapTools/share/ffmpeg/libx264-ipod320.ffpreset" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libx264-ipod640.ffpreset" location="/home/manuj/APPS/CMapTools/share/ffmpeg/libx264-ipod640.ffpreset" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="include" location="/home/manuj/APPS/CMapTools/include" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="libavcodec" location="/home/manuj/APPS/CMapTools/include/libavcodec" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="avcodec.h" location="/home/manuj/APPS/CMapTools/include/libavcodec/avcodec.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="avfft.h" location="/home/manuj/APPS/CMapTools/include/libavcodec/avfft.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="dxva2.h" location="/home/manuj/APPS/CMapTools/include/libavcodec/dxva2.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="opt.h" location="/home/manuj/APPS/CMapTools/include/libavcodec/opt.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="vaapi.h" location="/home/manuj/APPS/CMapTools/include/libavcodec/vaapi.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="vda.h" location="/home/manuj/APPS/CMapTools/include/libavcodec/vda.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="vdpau.h" location="/home/manuj/APPS/CMapTools/include/libavcodec/vdpau.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="version.h" location="/home/manuj/APPS/CMapTools/include/libavcodec/version.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xvmc.h" location="/home/manuj/APPS/CMapTools/include/libavcodec/xvmc.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libavdevice" location="/home/manuj/APPS/CMapTools/include/libavdevice" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="avdevice.h" location="/home/manuj/APPS/CMapTools/include/libavdevice/avdevice.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libavfilter" location="/home/manuj/APPS/CMapTools/include/libavfilter" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="avcodec.h" location="/home/manuj/APPS/CMapTools/include/libavfilter/avcodec.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="avfilter.h" location="/home/manuj/APPS/CMapTools/include/libavfilter/avfilter.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="avfiltergraph.h" location="/home/manuj/APPS/CMapTools/include/libavfilter/avfiltergraph.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="buffersink.h" location="/home/manuj/APPS/CMapTools/include/libavfilter/buffersink.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="version.h" location="/home/manuj/APPS/CMapTools/include/libavfilter/version.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="vsrc_buffer.h" location="/home/manuj/APPS/CMapTools/include/libavfilter/vsrc_buffer.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libavformat" location="/home/manuj/APPS/CMapTools/include/libavformat" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="avformat.h" location="/home/manuj/APPS/CMapTools/include/libavformat/avformat.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="avio.h" location="/home/manuj/APPS/CMapTools/include/libavformat/avio.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="version.h" location="/home/manuj/APPS/CMapTools/include/libavformat/version.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libavutil" location="/home/manuj/APPS/CMapTools/include/libavutil" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="adler32.h" location="/home/manuj/APPS/CMapTools/include/libavutil/adler32.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="aes.h" location="/home/manuj/APPS/CMapTools/include/libavutil/aes.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="attributes.h" location="/home/manuj/APPS/CMapTools/include/libavutil/attributes.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="audioconvert.h" location="/home/manuj/APPS/CMapTools/include/libavutil/audioconvert.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="avassert.h" location="/home/manuj/APPS/CMapTools/include/libavutil/avassert.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="avconfig.h" location="/home/manuj/APPS/CMapTools/include/libavutil/avconfig.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="avstring.h" location="/home/manuj/APPS/CMapTools/include/libavutil/avstring.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="avutil.h" location="/home/manuj/APPS/CMapTools/include/libavutil/avutil.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="base64.h" location="/home/manuj/APPS/CMapTools/include/libavutil/base64.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="bswap.h" location="/home/manuj/APPS/CMapTools/include/libavutil/bswap.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="common.h" location="/home/manuj/APPS/CMapTools/include/libavutil/common.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="cpu.h" location="/home/manuj/APPS/CMapTools/include/libavutil/cpu.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="crc.h" location="/home/manuj/APPS/CMapTools/include/libavutil/crc.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="dict.h" location="/home/manuj/APPS/CMapTools/include/libavutil/dict.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="error.h" location="/home/manuj/APPS/CMapTools/include/libavutil/error.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="eval.h" location="/home/manuj/APPS/CMapTools/include/libavutil/eval.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="fifo.h" location="/home/manuj/APPS/CMapTools/include/libavutil/fifo.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="file.h" location="/home/manuj/APPS/CMapTools/include/libavutil/file.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="imgutils.h" location="/home/manuj/APPS/CMapTools/include/libavutil/imgutils.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="intfloat.h" location="/home/manuj/APPS/CMapTools/include/libavutil/intfloat.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="intfloat_readwrite.h" location="/home/manuj/APPS/CMapTools/include/libavutil/intfloat_readwrite.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="intreadwrite.h" location="/home/manuj/APPS/CMapTools/include/libavutil/intreadwrite.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="lfg.h" location="/home/manuj/APPS/CMapTools/include/libavutil/lfg.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="log.h" location="/home/manuj/APPS/CMapTools/include/libavutil/log.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="lzo.h" location="/home/manuj/APPS/CMapTools/include/libavutil/lzo.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="mathematics.h" location="/home/manuj/APPS/CMapTools/include/libavutil/mathematics.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="md5.h" location="/home/manuj/APPS/CMapTools/include/libavutil/md5.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="mem.h" location="/home/manuj/APPS/CMapTools/include/libavutil/mem.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="opt.h" location="/home/manuj/APPS/CMapTools/include/libavutil/opt.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="parseutils.h" location="/home/manuj/APPS/CMapTools/include/libavutil/parseutils.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="pixdesc.h" location="/home/manuj/APPS/CMapTools/include/libavutil/pixdesc.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="pixfmt.h" location="/home/manuj/APPS/CMapTools/include/libavutil/pixfmt.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="random_seed.h" location="/home/manuj/APPS/CMapTools/include/libavutil/random_seed.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="rational.h" location="/home/manuj/APPS/CMapTools/include/libavutil/rational.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="samplefmt.h" location="/home/manuj/APPS/CMapTools/include/libavutil/samplefmt.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sha.h" location="/home/manuj/APPS/CMapTools/include/libavutil/sha.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libswresample" location="/home/manuj/APPS/CMapTools/include/libswresample" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="swresample.h" location="/home/manuj/APPS/CMapTools/include/libswresample/swresample.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libswscale" location="/home/manuj/APPS/CMapTools/include/libswscale" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="swscale.h" location="/home/manuj/APPS/CMapTools/include/libswscale/swscale.h" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="dictionaries" location="/home/manuj/APPS/CMapTools/dictionaries" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="cs_CZ.zip" location="/home/manuj/APPS/CMapTools/dictionaries/cs_CZ.zip" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="de_DE.zip" location="/home/manuj/APPS/CMapTools/dictionaries/de_DE.zip" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="en_US.zip" location="/home/manuj/APPS/CMapTools/dictionaries/en_US.zip" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="es_ES.zip" location="/home/manuj/APPS/CMapTools/dictionaries/es_ES.zip" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="fi_FI.zip" location="/home/manuj/APPS/CMapTools/dictionaries/fi_FI.zip" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="fr_FR.zip" location="/home/manuj/APPS/CMapTools/dictionaries/fr_FR.zip" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="it_IT.zip" location="/home/manuj/APPS/CMapTools/dictionaries/it_IT.zip" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="pt_BR.zip" location="/home/manuj/APPS/CMapTools/dictionaries/pt_BR.zip" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sv_SE.zip" location="/home/manuj/APPS/CMapTools/dictionaries/sv_SE.zip" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="bin" location="/home/manuj/APPS/CMapTools/bin" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="lax.jar" location="/home/manuj/APPS/CMapTools/bin/lax.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="CmapTools" location="/home/manuj/APPS/CMapTools/bin/CmapTools" type="executable" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="CmapTools.lax" location="/home/manuj/APPS/CMapTools/bin/CmapTools.lax" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="modules.xml" location="/home/manuj/APPS/CMapTools/bin/modules.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="places.txt" location="/home/manuj/APPS/CMapTools/bin/places.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="lax.jar" location="/home/manuj/APPS/CMapTools/bin/lax.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Updater" location="/home/manuj/APPS/CMapTools/bin/Updater" type="executable" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Updater.lax" location="/home/manuj/APPS/CMapTools/bin/Updater.lax" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="cmaptools.cfg" location="/home/manuj/APPS/CMapTools/bin/cmaptools.cfg" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DefaultStyleSheet.cxl" location="/home/manuj/APPS/CMapTools/bin/DefaultStyleSheet.cxl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="readme.txt" location="/home/manuj/APPS/CMapTools/bin/readme.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="slp.conf" location="/home/manuj/APPS/CMapTools/bin/slp.conf" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="cmapclientservices.jar" location="/home/manuj/APPS/CMapTools/bin/cmapclientservices.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="imgman" location="/home/manuj/APPS/CMapTools/bin/imgman" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="" location="com.zerog.ia.customcode.utils.GetJREVersion " type="customcode" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ffmpeg" location="/home/manuj/APPS/CMapTools/bin/ffmpeg" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="templates" location="/home/manuj/APPS/CMapTools/bin/templates" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="White On White.cxl" location="/home/manuj/APPS/CMapTools/bin/templates/White On White.cxl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="White On Light Blue.cxl" location="/home/manuj/APPS/CMapTools/bin/templates/White On Light Blue.cxl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="White On Dark Blue.cxl" location="/home/manuj/APPS/CMapTools/bin/templates/White On Dark Blue.cxl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Orange On Black.cxl" location="/home/manuj/APPS/CMapTools/bin/templates/Orange On Black.cxl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Gray On White.cxl" location="/home/manuj/APPS/CMapTools/bin/templates/Gray On White.cxl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Blue On Dark Blue.cxl" location="/home/manuj/APPS/CMapTools/bin/templates/Blue On Dark Blue.cxl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Black On Gray.cxl" location="/home/manuj/APPS/CMapTools/bin/templates/Black On Gray.cxl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Beige On White.cxl" location="/home/manuj/APPS/CMapTools/bin/templates/Beige On White.cxl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Beige On Dark Green.cxl" location="/home/manuj/APPS/CMapTools/bin/templates/Beige On Dark Green.cxl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="licenses" location="/home/manuj/APPS/CMapTools/licenses" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="CmapTools-license.txt" location="/home/manuj/APPS/CMapTools/licenses/CmapTools-license.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jakarta-log4j-license.txt" location="/home/manuj/APPS/CMapTools/licenses/jakarta-log4j-license.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="JAF-v1.0.1-license.txt" location="/home/manuj/APPS/CMapTools/licenses/JAF-v1.0.1-license.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="tm-extractors-license.txt" location="/home/manuj/APPS/CMapTools/licenses/tm-extractors-license.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="PDFBox-license.txt" location="/home/manuj/APPS/CMapTools/licenses/PDFBox-license.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="lucene-license.txt" location="/home/manuj/APPS/CMapTools/licenses/lucene-license.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="JavaMailv1.2-license.txt" location="/home/manuj/APPS/CMapTools/licenses/JavaMailv1.2-license.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jakarta-poi-license.txt" location="/home/manuj/APPS/CMapTools/licenses/jakarta-poi-license.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="winlaf-license.txt" location="/home/manuj/APPS/CMapTools/licenses/winlaf-license.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="help" location="/home/manuj/APPS/CMapTools/help" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="index.html" location="/home/manuj/APPS/CMapTools/help/index.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="CmapHelp_es" location="/home/manuj/APPS/CMapTools/help/CmapHelp_es" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="index.html" location="/home/manuj/APPS/CMapTools/help/CmapHelp_es/index.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="CmapHelp_fi" location="/home/manuj/APPS/CMapTools/help/CmapHelp_fi" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="index.html" location="/home/manuj/APPS/CMapTools/help/CmapHelp_fi/index.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="CmapHelp_fr" location="/home/manuj/APPS/CMapTools/help/CmapHelp_fr" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="index.html" location="/home/manuj/APPS/CMapTools/help/CmapHelp_fr/index.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="CmapHelp_it" location="/home/manuj/APPS/CMapTools/help/CmapHelp_it" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="index.html" location="/home/manuj/APPS/CMapTools/help/CmapHelp_it/index.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="logs" location="/home/manuj/APPS/CMapTools/logs" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="CmapTools" location="/home/manuj/APPS/CMapTools/CmapTools" type="shortcut" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[]]>
+			</resource>
+			<resource keyfile="false" name="Uninstall CmapTools" location="/home/manuj/APPS/CMapTools/Uninstall CmapTools" type="shortcut" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[]]>
+			</resource>
+		</component>
+	</components>
+</registry>
