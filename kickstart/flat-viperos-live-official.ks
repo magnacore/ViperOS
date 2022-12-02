@@ -498,6 +498,7 @@ wget
 #@x-software-development
 @virtualization
 git
+git-lfs
 # gtk3-devel - part of gnome software development
 ffmpeg
 # timeshift
