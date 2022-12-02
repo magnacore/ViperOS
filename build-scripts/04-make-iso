@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+version=37
+
+livemedia-creator --ks "/builddir/custom-config/viperos/kickstart/flat-viperos-$version-live-official.ks" --no-virt --resultdir /var/lmc --project ViperOS --make-iso --volid "ViperOS-$version" --iso-only --iso-name "ViperOS-$version-x86_64.iso" --releasever "$version" --macboot
