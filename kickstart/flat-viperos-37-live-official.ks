@@ -27,6 +27,7 @@ services --disabled="sshd" --enabled="NetworkManager,ModemManager"
 # System timezone
 timezone IST
 
+# ViperOS Modification
 # Use network installation
 url --mirrorlist="https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch"
 repo --name="fedora" --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch --excludepkgs="fedora-repos,kernel,kernel-core,kernel-modules,kernel-devel*,kernel-modules-extra,glibc*,dnf,dnf-automatic,dnf-data,python3-dnf,yum,libnsl,mesa*,nautilus*,pciutils,gst-editing-services,rygel,lutris,gnome-shell,gnome-initial-setup,vkBasalt*,mangohud*,gamescope*,libliftoff*,blender*,fedora-workstation-repositories,flatpak*,setup,mutter*,gnome-control-center*,gnome-shell-extension-sound-output-device-chooser,gnome-extensions-app,wine-desktop,wine-core,wine,winetricks,gnome-shell-extension-pop-shell,gtk4,fedora-logos,gdm,fedora-release*,anaconda*,dnf-plugins-core,dnf-utils,python3-dnf-plugins-core,python3-dnf-plugin-leaves,python3-dnf-plugin-local,python3-dnf-plugin-modulesync,python3-dnf-plugin-post-transaction-actions,python3-dnf-plugin-show-leaves,python3-dnf-plugin-versionlock,desktop-backgrounds*,firefox*,firefox,xorg-x11-server-Xwayland,shim,rocm*,qgnomeplatform*,setroubleshoot*,SDL2*,dnfdaemon,amd-gpu-firmware,neofetch,mesa*"
@@ -387,46 +388,6 @@ restorecon -R /home/liveuser
 
 EOF
 
-echo "---------------------------------------------------";
-echo "| Rebranding as ViperOS                             |";
-echo "---------------------------------------------------";
-
-echo "viperos" > /etc/fedora-release
-echo "viperos" > /etc/system-release
-echo "cpe:/o:viperos:viperos:37" > /etc/system-release-cpe
-echo "VIPEROS Kernel \r on an \m (\l)" > /etc/issue
-echo "VIPEROS Kernel \r on an \m (\l)" > /etc/issue.net
-
-cat >/etc/os-release << EOF
-NAME="ViperOS"
-VERSION="37 (Black Mamba)"
-ID=viperos
-VERSION_ID=37
-VERSION_CODENAME="Black Mamba"
-PLATFORM_ID="platform:f37"
-PRETTY_NAME="ViperOS-37 (Black Mamba)"
-ANSI_COLOR="0;38;2;60;110;180"
-LOGO=fedora-logo-icon
-CPE_NAME="cpe:/o:viperosproject:viperos:37"
-DEFAULT_HOSTNAME="viperos"
-HOME_URL="https://www.datasolveseverything.com/"
-DOCUMENTATION_URL="https://docs.fedoraproject.org/en-US/fedora/f37/system-administrators-guide/"
-SUPPORT_URL="https://ask.fedoraproject.org/"
-BUG_REPORT_URL="https://bugzilla.redhat.com/"
-REDHAT_BUGZILLA_PRODUCT="Fedora"
-REDHAT_BUGZILLA_PRODUCT_VERSION=37
-REDHAT_SUPPORT_PRODUCT="Fedora"
-REDHAT_SUPPORT_PRODUCT_VERSION=37
-VARIANT="Xfce"
-VARIANT_ID=xfce
-EOF
-
-echo "---------------------------------------------------";
-echo "| Rebranding complete                              |";
-echo "---------------------------------------------------";
-
-plymouth-set-default-theme details -R
-
 %end
 
 %packages
@@ -461,7 +422,7 @@ wget
 -xfce4-eyes-plugin
 -xfce4-sensors-plugin
 
-# Custom packages
+# ViperOS Modification
 @fonts
 @hardware-support
 @multimedia
@@ -571,12 +532,13 @@ qdirstat
 
 %end
 
+# ViperOS Modification
 ###################################
 ### Post Installation - NO CHROOT
 ###################################
 %post --nochroot
 
-cp -fr /builddir/delete_me.md /mnt/sysimage/etc/skel
+# cp -fr /builddir/delete_me.md /mnt/sysimage/etc/skel
 
 cp --remove-destination /etc/resolv.conf /mnt/sysimage/etc/resolv.conf
 
@@ -588,11 +550,54 @@ cp --remove-destination /etc/resolv.conf /mnt/sysimage/etc/resolv.conf
 
 %end
 
+# ViperOS Modification
 ###################################
 ### Post Installation
 ###################################
 %post
 
+echo "---------------------------------------------------";
+echo "| Rebranding as ViperOS                             |";
+echo "---------------------------------------------------";
+
+echo "viperos" > /etc/fedora-release
+echo "viperos" > /etc/system-release
+echo "cpe:/o:viperos:viperos:37" > /etc/system-release-cpe
+echo "VIPEROS Kernel \r on an \m (\l)" > /etc/issue
+echo "VIPEROS Kernel \r on an \m (\l)" > /etc/issue.net
+
+cat >/etc/os-release << EOF
+NAME="ViperOS"
+VERSION="37 (Black Mamba)"
+ID=viperos
+VERSION_ID=37
+VERSION_CODENAME="Black Mamba"
+PLATFORM_ID="platform:f37"
+PRETTY_NAME="ViperOS-37 (Black Mamba)"
+ANSI_COLOR="0;38;2;60;110;180"
+LOGO=fedora-logo-icon
+CPE_NAME="cpe:/o:viperosproject:viperos:37"
+DEFAULT_HOSTNAME="viperos"
+HOME_URL="https://www.datasolveseverything.com/"
+DOCUMENTATION_URL="https://docs.fedoraproject.org/en-US/fedora/f37/system-administrators-guide/"
+SUPPORT_URL="https://ask.fedoraproject.org/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+REDHAT_BUGZILLA_PRODUCT="Fedora"
+REDHAT_BUGZILLA_PRODUCT_VERSION=37
+REDHAT_SUPPORT_PRODUCT="Fedora"
+REDHAT_SUPPORT_PRODUCT_VERSION=37
+VARIANT="Xfce"
+VARIANT_ID=xfce
+EOF
+
+echo "---------------------------------------------------";
+echo "| Rebranding complete                              |";
+echo "---------------------------------------------------";
+
+# Set plymouth theme
+plymouth-set-default-theme details -R
+
+# Install Flatpaks
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 flatpak install flathub com.github.tchx84.Flatseal -y
@@ -632,6 +637,7 @@ flatpak install flathub se.manyver.Manyverse -y
 flatpak install flathub org.gnome.seahorse.Application -y
 flatpak install flathub com.obsproject.Studio -y
 
+# Install rpms
 dnf -y install https://launchpad.net/veracrypt/trunk/1.25.9/+download/veracrypt-1.25.9-CentOS-8-x86_64.rpm
 
 # Install VS Code
