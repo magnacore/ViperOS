@@ -535,7 +535,6 @@ zathura-djvu
 zathura-pdf-mupdf
 neovim
 calcurse
-git
 nodejs
 bleachbit
 dnf-plugin-system-upgrade
