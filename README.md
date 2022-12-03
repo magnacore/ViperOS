@@ -45,6 +45,7 @@ Below is a non-exhaustive list of pre-installed packages:
 - Calcurse
 - Bleachbit
 - QDirStat
+- Youtube downloader
 
 ### Education
 - Libreoffice
