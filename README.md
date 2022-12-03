@@ -7,7 +7,7 @@ Vim inspired, Python powered, keyboard driven GNU/Linux distro for scientists, p
 - Easy Python customizable
 - Year 2000 nostalgia
 - Sane preconfigured defaults for NeoVim, Ranger, Xonsh, Qtile, Rofi et. al. to get you started
-- XFCE desktop, GUI apps also available
+- XFCE desktop, TUI driven (GUI apps also available)
 - ~50 sample productivity Python scripts to get you started and modify
 - Video tutorials on how to use
 - 1500+ scientific Python libraries preconfigured through Anaconda
