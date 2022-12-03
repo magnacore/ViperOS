@@ -1,0 +1,34 @@
+#!/usr/bin/env xonsh
+
+from rich.console import Console
+import sys
+import os
+
+myhome = os.path.expanduser('~')
+sys.path.append(f"{myhome}/Bin")
+console = Console()
+
+from utilities import get_user_selection
+
+version = "37"
+
+mock_config_path = pf"~/Projects/viperos/mock-config/viperos-{version}-x86_64.cfg"
+
+console.rule(f"[bold cyan]Mock teardown...", style="cyan")
+
+options = ['Clean', 'Scrub']
+
+console.print(f"[bold cyan]Select method: ")
+choice = get_user_selection(options)
+
+sudo setenforce 0
+
+if choice == 'Clean':
+    mock -r @(mock_config_path) --clean
+else:
+    # scrubbing will delete all downloaded packages from cache
+    mock -r @(mock_config_path) --scrub=all
+
+sudo setenforce 1
+
+console.print("Done", style="cyan")
