@@ -3,10 +3,7 @@
 from rich.console import Console
 console = Console()
 
-version = "37"
-
-iso_path = pf"/var/lib/mock/viperos-{version}-x86_64/root/var/lmc"
-config_path = pf"/var/lib/mock/viperos-{version}-x86_64/root/builddir/custom-config"
+from viperos_globals import destination_path, iso_path
 
 console.rule(f"[bold cyan]Extracting ISO and post process...", style="cyan")
 
@@ -18,7 +15,7 @@ sudo mv @(iso_path)/*.iso $HOME
 sudo rm -rf @(iso_path)
 
 # Delete the config directory
-sudo rm -rf @(config_path)
+sudo rm -rf @(destination_path)
 
 sudo setenforce 1
 

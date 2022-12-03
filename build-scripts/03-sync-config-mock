@@ -3,10 +3,7 @@
 from rich.console import Console
 console = Console()
 
-version = "37"
-
-source_path = p"~/Projects/viperos"
-destination_path = pf"/var/lib/mock/viperos-{version}-x86_64/root/builddir/custom-config"
+from viperos_globals import source_path, destination_path
 
 console.rule(f"[bold cyan]Synchronizing config files to {destination_path}...", style="cyan")
 

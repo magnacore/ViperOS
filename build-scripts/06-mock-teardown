@@ -9,10 +9,7 @@ sys.path.append(f"{myhome}/Bin")
 console = Console()
 
 from utilities import get_user_selection
-
-version = "37"
-
-mock_config_path = pf"~/Projects/viperos/mock-config/viperos-{version}-x86_64.cfg"
+from viperos_globals import mock_config_path
 
 console.rule(f"[bold cyan]Mock teardown...", style="cyan")
 
