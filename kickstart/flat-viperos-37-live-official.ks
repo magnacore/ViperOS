@@ -636,6 +636,7 @@ flatpak install flathub net.jami.Jami -y
 flatpak install flathub se.manyver.Manyverse -y
 flatpak install flathub org.gnome.seahorse.Application -y
 flatpak install flathub com.obsproject.Studio -y
+flatpak install flathub com.github.micahflee.torbrowser-launcher -y
 
 # Install rpms
 dnf -y install https://launchpad.net/veracrypt/trunk/1.25.9/+download/veracrypt-1.25.9-CentOS-8-x86_64.rpm
