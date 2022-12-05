@@ -1,0 +1,36 @@
+{
+  "build": "hbdeaff8_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/ripgrep-13.0.0-hbdeaff8_0",
+  "features": "",
+  "files": [
+    "bin/rg"
+  ],
+  "fn": "ripgrep-13.0.0-hbdeaff8_0.conda",
+  "legacy_bz2_md5": "d779da19cd9367b371d36ca451a4fef1",
+  "legacy_bz2_size": 1427609,
+  "license": "MIT AND Unlicense",
+  "license_family": "Other",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/ripgrep-13.0.0-hbdeaff8_0",
+    "type": 1
+  },
+  "md5": "84bcb22256029a3497ff713616d4fd2a",
+  "name": "ripgrep",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/ripgrep-13.0.0-hbdeaff8_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "ripgrep==13.0.0=hbdeaff8_0",
+  "sha256": "4a7e02d8728a00e51f4419ca4fe90f40b87b87407001623a0b978708f8153264",
+  "size": 1197369,
+  "subdir": "linux-64",
+  "timestamp": 1659635547888,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/ripgrep-13.0.0-hbdeaff8_0.conda",
+  "version": "13.0.0"
+}

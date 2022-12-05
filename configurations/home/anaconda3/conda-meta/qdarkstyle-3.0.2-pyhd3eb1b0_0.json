@@ -1,0 +1,191 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/qdarkstyle-3.0.2-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "bin/qdarkstyle",
+    "bin/qdarkstyle.example",
+    "bin/qdarkstyle.utils",
+    "lib/python3.9/site-packages/QDarkStyle-3.0.2.dist-info/AUTHORS.rst",
+    "lib/python3.9/site-packages/QDarkStyle-3.0.2.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/QDarkStyle-3.0.2.dist-info/LICENSE.rst",
+    "lib/python3.9/site-packages/QDarkStyle-3.0.2.dist-info/METADATA",
+    "lib/python3.9/site-packages/QDarkStyle-3.0.2.dist-info/RECORD",
+    "lib/python3.9/site-packages/QDarkStyle-3.0.2.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/QDarkStyle-3.0.2.dist-info/WHEEL",
+    "lib/python3.9/site-packages/QDarkStyle-3.0.2.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/QDarkStyle-3.0.2.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/QDarkStyle-3.0.2.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/qdarkstyle/__init__.py",
+    "lib/python3.9/site-packages/qdarkstyle/__main__.py",
+    "lib/python3.9/site-packages/qdarkstyle/colorsystem.py",
+    "lib/python3.9/site-packages/qdarkstyle/dark/__init__.py",
+    "lib/python3.9/site-packages/qdarkstyle/dark/palette.py",
+    "lib/python3.9/site-packages/qdarkstyle/dark/style_rc.py",
+    "lib/python3.9/site-packages/qdarkstyle/example/__init__.py",
+    "lib/python3.9/site-packages/qdarkstyle/example/__main__.py",
+    "lib/python3.9/site-packages/qdarkstyle/example/ui/__init__.py",
+    "lib/python3.9/site-packages/qdarkstyle/example/ui/dw_buttons.ui",
+    "lib/python3.9/site-packages/qdarkstyle/example/ui/dw_containers_no_tabs.ui",
+    "lib/python3.9/site-packages/qdarkstyle/example/ui/dw_containers_tabs.ui",
+    "lib/python3.9/site-packages/qdarkstyle/example/ui/dw_displays.ui",
+    "lib/python3.9/site-packages/qdarkstyle/example/ui/dw_inputs_fields.ui",
+    "lib/python3.9/site-packages/qdarkstyle/example/ui/dw_inputs_no_fields.ui",
+    "lib/python3.9/site-packages/qdarkstyle/example/ui/dw_views.ui",
+    "lib/python3.9/site-packages/qdarkstyle/example/ui/dw_widgets.ui",
+    "lib/python3.9/site-packages/qdarkstyle/example/ui/mw_menus.ui",
+    "lib/python3.9/site-packages/qdarkstyle/light/__init__.py",
+    "lib/python3.9/site-packages/qdarkstyle/light/palette.py",
+    "lib/python3.9/site-packages/qdarkstyle/light/style_rc.py",
+    "lib/python3.9/site-packages/qdarkstyle/palette.py",
+    "lib/python3.9/site-packages/qdarkstyle/utils/__init__.py",
+    "lib/python3.9/site-packages/qdarkstyle/utils/__main__.py",
+    "lib/python3.9/site-packages/qdarkstyle/utils/images.py",
+    "lib/python3.9/site-packages/qdarkstyle/utils/scss.py",
+    "lib/python3.9/site-packages/qdarkstyle/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/__pycache__/__main__.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/__pycache__/colorsystem.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/dark/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/dark/__pycache__/palette.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/dark/__pycache__/style_rc.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/example/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/example/__pycache__/__main__.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/example/ui/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/light/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/light/__pycache__/palette.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/light/__pycache__/style_rc.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/__pycache__/palette.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/utils/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/utils/__pycache__/__main__.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/utils/__pycache__/images.cpython-39.pyc",
+    "lib/python3.9/site-packages/qdarkstyle/utils/__pycache__/scss.cpython-39.pyc"
+  ],
+  "fn": "qdarkstyle-3.0.2-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "3d049afb98cb4563fafeb9428e76c7e6",
+  "legacy_bz2_size": 320534,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/qdarkstyle-3.0.2-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "83cab86af9eda9b0ce1909d747249b74",
+  "name": "qdarkstyle",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/qdarkstyle-3.0.2-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "python-scripts/qdarkstyle",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/qdarkstyle_1617386714626/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "e1ea23d1a2afc446c3c64f999af8c2868e2858fe986e28d8a3b0424f143c9765",
+        "sha256_in_prefix": "d21e75a77603bec9914c574127c7d9ea5d546e65b6ac1df4cddc0533ceced6fb",
+        "size_in_bytes": 501
+      },
+      {
+        "_path": "python-scripts/qdarkstyle.example",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/qdarkstyle_1617386714626/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "bc33f06f9530caa2d255001d522141bec7a5f35e5395e84e627e545b271e1a3b",
+        "sha256_in_prefix": "5974d5aab29eaf9e2a1576f3d1d9b7f63bf32803935c9bfb3920c409fdbabbdf",
+        "size_in_bytes": 509
+      },
+      {
+        "_path": "python-scripts/qdarkstyle.utils",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/qdarkstyle_1617386714626/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "c3bacd70b657d7932f904bafa99a47e2957afd91519aa9fa784a30103fd1f56d",
+        "sha256_in_prefix": "45a65aed24881fdeb5e38d985e1ca5bfb4f12acd182cf7b419b50e749a0c5e9d",
+        "size_in_bytes": 507
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/__pycache__/__main__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/__pycache__/colorsystem.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/dark/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/dark/__pycache__/palette.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/dark/__pycache__/style_rc.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/example/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/example/__pycache__/__main__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/example/ui/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/light/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/light/__pycache__/palette.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/light/__pycache__/style_rc.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/__pycache__/palette.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/utils/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/utils/__pycache__/__main__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/utils/__pycache__/images.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qdarkstyle/utils/__pycache__/scss.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "qdarkstyle==3.0.2=pyhd3eb1b0_0",
+  "sha256": "209f42ab01247721220c06057e4ed60b563afd3e0a71fb31b997c9de42840af0",
+  "size": 344639,
+  "subdir": "noarch",
+  "timestamp": 1617386752562,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/qdarkstyle-3.0.2-pyhd3eb1b0_0.conda",
+  "version": "3.0.2"
+}

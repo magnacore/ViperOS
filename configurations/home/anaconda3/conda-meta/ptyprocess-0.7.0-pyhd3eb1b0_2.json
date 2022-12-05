@@ -1,0 +1,70 @@
+{
+  "build": "pyhd3eb1b0_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/ptyprocess-0.7.0-pyhd3eb1b0_2",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/ptyprocess-0.7.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/ptyprocess-0.7.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/ptyprocess-0.7.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/ptyprocess-0.7.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/ptyprocess-0.7.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/ptyprocess-0.7.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/ptyprocess-0.7.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/ptyprocess/__init__.py",
+    "lib/python3.9/site-packages/ptyprocess/_fork_pty.py",
+    "lib/python3.9/site-packages/ptyprocess/ptyprocess.py",
+    "lib/python3.9/site-packages/ptyprocess/util.py",
+    "lib/python3.9/site-packages/ptyprocess/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/ptyprocess/__pycache__/_fork_pty.cpython-39.pyc",
+    "lib/python3.9/site-packages/ptyprocess/__pycache__/ptyprocess.cpython-39.pyc",
+    "lib/python3.9/site-packages/ptyprocess/__pycache__/util.cpython-39.pyc"
+  ],
+  "fn": "ptyprocess-0.7.0-pyhd3eb1b0_2.conda",
+  "legacy_bz2_md5": "62f3bb16b31fa9498a41fc4ad2b4f43c",
+  "legacy_bz2_size": 16774,
+  "license": "ISC",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/ptyprocess-0.7.0-pyhd3eb1b0_2",
+    "type": 1
+  },
+  "md5": "7441d2827d4bfbcc1fa308875a146246",
+  "name": "ptyprocess",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/ptyprocess-0.7.0-pyhd3eb1b0_2.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/ptyprocess/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/ptyprocess/__pycache__/_fork_pty.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/ptyprocess/__pycache__/ptyprocess.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/ptyprocess/__pycache__/util.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "ptyprocess==0.7.0=pyhd3eb1b0_2",
+  "sha256": "664254ab6de7f14d4077bdaeceda2bf0144fd841e257d07bb70427fadf08c588",
+  "size": 17499,
+  "subdir": "noarch",
+  "timestamp": 1609355038155,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/ptyprocess-0.7.0-pyhd3eb1b0_2.conda",
+  "version": "0.7.0"
+}

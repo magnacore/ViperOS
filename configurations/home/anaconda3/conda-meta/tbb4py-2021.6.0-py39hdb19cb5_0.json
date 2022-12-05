@@ -1,0 +1,55 @@
+{
+  "build": "py39hdb19cb5_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0",
+    "python >=3.9,<3.10.0a0",
+    "tbb >=2021.6.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/tbb4py-2021.6.0-py39hdb19cb5_0",
+  "features": "",
+  "files": [
+    "lib/libirml.so",
+    "lib/libirml.so.1",
+    "lib/python3.9/site-packages/TBB-0.2-py3.9.egg-info",
+    "lib/python3.9/site-packages/TBB.py",
+    "lib/python3.9/site-packages/__pycache__/TBB.cpython-39.pyc",
+    "lib/python3.9/site-packages/tbb/__init__.py",
+    "lib/python3.9/site-packages/tbb/__main__.py",
+    "lib/python3.9/site-packages/tbb/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/tbb/__pycache__/__main__.cpython-39.pyc",
+    "lib/python3.9/site-packages/tbb/__pycache__/api.cpython-39.pyc",
+    "lib/python3.9/site-packages/tbb/__pycache__/pool.cpython-39.pyc",
+    "lib/python3.9/site-packages/tbb/__pycache__/test.cpython-39.pyc",
+    "lib/python3.9/site-packages/tbb/_api.cpython-39-x86_64-linux-gnu.so",
+    "lib/python3.9/site-packages/tbb/api.py",
+    "lib/python3.9/site-packages/tbb/pool.py",
+    "lib/python3.9/site-packages/tbb/test.py"
+  ],
+  "fn": "tbb4py-2021.6.0-py39hdb19cb5_0.conda",
+  "legacy_bz2_md5": "6bdc78ba983443f77f747af74122558a",
+  "legacy_bz2_size": 254109,
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/tbb4py-2021.6.0-py39hdb19cb5_0",
+    "type": 1
+  },
+  "md5": "9af34eabb5f4892c565cfab5ab0af080",
+  "name": "tbb4py",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/tbb4py-2021.6.0-py39hdb19cb5_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "tbb4py==2021.6.0=py39hdb19cb5_0",
+  "sha256": "de64fb5e21c62825bca201a85265ebffbb127d4e0c64c43130144d16d598759f",
+  "size": 218260,
+  "subdir": "linux-64",
+  "timestamp": 1664813067044,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/tbb4py-2021.6.0-py39hdb19cb5_0.conda",
+  "version": "2021.6.0"
+}

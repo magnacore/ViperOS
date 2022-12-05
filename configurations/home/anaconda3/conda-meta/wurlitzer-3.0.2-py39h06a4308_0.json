@@ -1,0 +1,47 @@
+{
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/wurlitzer-3.0.2-py39h06a4308_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/__pycache__/wurlitzer.cpython-39.pyc",
+    "lib/python3.9/site-packages/wurlitzer-3.0.2.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/wurlitzer-3.0.2.dist-info/LICENSE",
+    "lib/python3.9/site-packages/wurlitzer-3.0.2.dist-info/METADATA",
+    "lib/python3.9/site-packages/wurlitzer-3.0.2.dist-info/RECORD",
+    "lib/python3.9/site-packages/wurlitzer-3.0.2.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/wurlitzer-3.0.2.dist-info/WHEEL",
+    "lib/python3.9/site-packages/wurlitzer-3.0.2.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/wurlitzer-3.0.2.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/wurlitzer.py"
+  ],
+  "fn": "wurlitzer-3.0.2-py39h06a4308_0.conda",
+  "legacy_bz2_md5": "cc8ac86c60bdf53b1ad724b3b1c5b1f2",
+  "legacy_bz2_size": 15316,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/wurlitzer-3.0.2-py39h06a4308_0",
+    "type": 1
+  },
+  "md5": "40e7d4bfb188f70836e043b6232ce59e",
+  "name": "wurlitzer",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/wurlitzer-3.0.2-py39h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "wurlitzer==3.0.2=py39h06a4308_0",
+  "sha256": "c721420dd158efd62a0aa1b647f62ffa19178d7ae01918743288e49e126d68c3",
+  "size": 15308,
+  "subdir": "linux-64",
+  "timestamp": 1638368193903,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/wurlitzer-3.0.2-py39h06a4308_0.conda",
+  "version": "3.0.2"
+}

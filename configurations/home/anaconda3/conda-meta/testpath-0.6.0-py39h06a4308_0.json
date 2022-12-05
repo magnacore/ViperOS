@@ -1,0 +1,56 @@
+{
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/testpath-0.6.0-py39h06a4308_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/testpath-0.6.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/testpath-0.6.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/testpath-0.6.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/testpath-0.6.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/testpath-0.6.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/testpath-0.6.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/testpath-0.6.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/testpath/__init__.py",
+    "lib/python3.9/site-packages/testpath/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/testpath/__pycache__/asserts.cpython-39.pyc",
+    "lib/python3.9/site-packages/testpath/__pycache__/commands.cpython-39.pyc",
+    "lib/python3.9/site-packages/testpath/__pycache__/env.cpython-39.pyc",
+    "lib/python3.9/site-packages/testpath/__pycache__/tempdir.cpython-39.pyc",
+    "lib/python3.9/site-packages/testpath/asserts.py",
+    "lib/python3.9/site-packages/testpath/cli-32.exe",
+    "lib/python3.9/site-packages/testpath/cli-64.exe",
+    "lib/python3.9/site-packages/testpath/commands.py",
+    "lib/python3.9/site-packages/testpath/env.py",
+    "lib/python3.9/site-packages/testpath/tempdir.py"
+  ],
+  "fn": "testpath-0.6.0-py39h06a4308_0.conda",
+  "legacy_bz2_md5": "462c2a924ef617f929787960affc972c",
+  "legacy_bz2_size": 93566,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/testpath-0.6.0-py39h06a4308_0",
+    "type": 1
+  },
+  "md5": "7502f9a141b4e5eefc788a8fb46f03d0",
+  "name": "testpath",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/testpath-0.6.0-py39h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "testpath==0.6.0=py39h06a4308_0",
+  "sha256": "35b83203fae9486317492244a5ee1d3b55d9ac945dd89398209ca4bc97f8be49",
+  "size": 86821,
+  "subdir": "linux-64",
+  "timestamp": 1655908613837,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/testpath-0.6.0-py39h06a4308_0.conda",
+  "version": "0.6.0"
+}

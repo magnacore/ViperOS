@@ -1,0 +1,66 @@
+{
+  "build": "h5893167_7",
+  "build_number": 7,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "bzip2 >=1.0.8,<2.0a0",
+    "libcurl >=7.82.0,<8.0a0",
+    "libgcc-ng >=11.2.0",
+    "libgfortran-ng",
+    "libgfortran5 >=11.2.0",
+    "zlib >=1.2.12,<1.3.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/cfitsio-3.470-h5893167_7",
+  "features": "",
+  "files": [
+    "bin/fitscopy",
+    "bin/fpack",
+    "bin/funpack",
+    "bin/imcopy",
+    "bin/smem",
+    "include/drvrsmem.h",
+    "include/fitsio.h",
+    "include/fitsio2.h",
+    "include/longnam.h",
+    "lib/libcfitsio.a",
+    "lib/libcfitsio.so",
+    "lib/libcfitsio.so.8",
+    "lib/libcfitsio.so.8.3.47",
+    "lib/pkgconfig/cfitsio.pc"
+  ],
+  "fn": "cfitsio-3.470-h5893167_7.conda",
+  "legacy_bz2_md5": "65a71d60ece0bd684f1be09b48de8d00",
+  "legacy_bz2_size": 1384722,
+  "license": "Other",
+  "license_family": "Other",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/cfitsio-3.470-h5893167_7",
+    "type": 1
+  },
+  "md5": "a4d4f7d9d9ee35e6abdd4acb1c14afea",
+  "name": "cfitsio",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/cfitsio-3.470-h5893167_7.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/cfitsio.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/cfitsio_1655814767790/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "a193046575e4a44ed6f9c44708aa2686f7789406e24144e4c0e969d6875447ac",
+        "sha256_in_prefix": "0f03aab32f67b9382e53dc85a96cb4d8a6be5b2eed61c71a5b5ee0d7be605df2",
+        "size_in_bytes": 548
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "cfitsio==3.470=h5893167_7",
+  "sha256": "6a125b70e3f1508bf93602323c0cfaa631435f4d9c76c387c8aa397ad2ea29a3",
+  "size": 852825,
+  "subdir": "linux-64",
+  "timestamp": 1655814890848,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/cfitsio-3.470-h5893167_7.conda",
+  "version": "3.470"
+}

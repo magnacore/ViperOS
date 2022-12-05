@@ -1,0 +1,162 @@
+{
+  "build": "pyhd3eb1b0_1002",
+  "build_number": 1002,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.6"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/tinycss-0.4-pyhd3eb1b0_1002",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/tinycss-0.4.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/tinycss-0.4.dist-info/LICENSE",
+    "lib/python3.9/site-packages/tinycss-0.4.dist-info/METADATA",
+    "lib/python3.9/site-packages/tinycss-0.4.dist-info/RECORD",
+    "lib/python3.9/site-packages/tinycss-0.4.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/tinycss-0.4.dist-info/WHEEL",
+    "lib/python3.9/site-packages/tinycss-0.4.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/tinycss-0.4.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/tinycss/__init__.py",
+    "lib/python3.9/site-packages/tinycss/color3.py",
+    "lib/python3.9/site-packages/tinycss/css21.py",
+    "lib/python3.9/site-packages/tinycss/decoding.py",
+    "lib/python3.9/site-packages/tinycss/fonts3.py",
+    "lib/python3.9/site-packages/tinycss/page3.py",
+    "lib/python3.9/site-packages/tinycss/parsing.py",
+    "lib/python3.9/site-packages/tinycss/tests/__init__.py",
+    "lib/python3.9/site-packages/tinycss/tests/speed.py",
+    "lib/python3.9/site-packages/tinycss/tests/test_api.py",
+    "lib/python3.9/site-packages/tinycss/tests/test_color3.py",
+    "lib/python3.9/site-packages/tinycss/tests/test_css21.py",
+    "lib/python3.9/site-packages/tinycss/tests/test_decoding.py",
+    "lib/python3.9/site-packages/tinycss/tests/test_fonts3.py",
+    "lib/python3.9/site-packages/tinycss/tests/test_page3.py",
+    "lib/python3.9/site-packages/tinycss/tests/test_tokenizer.py",
+    "lib/python3.9/site-packages/tinycss/token_data.py",
+    "lib/python3.9/site-packages/tinycss/tokenizer.py",
+    "lib/python3.9/site-packages/tinycss/version.py",
+    "lib/python3.9/site-packages/tinycss/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/__pycache__/color3.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/__pycache__/css21.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/__pycache__/decoding.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/__pycache__/fonts3.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/__pycache__/page3.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/__pycache__/parsing.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/tests/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/tests/__pycache__/speed.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_api.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_color3.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_css21.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_decoding.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_fonts3.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_page3.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_tokenizer.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/__pycache__/token_data.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/__pycache__/tokenizer.cpython-39.pyc",
+    "lib/python3.9/site-packages/tinycss/__pycache__/version.cpython-39.pyc"
+  ],
+  "fn": "tinycss-0.4-pyhd3eb1b0_1002.conda",
+  "legacy_bz2_md5": "ef1a47385dbedddc70c3e72f0a532edf",
+  "legacy_bz2_size": 39748,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/tinycss-0.4-pyhd3eb1b0_1002",
+    "type": 1
+  },
+  "md5": "d0beb2976a3a6022864ee3a8b6f1a5ef",
+  "name": "tinycss",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/tinycss-0.4-pyhd3eb1b0_1002.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/__pycache__/color3.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/__pycache__/css21.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/__pycache__/decoding.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/__pycache__/fonts3.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/__pycache__/page3.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/__pycache__/parsing.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/tests/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/tests/__pycache__/speed.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_api.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_color3.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_css21.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_decoding.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_fonts3.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_page3.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/tests/__pycache__/test_tokenizer.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/__pycache__/token_data.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/__pycache__/tokenizer.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/tinycss/__pycache__/version.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "tinycss==0.4=pyhd3eb1b0_1002",
+  "sha256": "40ec9797d19e42ae1b71b41d36463a38b5d482205f94f0ffd3a731e27a2e0886",
+  "size": 39680,
+  "subdir": "noarch",
+  "timestamp": 1617713837766,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/tinycss-0.4-pyhd3eb1b0_1002.conda",
+  "version": "0.4"
+}

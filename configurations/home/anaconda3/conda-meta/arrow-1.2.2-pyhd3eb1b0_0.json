@@ -1,0 +1,111 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.6",
+    "python-dateutil >=2.7.0",
+    "typing_extensions"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/arrow-1.2.2-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/arrow-1.2.2.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/arrow-1.2.2.dist-info/LICENSE",
+    "lib/python3.9/site-packages/arrow-1.2.2.dist-info/METADATA",
+    "lib/python3.9/site-packages/arrow-1.2.2.dist-info/RECORD",
+    "lib/python3.9/site-packages/arrow-1.2.2.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/arrow-1.2.2.dist-info/WHEEL",
+    "lib/python3.9/site-packages/arrow-1.2.2.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/arrow-1.2.2.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/arrow/__init__.py",
+    "lib/python3.9/site-packages/arrow/_version.py",
+    "lib/python3.9/site-packages/arrow/api.py",
+    "lib/python3.9/site-packages/arrow/arrow.py",
+    "lib/python3.9/site-packages/arrow/constants.py",
+    "lib/python3.9/site-packages/arrow/factory.py",
+    "lib/python3.9/site-packages/arrow/formatter.py",
+    "lib/python3.9/site-packages/arrow/locales.py",
+    "lib/python3.9/site-packages/arrow/parser.py",
+    "lib/python3.9/site-packages/arrow/py.typed",
+    "lib/python3.9/site-packages/arrow/util.py",
+    "lib/python3.9/site-packages/arrow/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/arrow/__pycache__/_version.cpython-39.pyc",
+    "lib/python3.9/site-packages/arrow/__pycache__/api.cpython-39.pyc",
+    "lib/python3.9/site-packages/arrow/__pycache__/arrow.cpython-39.pyc",
+    "lib/python3.9/site-packages/arrow/__pycache__/constants.cpython-39.pyc",
+    "lib/python3.9/site-packages/arrow/__pycache__/factory.cpython-39.pyc",
+    "lib/python3.9/site-packages/arrow/__pycache__/formatter.cpython-39.pyc",
+    "lib/python3.9/site-packages/arrow/__pycache__/locales.cpython-39.pyc",
+    "lib/python3.9/site-packages/arrow/__pycache__/parser.cpython-39.pyc",
+    "lib/python3.9/site-packages/arrow/__pycache__/util.cpython-39.pyc"
+  ],
+  "fn": "arrow-1.2.2-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "68ab081fc1e71466932dc96b9bba365a",
+  "legacy_bz2_size": 89832,
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/arrow-1.2.2-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "c7f20697755bb80bbd4736e3f322ae0b",
+  "name": "arrow",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/arrow-1.2.2-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/arrow/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/arrow/__pycache__/_version.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/arrow/__pycache__/api.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/arrow/__pycache__/arrow.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/arrow/__pycache__/constants.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/arrow/__pycache__/factory.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/arrow/__pycache__/formatter.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/arrow/__pycache__/locales.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/arrow/__pycache__/parser.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/arrow/__pycache__/util.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "arrow==1.2.2=pyhd3eb1b0_0",
+  "sha256": "697fa3af13657052ce459bd9c6b17676e846d69262d03a7b6ea68dc87c9fed1f",
+  "size": 94005,
+  "subdir": "noarch",
+  "timestamp": 1649166695584,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/arrow-1.2.2-pyhd3eb1b0_0.conda",
+  "version": "1.2.2"
+}

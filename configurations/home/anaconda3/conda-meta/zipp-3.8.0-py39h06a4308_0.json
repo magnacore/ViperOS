@@ -1,0 +1,47 @@
+{
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/zipp-3.8.0-py39h06a4308_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/__pycache__/zipp.cpython-39.pyc",
+    "lib/python3.9/site-packages/zipp-3.8.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/zipp-3.8.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/zipp-3.8.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/zipp-3.8.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/zipp-3.8.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/zipp-3.8.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/zipp-3.8.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/zipp-3.8.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/zipp.py"
+  ],
+  "fn": "zipp-3.8.0-py39h06a4308_0.conda",
+  "legacy_bz2_md5": "215b8728e7dd452f9dde848fabe76c66",
+  "legacy_bz2_size": 14968,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/zipp-3.8.0-py39h06a4308_0",
+    "type": 1
+  },
+  "md5": "fc097c13b189535669dd9a5d7ccc09bb",
+  "name": "zipp",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/zipp-3.8.0-py39h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "zipp==3.8.0=py39h06a4308_0",
+  "sha256": "963db5505eb25071ee8f92341e2b3ee3137a40b6a14e8430a65942699d6a278d",
+  "size": 15253,
+  "subdir": "linux-64",
+  "timestamp": 1652341885546,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/zipp-3.8.0-py39h06a4308_0.conda",
+  "version": "3.8.0"
+}

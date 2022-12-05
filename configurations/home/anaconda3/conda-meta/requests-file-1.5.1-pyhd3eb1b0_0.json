@@ -1,0 +1,55 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "requests >=1.0.0",
+    "six"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/requests-file-1.5.1-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/requests_file-1.5.1.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/requests_file-1.5.1.dist-info/LICENSE",
+    "lib/python3.9/site-packages/requests_file-1.5.1.dist-info/METADATA",
+    "lib/python3.9/site-packages/requests_file-1.5.1.dist-info/RECORD",
+    "lib/python3.9/site-packages/requests_file-1.5.1.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/requests_file-1.5.1.dist-info/WHEEL",
+    "lib/python3.9/site-packages/requests_file-1.5.1.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/requests_file-1.5.1.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/requests_file.py",
+    "lib/python3.9/site-packages/__pycache__/requests_file.cpython-39.pyc"
+  ],
+  "fn": "requests-file-1.5.1-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "5a134a0c8ca79061a91fd5ed67a30690",
+  "legacy_bz2_size": 7388,
+  "license": "Apache",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/requests-file-1.5.1-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "d4b63137b07532b614896d2e9490bdbd",
+  "name": "requests-file",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/requests-file-1.5.1-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/__pycache__/requests_file.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "requests-file==1.5.1=pyhd3eb1b0_0",
+  "sha256": "218376b61f8730dc3b05750fd2687d27288ecd40d25e11bd3d39d4b6ae62b0b0",
+  "size": 7763,
+  "subdir": "noarch",
+  "timestamp": 1629455797708,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/requests-file-1.5.1-pyhd3eb1b0_0.conda",
+  "version": "1.5.1"
+}

@@ -1,0 +1,62 @@
+{
+  "build": "py39h5eee18b_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/bitarray-2.5.1-py39h5eee18b_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/bitarray-2.5.1.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/bitarray-2.5.1.dist-info/LICENSE",
+    "lib/python3.9/site-packages/bitarray-2.5.1.dist-info/METADATA",
+    "lib/python3.9/site-packages/bitarray-2.5.1.dist-info/RECORD",
+    "lib/python3.9/site-packages/bitarray-2.5.1.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/bitarray-2.5.1.dist-info/WHEEL",
+    "lib/python3.9/site-packages/bitarray-2.5.1.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/bitarray-2.5.1.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/bitarray/__init__.py",
+    "lib/python3.9/site-packages/bitarray/__init__.pyi",
+    "lib/python3.9/site-packages/bitarray/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/bitarray/__pycache__/test_bitarray.cpython-39.pyc",
+    "lib/python3.9/site-packages/bitarray/__pycache__/test_util.cpython-39.pyc",
+    "lib/python3.9/site-packages/bitarray/__pycache__/util.cpython-39.pyc",
+    "lib/python3.9/site-packages/bitarray/_bitarray.cpython-39-x86_64-linux-gnu.so",
+    "lib/python3.9/site-packages/bitarray/_util.cpython-39-x86_64-linux-gnu.so",
+    "lib/python3.9/site-packages/bitarray/bitarray.h",
+    "lib/python3.9/site-packages/bitarray/py.typed",
+    "lib/python3.9/site-packages/bitarray/pythoncapi_compat.h",
+    "lib/python3.9/site-packages/bitarray/test_bitarray.py",
+    "lib/python3.9/site-packages/bitarray/test_data.pickle",
+    "lib/python3.9/site-packages/bitarray/test_util.py",
+    "lib/python3.9/site-packages/bitarray/util.py",
+    "lib/python3.9/site-packages/bitarray/util.pyi"
+  ],
+  "fn": "bitarray-2.5.1-py39h5eee18b_0.conda",
+  "legacy_bz2_md5": "ac09a2458c8e407a65ae32aa4afb3a10",
+  "legacy_bz2_size": 154053,
+  "license": "PSF-2.0",
+  "license_family": "PSF",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/bitarray-2.5.1-py39h5eee18b_0",
+    "type": 1
+  },
+  "md5": "7a73685fc618881d5e38a382107ff674",
+  "name": "bitarray",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/bitarray-2.5.1-py39h5eee18b_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "bitarray==2.5.1=py39h5eee18b_0",
+  "sha256": "7f200839cdbc9c31af79f94dcc644d85ea2e1651abfee05565ddfc4ad9843737",
+  "size": 158454,
+  "subdir": "linux-64",
+  "timestamp": 1657739725939,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/bitarray-2.5.1-py39h5eee18b_0.conda",
+  "version": "2.5.1"
+}

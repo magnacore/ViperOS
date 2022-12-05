@@ -1,0 +1,128 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "attrs >=16.1.0",
+    "python",
+    "six"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/automat-20.2.0-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/Automat-20.2.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/Automat-20.2.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/Automat-20.2.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/Automat-20.2.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/Automat-20.2.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/Automat-20.2.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/Automat-20.2.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/Automat-20.2.0.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/Automat-20.2.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/automat/__init__.py",
+    "lib/python3.9/site-packages/automat/_core.py",
+    "lib/python3.9/site-packages/automat/_discover.py",
+    "lib/python3.9/site-packages/automat/_introspection.py",
+    "lib/python3.9/site-packages/automat/_methodical.py",
+    "lib/python3.9/site-packages/automat/_test/__init__.py",
+    "lib/python3.9/site-packages/automat/_test/test_core.py",
+    "lib/python3.9/site-packages/automat/_test/test_discover.py",
+    "lib/python3.9/site-packages/automat/_test/test_methodical.py",
+    "lib/python3.9/site-packages/automat/_test/test_trace.py",
+    "lib/python3.9/site-packages/automat/_test/test_visualize.py",
+    "lib/python3.9/site-packages/automat/_visualize.py",
+    "lib/python3.9/site-packages/automat/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/automat/__pycache__/_core.cpython-39.pyc",
+    "lib/python3.9/site-packages/automat/__pycache__/_discover.cpython-39.pyc",
+    "lib/python3.9/site-packages/automat/__pycache__/_introspection.cpython-39.pyc",
+    "lib/python3.9/site-packages/automat/__pycache__/_methodical.cpython-39.pyc",
+    "lib/python3.9/site-packages/automat/_test/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/automat/_test/__pycache__/test_core.cpython-39.pyc",
+    "lib/python3.9/site-packages/automat/_test/__pycache__/test_discover.cpython-39.pyc",
+    "lib/python3.9/site-packages/automat/_test/__pycache__/test_methodical.cpython-39.pyc",
+    "lib/python3.9/site-packages/automat/_test/__pycache__/test_trace.cpython-39.pyc",
+    "lib/python3.9/site-packages/automat/_test/__pycache__/test_visualize.cpython-39.pyc",
+    "lib/python3.9/site-packages/automat/__pycache__/_visualize.cpython-39.pyc",
+    "bin/automat-visualize"
+  ],
+  "fn": "automat-20.2.0-py_0.conda",
+  "legacy_bz2_md5": "22661b754af2bce6143565bc186dbd6a",
+  "legacy_bz2_size": 31501,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/automat-20.2.0-py_0",
+    "type": 1
+  },
+  "md5": "d7473c2f9d0dd6d090c8c3e78aaa69b4",
+  "name": "automat",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/automat-20.2.0-py_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/automat/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/automat/__pycache__/_core.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/automat/__pycache__/_discover.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/automat/__pycache__/_introspection.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/automat/__pycache__/_methodical.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/automat/_test/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/automat/_test/__pycache__/test_core.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/automat/_test/__pycache__/test_discover.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/automat/_test/__pycache__/test_methodical.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/automat/_test/__pycache__/test_trace.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/automat/_test/__pycache__/test_visualize.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/automat/__pycache__/_visualize.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/automat-visualize",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "automat==20.2.0=py_0",
+  "sha256": "c53ed6c1cc91ba708d4823cb565c080e9589b76ee6f5c431a1d70d74d42e8816",
+  "size": 32017,
+  "subdir": "noarch",
+  "timestamp": 1600298502334,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/automat-20.2.0-py_0.conda",
+  "version": "20.2.0"
+}

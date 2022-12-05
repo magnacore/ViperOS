@@ -1,0 +1,63 @@
+{
+  "build": "pyhd3eb1b0_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "pycodestyle >=2.8",
+    "python >=3.6",
+    "toml"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/autopep8-1.6.0-pyhd3eb1b0_1",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/autopep8-1.6.0.dist-info/AUTHORS.rst",
+    "lib/python3.9/site-packages/autopep8-1.6.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/autopep8-1.6.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/autopep8-1.6.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/autopep8-1.6.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/autopep8-1.6.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/autopep8-1.6.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/autopep8-1.6.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/autopep8-1.6.0.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/autopep8-1.6.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/autopep8.py",
+    "lib/python3.9/site-packages/__pycache__/autopep8.cpython-39.pyc",
+    "bin/autopep8"
+  ],
+  "fn": "autopep8-1.6.0-pyhd3eb1b0_1.conda",
+  "legacy_bz2_md5": "b4df1b74f16fd2afaa7c6b00cff5a28e",
+  "legacy_bz2_size": 42254,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/autopep8-1.6.0-pyhd3eb1b0_1",
+    "type": 1
+  },
+  "md5": "98e7d4ac961b8f336ab24b3519728fed",
+  "name": "autopep8",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/autopep8-1.6.0-pyhd3eb1b0_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/__pycache__/autopep8.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/autopep8",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "autopep8==1.6.0=pyhd3eb1b0_1",
+  "sha256": "3d56f96e211a0b99353d7413db38b72fbaa5631c39c03b9fd7048d9350b9e815",
+  "size": 43591,
+  "subdir": "noarch",
+  "timestamp": 1650463866097,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/autopep8-1.6.0-pyhd3eb1b0_1.conda",
+  "version": "1.6.0"
+}

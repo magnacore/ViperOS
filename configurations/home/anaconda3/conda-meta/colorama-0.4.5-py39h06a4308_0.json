@@ -1,0 +1,57 @@
+{
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/colorama-0.4.5-py39h06a4308_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/colorama-0.4.5.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/colorama-0.4.5.dist-info/LICENSE.txt",
+    "lib/python3.9/site-packages/colorama-0.4.5.dist-info/METADATA",
+    "lib/python3.9/site-packages/colorama-0.4.5.dist-info/RECORD",
+    "lib/python3.9/site-packages/colorama-0.4.5.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/colorama-0.4.5.dist-info/WHEEL",
+    "lib/python3.9/site-packages/colorama-0.4.5.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/colorama-0.4.5.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/colorama/__init__.py",
+    "lib/python3.9/site-packages/colorama/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/colorama/__pycache__/ansi.cpython-39.pyc",
+    "lib/python3.9/site-packages/colorama/__pycache__/ansitowin32.cpython-39.pyc",
+    "lib/python3.9/site-packages/colorama/__pycache__/initialise.cpython-39.pyc",
+    "lib/python3.9/site-packages/colorama/__pycache__/win32.cpython-39.pyc",
+    "lib/python3.9/site-packages/colorama/__pycache__/winterm.cpython-39.pyc",
+    "lib/python3.9/site-packages/colorama/ansi.py",
+    "lib/python3.9/site-packages/colorama/ansitowin32.py",
+    "lib/python3.9/site-packages/colorama/initialise.py",
+    "lib/python3.9/site-packages/colorama/win32.py",
+    "lib/python3.9/site-packages/colorama/winterm.py"
+  ],
+  "fn": "colorama-0.4.5-py39h06a4308_0.conda",
+  "legacy_bz2_md5": "dcc5741f65f7be6b271ea5144ae9a438",
+  "legacy_bz2_size": 27588,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/colorama-0.4.5-py39h06a4308_0",
+    "type": 1
+  },
+  "md5": "78a932366685b400ea358a2204a3854f",
+  "name": "colorama",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/colorama-0.4.5-py39h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "colorama==0.4.5=py39h06a4308_0",
+  "sha256": "31f8737012e7eb2282bc4027be1a82f83b5c623a314848d2efd4fe4c2db8c311",
+  "size": 27769,
+  "subdir": "linux-64",
+  "timestamp": 1657009123127,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/colorama-0.4.5-py39h06a4308_0.conda",
+  "version": "0.4.5"
+}

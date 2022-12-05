@@ -1,0 +1,109 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.6",
+    "qtpy"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/qtawesome-1.0.3-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/QtAwesome-1.0.3.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/QtAwesome-1.0.3.dist-info/LICENSE.txt",
+    "lib/python3.9/site-packages/QtAwesome-1.0.3.dist-info/METADATA",
+    "lib/python3.9/site-packages/QtAwesome-1.0.3.dist-info/RECORD",
+    "lib/python3.9/site-packages/QtAwesome-1.0.3.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/QtAwesome-1.0.3.dist-info/WHEEL",
+    "lib/python3.9/site-packages/QtAwesome-1.0.3.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/QtAwesome-1.0.3.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/QtAwesome-1.0.3.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/qtawesome/__init__.py",
+    "lib/python3.9/site-packages/qtawesome/_version.py",
+    "lib/python3.9/site-packages/qtawesome/animation.py",
+    "lib/python3.9/site-packages/qtawesome/fonts/elusiveicons-webfont-charmap.json",
+    "lib/python3.9/site-packages/qtawesome/fonts/elusiveicons-webfont.ttf",
+    "lib/python3.9/site-packages/qtawesome/fonts/fontawesome4.7-webfont-charmap.json",
+    "lib/python3.9/site-packages/qtawesome/fonts/fontawesome4.7-webfont.ttf",
+    "lib/python3.9/site-packages/qtawesome/fonts/fontawesome5-brands-webfont-charmap.json",
+    "lib/python3.9/site-packages/qtawesome/fonts/fontawesome5-brands-webfont.ttf",
+    "lib/python3.9/site-packages/qtawesome/fonts/fontawesome5-regular-webfont-charmap.json",
+    "lib/python3.9/site-packages/qtawesome/fonts/fontawesome5-regular-webfont.ttf",
+    "lib/python3.9/site-packages/qtawesome/fonts/fontawesome5-solid-webfont-charmap.json",
+    "lib/python3.9/site-packages/qtawesome/fonts/fontawesome5-solid-webfont.ttf",
+    "lib/python3.9/site-packages/qtawesome/fonts/materialdesignicons-webfont-charmap.json",
+    "lib/python3.9/site-packages/qtawesome/fonts/materialdesignicons-webfont.ttf",
+    "lib/python3.9/site-packages/qtawesome/icon_browser.py",
+    "lib/python3.9/site-packages/qtawesome/iconic_font.py",
+    "lib/python3.9/site-packages/qtawesome/tests/test_icon_browser.py",
+    "lib/python3.9/site-packages/qtawesome/tests/test_qtawesome.py",
+    "lib/python3.9/site-packages/qtawesome/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/qtawesome/__pycache__/_version.cpython-39.pyc",
+    "lib/python3.9/site-packages/qtawesome/__pycache__/animation.cpython-39.pyc",
+    "lib/python3.9/site-packages/qtawesome/__pycache__/icon_browser.cpython-39.pyc",
+    "lib/python3.9/site-packages/qtawesome/__pycache__/iconic_font.cpython-39.pyc",
+    "lib/python3.9/site-packages/qtawesome/tests/__pycache__/test_icon_browser.cpython-39.pyc",
+    "lib/python3.9/site-packages/qtawesome/tests/__pycache__/test_qtawesome.cpython-39.pyc",
+    "bin/qta-browser"
+  ],
+  "fn": "qtawesome-1.0.3-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "adb01c7101d2a8096ee803205f960c74",
+  "legacy_bz2_size": 863159,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/qtawesome-1.0.3-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "e1503ed5f89ecdcda2737bb0d74debc8",
+  "name": "qtawesome",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/qtawesome-1.0.3-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/qtawesome/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qtawesome/__pycache__/_version.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qtawesome/__pycache__/animation.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qtawesome/__pycache__/icon_browser.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qtawesome/__pycache__/iconic_font.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qtawesome/tests/__pycache__/test_icon_browser.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qtawesome/tests/__pycache__/test_qtawesome.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/qta-browser",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "qtawesome==1.0.3=pyhd3eb1b0_0",
+  "sha256": "c5db3a8d25da4bd8777d3e9659229d44b3de6d11b2a33c2fb6c6855a0d87ae04",
+  "size": 779425,
+  "subdir": "noarch",
+  "timestamp": 1637160849976,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/qtawesome-1.0.3-pyhd3eb1b0_0.conda",
+  "version": "1.0.3"
+}

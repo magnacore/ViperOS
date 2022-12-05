@@ -1,0 +1,99 @@
+{
+  "build": "h295c915_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.5.0",
+    "libstdcxx-ng >=7.5.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/pcre-8.45-h295c915_0",
+  "features": "",
+  "files": [
+    "bin/pcre-config",
+    "bin/pcregrep",
+    "bin/pcretest",
+    "include/pcre.h",
+    "include/pcre_scanner.h",
+    "include/pcre_stringpiece.h",
+    "include/pcrecpp.h",
+    "include/pcrecpparg.h",
+    "include/pcreposix.h",
+    "lib/libpcre.a",
+    "lib/libpcre.so",
+    "lib/libpcre.so.1",
+    "lib/libpcre.so.1.2.13",
+    "lib/libpcrecpp.a",
+    "lib/libpcrecpp.so",
+    "lib/libpcrecpp.so.0",
+    "lib/libpcrecpp.so.0.0.2",
+    "lib/libpcreposix.a",
+    "lib/libpcreposix.so",
+    "lib/libpcreposix.so.0",
+    "lib/libpcreposix.so.0.0.7",
+    "lib/pkgconfig/libpcre.pc",
+    "lib/pkgconfig/libpcrecpp.pc",
+    "lib/pkgconfig/libpcreposix.pc"
+  ],
+  "fn": "pcre-8.45-h295c915_0.conda",
+  "legacy_bz2_md5": "4bac8a874e62f41ebab8345ca6076eb6",
+  "legacy_bz2_size": 263308,
+  "license": "BSD 3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/pcre-8.45-h295c915_0",
+    "type": 1
+  },
+  "md5": "b32ccc24d1d9808618c1e898da60f68d",
+  "name": "pcre",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/pcre-8.45-h295c915_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/pcre-config",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/pcre_1624477791074/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "384a389421907268be7167090257b7d9892c5046faa8747e0d9281fa816a1936",
+        "sha256_in_prefix": "e1346c2fffea68deedf200b042f3a619e2ac354090d4ea27185ac418a14f6db7",
+        "size_in_bytes": 2608
+      },
+      {
+        "_path": "lib/pkgconfig/libpcre.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/pcre_1624477791074/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "25d871141f85c5d4fc1692b08dd543ebb814a36e48a34ef35050b4060a3225be",
+        "sha256_in_prefix": "0bb13b299970e5faee05c3d6b12bef5ee219f9993dbde4de9368fb157362aae8",
+        "size_in_bytes": 568
+      },
+      {
+        "_path": "lib/pkgconfig/libpcrecpp.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/pcre_1624477791074/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "a1cefb4664b1ee3beacc51d2f75b0fd551d28d4b0ac75591d10f0cbf0df9c9ad",
+        "sha256_in_prefix": "7c1f97a715486b86b13c57f41586fd78a5d611bc534cbf73176ef29ae949bd36",
+        "size_in_bytes": 514
+      },
+      {
+        "_path": "lib/pkgconfig/libpcreposix.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/pcre_1624477791074/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "933cb1c78c4095cf7f0cf1b800cd916e17a73d9d8eba1e438a6c8f2a4003727d",
+        "sha256_in_prefix": "26577cad888200304612c2f30d0f02dfc81f7a8a803c378863d9b225ce45d0e8",
+        "size_in_bytes": 556
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pcre==8.45=h295c915_0",
+  "sha256": "2bf0144c02007ade42d6a5305987974cc751c7f2e2107d6f88c23d43ce354d5a",
+  "size": 212404,
+  "subdir": "linux-64",
+  "timestamp": 1624477853289,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pcre-8.45-h295c915_0.conda",
+  "version": "8.45"
+}

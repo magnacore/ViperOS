@@ -1,0 +1,449 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "colorama",
+    "python >=3.6"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/qrcode-7.3.1-pyhd8ed1ab_0",
+  "features": "",
+  "files": [
+    "share/man/man1/qr.1",
+    "lib/python3.10/site-packages/qrcode-7.3.1.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/qrcode-7.3.1.dist-info/LICENSE",
+    "lib/python3.10/site-packages/qrcode-7.3.1.dist-info/METADATA",
+    "lib/python3.10/site-packages/qrcode-7.3.1.dist-info/RECORD",
+    "lib/python3.10/site-packages/qrcode-7.3.1.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/qrcode-7.3.1.dist-info/WHEEL",
+    "lib/python3.10/site-packages/qrcode-7.3.1.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/qrcode-7.3.1.dist-info/entry_points.txt",
+    "lib/python3.10/site-packages/qrcode-7.3.1.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/qrcode/LUT.py",
+    "lib/python3.10/site-packages/qrcode/__init__.py",
+    "lib/python3.10/site-packages/qrcode/base.py",
+    "lib/python3.10/site-packages/qrcode/console_scripts.py",
+    "lib/python3.10/site-packages/qrcode/constants.py",
+    "lib/python3.10/site-packages/qrcode/exceptions.py",
+    "lib/python3.10/site-packages/qrcode/image/__init__.py",
+    "lib/python3.10/site-packages/qrcode/image/base.py",
+    "lib/python3.10/site-packages/qrcode/image/pil.py",
+    "lib/python3.10/site-packages/qrcode/image/pure.py",
+    "lib/python3.10/site-packages/qrcode/image/styledpil.py",
+    "lib/python3.10/site-packages/qrcode/image/styles/__init__.py",
+    "lib/python3.10/site-packages/qrcode/image/styles/colormasks.py",
+    "lib/python3.10/site-packages/qrcode/image/styles/moduledrawers.py",
+    "lib/python3.10/site-packages/qrcode/image/svg.py",
+    "lib/python3.10/site-packages/qrcode/main.py",
+    "lib/python3.10/site-packages/qrcode/release.py",
+    "lib/python3.10/site-packages/qrcode/tests/__init__.py",
+    "lib/python3.10/site-packages/qrcode/tests/svg.py",
+    "lib/python3.10/site-packages/qrcode/tests/test_example.py",
+    "lib/python3.10/site-packages/qrcode/tests/test_qrcode.py",
+    "lib/python3.10/site-packages/qrcode/tests/test_release.py",
+    "lib/python3.10/site-packages/qrcode/tests/test_script.py",
+    "lib/python3.10/site-packages/qrcode/tests/test_util.py",
+    "lib/python3.10/site-packages/qrcode/util.py",
+    "lib/python3.10/site-packages/qrcode/__pycache__/LUT.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/__pycache__/console_scripts.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/__pycache__/constants.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/__pycache__/exceptions.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/image/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/image/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/image/__pycache__/pil.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/image/__pycache__/pure.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/image/__pycache__/styledpil.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/image/styles/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/image/styles/__pycache__/colormasks.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/image/styles/__pycache__/moduledrawers.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/image/__pycache__/svg.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/__pycache__/main.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/__pycache__/release.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/tests/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/tests/__pycache__/svg.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/tests/__pycache__/test_example.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/tests/__pycache__/test_qrcode.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/tests/__pycache__/test_release.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/tests/__pycache__/test_script.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/tests/__pycache__/test_util.cpython-310.pyc",
+    "lib/python3.10/site-packages/qrcode/__pycache__/util.cpython-310.pyc",
+    "bin/qr"
+  ],
+  "fn": "qrcode-7.3.1-pyhd8ed1ab_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/qrcode-7.3.1-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "4cfbda582aee0738b969d7c3c60a7132",
+  "name": "qrcode",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/qrcode-7.3.1-pyhd8ed1ab_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "share/man/man1/qr.1",
+        "path_type": "hardlink",
+        "sha256": "7da18bc592173a35195cf56e97eb988a1e52c9b976c41e505c8a338b95bc7211",
+        "sha256_in_prefix": "7da18bc592173a35195cf56e97eb988a1e52c9b976c41e505c8a338b95bc7211",
+        "size_in_bytes": 1322
+      },
+      {
+        "_path": "site-packages/qrcode-7.3.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/qrcode-7.3.1.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "40dfb903c94ee3f789500131311186548ecba5cefd3557623d7700e2522ab994",
+        "sha256_in_prefix": "40dfb903c94ee3f789500131311186548ecba5cefd3557623d7700e2522ab994",
+        "size_in_bytes": 2143
+      },
+      {
+        "_path": "site-packages/qrcode-7.3.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "5b25188c45b6927b5027afc7baff955309016a1770563d49fbb407ae70408637",
+        "sha256_in_prefix": "5b25188c45b6927b5027afc7baff955309016a1770563d49fbb407ae70408637",
+        "size_in_bytes": 14706
+      },
+      {
+        "_path": "site-packages/qrcode-7.3.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "9c91d303c766ee74693f0a4388f17384f4dda46b9a0c17a7313540a9c89fb54b",
+        "sha256_in_prefix": "9c91d303c766ee74693f0a4388f17384f4dda46b9a0c17a7313540a9c89fb54b",
+        "size_in_bytes": 4163
+      },
+      {
+        "_path": "site-packages/qrcode-7.3.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/qrcode-7.3.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "7b0c04b9e8a8d42d977874ef4f5ee7f1d6542603afc82582b7459534b0a53fda",
+        "sha256_in_prefix": "7b0c04b9e8a8d42d977874ef4f5ee7f1d6542603afc82582b7459534b0a53fda",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/qrcode-7.3.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "1def3b477037f6e2715e02108730917eb74e236e2410f0fbf3c715b334f275bb",
+        "sha256_in_prefix": "1def3b477037f6e2715e02108730917eb74e236e2410f0fbf3c715b334f275bb",
+        "size_in_bytes": 102
+      },
+      {
+        "_path": "site-packages/qrcode-7.3.1.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "a1ded9a3683751ffadaeea7b39062a545bf6f87576522bc2603da60684d65d25",
+        "sha256_in_prefix": "a1ded9a3683751ffadaeea7b39062a545bf6f87576522bc2603da60684d65d25",
+        "size_in_bytes": 52
+      },
+      {
+        "_path": "site-packages/qrcode-7.3.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "949ee5d67c83b78b962ef1bd195a3e668fab96406c4519177b8e69b3f8e6ab77",
+        "sha256_in_prefix": "949ee5d67c83b78b962ef1bd195a3e668fab96406c4519177b8e69b3f8e6ab77",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "site-packages/qrcode/LUT.py",
+        "path_type": "hardlink",
+        "sha256": "01e7dd7f10fe106794b5daff56cd927da138c3576e9826b3e5ad62bb44c1efa9",
+        "sha256_in_prefix": "01e7dd7f10fe106794b5daff56cd927da138c3576e9826b3e5ad62bb44c1efa9",
+        "size_in_bytes": 2236
+      },
+      {
+        "_path": "site-packages/qrcode/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c3bc58dc53f4d0845ec0b73716518ebebb7f1afc98b2d75da86a847e7b68f1a4",
+        "sha256_in_prefix": "c3bc58dc53f4d0845ec0b73716518ebebb7f1afc98b2d75da86a847e7b68f1a4",
+        "size_in_bytes": 630
+      },
+      {
+        "_path": "site-packages/qrcode/base.py",
+        "path_type": "hardlink",
+        "sha256": "f894e62848eb28b3b0f3875f352ede18d8bd07086f20d3155742d6d1de5b4002",
+        "sha256_in_prefix": "f894e62848eb28b3b0f3875f352ede18d8bd07086f20d3155742d6d1de5b4002",
+        "size_in_bytes": 7375
+      },
+      {
+        "_path": "site-packages/qrcode/console_scripts.py",
+        "path_type": "hardlink",
+        "sha256": "51d961b35790ede718667d9712ceb0d75ac35f743412256dd2fcab28b105f075",
+        "sha256_in_prefix": "51d961b35790ede718667d9712ceb0d75ac35f743412256dd2fcab28b105f075",
+        "size_in_bytes": 3941
+      },
+      {
+        "_path": "site-packages/qrcode/constants.py",
+        "path_type": "hardlink",
+        "sha256": "d02b1af1861d790f0d685ad19ade3799a560d763bcf5dfa82a088a01520edace",
+        "sha256_in_prefix": "d02b1af1861d790f0d685ad19ade3799a560d763bcf5dfa82a088a01520edace",
+        "size_in_bytes": 106
+      },
+      {
+        "_path": "site-packages/qrcode/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "2f67d9b9838ab1cbdd9fbdab6bec05f06c2caf6641f5e4595aba757f4203c781",
+        "sha256_in_prefix": "2f67d9b9838ab1cbdd9fbdab6bec05f06c2caf6641f5e4595aba757f4203c781",
+        "size_in_bytes": 45
+      },
+      {
+        "_path": "site-packages/qrcode/image/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/qrcode/image/base.py",
+        "path_type": "hardlink",
+        "sha256": "6d7e44396125999337381b0ab503113b09c59c6b16a851aed024d8933ceda4a7",
+        "sha256_in_prefix": "6d7e44396125999337381b0ab503113b09c59c6b16a851aed024d8933ceda4a7",
+        "size_in_bytes": 2229
+      },
+      {
+        "_path": "site-packages/qrcode/image/pil.py",
+        "path_type": "hardlink",
+        "sha256": "f0b174b36775fe394a8461ebd199d2cd8bd7c962df2240c684d10c0abacb6835",
+        "sha256_in_prefix": "f0b174b36775fe394a8461ebd199d2cd8bd7c962df2240c684d10c0abacb6835",
+        "size_in_bytes": 1706
+      },
+      {
+        "_path": "site-packages/qrcode/image/pure.py",
+        "path_type": "hardlink",
+        "sha256": "962b23fef32e365916204a83bcde29e7674f5ce0f8ca11a0d44f373a5280f8da",
+        "sha256_in_prefix": "962b23fef32e365916204a83bcde29e7674f5ce0f8ca11a0d44f373a5280f8da",
+        "size_in_bytes": 1414
+      },
+      {
+        "_path": "site-packages/qrcode/image/styledpil.py",
+        "path_type": "hardlink",
+        "sha256": "99d2b37555d2b0e4f15639bc6a656c1bd736f699eccf7bc2cd075eceedf77fa0",
+        "sha256_in_prefix": "99d2b37555d2b0e4f15639bc6a656c1bd736f699eccf7bc2cd075eceedf77fa0",
+        "size_in_bytes": 5243
+      },
+      {
+        "_path": "site-packages/qrcode/image/styles/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/qrcode/image/styles/colormasks.py",
+        "path_type": "hardlink",
+        "sha256": "2b50fcc825724857f083fc6a265a5032eb79f1d5e35b17ccf674f8dbfec9351d",
+        "sha256_in_prefix": "2b50fcc825724857f083fc6a265a5032eb79f1d5e35b17ccf674f8dbfec9351d",
+        "size_in_bytes": 7242
+      },
+      {
+        "_path": "site-packages/qrcode/image/styles/moduledrawers.py",
+        "path_type": "hardlink",
+        "sha256": "6438edafa38d772c83bff46fe7d7bf8badf018d4734d2ef3bb976ab3d620c7e5",
+        "sha256_in_prefix": "6438edafa38d772c83bff46fe7d7bf8badf018d4734d2ef3bb976ab3d620c7e5",
+        "size_in_bytes": 10547
+      },
+      {
+        "_path": "site-packages/qrcode/image/svg.py",
+        "path_type": "hardlink",
+        "sha256": "444b68c02500548b9cfd78f7f0c6f15a689ec9661a4d259d39dc985224aa4d13",
+        "sha256_in_prefix": "444b68c02500548b9cfd78f7f0c6f15a689ec9661a4d259d39dc985224aa4d13",
+        "size_in_bytes": 4761
+      },
+      {
+        "_path": "site-packages/qrcode/main.py",
+        "path_type": "hardlink",
+        "sha256": "37cec6e9d8bb239edf005ec46c2a2040b3b2c29604432a1d10e541dcff4ef7d2",
+        "sha256_in_prefix": "37cec6e9d8bb239edf005ec46c2a2040b3b2c29604432a1d10e541dcff4ef7d2",
+        "size_in_bytes": 14842
+      },
+      {
+        "_path": "site-packages/qrcode/release.py",
+        "path_type": "hardlink",
+        "sha256": "dde23687803c86970d7421208afa32e73e21434649a58322039abd2494f4a0df",
+        "sha256_in_prefix": "dde23687803c86970d7421208afa32e73e21434649a58322039abd2494f4a0df",
+        "size_in_bytes": 1079
+      },
+      {
+        "_path": "site-packages/qrcode/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/qrcode/tests/svg.py",
+        "path_type": "hardlink",
+        "sha256": "02a1074913799c0cdcc7cab1c7c696f4e5a64440e3bf4712a74172519da5a58c",
+        "sha256_in_prefix": "02a1074913799c0cdcc7cab1c7c696f4e5a64440e3bf4712a74172519da5a58c",
+        "size_in_bytes": 96
+      },
+      {
+        "_path": "site-packages/qrcode/tests/test_example.py",
+        "path_type": "hardlink",
+        "sha256": "664c7935e00010c63304c353f7084b7af4dc995778a25cf67391eee31d927a2a",
+        "sha256_in_prefix": "664c7935e00010c63304c353f7084b7af4dc995778a25cf67391eee31d927a2a",
+        "size_in_bytes": 250
+      },
+      {
+        "_path": "site-packages/qrcode/tests/test_qrcode.py",
+        "path_type": "hardlink",
+        "sha256": "5d6eff6e2a029fafe5a1887e1536518dfacb129c2914080a4aa864f1ec5eec60",
+        "sha256_in_prefix": "5d6eff6e2a029fafe5a1887e1536518dfacb129c2914080a4aa864f1ec5eec60",
+        "size_in_bytes": 17542
+      },
+      {
+        "_path": "site-packages/qrcode/tests/test_release.py",
+        "path_type": "hardlink",
+        "sha256": "0bc0bfb62a144aa91dffca3f11e58a944f1df5ba6363d6ce0a4d878e9a7757f5",
+        "sha256_in_prefix": "0bc0bfb62a144aa91dffca3f11e58a944f1df5ba6363d6ce0a4d878e9a7757f5",
+        "size_in_bytes": 1432
+      },
+      {
+        "_path": "site-packages/qrcode/tests/test_script.py",
+        "path_type": "hardlink",
+        "sha256": "b5e26ba629c3c665be116cc9bdfc958c459c809c1990f4fffda3ddd8e14c059f",
+        "sha256_in_prefix": "b5e26ba629c3c665be116cc9bdfc958c459c809c1990f4fffda3ddd8e14c059f",
+        "size_in_bytes": 2452
+      },
+      {
+        "_path": "site-packages/qrcode/tests/test_util.py",
+        "path_type": "hardlink",
+        "sha256": "e87ce109ff9eb725386f011730f4c57fb8c647f837a489444664fe5d29080f49",
+        "sha256_in_prefix": "e87ce109ff9eb725386f011730f4c57fb8c647f837a489444664fe5d29080f49",
+        "size_in_bytes": 278
+      },
+      {
+        "_path": "site-packages/qrcode/util.py",
+        "path_type": "hardlink",
+        "sha256": "12bc06e5c94ddb9375644770d67c54b7d8c6b666c92fe0fd0b0451eafe913a1d",
+        "sha256_in_prefix": "12bc06e5c94ddb9375644770d67c54b7d8c6b666c92fe0fd0b0451eafe913a1d",
+        "size_in_bytes": 17356
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/__pycache__/LUT.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/__pycache__/base.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/__pycache__/console_scripts.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/__pycache__/constants.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/__pycache__/exceptions.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/image/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/image/__pycache__/base.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/image/__pycache__/pil.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/image/__pycache__/pure.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/image/__pycache__/styledpil.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/image/styles/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/image/styles/__pycache__/colormasks.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/image/styles/__pycache__/moduledrawers.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/image/__pycache__/svg.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/__pycache__/main.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/__pycache__/release.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/tests/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/tests/__pycache__/svg.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/tests/__pycache__/test_example.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/tests/__pycache__/test_qrcode.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/tests/__pycache__/test_release.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/tests/__pycache__/test_script.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/tests/__pycache__/test_util.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/qrcode/__pycache__/util.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/qr",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "qrcode",
+  "sha256": "1152915dcb0826a76a10a753254c788530da35c3544f7b47784462f1842fe0ac",
+  "size": 36476,
+  "subdir": "noarch",
+  "timestamp": 1633145291076,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/qrcode-7.3.1-pyhd8ed1ab_0.tar.bz2",
+  "version": "7.3.1"
+}

@@ -1,0 +1,66 @@
+{
+  "build": "h3be6417_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "jpeg >=9b,<10a",
+    "libgcc-ng >=7.3.0",
+    "libtiff >=4.1.0,<5.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/lcms2-2.12-h3be6417_0",
+  "features": "",
+  "files": [
+    "bin/jpgicc",
+    "bin/linkicc",
+    "bin/psicc",
+    "bin/tificc",
+    "bin/transicc",
+    "include/lcms2.h",
+    "include/lcms2_plugin.h",
+    "lib/liblcms2.a",
+    "lib/liblcms2.so",
+    "lib/liblcms2.so.2",
+    "lib/liblcms2.so.2.0.12",
+    "lib/pkgconfig/lcms2.pc",
+    "share/man/man1/jpgicc.1",
+    "share/man/man1/linkicc.1",
+    "share/man/man1/psicc.1",
+    "share/man/man1/tificc.1",
+    "share/man/man1/transicc.1"
+  ],
+  "fn": "lcms2-2.12-h3be6417_0.conda",
+  "legacy_bz2_md5": "653b4f425f6d4a21f04619b1f5f8aa43",
+  "legacy_bz2_size": 405739,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/lcms2-2.12-h3be6417_0",
+    "type": 1
+  },
+  "md5": "719db47afba9f6586eecb5eacac70bff",
+  "name": "lcms2",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/lcms2-2.12-h3be6417_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/lcms2.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/lcms2_1617648591416/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "dc1e9a8a52bf8e19b980aefc911879370e7b0fe014f8d35c4b140b0c648a89a0",
+        "sha256_in_prefix": "f318faaf3f1c2b526262290d56f2a9650d869011820ba8294c52aaf12652b0b8",
+        "size_in_bytes": 489
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "lcms2==2.12=h3be6417_0",
+  "sha256": "c7fdebc0954fe6d272c2a477a1067dc96ebc36fb43109b33378e0e9c2732a847",
+  "size": 319025,
+  "subdir": "linux-64",
+  "timestamp": 1617648674152,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/lcms2-2.12-h3be6417_0.conda",
+  "version": "2.12"
+}

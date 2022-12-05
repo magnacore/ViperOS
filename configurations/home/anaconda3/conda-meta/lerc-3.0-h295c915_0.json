@@ -1,0 +1,41 @@
+{
+  "build": "h295c915_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.5.0",
+    "libstdcxx-ng >=7.5.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/lerc-3.0-h295c915_0",
+  "features": "",
+  "files": [
+    "include/Lerc_c_api.h",
+    "include/Lerc_types.h",
+    "lib/libLerc.so"
+  ],
+  "fn": "lerc-3.0-h295c915_0.conda",
+  "legacy_bz2_md5": "88199c75f2ac211728febced7785c24e",
+  "legacy_bz2_size": 228278,
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/lerc-3.0-h295c915_0",
+    "type": 1
+  },
+  "md5": "b97309770412f10bed8d9448f6f98f87",
+  "name": "lerc",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/lerc-3.0-h295c915_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "lerc==3.0=h295c915_0",
+  "sha256": "e9b84d986a46d22c6a1713b267f98ed3adbd486e423d2be74a3b42416e5b3e60",
+  "size": 200516,
+  "subdir": "linux-64",
+  "timestamp": 1635523146417,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/lerc-3.0-h295c915_0.conda",
+  "version": "3.0"
+}

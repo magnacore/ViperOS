@@ -1,0 +1,62 @@
+{
+  "build": "pyhd3eb1b0_3",
+  "build_number": 3,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "arrow",
+    "jinja2",
+    "python"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/jinja2-time-0.2.0-pyhd3eb1b0_3",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/jinja2_time-0.2.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/jinja2_time-0.2.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/jinja2_time-0.2.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/jinja2_time-0.2.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/jinja2_time-0.2.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/jinja2_time-0.2.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/jinja2_time-0.2.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/jinja2_time-0.2.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/jinja2_time/__init__.py",
+    "lib/python3.9/site-packages/jinja2_time/jinja2_time.py",
+    "lib/python3.9/site-packages/jinja2_time/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/jinja2_time/__pycache__/jinja2_time.cpython-39.pyc"
+  ],
+  "fn": "jinja2-time-0.2.0-pyhd3eb1b0_3.conda",
+  "legacy_bz2_md5": "93dbe6e9c7837b2ab11feca97a31a3e2",
+  "legacy_bz2_size": 9215,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/jinja2-time-0.2.0-pyhd3eb1b0_3",
+    "type": 1
+  },
+  "md5": "8d0150baf87b7aba7690a278ddbbc2a3",
+  "name": "jinja2-time",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/jinja2-time-0.2.0-pyhd3eb1b0_3.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/jinja2_time/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/jinja2_time/__pycache__/jinja2_time.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "jinja2-time==0.2.0=pyhd3eb1b0_3",
+  "sha256": "a70085167f25dcc68f3ae428f4ad593ab3c4bae071264ba3373b5ce3499cbedf",
+  "size": 9520,
+  "subdir": "noarch",
+  "timestamp": 1649251886301,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/jinja2-time-0.2.0-pyhd3eb1b0_3.conda",
+  "version": "0.2.0"
+}

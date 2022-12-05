@@ -1,0 +1,646 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "docopt >=0.6.2",
+    "python >=2.7"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/num2words-0.5.10-pyhd8ed1ab_1",
+  "features": "",
+  "files": [
+    "bin/num2words",
+    "lib/python3.10/site-packages/num2words-0.5.10.dist-info/COPYING",
+    "lib/python3.10/site-packages/num2words-0.5.10.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/num2words-0.5.10.dist-info/METADATA",
+    "lib/python3.10/site-packages/num2words-0.5.10.dist-info/RECORD",
+    "lib/python3.10/site-packages/num2words-0.5.10.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/num2words-0.5.10.dist-info/WHEEL",
+    "lib/python3.10/site-packages/num2words-0.5.10.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/num2words-0.5.10.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/num2words/__init__.py",
+    "lib/python3.10/site-packages/num2words/base.py",
+    "lib/python3.10/site-packages/num2words/compat.py",
+    "lib/python3.10/site-packages/num2words/currency.py",
+    "lib/python3.10/site-packages/num2words/lang_AR.py",
+    "lib/python3.10/site-packages/num2words/lang_CZ.py",
+    "lib/python3.10/site-packages/num2words/lang_DE.py",
+    "lib/python3.10/site-packages/num2words/lang_DK.py",
+    "lib/python3.10/site-packages/num2words/lang_EN.py",
+    "lib/python3.10/site-packages/num2words/lang_EN_IN.py",
+    "lib/python3.10/site-packages/num2words/lang_ES.py",
+    "lib/python3.10/site-packages/num2words/lang_ES_CO.py",
+    "lib/python3.10/site-packages/num2words/lang_ES_VE.py",
+    "lib/python3.10/site-packages/num2words/lang_EU.py",
+    "lib/python3.10/site-packages/num2words/lang_FI.py",
+    "lib/python3.10/site-packages/num2words/lang_FR.py",
+    "lib/python3.10/site-packages/num2words/lang_FR_BE.py",
+    "lib/python3.10/site-packages/num2words/lang_FR_CH.py",
+    "lib/python3.10/site-packages/num2words/lang_FR_DZ.py",
+    "lib/python3.10/site-packages/num2words/lang_HE.py",
+    "lib/python3.10/site-packages/num2words/lang_ID.py",
+    "lib/python3.10/site-packages/num2words/lang_IT.py",
+    "lib/python3.10/site-packages/num2words/lang_JA.py",
+    "lib/python3.10/site-packages/num2words/lang_KN.py",
+    "lib/python3.10/site-packages/num2words/lang_KO.py",
+    "lib/python3.10/site-packages/num2words/lang_LT.py",
+    "lib/python3.10/site-packages/num2words/lang_LV.py",
+    "lib/python3.10/site-packages/num2words/lang_NL.py",
+    "lib/python3.10/site-packages/num2words/lang_NO.py",
+    "lib/python3.10/site-packages/num2words/lang_PL.py",
+    "lib/python3.10/site-packages/num2words/lang_PT.py",
+    "lib/python3.10/site-packages/num2words/lang_PT_BR.py",
+    "lib/python3.10/site-packages/num2words/lang_RO.py",
+    "lib/python3.10/site-packages/num2words/lang_RU.py",
+    "lib/python3.10/site-packages/num2words/lang_SL.py",
+    "lib/python3.10/site-packages/num2words/lang_SR.py",
+    "lib/python3.10/site-packages/num2words/lang_TH.py",
+    "lib/python3.10/site-packages/num2words/lang_TR.py",
+    "lib/python3.10/site-packages/num2words/lang_UK.py",
+    "lib/python3.10/site-packages/num2words/lang_VI.py",
+    "lib/python3.10/site-packages/num2words/utils.py",
+    "lib/python3.10/site-packages/num2words/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/compat.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/currency.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_AR.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_CZ.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_DE.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_DK.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_EN.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_EN_IN.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_ES.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_ES_CO.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_ES_VE.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_EU.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_FI.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_FR.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_FR_BE.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_FR_CH.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_FR_DZ.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_HE.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_ID.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_IT.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_JA.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_KN.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_KO.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_LT.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_LV.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_NL.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_NO.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_PL.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_PT.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_PT_BR.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_RO.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_RU.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_SL.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_SR.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_TH.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_TR.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_UK.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/lang_VI.cpython-310.pyc",
+    "lib/python3.10/site-packages/num2words/__pycache__/utils.cpython-310.pyc"
+  ],
+  "fn": "num2words-0.5.10-pyhd8ed1ab_1.tar.bz2",
+  "license": "LGPL-2.1-or-later",
+  "license_family": "LGPL",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/num2words-0.5.10-pyhd8ed1ab_1",
+    "type": 1
+  },
+  "md5": "23196f8e7ef53042e1cd9ccbc44cb179",
+  "name": "num2words",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/num2words-0.5.10-pyhd8ed1ab_1.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "python-scripts/num2words",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/num2words_1626355108962/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p",
+        "sha256": "b2955916e8cea3861301bd126fb1fc6ce268dc1742993c4f79e228c1d5a9a1be",
+        "sha256_in_prefix": "a5fa71419ca01f0263bc5649123dd4aabe29ec6eb4664d1482237eda7c4614e6",
+        "size_in_bytes": 3227
+      },
+      {
+        "_path": "site-packages/num2words-0.5.10.dist-info/COPYING",
+        "path_type": "hardlink",
+        "sha256": "1457a03d928aeb06af3ea75ef065c517e915d7e41283d550dd4fa18ab20cda12",
+        "sha256_in_prefix": "1457a03d928aeb06af3ea75ef065c517e915d7e41283d550dd4fa18ab20cda12",
+        "size_in_bytes": 23995
+      },
+      {
+        "_path": "site-packages/num2words-0.5.10.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/num2words-0.5.10.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "f8635882e6c9fba41f1258e49c37189d88ec7e664caa04a4e4ce347d1d7c0334",
+        "sha256_in_prefix": "f8635882e6c9fba41f1258e49c37189d88ec7e664caa04a4e4ce347d1d7c0334",
+        "size_in_bytes": 8943
+      },
+      {
+        "_path": "site-packages/num2words-0.5.10.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "c14da51286b941786a0c0e6b33ed8e868c2604b9a41aa859305358de6bb73f7f",
+        "sha256_in_prefix": "c14da51286b941786a0c0e6b33ed8e868c2604b9a41aa859305358de6bb73f7f",
+        "size_in_bytes": 5972
+      },
+      {
+        "_path": "site-packages/num2words-0.5.10.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/num2words-0.5.10.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "3aa464174798e461ecb0ca2b16395b4c8ab4ef6be91e917ad1f21003a952f710",
+        "sha256_in_prefix": "3aa464174798e461ecb0ca2b16395b4c8ab4ef6be91e917ad1f21003a952f710",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/num2words-0.5.10.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "a712d2b7c58072bca41e37fa6002c18b9f06a1d4deb1d8a114d26c69d81ef102",
+        "sha256_in_prefix": "a712d2b7c58072bca41e37fa6002c18b9f06a1d4deb1d8a114d26c69d81ef102",
+        "size_in_bytes": 105
+      },
+      {
+        "_path": "site-packages/num2words-0.5.10.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "4c24d5fb1b57eb08420b50745937b8853aa902a25a3e610716cb8d3ab7db6aad",
+        "sha256_in_prefix": "4c24d5fb1b57eb08420b50745937b8853aa902a25a3e610716cb8d3ab7db6aad",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "site-packages/num2words/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "714f1f8cf013b7c44ccdbb38fd4553a7f2e0cddf93d75a48be75d72045bd650f",
+        "sha256_in_prefix": "714f1f8cf013b7c44ccdbb38fd4553a7f2e0cddf93d75a48be75d72045bd650f",
+        "size_in_bytes": 3312
+      },
+      {
+        "_path": "site-packages/num2words/base.py",
+        "path_type": "hardlink",
+        "sha256": "a5114750b304a95ede07f1c531c5868772b4c2ef1a609dda304702656aa6103b",
+        "sha256_in_prefix": "a5114750b304a95ede07f1c531c5868772b4c2ef1a609dda304702656aa6103b",
+        "size_in_bytes": 9842
+      },
+      {
+        "_path": "site-packages/num2words/compat.py",
+        "path_type": "hardlink",
+        "sha256": "5e302a28aa6e3fa35981c1b383a7f736c75a5cc973d8bff9e0ff19afd5387256",
+        "sha256_in_prefix": "5e302a28aa6e3fa35981c1b383a7f736c75a5cc973d8bff9e0ff19afd5387256",
+        "size_in_bytes": 1040
+      },
+      {
+        "_path": "site-packages/num2words/currency.py",
+        "path_type": "hardlink",
+        "sha256": "6ab41fe056ea9b696fac3c278b0bab7b51cb06c57a50dbf84977de503be591c9",
+        "sha256_in_prefix": "6ab41fe056ea9b696fac3c278b0bab7b51cb06c57a50dbf84977de503be591c9",
+        "size_in_bytes": 1761
+      },
+      {
+        "_path": "site-packages/num2words/lang_AR.py",
+        "path_type": "hardlink",
+        "sha256": "4071718b5fad85d8502b4de650a89c997350a9bb5bc49b17da71d70ac8e1f859",
+        "sha256_in_prefix": "4071718b5fad85d8502b4de650a89c997350a9bb5bc49b17da71d70ac8e1f859",
+        "size_in_bytes": 14591
+      },
+      {
+        "_path": "site-packages/num2words/lang_CZ.py",
+        "path_type": "hardlink",
+        "sha256": "b73b964338bb7a1eb130ceb8f80f7dbbd6dfa6bfa8547cb98d72e42443a95c85",
+        "sha256_in_prefix": "b73b964338bb7a1eb130ceb8f80f7dbbd6dfa6bfa8547cb98d72e42443a95c85",
+        "size_in_bytes": 4123
+      },
+      {
+        "_path": "site-packages/num2words/lang_DE.py",
+        "path_type": "hardlink",
+        "sha256": "74fcd465368e88f4e1f3edc8d6e47dae68b731c5c96e38ce3e79124b40f9c078",
+        "sha256_in_prefix": "74fcd465368e88f4e1f3edc8d6e47dae68b731c5c96e38ce3e79124b40f9c078",
+        "size_in_bytes": 6166
+      },
+      {
+        "_path": "site-packages/num2words/lang_DK.py",
+        "path_type": "hardlink",
+        "sha256": "8604c7c69b03183e131771e2a634bf5ebf858d59c61314ba6e1248e07ff8a650",
+        "sha256_in_prefix": "8604c7c69b03183e131771e2a634bf5ebf858d59c61314ba6e1248e07ff8a650",
+        "size_in_bytes": 5077
+      },
+      {
+        "_path": "site-packages/num2words/lang_EN.py",
+        "path_type": "hardlink",
+        "sha256": "e2da2ac74707e08fada340d2ad937d1d94625908adc4bb42316546d3f952e16e",
+        "sha256_in_prefix": "e2da2ac74707e08fada340d2ad937d1d94625908adc4bb42316546d3f952e16e",
+        "size_in_bytes": 4410
+      },
+      {
+        "_path": "site-packages/num2words/lang_EN_IN.py",
+        "path_type": "hardlink",
+        "sha256": "82214724f8c989eeecdc52938b45e2765ccf4b3635f4d825306a0e031eedff84",
+        "sha256_in_prefix": "82214724f8c989eeecdc52938b45e2765ccf4b3635f4d825306a0e031eedff84",
+        "size_in_bytes": 1098
+      },
+      {
+        "_path": "site-packages/num2words/lang_ES.py",
+        "path_type": "hardlink",
+        "sha256": "f878c8e5eca9e4be2636783950c6c8c16569eb5480284a94062a9b278c4eaf2b",
+        "sha256_in_prefix": "f878c8e5eca9e4be2636783950c6c8c16569eb5480284a94062a9b278c4eaf2b",
+        "size_in_bytes": 7158
+      },
+      {
+        "_path": "site-packages/num2words/lang_ES_CO.py",
+        "path_type": "hardlink",
+        "sha256": "f86c38162b5a318ebcc05036123c6763604efa2631a50657dfa0ce8dc20fcdab",
+        "sha256_in_prefix": "f86c38162b5a318ebcc05036123c6763604efa2631a50657dfa0ce8dc20fcdab",
+        "size_in_bytes": 1324
+      },
+      {
+        "_path": "site-packages/num2words/lang_ES_VE.py",
+        "path_type": "hardlink",
+        "sha256": "8584628d60d69a725387764b568ceaddbddbf350cab6be6b66d1aaca01ce6058",
+        "sha256_in_prefix": "8584628d60d69a725387764b568ceaddbddbf350cab6be6b66d1aaca01ce6058",
+        "size_in_bytes": 1390
+      },
+      {
+        "_path": "site-packages/num2words/lang_EU.py",
+        "path_type": "hardlink",
+        "sha256": "436c280e3b6e6300ba5e89b973646cb5ab7569a02488ea809494ab8d0e0605ba",
+        "sha256_in_prefix": "436c280e3b6e6300ba5e89b973646cb5ab7569a02488ea809494ab8d0e0605ba",
+        "size_in_bytes": 3397
+      },
+      {
+        "_path": "site-packages/num2words/lang_FI.py",
+        "path_type": "hardlink",
+        "sha256": "235b08cf6bcc9acfb73a68557e83541c988b5834be8b877ae54212d311914d4c",
+        "sha256_in_prefix": "235b08cf6bcc9acfb73a68557e83541c988b5834be8b877ae54212d311914d4c",
+        "size_in_bytes": 23855
+      },
+      {
+        "_path": "site-packages/num2words/lang_FR.py",
+        "path_type": "hardlink",
+        "sha256": "3f72661759436c06974aab84cbd13d941d277fbbc87659c24d11040c4ad07f27",
+        "sha256_in_prefix": "3f72661759436c06974aab84cbd13d941d277fbbc87659c24d11040c4ad07f27",
+        "size_in_bytes": 4214
+      },
+      {
+        "_path": "site-packages/num2words/lang_FR_BE.py",
+        "path_type": "hardlink",
+        "sha256": "86194f2aa539fb96035259c7f8955effab037c7bb88ec1d040f5f31e1eb52c4b",
+        "sha256_in_prefix": "86194f2aa539fb96035259c7f8955effab037c7bb88ec1d040f5f31e1eb52c4b",
+        "size_in_bytes": 1942
+      },
+      {
+        "_path": "site-packages/num2words/lang_FR_CH.py",
+        "path_type": "hardlink",
+        "sha256": "e003dd0e17c79a01fbc3e4ae68aa3483afb22ad35f3260478a2bce553c85e98a",
+        "sha256_in_prefix": "e003dd0e17c79a01fbc3e4ae68aa3483afb22ad35f3260478a2bce553c85e98a",
+        "size_in_bytes": 1937
+      },
+      {
+        "_path": "site-packages/num2words/lang_FR_DZ.py",
+        "path_type": "hardlink",
+        "sha256": "a4727bfb1fbed193515f4b541ba933b042827aa69b66c3f3210f8047e2620f73",
+        "sha256_in_prefix": "a4727bfb1fbed193515f4b541ba933b042827aa69b66c3f3210f8047e2620f73",
+        "size_in_bytes": 1373
+      },
+      {
+        "_path": "site-packages/num2words/lang_HE.py",
+        "path_type": "hardlink",
+        "sha256": "c5d43973c9ba87415144a5135447ce308f5b9438cd1d25c4f1d80d9124e463a5",
+        "sha256_in_prefix": "c5d43973c9ba87415144a5135447ce308f5b9438cd1d25c4f1d80d9124e463a5",
+        "size_in_bytes": 3592
+      },
+      {
+        "_path": "site-packages/num2words/lang_ID.py",
+        "path_type": "hardlink",
+        "sha256": "740de67194937a1460cd898a3025457fa33e995c4804fe90185f6a11123e0957",
+        "sha256_in_prefix": "740de67194937a1460cd898a3025457fa33e995c4804fe90185f6a11123e0957",
+        "size_in_bytes": 6388
+      },
+      {
+        "_path": "site-packages/num2words/lang_IT.py",
+        "path_type": "hardlink",
+        "sha256": "ff0954f26c7eae040852c20deded819d7eb41a473422b9893f32113fa87af176",
+        "sha256_in_prefix": "ff0954f26c7eae040852c20deded819d7eb41a473422b9893f32113fa87af176",
+        "size_in_bytes": 7529
+      },
+      {
+        "_path": "site-packages/num2words/lang_JA.py",
+        "path_type": "hardlink",
+        "sha256": "9e1a1afcd74e9e203c0fb7d117ccecffcdaafd31500a4fe6cc165de5691a1a26",
+        "sha256_in_prefix": "9e1a1afcd74e9e203c0fb7d117ccecffcdaafd31500a4fe6cc165de5691a1a26",
+        "size_in_bytes": 22288
+      },
+      {
+        "_path": "site-packages/num2words/lang_KN.py",
+        "path_type": "hardlink",
+        "sha256": "ca4db8b072875cc15886ca0e6aa2a9d5bbd114ed137c6b2c8b0d2531ba915d64",
+        "sha256_in_prefix": "ca4db8b072875cc15886ca0e6aa2a9d5bbd114ed137c6b2c8b0d2531ba915d64",
+        "size_in_bytes": 7226
+      },
+      {
+        "_path": "site-packages/num2words/lang_KO.py",
+        "path_type": "hardlink",
+        "sha256": "d452ce9baa7740b772642030d839f35d06cf05a5daf403d9191fbeb2f83893f9",
+        "sha256_in_prefix": "d452ce9baa7740b772642030d839f35d06cf05a5daf403d9191fbeb2f83893f9",
+        "size_in_bytes": 5213
+      },
+      {
+        "_path": "site-packages/num2words/lang_LT.py",
+        "path_type": "hardlink",
+        "sha256": "0f06a96b29746ac7cb3cbe1fdcd153898ad9e403fddc6860378a31452f3a4068",
+        "sha256_in_prefix": "0f06a96b29746ac7cb3cbe1fdcd153898ad9e403fddc6860378a31452f3a4068",
+        "size_in_bytes": 5123
+      },
+      {
+        "_path": "site-packages/num2words/lang_LV.py",
+        "path_type": "hardlink",
+        "sha256": "087be2737ad76f9a286c1a28cdd2c07d36cd3bdbef3c72f8c3b07b9df1985b6a",
+        "sha256_in_prefix": "087be2737ad76f9a286c1a28cdd2c07d36cd3bdbef3c72f8c3b07b9df1985b6a",
+        "size_in_bytes": 5722
+      },
+      {
+        "_path": "site-packages/num2words/lang_NL.py",
+        "path_type": "hardlink",
+        "sha256": "d9a3fbe745289d86452f2611d7865edbdea47314786847711e24c5eea99894ae",
+        "sha256_in_prefix": "d9a3fbe745289d86452f2611d7865edbdea47314786847711e24c5eea99894ae",
+        "size_in_bytes": 5544
+      },
+      {
+        "_path": "site-packages/num2words/lang_NO.py",
+        "path_type": "hardlink",
+        "sha256": "a288293ce827d5ef0bf46ffbe147bb49f4832010f82bd1f5e14cc04186e8a60b",
+        "sha256_in_prefix": "a288293ce827d5ef0bf46ffbe147bb49f4832010f82bd1f5e14cc04186e8a60b",
+        "size_in_bytes": 4259
+      },
+      {
+        "_path": "site-packages/num2words/lang_PL.py",
+        "path_type": "hardlink",
+        "sha256": "2be42e282e76ab1289d066c6ce8a93dac2bee401449c704f71f341d28ff4325b",
+        "sha256_in_prefix": "2be42e282e76ab1289d066c6ce8a93dac2bee401449c704f71f341d28ff4325b",
+        "size_in_bytes": 4350
+      },
+      {
+        "_path": "site-packages/num2words/lang_PT.py",
+        "path_type": "hardlink",
+        "sha256": "73008d8fcee9b81af4dbae83b4952cda39f86f21308da3678715f74d0da4f81e",
+        "sha256_in_prefix": "73008d8fcee9b81af4dbae83b4952cda39f86f21308da3678715f74d0da4f81e",
+        "size_in_bytes": 8701
+      },
+      {
+        "_path": "site-packages/num2words/lang_PT_BR.py",
+        "path_type": "hardlink",
+        "sha256": "15478463738749de2d42e18a3cbab3c5c9ce28ad33a2af087d61f67f4d200240",
+        "sha256_in_prefix": "15478463738749de2d42e18a3cbab3c5c9ce28ad33a2af087d61f67f4d200240",
+        "size_in_bytes": 3762
+      },
+      {
+        "_path": "site-packages/num2words/lang_RO.py",
+        "path_type": "hardlink",
+        "sha256": "cd153493314ecb4687dad00654c64dd88c319530cc8f8584490b705a4b6fc37d",
+        "sha256_in_prefix": "cd153493314ecb4687dad00654c64dd88c319530cc8f8584490b705a4b6fc37d",
+        "size_in_bytes": 5520
+      },
+      {
+        "_path": "site-packages/num2words/lang_RU.py",
+        "path_type": "hardlink",
+        "sha256": "417624d43027e31ce7507cbdbc4e7567f881e0f1f8a1195199bec0c979be7714",
+        "sha256_in_prefix": "417624d43027e31ce7507cbdbc4e7567f881e0f1f8a1195199bec0c979be7714",
+        "size_in_bytes": 8343
+      },
+      {
+        "_path": "site-packages/num2words/lang_SL.py",
+        "path_type": "hardlink",
+        "sha256": "8f20a61469ffb01214fb39e9d2d3fc77e84727cc0e2444c31ba4045321a602d6",
+        "sha256_in_prefix": "8f20a61469ffb01214fb39e9d2d3fc77e84727cc0e2444c31ba4045321a602d6",
+        "size_in_bytes": 6283
+      },
+      {
+        "_path": "site-packages/num2words/lang_SR.py",
+        "path_type": "hardlink",
+        "sha256": "c9a106460adaee127a3d305d02153827754e3aa73f47c4bc95940b9b67196c9c",
+        "sha256_in_prefix": "c9a106460adaee127a3d305d02153827754e3aa73f47c4bc95940b9b67196c9c",
+        "size_in_bytes": 6511
+      },
+      {
+        "_path": "site-packages/num2words/lang_TH.py",
+        "path_type": "hardlink",
+        "sha256": "f76e5d525cd3ab2038585d54216a5b2b7060423b0be7a0ac473c4bbf114dc0d4",
+        "sha256_in_prefix": "f76e5d525cd3ab2038585d54216a5b2b7060423b0be7a0ac473c4bbf114dc0d4",
+        "size_in_bytes": 5771
+      },
+      {
+        "_path": "site-packages/num2words/lang_TR.py",
+        "path_type": "hardlink",
+        "sha256": "da786694630a7929214a702d4f2c95010e73f1ef07082bea99f0bfba2f20976c",
+        "sha256_in_prefix": "da786694630a7929214a702d4f2c95010e73f1ef07082bea99f0bfba2f20976c",
+        "size_in_bytes": 39138
+      },
+      {
+        "_path": "site-packages/num2words/lang_UK.py",
+        "path_type": "hardlink",
+        "sha256": "25a1ba296755c2f0456cf032a97aa9046da0e408a0ec8b8f2edd0f05b25b57e6",
+        "sha256_in_prefix": "25a1ba296755c2f0456cf032a97aa9046da0e408a0ec8b8f2edd0f05b25b57e6",
+        "size_in_bytes": 5387
+      },
+      {
+        "_path": "site-packages/num2words/lang_VI.py",
+        "path_type": "hardlink",
+        "sha256": "67f03114e5b83124d6d336f8199c9594f141cca9574e579bfbee63d7a1533381",
+        "sha256_in_prefix": "67f03114e5b83124d6d336f8199c9594f141cca9574e579bfbee63d7a1533381",
+        "size_in_bytes": 4151
+      },
+      {
+        "_path": "site-packages/num2words/utils.py",
+        "path_type": "hardlink",
+        "sha256": "5a4cfa390464bb4134f9194d11261bfd9b85021b0c0af0fe2dda0ec6cea5bd81",
+        "sha256_in_prefix": "5a4cfa390464bb4134f9194d11261bfd9b85021b0c0af0fe2dda0ec6cea5bd81",
+        "size_in_bytes": 1360
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/base.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/compat.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/currency.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_AR.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_CZ.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_DE.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_DK.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_EN.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_EN_IN.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_ES.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_ES_CO.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_ES_VE.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_EU.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_FI.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_FR.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_FR_BE.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_FR_CH.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_FR_DZ.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_HE.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_ID.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_IT.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_JA.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_KN.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_KO.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_LT.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_LV.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_NL.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_NO.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_PL.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_PT.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_PT_BR.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_RO.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_RU.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_SL.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_SR.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_TH.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_TR.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_UK.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/lang_VI.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/num2words/__pycache__/utils.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "num2words",
+  "sha256": "4f67caf3e3a2ea7c555901e19aa40a91f3a4f127da12ba5fbcbf3fcbb9bba18a",
+  "size": 62489,
+  "subdir": "noarch",
+  "timestamp": 1626355250427,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/num2words-0.5.10-pyhd8ed1ab_1.tar.bz2",
+  "version": "0.5.10"
+}

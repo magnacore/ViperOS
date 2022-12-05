@@ -1,0 +1,42 @@
+{
+  "build": "py39h06a4308_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "ipywidgets",
+    "jupyterlab",
+    "python >=3.9,<3.10.0a0",
+    "widgetsnbextension"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/_ipyw_jlab_nb_ext_conf-0.1.0-py39h06a4308_1",
+  "features": "",
+  "files": [
+    "etc/jupyter/jupyter_notebook_config.json",
+    "etc/jupyter/nbconfig/notebook.json"
+  ],
+  "fn": "_ipyw_jlab_nb_ext_conf-0.1.0-py39h06a4308_1.conda",
+  "legacy_bz2_md5": "bdf90ae8e0e94a33bd3393cab0842f79",
+  "legacy_bz2_size": 4164,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/_ipyw_jlab_nb_ext_conf-0.1.0-py39h06a4308_1",
+    "type": 1
+  },
+  "md5": "c665d6c758cc9cc4739b700d8eb143e4",
+  "name": "_ipyw_jlab_nb_ext_conf",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/_ipyw_jlab_nb_ext_conf-0.1.0-py39h06a4308_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "_ipyw_jlab_nb_ext_conf==0.1.0=py39h06a4308_1",
+  "sha256": "c22b3f28597a3bfef74d61d3ea73bff5fda2e380a9b9930cfe66f0fb97586651",
+  "size": 4677,
+  "subdir": "linux-64",
+  "timestamp": 1649860571444,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/_ipyw_jlab_nb_ext_conf-0.1.0-py39h06a4308_1.conda",
+  "version": "0.1.0"
+}

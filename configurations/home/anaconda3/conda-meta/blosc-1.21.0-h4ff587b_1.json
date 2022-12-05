@@ -1,0 +1,57 @@
+{
+  "build": "h4ff587b_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.5.0",
+    "libstdcxx-ng >=7.5.0",
+    "lz4-c >=1.9.3,<1.10.0a0",
+    "zlib >=1.2.12,<1.3.0a0",
+    "zstd >=1.5.2,<1.6.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/blosc-1.21.0-h4ff587b_1",
+  "features": "",
+  "files": [
+    "include/blosc-export.h",
+    "include/blosc.h",
+    "lib/libblosc.a",
+    "lib/libblosc.so",
+    "lib/libblosc.so.1",
+    "lib/libblosc.so.1.21.0",
+    "lib/pkgconfig/blosc.pc"
+  ],
+  "fn": "blosc-1.21.0-h4ff587b_1.conda",
+  "legacy_bz2_md5": "7395b012ca1eeb4311defd9725d7aecd",
+  "legacy_bz2_size": 69777,
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/blosc-1.21.0-h4ff587b_1",
+    "type": 1
+  },
+  "md5": "945fec40403606af7a5c97bd8ee7f0cd",
+  "name": "blosc",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/blosc-1.21.0-h4ff587b_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/blosc.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/blosc_1653036505991/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "e4a633103a21ac03046570b795c913c7fea9820ca079c81657bbaa9e51681ee0",
+        "sha256_in_prefix": "af04b62ce553ed300970e71eb2ed418f37c03d8773c8ae8f1421949d521a5adb",
+        "size_in_bytes": 562
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "blosc==1.21.0=h4ff587b_1",
+  "sha256": "6a704c21970a101ee1a2cb78580d2446f2104ec581f74988cf325156978bc56e",
+  "size": 60438,
+  "subdir": "linux-64",
+  "timestamp": 1653036606205,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/blosc-1.21.0-h4ff587b_1.conda",
+  "version": "1.21.0"
+}

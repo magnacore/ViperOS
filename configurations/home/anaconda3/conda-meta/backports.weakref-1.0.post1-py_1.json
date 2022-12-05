@@ -1,0 +1,51 @@
+{
+  "build": "py_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "backports",
+    "python"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/backports.weakref-1.0.post1-py_1",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/backports.weakref-1.0.post1-py2.7.egg-info/PKG-INFO",
+    "lib/python3.9/site-packages/backports.weakref-1.0.post1-py2.7.egg-info/SOURCES.txt",
+    "lib/python3.9/site-packages/backports.weakref-1.0.post1-py2.7.egg-info/dependency_links.txt",
+    "lib/python3.9/site-packages/backports.weakref-1.0.post1-py2.7.egg-info/top_level.txt",
+    "lib/python3.9/site-packages/backports/weakref.py",
+    "lib/python3.9/site-packages/backports/__pycache__/weakref.cpython-39.pyc"
+  ],
+  "fn": "backports.weakref-1.0.post1-py_1.conda",
+  "legacy_bz2_md5": "0a4cf3e20e439f90fcea9e12b923014c",
+  "legacy_bz2_size": 7428,
+  "license": "Python-2.0",
+  "license_family": "PSF",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/backports.weakref-1.0.post1-py_1",
+    "type": 1
+  },
+  "md5": "00e307fcf23c505b57ca89067a880502",
+  "name": "backports.weakref",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/backports.weakref-1.0.post1-py_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/backports/__pycache__/weakref.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "backports.weakref==1.0.post1=py_1",
+  "sha256": "4353ca0f60436a14066610a92d17cfe2c833cb673156b2cfa4e8c3b5c782ce68",
+  "size": 7777,
+  "subdir": "noarch",
+  "timestamp": 1560422196084,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/backports.weakref-1.0.post1-py_1.conda",
+  "version": "1.0.post1"
+}

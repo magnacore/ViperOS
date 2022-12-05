@@ -1,0 +1,52 @@
+{
+  "build": "py39h06a4308_8",
+  "build_number": 8,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "ipykernel",
+    "ipywidgets",
+    "jupyter_console",
+    "jupyterlab",
+    "nbconvert",
+    "notebook",
+    "python >=3.9,<3.10.0a0",
+    "qtconsole"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/jupyter-1.0.0-py39h06a4308_8",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/jupyter-1.0.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/jupyter-1.0.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/jupyter-1.0.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/jupyter-1.0.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/jupyter-1.0.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/jupyter-1.0.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/jupyter-1.0.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/jupyter-1.0.0.dist-info/top_level.txt"
+  ],
+  "fn": "jupyter-1.0.0-py39h06a4308_8.conda",
+  "legacy_bz2_md5": "b6d8d430c1f20d2bd6691a0b2bbdbacc",
+  "legacy_bz2_size": 7516,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/jupyter-1.0.0-py39h06a4308_8",
+    "type": 1
+  },
+  "md5": "9c1ec71e0a6d1fc3ce630dfd2926cc09",
+  "name": "jupyter",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/jupyter-1.0.0-py39h06a4308_8.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "jupyter==1.0.0=py39h06a4308_8",
+  "sha256": "0acafd437d7b2b3e3f2b8f4181acfbea29a22400d33b24b9c094ded8f279b89b",
+  "size": 7648,
+  "subdir": "linux-64",
+  "timestamp": 1659349087693,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/jupyter-1.0.0-py39h06a4308_8.conda",
+  "version": "1.0.0"
+}

@@ -1,0 +1,101 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/json5-0.9.6-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/json5-0.9.6.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/json5-0.9.6.dist-info/METADATA",
+    "lib/python3.9/site-packages/json5-0.9.6.dist-info/RECORD",
+    "lib/python3.9/site-packages/json5-0.9.6.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/json5-0.9.6.dist-info/WHEEL",
+    "lib/python3.9/site-packages/json5-0.9.6.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/json5-0.9.6.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/json5-0.9.6.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/json5/__init__.py",
+    "lib/python3.9/site-packages/json5/__main__.py",
+    "lib/python3.9/site-packages/json5/arg_parser.py",
+    "lib/python3.9/site-packages/json5/host.py",
+    "lib/python3.9/site-packages/json5/lib.py",
+    "lib/python3.9/site-packages/json5/parser.py",
+    "lib/python3.9/site-packages/json5/tool.py",
+    "lib/python3.9/site-packages/json5/version.py",
+    "lib/python3.9/site-packages/json5/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/json5/__pycache__/__main__.cpython-39.pyc",
+    "lib/python3.9/site-packages/json5/__pycache__/arg_parser.cpython-39.pyc",
+    "lib/python3.9/site-packages/json5/__pycache__/host.cpython-39.pyc",
+    "lib/python3.9/site-packages/json5/__pycache__/lib.cpython-39.pyc",
+    "lib/python3.9/site-packages/json5/__pycache__/parser.cpython-39.pyc",
+    "lib/python3.9/site-packages/json5/__pycache__/tool.cpython-39.pyc",
+    "lib/python3.9/site-packages/json5/__pycache__/version.cpython-39.pyc",
+    "bin/pyjson5"
+  ],
+  "fn": "json5-0.9.6-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "91e3336204a0ea3951957d7d5e8f3e26",
+  "legacy_bz2_size": 21503,
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/json5-0.9.6-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "4e721ee2dbfa20069719d2ee19185031",
+  "name": "json5",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/json5-0.9.6-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/json5/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/json5/__pycache__/__main__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/json5/__pycache__/arg_parser.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/json5/__pycache__/host.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/json5/__pycache__/lib.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/json5/__pycache__/parser.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/json5/__pycache__/tool.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/json5/__pycache__/version.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/pyjson5",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "json5==0.9.6=pyhd3eb1b0_0",
+  "sha256": "595b96c7e20703125ff4865ee55ba282357b57438a609dd7660610318127ca2e",
+  "size": 21787,
+  "subdir": "noarch",
+  "timestamp": 1624432813739,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/json5-0.9.6-pyhd3eb1b0_0.conda",
+  "version": "0.9.6"
+}

@@ -1,0 +1,50 @@
+{
+  "build": "h295c915_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.5.0",
+    "libstdcxx-ng >=7.5.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/patchelf-0.13-h295c915_0",
+  "features": "",
+  "files": [
+    "bin/patchelf",
+    "share/doc/patchelf/README.md",
+    "share/man/man1/patchelf.1"
+  ],
+  "fn": "patchelf-0.13-h295c915_0.conda",
+  "legacy_bz2_md5": "bb0960dcf647493326c8fbdbf0e2f840",
+  "legacy_bz2_size": 92171,
+  "license": "GPL-3.0-or-later",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/patchelf-0.13-h295c915_0",
+    "type": 1
+  },
+  "md5": "546bd64a8cbb7d261fd1e5236cac9369",
+  "name": "patchelf",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/patchelf-0.13-h295c915_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/patchelf",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/patchelf_1631287755624/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "dfdef716647c8de6a1b9336dcdae08a7a1b9cde398614ea349c8ac99b2488e71",
+        "sha256_in_prefix": "9dbec76fb5f701290fe2115395de3aeea6a5a1aac3ff903631fab598556732b0",
+        "size_in_bytes": 184152
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "patchelf==0.13=h295c915_0",
+  "sha256": "301dcada573a92c860d3deb5669fd9ac211c37cf66f24c5492ef228ed1aa8f85",
+  "size": 87228,
+  "subdir": "linux-64",
+  "timestamp": 1631287810666,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/patchelf-0.13-h295c915_0.conda",
+  "version": "0.13"
+}

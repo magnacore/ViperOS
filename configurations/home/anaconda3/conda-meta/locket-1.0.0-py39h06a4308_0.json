@@ -1,0 +1,47 @@
+{
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/locket-1.0.0-py39h06a4308_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/locket-1.0.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/locket-1.0.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/locket-1.0.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/locket-1.0.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/locket-1.0.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/locket-1.0.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/locket-1.0.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/locket-1.0.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/locket/__init__.py",
+    "lib/python3.9/site-packages/locket/__pycache__/__init__.cpython-39.pyc"
+  ],
+  "fn": "locket-1.0.0-py39h06a4308_0.conda",
+  "legacy_bz2_md5": "78c7a3a437536ae24d2d7ce15ec400d2",
+  "legacy_bz2_size": 11065,
+  "license": "BSD-2-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/locket-1.0.0-py39h06a4308_0",
+    "type": 1
+  },
+  "md5": "76f3059967599bd974ff21ecc376c7e0",
+  "name": "locket",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/locket-1.0.0-py39h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "locket==1.0.0=py39h06a4308_0",
+  "sha256": "9ae502d6411317773514e53ce867431cf8aa5a76ceb3935a534a3e4f964e9b17",
+  "size": 11188,
+  "subdir": "linux-64",
+  "timestamp": 1652903210940,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/locket-1.0.0-py39h06a4308_0.conda",
+  "version": "1.0.0"
+}

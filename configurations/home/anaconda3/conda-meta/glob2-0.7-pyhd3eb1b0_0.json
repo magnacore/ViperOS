@@ -1,0 +1,69 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/glob2-0.7-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/glob2-0.7.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/glob2-0.7.dist-info/LICENSE",
+    "lib/python3.9/site-packages/glob2-0.7.dist-info/METADATA",
+    "lib/python3.9/site-packages/glob2-0.7.dist-info/RECORD",
+    "lib/python3.9/site-packages/glob2-0.7.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/glob2-0.7.dist-info/WHEEL",
+    "lib/python3.9/site-packages/glob2-0.7.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/glob2-0.7.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/glob2/__init__.py",
+    "lib/python3.9/site-packages/glob2/compat.py",
+    "lib/python3.9/site-packages/glob2/fnmatch.py",
+    "lib/python3.9/site-packages/glob2/impl.py",
+    "lib/python3.9/site-packages/glob2/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/glob2/__pycache__/compat.cpython-39.pyc",
+    "lib/python3.9/site-packages/glob2/__pycache__/fnmatch.cpython-39.pyc",
+    "lib/python3.9/site-packages/glob2/__pycache__/impl.cpython-39.pyc"
+  ],
+  "fn": "glob2-0.7-pyhd3eb1b0_0.tar.bz2",
+  "license": "BSD-2-Clause",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/glob2-0.7-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "bdf20ceeffa1bcfe549ec6400afe0426",
+  "name": "glob2",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/glob2-0.7-pyhd3eb1b0_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/glob2/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/glob2/__pycache__/compat.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/glob2/__pycache__/fnmatch.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/glob2/__pycache__/impl.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "glob2==0.7=pyhd3eb1b0_0",
+  "sha256": "a5b9ff25ab2e2f78ac8b2c3fa2a35188626f2c1f70994850c568e68c791c8845",
+  "size": 11944,
+  "subdir": "noarch",
+  "timestamp": 1610991684824,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/glob2-0.7-pyhd3eb1b0_0.tar.bz2",
+  "version": "0.7"
+}

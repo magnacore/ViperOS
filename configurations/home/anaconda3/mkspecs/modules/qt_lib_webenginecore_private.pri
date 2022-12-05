@@ -1,0 +1,13 @@
+QT.webenginecore_private.VERSION = 5.15.9
+QT.webenginecore_private.name = QtWebEngineCore
+QT.webenginecore_private.module =
+QT.webenginecore_private.libs = $$QT_MODULE_LIB_BASE
+QT.webenginecore_private.includes = $$QT_MODULE_INCLUDE_BASE/QtWebEngineCore/5.15.9 $$QT_MODULE_INCLUDE_BASE/QtWebEngineCore/5.15.9/QtWebEngineCore
+QT.webenginecore_private.frameworks =
+QT.webenginecore_private.depends = qml_private quick_private gui_private core_private webenginecore
+QT.webenginecore_private.uses =
+QT.webenginecore_private.module_config = v2 internal_module
+QT.webenginecore_private.enabled_features = webengine-alsa webengine-printing-and-pdf webengine-pepper-plugins webengine-v8-snapshot-support webengine-webrtc
+QT.webenginecore_private.disabled_features = webengine-embedded-build webengine-kerberos webengine-ozone webengine-poppler-cpp webengine-proprietary-codecs webengine-pulseaudio webengine-webrtc-pipewire
+QMAKE_INCDIR_WEBENGINE_ALSA = /tmp/build/80754af9/qt-webengine_1658740287723/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/include /tmp/build/80754af9/qt-webengine_1658740287723/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/include/alsa
+QMAKE_LIBS_WEBENGINE_ALSA = -L/tmp/build/80754af9/qt-webengine_1658740287723/_build_env/bin/../x86_64-conda-linux-gnu/sysroot/usr/lib64 -lasound

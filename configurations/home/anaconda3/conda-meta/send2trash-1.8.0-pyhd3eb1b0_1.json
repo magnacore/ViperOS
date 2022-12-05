@@ -1,0 +1,143 @@
+{
+  "build": "pyhd3eb1b0_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/send2trash-1.8.0-pyhd3eb1b0_1",
+  "features": "",
+  "files": [
+    "bin/send2trash",
+    "lib/python3.9/site-packages/Send2Trash-1.8.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/Send2Trash-1.8.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/Send2Trash-1.8.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/Send2Trash-1.8.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/Send2Trash-1.8.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/Send2Trash-1.8.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/Send2Trash-1.8.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/Send2Trash-1.8.0.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/Send2Trash-1.8.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/send2trash/IFileOperationProgressSink.py",
+    "lib/python3.9/site-packages/send2trash/__init__.py",
+    "lib/python3.9/site-packages/send2trash/__main__.py",
+    "lib/python3.9/site-packages/send2trash/compat.py",
+    "lib/python3.9/site-packages/send2trash/exceptions.py",
+    "lib/python3.9/site-packages/send2trash/plat_gio.py",
+    "lib/python3.9/site-packages/send2trash/plat_osx.py",
+    "lib/python3.9/site-packages/send2trash/plat_osx_ctypes.py",
+    "lib/python3.9/site-packages/send2trash/plat_osx_pyobjc.py",
+    "lib/python3.9/site-packages/send2trash/plat_other.py",
+    "lib/python3.9/site-packages/send2trash/plat_win.py",
+    "lib/python3.9/site-packages/send2trash/plat_win_legacy.py",
+    "lib/python3.9/site-packages/send2trash/plat_win_modern.py",
+    "lib/python3.9/site-packages/send2trash/util.py",
+    "lib/python3.9/site-packages/send2trash/__pycache__/IFileOperationProgressSink.cpython-39.pyc",
+    "lib/python3.9/site-packages/send2trash/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/send2trash/__pycache__/__main__.cpython-39.pyc",
+    "lib/python3.9/site-packages/send2trash/__pycache__/compat.cpython-39.pyc",
+    "lib/python3.9/site-packages/send2trash/__pycache__/exceptions.cpython-39.pyc",
+    "lib/python3.9/site-packages/send2trash/__pycache__/plat_gio.cpython-39.pyc",
+    "lib/python3.9/site-packages/send2trash/__pycache__/plat_osx.cpython-39.pyc",
+    "lib/python3.9/site-packages/send2trash/__pycache__/plat_osx_ctypes.cpython-39.pyc",
+    "lib/python3.9/site-packages/send2trash/__pycache__/plat_osx_pyobjc.cpython-39.pyc",
+    "lib/python3.9/site-packages/send2trash/__pycache__/plat_other.cpython-39.pyc",
+    "lib/python3.9/site-packages/send2trash/__pycache__/plat_win.cpython-39.pyc",
+    "lib/python3.9/site-packages/send2trash/__pycache__/plat_win_legacy.cpython-39.pyc",
+    "lib/python3.9/site-packages/send2trash/__pycache__/plat_win_modern.cpython-39.pyc",
+    "lib/python3.9/site-packages/send2trash/__pycache__/util.cpython-39.pyc"
+  ],
+  "fn": "send2trash-1.8.0-pyhd3eb1b0_1.conda",
+  "legacy_bz2_md5": "41db68b96e114e367c4f120a3b379e59",
+  "legacy_bz2_size": 19391,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/send2trash-1.8.0-pyhd3eb1b0_1",
+    "type": 1
+  },
+  "md5": "bfa3c5c61a5a91e528a1d2d1e3cae6c9",
+  "name": "send2trash",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/send2trash-1.8.0-pyhd3eb1b0_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "python-scripts/send2trash",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/send2trash_1632406701022/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "2d3347564003342f60c658c4f34db896e0fa191420f0d4ea2b8ba82c6e9f213d",
+        "sha256_in_prefix": "77659f90d85d9b1891bd864155175fae1ff7993dc70f72884c471d551179c568",
+        "size_in_bytes": 501
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/IFileOperationProgressSink.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/__main__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/compat.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/exceptions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/plat_gio.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/plat_osx.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/plat_osx_ctypes.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/plat_osx_pyobjc.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/plat_other.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/plat_win.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/plat_win_legacy.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/plat_win_modern.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/send2trash/__pycache__/util.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "send2trash==1.8.0=pyhd3eb1b0_1",
+  "sha256": "81f8bc2fa5d8ffe03fa591777e06c424959d2599252374d08d4e1bf77136d8d9",
+  "size": 19295,
+  "subdir": "noarch",
+  "timestamp": 1632406728844,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/send2trash-1.8.0-pyhd3eb1b0_1.conda",
+  "version": "1.8.0"
+}

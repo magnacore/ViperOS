@@ -1,0 +1,50 @@
+{
+  "build": "ha770c72_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/conda-suggest-conda-forge-2021.8.24-ha770c72_0",
+  "features": "",
+  "files": [
+    "share/conda-suggest/conda-forge.linux-64.map",
+    "share/conda-suggest/conda-forge.noarch.map"
+  ],
+  "fn": "conda-suggest-conda-forge-2021.8.24-ha770c72_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/conda-suggest-conda-forge-2021.8.24-ha770c72_0",
+    "type": 1
+  },
+  "md5": "6c6d6156bfa501278216f8f6958d1a07",
+  "name": "conda-suggest-conda-forge",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/conda-suggest-conda-forge-2021.8.24-ha770c72_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "share/conda-suggest/conda-forge.linux-64.map",
+        "path_type": "hardlink",
+        "sha256": "782ae9c1afed62cd9e58422b6b251fc70588a24e34a48879c82069b09f11badd",
+        "sha256_in_prefix": "782ae9c1afed62cd9e58422b6b251fc70588a24e34a48879c82069b09f11badd",
+        "size_in_bytes": 451233
+      },
+      {
+        "_path": "share/conda-suggest/conda-forge.noarch.map",
+        "path_type": "hardlink",
+        "sha256": "aa78dbbd6d806a451d3ee12480db9d4ff4059b9645e1ec9971b741d1fc0fe1dc",
+        "sha256_in_prefix": "aa78dbbd6d806a451d3ee12480db9d4ff4059b9645e1ec9971b741d1fc0fe1dc",
+        "size_in_bytes": 57569
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "5095a8485f583fbb8146b36475a9e469339b5e623fc1cda73ba997cb3fa096e7",
+  "size": 123121,
+  "subdir": "linux-64",
+  "timestamp": 1629819573249,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/conda-suggest-conda-forge-2021.8.24-ha770c72_0.tar.bz2",
+  "version": "2021.8.24"
+}

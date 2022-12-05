@@ -1,0 +1,2650 @@
+{
+  "build": "py310hff52083_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "conda-suggest",
+    "prompt_toolkit",
+    "pygments >=2.2",
+    "pyperclip",
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310",
+    "setproctitle"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/xonsh-0.13.3-py310hff52083_1",
+  "features": "",
+  "files": [
+    "bin/xonsh",
+    "bin/xonsh-cat",
+    "bin/xonsh-uname",
+    "bin/xonsh-uptime",
+    "lib/python3.10/site-packages/xompletions/__pycache__/_xonsh.cpython-310.pyc",
+    "lib/python3.10/site-packages/xompletions/__pycache__/cd.cpython-310.pyc",
+    "lib/python3.10/site-packages/xompletions/__pycache__/gh.cpython-310.pyc",
+    "lib/python3.10/site-packages/xompletions/__pycache__/pip.cpython-310.pyc",
+    "lib/python3.10/site-packages/xompletions/__pycache__/rmdir.cpython-310.pyc",
+    "lib/python3.10/site-packages/xompletions/_xonsh.py",
+    "lib/python3.10/site-packages/xompletions/cd.py",
+    "lib/python3.10/site-packages/xompletions/gh.py",
+    "lib/python3.10/site-packages/xompletions/pip.py",
+    "lib/python3.10/site-packages/xompletions/rmdir.py",
+    "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/AUTHORS.rst",
+    "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/METADATA",
+    "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/RECORD",
+    "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/WHEEL",
+    "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/entry_points.txt",
+    "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/xonsh/__init__.py",
+    "lib/python3.10/site-packages/xonsh/__main__.py",
+    "lib/python3.10/site-packages/xonsh/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/__main__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/aliases.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/ansi_colors.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/ast.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/base_shell.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/built_ins.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/cli_utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/codecache.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/color_tools.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/commands_cache.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/completer.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/completion_parser_table.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/contexts.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/diff_history.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/dirstack.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/dumb_shell.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/environ.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/events.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/execer.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/foreign_shells.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/imphooks.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/inspectors.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/jobs.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/jsonutils.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/lazyasd.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/lazyimps.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/lazyjson.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/lexer.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/macutils.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/main.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/openpy.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/parser.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/parser_table.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/platform.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/pretty.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/proc.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/pyghooks.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/pygments_cache.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/readline_shell.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/shell.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/style_tools.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/timings.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/tokenize.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/tools.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/tracer.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/winutils.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/wizard.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/xonfig.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/__pycache__/xontribs.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/aliases.py",
+    "lib/python3.10/site-packages/xonsh/ansi_colors.py",
+    "lib/python3.10/site-packages/xonsh/ast.py",
+    "lib/python3.10/site-packages/xonsh/base_shell.py",
+    "lib/python3.10/site-packages/xonsh/built_ins.py",
+    "lib/python3.10/site-packages/xonsh/cli_utils.py",
+    "lib/python3.10/site-packages/xonsh/codecache.py",
+    "lib/python3.10/site-packages/xonsh/color_tools.py",
+    "lib/python3.10/site-packages/xonsh/commands_cache.py",
+    "lib/python3.10/site-packages/xonsh/completer.py",
+    "lib/python3.10/site-packages/xonsh/completers/__init__.py",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/_aliases.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/bash.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/bash_completion.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/commands.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/completer.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/dirs.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/environment.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/imports.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/init.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/man.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/path.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/python.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/__pycache__/tools.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/completers/_aliases.py",
+    "lib/python3.10/site-packages/xonsh/completers/base.py",
+    "lib/python3.10/site-packages/xonsh/completers/bash.py",
+    "lib/python3.10/site-packages/xonsh/completers/bash_completion.py",
+    "lib/python3.10/site-packages/xonsh/completers/commands.py",
+    "lib/python3.10/site-packages/xonsh/completers/completer.py",
+    "lib/python3.10/site-packages/xonsh/completers/dirs.py",
+    "lib/python3.10/site-packages/xonsh/completers/environment.py",
+    "lib/python3.10/site-packages/xonsh/completers/imports.py",
+    "lib/python3.10/site-packages/xonsh/completers/init.py",
+    "lib/python3.10/site-packages/xonsh/completers/man.py",
+    "lib/python3.10/site-packages/xonsh/completers/path.py",
+    "lib/python3.10/site-packages/xonsh/completers/python.py",
+    "lib/python3.10/site-packages/xonsh/completers/tools.py",
+    "lib/python3.10/site-packages/xonsh/completion_parser_table.py",
+    "lib/python3.10/site-packages/xonsh/contexts.py",
+    "lib/python3.10/site-packages/xonsh/diff_history.py",
+    "lib/python3.10/site-packages/xonsh/dirstack.py",
+    "lib/python3.10/site-packages/xonsh/dumb_shell.py",
+    "lib/python3.10/site-packages/xonsh/environ.py",
+    "lib/python3.10/site-packages/xonsh/events.py",
+    "lib/python3.10/site-packages/xonsh/execer.py",
+    "lib/python3.10/site-packages/xonsh/foreign_shells.py",
+    "lib/python3.10/site-packages/xonsh/history/__init__.py",
+    "lib/python3.10/site-packages/xonsh/history/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/history/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/history/__pycache__/dummy.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/history/__pycache__/json.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/history/__pycache__/main.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/history/__pycache__/sqlite.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/history/base.py",
+    "lib/python3.10/site-packages/xonsh/history/dummy.py",
+    "lib/python3.10/site-packages/xonsh/history/json.py",
+    "lib/python3.10/site-packages/xonsh/history/main.py",
+    "lib/python3.10/site-packages/xonsh/history/sqlite.py",
+    "lib/python3.10/site-packages/xonsh/imphooks.py",
+    "lib/python3.10/site-packages/xonsh/inspectors.py",
+    "lib/python3.10/site-packages/xonsh/jobs.py",
+    "lib/python3.10/site-packages/xonsh/jsonutils.py",
+    "lib/python3.10/site-packages/xonsh/lazyasd.py",
+    "lib/python3.10/site-packages/xonsh/lazyimps.py",
+    "lib/python3.10/site-packages/xonsh/lazyjson.py",
+    "lib/python3.10/site-packages/xonsh/lexer.py",
+    "lib/python3.10/site-packages/xonsh/lib/__init__.py",
+    "lib/python3.10/site-packages/xonsh/lib/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/lib/__pycache__/collections.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/lib/__pycache__/itertools.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/lib/__pycache__/modules.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/lib/__pycache__/os.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/lib/__pycache__/subprocess.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/lib/collections.py",
+    "lib/python3.10/site-packages/xonsh/lib/itertools.py",
+    "lib/python3.10/site-packages/xonsh/lib/modules.py",
+    "lib/python3.10/site-packages/xonsh/lib/os.py",
+    "lib/python3.10/site-packages/xonsh/lib/subprocess.py",
+    "lib/python3.10/site-packages/xonsh/macutils.py",
+    "lib/python3.10/site-packages/xonsh/main.py",
+    "lib/python3.10/site-packages/xonsh/openpy.py",
+    "lib/python3.10/site-packages/xonsh/parser.py",
+    "lib/python3.10/site-packages/xonsh/parser_table.py",
+    "lib/python3.10/site-packages/xonsh/parsers/__init__.py",
+    "lib/python3.10/site-packages/xonsh/parsers/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/parsers/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/parsers/__pycache__/completion_context.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/parsers/__pycache__/context_check.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/parsers/__pycache__/fstring_adaptor.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/parsers/__pycache__/v310.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/parsers/__pycache__/v36.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/parsers/__pycache__/v38.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/parsers/__pycache__/v39.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/parsers/base.py",
+    "lib/python3.10/site-packages/xonsh/parsers/completion_context.py",
+    "lib/python3.10/site-packages/xonsh/parsers/context_check.py",
+    "lib/python3.10/site-packages/xonsh/parsers/fstring_adaptor.py",
+    "lib/python3.10/site-packages/xonsh/parsers/v310.py",
+    "lib/python3.10/site-packages/xonsh/parsers/v36.py",
+    "lib/python3.10/site-packages/xonsh/parsers/v38.py",
+    "lib/python3.10/site-packages/xonsh/parsers/v39.py",
+    "lib/python3.10/site-packages/xonsh/platform.py",
+    "lib/python3.10/site-packages/xonsh/ply/ply/__init__.py",
+    "lib/python3.10/site-packages/xonsh/ply/ply/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/ply/ply/__pycache__/cpp.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/ply/ply/__pycache__/ctokens.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/ply/ply/__pycache__/lex.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/ply/ply/__pycache__/yacc.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/ply/ply/__pycache__/ygen.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/ply/ply/cpp.py",
+    "lib/python3.10/site-packages/xonsh/ply/ply/ctokens.py",
+    "lib/python3.10/site-packages/xonsh/ply/ply/lex.py",
+    "lib/python3.10/site-packages/xonsh/ply/ply/yacc.py",
+    "lib/python3.10/site-packages/xonsh/ply/ply/ygen.py",
+    "lib/python3.10/site-packages/xonsh/pretty.py",
+    "lib/python3.10/site-packages/xonsh/proc.py",
+    "lib/python3.10/site-packages/xonsh/procs/__init__.py",
+    "lib/python3.10/site-packages/xonsh/procs/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/procs/__pycache__/pipelines.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/procs/__pycache__/posix.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/procs/__pycache__/proxies.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/procs/__pycache__/readers.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/procs/__pycache__/specs.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/procs/pipelines.py",
+    "lib/python3.10/site-packages/xonsh/procs/posix.py",
+    "lib/python3.10/site-packages/xonsh/procs/proxies.py",
+    "lib/python3.10/site-packages/xonsh/procs/readers.py",
+    "lib/python3.10/site-packages/xonsh/procs/specs.py",
+    "lib/python3.10/site-packages/xonsh/prompt/__init__.py",
+    "lib/python3.10/site-packages/xonsh/prompt/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/prompt/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/prompt/__pycache__/cwd.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/prompt/__pycache__/env.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/prompt/__pycache__/gitstatus.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/prompt/__pycache__/job.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/prompt/__pycache__/times.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/prompt/__pycache__/vc.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/prompt/base.py",
+    "lib/python3.10/site-packages/xonsh/prompt/cwd.py",
+    "lib/python3.10/site-packages/xonsh/prompt/env.py",
+    "lib/python3.10/site-packages/xonsh/prompt/gitstatus.py",
+    "lib/python3.10/site-packages/xonsh/prompt/job.py",
+    "lib/python3.10/site-packages/xonsh/prompt/times.py",
+    "lib/python3.10/site-packages/xonsh/prompt/vc.py",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/__init__.py",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/completer.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/formatter.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/history.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/key_bindings.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/shell.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/updator.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/completer.py",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/formatter.py",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/history.py",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/key_bindings.py",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/shell.py",
+    "lib/python3.10/site-packages/xonsh/ptk_shell/updator.py",
+    "lib/python3.10/site-packages/xonsh/pyghooks.py",
+    "lib/python3.10/site-packages/xonsh/pygments_cache.py",
+    "lib/python3.10/site-packages/xonsh/pytest/__init__.py",
+    "lib/python3.10/site-packages/xonsh/pytest/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/pytest/__pycache__/plugin.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/pytest/__pycache__/tools.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/pytest/plugin.py",
+    "lib/python3.10/site-packages/xonsh/pytest/tools.py",
+    "lib/python3.10/site-packages/xonsh/readline_shell.py",
+    "lib/python3.10/site-packages/xonsh/shell.py",
+    "lib/python3.10/site-packages/xonsh/style_tools.py",
+    "lib/python3.10/site-packages/xonsh/timings.py",
+    "lib/python3.10/site-packages/xonsh/tokenize.py",
+    "lib/python3.10/site-packages/xonsh/tools.py",
+    "lib/python3.10/site-packages/xonsh/tracer.py",
+    "lib/python3.10/site-packages/xonsh/virtualenv/__init__.py",
+    "lib/python3.10/site-packages/xonsh/virtualenv/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/virtualenv/activate.xsh",
+    "lib/python3.10/site-packages/xonsh/webconfig/__init__.py",
+    "lib/python3.10/site-packages/xonsh/webconfig/__main__.py",
+    "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/__main__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/file_writes.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/main.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/routes.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/tags.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/xonsh_data.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/webconfig/file_writes.py",
+    "lib/python3.10/site-packages/xonsh/webconfig/index.html",
+    "lib/python3.10/site-packages/xonsh/webconfig/js/LICENSE-bootstrap",
+    "lib/python3.10/site-packages/xonsh/webconfig/js/bootstrap.min.css",
+    "lib/python3.10/site-packages/xonsh/webconfig/main.py",
+    "lib/python3.10/site-packages/xonsh/webconfig/routes.py",
+    "lib/python3.10/site-packages/xonsh/webconfig/tags.py",
+    "lib/python3.10/site-packages/xonsh/webconfig/xonsh_data.py",
+    "lib/python3.10/site-packages/xonsh/winutils.py",
+    "lib/python3.10/site-packages/xonsh/wizard.py",
+    "lib/python3.10/site-packages/xonsh/xonfig.py",
+    "lib/python3.10/site-packages/xonsh/xontribs.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__init__.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/_which.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/cat.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/echo.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/pwd.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/tee.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/tty.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/ulimit.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/umask.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/uname.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/uptime.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/util.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/which.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/yes.cpython-310.pyc",
+    "lib/python3.10/site-packages/xonsh/xoreutils/_which.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/cat.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/echo.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/pwd.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/tee.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/tty.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/ulimit.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/umask.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/uname.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/uptime.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/util.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/which.py",
+    "lib/python3.10/site-packages/xonsh/xoreutils/yes.py",
+    "lib/python3.10/site-packages/xontrib/__pycache__/abbrevs.cpython-310.pyc",
+    "lib/python3.10/site-packages/xontrib/__pycache__/autovox.cpython-310.pyc",
+    "lib/python3.10/site-packages/xontrib/__pycache__/bashisms.cpython-310.pyc",
+    "lib/python3.10/site-packages/xontrib/__pycache__/coreutils.cpython-310.pyc",
+    "lib/python3.10/site-packages/xontrib/__pycache__/fish_completer.cpython-310.pyc",
+    "lib/python3.10/site-packages/xontrib/__pycache__/free_cwd.cpython-310.pyc",
+    "lib/python3.10/site-packages/xontrib/__pycache__/pdb.cpython-310.pyc",
+    "lib/python3.10/site-packages/xontrib/__pycache__/vox.cpython-310.pyc",
+    "lib/python3.10/site-packages/xontrib/__pycache__/voxapi.cpython-310.pyc",
+    "lib/python3.10/site-packages/xontrib/__pycache__/whole_word_jumping.cpython-310.pyc",
+    "lib/python3.10/site-packages/xontrib/__pycache__/xog.cpython-310.pyc",
+    "lib/python3.10/site-packages/xontrib/abbrevs.py",
+    "lib/python3.10/site-packages/xontrib/autovox.py",
+    "lib/python3.10/site-packages/xontrib/bashisms.py",
+    "lib/python3.10/site-packages/xontrib/coreutils.py",
+    "lib/python3.10/site-packages/xontrib/fish_completer.py",
+    "lib/python3.10/site-packages/xontrib/free_cwd.py",
+    "lib/python3.10/site-packages/xontrib/pdb.py",
+    "lib/python3.10/site-packages/xontrib/vox.py",
+    "lib/python3.10/site-packages/xontrib/voxapi.py",
+    "lib/python3.10/site-packages/xontrib/whole_word_jumping.py",
+    "lib/python3.10/site-packages/xontrib/xog.py"
+  ],
+  "fn": "xonsh-0.13.3-py310hff52083_1.tar.bz2",
+  "license": "BSD-2-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/xonsh-0.13.3-py310hff52083_1",
+    "type": 1
+  },
+  "md5": "1196bd46bbcc60bf327170d3e615cb52",
+  "name": "xonsh",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/xonsh-0.13.3-py310hff52083_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/xonsh",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/xonsh_1666954170962/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "fa807f68af5a0b8de584d626ca584264cb8ec0c22343755408367a4ea2650a92",
+        "sha256_in_prefix": "daa89698294a31a81d21f34bf303c6493d96e9e33d7ff2a761492825f7814022",
+        "size_in_bytes": 463
+      },
+      {
+        "_path": "bin/xonsh-cat",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/xonsh_1666954170962/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "0acdf97dbf61961b54c9393e6b880be10ea701bee8c6ea00b1e3b61fec47da0a",
+        "sha256_in_prefix": "8169a55787ae4860b8ec97b9a0cb803abc9ec86f7dba25da50166f600a7d35d7",
+        "size_in_bytes": 480
+      },
+      {
+        "_path": "bin/xonsh-uname",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/xonsh_1666954170962/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "6a1395c705e10c4b41135fade7d2ae09dc3a763b256c51f1f12d18f63d922202",
+        "sha256_in_prefix": "35541e3fd5efddca0661d0920eaa72e3f275017088e354efa9d7d94ec634f13d",
+        "size_in_bytes": 503
+      },
+      {
+        "_path": "bin/xonsh-uptime",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/xonsh_1666954170962/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "b986bce52d065920f47677ad5cc489d4dd2d603a096cf0b8f5bd5074c91d13a3",
+        "sha256_in_prefix": "37b010fa6fd936bcc6a02626cc14713a55cca318360ea728c163976f254283d3",
+        "size_in_bytes": 504
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xompletions/__pycache__/_xonsh.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "dc3205c4469d066c3f22e62ba0530dd85708a54e0c332f5309918a4e338c8adf",
+        "sha256_in_prefix": "dc3205c4469d066c3f22e62ba0530dd85708a54e0c332f5309918a4e338c8adf",
+        "size_in_bytes": 557
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xompletions/__pycache__/cd.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c615e1c014cf8babc6539d716c2a18c605f26e4d6937e7d4f98a430e3ade68dc",
+        "sha256_in_prefix": "c615e1c014cf8babc6539d716c2a18c605f26e4d6937e7d4f98a430e3ade68dc",
+        "size_in_bytes": 545
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xompletions/__pycache__/gh.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "87faf3040376fb88a70289cb803de45b4af20a9b314fde1cf17df1a18f58d232",
+        "sha256_in_prefix": "87faf3040376fb88a70289cb803de45b4af20a9b314fde1cf17df1a18f58d232",
+        "size_in_bytes": 950
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xompletions/__pycache__/pip.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b078f25dfb23f24570610f1977364567c8a8ed7ea6e4c45344d900adeb78d72a",
+        "sha256_in_prefix": "b078f25dfb23f24570610f1977364567c8a8ed7ea6e4c45344d900adeb78d72a",
+        "size_in_bytes": 508
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xompletions/__pycache__/rmdir.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a3e979180f49f179475551f7d27b46471db8485c9e28a0f1470b20d45dc9a587",
+        "sha256_in_prefix": "a3e979180f49f179475551f7d27b46471db8485c9e28a0f1470b20d45dc9a587",
+        "size_in_bytes": 601
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xompletions/_xonsh.py",
+        "path_type": "hardlink",
+        "sha256": "546e0b4227e7a123d5e4c54a98acd1067daf79e344c7f7fcc03dfc7ac4ac7e40",
+        "sha256_in_prefix": "546e0b4227e7a123d5e4c54a98acd1067daf79e344c7f7fcc03dfc7ac4ac7e40",
+        "size_in_bytes": 353
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xompletions/cd.py",
+        "path_type": "hardlink",
+        "sha256": "1a42ff081884ee8fdf35e3002af544098fb6ab6e0698dd40ab424e145b93a3d8",
+        "sha256_in_prefix": "1a42ff081884ee8fdf35e3002af544098fb6ab6e0698dd40ab424e145b93a3d8",
+        "size_in_bytes": 359
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xompletions/gh.py",
+        "path_type": "hardlink",
+        "sha256": "d43548e4fad71dfa200662a773d17e38c7014f7cb77c91732f6270596f53ff0f",
+        "sha256_in_prefix": "d43548e4fad71dfa200662a773d17e38c7014f7cb77c91732f6270596f53ff0f",
+        "size_in_bytes": 811
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xompletions/pip.py",
+        "path_type": "hardlink",
+        "sha256": "e83ec31e4fb7a82369f43511fbb03284c35369fd58d7d0896ea1ec4583bccfcd",
+        "sha256_in_prefix": "e83ec31e4fb7a82369f43511fbb03284c35369fd58d7d0896ea1ec4583bccfcd",
+        "size_in_bytes": 297
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xompletions/rmdir.py",
+        "path_type": "hardlink",
+        "sha256": "60dfc804e70b89f4a5d4dbb16fdcd86bc48134b85a2d4fd19399ab2f92ed4d8c",
+        "sha256_in_prefix": "60dfc804e70b89f4a5d4dbb16fdcd86bc48134b85a2d4fd19399ab2f92ed4d8c",
+        "size_in_bytes": 531
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/AUTHORS.rst",
+        "path_type": "hardlink",
+        "sha256": "82a1177b16b8412577c4684e478452314b8655d6093a08bc169c21176b42e090",
+        "sha256_in_prefix": "82a1177b16b8412577c4684e478452314b8655d6093a08bc169c21176b42e090",
+        "size_in_bytes": 4704
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "ef6a0f5132841bedc90c5031042d66c4f26f651c2ebe41ee1ace6e954d363896",
+        "sha256_in_prefix": "ef6a0f5132841bedc90c5031042d66c4f26f651c2ebe41ee1ace6e954d363896",
+        "size_in_bytes": 6698
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "bde79cc460e558634855947456e6cf4681624575df7e1b9851a90591ab4e46a8",
+        "sha256_in_prefix": "bde79cc460e558634855947456e6cf4681624575df7e1b9851a90591ab4e46a8",
+        "size_in_bytes": 21395
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "2b16adc5a640d783acc08253748987862336b5d66053ec4b644cecfac62f7957",
+        "sha256_in_prefix": "2b16adc5a640d783acc08253748987862336b5d66053ec4b644cecfac62f7957",
+        "size_in_bytes": 94
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "411824d279e5c74e949080b09192ae8981975b90862a9491124f12a35d8fad78",
+        "sha256_in_prefix": "411824d279e5c74e949080b09192ae8981975b90862a9491124f12a35d8fad78",
+        "size_in_bytes": 101
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "f3a65f99a18bb2d59b8ee0f90dddd05c7ddf50dc3f8c14a8b4631cec416ed6a2",
+        "sha256_in_prefix": "f3a65f99a18bb2d59b8ee0f90dddd05c7ddf50dc3f8c14a8b4631cec416ed6a2",
+        "size_in_bytes": 363
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh-0.13.3.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "e852b33983a265dc207571920d677b70732d4030622b90664193ddfefc49d918",
+        "sha256_in_prefix": "e852b33983a265dc207571920d677b70732d4030622b90664193ddfefc49d918",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "6a20834ca0ecf348198efaa25d893186afcc2e2e03bb42fd381c83afa644555e",
+        "sha256_in_prefix": "6a20834ca0ecf348198efaa25d893186afcc2e2e03bb42fd381c83afa644555e",
+        "size_in_bytes": 23
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "d7130efb862380f36de4d29d58345d6142236c5cb34d763ca336c7aa27b446d4",
+        "sha256_in_prefix": "d7130efb862380f36de4d29d58345d6142236c5cb34d763ca336c7aa27b446d4",
+        "size_in_bytes": 36
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "fdd31c016b24bf45f7f053e346b19cc76c0c25ddc07d4b62738a4c7a618eb189",
+        "sha256_in_prefix": "fdd31c016b24bf45f7f053e346b19cc76c0c25ddc07d4b62738a4c7a618eb189",
+        "size_in_bytes": 161
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/__main__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "995f049ab933469adaf1a0d14eea964ad3975838fb39e1438474fd20c31761d4",
+        "sha256_in_prefix": "995f049ab933469adaf1a0d14eea964ad3975838fb39e1438474fd20c31761d4",
+        "size_in_bytes": 186
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/aliases.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0dd828d085eedd9062588f22d01379b6e1f60c73accd8e5c84c0b615082555cf",
+        "sha256_in_prefix": "0dd828d085eedd9062588f22d01379b6e1f60c73accd8e5c84c0b615082555cf",
+        "size_in_bytes": 27034
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/ansi_colors.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "752719a2f1d923d7be7865a0c89e75f623b6b065663141c6bf287df36d218a11",
+        "sha256_in_prefix": "752719a2f1d923d7be7865a0c89e75f623b6b065663141c6bf287df36d218a11",
+        "size_in_bytes": 23009
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/ast.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "010eb8e97f0addc56a05fedb17b741b126a9fabf24ce95610ab256e9001b7f97",
+        "sha256_in_prefix": "010eb8e97f0addc56a05fedb17b741b126a9fabf24ce95610ab256e9001b7f97",
+        "size_in_bytes": 17842
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/base_shell.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e7a5a84116f938e1a203858ccd1b6f9961a4dd89ab9472285935f2b4c2b67a98",
+        "sha256_in_prefix": "e7a5a84116f938e1a203858ccd1b6f9961a4dd89ab9472285935f2b4c2b67a98",
+        "size_in_bytes": 19069
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/built_ins.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e1607d78a3baf692c3633010340644247a9f69801146ef4e04a80ee8f1f903c7",
+        "sha256_in_prefix": "e1607d78a3baf692c3633010340644247a9f69801146ef4e04a80ee8f1f903c7",
+        "size_in_bytes": 19875
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/cli_utils.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d60a9f0388582c5965204bad6dfa4005775742af7ce5ebb3f0e5df1b48acfd73",
+        "sha256_in_prefix": "d60a9f0388582c5965204bad6dfa4005775742af7ce5ebb3f0e5df1b48acfd73",
+        "size_in_bytes": 19725
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/codecache.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5048569bafd11b9eee27f75ea6805467cdfe52f8e0094f1d7a611eb15d7e19b1",
+        "sha256_in_prefix": "5048569bafd11b9eee27f75ea6805467cdfe52f8e0094f1d7a611eb15d7e19b1",
+        "size_in_bytes": 6806
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/color_tools.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "da4a12fc4acd3e0bef578dee73592a5a7792f624e2be680a87044aa0fa0f34b6",
+        "sha256_in_prefix": "da4a12fc4acd3e0bef578dee73592a5a7792f624e2be680a87044aa0fa0f34b6",
+        "size_in_bytes": 10938
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/commands_cache.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d542c339d734960c6b45d523b46027195f094531567db3db59e417d2022970d6",
+        "sha256_in_prefix": "d542c339d734960c6b45d523b46027195f094531567db3db59e417d2022970d6",
+        "size_in_bytes": 19049
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/completer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7c7e13c03a050bd21796239b4232b81f7dc429501b899312e47f21e64ac1aefe",
+        "sha256_in_prefix": "7c7e13c03a050bd21796239b4232b81f7dc429501b899312e47f21e64ac1aefe",
+        "size_in_bytes": 6251
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/completion_parser_table.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9945495a2729171e79d81a49470383e4ccaf064ce89ee6a4113137394d8ad5f6",
+        "sha256_in_prefix": "9945495a2729171e79d81a49470383e4ccaf064ce89ee6a4113137394d8ad5f6",
+        "size_in_bytes": 9836
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/contexts.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "14d8e32bd37469e4b580a1db0318abdbeeab6f26d4c9ecbdc4228e7d9dd26dc2",
+        "sha256_in_prefix": "14d8e32bd37469e4b580a1db0318abdbeeab6f26d4c9ecbdc4228e7d9dd26dc2",
+        "size_in_bytes": 4399
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/diff_history.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "09d601c4150b43b7c2cc0dcef3b911d41b4501a448f9e47218782b50b65cc583",
+        "sha256_in_prefix": "09d601c4150b43b7c2cc0dcef3b911d41b4501a448f9e47218782b50b65cc583",
+        "size_in_bytes": 9641
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/dirstack.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d9646372593e67c6c0afa1aba0b7488f083b8da761e3db079dfe9330fbe7f427",
+        "sha256_in_prefix": "d9646372593e67c6c0afa1aba0b7488f083b8da761e3db079dfe9330fbe7f427",
+        "size_in_bytes": 13186
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/dumb_shell.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f1a28f6540c95772e648a6648b9c2874c48648e09e300073d39d490631a96862",
+        "sha256_in_prefix": "f1a28f6540c95772e648a6648b9c2874c48648e09e300073d39d490631a96862",
+        "size_in_bytes": 743
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/environ.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "52a4fa747b93277782206def4de49c61a020e3883ae9d2a748b4ea6a9ec85b5c",
+        "sha256_in_prefix": "52a4fa747b93277782206def4de49c61a020e3883ae9d2a748b4ea6a9ec85b5c",
+        "size_in_bytes": 76854
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/events.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "229097c35ee104d5ef832aa6bbc9b8516bed64211372a78b26746497ff6c7f88",
+        "sha256_in_prefix": "229097c35ee104d5ef832aa6bbc9b8516bed64211372a78b26746497ff6c7f88",
+        "size_in_bytes": 10659
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/execer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0957156d929cd5e89489a753e9f988a11f0d8dff9c01423847595216fce729be",
+        "sha256_in_prefix": "0957156d929cd5e89489a753e9f988a11f0d8dff9c01423847595216fce729be",
+        "size_in_bytes": 6593
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/foreign_shells.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "afaeaff9fb42d01bc3342e5531f663b0ea5617183c350803d879cea002ca22a6",
+        "sha256_in_prefix": "afaeaff9fb42d01bc3342e5531f663b0ea5617183c350803d879cea002ca22a6",
+        "size_in_bytes": 18294
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/imphooks.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "89dc307bc132a622052465e7027fcc85dd02420f2cf745d5d31aa04b837b1cde",
+        "sha256_in_prefix": "89dc307bc132a622052465e7027fcc85dd02420f2cf745d5d31aa04b837b1cde",
+        "size_in_bytes": 10463
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/inspectors.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4c7f1755933484ef174a3d12099c684f8db74f71a7cc07c8955f1fac3aa047c8",
+        "sha256_in_prefix": "4c7f1755933484ef174a3d12099c684f8db74f71a7cc07c8955f1fac3aa047c8",
+        "size_in_bytes": 18003
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/jobs.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "abb899e4c34c5f48a14a61a3698d61ad0112c9a62414e049fa8b045a5f0524d0",
+        "sha256_in_prefix": "abb899e4c34c5f48a14a61a3698d61ad0112c9a62414e049fa8b045a5f0524d0",
+        "size_in_bytes": 13723
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/jsonutils.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "61f2053bda70c7a8afab4ed2c20be8cce0fada4f71d111a8d6850146e5f7d65b",
+        "sha256_in_prefix": "61f2053bda70c7a8afab4ed2c20be8cce0fada4f71d111a8d6850146e5f7d65b",
+        "size_in_bytes": 727
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/lazyasd.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "11d208021d8dabdb8b481a0d07491abc3377e8f4fdd57e8ba26cb75ec2295ad9",
+        "sha256_in_prefix": "11d208021d8dabdb8b481a0d07491abc3377e8f4fdd57e8ba26cb75ec2295ad9",
+        "size_in_bytes": 12490
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/lazyimps.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5a9b6cf0b1e0931e97962e9e5b274be0fb5408943b48d0967c1452437b98862a",
+        "sha256_in_prefix": "5a9b6cf0b1e0931e97962e9e5b274be0fb5408943b48d0967c1452437b98862a",
+        "size_in_bytes": 2240
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/lazyjson.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5229e1157bc517e8f7df3bdf5d9513a0e382e0dac81064f822df525b723cdcf4",
+        "sha256_in_prefix": "5229e1157bc517e8f7df3bdf5d9513a0e382e0dac81064f822df525b723cdcf4",
+        "size_in_bytes": 7356
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/lexer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "85bc81afb1399536d7bae686acfbd97c2906a9f1b99783aff069062e56c11666",
+        "sha256_in_prefix": "85bc81afb1399536d7bae686acfbd97c2906a9f1b99783aff069062e56c11666",
+        "size_in_bytes": 12991
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/macutils.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "85a1a0f83364a52c228d9034f3ec632c3016a64ccf9be3c874b1286faaa01cb8",
+        "sha256_in_prefix": "85a1a0f83364a52c228d9034f3ec632c3016a64ccf9be3c874b1286faaa01cb8",
+        "size_in_bytes": 747
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/main.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f39d19475f4f7d479228497188bce3de603de6b8e93ece38c106e56b0d553d30",
+        "sha256_in_prefix": "f39d19475f4f7d479228497188bce3de603de6b8e93ece38c106e56b0d553d30",
+        "size_in_bytes": 14923
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/openpy.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "497b0d89bc318dee2dd5b818eec31d287cdb1d846b143326bc45d14b237ca7d2",
+        "sha256_in_prefix": "497b0d89bc318dee2dd5b818eec31d287cdb1d846b143326bc45d14b237ca7d2",
+        "size_in_bytes": 4291
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/parser.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c3b627f0792d1770fab88771042a5b9d8beec3f92dedf1b9417f23c4f52525cd",
+        "sha256_in_prefix": "c3b627f0792d1770fab88771042a5b9d8beec3f92dedf1b9417f23c4f52525cd",
+        "size_in_bytes": 631
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/parser_table.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "994dd5b1723b3264c312723249b10b658cb414071109ed3836c945db52ff72bb",
+        "sha256_in_prefix": "994dd5b1723b3264c312723249b10b658cb414071109ed3836c945db52ff72bb",
+        "size_in_bytes": 916740
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/platform.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b44efefde3a0e9c1f148e2958d37549046f2eaa6f61eb324e8eee7e8c3d817b1",
+        "sha256_in_prefix": "b44efefde3a0e9c1f148e2958d37549046f2eaa6f61eb324e8eee7e8c3d817b1",
+        "size_in_bytes": 15727
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/pretty.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e1fe5249284937377649c1fed4e3a4b04e4007e500dce6c3e98ecd8f2214df3d",
+        "sha256_in_prefix": "e1fe5249284937377649c1fed4e3a4b04e4007e500dce6c3e98ecd8f2214df3d",
+        "size_in_bytes": 23544
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/proc.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d9ce644dd266d4e263c22283c2533d964534264fe8c5fe7501477933be877f68",
+        "sha256_in_prefix": "d9ce644dd266d4e263c22283c2533d964534264fe8c5fe7501477933be877f68",
+        "size_in_bytes": 949
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/pyghooks.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3989f145a3d7fd362c73bc7e9207c67141ff8689375e5fee94566b2b6603ee6e",
+        "sha256_in_prefix": "3989f145a3d7fd362c73bc7e9207c67141ff8689375e5fee94566b2b6603ee6e",
+        "size_in_bytes": 37032
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/pygments_cache.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6b6745b29007865abc105ae2f4d54240aeebcfdf3bf0af27e5c14953be42cfe3",
+        "sha256_in_prefix": "6b6745b29007865abc105ae2f4d54240aeebcfdf3bf0af27e5c14953be42cfe3",
+        "size_in_bytes": 11276
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/readline_shell.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c188a7f739a2d7a6281bfc59f0dbe191ae28ec52248dddc5e11b3a6d1d7c2c1d",
+        "sha256_in_prefix": "c188a7f739a2d7a6281bfc59f0dbe191ae28ec52248dddc5e11b3a6d1d7c2c1d",
+        "size_in_bytes": 19659
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/shell.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7daa02bc10becc4c1b8bdce571c4216673bba76d6c98f67d92f5f654a7713d07",
+        "sha256_in_prefix": "7daa02bc10becc4c1b8bdce571c4216673bba76d6c98f67d92f5f654a7713d07",
+        "size_in_bytes": 6048
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/style_tools.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a948f237f3a70a6c9bf0e1248029898388ba902f7ae4ad1f7d3c8d5294baf3a7",
+        "sha256_in_prefix": "a948f237f3a70a6c9bf0e1248029898388ba902f7ae4ad1f7d3c8d5294baf3a7",
+        "size_in_bytes": 11887
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/timings.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d0f9b5396693dac5fbe9118099d489f28dd1dc7c7c1746fc603ade673cb97041",
+        "sha256_in_prefix": "d0f9b5396693dac5fbe9118099d489f28dd1dc7c7c1746fc603ade673cb97041",
+        "size_in_bytes": 9767
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/tokenize.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1fa9ed7ae453e94344b70fbe2a8ae67851f7464c4ac20325ce749201d8b5af5f",
+        "sha256_in_prefix": "1fa9ed7ae453e94344b70fbe2a8ae67851f7464c4ac20325ce749201d8b5af5f",
+        "size_in_bytes": 22851
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/tools.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6fa6d6b6a029e9411c4c4dca78b6c6c4839597eb60070cceef7533870153ecf2",
+        "sha256_in_prefix": "6fa6d6b6a029e9411c4c4dca78b6c6c4839597eb60070cceef7533870153ecf2",
+        "size_in_bytes": 76228
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/tracer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "cb6fe9b3b3d7db35dff179af03949c52fec71e821c21ed00c729b779b3162a59",
+        "sha256_in_prefix": "cb6fe9b3b3d7db35dff179af03949c52fec71e821c21ed00c729b779b3162a59",
+        "size_in_bytes": 7103
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/winutils.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9ead9dd2787a4042552134a81b6e55409537e1a9b534094d86159105f16d8ead",
+        "sha256_in_prefix": "9ead9dd2787a4042552134a81b6e55409537e1a9b534094d86159105f16d8ead",
+        "size_in_bytes": 13883
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/wizard.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b6229400a33dea25b44b70da8a9a397683759b6fca111c806a366a886e614e4d",
+        "sha256_in_prefix": "b6229400a33dea25b44b70da8a9a397683759b6fca111c806a366a886e614e4d",
+        "size_in_bytes": 28385
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/xonfig.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b060fc9368e65d88b50a445b0bcb48eea40cee17be5168a52509aaa50d85fba5",
+        "sha256_in_prefix": "b060fc9368e65d88b50a445b0bcb48eea40cee17be5168a52509aaa50d85fba5",
+        "size_in_bytes": 24670
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/__pycache__/xontribs.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3f063169a07ddc003e03ee57b9b5beb5cccc8c37a45b9a82746a0def2ca61e13",
+        "sha256_in_prefix": "3f063169a07ddc003e03ee57b9b5beb5cccc8c37a45b9a82746a0def2ca61e13",
+        "size_in_bytes": 11268
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/aliases.py",
+        "path_type": "hardlink",
+        "sha256": "336b7afa82de0aca40188fcbd8baad8446b75ea7d90d3e1967bb87e604839a30",
+        "sha256_in_prefix": "336b7afa82de0aca40188fcbd8baad8446b75ea7d90d3e1967bb87e604839a30",
+        "size_in_bytes": 30560
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ansi_colors.py",
+        "path_type": "hardlink",
+        "sha256": "5b4953181d70245d839bc89268e5924cd03fd07bf5a55f6d8b39c7a636e6d896",
+        "sha256_in_prefix": "5b4953181d70245d839bc89268e5924cd03fd07bf5a55f6d8b39c7a636e6d896",
+        "size_in_bytes": 33081
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ast.py",
+        "path_type": "hardlink",
+        "sha256": "1c051c59e2b1765b82697674647e0e812f6874055f7d0cf171a5089d1e5bc8f4",
+        "sha256_in_prefix": "1c051c59e2b1765b82697674647e0e812f6874055f7d0cf171a5089d1e5bc8f4",
+        "size_in_bytes": 19138
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/base_shell.py",
+        "path_type": "hardlink",
+        "sha256": "5d48672668d2e1ac284eb8b213501e124b91faa6508fb58dc7edcb1a40f521bf",
+        "sha256_in_prefix": "5d48672668d2e1ac284eb8b213501e124b91faa6508fb58dc7edcb1a40f521bf",
+        "size_in_bytes": 21719
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/built_ins.py",
+        "path_type": "hardlink",
+        "sha256": "00e043eb7e6162217f5c7ab483487122860a641fa56eb80f8e73d9bdd2de05b2",
+        "sha256_in_prefix": "00e043eb7e6162217f5c7ab483487122860a641fa56eb80f8e73d9bdd2de05b2",
+        "size_in_bytes": 21787
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/cli_utils.py",
+        "path_type": "hardlink",
+        "sha256": "93f05b621680c5e646a300ac4eae2094f014bd91a0a560a48cc161606a16c326",
+        "sha256_in_prefix": "93f05b621680c5e646a300ac4eae2094f014bd91a0a560a48cc161606a16c326",
+        "size_in_bytes": 22590
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/codecache.py",
+        "path_type": "hardlink",
+        "sha256": "1e4c39bec0bd3dee1a387d6f780e695c88dc3a4b682eea8043c3e16072d7feda",
+        "sha256_in_prefix": "1e4c39bec0bd3dee1a387d6f780e695c88dc3a4b682eea8043c3e16072d7feda",
+        "size_in_bytes": 6785
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/color_tools.py",
+        "path_type": "hardlink",
+        "sha256": "59c5082404ad463a2f4d67ae85269371320cd1243ecd765d7fb2206f57f03a6f",
+        "sha256_in_prefix": "59c5082404ad463a2f4d67ae85269371320cd1243ecd765d7fb2206f57f03a6f",
+        "size_in_bytes": 13045
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/commands_cache.py",
+        "path_type": "hardlink",
+        "sha256": "82b2fda88d0d19442df4b72137c7f7e089315cfd5fe16a92e7de0fcaa4c563d0",
+        "sha256_in_prefix": "82b2fda88d0d19442df4b72137c7f7e089315cfd5fe16a92e7de0fcaa4c563d0",
+        "size_in_bytes": 22596
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completer.py",
+        "path_type": "hardlink",
+        "sha256": "b8987affa8b4b00066935eb3573d243af3ef2003271dcbefd6cc6db8d48adb83",
+        "sha256_in_prefix": "b8987affa8b4b00066935eb3573d243af3ef2003271dcbefd6cc6db8d48adb83",
+        "size_in_bytes": 10059
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5b8d4bf48030a07820345dd9cf6a94890eb76cc3a81985351747dc69d596d6ea",
+        "sha256_in_prefix": "5b8d4bf48030a07820345dd9cf6a94890eb76cc3a81985351747dc69d596d6ea",
+        "size_in_bytes": 150
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/_aliases.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4caca61877db97ff7e17b3ba9df50f39ba89cd8cf70d771ea66a5d01133d5e6a",
+        "sha256_in_prefix": "4caca61877db97ff7e17b3ba9df50f39ba89cd8cf70d771ea66a5d01133d5e6a",
+        "size_in_bytes": 5293
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/base.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d6ef98d5dc1bdfee491cf7b7048506df767f0b11fa900baf3f54e38e3c6a1759",
+        "sha256_in_prefix": "d6ef98d5dc1bdfee491cf7b7048506df767f0b11fa900baf3f54e38e3c6a1759",
+        "size_in_bytes": 1139
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/bash.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "19e2b5515c2ab8d639a4be6871e52a6df22d73d0aa500153bc2a9a8940bb81ae",
+        "sha256_in_prefix": "19e2b5515c2ab8d639a4be6871e52a6df22d73d0aa500153bc2a9a8940bb81ae",
+        "size_in_bytes": 2010
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/bash_completion.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "decde40c528d27cdfbf977aed988c61eb25400f71668fbce15015590f89d8668",
+        "sha256_in_prefix": "decde40c528d27cdfbf977aed988c61eb25400f71668fbce15015590f89d8668",
+        "size_in_bytes": 12748
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/commands.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ad0b0eb35a5021d8f77bd421e534d702ac196880fc8e56e458ce986496372244",
+        "sha256_in_prefix": "ad0b0eb35a5021d8f77bd421e534d702ac196880fc8e56e458ce986496372244",
+        "size_in_bytes": 5605
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/completer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6cb3ce3c0c7e2c1a6c795f5906ffad4c5e4742e6d88bf44fdc8d84a1b9a954fb",
+        "sha256_in_prefix": "6cb3ce3c0c7e2c1a6c795f5906ffad4c5e4742e6d88bf44fdc8d84a1b9a954fb",
+        "size_in_bytes": 2817
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/dirs.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "bead88efbded958e9e1e3aefe5167e75faf75378ba095353f1304e49719ca19f",
+        "sha256_in_prefix": "bead88efbded958e9e1e3aefe5167e75faf75378ba095353f1304e49719ca19f",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/environment.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "315efecee18a2ccf23e9e0d40bc80766bf09f2e3c23f9cb15dd0f9a0c28d9d68",
+        "sha256_in_prefix": "315efecee18a2ccf23e9e0d40bc80766bf09f2e3c23f9cb15dd0f9a0c28d9d68",
+        "size_in_bytes": 1237
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/imports.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "01b33ae8f2b134268dd7d70442a08b4f2022da76f572e11d5af010270d65b971",
+        "sha256_in_prefix": "01b33ae8f2b134268dd7d70442a08b4f2022da76f572e11d5af010270d65b971",
+        "size_in_bytes": 5815
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/init.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "238c73a11034ff5a035e1baf0dbd0a099ce8f02bcfd80a49a6845a3adf5326c3",
+        "sha256_in_prefix": "238c73a11034ff5a035e1baf0dbd0a099ce8f02bcfd80a49a6845a3adf5326c3",
+        "size_in_bytes": 1470
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/man.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "26950024a31a6d9c1e889e615d73130ba2790e4ec73049b6c207bd7e28b2d4b3",
+        "sha256_in_prefix": "26950024a31a6d9c1e889e615d73130ba2790e4ec73049b6c207bd7e28b2d4b3",
+        "size_in_bytes": 4368
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/path.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "488244aef5bb18b5d74fa690ded5f6947dd7d559aefbadd260517bf1799fe8c7",
+        "sha256_in_prefix": "488244aef5bb18b5d74fa690ded5f6947dd7d559aefbadd260517bf1799fe8c7",
+        "size_in_bytes": 10308
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/python.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a1bf2b290a8ce4252878c0cc9b4229f034d9150eb96a215ab48145e6e6f49b05",
+        "sha256_in_prefix": "a1bf2b290a8ce4252878c0cc9b4229f034d9150eb96a215ab48145e6e6f49b05",
+        "size_in_bytes": 6871
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/__pycache__/tools.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "36bfcf80c871546ef4530ab4db0052e6d0b3283d2c7f62c8956e722c3781bb92",
+        "sha256_in_prefix": "36bfcf80c871546ef4530ab4db0052e6d0b3283d2c7f62c8956e722c3781bb92",
+        "size_in_bytes": 10325
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/_aliases.py",
+        "path_type": "hardlink",
+        "sha256": "d54bcf4f30ac30728fd165e25fc82111097c89af9c56cbce7d84de7f48024d03",
+        "sha256_in_prefix": "d54bcf4f30ac30728fd165e25fc82111097c89af9c56cbce7d84de7f48024d03",
+        "size_in_bytes": 5471
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/base.py",
+        "path_type": "hardlink",
+        "sha256": "91330859c0650307576bfa5808318429d678d5d6973d2d58d81377128790338d",
+        "sha256_in_prefix": "91330859c0650307576bfa5808318429d678d5d6973d2d58d81377128790338d",
+        "size_in_bytes": 1390
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/bash.py",
+        "path_type": "hardlink",
+        "sha256": "089ac074b665900dd73c111514d28c71de52619f629e4d4154d77cf4ac7dea58",
+        "sha256_in_prefix": "089ac074b665900dd73c111514d28c71de52619f629e4d4154d77cf4ac7dea58",
+        "size_in_bytes": 2328
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/bash_completion.py",
+        "path_type": "hardlink",
+        "sha256": "729270fa0d2136c020e021118fd19999cf05929666dfa030b56c018ab9744909",
+        "sha256_in_prefix": "729270fa0d2136c020e021118fd19999cf05929666dfa030b56c018ab9744909",
+        "size_in_bytes": 15255
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/commands.py",
+        "path_type": "hardlink",
+        "sha256": "23c7cbb51100d04f965269d19e0ab91813b95aee4c60abb88aa06c5fc8f1af6a",
+        "sha256_in_prefix": "23c7cbb51100d04f965269d19e0ab91813b95aee4c60abb88aa06c5fc8f1af6a",
+        "size_in_bytes": 6217
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/completer.py",
+        "path_type": "hardlink",
+        "sha256": "8e27417c299b96060db923aadca1b1ed8860ee7b01f0be5c441351149ec76d7c",
+        "sha256_in_prefix": "8e27417c299b96060db923aadca1b1ed8860ee7b01f0be5c441351149ec76d7c",
+        "size_in_bytes": 3126
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/dirs.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/environment.py",
+        "path_type": "hardlink",
+        "sha256": "39271b26723c4b6e5867cdcd149ba3ab96bf147d8af09eeffaa0a0a3ef53b9ee",
+        "sha256_in_prefix": "39271b26723c4b6e5867cdcd149ba3ab96bf147d8af09eeffaa0a0a3ef53b9ee",
+        "size_in_bytes": 1102
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/imports.py",
+        "path_type": "hardlink",
+        "sha256": "6b4da0a4a8627a433bbd4427e1ada19d7c3031a9664ec9b43e52295365fbf9bd",
+        "sha256_in_prefix": "6b4da0a4a8627a433bbd4427e1ada19d7c3031a9664ec9b43e52295365fbf9bd",
+        "size_in_bytes": 6701
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/init.py",
+        "path_type": "hardlink",
+        "sha256": "7af21ab776f379d8d7cc6314f1f3091d2ea99278acedc1c7885f30be9fa70de7",
+        "sha256_in_prefix": "7af21ab776f379d8d7cc6314f1f3091d2ea99278acedc1c7885f30be9fa70de7",
+        "size_in_bytes": 1531
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/man.py",
+        "path_type": "hardlink",
+        "sha256": "eaf596365d88e51fa2856301dcffce07889f20a85f1db79382105d055650f1ed",
+        "sha256_in_prefix": "eaf596365d88e51fa2856301dcffce07889f20a85f1db79382105d055650f1ed",
+        "size_in_bytes": 4484
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/path.py",
+        "path_type": "hardlink",
+        "sha256": "4b69b6f754ee37623d963ff679d6765535d4cb6e5c592d70f2f324fdf929335f",
+        "sha256_in_prefix": "4b69b6f754ee37623d963ff679d6765535d4cb6e5c592d70f2f324fdf929335f",
+        "size_in_bytes": 11932
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/python.py",
+        "path_type": "hardlink",
+        "sha256": "d3af9cdf1477500388a83079bcea2595d539f3ae06260df52a672dc4b8bee1e1",
+        "sha256_in_prefix": "d3af9cdf1477500388a83079bcea2595d539f3ae06260df52a672dc4b8bee1e1",
+        "size_in_bytes": 7773
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completers/tools.py",
+        "path_type": "hardlink",
+        "sha256": "edad9a6d4d96b89b9afcd936de98a178947f3dfe4b4209faf3c459263b5d3cb6",
+        "sha256_in_prefix": "edad9a6d4d96b89b9afcd936de98a178947f3dfe4b4209faf3c459263b5d3cb6",
+        "size_in_bytes": 9386
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/completion_parser_table.py",
+        "path_type": "hardlink",
+        "sha256": "e94525fb5ed5747547d047059130f2c442ae849b3e5bfe10d1452333e7d7e77d",
+        "sha256_in_prefix": "e94525fb5ed5747547d047059130f2c442ae849b3e5bfe10d1452333e7d7e77d",
+        "size_in_bytes": 11071
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/contexts.py",
+        "path_type": "hardlink",
+        "sha256": "eeeff371c698d5f44ae9e6ffb091fb2ce7c191988b5a803d2c68221313bfd3b7",
+        "sha256_in_prefix": "eeeff371c698d5f44ae9e6ffb091fb2ce7c191988b5a803d2c68221313bfd3b7",
+        "size_in_bytes": 4007
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/diff_history.py",
+        "path_type": "hardlink",
+        "sha256": "c93e76f12fbd2dd2410c31a34090172ca1fe60f05fee71e2f0f9ab57d52aa0a4",
+        "sha256_in_prefix": "c93e76f12fbd2dd2410c31a34090172ca1fe60f05fee71e2f0f9ab57d52aa0a4",
+        "size_in_bytes": 11213
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/dirstack.py",
+        "path_type": "hardlink",
+        "sha256": "4f1861968503b284a3b7dfabd756d1dc1940d61ae037d8c495c7fa0e1f058bdd",
+        "sha256_in_prefix": "4f1861968503b284a3b7dfabd756d1dc1940d61ae037d8c495c7fa0e1f058bdd",
+        "size_in_bytes": 17167
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/dumb_shell.py",
+        "path_type": "hardlink",
+        "sha256": "8d2f99d644f1d22c3e492be87e95450f648ac63a4f34191d860427121076ae81",
+        "sha256_in_prefix": "8d2f99d644f1d22c3e492be87e95450f648ac63a4f34191d860427121076ae81",
+        "size_in_bytes": 403
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/environ.py",
+        "path_type": "hardlink",
+        "sha256": "f7a309692968a17ba98dc14987b14767c0f34f57c7dcfac930063588a1d70915",
+        "sha256_in_prefix": "f7a309692968a17ba98dc14987b14767c0f34f57c7dcfac930063588a1d70915",
+        "size_in_bytes": 90722
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/events.py",
+        "path_type": "hardlink",
+        "sha256": "b04a1fdaccfb7ba9fefd9e5a35f3e143f75c06bb697d98cecc531967ecd05828",
+        "sha256_in_prefix": "b04a1fdaccfb7ba9fefd9e5a35f3e143f75c06bb697d98cecc531967ecd05828",
+        "size_in_bytes": 10569
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/execer.py",
+        "path_type": "hardlink",
+        "sha256": "3338d77dc0c8e056ad49aafb5c023b311dfd357d6e20efa141f9e51038c612fe",
+        "sha256_in_prefix": "3338d77dc0c8e056ad49aafb5c023b311dfd357d6e20efa141f9e51038c612fe",
+        "size_in_bytes": 14220
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/foreign_shells.py",
+        "path_type": "hardlink",
+        "sha256": "6465c473efe0a2bf525094a7d53e7f620c14b29818fee6a4390d2520fe4fc33f",
+        "sha256_in_prefix": "6465c473efe0a2bf525094a7d53e7f620c14b29818fee6a4390d2520fe4fc33f",
+        "size_in_bytes": 20590
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/history/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/history/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a8714b36d7fb5b3477a314204942c9cfa0ceff4cb23a246fa85729be9b3af859",
+        "sha256_in_prefix": "a8714b36d7fb5b3477a314204942c9cfa0ceff4cb23a246fa85729be9b3af859",
+        "size_in_bytes": 147
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/history/__pycache__/base.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3e04e00c31cd422230765b1470b33d6db5053544fb1b5bc6aedec9e5b27624c8",
+        "sha256_in_prefix": "3e04e00c31cd422230765b1470b33d6db5053544fb1b5bc6aedec9e5b27624c8",
+        "size_in_bytes": 5722
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/history/__pycache__/dummy.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a476cec3db139515703785409875f69f9d047f9a01a9eb27ccd2a335bb0d92b7",
+        "sha256_in_prefix": "a476cec3db139515703785409875f69f9d047f9a01a9eb27ccd2a335bb0d92b7",
+        "size_in_bytes": 1174
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/history/__pycache__/json.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "adcc74e8f4d23034deddb156b4a8536366059d2368576336ecf7b7c657ac7e55",
+        "sha256_in_prefix": "adcc74e8f4d23034deddb156b4a8536366059d2368576336ecf7b7c657ac7e55",
+        "size_in_bytes": 17587
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/history/__pycache__/main.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8575044db2218d2e81ff0d01eef49e02570d8349cac7a84dc53464cd03664787",
+        "sha256_in_prefix": "8575044db2218d2e81ff0d01eef49e02570d8349cac7a84dc53464cd03664787",
+        "size_in_bytes": 13398
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/history/__pycache__/sqlite.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9e2a5f66833a2dac2c24db343d8bd9f429e6c4f9f3963ffc6696cf19dbd47703",
+        "sha256_in_prefix": "9e2a5f66833a2dac2c24db343d8bd9f429e6c4f9f3963ffc6696cf19dbd47703",
+        "size_in_bytes": 10264
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/history/base.py",
+        "path_type": "hardlink",
+        "sha256": "ebd379ff5b33e2fc2716b3295e8e639df1caa0e65a86bb05b5f2fec766cc4457",
+        "sha256_in_prefix": "ebd379ff5b33e2fc2716b3295e8e639df1caa0e65a86bb05b5f2fec766cc4457",
+        "size_in_bytes": 5104
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/history/dummy.py",
+        "path_type": "hardlink",
+        "sha256": "7e4c4e41a4de19a3d794c4e3865c1f2b99b5a16f501e8a7b48818b9b2be587cc",
+        "sha256_in_prefix": "7e4c4e41a4de19a3d794c4e3865c1f2b99b5a16f501e8a7b48818b9b2be587cc",
+        "size_in_bytes": 615
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/history/json.py",
+        "path_type": "hardlink",
+        "sha256": "70fba314dba9d215403eb7d3ea2fb1802f911bf5cc4a4f5c96fe2409e8d301f4",
+        "sha256_in_prefix": "70fba314dba9d215403eb7d3ea2fb1802f911bf5cc4a4f5c96fe2409e8d301f4",
+        "size_in_bytes": 20534
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/history/main.py",
+        "path_type": "hardlink",
+        "sha256": "1a0a0bdb74077167028d3e91c8f843b48b7984dbd39e58ffd5efdaac1fdc7339",
+        "sha256_in_prefix": "1a0a0bdb74077167028d3e91c8f843b48b7984dbd39e58ffd5efdaac1fdc7339",
+        "size_in_bytes": 14800
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/history/sqlite.py",
+        "path_type": "hardlink",
+        "sha256": "13a56b47d274b914934f5f7987e5a7802546282c2eafeb8b13b4913db14bec7b",
+        "sha256_in_prefix": "13a56b47d274b914934f5f7987e5a7802546282c2eafeb8b13b4913db14bec7b",
+        "size_in_bytes": 11730
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/imphooks.py",
+        "path_type": "hardlink",
+        "sha256": "b48660c42377a0c2d406a2ee29c78fbec4d1682c8bdc8b081239e9eeb8525dd9",
+        "sha256_in_prefix": "b48660c42377a0c2d406a2ee29c78fbec4d1682c8bdc8b081239e9eeb8525dd9",
+        "size_in_bytes": 10994
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/inspectors.py",
+        "path_type": "hardlink",
+        "sha256": "6a0387610fcaeb25f699781649c710bcbd90e6782dba9b41ac6b0201dd5dc795",
+        "sha256_in_prefix": "6a0387610fcaeb25f699781649c710bcbd90e6782dba9b41ac6b0201dd5dc795",
+        "size_in_bytes": 26936
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/jobs.py",
+        "path_type": "hardlink",
+        "sha256": "63aebadb497c73e8723cda314b938b1e5c92b8d29598f9840a2dac6dc5e749ac",
+        "sha256_in_prefix": "63aebadb497c73e8723cda314b938b1e5c92b8d29598f9840a2dac6dc5e749ac",
+        "size_in_bytes": 18076
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/jsonutils.py",
+        "path_type": "hardlink",
+        "sha256": "3b463a83e5ab808a460fbffb2016fb95c54dfeb9d6f6d132433eaff50b928fe4",
+        "sha256_in_prefix": "3b463a83e5ab808a460fbffb2016fb95c54dfeb9d6f6d132433eaff50b928fe4",
+        "size_in_bytes": 456
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lazyasd.py",
+        "path_type": "hardlink",
+        "sha256": "6a6043dedba65226a9a0056646923640d7cf49002512ccf2415f03aea0b8eeff",
+        "sha256_in_prefix": "6a6043dedba65226a9a0056646923640d7cf49002512ccf2415f03aea0b8eeff",
+        "size_in_bytes": 11288
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lazyimps.py",
+        "path_type": "hardlink",
+        "sha256": "97936981d18c95e55c9a925792a69756ff9809561fa2b2f596509d7b5c9fd2dc",
+        "sha256_in_prefix": "97936981d18c95e55c9a925792a69756ff9809561fa2b2f596509d7b5c9fd2dc",
+        "size_in_bytes": 1674
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lazyjson.py",
+        "path_type": "hardlink",
+        "sha256": "47d41ec7e062d0293ecc1efc9e6ec165f53eeb204c9416170492b476df879b8b",
+        "sha256_in_prefix": "47d41ec7e062d0293ecc1efc9e6ec165f53eeb204c9416170492b476df879b8b",
+        "size_in_bytes": 7737
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lexer.py",
+        "path_type": "hardlink",
+        "sha256": "c2fa69b88a0ae69cd7f9ed6d2ccf2691ebf4e6ac4bc95d36dc2096efb5622fa4",
+        "sha256_in_prefix": "c2fa69b88a0ae69cd7f9ed6d2ccf2691ebf4e6ac4bc95d36dc2096efb5622fa4",
+        "size_in_bytes": 15406
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lib/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lib/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8a6a6b1dc4b55ad46fc35c2982417eae5d29b0fa42f2afdf87cccf92ad90095c",
+        "sha256_in_prefix": "8a6a6b1dc4b55ad46fc35c2982417eae5d29b0fa42f2afdf87cccf92ad90095c",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lib/__pycache__/collections.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0b8ddf62a72c06c80f601a441bff962b625dbb8bb453b4871c7a6586639d05b2",
+        "sha256_in_prefix": "0b8ddf62a72c06c80f601a441bff962b625dbb8bb453b4871c7a6586639d05b2",
+        "size_in_bytes": 2577
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lib/__pycache__/itertools.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a711493bda3b3d01303d400011cb7aa3e50b3dae9d8de2edfa62cd68650dbcd0",
+        "sha256_in_prefix": "a711493bda3b3d01303d400011cb7aa3e50b3dae9d8de2edfa62cd68650dbcd0",
+        "size_in_bytes": 1015
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lib/__pycache__/modules.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "39743f67e9b1b40a94d80a2783eaf2015d79ce63274bc34b755d773303060003",
+        "sha256_in_prefix": "39743f67e9b1b40a94d80a2783eaf2015d79ce63274bc34b755d773303060003",
+        "size_in_bytes": 2881
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lib/__pycache__/os.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b425f8267445712abed3334e6b5e5be84f50e7cadd13159be54d02023aea90d8",
+        "sha256_in_prefix": "b425f8267445712abed3334e6b5e5be84f50e7cadd13159be54d02023aea90d8",
+        "size_in_bytes": 980
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lib/__pycache__/subprocess.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6d466762e647b846645e829dd981c08c4b069b44ad2824424b41ed6be4879da4",
+        "sha256_in_prefix": "6d466762e647b846645e829dd981c08c4b069b44ad2824424b41ed6be4879da4",
+        "size_in_bytes": 1528
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lib/collections.py",
+        "path_type": "hardlink",
+        "sha256": "e849fd279cd15fb0a32310fc828dd422c3dccf2220e2542eaa65b9f23f36f87a",
+        "sha256_in_prefix": "e849fd279cd15fb0a32310fc828dd422c3dccf2220e2542eaa65b9f23f36f87a",
+        "size_in_bytes": 2408
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lib/itertools.py",
+        "path_type": "hardlink",
+        "sha256": "da9d7c6d78509825ccfe9b10a354f62627208d11d4f019742db21be11974aa93",
+        "sha256_in_prefix": "da9d7c6d78509825ccfe9b10a354f62627208d11d4f019742db21be11974aa93",
+        "size_in_bytes": 968
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lib/modules.py",
+        "path_type": "hardlink",
+        "sha256": "d95f35464f86add397fdb866a96766f36cf673f1bf3a149414509eb2f06f3bda",
+        "sha256_in_prefix": "d95f35464f86add397fdb866a96766f36cf673f1bf3a149414509eb2f06f3bda",
+        "size_in_bytes": 3421
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lib/os.py",
+        "path_type": "hardlink",
+        "sha256": "5aac8c3b3abd6e4a84f8a00b76966d90aebe203d8998293977e6aef9bde62f05",
+        "sha256_in_prefix": "5aac8c3b3abd6e4a84f8a00b76966d90aebe203d8998293977e6aef9bde62f05",
+        "size_in_bytes": 888
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/lib/subprocess.py",
+        "path_type": "hardlink",
+        "sha256": "447df33cd75c5558840f2eb551044804692612940592b8181bc9fccfb77e49e9",
+        "sha256_in_prefix": "447df33cd75c5558840f2eb551044804692612940592b8181bc9fccfb77e49e9",
+        "size_in_bytes": 1187
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/macutils.py",
+        "path_type": "hardlink",
+        "sha256": "375e60f87ba0bf0dd15424c07af595b859032a26bd996a82c348fc5bba890d42",
+        "sha256_in_prefix": "375e60f87ba0bf0dd15424c07af595b859032a26bd996a82c348fc5bba890d42",
+        "size_in_bytes": 772
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/main.py",
+        "path_type": "hardlink",
+        "sha256": "d618616c052487c47dd5cb9b36aca384ff603409b1b879a57e42e1adfeb2c0fd",
+        "sha256_in_prefix": "d618616c052487c47dd5cb9b36aca384ff603409b1b879a57e42e1adfeb2c0fd",
+        "size_in_bytes": 19362
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/openpy.py",
+        "path_type": "hardlink",
+        "sha256": "40725a7b0b41a6fc7a3feee7f6446e0a82c2931cfa14f60119c3667e83369322",
+        "sha256_in_prefix": "40725a7b0b41a6fc7a3feee7f6446e0a82c2931cfa14f60119c3667e83369322",
+        "size_in_bytes": 4078
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parser.py",
+        "path_type": "hardlink",
+        "sha256": "8048174051ce93d4a2de07ebb37125db552933f63cb0c2d108ff09880598631f",
+        "sha256_in_prefix": "8048174051ce93d4a2de07ebb37125db552933f63cb0c2d108ff09880598631f",
+        "size_in_bytes": 487
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parser_table.py",
+        "path_type": "hardlink",
+        "sha256": "db3f051f072ee95df952ceb01cd62c2d3b0c00b75ca03fcd30ff2e4550d93000",
+        "sha256_in_prefix": "db3f051f072ee95df952ceb01cd62c2d3b0c00b75ca03fcd30ff2e4550d93000",
+        "size_in_bytes": 1052339
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3c3f1c4e005eb9e268da18976651934aae436afda31e541d0b20a6baf4f4a3c4",
+        "sha256_in_prefix": "3c3f1c4e005eb9e268da18976651934aae436afda31e541d0b20a6baf4f4a3c4",
+        "size_in_bytes": 147
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/__pycache__/base.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "90a1ea0d7f6fa55bc6cba9fe202d994e149c368156d06fe690090acf59570f41",
+        "sha256_in_prefix": "90a1ea0d7f6fa55bc6cba9fe202d994e149c368156d06fe690090acf59570f41",
+        "size_in_bytes": 106541
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/__pycache__/completion_context.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "077185b0ca0082d4692792c9dc2631b1d17da4f63e185a1ba6d7de3fc1acdb37",
+        "sha256_in_prefix": "077185b0ca0082d4692792c9dc2631b1d17da4f63e185a1ba6d7de3fc1acdb37",
+        "size_in_bytes": 26919
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/__pycache__/context_check.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9ba6b22f746e11e8dab67fbddd25d318d7429c86f76332fc075b1c27a40c31e3",
+        "sha256_in_prefix": "9ba6b22f746e11e8dab67fbddd25d318d7429c86f76332fc075b1c27a40c31e3",
+        "size_in_bytes": 2721
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/__pycache__/fstring_adaptor.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7c86142fd49440829c45377efb64e60173ba94c0fc5bbbc7625d26cff92897c5",
+        "sha256_in_prefix": "7c86142fd49440829c45377efb64e60173ba94c0fc5bbbc7625d26cff92897c5",
+        "size_in_bytes": 5262
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/__pycache__/v310.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5b1c8dc92fcbffb2316180f28bddb790b9e9a433bebb2812db29d701188e7c75",
+        "sha256_in_prefix": "5b1c8dc92fcbffb2316180f28bddb790b9e9a433bebb2812db29d701188e7c75",
+        "size_in_bytes": 17674
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/__pycache__/v36.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b851989441a9219ebbd9f4dcfaf010558e7e43bc36d4534cd9368c3d326a7c0b",
+        "sha256_in_prefix": "b851989441a9219ebbd9f4dcfaf010558e7e43bc36d4534cd9368c3d326a7c0b",
+        "size_in_bytes": 6366
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/__pycache__/v38.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f39032e4da6f3fd5dab4843edd34d3f04cd4ee4cc7cb462bcaedca70e401ccb1",
+        "sha256_in_prefix": "f39032e4da6f3fd5dab4843edd34d3f04cd4ee4cc7cb462bcaedca70e401ccb1",
+        "size_in_bytes": 13437
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/__pycache__/v39.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "cad9efc84eec4b6eba3ffea83e2763481717b87888aa371927567af573d44dda",
+        "sha256_in_prefix": "cad9efc84eec4b6eba3ffea83e2763481717b87888aa371927567af573d44dda",
+        "size_in_bytes": 2070
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/base.py",
+        "path_type": "hardlink",
+        "sha256": "f0676c29da5a6fe0a5e7af24b4260950961639a3ac02895c8259fa5aa6c47ae0",
+        "sha256_in_prefix": "f0676c29da5a6fe0a5e7af24b4260950961639a3ac02895c8259fa5aa6c47ae0",
+        "size_in_bytes": 113511
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/completion_context.py",
+        "path_type": "hardlink",
+        "sha256": "d09482ef319096ebfb14165d78938ac6bd64299a8a8481114826974b28797351",
+        "sha256_in_prefix": "d09482ef319096ebfb14165d78938ac6bd64299a8a8481114826974b28797351",
+        "size_in_bytes": 42264
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/context_check.py",
+        "path_type": "hardlink",
+        "sha256": "4e1d30c452eb4b8beb511a44c1015c598d6c76023ea74f4481e386c10925e78b",
+        "sha256_in_prefix": "4e1d30c452eb4b8beb511a44c1015c598d6c76023ea74f4481e386c10925e78b",
+        "size_in_bytes": 2683
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/fstring_adaptor.py",
+        "path_type": "hardlink",
+        "sha256": "c843818069d9b3c0108a6591a4d948fb82011b35915714ff70fc16440f3035a5",
+        "sha256_in_prefix": "c843818069d9b3c0108a6591a4d948fb82011b35915714ff70fc16440f3035a5",
+        "size_in_bytes": 7327
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/v310.py",
+        "path_type": "hardlink",
+        "sha256": "8bf53651fb31e48e4ef7e9c4470057a9c294bae448b76d91c37baa53a47202b7",
+        "sha256_in_prefix": "8bf53651fb31e48e4ef7e9c4470057a9c294bae448b76d91c37baa53a47202b7",
+        "size_in_bytes": 18159
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/v36.py",
+        "path_type": "hardlink",
+        "sha256": "bc2ceeef12ab03739732886dac25106357edea9c698461e1ee70546db13543ab",
+        "sha256_in_prefix": "bc2ceeef12ab03739732886dac25106357edea9c698461e1ee70546db13543ab",
+        "size_in_bytes": 5578
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/v38.py",
+        "path_type": "hardlink",
+        "sha256": "1ffd35181672f3bd950f32eab9cbb77e9d96b37217b7a25ef0b0e6349be5216e",
+        "sha256_in_prefix": "1ffd35181672f3bd950f32eab9cbb77e9d96b37217b7a25ef0b0e6349be5216e",
+        "size_in_bytes": 16516
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/parsers/v39.py",
+        "path_type": "hardlink",
+        "sha256": "78dd0a4a4cdf7589fd8107483cd633c2c2677548dff25cc5bd924c2719463edb",
+        "sha256_in_prefix": "78dd0a4a4cdf7589fd8107483cd633c2c2677548dff25cc5bd924c2719463edb",
+        "size_in_bytes": 1724
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/platform.py",
+        "path_type": "hardlink",
+        "sha256": "166ea06ece59f037a857e45a7d2e10e59845d4dd6cf81e1257a8dd8778f751bb",
+        "sha256_in_prefix": "166ea06ece59f037a857e45a7d2e10e59845d4dd6cf81e1257a8dd8778f751bb",
+        "size_in_bytes": 16956
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ply/ply/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b31ea204817ffd6288794d22c36592a12a8185c947179121053734c038a04d5f",
+        "sha256_in_prefix": "b31ea204817ffd6288794d22c36592a12a8185c947179121053734c038a04d5f",
+        "size_in_bytes": 103
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ply/ply/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6ee9a26f5d1b4706f4aea800c8905ea8b982730688af4cba1649e494fad24342",
+        "sha256_in_prefix": "6ee9a26f5d1b4706f4aea800c8905ea8b982730688af4cba1649e494fad24342",
+        "size_in_bytes": 197
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ply/ply/__pycache__/cpp.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3810e5a31d58586c09903969168d7c28d233d9638898b9dfd667e4efec7fb5f4",
+        "sha256_in_prefix": "3810e5a31d58586c09903969168d7c28d233d9638898b9dfd667e4efec7fb5f4",
+        "size_in_bytes": 16865
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ply/ply/__pycache__/ctokens.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3cd8ef6e5aab363216f89c9a3f854d37d48bc7a8151b210e52d5bbe099cafa30",
+        "sha256_in_prefix": "3cd8ef6e5aab363216f89c9a3f854d37d48bc7a8151b210e52d5bbe099cafa30",
+        "size_in_bytes": 2049
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ply/ply/__pycache__/lex.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1721b6cbffc391267e5c34b002c01e0b0887583a505d1cddeae2b8ab39865920",
+        "sha256_in_prefix": "1721b6cbffc391267e5c34b002c01e0b0887583a505d1cddeae2b8ab39865920",
+        "size_in_bytes": 21383
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ply/ply/__pycache__/yacc.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "204f581d52a096316f4190453570b513a6f6781ebb0aa078a0d1c3f4cf87ac16",
+        "sha256_in_prefix": "204f581d52a096316f4190453570b513a6f6781ebb0aa078a0d1c3f4cf87ac16",
+        "size_in_bytes": 52877
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ply/ply/__pycache__/ygen.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "696f027b97f5f4ccd1fe075d8a61fdabca7ff82785919e5b4b74e14ed224dcfb",
+        "sha256_in_prefix": "696f027b97f5f4ccd1fe075d8a61fdabca7ff82785919e5b4b74e14ed224dcfb",
+        "size_in_bytes": 1775
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ply/ply/cpp.py",
+        "path_type": "hardlink",
+        "sha256": "5a2b3cb0e436c470587be7c9ddbc65d42a9b7b4054ac804f88dbdef7f9c44b88",
+        "sha256_in_prefix": "5a2b3cb0e436c470587be7c9ddbc65d42a9b7b4054ac804f88dbdef7f9c44b88",
+        "size_in_bytes": 36680
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ply/ply/ctokens.py",
+        "path_type": "hardlink",
+        "sha256": "1a6c9660363d9e5e85d56250f6b99c405821d459c00c5967a7f4c18d3704b2a5",
+        "sha256_in_prefix": "1a6c9660363d9e5e85d56250f6b99c405821d459c00c5967a7f4c18d3704b2a5",
+        "size_in_bytes": 3155
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ply/ply/lex.py",
+        "path_type": "hardlink",
+        "sha256": "54e8f1a3bf8a1cb1cb726664022210fe01ae98deceb28f65fba524fa611618d0",
+        "sha256_in_prefix": "54e8f1a3bf8a1cb1cb726664022210fe01ae98deceb28f65fba524fa611618d0",
+        "size_in_bytes": 42941
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ply/ply/yacc.py",
+        "path_type": "hardlink",
+        "sha256": "f5b68b875cf0ecc284b407cbf3309241bcee7e2dd7d87f487192418b260ebbe1",
+        "sha256_in_prefix": "f5b68b875cf0ecc284b407cbf3309241bcee7e2dd7d87f487192418b260ebbe1",
+        "size_in_bytes": 137783
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ply/ply/ygen.py",
+        "path_type": "hardlink",
+        "sha256": "4d19e4660c79041078dd0b29bb6278815b69781badf31ad3119a0b6cd3746fa3",
+        "sha256_in_prefix": "4d19e4660c79041078dd0b29bb6278815b69781badf31ad3119a0b6cd3746fa3",
+        "size_in_bytes": 2246
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/pretty.py",
+        "path_type": "hardlink",
+        "sha256": "0224ca02d8d6ccbff94de61d39dd056a0f53b5ddff7ce1c088c1f7ca1373c5d8",
+        "sha256_in_prefix": "0224ca02d8d6ccbff94de61d39dd056a0f53b5ddff7ce1c088c1f7ca1373c5d8",
+        "size_in_bytes": 27340
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/proc.py",
+        "path_type": "hardlink",
+        "sha256": "71b14d173eba160eb0522f35c25968f3fb3e33b2b085ee1cd4f6aaa1b6adb663",
+        "sha256_in_prefix": "71b14d173eba160eb0522f35c25968f3fb3e33b2b085ee1cd4f6aaa1b6adb663",
+        "size_in_bytes": 728
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/procs/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/procs/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5c80fee7ab84d83f0472ae12ec87ba5df76dded6c658a6f26c865d39c687c1c5",
+        "sha256_in_prefix": "5c80fee7ab84d83f0472ae12ec87ba5df76dded6c658a6f26c865d39c687c1c5",
+        "size_in_bytes": 145
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/procs/__pycache__/pipelines.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ad128bb0fcf295b727eb2dda1f0fd0fabda7bd556a09c95ac16611ddd3bcf7e4",
+        "sha256_in_prefix": "ad128bb0fcf295b727eb2dda1f0fd0fabda7bd556a09c95ac16611ddd3bcf7e4",
+        "size_in_bytes": 20733
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/procs/__pycache__/posix.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "25099ec64b71209da5c4c97ddea29a0ae93541b8eebcdae340dc513f18c0bce9",
+        "sha256_in_prefix": "25099ec64b71209da5c4c97ddea29a0ae93541b8eebcdae340dc513f18c0bce9",
+        "size_in_bytes": 13088
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/procs/__pycache__/proxies.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f22cf4f161e1a51f2b9be50aa491de84d2b66e795ed13cb7e6d56c4dc7d8f93c",
+        "sha256_in_prefix": "f22cf4f161e1a51f2b9be50aa491de84d2b66e795ed13cb7e6d56c4dc7d8f93c",
+        "size_in_bytes": 22737
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/procs/__pycache__/readers.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5f9e506be264cd3335b3290cb8ca269e9bce7cc235b556e4af53e78937e4453c",
+        "sha256_in_prefix": "5f9e506be264cd3335b3290cb8ca269e9bce7cc235b556e4af53e78937e4453c",
+        "size_in_bytes": 10284
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/procs/__pycache__/specs.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "93bf2a5f66a7512a303310d4aa0f415551bbd0a7949a932ea83a0fa462d86a33",
+        "sha256_in_prefix": "93bf2a5f66a7512a303310d4aa0f415551bbd0a7949a932ea83a0fa462d86a33",
+        "size_in_bytes": 25099
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/procs/pipelines.py",
+        "path_type": "hardlink",
+        "sha256": "e116a5e242505b919f454329f0fda8f110a8364f50efae839ff683d03e9dbc8c",
+        "sha256_in_prefix": "e116a5e242505b919f454329f0fda8f110a8364f50efae839ff683d03e9dbc8c",
+        "size_in_bytes": 26643
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/procs/posix.py",
+        "path_type": "hardlink",
+        "sha256": "8d882c441488781147545b07f04706b85fcd47262efca9c8f208ac428667e8d9",
+        "sha256_in_prefix": "8d882c441488781147545b07f04706b85fcd47262efca9c8f208ac428667e8d9",
+        "size_in_bytes": 17970
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/procs/proxies.py",
+        "path_type": "hardlink",
+        "sha256": "e95c481bf44f98ffb6b247e74feef29d00e40dfc055c38472ee55adb51237aa0",
+        "sha256_in_prefix": "e95c481bf44f98ffb6b247e74feef29d00e40dfc055c38472ee55adb51237aa0",
+        "size_in_bytes": 28947
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/procs/readers.py",
+        "path_type": "hardlink",
+        "sha256": "a7ad0f4d0fe6672ef15cab3e6378d555d2acc3f84108b0bcce46480241522d40",
+        "sha256_in_prefix": "a7ad0f4d0fe6672ef15cab3e6378d555d2acc3f84108b0bcce46480241522d40",
+        "size_in_bytes": 14545
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/procs/specs.py",
+        "path_type": "hardlink",
+        "sha256": "ec194e4d4985c5d3e126cc55d7c033d42a758b2ca3c07c123b11d4ce36904ce0",
+        "sha256_in_prefix": "ec194e4d4985c5d3e126cc55d7c033d42a758b2ca3c07c123b11d4ce36904ce0",
+        "size_in_bytes": 32405
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "af506eb09127b6fd0df750d73d15e8cb5aad90245e9829343fb8724de529e774",
+        "sha256_in_prefix": "af506eb09127b6fd0df750d73d15e8cb5aad90245e9829343fb8724de529e774",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/__pycache__/base.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "491e97006477ede14390b62dfbbbe3c8bda8a9f7f80d8038e4aba479fe86b2d5",
+        "sha256_in_prefix": "491e97006477ede14390b62dfbbbe3c8bda8a9f7f80d8038e4aba479fe86b2d5",
+        "size_in_bytes": 17474
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/__pycache__/cwd.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "04e8fab32a33fd844dca5cbd3b57d20f736ff2f518a5523814172db4ec00ebc1",
+        "sha256_in_prefix": "04e8fab32a33fd844dca5cbd3b57d20f736ff2f518a5523814172db4ec00ebc1",
+        "size_in_bytes": 2444
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/__pycache__/env.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "314361fe0fb6b1f06ea7a00f0b37cdd2fba2de25a160a248d375ed45bf83e238",
+        "sha256_in_prefix": "314361fe0fb6b1f06ea7a00f0b37cdd2fba2de25a160a248d375ed45bf83e238",
+        "size_in_bytes": 2905
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/__pycache__/gitstatus.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c753aab67e41cab04cf86cd470fdf33ad1553d0fbdf127ecff24e4c1567d824d",
+        "sha256_in_prefix": "c753aab67e41cab04cf86cd470fdf33ad1553d0fbdf127ecff24e4c1567d824d",
+        "size_in_bytes": 9532
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/__pycache__/job.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c775ad603f9ee5836264fe5f594f952dbf836d0933f9add6fba2cdc042a6ded3",
+        "sha256_in_prefix": "c775ad603f9ee5836264fe5f594f952dbf836d0933f9add6fba2cdc042a6ded3",
+        "size_in_bytes": 1104
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/__pycache__/times.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "66aa1fd5f8aba0f667fb4e44f0745b1372b696c5fc3db4c765c8c205d7ee33aa",
+        "sha256_in_prefix": "66aa1fd5f8aba0f667fb4e44f0745b1372b696c5fc3db4c765c8c205d7ee33aa",
+        "size_in_bytes": 483
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/__pycache__/vc.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a9bef2dc11bda7cee18d900d4fbd989ac3604765a4d049478a3bd2065bf2097e",
+        "sha256_in_prefix": "a9bef2dc11bda7cee18d900d4fbd989ac3604765a4d049478a3bd2065bf2097e",
+        "size_in_bytes": 7618
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/base.py",
+        "path_type": "hardlink",
+        "sha256": "835315d9de2101aca5a75d2b32e0d8bf53ce1a2ad12b79f888fd7b3975802d13",
+        "sha256_in_prefix": "835315d9de2101aca5a75d2b32e0d8bf53ce1a2ad12b79f888fd7b3975802d13",
+        "size_in_bytes": 16768
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/cwd.py",
+        "path_type": "hardlink",
+        "sha256": "75d575fe5adbc276a92400933f33f73cc11b32ea041903846e51c9ce2dc03c66",
+        "sha256_in_prefix": "75d575fe5adbc276a92400933f33f73cc11b32ea041903846e51c9ce2dc03c66",
+        "size_in_bytes": 2680
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/env.py",
+        "path_type": "hardlink",
+        "sha256": "a1b909a24023df6159b81ac79fccc90ed35018acd742158506429c5b202f3050",
+        "sha256_in_prefix": "a1b909a24023df6159b81ac79fccc90ed35018acd742158506429c5b202f3050",
+        "size_in_bytes": 2642
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/gitstatus.py",
+        "path_type": "hardlink",
+        "sha256": "c7aba9b8a84f21d4dfe9b3d4fef0151a73894a952aabf5330ed14d55cafcf20c",
+        "sha256_in_prefix": "c7aba9b8a84f21d4dfe9b3d4fef0151a73894a952aabf5330ed14d55cafcf20c",
+        "size_in_bytes": 10142
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/job.py",
+        "path_type": "hardlink",
+        "sha256": "ff0f65a7bc1ab84b9121c5e58c7636cf87d54cef101629497e8066ee3779befb",
+        "sha256_in_prefix": "ff0f65a7bc1ab84b9121c5e58c7636cf87d54cef101629497e8066ee3779befb",
+        "size_in_bytes": 808
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/times.py",
+        "path_type": "hardlink",
+        "sha256": "b6cb965a963a9fc95c25c956dc663c13cf6a064772e227120a8b199f4638ff96",
+        "sha256_in_prefix": "b6cb965a963a9fc95c25c956dc663c13cf6a064772e227120a8b199f4638ff96",
+        "size_in_bytes": 240
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/prompt/vc.py",
+        "path_type": "hardlink",
+        "sha256": "f1f64adc9e98b6e11f36a9524755933a96bbf808f57d1e37405dcb13d2847634",
+        "sha256_in_prefix": "f1f64adc9e98b6e11f36a9524755933a96bbf808f57d1e37405dcb13d2847634",
+        "size_in_bytes": 8549
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1393f91c1b220fdea1d0c61e5220c465bf39d0fd18f8ac48ff7dd4a27ecc1c4c",
+        "sha256_in_prefix": "1393f91c1b220fdea1d0c61e5220c465bf39d0fd18f8ac48ff7dd4a27ecc1c4c",
+        "size_in_bytes": 149
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/completer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5cd8d34979d5255391d85b4476d663368b3f4e04046d0b7f0194d8603616f18f",
+        "sha256_in_prefix": "5cd8d34979d5255391d85b4476d663368b3f4e04046d0b7f0194d8603616f18f",
+        "size_in_bytes": 4101
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/formatter.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7b2233d97c16af6dd4920ed68c0587ca34694641719ef815397b2bcbcfe575f1",
+        "sha256_in_prefix": "7b2233d97c16af6dd4920ed68c0587ca34694641719ef815397b2bcbcfe575f1",
+        "size_in_bytes": 2123
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/history.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ece94c99c9ae9634c280d89783cc148bbd595781568d2be4fcaa8bb01329a364",
+        "sha256_in_prefix": "ece94c99c9ae9634c280d89783cc148bbd595781568d2be4fcaa8bb01329a364",
+        "size_in_bytes": 2267
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/key_bindings.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "10425f67884dc2ba985d6280190ec1f56221f1dc13ac0a8253a1681f69566d89",
+        "sha256_in_prefix": "10425f67884dc2ba985d6280190ec1f56221f1dc13ac0a8253a1681f69566d89",
+        "size_in_bytes": 14744
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/shell.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a244b7dc4413f47beec6bf5d80997055c5ea0bc1bffa3bd8e2e389e719859fd0",
+        "sha256_in_prefix": "a244b7dc4413f47beec6bf5d80997055c5ea0bc1bffa3bd8e2e389e719859fd0",
+        "size_in_bytes": 16388
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/__pycache__/updator.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "bd637fc4e8392fd797f5d3bf979e6bf8a276d650c8ab70d78dc0cbd4fa82cfd1",
+        "sha256_in_prefix": "bd637fc4e8392fd797f5d3bf979e6bf8a276d650c8ab70d78dc0cbd4fa82cfd1",
+        "size_in_bytes": 6225
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/completer.py",
+        "path_type": "hardlink",
+        "sha256": "f80e13b4bb302b199d1bf47ff6b82da786a60db303198333d9a18812e3fea72d",
+        "sha256_in_prefix": "f80e13b4bb302b199d1bf47ff6b82da786a60db303198333d9a18812e3fea72d",
+        "size_in_bytes": 5587
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/formatter.py",
+        "path_type": "hardlink",
+        "sha256": "97a5aa50cb2b680467245ccb13c8c1c68161ec1933c9e6a1548429d9c73598af",
+        "sha256_in_prefix": "97a5aa50cb2b680467245ccb13c8c1c68161ec1933c9e6a1548429d9c73598af",
+        "size_in_bytes": 2149
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/history.py",
+        "path_type": "hardlink",
+        "sha256": "d028c7dc6f114bb0a9e570b46c38bd5a98036aa23b0eb76b9c345bbd116b935b",
+        "sha256_in_prefix": "d028c7dc6f114bb0a9e570b46c38bd5a98036aa23b0eb76b9c345bbd116b935b",
+        "size_in_bytes": 1518
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/key_bindings.py",
+        "path_type": "hardlink",
+        "sha256": "e0c82723368fe69fc85a05ebaa1baf2b26f35fdd2a025067e0e5d391941d8b6f",
+        "sha256_in_prefix": "e0c82723368fe69fc85a05ebaa1baf2b26f35fdd2a025067e0e5d391941d8b6f",
+        "size_in_bytes": 14711
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/shell.py",
+        "path_type": "hardlink",
+        "sha256": "77396a806ff288de1221e2e8540b56abf0ffae13356befc8e9daaeab439d63f5",
+        "sha256_in_prefix": "77396a806ff288de1221e2e8540b56abf0ffae13356befc8e9daaeab439d63f5",
+        "size_in_bytes": 22675
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/ptk_shell/updator.py",
+        "path_type": "hardlink",
+        "sha256": "3daaa9c9a087be857afec0d39da5ba410745f7bf5d61c9bfe372997305cb70fb",
+        "sha256_in_prefix": "3daaa9c9a087be857afec0d39da5ba410745f7bf5d61c9bfe372997305cb70fb",
+        "size_in_bytes": 6963
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/pyghooks.py",
+        "path_type": "hardlink",
+        "sha256": "7fc0624c18cd56b846a39737d225f2e83ce17d43f1c46acec956eacb0c044366",
+        "sha256_in_prefix": "7fc0624c18cd56b846a39737d225f2e83ce17d43f1c46acec956eacb0c044366",
+        "size_in_bytes": 53631
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/pygments_cache.py",
+        "path_type": "hardlink",
+        "sha256": "77c15be6bea82a3a73e0a0c1118ceba81308fec4c6335775d3b7905c30f3a8f0",
+        "sha256_in_prefix": "77c15be6bea82a3a73e0a0c1118ceba81308fec4c6335775d3b7905c30f3a8f0",
+        "size_in_bytes": 16021
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/pytest/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/pytest/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e31615a50d96cd8d96652ee02f61163716245f3d4d0a63bcd1dbfe2befa052eb",
+        "sha256_in_prefix": "e31615a50d96cd8d96652ee02f61163716245f3d4d0a63bcd1dbfe2befa052eb",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/pytest/__pycache__/plugin.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9edd1b4e6c40272ba4b6dd2316730a93210b1a518942090c30d94a5dd3c226d2",
+        "sha256_in_prefix": "9edd1b4e6c40272ba4b6dd2316730a93210b1a518942090c30d94a5dd3c226d2",
+        "size_in_bytes": 12999
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/pytest/__pycache__/tools.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6682e857a8f1e585ee1c57a2ef8f7147400640587f8150ee6ebcb69f0e34bd68",
+        "sha256_in_prefix": "6682e857a8f1e585ee1c57a2ef8f7147400640587f8150ee6ebcb69f0e34bd68",
+        "size_in_bytes": 5013
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/pytest/plugin.py",
+        "path_type": "hardlink",
+        "sha256": "9aee0aa93db36d37404cebd692d03372abea2f19063477e4001f1e39a1dca199",
+        "sha256_in_prefix": "9aee0aa93db36d37404cebd692d03372abea2f19063477e4001f1e39a1dca199",
+        "size_in_bytes": 11639
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/pytest/tools.py",
+        "path_type": "hardlink",
+        "sha256": "ee495d2a90eae99409aca0ead9a2389c09f68fa6fc3453b9226fb1756fff598f",
+        "sha256_in_prefix": "ee495d2a90eae99409aca0ead9a2389c09f68fa6fc3453b9226fb1756fff598f",
+        "size_in_bytes": 4342
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/readline_shell.py",
+        "path_type": "hardlink",
+        "sha256": "8fb40eda5de9c9544d515b9eef6b4cf16ca31dbd481de7c73b435585b0c251a2",
+        "sha256_in_prefix": "8fb40eda5de9c9544d515b9eef6b4cf16ca31dbd481de7c73b435585b0c251a2",
+        "size_in_bytes": 27300
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/shell.py",
+        "path_type": "hardlink",
+        "sha256": "e402d517537f6361d0ad8aa35154ae746f53a216c5ff182d232acd4017963715",
+        "sha256_in_prefix": "e402d517537f6361d0ad8aa35154ae746f53a216c5ff182d232acd4017963715",
+        "size_in_bytes": 7815
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/style_tools.py",
+        "path_type": "hardlink",
+        "sha256": "f7339bd314d2eaad926457f1a3a37a2732ce9e7b683a4857d6804b9535617d18",
+        "sha256_in_prefix": "f7339bd314d2eaad926457f1a3a37a2732ce9e7b683a4857d6804b9535617d18",
+        "size_in_bytes": 14653
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/timings.py",
+        "path_type": "hardlink",
+        "sha256": "3aa63361dc11b893178bbdbb26903a7ff31d920a9783b4ace96e339361795432",
+        "sha256_in_prefix": "3aa63361dc11b893178bbdbb26903a7ff31d920a9783b4ace96e339361795432",
+        "size_in_bytes": 10437
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/tokenize.py",
+        "path_type": "hardlink",
+        "sha256": "4498106192d9dadb6d517577833766df52fabbc0f7ef6bbd521f3e03bde4e91b",
+        "sha256_in_prefix": "4498106192d9dadb6d517577833766df52fabbc0f7ef6bbd521f3e03bde4e91b",
+        "size_in_bytes": 34456
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/tools.py",
+        "path_type": "hardlink",
+        "sha256": "a1aa4c88a12384c646ca74d4e0bf98007fdea8a4c757cb6b72a7fc12322fb09d",
+        "sha256_in_prefix": "a1aa4c88a12384c646ca74d4e0bf98007fdea8a4c757cb6b72a7fc12322fb09d",
+        "size_in_bytes": 83602
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/tracer.py",
+        "path_type": "hardlink",
+        "sha256": "74fecbecfa40a7e7344590faeb233c7cf846815d43b388e7b6afbdae9d47e9e8",
+        "sha256_in_prefix": "74fecbecfa40a7e7344590faeb233c7cf846815d43b388e7b6afbdae9d47e9e8",
+        "size_in_bytes": 7632
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/virtualenv/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "7269b3ae0a238357e53a84b5b0f8a05063e3ed4b38b3900e1407e3246fc7eeb8",
+        "sha256_in_prefix": "7269b3ae0a238357e53a84b5b0f8a05063e3ed4b38b3900e1407e3246fc7eeb8",
+        "size_in_bytes": 320
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/virtualenv/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9068430e5e34827781ad15e6f45c43326464df2728f5b2b51b8f3e45b70f62be",
+        "sha256_in_prefix": "9068430e5e34827781ad15e6f45c43326464df2728f5b2b51b8f3e45b70f62be",
+        "size_in_bytes": 770
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/virtualenv/activate.xsh",
+        "path_type": "hardlink",
+        "sha256": "aa42a059fad48d82ab82b9a17f8e55b81cfdf4431a76d88d53c18c7c7659ec05",
+        "sha256_in_prefix": "aa42a059fad48d82ab82b9a17f8e55b81cfdf4431a76d88d53c18c7c7659ec05",
+        "size_in_bytes": 1172
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "b508af03293f22f37c1cca494d1ea837a1f07551531783397e03a299dcb81693",
+        "sha256_in_prefix": "b508af03293f22f37c1cca494d1ea837a1f07551531783397e03a299dcb81693",
+        "size_in_bytes": 46
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d75e0823a84f5ec35c5e35c2fcd377d834f625468ca23a937dd0f8a9d6558e91",
+        "sha256_in_prefix": "d75e0823a84f5ec35c5e35c2fcd377d834f625468ca23a937dd0f8a9d6558e91",
+        "size_in_bytes": 149
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/__main__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d0975baea9569aa85a67df4bb030f88938bd8d95c45cf7ea5e160f0122b1f917",
+        "sha256_in_prefix": "d0975baea9569aa85a67df4bb030f88938bd8d95c45cf7ea5e160f0122b1f917",
+        "size_in_bytes": 206
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/file_writes.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "baff3b20cb1f5f72cd08a91b42390e42c359a1bb6ce8cbedb1c2546034f16e9b",
+        "sha256_in_prefix": "baff3b20cb1f5f72cd08a91b42390e42c359a1bb6ce8cbedb1c2546034f16e9b",
+        "size_in_bytes": 1960
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/main.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9b6498c43a69978d588c17e69e96f5180191f8a9e7f2730aa4aca8753fa2f67e",
+        "sha256_in_prefix": "9b6498c43a69978d588c17e69e96f5180191f8a9e7f2730aa4aca8753fa2f67e",
+        "size_in_bytes": 5956
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/routes.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a5ac153100ab8a0ae9fddd2a6b75153c97babf11a47db3e77231a330c0d3689d",
+        "sha256_in_prefix": "a5ac153100ab8a0ae9fddd2a6b75153c97babf11a47db3e77231a330c0d3689d",
+        "size_in_bytes": 12312
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/tags.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "20f096657db52d685b2f1303bae5ac542043b02957f9bc7fd6e32878a647e773",
+        "sha256_in_prefix": "20f096657db52d685b2f1303bae5ac542043b02957f9bc7fd6e32878a647e773",
+        "size_in_bytes": 3965
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/__pycache__/xonsh_data.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2f23739e4892bb57aa3d1aba307ec48dca9ca2cd48defd7e1cd5d32caab7a675",
+        "sha256_in_prefix": "2f23739e4892bb57aa3d1aba307ec48dca9ca2cd48defd7e1cd5d32caab7a675",
+        "size_in_bytes": 6448
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/file_writes.py",
+        "path_type": "hardlink",
+        "sha256": "3c848aaf57255077c02e3eaade474302ddcbb0ed7f77ea277771a85eb9386f47",
+        "sha256_in_prefix": "3c848aaf57255077c02e3eaade474302ddcbb0ed7f77ea277771a85eb9386f47",
+        "size_in_bytes": 1657
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/index.html",
+        "path_type": "hardlink",
+        "sha256": "2ec9004e98e8247573d3dcbce0b828077d357bb6a614f66c22f8afc27be67bfc",
+        "sha256_in_prefix": "2ec9004e98e8247573d3dcbce0b828077d357bb6a614f66c22f8afc27be67bfc",
+        "size_in_bytes": 1048
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/js/LICENSE-bootstrap",
+        "path_type": "hardlink",
+        "sha256": "ec312ac9e15fbcb86d214298c1c909f03d33bd4f19ddfa67f1dd6352ba9255c5",
+        "sha256_in_prefix": "ec312ac9e15fbcb86d214298c1c909f03d33bd4f19ddfa67f1dd6352ba9255c5",
+        "size_in_bytes": 1123
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/js/bootstrap.min.css",
+        "path_type": "hardlink",
+        "sha256": "53c6eadbbe29e453e69e8a501c95c6f80f326ce92ee1740180760eea44667101",
+        "sha256_in_prefix": "53c6eadbbe29e453e69e8a501c95c6f80f326ce92ee1740180760eea44667101",
+        "size_in_bytes": 190330
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/main.py",
+        "path_type": "hardlink",
+        "sha256": "275ef5b6b054777f0f41fee233678a7179b128fb0e69cc05bdb5bf5d84980a99",
+        "sha256_in_prefix": "275ef5b6b054777f0f41fee233678a7179b128fb0e69cc05bdb5bf5d84980a99",
+        "size_in_bytes": 5573
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/routes.py",
+        "path_type": "hardlink",
+        "sha256": "4a2ec093641103954b98079758fe7d2e2e5d2721fc2eb96fe90e0dba8f3365b2",
+        "sha256_in_prefix": "4a2ec093641103954b98079758fe7d2e2e5d2721fc2eb96fe90e0dba8f3365b2",
+        "size_in_bytes": 11835
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/tags.py",
+        "path_type": "hardlink",
+        "sha256": "604dd97d4f68a1757799667018022dd0a9001aafe64e805bdb48afba1ebe3c7d",
+        "sha256_in_prefix": "604dd97d4f68a1757799667018022dd0a9001aafe64e805bdb48afba1ebe3c7d",
+        "size_in_bytes": 3765
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/webconfig/xonsh_data.py",
+        "path_type": "hardlink",
+        "sha256": "9ca797e2336b5eee9bd3236c118ce8434f0e38a3f31e3399c0573075aff43b77",
+        "sha256_in_prefix": "9ca797e2336b5eee9bd3236c118ce8434f0e38a3f31e3399c0573075aff43b77",
+        "size_in_bytes": 6670
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/winutils.py",
+        "path_type": "hardlink",
+        "sha256": "771cabe7c23e034b09cb51f1c0223e65344c6ad0a9c2afe949afceee43dd8964",
+        "sha256_in_prefix": "771cabe7c23e034b09cb51f1c0223e65344c6ad0a9c2afe949afceee43dd8964",
+        "size_in_bytes": 14601
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/wizard.py",
+        "path_type": "hardlink",
+        "sha256": "d31c0ce7d5c9ab7705fd2a237086aa28bf3c992978d3def0e03b0f0385bccb38",
+        "sha256_in_prefix": "d31c0ce7d5c9ab7705fd2a237086aa28bf3c992978d3def0e03b0f0385bccb38",
+        "size_in_bytes": 28369
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xonfig.py",
+        "path_type": "hardlink",
+        "sha256": "b7cfa1d1d3864aed1b516e5ef5b8c9a8b4e821c5fb2eb8c09da556680d3df373",
+        "sha256_in_prefix": "b7cfa1d1d3864aed1b516e5ef5b8c9a8b4e821c5fb2eb8c09da556680d3df373",
+        "size_in_bytes": 26483
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xontribs.py",
+        "path_type": "hardlink",
+        "sha256": "4c4102eadc0e78164c4957e4e5be69102228da4bb0850c20b38abafa37e45a4d",
+        "sha256_in_prefix": "4c4102eadc0e78164c4957e4e5be69102228da4bb0850c20b38abafa37e45a4d",
+        "size_in_bytes": 10943
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "befe9c44e56495a3e8f822841bccacfd1690abd93640f95f7c7efb04da1732fd",
+        "sha256_in_prefix": "befe9c44e56495a3e8f822841bccacfd1690abd93640f95f7c7efb04da1732fd",
+        "size_in_bytes": 149
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/_which.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0f51a308404dfa6e02a2350f7543619dc38acba7d1200a8231b942d777a9ad37",
+        "sha256_in_prefix": "0f51a308404dfa6e02a2350f7543619dc38acba7d1200a8231b942d777a9ad37",
+        "size_in_bytes": 9123
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/cat.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "480e87306b198dcb17e5615e78464a58d26e86ab77b36617cebcd7f5f9f90232",
+        "sha256_in_prefix": "480e87306b198dcb17e5615e78464a58d26e86ab77b36617cebcd7f5f9f90232",
+        "size_in_bytes": 3983
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/echo.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f7a4dfa7feb1f933fb5ce57082d8f8008719e8215726c072129a45840f3e0db8",
+        "sha256_in_prefix": "f7a4dfa7feb1f933fb5ce57082d8f8008719e8215726c072129a45840f3e0db8",
+        "size_in_bytes": 1504
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/pwd.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "840cfb23a199e61beefb81b9fc5a65e6c65f6c87297b57877c4cbf0a917b09b0",
+        "sha256_in_prefix": "840cfb23a199e61beefb81b9fc5a65e6c65f6c87297b57877c4cbf0a917b09b0",
+        "size_in_bytes": 897
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/tee.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "98eb68e2f37bb81d0b61fa113697f26786481c7ee07640ca8d7bed75001c4ebe",
+        "sha256_in_prefix": "98eb68e2f37bb81d0b61fa113697f26786481c7ee07640ca8d7bed75001c4ebe",
+        "size_in_bytes": 1347
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/tty.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7a5aa249088fc6b2b19a9a825fb917b2ef7081abb9f484c1cadce323faa2d628",
+        "sha256_in_prefix": "7a5aa249088fc6b2b19a9a825fb917b2ef7081abb9f484c1cadce323faa2d628",
+        "size_in_bytes": 1237
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/ulimit.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f1d035330eaed5f83a95bd7d8fb8be0cb8a9d3baff1ba12fdf36f5b7bcaf3818",
+        "sha256_in_prefix": "f1d035330eaed5f83a95bd7d8fb8be0cb8a9d3baff1ba12fdf36f5b7bcaf3818",
+        "size_in_bytes": 7226
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/umask.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2b231a5cac98d178aa9c0d248824934e42645da5d5954df46319133f67307882",
+        "sha256_in_prefix": "2b231a5cac98d178aa9c0d248824934e42645da5d5954df46319133f67307882",
+        "size_in_bytes": 5367
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/uname.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d6dfa25cb366c3d793853d5a5a006fcc4e7eb967dc5c180d176d7fdded72b53d",
+        "sha256_in_prefix": "d6dfa25cb366c3d793853d5a5a006fcc4e7eb967dc5c180d176d7fdded72b53d",
+        "size_in_bytes": 2453
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/uptime.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1ce03898ae2c310f0f81886d14f7d7a918aae059296498ba1df7606b1ff81f2e",
+        "sha256_in_prefix": "1ce03898ae2c310f0f81886d14f7d7a918aae059296498ba1df7606b1ff81f2e",
+        "size_in_bytes": 6991
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/util.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "091d338bd5b5e8a63d2730643c873a3bb2a234466e161a4055098ba5809d9bf1",
+        "sha256_in_prefix": "091d338bd5b5e8a63d2730643c873a3bb2a234466e161a4055098ba5809d9bf1",
+        "size_in_bytes": 981
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/which.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5f262b81bd4d831212e237daddb6ef8ec44a9db6e03dfa2d551467547300697d",
+        "sha256_in_prefix": "5f262b81bd4d831212e237daddb6ef8ec44a9db6e03dfa2d551467547300697d",
+        "size_in_bytes": 5558
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/__pycache__/yes.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c748ea9e90604591fdd86454663a44161399b5bb52469155216e3deb836bcd0a",
+        "sha256_in_prefix": "c748ea9e90604591fdd86454663a44161399b5bb52469155216e3deb836bcd0a",
+        "size_in_bytes": 921
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/_which.py",
+        "path_type": "hardlink",
+        "sha256": "8733d8ba143ece209c50299f0bf02eb03a27a80e5e526d5676a79a8d4bffe612",
+        "sha256_in_prefix": "8733d8ba143ece209c50299f0bf02eb03a27a80e5e526d5676a79a8d4bffe612",
+        "size_in_bytes": 13417
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/cat.py",
+        "path_type": "hardlink",
+        "sha256": "9a9b648a263dc640e2adf7cf8e23b7e1638a373e39291007d2d363cb63ec67c0",
+        "sha256_in_prefix": "9a9b648a263dc640e2adf7cf8e23b7e1638a373e39291007d2d363cb63ec67c0",
+        "size_in_bytes": 5041
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/echo.py",
+        "path_type": "hardlink",
+        "sha256": "dd5cc5c7d05cfaa5aefbf6c7a56920a8223b1875a9ef1291294c4971fbb6e672",
+        "sha256_in_prefix": "dd5cc5c7d05cfaa5aefbf6c7a56920a8223b1875a9ef1291294c4971fbb6e672",
+        "size_in_bytes": 1335
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/pwd.py",
+        "path_type": "hardlink",
+        "sha256": "eb256c4fdf1c6b00f5518a1dc68b8130a32541f2c46cffbdda2b3bf1e425a7b3",
+        "sha256_in_prefix": "eb256c4fdf1c6b00f5518a1dc68b8130a32541f2c46cffbdda2b3bf1e425a7b3",
+        "size_in_bytes": 795
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/tee.py",
+        "path_type": "hardlink",
+        "sha256": "7b385035f2fa91098ee85dc27eac9f3e03ef8f8e61b0cd287977c505b960d32c",
+        "sha256_in_prefix": "7b385035f2fa91098ee85dc27eac9f3e03ef8f8e61b0cd287977c505b960d32c",
+        "size_in_bytes": 1548
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/tty.py",
+        "path_type": "hardlink",
+        "sha256": "4e0d1a4478577cd26712d14bc2dc7b94be0fa84a2ab7fe383aaf062acb78ea6e",
+        "sha256_in_prefix": "4e0d1a4478577cd26712d14bc2dc7b94be0fa84a2ab7fe383aaf062acb78ea6e",
+        "size_in_bytes": 1267
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/ulimit.py",
+        "path_type": "hardlink",
+        "sha256": "ae29c967c5813a5408b4f212d17b0980f5f2127454372f5fd988d9fcada047b8",
+        "sha256_in_prefix": "ae29c967c5813a5408b4f212d17b0980f5f2127454372f5fd988d9fcada047b8",
+        "size_in_bytes": 10004
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/umask.py",
+        "path_type": "hardlink",
+        "sha256": "fe9922e9ee57ccc2eba467dd611746777f8569bf56602a190f06d560b9b56229",
+        "sha256_in_prefix": "fe9922e9ee57ccc2eba467dd611746777f8569bf56602a190f06d560b9b56229",
+        "size_in_bytes": 4937
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/uname.py",
+        "path_type": "hardlink",
+        "sha256": "335e7654d9c96ba1b2dea37529740d18dbf005c0b31a3fbcfec53603b824ed7c",
+        "sha256_in_prefix": "335e7654d9c96ba1b2dea37529740d18dbf005c0b31a3fbcfec53603b824ed7c",
+        "size_in_bytes": 2349
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/uptime.py",
+        "path_type": "hardlink",
+        "sha256": "fba26cd35ef786b4043adee2262411a8efcf97bbf5c51afe777743e4a3c60eae",
+        "sha256_in_prefix": "fba26cd35ef786b4043adee2262411a8efcf97bbf5c51afe777743e4a3c60eae",
+        "size_in_bytes": 8758
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/util.py",
+        "path_type": "hardlink",
+        "sha256": "678470a309d8fab7f40ed66793d5dc0c9e5db62114d3d4959fb1e74c78771967",
+        "sha256_in_prefix": "678470a309d8fab7f40ed66793d5dc0c9e5db62114d3d4959fb1e74c78771967",
+        "size_in_bytes": 871
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/which.py",
+        "path_type": "hardlink",
+        "sha256": "3f7ce98f2e91392f0cda6bdf095c0b170057e950b7872ca406751db3891737d2",
+        "sha256_in_prefix": "3f7ce98f2e91392f0cda6bdf095c0b170057e950b7872ca406751db3891737d2",
+        "size_in_bytes": 6509
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xonsh/xoreutils/yes.py",
+        "path_type": "hardlink",
+        "sha256": "cc22c8f6c5448bd7a8ebdbb2640d9c7d21894670232f100ce58aeadbff27aa1b",
+        "sha256_in_prefix": "cc22c8f6c5448bd7a8ebdbb2640d9c7d21894670232f100ce58aeadbff27aa1b",
+        "size_in_bytes": 643
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/__pycache__/abbrevs.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d1a4cff20c661e73b36046fd67c0ab55f8223f3ab98e68b3abefb495cf1ba383",
+        "sha256_in_prefix": "d1a4cff20c661e73b36046fd67c0ab55f8223f3ab98e68b3abefb495cf1ba383",
+        "size_in_bytes": 5218
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/__pycache__/autovox.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6db3f2f17293ff41ce137117b49868fd34d986f74a3095ebd66451eb28beb121",
+        "sha256_in_prefix": "6db3f2f17293ff41ce137117b49868fd34d986f74a3095ebd66451eb28beb121",
+        "size_in_bytes": 3102
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/__pycache__/bashisms.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5597d8bceefc918c92058511729f4003d0818494797f720f1c15e7390cbdb17d",
+        "sha256_in_prefix": "5597d8bceefc918c92058511729f4003d0818494797f720f1c15e7390cbdb17d",
+        "size_in_bytes": 4879
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/__pycache__/coreutils.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "36df0c45d7a3b642ed8b5ff941b8103c98a3190596d0a646f8ee6e60c656344b",
+        "sha256_in_prefix": "36df0c45d7a3b642ed8b5ff941b8103c98a3190596d0a646f8ee6e60c656344b",
+        "size_in_bytes": 1480
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/__pycache__/fish_completer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "20860b32f152e0be0c514e386f33b1a6a1e8640387c3ee3c6b2d5c2c092a08c4",
+        "sha256_in_prefix": "20860b32f152e0be0c514e386f33b1a6a1e8640387c3ee3c6b2d5c2c092a08c4",
+        "size_in_bytes": 967
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/__pycache__/free_cwd.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7b2a1addd454137cb21bc055b451a591881c506a644ae7264d270940f80ec514",
+        "sha256_in_prefix": "7b2a1addd454137cb21bc055b451a591881c506a644ae7264d270940f80ec514",
+        "size_in_bytes": 3251
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/__pycache__/pdb.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9d9eda7e633f6f53d6a234aae465d543634df36a0a52753158241d4130247ad1",
+        "sha256_in_prefix": "9d9eda7e633f6f53d6a234aae465d543634df36a0a52753158241d4130247ad1",
+        "size_in_bytes": 705
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/__pycache__/vox.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "55d5b5adc83ab014735bab7caf0cd9d804e186445a0ef17b080a07abc3a057a0",
+        "sha256_in_prefix": "55d5b5adc83ab014735bab7caf0cd9d804e186445a0ef17b080a07abc3a057a0",
+        "size_in_bytes": 15358
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/__pycache__/voxapi.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e725b9040d6b8e1b76b29006aa2b7adf87f2a7aeb031b52f6ea1c98704bbd5ac",
+        "sha256_in_prefix": "e725b9040d6b8e1b76b29006aa2b7adf87f2a7aeb031b52f6ea1c98704bbd5ac",
+        "size_in_bytes": 11816
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/__pycache__/whole_word_jumping.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1cc70b40fdf84245849644b8e4451eca334b8319c4f6fa49896378e32fb41bcb",
+        "sha256_in_prefix": "1cc70b40fdf84245849644b8e4451eca334b8319c4f6fa49896378e32fb41bcb",
+        "size_in_bytes": 3560
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/__pycache__/xog.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0e242612392d709c761cc5ee5c2cb78ca4cfbc6c933fc9c4f4a7519edf95abce",
+        "sha256_in_prefix": "0e242612392d709c761cc5ee5c2cb78ca4cfbc6c933fc9c4f4a7519edf95abce",
+        "size_in_bytes": 2041
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/abbrevs.py",
+        "path_type": "hardlink",
+        "sha256": "c8bb2fdded4366c471c0995a64eb6386ac288ce9341735c32aa705c49323cfc0",
+        "sha256_in_prefix": "c8bb2fdded4366c471c0995a64eb6386ac288ce9341735c32aa705c49323cfc0",
+        "size_in_bytes": 4938
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/autovox.py",
+        "path_type": "hardlink",
+        "sha256": "2bd3349bc79d51b18b56939abbc4803004e9468ecb16e321134e544865d3189f",
+        "sha256_in_prefix": "2bd3349bc79d51b18b56939abbc4803004e9468ecb16e321134e544865d3189f",
+        "size_in_bytes": 2819
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/bashisms.py",
+        "path_type": "hardlink",
+        "sha256": "da449c44edd06e4fe3122118af450555f2c59ee3fa0f995631138608bf360015",
+        "sha256_in_prefix": "da449c44edd06e4fe3122118af450555f2c59ee3fa0f995631138608bf360015",
+        "size_in_bytes": 4519
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/coreutils.py",
+        "path_type": "hardlink",
+        "sha256": "ffd4d1fc9e6286096aab8e31afe1090a829277e08cffad0f4499be07e90514de",
+        "sha256_in_prefix": "ffd4d1fc9e6286096aab8e31afe1090a829277e08cffad0f4499be07e90514de",
+        "size_in_bytes": 1210
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/fish_completer.py",
+        "path_type": "hardlink",
+        "sha256": "85de11973028dd884bfbc46281e451cd54e5905c23eb5ce1e613572bdb5b9345",
+        "sha256_in_prefix": "85de11973028dd884bfbc46281e451cd54e5905c23eb5ce1e613572bdb5b9345",
+        "size_in_bytes": 836
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/free_cwd.py",
+        "path_type": "hardlink",
+        "sha256": "c23d1afa0e1bf99c1bdf2f3c61b8e25806b1d4373ebb3d3c547a642f4270e995",
+        "sha256_in_prefix": "c23d1afa0e1bf99c1bdf2f3c61b8e25806b1d4373ebb3d3c547a642f4270e995",
+        "size_in_bytes": 3408
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/pdb.py",
+        "path_type": "hardlink",
+        "sha256": "6d45abf7f9d9ce5936b274c680049eab5d3b200261f36092409a596e09859f72",
+        "sha256_in_prefix": "6d45abf7f9d9ce5936b274c680049eab5d3b200261f36092409a596e09859f72",
+        "size_in_bytes": 407
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/vox.py",
+        "path_type": "hardlink",
+        "sha256": "a669619d0a92e577e52735b140dff28c6ac1ed707a2a28fe0d62cc43a7bfd9de",
+        "sha256_in_prefix": "a669619d0a92e577e52735b140dff28c6ac1ed707a2a28fe0d62cc43a7bfd9de",
+        "size_in_bytes": 16618
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/voxapi.py",
+        "path_type": "hardlink",
+        "sha256": "89173133806a4212a991050108add23148a54bbb8e3a87ecf2ee204a6f8e0358",
+        "sha256_in_prefix": "89173133806a4212a991050108add23148a54bbb8e3a87ecf2ee204a6f8e0358",
+        "size_in_bytes": 13864
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/whole_word_jumping.py",
+        "path_type": "hardlink",
+        "sha256": "77569d04bf57ea201e5555e07a8059945d092d77f8ea25c6c29f87af922af995",
+        "sha256_in_prefix": "77569d04bf57ea201e5555e07a8059945d092d77f8ea25c6c29f87af922af995",
+        "size_in_bytes": 4285
+      },
+      {
+        "_path": "lib/python3.10/site-packages/xontrib/xog.py",
+        "path_type": "hardlink",
+        "sha256": "929ed90e445e82465f21fa8a60013dcebc6367d1d1b58bac7edc4e118ca7b1e4",
+        "sha256_in_prefix": "929ed90e445e82465f21fa8a60013dcebc6367d1d1b58bac7edc4e118ca7b1e4",
+        "size_in_bytes": 1605
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "xonsh",
+  "sha256": "bdbd9d5a2709c5a4afb6dd7ba7287d133283ede54fbd7f71fdbdb3a4f5c7f2fa",
+  "size": 1126055,
+  "subdir": "linux-64",
+  "timestamp": 1666954302531,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/xonsh-0.13.3-py310hff52083_1.tar.bz2",
+  "version": "0.13.3"
+}

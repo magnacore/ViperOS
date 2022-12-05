@@ -1,0 +1,44 @@
+{
+  "build": "py39h06a4308_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/mypy_extensions-0.4.3-py39h06a4308_1",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/__pycache__/mypy_extensions.cpython-39.pyc",
+    "lib/python3.9/site-packages/mypy_extensions-0.4.3-py3.9.egg-info/PKG-INFO",
+    "lib/python3.9/site-packages/mypy_extensions-0.4.3-py3.9.egg-info/SOURCES.txt",
+    "lib/python3.9/site-packages/mypy_extensions-0.4.3-py3.9.egg-info/dependency_links.txt",
+    "lib/python3.9/site-packages/mypy_extensions-0.4.3-py3.9.egg-info/requires.txt",
+    "lib/python3.9/site-packages/mypy_extensions-0.4.3-py3.9.egg-info/top_level.txt",
+    "lib/python3.9/site-packages/mypy_extensions.py"
+  ],
+  "fn": "mypy_extensions-0.4.3-py39h06a4308_1.conda",
+  "legacy_bz2_md5": "763d81e8d77153a6fd3b1981d20023b1",
+  "legacy_bz2_size": 9767,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/mypy_extensions-0.4.3-py39h06a4308_1",
+    "type": 1
+  },
+  "md5": "ce49f082569beb0bf65e81efe2d01342",
+  "name": "mypy_extensions",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/mypy_extensions-0.4.3-py39h06a4308_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "mypy_extensions==0.4.3=py39h06a4308_1",
+  "sha256": "2aec1d0fc90051add67e4a49c0225f062a890ef1d1a7064fa9f138318d54e914",
+  "size": 10022,
+  "subdir": "linux-64",
+  "timestamp": 1640165677703,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/mypy_extensions-0.4.3-py39h06a4308_1.conda",
+  "version": "0.4.3"
+}

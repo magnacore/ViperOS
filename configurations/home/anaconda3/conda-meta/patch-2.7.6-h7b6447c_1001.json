@@ -1,0 +1,48 @@
+{
+  "build": "h7b6447c_1001",
+  "build_number": 1001,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/patch-2.7.6-h7b6447c_1001",
+  "features": "",
+  "files": [
+    "bin/patch",
+    "share/man/man1/patch.1"
+  ],
+  "fn": "patch-2.7.6-h7b6447c_1001.conda",
+  "legacy_bz2_md5": "cabafb11dc83bcea5aa8031dc35ae405",
+  "legacy_bz2_size": 124863,
+  "license": "GPL 3",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/patch-2.7.6-h7b6447c_1001",
+    "type": 1
+  },
+  "md5": "5a47ace7ef08447fe6a602ff16129393",
+  "name": "patch",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/patch-2.7.6-h7b6447c_1001.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/patch",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/patch_1573953154623/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "0831ce5fa2a3cb1be0f0e7cc50e623f141e7a7bd218c2944c0c1158a7c3d6b1d",
+        "sha256_in_prefix": "b1707fa7a174f9f3dd4d193af2a21216478c763bc764ff2454da9abfd040c77c",
+        "size_in_bytes": 216024
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "patch==2.7.6=h7b6447c_1001",
+  "sha256": "eadc5b8a783adba6c0d39d2f270b180632f22d4330c93a5700b1bddc01905216",
+  "size": 122130,
+  "subdir": "linux-64",
+  "timestamp": 1573953235116,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/patch-2.7.6-h7b6447c_1001.conda",
+  "version": "2.7.6"
+}

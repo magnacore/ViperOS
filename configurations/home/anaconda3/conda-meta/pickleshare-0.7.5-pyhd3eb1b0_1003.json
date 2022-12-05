@@ -1,0 +1,53 @@
+{
+  "build": "pyhd3eb1b0_1003",
+  "build_number": 1003,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/pickleshare-0.7.5-pyhd3eb1b0_1003",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/pickleshare-0.7.5.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/pickleshare-0.7.5.dist-info/LICENSE",
+    "lib/python3.9/site-packages/pickleshare-0.7.5.dist-info/METADATA",
+    "lib/python3.9/site-packages/pickleshare-0.7.5.dist-info/RECORD",
+    "lib/python3.9/site-packages/pickleshare-0.7.5.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/pickleshare-0.7.5.dist-info/WHEEL",
+    "lib/python3.9/site-packages/pickleshare-0.7.5.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/pickleshare-0.7.5.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/pickleshare.py",
+    "lib/python3.9/site-packages/__pycache__/pickleshare.cpython-39.pyc"
+  ],
+  "fn": "pickleshare-0.7.5-pyhd3eb1b0_1003.conda",
+  "legacy_bz2_md5": "e68a6f315f41a8d814d833652bf38b9b",
+  "legacy_bz2_size": 13374,
+  "license": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/pickleshare-0.7.5-pyhd3eb1b0_1003",
+    "type": 1
+  },
+  "md5": "4a6363fd8dda664b95f99f7c5aa95abc",
+  "name": "pickleshare",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/pickleshare-0.7.5-pyhd3eb1b0_1003.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/__pycache__/pickleshare.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pickleshare==0.7.5=pyhd3eb1b0_1003",
+  "sha256": "c4c974ac5bab1628bc472eb271903206ebc349f30cf590740560b6284118852a",
+  "size": 13463,
+  "subdir": "noarch",
+  "timestamp": 1606932077143,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/pickleshare-0.7.5-pyhd3eb1b0_1003.conda",
+  "version": "0.7.5"
+}

@@ -1,0 +1,72 @@
+{
+  "build": "h3ad879b_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.5.0",
+    "libpng >=1.6.37,<1.7.0a0",
+    "libstdcxx-ng >=7.5.0",
+    "libtiff >=4.1.0,<5.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/openjpeg-2.4.0-h3ad879b_0",
+  "features": "",
+  "files": [
+    "bin/opj_compress",
+    "bin/opj_decompress",
+    "bin/opj_dump",
+    "include/openjpeg-2.4/openjpeg.h",
+    "include/openjpeg-2.4/opj_config.h",
+    "include/openjpeg-2.4/opj_stdint.h",
+    "lib/libopenjp2.a",
+    "lib/libopenjp2.so",
+    "lib/libopenjp2.so.2.4.0",
+    "lib/libopenjp2.so.7",
+    "lib/openjpeg-2.4/OpenJPEGConfig.cmake",
+    "lib/openjpeg-2.4/OpenJPEGTargets-noconfig.cmake",
+    "lib/openjpeg-2.4/OpenJPEGTargets.cmake",
+    "lib/pkgconfig/libopenjp2.pc"
+  ],
+  "fn": "openjpeg-2.4.0-h3ad879b_0.conda",
+  "legacy_bz2_md5": "b0afe23033c8c5344640bc25225fa579",
+  "legacy_bz2_size": 516994,
+  "license": "BSD 2-Clause",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/openjpeg-2.4.0-h3ad879b_0",
+    "type": 1
+  },
+  "md5": "86baecb47ecaa7f7ff2657a1f03b90c9",
+  "name": "openjpeg",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/openjpeg-2.4.0-h3ad879b_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/openjpeg-2.4/OpenJPEGConfig.cmake",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/openjpeg_1630084773082/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "b94c98aeb4c66918e099a0ad59b5c723b5cbd98af6af91382ff630cda6b59db1",
+        "sha256_in_prefix": "5df2901b19187ac25bc11d2789269de65e09692854e1257e1e672f5377cb24ed",
+        "size_in_bytes": 1540
+      },
+      {
+        "_path": "lib/pkgconfig/libopenjp2.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/openjpeg_1630084773082/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "bf9a406894273e6d719e9fa1cac41c146dca53b8687017844ee40e4de10eb924",
+        "sha256_in_prefix": "1204d2c200b8cb1ba44ec5f81e2d4761fe1f4bdc531f6f73976991ed21ba78f3",
+        "size_in_bytes": 558
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "openjpeg==2.4.0=h3ad879b_0",
+  "sha256": "7db5ad4d3119105b26a023702b24eb4d190700e9393df04aec3ad1e0f07c7354",
+  "size": 338774,
+  "subdir": "linux-64",
+  "timestamp": 1630084830020,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/openjpeg-2.4.0-h3ad879b_0.conda",
+  "version": "2.4.0"
+}

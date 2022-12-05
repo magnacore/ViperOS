@@ -1,0 +1,115 @@
+{
+  "build": "py_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "backports.functools_lru_cache",
+    "backports.tempfile",
+    "click",
+    "conda-package-handling >=1.0.4",
+    "future",
+    "jinja2",
+    "python",
+    "pyyaml",
+    "six",
+    "tqdm"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/conda-verify-3.4.2-py_1",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/conda_verify-3.4.2.dist-info/AUTHORS.txt",
+    "lib/python3.9/site-packages/conda_verify-3.4.2.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/conda_verify-3.4.2.dist-info/LICENSE.txt",
+    "lib/python3.9/site-packages/conda_verify-3.4.2.dist-info/METADATA",
+    "lib/python3.9/site-packages/conda_verify-3.4.2.dist-info/RECORD",
+    "lib/python3.9/site-packages/conda_verify-3.4.2.dist-info/WHEEL",
+    "lib/python3.9/site-packages/conda_verify-3.4.2.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/conda_verify-3.4.2.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/conda_verify/__init__.py",
+    "lib/python3.9/site-packages/conda_verify/__main__.py",
+    "lib/python3.9/site-packages/conda_verify/_version.py",
+    "lib/python3.9/site-packages/conda_verify/checks.py",
+    "lib/python3.9/site-packages/conda_verify/cli.py",
+    "lib/python3.9/site-packages/conda_verify/constants.py",
+    "lib/python3.9/site-packages/conda_verify/errors.py",
+    "lib/python3.9/site-packages/conda_verify/utilities.py",
+    "lib/python3.9/site-packages/conda_verify/verify.py",
+    "lib/python3.9/site-packages/conda_verify/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_verify/__pycache__/__main__.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_verify/__pycache__/_version.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_verify/__pycache__/checks.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_verify/__pycache__/cli.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_verify/__pycache__/constants.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_verify/__pycache__/errors.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_verify/__pycache__/utilities.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_verify/__pycache__/verify.cpython-39.pyc",
+    "bin/conda-verify"
+  ],
+  "fn": "conda-verify-3.4.2-py_1.conda",
+  "legacy_bz2_md5": "6ebfa9536cacc9e7047ca3d98705fd5a",
+  "legacy_bz2_size": 25555,
+  "license": "BSD 3-Clause",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/conda-verify-3.4.2-py_1",
+    "type": 1
+  },
+  "md5": "a632f32be6f66996c03e8a0317a7ac22",
+  "name": "conda-verify",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/conda-verify-3.4.2-py_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/conda_verify/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/conda_verify/__pycache__/__main__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/conda_verify/__pycache__/_version.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/conda_verify/__pycache__/checks.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/conda_verify/__pycache__/cli.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/conda_verify/__pycache__/constants.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/conda_verify/__pycache__/errors.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/conda_verify/__pycache__/utilities.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/conda_verify/__pycache__/verify.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/conda-verify",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "conda-verify==3.4.2=py_1",
+  "sha256": "39df5f79c2368182ce93193e9ff1377fc52f19f3066ff4ad16b15ea333169f1b",
+  "size": 27229,
+  "subdir": "noarch",
+  "timestamp": 1563467235318,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/conda-verify-3.4.2-py_1.conda",
+  "version": "3.4.2"
+}

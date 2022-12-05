@@ -1,0 +1,52 @@
+{
+  "build": "py39h7f8727e_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "cffi >=1.0.1",
+    "libgcc-ng >=7.5.0",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/argon2-cffi-bindings-21.2.0-py39h7f8727e_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/_argon2_cffi_bindings/__init__.py",
+    "lib/python3.9/site-packages/_argon2_cffi_bindings/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/_argon2_cffi_bindings/__pycache__/_ffi_build.cpython-39.pyc",
+    "lib/python3.9/site-packages/_argon2_cffi_bindings/_ffi.abi3.so",
+    "lib/python3.9/site-packages/_argon2_cffi_bindings/_ffi_build.py",
+    "lib/python3.9/site-packages/argon2_cffi_bindings-21.2.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/argon2_cffi_bindings-21.2.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/argon2_cffi_bindings-21.2.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/argon2_cffi_bindings-21.2.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/argon2_cffi_bindings-21.2.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/argon2_cffi_bindings-21.2.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/argon2_cffi_bindings-21.2.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/argon2_cffi_bindings-21.2.0.dist-info/top_level.txt"
+  ],
+  "fn": "argon2-cffi-bindings-21.2.0-py39h7f8727e_0.conda",
+  "legacy_bz2_md5": "2972a84e0e22ae3244bbd2f1eebcf536",
+  "legacy_bz2_size": 35352,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/argon2-cffi-bindings-21.2.0-py39h7f8727e_0",
+    "type": 1
+  },
+  "md5": "c8ffbd66912b614dc1803a385db161b0",
+  "name": "argon2-cffi-bindings",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/argon2-cffi-bindings-21.2.0-py39h7f8727e_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "argon2-cffi-bindings==21.2.0=py39h7f8727e_0",
+  "sha256": "3a4ec2db2ff78f1e50e4c99e72c6b6cad78ae849983fd74defb451a3a4c35537",
+  "size": 33330,
+  "subdir": "linux-64",
+  "timestamp": 1644569715988,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/argon2-cffi-bindings-21.2.0-py39h7f8727e_0.conda",
+  "version": "21.2.0"
+}

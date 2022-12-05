@@ -1,0 +1,74 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "sortedcontainers"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/intervaltree-3.1.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/intervaltree-3.1.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/intervaltree-3.1.0.dist-info/LICENSE.txt",
+    "lib/python3.9/site-packages/intervaltree-3.1.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/intervaltree-3.1.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/intervaltree-3.1.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/intervaltree-3.1.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/intervaltree-3.1.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/intervaltree-3.1.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/intervaltree-3.1.0.dist-info/zip-safe",
+    "lib/python3.9/site-packages/intervaltree/__init__.py",
+    "lib/python3.9/site-packages/intervaltree/interval.py",
+    "lib/python3.9/site-packages/intervaltree/intervaltree.py",
+    "lib/python3.9/site-packages/intervaltree/node.py",
+    "lib/python3.9/site-packages/intervaltree/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/intervaltree/__pycache__/interval.cpython-39.pyc",
+    "lib/python3.9/site-packages/intervaltree/__pycache__/intervaltree.cpython-39.pyc",
+    "lib/python3.9/site-packages/intervaltree/__pycache__/node.cpython-39.pyc"
+  ],
+  "fn": "intervaltree-3.1.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "f3c05e6a0ec319a984ca4c6a3d484eea",
+  "legacy_bz2_size": 26359,
+  "license": "Apache-2.0",
+  "license_family": "APACHE",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/intervaltree-3.1.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "9bf92b7e66bde3d696b51b0bc117c471",
+  "name": "intervaltree",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/intervaltree-3.1.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/intervaltree/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/intervaltree/__pycache__/interval.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/intervaltree/__pycache__/intervaltree.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/intervaltree/__pycache__/node.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "intervaltree==3.1.0=pyhd3eb1b0_0",
+  "sha256": "971d1387d84b912538c413204a2cc05aa99197c17e45f8e8b8940c8b567311f0",
+  "size": 25694,
+  "subdir": "noarch",
+  "timestamp": 1630511908895,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/intervaltree-3.1.0-pyhd3eb1b0_0.conda",
+  "version": "3.1.0"
+}

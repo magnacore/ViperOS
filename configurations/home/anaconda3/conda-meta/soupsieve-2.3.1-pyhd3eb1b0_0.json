@@ -1,0 +1,91 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.6"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/soupsieve-2.3.1-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/soupsieve-2.3.1.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/soupsieve-2.3.1.dist-info/LICENSE.md",
+    "lib/python3.9/site-packages/soupsieve-2.3.1.dist-info/METADATA",
+    "lib/python3.9/site-packages/soupsieve-2.3.1.dist-info/RECORD",
+    "lib/python3.9/site-packages/soupsieve-2.3.1.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/soupsieve-2.3.1.dist-info/WHEEL",
+    "lib/python3.9/site-packages/soupsieve-2.3.1.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/soupsieve-2.3.1.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/soupsieve/__init__.py",
+    "lib/python3.9/site-packages/soupsieve/__meta__.py",
+    "lib/python3.9/site-packages/soupsieve/css_match.py",
+    "lib/python3.9/site-packages/soupsieve/css_parser.py",
+    "lib/python3.9/site-packages/soupsieve/css_types.py",
+    "lib/python3.9/site-packages/soupsieve/pretty.py",
+    "lib/python3.9/site-packages/soupsieve/py.typed",
+    "lib/python3.9/site-packages/soupsieve/util.py",
+    "lib/python3.9/site-packages/soupsieve/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/soupsieve/__pycache__/__meta__.cpython-39.pyc",
+    "lib/python3.9/site-packages/soupsieve/__pycache__/css_match.cpython-39.pyc",
+    "lib/python3.9/site-packages/soupsieve/__pycache__/css_parser.cpython-39.pyc",
+    "lib/python3.9/site-packages/soupsieve/__pycache__/css_types.cpython-39.pyc",
+    "lib/python3.9/site-packages/soupsieve/__pycache__/pretty.cpython-39.pyc",
+    "lib/python3.9/site-packages/soupsieve/__pycache__/util.cpython-39.pyc"
+  ],
+  "fn": "soupsieve-2.3.1-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "4d8b31e39d28e7e7d218f10301034a01",
+  "legacy_bz2_size": 33937,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/soupsieve-2.3.1-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "4794d40136a3432a241ff1454d2ac99c",
+  "name": "soupsieve",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/soupsieve-2.3.1-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/soupsieve/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/soupsieve/__pycache__/__meta__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/soupsieve/__pycache__/css_match.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/soupsieve/__pycache__/css_parser.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/soupsieve/__pycache__/css_types.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/soupsieve/__pycache__/pretty.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/soupsieve/__pycache__/util.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "soupsieve==2.3.1=pyhd3eb1b0_0",
+  "sha256": "0100f34ea55540bfbd643cbbee5828dd184ef543c05601a3400e9594d083f56e",
+  "size": 35010,
+  "subdir": "noarch",
+  "timestamp": 1636706048080,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/soupsieve-2.3.1-pyhd3eb1b0_0.conda",
+  "version": "2.3.1"
+}

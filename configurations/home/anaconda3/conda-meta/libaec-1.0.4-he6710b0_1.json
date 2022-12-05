@@ -1,0 +1,48 @@
+{
+  "build": "he6710b0_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/libaec-1.0.4-he6710b0_1",
+  "features": "",
+  "files": [
+    "bin/aec",
+    "include/libaec.h",
+    "include/szlib.h",
+    "lib/libaec.so",
+    "lib/libaec.so.0",
+    "lib/libaec.so.0.0.10",
+    "lib/libsz.so",
+    "lib/libsz.so.2",
+    "lib/libsz.so.2.0.1",
+    "share/man/man1/aec.1"
+  ],
+  "fn": "libaec-1.0.4-he6710b0_1.conda",
+  "legacy_bz2_md5": "e911ac853b19bd7073f1047699e2118e",
+  "legacy_bz2_size": 35409,
+  "license": "BSD-2-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/libaec-1.0.4-he6710b0_1",
+    "type": 1
+  },
+  "md5": "95e3b23fe7c0108bce3b6826749bb94d",
+  "name": "libaec",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/libaec-1.0.4-he6710b0_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "libaec==1.0.4=he6710b0_1",
+  "sha256": "f3c5042e35d675d1bec54e14d5f6c45fd4147446f8486dfc897daf603c81c8e2",
+  "size": 32947,
+  "subdir": "linux-64",
+  "timestamp": 1593197267510,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libaec-1.0.4-he6710b0_1.conda",
+  "version": "1.0.4"
+}

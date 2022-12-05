@@ -1,0 +1,265 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/pyasn1-0.4.8-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/pyasn1-0.4.8.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/pyasn1-0.4.8.dist-info/LICENSE.rst",
+    "lib/python3.9/site-packages/pyasn1-0.4.8.dist-info/METADATA",
+    "lib/python3.9/site-packages/pyasn1-0.4.8.dist-info/RECORD",
+    "lib/python3.9/site-packages/pyasn1-0.4.8.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/pyasn1-0.4.8.dist-info/WHEEL",
+    "lib/python3.9/site-packages/pyasn1-0.4.8.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/pyasn1-0.4.8.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/pyasn1-0.4.8.dist-info/zip-safe",
+    "lib/python3.9/site-packages/pyasn1/__init__.py",
+    "lib/python3.9/site-packages/pyasn1/codec/__init__.py",
+    "lib/python3.9/site-packages/pyasn1/codec/ber/__init__.py",
+    "lib/python3.9/site-packages/pyasn1/codec/ber/decoder.py",
+    "lib/python3.9/site-packages/pyasn1/codec/ber/encoder.py",
+    "lib/python3.9/site-packages/pyasn1/codec/ber/eoo.py",
+    "lib/python3.9/site-packages/pyasn1/codec/cer/__init__.py",
+    "lib/python3.9/site-packages/pyasn1/codec/cer/decoder.py",
+    "lib/python3.9/site-packages/pyasn1/codec/cer/encoder.py",
+    "lib/python3.9/site-packages/pyasn1/codec/der/__init__.py",
+    "lib/python3.9/site-packages/pyasn1/codec/der/decoder.py",
+    "lib/python3.9/site-packages/pyasn1/codec/der/encoder.py",
+    "lib/python3.9/site-packages/pyasn1/codec/native/__init__.py",
+    "lib/python3.9/site-packages/pyasn1/codec/native/decoder.py",
+    "lib/python3.9/site-packages/pyasn1/codec/native/encoder.py",
+    "lib/python3.9/site-packages/pyasn1/compat/__init__.py",
+    "lib/python3.9/site-packages/pyasn1/compat/binary.py",
+    "lib/python3.9/site-packages/pyasn1/compat/calling.py",
+    "lib/python3.9/site-packages/pyasn1/compat/dateandtime.py",
+    "lib/python3.9/site-packages/pyasn1/compat/integer.py",
+    "lib/python3.9/site-packages/pyasn1/compat/octets.py",
+    "lib/python3.9/site-packages/pyasn1/compat/string.py",
+    "lib/python3.9/site-packages/pyasn1/debug.py",
+    "lib/python3.9/site-packages/pyasn1/error.py",
+    "lib/python3.9/site-packages/pyasn1/type/__init__.py",
+    "lib/python3.9/site-packages/pyasn1/type/base.py",
+    "lib/python3.9/site-packages/pyasn1/type/char.py",
+    "lib/python3.9/site-packages/pyasn1/type/constraint.py",
+    "lib/python3.9/site-packages/pyasn1/type/error.py",
+    "lib/python3.9/site-packages/pyasn1/type/namedtype.py",
+    "lib/python3.9/site-packages/pyasn1/type/namedval.py",
+    "lib/python3.9/site-packages/pyasn1/type/opentype.py",
+    "lib/python3.9/site-packages/pyasn1/type/tag.py",
+    "lib/python3.9/site-packages/pyasn1/type/tagmap.py",
+    "lib/python3.9/site-packages/pyasn1/type/univ.py",
+    "lib/python3.9/site-packages/pyasn1/type/useful.py",
+    "lib/python3.9/site-packages/pyasn1/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/ber/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/ber/__pycache__/decoder.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/ber/__pycache__/encoder.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/ber/__pycache__/eoo.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/cer/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/cer/__pycache__/decoder.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/cer/__pycache__/encoder.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/der/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/der/__pycache__/decoder.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/der/__pycache__/encoder.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/native/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/native/__pycache__/decoder.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/codec/native/__pycache__/encoder.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/compat/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/compat/__pycache__/binary.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/compat/__pycache__/calling.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/compat/__pycache__/dateandtime.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/compat/__pycache__/integer.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/compat/__pycache__/octets.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/compat/__pycache__/string.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/__pycache__/debug.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/__pycache__/error.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/type/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/type/__pycache__/base.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/type/__pycache__/char.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/type/__pycache__/constraint.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/type/__pycache__/error.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/type/__pycache__/namedtype.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/type/__pycache__/namedval.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/type/__pycache__/opentype.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/type/__pycache__/tag.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/type/__pycache__/tagmap.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/type/__pycache__/univ.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyasn1/type/__pycache__/useful.cpython-39.pyc"
+  ],
+  "fn": "pyasn1-0.4.8-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "4a84e67c47feb540be5d11d6f53535a5",
+  "legacy_bz2_size": 55350,
+  "license": "BSD 2-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/pyasn1-0.4.8-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "4e3f334c35c33118cbb0f7b546f9fc2f",
+  "name": "pyasn1",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/pyasn1-0.4.8-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/ber/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/ber/__pycache__/decoder.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/ber/__pycache__/encoder.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/ber/__pycache__/eoo.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/cer/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/cer/__pycache__/decoder.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/cer/__pycache__/encoder.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/der/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/der/__pycache__/decoder.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/der/__pycache__/encoder.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/native/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/native/__pycache__/decoder.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/codec/native/__pycache__/encoder.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/compat/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/compat/__pycache__/binary.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/compat/__pycache__/calling.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/compat/__pycache__/dateandtime.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/compat/__pycache__/integer.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/compat/__pycache__/octets.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/compat/__pycache__/string.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/__pycache__/debug.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/__pycache__/error.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/type/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/type/__pycache__/base.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/type/__pycache__/char.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/type/__pycache__/constraint.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/type/__pycache__/error.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/type/__pycache__/namedtype.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/type/__pycache__/namedval.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/type/__pycache__/opentype.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/type/__pycache__/tag.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/type/__pycache__/tagmap.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/type/__pycache__/univ.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyasn1/type/__pycache__/useful.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pyasn1==0.4.8=pyhd3eb1b0_0",
+  "sha256": "d5d64adac68b5716e36d6a4bbb1865591cccf67a64793cdc5ecf7c18a0f10535",
+  "size": 55287,
+  "subdir": "noarch",
+  "timestamp": 1629708025637,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/pyasn1-0.4.8-pyhd3eb1b0_0.conda",
+  "version": "0.4.8"
+}

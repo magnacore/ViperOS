@@ -1,0 +1,385 @@
+{
+  "build": "pyhd3eb1b0_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "six"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/pyhamcrest-2.0.2-pyhd3eb1b0_2",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/PyHamcrest-2.0.2.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/PyHamcrest-2.0.2.dist-info/LICENSE.txt",
+    "lib/python3.9/site-packages/PyHamcrest-2.0.2.dist-info/METADATA",
+    "lib/python3.9/site-packages/PyHamcrest-2.0.2.dist-info/RECORD",
+    "lib/python3.9/site-packages/PyHamcrest-2.0.2.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/PyHamcrest-2.0.2.dist-info/WHEEL",
+    "lib/python3.9/site-packages/PyHamcrest-2.0.2.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/PyHamcrest-2.0.2.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/hamcrest/__init__.py",
+    "lib/python3.9/site-packages/hamcrest/core/__init__.py",
+    "lib/python3.9/site-packages/hamcrest/core/assert_that.py",
+    "lib/python3.9/site-packages/hamcrest/core/base_description.py",
+    "lib/python3.9/site-packages/hamcrest/core/base_matcher.py",
+    "lib/python3.9/site-packages/hamcrest/core/core/__init__.py",
+    "lib/python3.9/site-packages/hamcrest/core/core/allof.py",
+    "lib/python3.9/site-packages/hamcrest/core/core/anyof.py",
+    "lib/python3.9/site-packages/hamcrest/core/core/described_as.py",
+    "lib/python3.9/site-packages/hamcrest/core/core/is_.py",
+    "lib/python3.9/site-packages/hamcrest/core/core/isanything.py",
+    "lib/python3.9/site-packages/hamcrest/core/core/isequal.py",
+    "lib/python3.9/site-packages/hamcrest/core/core/isinstanceof.py",
+    "lib/python3.9/site-packages/hamcrest/core/core/isnone.py",
+    "lib/python3.9/site-packages/hamcrest/core/core/isnot.py",
+    "lib/python3.9/site-packages/hamcrest/core/core/issame.py",
+    "lib/python3.9/site-packages/hamcrest/core/core/raises.py",
+    "lib/python3.9/site-packages/hamcrest/core/description.py",
+    "lib/python3.9/site-packages/hamcrest/core/helpers/__init__.py",
+    "lib/python3.9/site-packages/hamcrest/core/helpers/hasmethod.py",
+    "lib/python3.9/site-packages/hamcrest/core/helpers/ismock.py",
+    "lib/python3.9/site-packages/hamcrest/core/helpers/wrap_matcher.py",
+    "lib/python3.9/site-packages/hamcrest/core/matcher.py",
+    "lib/python3.9/site-packages/hamcrest/core/selfdescribing.py",
+    "lib/python3.9/site-packages/hamcrest/core/selfdescribingvalue.py",
+    "lib/python3.9/site-packages/hamcrest/core/string_description.py",
+    "lib/python3.9/site-packages/hamcrest/library/__init__.py",
+    "lib/python3.9/site-packages/hamcrest/library/collection/__init__.py",
+    "lib/python3.9/site-packages/hamcrest/library/collection/is_empty.py",
+    "lib/python3.9/site-packages/hamcrest/library/collection/isdict_containing.py",
+    "lib/python3.9/site-packages/hamcrest/library/collection/isdict_containingentries.py",
+    "lib/python3.9/site-packages/hamcrest/library/collection/isdict_containingkey.py",
+    "lib/python3.9/site-packages/hamcrest/library/collection/isdict_containingvalue.py",
+    "lib/python3.9/site-packages/hamcrest/library/collection/isin.py",
+    "lib/python3.9/site-packages/hamcrest/library/collection/issequence_containing.py",
+    "lib/python3.9/site-packages/hamcrest/library/collection/issequence_containinginanyorder.py",
+    "lib/python3.9/site-packages/hamcrest/library/collection/issequence_containinginorder.py",
+    "lib/python3.9/site-packages/hamcrest/library/collection/issequence_onlycontaining.py",
+    "lib/python3.9/site-packages/hamcrest/library/integration/__init__.py",
+    "lib/python3.9/site-packages/hamcrest/library/integration/match_equality.py",
+    "lib/python3.9/site-packages/hamcrest/library/number/__init__.py",
+    "lib/python3.9/site-packages/hamcrest/library/number/iscloseto.py",
+    "lib/python3.9/site-packages/hamcrest/library/number/ordering_comparison.py",
+    "lib/python3.9/site-packages/hamcrest/library/object/__init__.py",
+    "lib/python3.9/site-packages/hamcrest/library/object/haslength.py",
+    "lib/python3.9/site-packages/hamcrest/library/object/hasproperty.py",
+    "lib/python3.9/site-packages/hamcrest/library/object/hasstring.py",
+    "lib/python3.9/site-packages/hamcrest/library/text/__init__.py",
+    "lib/python3.9/site-packages/hamcrest/library/text/isequal_ignoring_case.py",
+    "lib/python3.9/site-packages/hamcrest/library/text/isequal_ignoring_whitespace.py",
+    "lib/python3.9/site-packages/hamcrest/library/text/stringcontains.py",
+    "lib/python3.9/site-packages/hamcrest/library/text/stringcontainsinorder.py",
+    "lib/python3.9/site-packages/hamcrest/library/text/stringendswith.py",
+    "lib/python3.9/site-packages/hamcrest/library/text/stringmatches.py",
+    "lib/python3.9/site-packages/hamcrest/library/text/stringstartswith.py",
+    "lib/python3.9/site-packages/hamcrest/library/text/substringmatcher.py",
+    "lib/python3.9/site-packages/hamcrest/py.typed",
+    "lib/python3.9/site-packages/hamcrest/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/__pycache__/assert_that.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/__pycache__/base_description.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/__pycache__/base_matcher.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/allof.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/anyof.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/described_as.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/is_.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/isanything.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/isequal.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/isinstanceof.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/isnone.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/isnot.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/issame.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/raises.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/__pycache__/description.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/helpers/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/helpers/__pycache__/hasmethod.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/helpers/__pycache__/ismock.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/helpers/__pycache__/wrap_matcher.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/__pycache__/matcher.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/__pycache__/selfdescribing.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/__pycache__/selfdescribingvalue.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/core/__pycache__/string_description.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/is_empty.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/isdict_containing.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/isdict_containingentries.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/isdict_containingkey.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/isdict_containingvalue.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/isin.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/issequence_containing.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/issequence_containinginanyorder.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/issequence_containinginorder.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/issequence_onlycontaining.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/integration/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/integration/__pycache__/match_equality.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/number/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/number/__pycache__/iscloseto.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/number/__pycache__/ordering_comparison.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/object/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/object/__pycache__/haslength.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/object/__pycache__/hasproperty.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/object/__pycache__/hasstring.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/isequal_ignoring_case.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/isequal_ignoring_whitespace.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/stringcontains.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/stringcontainsinorder.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/stringendswith.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/stringmatches.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/stringstartswith.cpython-39.pyc",
+    "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/substringmatcher.cpython-39.pyc"
+  ],
+  "fn": "pyhamcrest-2.0.2-pyhd3eb1b0_2.conda",
+  "legacy_bz2_md5": "81cc1680efb717968a8011f2cf7d9caa",
+  "legacy_bz2_size": 30340,
+  "license": "BSD 3-Clause",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/pyhamcrest-2.0.2-pyhd3eb1b0_2",
+    "type": 1
+  },
+  "md5": "b7bacdc8bbf3208e6b3cc72b3af25f55",
+  "name": "pyhamcrest",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/pyhamcrest-2.0.2-pyhd3eb1b0_2.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/__pycache__/assert_that.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/__pycache__/base_description.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/__pycache__/base_matcher.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/allof.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/anyof.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/described_as.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/is_.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/isanything.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/isequal.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/isinstanceof.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/isnone.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/isnot.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/issame.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/core/__pycache__/raises.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/__pycache__/description.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/helpers/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/helpers/__pycache__/hasmethod.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/helpers/__pycache__/ismock.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/helpers/__pycache__/wrap_matcher.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/__pycache__/matcher.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/__pycache__/selfdescribing.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/__pycache__/selfdescribingvalue.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/core/__pycache__/string_description.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/is_empty.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/isdict_containing.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/isdict_containingentries.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/isdict_containingkey.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/isdict_containingvalue.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/isin.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/issequence_containing.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/issequence_containinginanyorder.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/issequence_containinginorder.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/collection/__pycache__/issequence_onlycontaining.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/integration/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/integration/__pycache__/match_equality.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/number/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/number/__pycache__/iscloseto.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/number/__pycache__/ordering_comparison.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/object/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/object/__pycache__/haslength.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/object/__pycache__/hasproperty.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/object/__pycache__/hasstring.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/isequal_ignoring_case.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/isequal_ignoring_whitespace.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/stringcontains.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/stringcontainsinorder.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/stringendswith.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/stringmatches.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/stringstartswith.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/hamcrest/library/text/__pycache__/substringmatcher.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pyhamcrest==2.0.2=pyhd3eb1b0_2",
+  "sha256": "08be2c85a11af40739491e0118c834b029a0156968728514aef871ea171da270",
+  "size": 31425,
+  "subdir": "noarch",
+  "timestamp": 1615748690635,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/pyhamcrest-2.0.2-pyhd3eb1b0_2.conda",
+  "version": "2.0.2"
+}

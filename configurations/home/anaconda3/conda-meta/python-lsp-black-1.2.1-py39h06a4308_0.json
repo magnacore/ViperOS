@@ -1,0 +1,52 @@
+{
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "black >=22.3.0",
+    "python >=3.9,<3.10.0a0",
+    "python-lsp-server >=1.4.0",
+    "toml"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/python-lsp-black-1.2.1-py39h06a4308_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/pylsp_black/__init__.py",
+    "lib/python3.9/site-packages/pylsp_black/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pylsp_black/__pycache__/plugin.cpython-39.pyc",
+    "lib/python3.9/site-packages/pylsp_black/plugin.py",
+    "lib/python3.9/site-packages/python_lsp_black-1.2.1.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/python_lsp_black-1.2.1.dist-info/METADATA",
+    "lib/python3.9/site-packages/python_lsp_black-1.2.1.dist-info/RECORD",
+    "lib/python3.9/site-packages/python_lsp_black-1.2.1.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/python_lsp_black-1.2.1.dist-info/WHEEL",
+    "lib/python3.9/site-packages/python_lsp_black-1.2.1.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/python_lsp_black-1.2.1.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/python_lsp_black-1.2.1.dist-info/top_level.txt"
+  ],
+  "fn": "python-lsp-black-1.2.1-py39h06a4308_0.conda",
+  "legacy_bz2_md5": "84c68323823a9b827cd69addffca46c5",
+  "legacy_bz2_size": 12306,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/python-lsp-black-1.2.1-py39h06a4308_0",
+    "type": 1
+  },
+  "md5": "f84d26a43e7d6699b9611fc5a6cce887",
+  "name": "python-lsp-black",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/python-lsp-black-1.2.1-py39h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "python-lsp-black==1.2.1=py39h06a4308_0",
+  "sha256": "4bc753baaf98e2e202357221a7e40def17ca56fd9a88a70bfd63cd7c296d3de8",
+  "size": 13272,
+  "subdir": "linux-64",
+  "timestamp": 1661852096891,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/python-lsp-black-1.2.1-py39h06a4308_0.conda",
+  "version": "1.2.1"
+}

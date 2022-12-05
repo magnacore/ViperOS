@@ -1,0 +1,57 @@
+{
+  "build": "py39h06a4308_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/pep8-1.7.1-py39h06a4308_1",
+  "features": "",
+  "files": [
+    "bin/pep8",
+    "lib/python3.9/site-packages/__pycache__/pep8.cpython-39.pyc",
+    "lib/python3.9/site-packages/pep8-1.7.1-py3.9.egg-info/PKG-INFO",
+    "lib/python3.9/site-packages/pep8-1.7.1-py3.9.egg-info/SOURCES.txt",
+    "lib/python3.9/site-packages/pep8-1.7.1-py3.9.egg-info/dependency_links.txt",
+    "lib/python3.9/site-packages/pep8-1.7.1-py3.9.egg-info/entry_points.txt",
+    "lib/python3.9/site-packages/pep8-1.7.1-py3.9.egg-info/namespace_packages.txt",
+    "lib/python3.9/site-packages/pep8-1.7.1-py3.9.egg-info/not-zip-safe",
+    "lib/python3.9/site-packages/pep8-1.7.1-py3.9.egg-info/top_level.txt",
+    "lib/python3.9/site-packages/pep8.py"
+  ],
+  "fn": "pep8-1.7.1-py39h06a4308_1.conda",
+  "legacy_bz2_md5": "1299a3a878345266f95746fc7d639618",
+  "legacy_bz2_size": 53115,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/pep8-1.7.1-py39h06a4308_1",
+    "type": 1
+  },
+  "md5": "f0000d6e6698b556c5f9991fbba7e12b",
+  "name": "pep8",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/pep8-1.7.1-py39h06a4308_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/pep8",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/pep8_1657175511455/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "47f59cc78da7ac0eb4543f8ff8c83a18169000f2f87df25b52379922247164d8",
+        "sha256_in_prefix": "db884d8a179093297ca8538002196afa17a282b570a144ff04a3cf15420ed43b",
+        "size_in_bytes": 459
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pep8==1.7.1=py39h06a4308_1",
+  "sha256": "4504c687752f0d4233e4eaedf8453d56846686c701c7c92b7faafb5deb085725",
+  "size": 53960,
+  "subdir": "linux-64",
+  "timestamp": 1657175597438,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pep8-1.7.1-py39h06a4308_1.conda",
+  "version": "1.7.1"
+}

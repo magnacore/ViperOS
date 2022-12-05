@@ -1,0 +1,54 @@
+{
+  "build": "h5eee18b_3",
+  "build_number": 3,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/zlib-1.2.12-h5eee18b_3",
+  "features": "",
+  "files": [
+    "include/zconf.h",
+    "include/zlib.h",
+    "lib/libz.a",
+    "lib/libz.so",
+    "lib/libz.so.1",
+    "lib/libz.so.1.2.12",
+    "lib/pkgconfig/zlib.pc"
+  ],
+  "fn": "zlib-1.2.12-h5eee18b_3.conda",
+  "legacy_bz2_md5": "e3aea5293bc691638d2de998a6dff9f8",
+  "legacy_bz2_size": 127024,
+  "license": "Zlib",
+  "license_family": "Other",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/zlib-1.2.12-h5eee18b_3",
+    "type": 1
+  },
+  "md5": "2b51a6917fb98080e5fd3c34f8721ad8",
+  "name": "zlib",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/zlib-1.2.12-h5eee18b_3.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/zlib.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/zlib_1662662294036/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "86ba7b37e709e257f997827a8b9dee149f4f78413fe09f652e693bfa644afc8e",
+        "sha256_in_prefix": "9f3a07ea996bb1f51baa21fb6231286ad2fb598f35755be9749bbd858bfc91bb",
+        "size_in_bytes": 1487
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "zlib==1.2.12=h5eee18b_3",
+  "sha256": "03cc9bf6d6a490866b1a31b34cb50cf4846167a55d4511c123e8a6ac5e4c435f",
+  "size": 105662,
+  "subdir": "linux-64",
+  "timestamp": 1662662335210,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/zlib-1.2.12-h5eee18b_3.conda",
+  "version": "1.2.12"
+}

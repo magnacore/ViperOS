@@ -1,0 +1,52 @@
+{
+  "build": "py39h295c915_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.5.0",
+    "libstdcxx-ng >=7.5.0",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/kiwisolver-1.4.2-py39h295c915_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/kiwisolver-1.4.2.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/kiwisolver-1.4.2.dist-info/LICENSE",
+    "lib/python3.9/site-packages/kiwisolver-1.4.2.dist-info/METADATA",
+    "lib/python3.9/site-packages/kiwisolver-1.4.2.dist-info/RECORD",
+    "lib/python3.9/site-packages/kiwisolver-1.4.2.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/kiwisolver-1.4.2.dist-info/WHEEL",
+    "lib/python3.9/site-packages/kiwisolver-1.4.2.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/kiwisolver-1.4.2.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/kiwisolver/__init__.py",
+    "lib/python3.9/site-packages/kiwisolver/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/kiwisolver/_cext.cpython-39-x86_64-linux-gnu.so",
+    "lib/python3.9/site-packages/kiwisolver/_cext.pyi",
+    "lib/python3.9/site-packages/kiwisolver/py.typed"
+  ],
+  "fn": "kiwisolver-1.4.2-py39h295c915_0.conda",
+  "legacy_bz2_md5": "81b969d1a00153759b30554a1f11ddfd",
+  "legacy_bz2_size": 92144,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/kiwisolver-1.4.2-py39h295c915_0",
+    "type": 1
+  },
+  "md5": "92ac85e4525168d4c3ed4ea10d2f132c",
+  "name": "kiwisolver",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/kiwisolver-1.4.2-py39h295c915_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "kiwisolver==1.4.2=py39h295c915_0",
+  "sha256": "d83df7803b399506d9ff0e29a6c3da96722070f512b7120ab1f98dff18fdde47",
+  "size": 84597,
+  "subdir": "linux-64",
+  "timestamp": 1653292217019,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/kiwisolver-1.4.2-py39h295c915_0.conda",
+  "version": "1.4.2"
+}

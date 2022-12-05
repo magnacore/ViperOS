@@ -1,0 +1,90 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "six >=1.4.1"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/w3lib-1.21.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/w3lib-1.21.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/w3lib-1.21.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/w3lib-1.21.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/w3lib-1.21.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/w3lib-1.21.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/w3lib-1.21.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/w3lib-1.21.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/w3lib-1.21.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/w3lib/__init__.py",
+    "lib/python3.9/site-packages/w3lib/encoding.py",
+    "lib/python3.9/site-packages/w3lib/form.py",
+    "lib/python3.9/site-packages/w3lib/html.py",
+    "lib/python3.9/site-packages/w3lib/http.py",
+    "lib/python3.9/site-packages/w3lib/url.py",
+    "lib/python3.9/site-packages/w3lib/util.py",
+    "lib/python3.9/site-packages/w3lib/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/w3lib/__pycache__/encoding.cpython-39.pyc",
+    "lib/python3.9/site-packages/w3lib/__pycache__/form.cpython-39.pyc",
+    "lib/python3.9/site-packages/w3lib/__pycache__/html.cpython-39.pyc",
+    "lib/python3.9/site-packages/w3lib/__pycache__/http.cpython-39.pyc",
+    "lib/python3.9/site-packages/w3lib/__pycache__/url.cpython-39.pyc",
+    "lib/python3.9/site-packages/w3lib/__pycache__/util.cpython-39.pyc"
+  ],
+  "fn": "w3lib-1.21.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "db66a87fee944510707c9612d17c3491",
+  "legacy_bz2_size": 21789,
+  "license": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/w3lib-1.21.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "87c0d13ba63eecf6f4b22a2f965daeb3",
+  "name": "w3lib",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/w3lib-1.21.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/w3lib/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/w3lib/__pycache__/encoding.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/w3lib/__pycache__/form.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/w3lib/__pycache__/html.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/w3lib/__pycache__/http.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/w3lib/__pycache__/url.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/w3lib/__pycache__/util.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "w3lib==1.21.0=pyhd3eb1b0_0",
+  "sha256": "7154ee38e27cb91ec7ad480697b24e8fa2e1af09369253a7ae38e5d23a6c8218",
+  "size": 22074,
+  "subdir": "noarch",
+  "timestamp": 1629359783733,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/w3lib-1.21.0-pyhd3eb1b0_0.conda",
+  "version": "1.21.0"
+}

@@ -1,0 +1,89 @@
+{
+  "build": "pyhd3eb1b0_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "attrs >=16.0.0",
+    "cryptography",
+    "pyasn1",
+    "pyasn1-modules",
+    "python",
+    "six"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/service_identity-18.1.0-pyhd3eb1b0_1",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/service_identity-18.1.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/service_identity-18.1.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/service_identity-18.1.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/service_identity-18.1.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/service_identity-18.1.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/service_identity-18.1.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/service_identity-18.1.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/service_identity-18.1.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/service_identity/__init__.py",
+    "lib/python3.9/site-packages/service_identity/_common.py",
+    "lib/python3.9/site-packages/service_identity/_compat.py",
+    "lib/python3.9/site-packages/service_identity/cryptography.py",
+    "lib/python3.9/site-packages/service_identity/exceptions.py",
+    "lib/python3.9/site-packages/service_identity/pyopenssl.py",
+    "lib/python3.9/site-packages/service_identity/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/service_identity/__pycache__/_common.cpython-39.pyc",
+    "lib/python3.9/site-packages/service_identity/__pycache__/_compat.cpython-39.pyc",
+    "lib/python3.9/site-packages/service_identity/__pycache__/cryptography.cpython-39.pyc",
+    "lib/python3.9/site-packages/service_identity/__pycache__/exceptions.cpython-39.pyc",
+    "lib/python3.9/site-packages/service_identity/__pycache__/pyopenssl.cpython-39.pyc"
+  ],
+  "fn": "service_identity-18.1.0-pyhd3eb1b0_1.conda",
+  "legacy_bz2_md5": "045568bb70fcde7c74ba24fadf6abfe4",
+  "legacy_bz2_size": 13602,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/service_identity-18.1.0-pyhd3eb1b0_1",
+    "type": 1
+  },
+  "md5": "08b5dfc97dca0eb418067dcba0a295ce",
+  "name": "service_identity",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/service_identity-18.1.0-pyhd3eb1b0_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/service_identity/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/service_identity/__pycache__/_common.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/service_identity/__pycache__/_compat.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/service_identity/__pycache__/cryptography.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/service_identity/__pycache__/exceptions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/service_identity/__pycache__/pyopenssl.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "service_identity==18.1.0=pyhd3eb1b0_1",
+  "sha256": "764b1f88edf6ea876b920fdba771c9e5f393393e0842f80572bb08fff05fab8d",
+  "size": 13563,
+  "subdir": "noarch",
+  "timestamp": 1629460772831,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/service_identity-18.1.0-pyhd3eb1b0_1.conda",
+  "version": "18.1.0"
+}

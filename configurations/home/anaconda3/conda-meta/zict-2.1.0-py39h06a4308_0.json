@@ -1,0 +1,62 @@
+{
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "heapdict",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/zict-2.1.0-py39h06a4308_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/zict-2.1.0-py3.9.egg-info/PKG-INFO",
+    "lib/python3.9/site-packages/zict-2.1.0-py3.9.egg-info/SOURCES.txt",
+    "lib/python3.9/site-packages/zict-2.1.0-py3.9.egg-info/dependency_links.txt",
+    "lib/python3.9/site-packages/zict-2.1.0-py3.9.egg-info/not-zip-safe",
+    "lib/python3.9/site-packages/zict-2.1.0-py3.9.egg-info/requires.txt",
+    "lib/python3.9/site-packages/zict-2.1.0-py3.9.egg-info/top_level.txt",
+    "lib/python3.9/site-packages/zict/__init__.py",
+    "lib/python3.9/site-packages/zict/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/zict/__pycache__/buffer.cpython-39.pyc",
+    "lib/python3.9/site-packages/zict/__pycache__/common.cpython-39.pyc",
+    "lib/python3.9/site-packages/zict/__pycache__/file.cpython-39.pyc",
+    "lib/python3.9/site-packages/zict/__pycache__/func.cpython-39.pyc",
+    "lib/python3.9/site-packages/zict/__pycache__/lmdb.cpython-39.pyc",
+    "lib/python3.9/site-packages/zict/__pycache__/lru.cpython-39.pyc",
+    "lib/python3.9/site-packages/zict/__pycache__/sieve.cpython-39.pyc",
+    "lib/python3.9/site-packages/zict/__pycache__/zip.cpython-39.pyc",
+    "lib/python3.9/site-packages/zict/buffer.py",
+    "lib/python3.9/site-packages/zict/common.py",
+    "lib/python3.9/site-packages/zict/file.py",
+    "lib/python3.9/site-packages/zict/func.py",
+    "lib/python3.9/site-packages/zict/lmdb.py",
+    "lib/python3.9/site-packages/zict/lru.py",
+    "lib/python3.9/site-packages/zict/sieve.py",
+    "lib/python3.9/site-packages/zict/zip.py"
+  ],
+  "fn": "zict-2.1.0-py39h06a4308_0.conda",
+  "legacy_bz2_md5": "75e08431fbd599e873d99b651ff3accc",
+  "legacy_bz2_size": 19320,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/zict-2.1.0-py39h06a4308_0",
+    "type": 1
+  },
+  "md5": "64666f1028e66856c2884dac74668304",
+  "name": "zict",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/zict-2.1.0-py39h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "zict==2.1.0=py39h06a4308_0",
+  "sha256": "356346a7fff2d6e77c1e936ae32105da577a90334ec8577ea86b75f30e47f99f",
+  "size": 19982,
+  "subdir": "linux-64",
+  "timestamp": 1656387265003,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/zict-2.1.0-py39h06a4308_0.conda",
+  "version": "2.1.0"
+}

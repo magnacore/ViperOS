@@ -1,0 +1,64 @@
+{
+  "build": "h27cfd23_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/oniguruma-6.9.7.1-h27cfd23_0",
+  "features": "",
+  "files": [
+    "bin/onig-config",
+    "include/oniggnu.h",
+    "include/onigposix.h",
+    "include/oniguruma.h",
+    "lib/libonig.a",
+    "lib/libonig.so",
+    "lib/libonig.so.5",
+    "lib/libonig.so.5.2.0",
+    "lib/pkgconfig/oniguruma.pc"
+  ],
+  "fn": "oniguruma-6.9.7.1-h27cfd23_0.conda",
+  "legacy_bz2_md5": "3630ba78f2e3c1131279cbccf663f598",
+  "legacy_bz2_size": 463209,
+  "license": "BSD-2-Clause",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/oniguruma-6.9.7.1-h27cfd23_0",
+    "type": 1
+  },
+  "md5": "3415c8dd052c9032955fa24b870725ea",
+  "name": "oniguruma",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/oniguruma-6.9.7.1-h27cfd23_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/onig-config",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/oniguruma_1618609921528/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "6e2efaa7a89d7f4013830306a75e1398f09abcfba73e7ba68db54c32e3979a11",
+        "sha256_in_prefix": "fadb80b9ceb787666d81ddf76bc88eebc71bf31b175dfa27344137cfcf885839",
+        "size_in_bytes": 1625
+      },
+      {
+        "_path": "lib/pkgconfig/oniguruma.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/oniguruma_1618609921528/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "b37e6fa4faf244c9c2ae965028d58106768684ee68cec2d6720dcdcb499cb6fa",
+        "sha256_in_prefix": "2f13e802a5d1b7f172e6c9da95d6684eb6159e148f4fec8976faa57fca8cbc13",
+        "size_in_bytes": 1748
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "oniguruma==6.9.7.1=h27cfd23_0",
+  "sha256": "fe12572a09f65e732e22695d76ea8ec23c6d1c2eb23af26bfd64f68987373d09",
+  "size": 249393,
+  "subdir": "linux-64",
+  "timestamp": 1618609977611,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/oniguruma-6.9.7.1-h27cfd23_0.conda",
+  "version": "6.9.7.1"
+}

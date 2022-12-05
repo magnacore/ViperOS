@@ -1,0 +1,63 @@
+{
+  "build": "h6a678d5_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/expat-2.4.9-h6a678d5_0",
+  "features": "",
+  "files": [
+    "bin/xmlwf",
+    "include/expat.h",
+    "include/expat_config.h",
+    "include/expat_external.h",
+    "lib/cmake/expat-2.4.9/expat-config-version.cmake",
+    "lib/cmake/expat-2.4.9/expat-config.cmake",
+    "lib/cmake/expat-2.4.9/expat-noconfig.cmake",
+    "lib/cmake/expat-2.4.9/expat.cmake",
+    "lib/libexpat.a",
+    "lib/libexpat.so",
+    "lib/libexpat.so.1",
+    "lib/libexpat.so.1.8.9",
+    "lib/pkgconfig/expat.pc",
+    "share/doc/expat/AUTHORS",
+    "share/doc/expat/changelog"
+  ],
+  "fn": "expat-2.4.9-h6a678d5_0.conda",
+  "legacy_bz2_md5": "d254ca6cf5c657cecd6912b0671379cd",
+  "legacy_bz2_size": 192070,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/expat-2.4.9-h6a678d5_0",
+    "type": 1
+  },
+  "md5": "3a6139fbcd96384855f0e6037502bf28",
+  "name": "expat",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/expat-2.4.9-h6a678d5_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/expat.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/expat_1664286693017/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "c3cd7013fbbd76eb3df35bf0ac90c3553cb52609dd270661f1a621c80ce3c95e",
+        "sha256_in_prefix": "6214b76d52cc9765a61049cb23e211714e912b4468b3b3d4bc047f9f57a55db7",
+        "size_in_bytes": 499
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "expat==2.4.9=h6a678d5_0",
+  "sha256": "2ded55ac4db5d830457c88217aabe89cebce5bbeb3a8f8d420126abc13c0926c",
+  "size": 160087,
+  "subdir": "linux-64",
+  "timestamp": 1664286744782,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/expat-2.4.9-h6a678d5_0.conda",
+  "version": "2.4.9"
+}

@@ -1,0 +1,57 @@
+{
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0",
+    "six"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/multipledispatch-0.6.0-py39h06a4308_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/multipledispatch-0.6.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/multipledispatch-0.6.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/multipledispatch-0.6.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/multipledispatch-0.6.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/multipledispatch-0.6.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/multipledispatch-0.6.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/multipledispatch-0.6.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/multipledispatch/__init__.py",
+    "lib/python3.9/site-packages/multipledispatch/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/multipledispatch/__pycache__/conflict.cpython-39.pyc",
+    "lib/python3.9/site-packages/multipledispatch/__pycache__/core.cpython-39.pyc",
+    "lib/python3.9/site-packages/multipledispatch/__pycache__/dispatcher.cpython-39.pyc",
+    "lib/python3.9/site-packages/multipledispatch/__pycache__/utils.cpython-39.pyc",
+    "lib/python3.9/site-packages/multipledispatch/__pycache__/variadic.cpython-39.pyc",
+    "lib/python3.9/site-packages/multipledispatch/conflict.py",
+    "lib/python3.9/site-packages/multipledispatch/core.py",
+    "lib/python3.9/site-packages/multipledispatch/dispatcher.py",
+    "lib/python3.9/site-packages/multipledispatch/utils.py",
+    "lib/python3.9/site-packages/multipledispatch/variadic.py"
+  ],
+  "fn": "multipledispatch-0.6.0-py39h06a4308_0.conda",
+  "legacy_bz2_md5": "e0db8ae050bd0db74f47edc370dbc287",
+  "legacy_bz2_size": 24480,
+  "license": "BSD 3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/multipledispatch-0.6.0-py39h06a4308_0",
+    "type": 1
+  },
+  "md5": "ac1386a4cff71fb8b5a8109ba3f20a28",
+  "name": "multipledispatch",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/multipledispatch-0.6.0-py39h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "multipledispatch==0.6.0=py39h06a4308_0",
+  "sha256": "845a50424240a51f757a67056a57d8030b71aa7957407c8f04b54755bb1e5b00",
+  "size": 24673,
+  "subdir": "linux-64",
+  "timestamp": 1607574279743,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/multipledispatch-0.6.0-py39h06a4308_0.conda",
+  "version": "0.6.0"
+}

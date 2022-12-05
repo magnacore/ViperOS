@@ -1,0 +1,54 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.6"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/cycler-0.11.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/cycler-0.11.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/cycler-0.11.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/cycler-0.11.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/cycler-0.11.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/cycler-0.11.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/cycler-0.11.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/cycler-0.11.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/cycler-0.11.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/cycler.py",
+    "lib/python3.9/site-packages/__pycache__/cycler.cpython-39.pyc"
+  ],
+  "fn": "cycler-0.11.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "dfb0ca8055c9a72aaca7b845a6edea17",
+  "legacy_bz2_size": 12592,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/cycler-0.11.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "f5e365d2cdb66d547eb8c3ab93843aab",
+  "name": "cycler",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/cycler-0.11.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/__pycache__/cycler.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "cycler==0.11.0=pyhd3eb1b0_0",
+  "sha256": "dda35af3a1f92960aa01fee1e3c3587da67a23f186a09a2c313fc325392216c3",
+  "size": 12570,
+  "subdir": "noarch",
+  "timestamp": 1637851583560,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/cycler-0.11.0-pyhd3eb1b0_0.conda",
+  "version": "0.11.0"
+}

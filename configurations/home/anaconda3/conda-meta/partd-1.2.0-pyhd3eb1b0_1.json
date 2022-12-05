@@ -1,0 +1,140 @@
+{
+  "build": "pyhd3eb1b0_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "locket",
+    "python >=3.5",
+    "toolz"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/partd-1.2.0-pyhd3eb1b0_1",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/partd-1.2.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/partd-1.2.0.dist-info/LICENSE.txt",
+    "lib/python3.9/site-packages/partd-1.2.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/partd-1.2.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/partd-1.2.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/partd-1.2.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/partd-1.2.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/partd-1.2.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/partd/__init__.py",
+    "lib/python3.9/site-packages/partd/_version.py",
+    "lib/python3.9/site-packages/partd/buffer.py",
+    "lib/python3.9/site-packages/partd/compatibility.py",
+    "lib/python3.9/site-packages/partd/compressed.py",
+    "lib/python3.9/site-packages/partd/core.py",
+    "lib/python3.9/site-packages/partd/dict.py",
+    "lib/python3.9/site-packages/partd/encode.py",
+    "lib/python3.9/site-packages/partd/file.py",
+    "lib/python3.9/site-packages/partd/numpy.py",
+    "lib/python3.9/site-packages/partd/pandas.py",
+    "lib/python3.9/site-packages/partd/pickle.py",
+    "lib/python3.9/site-packages/partd/python.py",
+    "lib/python3.9/site-packages/partd/utils.py",
+    "lib/python3.9/site-packages/partd/zmq.py",
+    "lib/python3.9/site-packages/partd/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/_version.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/buffer.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/compatibility.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/compressed.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/core.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/dict.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/encode.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/file.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/numpy.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/pandas.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/pickle.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/python.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/utils.cpython-39.pyc",
+    "lib/python3.9/site-packages/partd/__pycache__/zmq.cpython-39.pyc"
+  ],
+  "fn": "partd-1.2.0-pyhd3eb1b0_1.conda",
+  "legacy_bz2_md5": "0c9eced1d0bd1384784820cc9388383a",
+  "legacy_bz2_size": 18752,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/partd-1.2.0-pyhd3eb1b0_1",
+    "type": 1
+  },
+  "md5": "d02d8b6ea30c680d3fafe4ac50cc4b18",
+  "name": "partd",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/partd-1.2.0-pyhd3eb1b0_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/_version.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/buffer.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/compatibility.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/compressed.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/core.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/dict.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/encode.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/file.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/numpy.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/pandas.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/pickle.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/python.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/utils.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/partd/__pycache__/zmq.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "partd==1.2.0=pyhd3eb1b0_1",
+  "sha256": "7cb5bebcd6698effe5162a353fd7d6e0275a4ca07168f730b1917d587a134d13",
+  "size": 18887,
+  "subdir": "noarch",
+  "timestamp": 1647245512810,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/partd-1.2.0-pyhd3eb1b0_1.conda",
+  "version": "1.2.0"
+}

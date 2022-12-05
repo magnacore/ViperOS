@@ -1,0 +1,192 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/pyflakes-2.4.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/pyflakes-2.4.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/pyflakes-2.4.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/pyflakes-2.4.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/pyflakes-2.4.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/pyflakes-2.4.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/pyflakes-2.4.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/pyflakes-2.4.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/pyflakes-2.4.0.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/pyflakes-2.4.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/pyflakes/__init__.py",
+    "lib/python3.9/site-packages/pyflakes/__main__.py",
+    "lib/python3.9/site-packages/pyflakes/api.py",
+    "lib/python3.9/site-packages/pyflakes/checker.py",
+    "lib/python3.9/site-packages/pyflakes/messages.py",
+    "lib/python3.9/site-packages/pyflakes/reporter.py",
+    "lib/python3.9/site-packages/pyflakes/scripts/__init__.py",
+    "lib/python3.9/site-packages/pyflakes/scripts/pyflakes.py",
+    "lib/python3.9/site-packages/pyflakes/test/__init__.py",
+    "lib/python3.9/site-packages/pyflakes/test/harness.py",
+    "lib/python3.9/site-packages/pyflakes/test/test_api.py",
+    "lib/python3.9/site-packages/pyflakes/test/test_builtin.py",
+    "lib/python3.9/site-packages/pyflakes/test/test_checker.py",
+    "lib/python3.9/site-packages/pyflakes/test/test_code_segment.py",
+    "lib/python3.9/site-packages/pyflakes/test/test_dict.py",
+    "lib/python3.9/site-packages/pyflakes/test/test_doctests.py",
+    "lib/python3.9/site-packages/pyflakes/test/test_imports.py",
+    "lib/python3.9/site-packages/pyflakes/test/test_is_literal.py",
+    "lib/python3.9/site-packages/pyflakes/test/test_match.py",
+    "lib/python3.9/site-packages/pyflakes/test/test_other.py",
+    "lib/python3.9/site-packages/pyflakes/test/test_return_with_arguments_inside_generator.py",
+    "lib/python3.9/site-packages/pyflakes/test/test_type_annotations.py",
+    "lib/python3.9/site-packages/pyflakes/test/test_undefined_names.py",
+    "lib/python3.9/site-packages/pyflakes/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/__pycache__/__main__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/__pycache__/api.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/__pycache__/checker.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/__pycache__/messages.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/__pycache__/reporter.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/scripts/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/scripts/__pycache__/pyflakes.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/harness.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_api.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_builtin.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_checker.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_code_segment.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_dict.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_doctests.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_imports.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_is_literal.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_match.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_other.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_return_with_arguments_inside_generator.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_type_annotations.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_undefined_names.cpython-39.pyc",
+    "bin/pyflakes"
+  ],
+  "fn": "pyflakes-2.4.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "ad3575c84bc28656ad06c0b8f3fbb38e",
+  "legacy_bz2_size": 59025,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/pyflakes-2.4.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "f935fcaf936f6068ae692eb24d9c2650",
+  "name": "pyflakes",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/pyflakes-2.4.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/__pycache__/__main__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/__pycache__/api.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/__pycache__/checker.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/__pycache__/messages.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/__pycache__/reporter.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/scripts/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/scripts/__pycache__/pyflakes.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/harness.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_api.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_builtin.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_checker.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_code_segment.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_dict.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_doctests.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_imports.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_is_literal.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_match.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_other.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_return_with_arguments_inside_generator.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_type_annotations.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyflakes/test/__pycache__/test_undefined_names.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/pyflakes",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pyflakes==2.4.0=pyhd3eb1b0_0",
+  "sha256": "e5a6522a583ccc7cd99ac09b394c10b2ce4ccc0cf5d0b43ae279d2d424bc6f66",
+  "size": 61153,
+  "subdir": "noarch",
+  "timestamp": 1636644465430,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/pyflakes-2.4.0-pyhd3eb1b0_0.conda",
+  "version": "2.4.0"
+}

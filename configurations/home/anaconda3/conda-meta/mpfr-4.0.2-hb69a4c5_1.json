@@ -1,0 +1,68 @@
+{
+  "build": "hb69a4c5_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "gmp >=6.1.2",
+    "libgcc-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/mpfr-4.0.2-hb69a4c5_1",
+  "features": "",
+  "files": [
+    "include/mpf2mpfr.h",
+    "include/mpfr.h",
+    "lib/libmpfr.a",
+    "lib/libmpfr.so",
+    "lib/libmpfr.so.6",
+    "lib/libmpfr.so.6.0.2",
+    "lib/pkgconfig/mpfr.pc",
+    "share/doc/mpfr/AUTHORS",
+    "share/doc/mpfr/BUGS",
+    "share/doc/mpfr/COPYING",
+    "share/doc/mpfr/COPYING.LESSER",
+    "share/doc/mpfr/FAQ.html",
+    "share/doc/mpfr/NEWS",
+    "share/doc/mpfr/TODO",
+    "share/doc/mpfr/examples/ReadMe",
+    "share/doc/mpfr/examples/can_round.c",
+    "share/doc/mpfr/examples/divworst.c",
+    "share/doc/mpfr/examples/rndo-add.c",
+    "share/doc/mpfr/examples/sample.c",
+    "share/doc/mpfr/examples/version.c",
+    "share/info/mpfr.info"
+  ],
+  "fn": "mpfr-4.0.2-hb69a4c5_1.conda",
+  "legacy_bz2_md5": "207e53f498d2efe14423a980e4d74816",
+  "legacy_bz2_size": 668948,
+  "license": "LGPL-3.0-only",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/mpfr-4.0.2-hb69a4c5_1",
+    "type": 1
+  },
+  "md5": "9000a148d49baa5a3b3428397889d37d",
+  "name": "mpfr",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/mpfr-4.0.2-hb69a4c5_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/mpfr.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "44b281d0d1f698c5d49afee8f1e425af651841eb28c9a61a950a559ff39417d4",
+        "sha256_in_prefix": "d30a9638d76c07ba498398c4c18cd52cf30c4dba31f91be51a0faaa3386de0f2",
+        "size_in_bytes": 300
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "mpfr==4.0.2=hb69a4c5_1",
+  "sha256": "eaa635e5db2ccff32d0fc43dce1492bc235075c843dc86522578f2f098c92a08",
+  "size": 498414,
+  "subdir": "linux-64",
+  "timestamp": 1593116348009,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/mpfr-4.0.2-hb69a4c5_1.conda",
+  "version": "4.0.2"
+}

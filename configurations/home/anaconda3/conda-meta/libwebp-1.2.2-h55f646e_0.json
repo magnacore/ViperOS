@@ -1,0 +1,64 @@
+{
+  "build": "h55f646e_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "giflib >=5.2.1,<5.3.0a0",
+    "jpeg >=9d,<10a",
+    "libgcc-ng >=7.5.0",
+    "libpng >=1.6.37,<1.7.0a0",
+    "libtiff >=4.1.0,<5.0a0",
+    "libwebp-base"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/libwebp-1.2.2-h55f646e_0",
+  "features": "",
+  "files": [
+    "bin/cwebp",
+    "bin/dwebp",
+    "bin/gif2webp",
+    "bin/img2webp",
+    "include/webp/demux.h",
+    "lib/libwebpdemux.a",
+    "lib/libwebpdemux.so",
+    "lib/libwebpdemux.so.2",
+    "lib/libwebpdemux.so.2.0.9",
+    "lib/pkgconfig/libwebpdemux.pc",
+    "share/man/man1/gif2webp.1",
+    "share/man/man1/img2webp.1"
+  ],
+  "fn": "libwebp-1.2.2-h55f646e_0.conda",
+  "legacy_bz2_md5": "c566a384259c1d2769852c3bddd81a67",
+  "legacy_bz2_size": 90150,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/libwebp-1.2.2-h55f646e_0",
+    "type": 1
+  },
+  "md5": "c9ed6bddefc09dbfc246301c3ce3ca14",
+  "name": "libwebp",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/libwebp-1.2.2-h55f646e_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/libwebpdemux.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/libwebp_1645441075674/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "4e933dd1238c24b5623b9d8ed696203c1f566b48449089a7a73ba0c212e83838",
+        "sha256_in_prefix": "4ba210f95f47cd04c07a4d60f2cc3528425637e6b85195da0cb7c0f68b56d5e2",
+        "size_in_bytes": 524
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "libwebp==1.2.2=h55f646e_0",
+  "sha256": "7d5eb348332133225e5d39eaa143a964239bcd1c4044cf55fdf0dfcbdd8c5853",
+  "size": 82140,
+  "subdir": "linux-64",
+  "timestamp": 1645441199289,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libwebp-1.2.2-h55f646e_0.conda",
+  "version": "1.2.2"
+}

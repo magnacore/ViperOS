@@ -1,0 +1,87 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "conda >=4.3",
+    "conda-content-trust",
+    "packaging",
+    "python"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/conda-token-0.4.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/conda_token/__init__.py",
+    "lib/python3.9/site-packages/conda_token/__main__.py",
+    "lib/python3.9/site-packages/conda_token/_version.py",
+    "lib/python3.9/site-packages/conda_token/cli.py",
+    "lib/python3.9/site-packages/conda_token/repo_config.py",
+    "lib/python3.9/site-packages/conda_token/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_token/__pycache__/__main__.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_token/__pycache__/_version.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_token/__pycache__/cli.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_token/__pycache__/repo_config.cpython-39.pyc",
+    "bin/conda-token"
+  ],
+  "fn": "conda-token-0.4.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "4c72bba48f8549d67b2b49390d5d7076",
+  "legacy_bz2_size": 12341,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/conda-token-0.4.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "92e52e52f3ff3785f721021639fb1ced",
+  "name": "conda-token",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/conda-token-0.4.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/conda_token/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/conda_token/__pycache__/__main__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/conda_token/__pycache__/_version.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/conda_token/__pycache__/cli.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/conda_token/__pycache__/repo_config.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/conda-token",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "conda-token==0.4.0=pyhd3eb1b0_0",
+  "sha256": "4dad9d120276c2f1e3c5c52cb880ad026616cdd946def2a9a363bc80c0031ff3",
+  "size": 13011,
+  "subdir": "noarch",
+  "timestamp": 1662660396740,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/conda-token-0.4.0-pyhd3eb1b0_0.conda",
+  "version": "0.4.0"
+}

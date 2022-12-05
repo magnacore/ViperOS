@@ -1,0 +1,83 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.6",
+    "ujson >=3.0.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/python-lsp-jsonrpc-1.0.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/pylsp_jsonrpc/__init__.py",
+    "lib/python3.9/site-packages/pylsp_jsonrpc/_version.py",
+    "lib/python3.9/site-packages/pylsp_jsonrpc/dispatchers.py",
+    "lib/python3.9/site-packages/pylsp_jsonrpc/endpoint.py",
+    "lib/python3.9/site-packages/pylsp_jsonrpc/exceptions.py",
+    "lib/python3.9/site-packages/pylsp_jsonrpc/streams.py",
+    "lib/python3.9/site-packages/python_lsp_jsonrpc-1.0.0-py3.10.egg-info/PKG-INFO",
+    "lib/python3.9/site-packages/python_lsp_jsonrpc-1.0.0-py3.10.egg-info/SOURCES.txt",
+    "lib/python3.9/site-packages/python_lsp_jsonrpc-1.0.0-py3.10.egg-info/dependency_links.txt",
+    "lib/python3.9/site-packages/python_lsp_jsonrpc-1.0.0-py3.10.egg-info/installed-files.txt",
+    "lib/python3.9/site-packages/python_lsp_jsonrpc-1.0.0-py3.10.egg-info/requires.txt",
+    "lib/python3.9/site-packages/python_lsp_jsonrpc-1.0.0-py3.10.egg-info/top_level.txt",
+    "lib/python3.9/site-packages/pylsp_jsonrpc/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pylsp_jsonrpc/__pycache__/_version.cpython-39.pyc",
+    "lib/python3.9/site-packages/pylsp_jsonrpc/__pycache__/dispatchers.cpython-39.pyc",
+    "lib/python3.9/site-packages/pylsp_jsonrpc/__pycache__/endpoint.cpython-39.pyc",
+    "lib/python3.9/site-packages/pylsp_jsonrpc/__pycache__/exceptions.cpython-39.pyc",
+    "lib/python3.9/site-packages/pylsp_jsonrpc/__pycache__/streams.cpython-39.pyc"
+  ],
+  "fn": "python-lsp-jsonrpc-1.0.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "5ee4f3f688cca3edc2dc72fd075efffc",
+  "legacy_bz2_size": 10246,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/python-lsp-jsonrpc-1.0.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "6a61abd1aabe74e4952e39b8a1fb8ac9",
+  "name": "python-lsp-jsonrpc",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/python-lsp-jsonrpc-1.0.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/pylsp_jsonrpc/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pylsp_jsonrpc/__pycache__/_version.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pylsp_jsonrpc/__pycache__/dispatchers.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pylsp_jsonrpc/__pycache__/endpoint.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pylsp_jsonrpc/__pycache__/exceptions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pylsp_jsonrpc/__pycache__/streams.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "python-lsp-jsonrpc==1.0.0=pyhd3eb1b0_0",
+  "sha256": "139458c1e89b90a44298365a9b6747f60a2b72d579bbc451aff7f5505e828b58",
+  "size": 10689,
+  "subdir": "noarch",
+  "timestamp": 1634237850522,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/python-lsp-jsonrpc-1.0.0-pyhd3eb1b0_0.conda",
+  "version": "1.0.0"
+}

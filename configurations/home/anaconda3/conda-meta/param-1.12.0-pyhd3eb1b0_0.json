@@ -1,0 +1,85 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=2.7"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/param-1.12.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/numbergen/__init__.py",
+    "lib/python3.9/site-packages/param-1.12.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/param-1.12.0.dist-info/LICENSE.txt",
+    "lib/python3.9/site-packages/param-1.12.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/param-1.12.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/param-1.12.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/param-1.12.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/param-1.12.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/param-1.12.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/param/.version",
+    "lib/python3.9/site-packages/param/__init__.py",
+    "lib/python3.9/site-packages/param/ipython.py",
+    "lib/python3.9/site-packages/param/parameterized.py",
+    "lib/python3.9/site-packages/param/serializer.py",
+    "lib/python3.9/site-packages/param/version.py",
+    "lib/python3.9/site-packages/numbergen/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/param/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/param/__pycache__/ipython.cpython-39.pyc",
+    "lib/python3.9/site-packages/param/__pycache__/parameterized.cpython-39.pyc",
+    "lib/python3.9/site-packages/param/__pycache__/serializer.cpython-39.pyc",
+    "lib/python3.9/site-packages/param/__pycache__/version.cpython-39.pyc"
+  ],
+  "fn": "param-1.12.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "c377f4ae7fbc3b4ed3b93ed566ae1c76",
+  "legacy_bz2_size": 73451,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/param-1.12.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "1eefd397f543c0a3fd9fdc624d997d01",
+  "name": "param",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/param-1.12.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/numbergen/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/param/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/param/__pycache__/ipython.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/param/__pycache__/parameterized.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/param/__pycache__/serializer.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/param/__pycache__/version.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "param==1.12.0=pyhd3eb1b0_0",
+  "sha256": "d5ca0b2ffb59bf81723984c656a98bbed42578de40d7acc88537190d75bf98ec",
+  "size": 76731,
+  "subdir": "noarch",
+  "timestamp": 1636647449205,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/param-1.12.0-pyhd3eb1b0_0.conda",
+  "version": "1.12.0"
+}

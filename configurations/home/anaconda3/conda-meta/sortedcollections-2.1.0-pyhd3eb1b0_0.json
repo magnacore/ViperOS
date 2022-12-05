@@ -1,0 +1,73 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "sortedcontainers >=2.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/sortedcollections-2.1.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/sortedcollections-2.1.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/sortedcollections-2.1.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/sortedcollections-2.1.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/sortedcollections-2.1.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/sortedcollections-2.1.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/sortedcollections-2.1.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/sortedcollections-2.1.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/sortedcollections-2.1.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/sortedcollections/__init__.py",
+    "lib/python3.9/site-packages/sortedcollections/nearestdict.py",
+    "lib/python3.9/site-packages/sortedcollections/ordereddict.py",
+    "lib/python3.9/site-packages/sortedcollections/recipes.py",
+    "lib/python3.9/site-packages/sortedcollections/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/sortedcollections/__pycache__/nearestdict.cpython-39.pyc",
+    "lib/python3.9/site-packages/sortedcollections/__pycache__/ordereddict.cpython-39.pyc",
+    "lib/python3.9/site-packages/sortedcollections/__pycache__/recipes.cpython-39.pyc"
+  ],
+  "fn": "sortedcollections-2.1.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "cfc509400a745ae349c52c1b02410138",
+  "legacy_bz2_size": 11797,
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/sortedcollections-2.1.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "36f6ec6c463a1c720de8dfc938b7cce9",
+  "name": "sortedcollections",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/sortedcollections-2.1.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/sortedcollections/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/sortedcollections/__pycache__/nearestdict.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/sortedcollections/__pycache__/ordereddict.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/sortedcollections/__pycache__/recipes.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "sortedcollections==2.1.0=pyhd3eb1b0_0",
+  "sha256": "0322caae733a4a1d7d73bd9909e4b4d85b593117fca5b62afe004547f5d4b33f",
+  "size": 11933,
+  "subdir": "noarch",
+  "timestamp": 1611172746443,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/sortedcollections-2.1.0-pyhd3eb1b0_0.conda",
+  "version": "2.1.0"
+}

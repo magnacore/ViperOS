@@ -1,0 +1,84 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/poyo-0.5.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/poyo-0.5.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/poyo-0.5.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/poyo-0.5.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/poyo-0.5.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/poyo-0.5.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/poyo-0.5.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/poyo-0.5.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/poyo-0.5.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/poyo/__init__.py",
+    "lib/python3.9/site-packages/poyo/_nodes.py",
+    "lib/python3.9/site-packages/poyo/exceptions.py",
+    "lib/python3.9/site-packages/poyo/parser.py",
+    "lib/python3.9/site-packages/poyo/patterns.py",
+    "lib/python3.9/site-packages/poyo/utils.py",
+    "lib/python3.9/site-packages/poyo/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/poyo/__pycache__/_nodes.cpython-39.pyc",
+    "lib/python3.9/site-packages/poyo/__pycache__/exceptions.cpython-39.pyc",
+    "lib/python3.9/site-packages/poyo/__pycache__/parser.cpython-39.pyc",
+    "lib/python3.9/site-packages/poyo/__pycache__/patterns.cpython-39.pyc",
+    "lib/python3.9/site-packages/poyo/__pycache__/utils.cpython-39.pyc"
+  ],
+  "fn": "poyo-0.5.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "2a9c9c4ae4d2637af14f131deb94f3f4",
+  "legacy_bz2_size": 17220,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/poyo-0.5.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "e950c04251d2e0e1bbed26642a99d08c",
+  "name": "poyo",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/poyo-0.5.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/poyo/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/poyo/__pycache__/_nodes.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/poyo/__pycache__/exceptions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/poyo/__pycache__/parser.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/poyo/__pycache__/patterns.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/poyo/__pycache__/utils.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "poyo==0.5.0=pyhd3eb1b0_0",
+  "sha256": "1cbed33d8ebb093c37b2959d9cd5405e9b7b266b272b626efbb7b5c6618661b3",
+  "size": 17703,
+  "subdir": "noarch",
+  "timestamp": 1617751562886,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/poyo-0.5.0-pyhd3eb1b0_0.conda",
+  "version": "0.5.0"
+}

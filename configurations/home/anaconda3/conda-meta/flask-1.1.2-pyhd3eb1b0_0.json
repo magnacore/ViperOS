@@ -1,0 +1,176 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "click >=5.1",
+    "itsdangerous >=0.24",
+    "jinja2 >=2.10.1",
+    "python",
+    "werkzeug >=0.15"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/flask-1.1.2-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/Flask-1.1.2.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/Flask-1.1.2.dist-info/LICENSE.rst",
+    "lib/python3.9/site-packages/Flask-1.1.2.dist-info/METADATA",
+    "lib/python3.9/site-packages/Flask-1.1.2.dist-info/RECORD",
+    "lib/python3.9/site-packages/Flask-1.1.2.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/Flask-1.1.2.dist-info/WHEEL",
+    "lib/python3.9/site-packages/Flask-1.1.2.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/Flask-1.1.2.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/Flask-1.1.2.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/flask/__init__.py",
+    "lib/python3.9/site-packages/flask/__main__.py",
+    "lib/python3.9/site-packages/flask/_compat.py",
+    "lib/python3.9/site-packages/flask/app.py",
+    "lib/python3.9/site-packages/flask/blueprints.py",
+    "lib/python3.9/site-packages/flask/cli.py",
+    "lib/python3.9/site-packages/flask/config.py",
+    "lib/python3.9/site-packages/flask/ctx.py",
+    "lib/python3.9/site-packages/flask/debughelpers.py",
+    "lib/python3.9/site-packages/flask/globals.py",
+    "lib/python3.9/site-packages/flask/helpers.py",
+    "lib/python3.9/site-packages/flask/json/__init__.py",
+    "lib/python3.9/site-packages/flask/json/tag.py",
+    "lib/python3.9/site-packages/flask/logging.py",
+    "lib/python3.9/site-packages/flask/sessions.py",
+    "lib/python3.9/site-packages/flask/signals.py",
+    "lib/python3.9/site-packages/flask/templating.py",
+    "lib/python3.9/site-packages/flask/testing.py",
+    "lib/python3.9/site-packages/flask/views.py",
+    "lib/python3.9/site-packages/flask/wrappers.py",
+    "lib/python3.9/site-packages/flask/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/__main__.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/_compat.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/app.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/blueprints.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/cli.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/config.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/ctx.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/debughelpers.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/globals.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/helpers.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/json/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/json/__pycache__/tag.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/logging.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/sessions.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/signals.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/templating.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/testing.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/views.cpython-39.pyc",
+    "lib/python3.9/site-packages/flask/__pycache__/wrappers.cpython-39.pyc",
+    "bin/flask"
+  ],
+  "fn": "flask-1.1.2-pyhd3eb1b0_0.tar.bz2",
+  "license": "BSD 3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/flask-1.1.2-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "eee9d2de0a27685197801b09c37b4762",
+  "name": "flask",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/flask-1.1.2-pyhd3eb1b0_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/__main__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/_compat.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/app.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/blueprints.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/cli.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/config.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/ctx.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/debughelpers.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/globals.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/helpers.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/json/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/json/__pycache__/tag.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/logging.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/sessions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/signals.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/templating.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/testing.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/views.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/flask/__pycache__/wrappers.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/flask",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "flask==1.1.2=pyhd3eb1b0_0",
+  "sha256": "27ca2893c801fe24737b00c2dbab38b72a64a46eb0060761a05d70ec47b46211",
+  "size": 72032,
+  "subdir": "noarch",
+  "timestamp": 1611932668094,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/flask-1.1.2-pyhd3eb1b0_0.tar.bz2",
+  "version": "1.1.2"
+}

@@ -1,0 +1,110 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "inflection >0.3.0,<1.0",
+    "python >=3.6",
+    "tinycss >=0.4,<1.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/qstylizer-0.1.10-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/qstylizer-0.1.10.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/qstylizer-0.1.10.dist-info/LICENSE.txt",
+    "lib/python3.9/site-packages/qstylizer-0.1.10.dist-info/METADATA",
+    "lib/python3.9/site-packages/qstylizer-0.1.10.dist-info/RECORD",
+    "lib/python3.9/site-packages/qstylizer-0.1.10.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/qstylizer-0.1.10.dist-info/WHEEL",
+    "lib/python3.9/site-packages/qstylizer-0.1.10.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/qstylizer-0.1.10.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/qstylizer/__init__.py",
+    "lib/python3.9/site-packages/qstylizer/descriptor/__init__.py",
+    "lib/python3.9/site-packages/qstylizer/descriptor/prop.py",
+    "lib/python3.9/site-packages/qstylizer/descriptor/pseudoprop.py",
+    "lib/python3.9/site-packages/qstylizer/descriptor/pseudostate.py",
+    "lib/python3.9/site-packages/qstylizer/descriptor/qclass.py",
+    "lib/python3.9/site-packages/qstylizer/descriptor/stylerule.py",
+    "lib/python3.9/site-packages/qstylizer/descriptor/subcontrol.py",
+    "lib/python3.9/site-packages/qstylizer/parser.py",
+    "lib/python3.9/site-packages/qstylizer/style.py",
+    "lib/python3.9/site-packages/qstylizer/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/prop.cpython-39.pyc",
+    "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/pseudoprop.cpython-39.pyc",
+    "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/pseudostate.cpython-39.pyc",
+    "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/qclass.cpython-39.pyc",
+    "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/stylerule.cpython-39.pyc",
+    "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/subcontrol.cpython-39.pyc",
+    "lib/python3.9/site-packages/qstylizer/__pycache__/parser.cpython-39.pyc",
+    "lib/python3.9/site-packages/qstylizer/__pycache__/style.cpython-39.pyc"
+  ],
+  "fn": "qstylizer-0.1.10-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "63534287b6603aab2767438ade3d0d98",
+  "legacy_bz2_size": 17023,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/qstylizer-0.1.10-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "251d1fadb5e1e62f9b7da10dd1ba6e9c",
+  "name": "qstylizer",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/qstylizer-0.1.10-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/qstylizer/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/prop.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/pseudoprop.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/pseudostate.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/qclass.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/stylerule.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qstylizer/descriptor/__pycache__/subcontrol.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qstylizer/__pycache__/parser.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/qstylizer/__pycache__/style.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "qstylizer==0.1.10=pyhd3eb1b0_0",
+  "sha256": "0940de8bca8236d364cea56168060c75df3bcabf0b4085418ea3d953d56336bf",
+  "size": 17200,
+  "subdir": "noarch",
+  "timestamp": 1617713619268,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/qstylizer-0.1.10-pyhd3eb1b0_0.conda",
+  "version": "0.1.10"
+}

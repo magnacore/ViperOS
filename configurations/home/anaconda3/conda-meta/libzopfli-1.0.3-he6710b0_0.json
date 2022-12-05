@@ -1,0 +1,63 @@
+{
+  "build": "he6710b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/libzopfli-1.0.3-he6710b0_0",
+  "features": "",
+  "files": [
+    "bin/zopfli",
+    "bin/zopflipng",
+    "include/zopfli/gzip_container.h",
+    "include/zopfli/zlib_container.h",
+    "include/zopfli/zopfli.h",
+    "include/zopfli/zopflipng_lib.h",
+    "lib/cmake/Zopfli/ZopfliConfig-release.cmake",
+    "lib/cmake/Zopfli/ZopfliConfig.cmake",
+    "lib/cmake/Zopfli/ZopfliConfigVersion.cmake",
+    "lib/libzopfli.so",
+    "lib/libzopfli.so.1",
+    "lib/libzopfli.so.1.0.3",
+    "lib/libzopflipng.so",
+    "lib/libzopflipng.so.1",
+    "lib/libzopflipng.so.1.0.3"
+  ],
+  "fn": "libzopfli-1.0.3-he6710b0_0.conda",
+  "legacy_bz2_md5": "6d276711374079b0d91ea31ecbe27b31",
+  "legacy_bz2_size": 183622,
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/libzopfli-1.0.3-he6710b0_0",
+    "type": 1
+  },
+  "md5": "8671895f71c9046f38b814f8662226f5",
+  "name": "libzopfli",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/libzopfli-1.0.3-he6710b0_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/cmake/Zopfli/ZopfliConfig.cmake",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "7262c675ccb2a3e5865c0fc737dda666f337646c73bd23b20af43df190eb910e",
+        "sha256_in_prefix": "68848ece0451e76bfd603fbac4e2bbf641401873fd07b580f48db2796cda2095",
+        "size_in_bytes": 3742
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "libzopfli==1.0.3=he6710b0_0",
+  "sha256": "b7d6dee99369d2e602bb0901e7d468db3d6567a4af3666b75213ef268c560d39",
+  "size": 174889,
+  "subdir": "linux-64",
+  "timestamp": 1593197391897,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libzopfli-1.0.3-he6710b0_0.conda",
+  "version": "1.0.3"
+}

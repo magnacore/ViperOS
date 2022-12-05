@@ -1,0 +1,118 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/xlrd-2.0.1-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "bin/runxlrd.py",
+    "lib/python3.9/site-packages/xlrd-2.0.1.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/xlrd-2.0.1.dist-info/LICENSE",
+    "lib/python3.9/site-packages/xlrd-2.0.1.dist-info/METADATA",
+    "lib/python3.9/site-packages/xlrd-2.0.1.dist-info/RECORD",
+    "lib/python3.9/site-packages/xlrd-2.0.1.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/xlrd-2.0.1.dist-info/WHEEL",
+    "lib/python3.9/site-packages/xlrd-2.0.1.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/xlrd-2.0.1.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/xlrd/__init__.py",
+    "lib/python3.9/site-packages/xlrd/biffh.py",
+    "lib/python3.9/site-packages/xlrd/book.py",
+    "lib/python3.9/site-packages/xlrd/compdoc.py",
+    "lib/python3.9/site-packages/xlrd/formatting.py",
+    "lib/python3.9/site-packages/xlrd/formula.py",
+    "lib/python3.9/site-packages/xlrd/info.py",
+    "lib/python3.9/site-packages/xlrd/sheet.py",
+    "lib/python3.9/site-packages/xlrd/timemachine.py",
+    "lib/python3.9/site-packages/xlrd/xldate.py",
+    "lib/python3.9/site-packages/xlrd/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/xlrd/__pycache__/biffh.cpython-39.pyc",
+    "lib/python3.9/site-packages/xlrd/__pycache__/book.cpython-39.pyc",
+    "lib/python3.9/site-packages/xlrd/__pycache__/compdoc.cpython-39.pyc",
+    "lib/python3.9/site-packages/xlrd/__pycache__/formatting.cpython-39.pyc",
+    "lib/python3.9/site-packages/xlrd/__pycache__/formula.cpython-39.pyc",
+    "lib/python3.9/site-packages/xlrd/__pycache__/info.cpython-39.pyc",
+    "lib/python3.9/site-packages/xlrd/__pycache__/sheet.cpython-39.pyc",
+    "lib/python3.9/site-packages/xlrd/__pycache__/timemachine.cpython-39.pyc",
+    "lib/python3.9/site-packages/xlrd/__pycache__/xldate.cpython-39.pyc"
+  ],
+  "fn": "xlrd-2.0.1-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "9b4bf6b3a138e052c69afe906cdf54ae",
+  "legacy_bz2_size": 94380,
+  "license": "BSD 3-Clause and BSD with advertising",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/xlrd-2.0.1-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "a1b5a33a6098c182d359ecf7d73da6e1",
+  "name": "xlrd",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/xlrd-2.0.1-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "python-scripts/runxlrd.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/xlrd_1608072521494/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "e75d487489fbd5d71c55847a724c2ac860b51920bf6f6c62102b159e5742372c",
+        "sha256_in_prefix": "a7b5e775f03ac3c847f86fa05cb55b59de5790fe5e36f0aad2fe1fb626296db8",
+        "size_in_bytes": 16320
+      },
+      {
+        "_path": "lib/python3.9/site-packages/xlrd/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/xlrd/__pycache__/biffh.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/xlrd/__pycache__/book.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/xlrd/__pycache__/compdoc.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/xlrd/__pycache__/formatting.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/xlrd/__pycache__/formula.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/xlrd/__pycache__/info.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/xlrd/__pycache__/sheet.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/xlrd/__pycache__/timemachine.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/xlrd/__pycache__/xldate.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "xlrd==2.0.1=pyhd3eb1b0_0",
+  "sha256": "588acd745446b989612a1dcea9af90a428da2ba01097d5adaaf0510e9488b299",
+  "size": 92286,
+  "subdir": "noarch",
+  "timestamp": 1608072552786,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/xlrd-2.0.1-pyhd3eb1b0_0.conda",
+  "version": "2.0.1"
+}

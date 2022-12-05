@@ -1,0 +1,66 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.6",
+    "python-lsp-server >=1.0.1"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/pyls-spyder-0.4.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/pyls_spyder-0.4.0-py3.10.egg-info/PKG-INFO",
+    "lib/python3.9/site-packages/pyls_spyder-0.4.0-py3.10.egg-info/SOURCES.txt",
+    "lib/python3.9/site-packages/pyls_spyder-0.4.0-py3.10.egg-info/dependency_links.txt",
+    "lib/python3.9/site-packages/pyls_spyder-0.4.0-py3.10.egg-info/entry_points.txt",
+    "lib/python3.9/site-packages/pyls_spyder-0.4.0-py3.10.egg-info/installed-files.txt",
+    "lib/python3.9/site-packages/pyls_spyder-0.4.0-py3.10.egg-info/requires.txt",
+    "lib/python3.9/site-packages/pyls_spyder-0.4.0-py3.10.egg-info/top_level.txt",
+    "lib/python3.9/site-packages/pyls_spyder/__init__.py",
+    "lib/python3.9/site-packages/pyls_spyder/plugin.py",
+    "lib/python3.9/site-packages/pyls_spyder/utils.py",
+    "lib/python3.9/site-packages/pyls_spyder/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyls_spyder/__pycache__/plugin.cpython-39.pyc",
+    "lib/python3.9/site-packages/pyls_spyder/__pycache__/utils.cpython-39.pyc"
+  ],
+  "fn": "pyls-spyder-0.4.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "e788e850f16c24af1a79cc65aae687a5",
+  "legacy_bz2_size": 10569,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/pyls-spyder-0.4.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "23df66456bc25e608ea377fb20d6008c",
+  "name": "pyls-spyder",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/pyls-spyder-0.4.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/pyls_spyder/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyls_spyder/__pycache__/plugin.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/pyls_spyder/__pycache__/utils.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pyls-spyder==0.4.0=pyhd3eb1b0_0",
+  "sha256": "a03025121d0dda852f20cc6e42ef9fd9ea6bbf322a25acb01166469125d06820",
+  "size": 10771,
+  "subdir": "noarch",
+  "timestamp": 1634243294108,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/pyls-spyder-0.4.0-pyhd3eb1b0_0.conda",
+  "version": "0.4.0"
+}

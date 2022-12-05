@@ -1,0 +1,51 @@
+{
+  "build": "h5eee18b_7",
+  "build_number": 7,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libbrotlicommon 1.0.9 h5eee18b_7",
+    "libgcc-ng >=11.2.0"
+  ],
+  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/libbrotlienc-1.0.9-h5eee18b_7",
+  "features": "",
+  "files": [
+    "lib/libbrotlienc.so",
+    "lib/libbrotlienc.so.1",
+    "lib/libbrotlienc.so.1.0.9",
+    "lib/pkgconfig/libbrotlienc.pc"
+  ],
+  "fn": "libbrotlienc-1.0.9-h5eee18b_7.conda",
+  "legacy_bz2_md5": "cc6a6d362912a2d112310bd3f8acd44e",
+  "legacy_bz2_size": 295287,
+  "license": "MIT",
+  "link": {
+    "source": "/home/goldust/anaconda3/pkgs/libbrotlienc-1.0.9-h5eee18b_7",
+    "type": 1
+  },
+  "md5": "289179174f1216582a949b528d8224af",
+  "name": "libbrotlienc",
+  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/libbrotlienc-1.0.9-h5eee18b_7.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/libbrotlienc.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/abs_ecyw11_7ze/croots/recipe/brotli-split_1659616059936/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "e306204098bef9cc8a57f3c6f7a116e56c08dda7d21aee5c72ec9b681e0d4153",
+        "sha256_in_prefix": "2035f8b9d6bfebdcf674ef7308ff3a9f60e5a3ab6a10125b3e0741ba82a8ba9d",
+        "size_in_bytes": 787
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "libbrotlienc==1.0.9=h5eee18b_7",
+  "sha256": "fafc4cd52916e22ae3d7682f133cb0ea5491f78ee5c304cd049d0b81f708d3a5",
+  "size": 270249,
+  "subdir": "linux-64",
+  "timestamp": 1659616162282,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libbrotlienc-1.0.9-h5eee18b_7.conda",
+  "version": "1.0.9"
+}
