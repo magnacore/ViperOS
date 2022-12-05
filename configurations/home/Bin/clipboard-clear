@@ -1,0 +1,5 @@
+#!/usr/bin/env xonsh
+clear
+greenclip clear
+
+audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Success.ogg &

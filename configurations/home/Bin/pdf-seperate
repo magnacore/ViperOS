@@ -1,0 +1,38 @@
+#!/usr/bin/env xonsh
+cyan		= '\x1b[1;36m'
+red			= '\033[0;31m'
+no_color	= '\x1b[0m'
+
+import os
+import glob
+from tqdm import tqdm
+
+print(f"{cyan}Seperating even and odd PDF files for duplex printing...{no_color}")
+
+pdf_files = glob.glob('*.pdf')
+
+if len(pdf_files) > 0:	
+	pdf_files.sort()
+
+	mkdir even odd
+
+	i = 1
+
+	for pdf in tqdm(pdf_files):
+		if i%2 != 0:
+			mv @(pdf) odd
+		else:
+			mv @(pdf) even
+		i+=1
+
+	print(f"{cyan}Combining even PDFs...{no_color}")
+	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dAutoRotatePages=/None -sOutputFile=Even.pdf even/*.pdf
+	print(f"{cyan}Combining odd PDFs...{no_color}")
+	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dAutoRotatePages=/None -sOutputFile=Odd.pdf odd/*.pdf
+
+	audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Success.ogg &
+else:
+	print(f"{red}No PDFs found...{no_color}")
+	audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Error.ogg &
+
+print(u'\u2500' * os.get_terminal_size().columns)

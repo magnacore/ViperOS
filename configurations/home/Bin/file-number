@@ -1,0 +1,35 @@
+#!/usr/bin/env xonsh
+import os
+import sys
+
+from rich.progress import track
+from rich.console import Console
+
+console = Console()
+
+# sys.argv[0] is the name of the script which will always be there
+selection = False
+
+if len(sys.argv) > 3:
+	selection = True
+
+if selection:
+	allFiles = sys.argv[3:]
+	start_number = int(sys.argv[1])
+	padding = int(sys.argv[2])
+
+	allFiles.sort()
+
+	console.rule(f"[bold cyan]Start numbering from {start_number} with a padding of {padding}...", style="cyan")
+
+	for file in track(allFiles, description="[bold cyan]Numbering : [/bold cyan]"):
+		new_filename = str(start_number).zfill(padding) + " " + file
+		os.rename(file, new_filename)
+		start_number += 1
+
+	audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Success.ogg &
+else:
+	audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Error.ogg &
+	console.print(f"[bold red]No file selected!")
+
+console.rule(style="cyan")

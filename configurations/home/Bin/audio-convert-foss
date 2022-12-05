@@ -1,0 +1,116 @@
+#!/usr/bin/env xonsh
+
+# Usage: audio-convert-ogg 128 *
+# Converts all audio files in a folder to 128kbps ogg
+
+# https://en.wikipedia.org/wiki/Ogg
+# https://en.wikipedia.org/wiki/Opus_(audio_format)
+# https://ffmpeg.org/ffmpeg-codecs.html#libopus-1
+# https://opus-codec.org/
+# https://superuser.com/questions/1536755/what-bitrate-should-i-use-when-extracting-channel-from-mp2-to-flac-with-ffmpeg
+# https://xiph.org/flac/faq.html#general__lowest_bitrate
+# https://wiki.xiph.org/Opus_Recommended_Settings
+
+# OPUS Features :
+# Bitrates from 6 kb/s to 510 kb/s
+# Sampling rates from 8 kHz (narrowband) to 48 kHz (fullband)
+# Support for both constant bitrate (CBR) and variable bitrate (VBR)
+# Support for speech and music
+# Support for mono and stereo
+
+from rich.progress import track
+from rich.console import Console
+from rich import print
+
+import sys
+import os
+myhome = os.path.expanduser('~')
+sys.path.append(f"{myhome}/Bin")
+
+from utilities import get_mime, get_filename_extension, set_valid_file_names, get_user_selection
+
+console = Console()
+
+convert_to = ['VoIP', 'Audiobooks/Podcasts', 'Music Storage 2 Channels', 'Music Storage 5.1 Surround', 'Music Storage 7.1 Surround', 'Lossless', 'Custom']
+
+# sys.argv[0] is the name of the script which will always be there
+selection = False
+
+if len(sys.argv) >= 3:
+	selection = True
+
+if selection:
+	allFiles = sys.argv[2:]
+	bitrate = int(sys.argv[1])
+	allFiles.sort()
+
+	console.print(f"[bold cyan]Select a use case: ")
+	choice = get_user_selection(convert_to)
+
+	codec = "libopus"
+	new_extension = ".opus"
+
+	if choice == 'VoIP':
+		bitrate = 24
+	elif choice == 'Audiobooks/Podcasts':
+		bitrate = 32
+	elif choice == 'Music Storage 2 Channels':
+		bitrate = 128
+	elif choice == 'Music Storage 5.1 Surround':
+		bitrate = 256
+	elif choice == 'Music Storage 7.1 Surround':
+		bitrate = 450
+	elif choice == 'Custom':
+		bitrate = int(input("Enter bitrate: "))
+		if bitrate < 6:
+			bitrate = 6
+		elif bitrate > 510:
+			bitrate = 510
+	elif choice == "Lossless":
+		codec = "flac"
+		new_extension = ".flac"
+
+	if choice != 'Lossless':
+		console.rule(f"[bold cyan]Converting audio to variable {bitrate}kbps {choice}...", style="cyan")
+	else:
+		console.rule(f"[bold cyan]Converting audio to FLAC {choice}...", style="cyan")
+
+	clean_file_names = set_valid_file_names(allFiles)
+
+	delete_original = ["No", "Yes"]
+
+	console.print(f"[bold cyan]Delete Original Media?")
+	delete_choice = get_user_selection(delete_original)
+
+	for file in track(clean_file_names, description="[bold cyan]Converting : [/bold cyan]"):
+		mimestart = get_mime(file)
+
+		if mimestart != None:
+			if mimestart in ['audio']:
+				filename, extension = get_filename_extension(file)
+				extension = extension.lower().strip()
+
+				filename = filename + new_extension
+
+				if choice == "Lossless" and extension == ".flac":
+					print(f"[bold red]Skipping converting {file} to .flac[/bold red]")
+				else:
+					if !(ffmpeg -i @(file) -c:a @(codec) -b:a @(bitrate)k -vn -vbr on f"{filename}"):
+						print(f"[green]Converted {file} to {filename}")
+						
+						if delete_choice == "Yes":
+							trash-put @(file)
+						else:
+							mkdir -p ./Original_Media
+							mv @(file) ./Original_Media/
+
+					else:
+						print(f"[bold red]Unable to convert {file}[/bold red]")
+						audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Error.ogg &
+
+	audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Success.ogg &
+else:
+	console.print("No files selected!", style="bold red")
+	audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Error.ogg &
+
+console.rule(style="cyan")

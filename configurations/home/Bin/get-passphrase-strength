@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import argparse
+import math
+from num2words import num2words
+
+def seconds_to_printable(seconds):
+    seconds = math.floor(seconds)
+    minutes = seconds // 60
+    hours = minutes // 60
+    days = hours // 24
+    years = days // 365
+
+    if years == 0 and days == 0 and hours == 0 and minutes == 0:
+        return f"{num2words(seconds)} seconds"
+    elif years == 0 and days == 0 and hours == 0:
+        return f"{num2words(minutes)} minutes"
+    elif years == 0 and days == 0:
+        return f"{num2words(hours)} hours"
+    elif years == 0:
+        return f"{num2words(days)} days"
+    else:
+        return f"{num2words(years)} years"
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("size", metavar="size", type=int, help="Number of words in wordlist" )
+    parser.add_argument("seedphrase_size", metavar="seedphrase_size", type=int, help="Number of words in passphrase" )
+    args = parser.parse_args()
+
+    # Here's what we know
+    wordlist_size = args.size
+    passphrase_size = args.seedphrase_size
+    entropy_per_word = math.log(wordlist_size, 2)
+    aws_guesses_per_second_per_instance = 193900
+    aws_instance_cost_per_hour = 24.48
+    aws_instance_cost_per_day = aws_instance_cost_per_hour * 24
+    attacker_budget_per_day = 1000000000
+    total_aws_instances = math.floor(attacker_budget_per_day / aws_instance_cost_per_day)
+    total_aws_guesses_per_second = (aws_guesses_per_second_per_instance * total_aws_instances)
+
+    # Display these details
+    print(f"Number of words: {wordlist_size}")
+    print(f"Entropy per word: {entropy_per_word}")
+    print(f"Each AWS instance has these many guesses per second: {num2words(aws_guesses_per_second_per_instance)}")
+    print(f"Attacker can afford this many AWS instances: {num2words(total_aws_instances)}")
+    print(f"Attacker's total guesses per second: {num2words(total_aws_guesses_per_second)}")
+    print("")
+
+    total_keyspace = wordlist_size ** passphrase_size
+    time_seconds = total_keyspace / total_aws_guesses_per_second
+    # attacks have to search half the keyspace on average
+    avg_time_seconds = (time_seconds / 2)
+
+    print(f"Number of words: {passphrase_size}")
+    print(f"Entropy: {round(passphrase_size * entropy_per_word, 1)}")
+    print(f"Average time to brute force: {seconds_to_printable(avg_time_seconds)}")
+
+if __name__ == "__main__":
+    main()

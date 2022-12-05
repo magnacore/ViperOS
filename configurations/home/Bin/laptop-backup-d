@@ -1,0 +1,24 @@
+#!/usr/bin/env xonsh
+from rich.console import Console
+
+console = Console()
+
+console.rule(f"[bold cyan]Laptop Backup D...", style="cyan")
+
+console.print(f"[bold cyan]Deleting previous snapshot...")
+sudo btrfs subvolume delete /run/media/$USER/SAWY_01_B/LAPTOP_BACKUP_D/@previous
+
+console.print(f"[bold cyan]Creating a new read only snapshot...")
+sudo btrfs subvolume snapshot -r /run/media/$USER/SAWY_01_B/LAPTOP_BACKUP_D/@current/ /run/media/$USER/SAWY_01_B/LAPTOP_BACKUP_D/@previous
+
+console.print(f"[bold cyan]Synchronizing...")
+rsync --delete --progress --exclude-from=$HOME/Backups/RSYNC_EXCLUDE/rsync-homedir-local.txt -vahi $HOME/ /run/media/$USER/SAWY_01_B/LAPTOP_BACKUP_D/@current/
+
+date > ~/Software/logs/laptop-backup-d.txt
+date > /run/media/$USER/SAWY_01_B/LAPTOP_BACKUP_D/@current/backup_date.txt
+
+sudo btrfs filesystem show
+
+console.rule(style="cyan")
+
+audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Success.ogg &

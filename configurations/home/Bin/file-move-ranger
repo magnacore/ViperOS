@@ -1,0 +1,31 @@
+#!/usr/bin/env xonsh
+import sys
+from rich.console import Console
+
+console = Console()
+
+# sys.argv[0] is the name of the script which will always be there
+selection = False
+
+if len(sys.argv) >1:
+	# If no file is selected, the highlighted file is sent as the %s
+	selection = True
+
+if selection:
+	# The first element in the list is the current file name 
+	# The second element onwards are the %c sent from Ranger
+	# We also sent a %d so that is the last item in the list
+	allFiles = sys.argv[1:-1]
+
+	target_dir = sys.argv[-1]
+
+	console.rule(f"[bold cyan]Moving files...", style="cyan")
+
+	~/anaconda3/envs/util/bin/pymv -gip @(allFiles) @(target_dir)
+
+	audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Success.ogg &
+else:
+	audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Error.ogg &
+	console.print(f"[bold red]No file selected!")
+
+console.rule(style="cyan")

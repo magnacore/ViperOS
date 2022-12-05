@@ -1,0 +1,33 @@
+#!/usr/bin/env xonsh
+from rich.console import Console
+
+console = Console()
+
+console.rule(f"[bold cyan]Space used: ", style="cyan")
+
+console.print(f"[bold cyan]Used Disk Space: [/bold cyan]")
+subprocess_output = $(df -h /home | grep /dev)
+
+total_space = subprocess_output.split()[1]
+
+used_space = subprocess_output.split()[2]
+used_percentage = int(subprocess_output.split()[4][:-1])
+console.print(f"{used_space} of {total_space} or {used_percentage}% of disk is used.\n")
+
+console.print(f"[bold cyan]Free Disk Space: [/bold cyan]")
+free_space = subprocess_output.split()[3]
+console.print(f"{free_space} of {total_space} or {100-used_percentage}% of disk is free.\n")
+
+df -h
+console.print("\n")
+
+console.print(f"[bold cyan]Used RAM Space: [/bold cyan]")
+free -h
+
+console.print(f"\n[bold cyan]Used ZRAM Space: [/bold cyan]")
+zramctl
+
+console.print(f"\n[bold cyan]Used Trash Space: [/bold cyan]")
+du -hs ~/.local/share/Trash
+
+console.rule(style="cyan")

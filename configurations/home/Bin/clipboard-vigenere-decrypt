@@ -1,0 +1,36 @@
+#!/usr/bin/env xonsh
+
+import pyperclip as pc
+
+from rich.console import Console
+console = Console()
+
+import sys
+import os
+myhome = os.path.expanduser('~')
+sys.path.append(f"{myhome}/Bin")
+
+from utilities import generateKey, originalText
+
+console.rule(f"[bold cyan]Decrypting clipboard using Vigenere Cipher...", style="cyan")
+
+with open(p'~/Documents/SENSITIVE DATA/vigenere_master_password.txt') as f:
+    lines = f.readlines()
+
+# Use raw strings
+# Python cannot handle \ as the last character in a raw string. It can be at the start or middle.
+# What happens if \ is the last character in the encrypted string? Will python not able to decrypt it?
+clipboard_content = pc.paste()
+keyword = lines[0].strip()
+
+key = generateKey(clipboard_content, keyword)
+
+plain_text = originalText(clipboard_content,key)
+
+pc.copy(plain_text)
+
+console.print(f"Copied: Vigenere decryption of [bold cyan]{clipboard_content}[/bold cyan] is [bold green]{plain_text}[/bold green]")
+
+console.rule(style="cyan")
+
+audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Success.ogg &

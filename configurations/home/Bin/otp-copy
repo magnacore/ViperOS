@@ -1,0 +1,41 @@
+#!/usr/bin/env xonsh
+
+import sys
+import os
+from rich.console import Console
+
+myhome = os.path.expanduser('~')
+sys.path.append(f"{myhome}/Bin")
+
+console = Console()
+
+from utilities import get_user_selection
+
+import pyperclip as pc
+
+root_dir = p"~/.password-store/otp/"
+
+search_result = []
+
+for root, dirs, files in os.walk(root_dir):
+    for name in files:    
+        abs_path = os.path.abspath(os.path.join(root, name))
+
+        abs_path = abs_path.replace(f"{myhome}/.password-store/otp/", "")
+        abs_path = abs_path.replace(".gpg", "")
+
+        search_result.append(abs_path)
+
+search_result.sort()
+
+selection = get_user_selection(search_result, "Which TOTP to copy?")
+
+topt = $(pass otp @(f"otp/{selection}"))
+
+pc.copy(topt)
+
+figlet -c -f big @(f"{topt[:3]} {topt[3:]}")
+
+console.rule(style="cyan")
+
+audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Success.ogg &

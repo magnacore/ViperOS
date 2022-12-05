@@ -1,0 +1,37 @@
+#!/usr/bin/env python
+
+# Since we are importing python3 from util environment, pyperclip should be installed in util environment too
+# /home/<username>/anaconda3/envs/util/bin/pip install pyperclip
+# Installing pyobjects in utils venv will cause this script to fail. Only install pyobjects in xonsh venv
+#!/usr/bin/env conda run -n util python3
+
+import os
+#print(os.environ["CONDA_PREFIX"])
+
+from datetime import datetime
+import pyperclip as pc
+from playsound import playsound
+
+import sys
+
+myhome = os.path.expanduser('~')
+sys.path.append(f"{myhome}/Bin")
+
+from py_utilities import get_valid_filename
+
+clipboard_content = pc.paste()
+
+file_name = get_valid_filename(clipboard_content[:35])
+
+if file_name:
+    date_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    file_name = f"{myhome}/Productivity_System/01 TASK CAPTURE BIN/00 COPY TO HDD/{file_name}_{date_time}.md"
+
+    # open file
+    with open(file_name, "a+") as f:
+        f.write(clipboard_content + "\n")
+
+    playsound(f"{myhome}/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Success.ogg", block=False)
+
+else:
+    playsound(f"{myhome}/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Error.ogg", block=False)

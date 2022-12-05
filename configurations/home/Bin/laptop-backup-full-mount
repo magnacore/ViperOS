@@ -1,0 +1,33 @@
+#!/usr/bin/env xonsh
+import time
+
+from rich.console import Console
+
+console = Console()
+
+console.rule(f"[bold cyan]Laptop Backup Mount...", style="cyan")
+
+console.print(f"[bold cyan]Open the container...")
+sudo cryptsetup luksOpen /dev/sdb luks-laptop-backup-full
+
+console.print(f"[bold cyan]Mount the container...")
+sudo mkdir /media/$USER/laptop_backup_full
+
+# Change the owner
+sudo chown $USER:$USER /media/$USER/laptop_backup_full
+
+# Give some time to /dev/vg-laptop-backup-full/raid1-1 to become available
+console.print(f"[bold cyan]Waiting for 5 seconds before mounting...")
+time.sleep( 5 )
+
+# mount the directory
+if !(sudo mount p"/dev/vg-laptop-backup-full/raid1-1" p"/media/$USER/laptop_backup_full"):
+    sudo btrfs filesystem show
+    
+    audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Success.ogg &
+
+else:
+    console.print(f"[bold red]Something went wrong. Could not mount.")
+    audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Error.ogg &
+
+console.rule(style="cyan")

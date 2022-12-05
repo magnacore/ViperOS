@@ -1,0 +1,60 @@
+#!/usr/bin/env xonsh
+# This script should not output anything other than
+# a list of file names. The output of this script
+# will become the input of the other script
+
+import sys
+import os
+import time
+myhome = os.path.expanduser('~')
+sys.path.append(f"{myhome}/Bin")
+
+from utilities import get_valid_filename, get_filename_extension, get_timestamp
+
+# sys.argv[0] is the name of the script which will always be there
+selection = False
+
+if len(sys.argv) > 1:
+	selection = True
+
+if selection:
+	allFiles = sys.argv[1:]
+	allFiles.sort()
+
+	file_list = []
+
+	for file in allFiles:
+		file_name, extension = get_filename_extension(file)
+
+		valid_file_name = get_valid_filename(file_name)
+		valid_extension = get_valid_filename(extension)
+
+		clean_file_name = ""
+
+		# We are dealing with folder if extension is null
+		if extension == "":
+			if valid_file_name == "":
+				time_stamp = get_timestamp()
+				clean_file_name = time_stamp
+				time.sleep(1)
+			else:
+				clean_file_name = valid_file_name
+		else: # We are dealing with files
+			if valid_file_name == "":
+				time_stamp = get_timestamp()
+				clean_file_name = f"{time_stamp}.{valid_extension}"
+				time.sleep(1)
+			elif valid_file_name == "tar":
+				time_stamp = get_timestamp()
+				clean_file_name = f"{time_stamp}tar.{valid_extension}"
+				time.sleep(1)
+			else:
+				clean_file_name = f"{valid_file_name}.{valid_extension}"
+
+			clean_file_name = clean_file_name.replace("tar.", ".tar.")
+
+		file_list.append(clean_file_name)
+
+		os.rename(file, clean_file_name)
+
+	print(file_list)

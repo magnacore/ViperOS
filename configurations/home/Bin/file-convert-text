@@ -1,0 +1,41 @@
+#!/usr/bin/env xonsh
+from rich.progress import track
+from rich.console import Console
+
+import sys
+import os
+myhome = os.path.expanduser('~')
+sys.path.append(f"{myhome}/Bin")
+
+from utilities import get_filename_extension, get_timestamp
+
+console = Console()
+
+# sys.argv[0] is the name of the script which will always be there
+selection = False
+
+if len(sys.argv) > 1:
+	selection = True
+
+if selection:
+	# No need to add [/bold cyan] because we dont want to end the color
+	# style is for line color
+	console.rule("[bold cyan]Converting filenames to text...", style="cyan")
+
+	allFiles = sys.argv[1:]
+	allFiles.sort()
+
+	for file in track(allFiles, description="[bold cyan]Converting : [/bold cyan]"):
+
+		new_filename, _ = get_filename_extension(file)
+		new_filename = new_filename + "_" + get_timestamp() + '.md'
+
+		touch @(new_filename)
+		echo @(file) > @(new_filename)
+
+	audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Success.ogg &
+else:
+	console.print("No file selected!", style="bold red")
+	audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Error.ogg &
+
+console.rule(style="cyan")

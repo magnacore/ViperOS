@@ -1,0 +1,14 @@
+#!/usr/bin/env xonsh
+
+from rich.console import Console
+console = Console()
+
+console.rule(f"[bold cyan]Backup Tutorials...")
+
+rsync --delete --progress -vahi /run/media/$USER/LEARNING/ /run/media/$USER/TutsBackup/BACKUP/
+
+date > ~/Software/logs/tutorials-backup.txt
+
+console.rule(style="cyan")
+
+audio-play ~/Bin/oxygen-sound-theme/Oxygen-K3B-Finish-Success.ogg &
