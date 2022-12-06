@@ -541,8 +541,18 @@ qdirstat
 # Enable domain resolveing
 cp --remove-destination /etc/resolv.conf /mnt/sysimage/etc/resolv.conf
 
-# copy anaconda3
+# Create needed directories
+mkdir -p /mnt/sysimage/etc/skel/.config
+mkdir -p /mnt/sysimage/etc/skel/.local
+
+# Setup anaconda3
 cp -fr /builddir/custom-config/viperos/configurations/home/anaconda3 /mnt/sysimage/etc/skel
+cp -fr /builddir/custom-config/viperos/configurations/executables/conda/conda /mnt/sysimage/etc/skel/anaconda3/bin
+chmod 755 /mnt/sysimage/etc/skel/anaconda3/bin/conda
+cp -fr /builddir/custom-config/viperos/configurations/executables/conda/conda-init /mnt/sysimage/usr/local/bin
+chmod 755 /mnt/sysimage/usr/local/bin/conda-init
+cp -fr /builddir/custom-config/viperos/configurations/executables/conda/Conda.desktop /mnt/sysimage/etc/xdg/autostart
+cp -fr /builddir/custom-config/viperos/configurations/home/dotfiles/.firstlogin /mnt/sysimage/etc/skel
 
 # Setup QTile
 cp -fr /builddir/custom-config/viperos/configurations/executables/qtile/xfce4-session.xml /mnt/sysimage/etc/xdg/xfce4/xfconf/xfce-perchannel-xml
@@ -553,8 +563,60 @@ cp -fr /builddir/custom-config/viperos/configurations/executables/qtile/QTile.de
 chmod 644 /mnt/sysimage/etc/xgd/autostart/QTile.desktop
 cp -fr /builddir/custom-config/viperos/configurations/home/Pictures /mnt/sysimage/etc/skel
 cp -fr /builddir/custom-config/viperos/configurations/home/Bin /mnt/sysimage/etc/skel
-mkdir -p /mnt/sysimage/etc/skel/.config
 cp -fr /builddir/custom-config/viperos/configurations/home/dot-config/qtile /mnt/sysimage/etc/skel/.config
+
+# Setup Rofimoji
+cp -fr /builddir/custom-config/viperos/configurations/executables/rofimoji/rofimoji /mnt/sysimage/etc/skel/anaconda3/envs/util/bin
+chmod 755 /mnt/sysimage/etc/skel/anaconda3/envs/util/bin/rofimoji
+
+# Setup Xonsh
+cp -fr /builddir/custom-config/viperos/configurations/executables/xonsh/xonsh /mnt/sysimage/etc/skel/anaconda3/envs/xonsh/bin
+chmod 755 /mnt/sysimage/etc/skel/anaconda3/envs/xonsh/bin/xonsh
+cp -fr /builddir/custom-config/viperos/configurations/home/xonsh-config/.xonshrc /mnt/sysimage/etc/skel
+
+# Setup CMapTools
+cp -fr /builddir/custom-config/viperos/configurations/home/.cmaptools /mnt/sysimage/etc/skel
+
+# Copy the config files
+cp -fr /builddir/custom-config/viperos/configurations/home/.config/* /mnt/sysimage/etc/skel/.config
+chmod 755 /mnt/sysimage/etc/skel/.config/sxiv/exec/image-info
+
+# Copy files in the local directory
+cp -fr /builddir/custom-config/viperos/configurations/home/.local/* /mnt/sysimage/etc/skel/.local
+
+# Copy pass folder structure
+cp -fr /builddir/custom-config/viperos/configurations/home/.password-store /mnt/sysimage/etc/skel
+
+# Copy restore file 
+cp -fr /builddir/custom-config/viperos/configurations/home/.restore /mnt/sysimage/etc/skel
+
+# Setup GromitMPX
+mkdir -p /mnt/sysimage/etc/skel/.var/app/net.christianbeier.Gromit-MPX/config
+cp -fr /builddir/custom-config/viperos/configurations/home/.var/app/net.christianbeier.Gromit-MPX/config/gromit-mpx.cfg /mnt/sysimage/etc/skel/.var/app/net.christianbeier.Gromit-MPX/config
+
+# Setup NeoVim
+cp -fr /builddir/custom-config/viperos/configurations/home/.vim /mnt/sysimage/etc/skel
+cp -fr /builddir/custom-config/viperos/configurations/home/vim-config/.vimrc /mnt/sysimage/etc/skel
+
+# Setup Alacritty
+cp -fr /builddir/custom-config/viperos/configurations/home/alacritty-config/.alacritty.yml /mnt/sysimage/etc/skel
+
+# Setup Bash
+cp -fr /builddir/custom-config/viperos/configurations/home/bash-config/.bash_aliases /mnt/sysimage/etc/skel
+
+cp -fr /builddir/custom-config/viperos/configurations/home/dotfiles/.Xresources /mnt/sysimage/etc/skel
+
+# Copy custom fonts (TODO Change to /usr/share/fonts)
+cp -fr /builddir/custom-config/viperos/configurations/home/.fonts /mnt/sysimage/etc/skel
+
+# Copy Software
+cp -fr /builddir/custom-config/viperos/configurations/home/Software /mnt/sysimage/etc/skel
+
+# Copy Templates
+cp -fr /builddir/custom-config/viperos/configurations/home/Templates /mnt/sysimage/etc/skel
+
+# Copy Anaconda license
+cp -fr /builddir/custom-config/viperos/configurations/home/ANACONDA3_LICENSE.txt /mnt/sysimage/etc/skel
 
 # Change fedora logos & anaconda logos
 # Copy initrd with brynux boot screen to livecd root

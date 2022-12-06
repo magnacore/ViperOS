@@ -62,6 +62,7 @@ Below is a non-exhaustive list of pre-installed packages:
 - Obsidian
 - Calibre
 - Pandoc
+- CMap Tools
 
 ### Security and Privacy
 - KeepassXC
