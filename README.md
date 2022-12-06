@@ -109,6 +109,7 @@ Below is a non-exhaustive list of pre-installed packages:
 - VirtualBox
 - NodeJS
 - QEMU
+- SourceTrail
 
 ### Trading
 - Cointop
