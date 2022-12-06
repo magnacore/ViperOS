@@ -18,7 +18,7 @@ del _sys, _mod, _ModuleType
 $AUTO_CD = True
 #$VI_MODE = True
 $PROMPT = '🐚{env_name}{BOLD_GREEN}{user}@{hostname}{BOLD_BLUE} {cwd}{branch_color}{curr_branch: {}}{RESET} {BOLD_BLUE}{prompt_end}{RESET} '
-# execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
+execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
 # =================================== exports =================================
 
 $VISUAL='/usr/bin/nvim'
@@ -29,6 +29,7 @@ $EDITOR=$VISUAL
 
 aliases ["sdb-eject"] = "udisksctl power-off -b /dev/sdb"
 aliases ["hugo-start"] = "hugo server --disableFastRender"
+aliases ["g"] = "git"
 
 # =================================== paths =================================
 # We can also source paths from bash : source-bash .profile if we want to use the same paths between xonsh and bash

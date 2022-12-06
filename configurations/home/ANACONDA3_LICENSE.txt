@@ -1,0 +1,6 @@
+ViperOS comes with Anaconda pre-installed.
+
+You can read their license agreement here:
+https://legal.anaconda.com/policies/en/?name=end-user-license-agreements
+
+Your use of Anaconda denotes that you agree with the license agreement.
