@@ -78,9 +78,9 @@ keys = [
     Key([mod], "c", lazy.spawn("rofi -modi 'clipboard:~/.local/bin/greenclip print' -show clipboard -run-command '{cmd}'"), desc='Run Greenclip in Rofi'),
 	
     ## Volume
-	Key([], "XF86AudioMute", lazy.spawn("amixer sset Master toggle")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer sset Master 1%-")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer sset Master 1%+")),
+	Key([], "XF86AudioMute", lazy.spawn("amixer -D pipewire sset Master toggle")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -D pipewire sset Master 1%-")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -D pipewire sset Master 1%+")),
 
     ## Scratchpads
     Key([mod2, mod3], "a", lazy.spawn(myTerm+f" --disable-server -e 'nvim {myhome}/Productivity_System/TODO.txt'"), desc="Launch TODO List"),
@@ -194,7 +194,7 @@ screens = [
 				
                 # Temperature
                 widget.TextBox(text = "🌡️", padding = widget_padding, background = colors[1], fontsize = icon_font_size),
-				widget.ThermalSensor(foreground = colors[2], background = colors[1], threshold = 90, padding = widget_padding),
+				widget.ThermalSensor(format='{tag}: {temp:.0f}{unit}', foreground = colors[2], background = colors[1], threshold = 90, padding = widget_padding),
                 widget.Sep(linewidth = 0, padding = seperator_padding, foreground = colors[2], background = colors[1]),
 
                 # CPU
@@ -230,7 +230,7 @@ screens = [
                 # mute_command = 'amixer -D pipewire sset Master toggle'.split(),
                 # volume_up_command = 'amixer -D pipewire sset Master 1%+'.split(),
                 # volume_down_command = 'amixer -D pipewire sset Master 1%-'.split(),
-                get_volume_command = 'amixer get Master'.split()),
+                get_volume_command = 'amixer -D pipewire get Master'.split()),
 
                 # Battery
                 widget.Sep(linewidth = 0, padding = 2, foreground = colors[2], background = colors[0]),

@@ -549,11 +549,12 @@ cp -fr /builddir/custom-config/viperos/configurations/executables/qtile/xfce4-se
 cp -fr /builddir/custom-config/viperos/configurations/executables/qtile/qtile /mnt/sysimage/etc/skel/anaconda3/envs/qtile/bin
 cp -fr /builddir/custom-config/viperos/configurations/executables/qtile/qtile-launch /mnt/sysimage/usr/local/bin
 chmod 755 /mnt/sysimage/usr/local/bin/qtile-launch
-cp -fr /builddir/custom-config/viperos/configurations/executables/qtile/QTile.desktop /mnt/sysimage/etc/xgd/autostart
+cp -fr /builddir/custom-config/viperos/configurations/executables/qtile/QTile.desktop /mnt/sysimage/etc/xdg/autostart
 chmod 644 /mnt/sysimage/etc/xgd/autostart/QTile.desktop
 cp -fr /builddir/custom-config/viperos/configurations/home/Pictures /mnt/sysimage/etc/skel
 cp -fr /builddir/custom-config/viperos/configurations/home/Bin /mnt/sysimage/etc/skel
-
+mkdir -p /mnt/sysimage/etc/skel/.config
+cp -fr /builddir/custom-config/viperos/configurations/home/dot-config/qtile /mnt/sysimage/etc/skel/.config
 
 # Change fedora logos & anaconda logos
 # Copy initrd with brynux boot screen to livecd root
