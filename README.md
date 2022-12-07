@@ -51,11 +51,12 @@ Below is a non-exhaustive list of pre-installed packages:
 - Youtube downloader
 - Catfish
 - Transmission
+- Virtual Volume View
 
 ### Education
 - Libreoffice
 - Xournal++
-- MasterPDFEditor
+- MasterPDF Editor
 - Plots
 - Gaphor
 - TeX-Match
