@@ -618,6 +618,9 @@ cp -fr /builddir/custom-config/viperos/configurations/home/Templates /mnt/sysima
 # Copy Anaconda license
 cp -fr /builddir/custom-config/viperos/configurations/home/ANACONDA3_LICENSE.txt /mnt/sysimage/etc/skel
 
+# Setup plocate
+cp -fr /builddir/custom-config/viperos/configurations/etc/updatedb.conf /mnt/sysimage/etc
+
 # Change fedora logos & anaconda logos
 # Copy initrd with brynux boot screen to livecd root
 # Copy Boot icon
