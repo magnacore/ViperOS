@@ -577,7 +577,7 @@ cp -fr /builddir/custom-config/viperos/configurations/home/xonsh-config/.xonshrc
 # Setup CMapTools
 cp -fr /builddir/custom-config/viperos/configurations/home/.cmaptools /mnt/sysimage/etc/skel
 
-# Copy the config files
+# Copy the .config files
 cp -fr /builddir/custom-config/viperos/configurations/home/.config/* /mnt/sysimage/etc/skel/.config
 chmod 755 /mnt/sysimage/etc/skel/.config/sxiv/exec/image-info
 
@@ -587,7 +587,7 @@ cp -fr /builddir/custom-config/viperos/configurations/home/.local/* /mnt/sysimag
 # Copy pass folder structure
 cp -fr /builddir/custom-config/viperos/configurations/home/.password-store /mnt/sysimage/etc/skel
 
-# Copy restore file 
+# Copy restore file
 cp -fr /builddir/custom-config/viperos/configurations/home/.restore /mnt/sysimage/etc/skel
 
 # Setup GromitMPX
