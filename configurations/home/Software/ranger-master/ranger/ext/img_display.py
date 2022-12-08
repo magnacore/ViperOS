@@ -34,6 +34,8 @@ from ranger import PY3
 from ranger.core.shared import FileManagerAware, SettingsAware
 from ranger.ext.popen23 import Popen23
 
+myhome = os.path.expanduser('~')
+
 W3MIMGDISPLAY_ENV = "W3MIMGDISPLAY_PATH"
 W3MIMGDISPLAY_OPTIONS = []
 W3MIMGDISPLAY_PATHS = [
@@ -746,7 +748,7 @@ class UeberzugImageDisplayer(ImageDisplayer):
 
         # We cannot close the process because that stops the preview.
         # pylint: disable=consider-using-with
-        self.process = Popen(['ueberzug', 'layer', '--silent'], cwd=self.working_dir,
+        self.process = Popen([f'{myhome}/anaconda3/envs/util/bin/python', f'{myhome}/anaconda3/envs/util/bin/ueberzug', 'layer', '--silent'], cwd=self.working_dir,
                              stdin=PIPE, universal_newlines=True)
         self.is_initialized = True
 
