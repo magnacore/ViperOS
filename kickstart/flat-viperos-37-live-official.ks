@@ -599,7 +599,7 @@ cp -fr /builddir/custom-config/viperos/configurations/home/.vim /mnt/sysimage/et
 cp -fr /builddir/custom-config/viperos/configurations/home/vim-config/.vimrc /mnt/sysimage/etc/skel
 
 # Setup Alacritty
-cp -fr /builddir/custom-config/viperos/configurations/home/alacritty-config/.alacritty.yml /mnt/sysimage/etc/skel
+# cp -fr /builddir/custom-config/viperos/configurations/home/alacritty-config/.alacritty.yml /mnt/sysimage/etc/skel
 
 # Setup Bash
 cp -fr /builddir/custom-config/viperos/configurations/home/bash-config/.bash_aliases /mnt/sysimage/etc/skel
