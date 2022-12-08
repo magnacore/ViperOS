@@ -33,6 +33,7 @@ Vim inspired, Python powered and keyboard driven GNU/Linux distro for scientists
 ## What you should know before installing
 - ViperOS takes 1 to 3 minutes to load for the first time because Anaconda takes time to setup. This is why SSD is highly recommended.
 - The size of the ISO is larger than other distributions because ViperOS comes pre-configured with Anaconda which is ~6GB install. Plus, it also comes with many useful Flatpaks pre-installed which take more space.
+- Even though ViperOS uses Xonsh shell, Bash is still the default.
 
 ## Sample software preloaded
 
