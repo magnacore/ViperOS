@@ -557,6 +557,7 @@ cp -fr /builddir/custom-config/viperos/configurations/home/dotfiles/.firstlogin 
 # Setup QTile
 cp -fr /builddir/custom-config/viperos/configurations/executables/qtile/xfce4-session.xml /mnt/sysimage/etc/xdg/xfce4/xfconf/xfce-perchannel-xml
 cp -fr /builddir/custom-config/viperos/configurations/executables/qtile/qtile /mnt/sysimage/etc/skel/anaconda3/envs/qtile/bin
+chmod 755 /mnt/sysimage/etc/skel/anaconda3/envs/qtile/bin/qtile
 cp -fr /builddir/custom-config/viperos/configurations/executables/qtile/qtile-launch /mnt/sysimage/usr/local/bin
 chmod 755 /mnt/sysimage/usr/local/bin/qtile-launch
 cp -fr /builddir/custom-config/viperos/configurations/executables/qtile/QTile.desktop /mnt/sysimage/etc/xdg/autostart
@@ -620,6 +621,8 @@ cp -fr /builddir/custom-config/viperos/configurations/home/ANACONDA3_LICENSE.txt
 
 # Setup plocate
 cp -fr /builddir/custom-config/viperos/configurations/etc/updatedb.conf /mnt/sysimage/etc
+chown root:plocate /var/lib/plocate/plocate.db
+chmod 640 /var/lib/plocate/plocate.db
 
 # Setup Ueberzug
 cp -fr /builddir/custom-config/viperos/configurations/executables/ueberzug/ueberzug /mnt/sysimage/etc/skel/anaconda3/envs/util/bin
