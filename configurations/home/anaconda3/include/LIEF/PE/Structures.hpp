@@ -81,9 +81,9 @@ struct pe_symbol {
   union {
     char ShortName[8];
     struct
-    {
-      uint32_t Zeroes;
-      uint32_t Offset;
+		{
+	    uint32_t Zeroes;
+			uint32_t Offset;
     } Name;
   } Name;
   uint32_t Value;
@@ -155,7 +155,7 @@ union Auxiliary {
 };
 
 
-/// The Import Directory Table.
+/// @brief The Import Directory Table.
 ///
 /// There is a single array of these and one entry per imported DLL.
 struct pe_import {
@@ -196,7 +196,7 @@ struct pe64_tls {
 };
 
 
-/// The DOS compatible header at the front of all PEs.
+/// @brief The DOS compatible header at the front of all PEs.
 struct pe_dos_header {
   uint16_t Magic;
   uint16_t UsedBytesInTheLastPage;
@@ -323,7 +323,7 @@ struct pe_pdb_20 {
 struct pe_pogo {
   uint32_t start_rva;
   uint32_t size;
-  char     name[1];
+  char     name[1]; 
 };
 
 
@@ -356,12 +356,6 @@ struct pe_resource_string {
   uint16_t Name[1];
 };
 
-struct pe_resource_acceltableentry {
-  int16_t fFlags;
-  int16_t wAnsi;
-  int16_t wId;
-  int16_t padding;
-};
 
 //
 // Export structures
@@ -409,8 +403,8 @@ struct pe_resource_version_info {
   // uint16_t children
 };
 
-//! Resource icons directory structure
-//! Based on https://docs.microsoft.com/en-us/windows/win32/menurc/resources-reference
+//! @brief Resource icons directory structure
+//! Based on https://msdn.microsoft.com/en-us/library/ff468901(v=vs.85).aspx
 //!
 //! This is the begining of the RESOURCE_TYPES::GROUP_ICON content
 struct pe_resource_icon_dir {
@@ -420,31 +414,31 @@ struct pe_resource_icon_dir {
 };
 
 
-//! Structure that follows pe_resource_icon_dir in a resource entry
+//! @brief Structure that follows pe_resource_icon_dir in a resource entry
 struct pe_resource_icon_group {
-  uint8_t width;        ///< Width, in pixels, of the image
-  uint8_t height;       ///< Height, in pixels, of the image
-  uint8_t color_count;  ///< Number of colors in image (0 if >=8bpp)
-  uint8_t reserved;     ///< Reserved (must be 0)
-  uint16_t planes;      ///< Color Planes
-  uint16_t bit_count;   ///< Bits per pixel
-  uint32_t size;        ///< Size of the image in bytes
-  uint16_t ID;          ///< The associated ID
+	uint8_t width;        ///< Width, in pixels, of the image
+	uint8_t height;       ///< Height, in pixels, of the image
+	uint8_t color_count;  ///< Number of colors in image (0 if >=8bpp)
+	uint8_t reserved;     ///< Reserved (must be 0)
+	uint16_t planes;      ///< Color Planes
+	uint16_t bit_count;   ///< Bits per pixel
+	uint32_t size;        ///< Size of the image in bytes
+	uint16_t ID;          ///< The associated ID
 };
 
-//! Structure that follows pe_resource_icon_dir in a icon **file**
+//! @brief Structure that follows pe_resource_icon_dir in a icon **file**
 struct pe_icon_header {
-  uint8_t width;        ///< Width, in pixels, of the image
-  uint8_t height;       ///< Height, in pixels, of the image
-  uint8_t color_count;  ///< Number of colors in image (0 if >=8bpp)
-  uint8_t reserved;     ///< Reserved (must be 0)
-  uint16_t planes;      ///< Color Planes
-  uint16_t bit_count;   ///< Bits per pixel
-  uint32_t size;        ///< Size of the image in bytes
-  uint32_t offset;      ///< Offset to the pixels
+	uint8_t width;        ///< Width, in pixels, of the image
+	uint8_t height;       ///< Height, in pixels, of the image
+	uint8_t color_count;  ///< Number of colors in image (0 if >=8bpp)
+	uint8_t reserved;     ///< Reserved (must be 0)
+	uint16_t planes;      ///< Color Planes
+	uint16_t bit_count;   ///< Bits per pixel
+	uint32_t size;        ///< Size of the image in bytes
+	uint32_t offset;      ///< Offset to the pixels
 };
 
-//! Extended dialog box template
+//! @brief Extended dialog box template
 struct pe_dialog_template_ext {
   uint16_t version;
   uint16_t signature;
@@ -466,7 +460,7 @@ struct pe_dialog_template_ext {
   // char16_t  typeface[stringLen];
 };
 
-//! Dialog box template
+//! @brief Dialog box template
 struct pe_dialog_template {
   uint32_t style;
   uint32_t ext_style;
@@ -478,7 +472,7 @@ struct pe_dialog_template {
 };
 
 
-//! Extended dialog box template item
+//! @brief Extended dialog box template item
 struct pe_dialog_item_template_ext {
   uint32_t help_id;
   uint32_t ext_style;
@@ -494,7 +488,7 @@ struct pe_dialog_item_template_ext {
 };
 
 
-//! Dialog box template item
+//! @brief Dialog box template item
 struct pe_dialog_item_template {
   uint32_t style;
   uint32_t ext_style;
@@ -532,7 +526,13 @@ struct pe_exception_entry_arm {
   uint32_t data;
 };
 
+
+
+
+
+
 #pragma pack(pop)
+
 
 
 static const HEADER_CHARACTERISTICS header_characteristics_array[] = {
@@ -552,6 +552,22 @@ static const HEADER_CHARACTERISTICS header_characteristics_array[] = {
   HEADER_CHARACTERISTICS::IMAGE_FILE_DLL,
   HEADER_CHARACTERISTICS::IMAGE_FILE_UP_SYSTEM_ONLY,
   HEADER_CHARACTERISTICS::IMAGE_FILE_BYTES_REVERSED_HI
+};
+
+
+// Common section type
+enum class PE_SECTION_TYPES : uint8_t {
+  TEXT       = 0,
+  TLS        = 1,
+  IMPORT     = 2,
+  DATA       = 3,
+  BSS        = 4,
+  RESOURCE   = 5,
+  RELOCATION = 6,
+  EXPORT     = 7,
+  DEBUG      = 8,
+  LOAD_CONFIG = 9,
+  UNKNOWN     = 10
 };
 
 
@@ -591,6 +607,12 @@ static const SECTION_CHARACTERISTICS section_characteristics_array[] = {
   SECTION_CHARACTERISTICS::IMAGE_SCN_MEM_EXECUTE,
   SECTION_CHARACTERISTICS::IMAGE_SCN_MEM_READ,
   SECTION_CHARACTERISTICS::IMAGE_SCN_MEM_WRITE,
+};
+
+
+enum class PE_TYPE : uint16_t {
+    PE32      = 0x10b, ///< 32bits
+    PE32_PLUS = 0x20b  ///< 64 bits
 };
 
 
@@ -673,15 +695,6 @@ static const DIALOG_BOX_STYLES dialog_box_styles_array[] = {
   DIALOG_BOX_STYLES::DS_CENTERMOUSE,
   DIALOG_BOX_STYLES::DS_CONTEXTHELP,
   DIALOG_BOX_STYLES::DS_SHELLFONT,
-};
-
-static const ACCELERATOR_FLAGS accelerator_array[] = {
-  ACCELERATOR_FLAGS::FVIRTKEY,
-  ACCELERATOR_FLAGS::FNOINVERT,
-  ACCELERATOR_FLAGS::FSHIFT,
-  ACCELERATOR_FLAGS::FCONTROL,
-  ACCELERATOR_FLAGS::FALT,
-  ACCELERATOR_FLAGS::END,
 };
 
 // From Virtualbox - include/iprt/formats/pecoff.h

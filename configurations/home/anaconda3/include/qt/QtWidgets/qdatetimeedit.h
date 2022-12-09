@@ -42,7 +42,6 @@
 
 #include <QtWidgets/qtwidgetsglobal.h>
 #include <QtCore/qdatetime.h>
-#include <QtCore/qcalendar.h>
 #include <QtCore/qvariant.h>
 #include <QtWidgets/qabstractspinbox.h>
 
@@ -93,18 +92,15 @@ public:
     Q_DECLARE_FLAGS(Sections, Section)
     Q_FLAG(Sections)
 
-    explicit QDateTimeEdit(QWidget *parent = nullptr);
-    explicit QDateTimeEdit(const QDateTime &dt, QWidget *parent = nullptr);
-    explicit QDateTimeEdit(const QDate &d, QWidget *parent = nullptr);
-    explicit QDateTimeEdit(const QTime &t, QWidget *parent = nullptr);
+    explicit QDateTimeEdit(QWidget *parent = Q_NULLPTR);
+    explicit QDateTimeEdit(const QDateTime &dt, QWidget *parent = Q_NULLPTR);
+    explicit QDateTimeEdit(const QDate &d, QWidget *parent = Q_NULLPTR);
+    explicit QDateTimeEdit(const QTime &t, QWidget *parent = Q_NULLPTR);
     ~QDateTimeEdit();
 
     QDateTime dateTime() const;
     QDate date() const;
     QTime time() const;
-
-    QCalendar calendar() const;
-    void setCalendar(QCalendar calendar);
 
     QDateTime minimumDateTime() const;
     void clearMinimumDateTime();
@@ -195,10 +191,7 @@ protected:
     void paintEvent(QPaintEvent *event) override;
     void initStyleOption(QStyleOptionSpinBox *option) const;
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QDateTimeEdit(const QVariant &val, QVariant::Type parserType, QWidget *parent = nullptr);
-#endif
-    QDateTimeEdit(const QVariant &val, QMetaType::Type parserType, QWidget *parent = nullptr);
+    QDateTimeEdit(const QVariant &val, QVariant::Type parserType, QWidget *parent = Q_NULLPTR);
 private:
     Q_DECLARE_PRIVATE(QDateTimeEdit)
     Q_DISABLE_COPY(QDateTimeEdit)
@@ -211,8 +204,8 @@ class Q_WIDGETS_EXPORT QTimeEdit : public QDateTimeEdit
     Q_OBJECT
     Q_PROPERTY(QTime time READ time WRITE setTime NOTIFY userTimeChanged USER true)
 public:
-    explicit QTimeEdit(QWidget *parent = nullptr);
-    explicit QTimeEdit(const QTime &time, QWidget *parent = nullptr);
+    explicit QTimeEdit(QWidget *parent = Q_NULLPTR);
+    explicit QTimeEdit(const QTime &time, QWidget *parent = Q_NULLPTR);
     ~QTimeEdit();
 
 Q_SIGNALS:
@@ -224,8 +217,8 @@ class Q_WIDGETS_EXPORT QDateEdit : public QDateTimeEdit
     Q_OBJECT
     Q_PROPERTY(QDate date READ date WRITE setDate NOTIFY userDateChanged USER true)
 public:
-    explicit QDateEdit(QWidget *parent = nullptr);
-    explicit QDateEdit(const QDate &date, QWidget *parent = nullptr);
+    explicit QDateEdit(QWidget *parent = Q_NULLPTR);
+    explicit QDateEdit(const QDate &date, QWidget *parent = Q_NULLPTR);
     ~QDateEdit();
 
 Q_SIGNALS:

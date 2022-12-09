@@ -52,7 +52,7 @@ namespace Qt3DRender {
 
 class QAbstractLightPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QAbstractLight : public Qt3DCore::QComponent
+class QT3DRENDERSHARED_EXPORT QAbstractLight : public Qt3DCore::QComponent
 {
     Q_OBJECT
     Q_PROPERTY(Type type READ type)
@@ -86,7 +86,7 @@ Q_SIGNALS:
 
 private:
     Q_DECLARE_PRIVATE(QAbstractLight)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DRender

@@ -40,7 +40,7 @@ QT_CHARTS_BEGIN_NAMESPACE
 
 class QLogValueAxisPrivate;
 
-class Q_CHARTS_EXPORT QLogValueAxis : public QAbstractAxis
+class QT_CHARTS_EXPORT QLogValueAxis : public QAbstractAxis
 {
     Q_OBJECT
     Q_PROPERTY(qreal min READ min WRITE setMin NOTIFY minChanged)
@@ -51,11 +51,11 @@ class Q_CHARTS_EXPORT QLogValueAxis : public QAbstractAxis
     Q_PROPERTY(int minorTickCount READ minorTickCount WRITE setMinorTickCount NOTIFY minorTickCountChanged)
 
 public:
-    explicit QLogValueAxis(QObject *parent = nullptr);
+    explicit QLogValueAxis(QObject *parent = Q_NULLPTR);
     ~QLogValueAxis();
 
 protected:
-    QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = nullptr);
+    QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = Q_NULLPTR);
 
 public:
     AxisType type() const;

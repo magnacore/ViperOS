@@ -48,10 +48,10 @@ namespace Qt3DCore {
 class QNode;
 class QNodeCreatedChangeBasePrivate;
 
-class Q_3DCORESHARED_EXPORT QNodeCreatedChangeBase : public QSceneChange
+class QT3DCORESHARED_EXPORT QNodeCreatedChangeBase : public QSceneChange
 {
 public:
-    Q3D_DECL_DEPRECATED explicit QNodeCreatedChangeBase(const QNode *node);
+    explicit QNodeCreatedChangeBase(const QNode *node);
     ~QNodeCreatedChangeBase();
 
     QNodeId parentId() const Q_DECL_NOTHROW;
@@ -71,14 +71,11 @@ template<typename T>
 class QNodeCreatedChange : public QNodeCreatedChangeBase
 {
 public:
-    QT_WARNING_PUSH
-    QT_WARNING_DISABLE_DEPRECATED
     explicit QNodeCreatedChange(const QNode *_node)
         : QNodeCreatedChangeBase(_node)
         , data()
     {
     }
-    QT_WARNING_POP
 
     T data;
 };

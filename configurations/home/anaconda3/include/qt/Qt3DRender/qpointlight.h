@@ -48,7 +48,7 @@ namespace Qt3DRender {
 
 class QPointLightPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QPointLight : public QAbstractLight
+class QT3DRENDERSHARED_EXPORT QPointLight : public QAbstractLight
 {
     Q_OBJECT
     Q_PROPERTY(float constantAttenuation READ constantAttenuation WRITE setConstantAttenuation NOTIFY constantAttenuationChanged)

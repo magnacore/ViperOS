@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "KDC.CONF" "5" " " "1.19.2" "MIT Kerberos"
+.TH "KDC.CONF" "5" " " "1.18.2" "MIT Kerberos"
 .SH NAME
 kdc.conf \- Kerberos V5 KDC configuration file
 .
@@ -39,7 +39,7 @@ KDC programs mentioned, krb5.conf and kdc.conf will be merged into a
 single configuration profile.
 .sp
 Normally, the kdc.conf file is found in the KDC state directory,
-\fB/home/goldust/anaconda3/var\fP\fB/krb5kdc\fP\&.  You can override the default location by setting the
+\fB/home/manuj/anaconda3/var\fP\fB/krb5kdc\fP\&.  You can override the default location by setting the
 environment variable \fBKRB5_KDC_PROFILE\fP\&.
 .sp
 Please note that you need to restart the KDC daemon for any configuration
@@ -155,7 +155,7 @@ The following tags may be specified in a [realms] subsection:
 kadmind(8) uses to determine which principals are allowed
 which permissions on the Kerberos database.  To operate without an
 ACL file, set this relation to the empty string with \fBacl_file =
-""\fP\&.  The default value is \fB/home/goldust/anaconda3/var\fP\fB/krb5kdc\fP\fB/kadm5.acl\fP\&.  For more
+""\fP\&.  The default value is \fB/home/manuj/anaconda3/var\fP\fB/krb5kdc\fP\fB/kadm5.acl\fP\&.  For more
 information on Kerberos ACL file see kadm5.acl(5)\&.
 .TP
 \fBdatabase_module\fP
@@ -169,7 +169,7 @@ values will be used for all database parameters.
 (String, deprecated.)  This relation specifies the location of the
 Kerberos database for this realm, if the DB2 module is being used
 and the \fI\%[dbmodules]\fP configuration section does not specify a
-database name.  The default value is \fB/home/goldust/anaconda3/var\fP\fB/krb5kdc\fP\fB/principal\fP\&.
+database name.  The default value is \fB/home/manuj/anaconda3/var\fP\fB/krb5kdc\fP\fB/principal\fP\&.
 .TP
 \fBdefault_principal_expiration\fP
 (abstime string.)  Specifies the default expiration date of
@@ -283,19 +283,14 @@ not marked as host\-based by the client.
 (Boolean value.)  Specifies whether incremental database
 propagation is enabled.  The default value is false.
 .TP
-\fBiprop_ulogsize\fP
+\fBiprop_master_ulogsize\fP
 (Integer.)  Specifies the maximum number of log entries to be
 retained for incremental propagation.  The default value is 1000.
-Prior to release 1.11, the maximum value was 2500.  New in release
-1.19.
-.TP
-\fBiprop_master_ulogsize\fP
-The name for \fBiprop_ulogsize\fP prior to release 1.19.  Its value is
-used as a fallback if \fBiprop_ulogsize\fP is not specified.
+Prior to release 1.11, the maximum value was 2500.
 .TP
 \fBiprop_replica_poll\fP
 (Delta time string.)  Specifies how often the replica KDC polls
-for new updates from the primary.  The default value is \fB2m\fP
+for new updates from the master.  The default value is \fB2m\fP
 (that is, two minutes).  New in release 1.17.
 .TP
 \fBiprop_slave_poll\fP
@@ -319,7 +314,7 @@ address at the port specified in \fBiprop_port\fP\&.  New in release
 (Port number.)  Specifies the port number to be used for
 incremental propagation.  When \fBiprop_enable\fP is true, this
 relation is required in the replica KDC configuration file, and
-this relation or \fBiprop_listen\fP is required in the primary
+this relation or \fBiprop_listen\fP is required in the master
 configuration file, as there is no default port number.  Port
 numbers specified in \fBiprop_listen\fP entries will override this
 port number for the kadmind(8) daemon.
@@ -361,7 +356,7 @@ assigned port for kadmind is 749, which is used by default.
 .TP
 \fBkey_stash_file\fP
 (String.)  Specifies the location where the master key has been
-stored (via kdb5_util stash).  The default is \fB/home/goldust/anaconda3/var\fP\fB/krb5kdc\fP\fB/.k5.REALM\fP, where \fIREALM\fP is the Kerberos realm.
+stored (via kdb5_util stash).  The default is \fB/home/manuj/anaconda3/var\fP\fB/krb5kdc\fP\fB/.k5.REALM\fP, where \fIREALM\fP is the Kerberos realm.
 .TP
 \fBkdc_listen\fP
 (Whitespace\- or comma\-separated list.)  Specifies the UDP
@@ -548,7 +543,7 @@ The following tags may be specified in a [dbmodules] subsection:
 .TP
 \fBdatabase_name\fP
 This DB2\-specific tag indicates the location of the database in
-the filesystem.  The default is \fB/home/goldust/anaconda3/var\fP\fB/krb5kdc\fP\fB/principal\fP\&.
+the filesystem.  The default is \fB/home/manuj/anaconda3/var\fP\fB/krb5kdc\fP\fB/principal\fP\&.
 .TP
 \fBdb_library\fP
 This tag indicates the name of the loadable database module.  The
@@ -757,10 +752,10 @@ For each token type, the following tags may be specified:
 This is the server to send the RADIUS request to.  It can be a
 hostname with optional port, an ip address with optional port, or
 a Unix domain socket address.  The default is
-\fB/home/goldust/anaconda3/var\fP\fB/krb5kdc\fP\fB/<name>.socket\fP\&.
+\fB/home/manuj/anaconda3/var\fP\fB/krb5kdc\fP\fB/<name>.socket\fP\&.
 .TP
 \fBsecret\fP
-This tag indicates a filename (which may be relative to \fB/home/goldust/anaconda3/var\fP\fB/krb5kdc\fP)
+This tag indicates a filename (which may be relative to \fB/home/manuj/anaconda3/var\fP\fB/krb5kdc\fP)
 containing the secret used to encrypt the RADIUS packets.  The
 secret should appear in the first line of the file by itself;
 leading and trailing whitespace on the line will be removed.  If
@@ -961,8 +956,8 @@ in PKINIT requests.  The default value is false.  (New in release
 .sp
 Any tag in the configuration files which requires a list of encryption
 types can be set to some combination of the following strings.
-Encryption types marked as "weak" and "deprecated" are available for
-compatibility but not recommended for use.
+Encryption types marked as "weak" are available for compatibility but
+not recommended for use.
 .TS
 center;
 |l|l|.
@@ -976,7 +971,7 @@ _
 T{
 des3\-cbc\-sha1 des3\-hmac\-sha1 des3\-cbc\-sha1\-kd
 T}	T{
-Triple DES cbc mode with HMAC/sha1 (deprecated)
+Triple DES cbc mode with HMAC/sha1
 T}
 _
 T{
@@ -1006,7 +1001,7 @@ _
 T{
 arcfour\-hmac rc4\-hmac arcfour\-hmac\-md5
 T}	T{
-RC4 with HMAC/MD5 (deprecated)
+RC4 with HMAC/MD5
 T}
 _
 T{
@@ -1177,13 +1172,13 @@ Here\(aqs an example of a kdc.conf file:
 .UNINDENT
 .SH FILES
 .sp
-\fB/home/goldust/anaconda3/var\fP\fB/krb5kdc\fP\fB/kdc.conf\fP
+\fB/home/manuj/anaconda3/var\fP\fB/krb5kdc\fP\fB/kdc.conf\fP
 .SH SEE ALSO
 .sp
 krb5.conf(5), krb5kdc(8), kadm5.acl(5)
 .SH AUTHOR
 MIT
 .SH COPYRIGHT
-1985-2021, MIT
+1985-2020, MIT
 .\" Generated by docutils manpage writer.
 .

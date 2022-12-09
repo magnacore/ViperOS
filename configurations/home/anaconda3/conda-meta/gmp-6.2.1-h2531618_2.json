@@ -1,0 +1,80 @@
+{
+  "build": "h2531618_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/gmp-6.2.1-h2531618_2",
+  "features": "",
+  "files": [
+    "include/gmp.h",
+    "include/gmpxx.h",
+    "lib/libgmp.a",
+    "lib/libgmp.so",
+    "lib/libgmp.so.10",
+    "lib/libgmp.so.10.4.1",
+    "lib/libgmpxx.a",
+    "lib/libgmpxx.so",
+    "lib/libgmpxx.so.4",
+    "lib/libgmpxx.so.4.6.1",
+    "lib/pkgconfig/gmp.pc",
+    "lib/pkgconfig/gmpxx.pc",
+    "share/info/gmp.info",
+    "share/info/gmp.info-1",
+    "share/info/gmp.info-2"
+  ],
+  "fn": "gmp-6.2.1-h2531618_2.conda",
+  "legacy_bz2_md5": "ff3b51fcfc4c50141c74d44c734b1c5c",
+  "legacy_bz2_size": 833941,
+  "license": "GPL 2 and LGPL 3",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/gmp-6.2.1-h2531618_2",
+    "type": 1
+  },
+  "md5": "2e73d31066d9abc951ad4fe55e70cb98",
+  "name": "gmp",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/gmp-6.2.1-h2531618_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/gmp.h",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/gmp_1612242747963/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_",
+        "sha256": "c380d4abe4189f595767ea43cbbbeb19e6bd211e80cf1c9a4c483f52ff2d591b",
+        "sha256_in_prefix": "2c483bc5d16cb5f798ff62768b3ea15b56a9a9980d37d7143365d1344ad24591",
+        "size_in_bytes": 84768
+      },
+      {
+        "_path": "lib/pkgconfig/gmp.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/gmp_1612242747963/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_",
+        "sha256": "4cf494a03ac74480b87897b4ee8024c3a5d4ef1316cf9577d224e72323918e42",
+        "sha256_in_prefix": "91368687cf69151b277afadb23e4ff7573c3a8ea316d0fac78c67d22ad7dfec5",
+        "size_in_bytes": 496
+      },
+      {
+        "_path": "lib/pkgconfig/gmpxx.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/gmp_1612242747963/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_",
+        "sha256": "793887cbac5102d549c0ec2863d321ef609d8c2b92d7332160037a36fc9b2544",
+        "sha256_in_prefix": "da13eb688a83b4e6e8591d59b4b9cf6337f9d2240ed80b92708368aa60a80412",
+        "size_in_bytes": 531
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "gmp==6.2.1=h2531618_2",
+  "sha256": "8aff5ec4f1f6cade2b0663a261f58bd54672029c4a3651c89d34954bb2ea62f5",
+  "size": 552386,
+  "subdir": "linux-64",
+  "timestamp": 1612242995303,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/gmp-6.2.1-h2531618_2.conda",
+  "version": "6.2.1"
+}

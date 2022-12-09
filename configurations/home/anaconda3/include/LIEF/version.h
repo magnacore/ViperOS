@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,10 +22,9 @@
   #define LIEF_NAME "LIEF (Debug)"
 #endif
 
-#define LIEF_VERSION "0.11.5-"
+#define LIEF_VERSION "0.10.1-"
 #define LIEF_TAGGED 
 #define LIEF_TAG    ""
-#define LIEF_COMMIT ""
 
 #define HUMAN_VERSION " v" LIEF_VERSION
 #define HUMAN_NAME NAME HUMAN_VERSION

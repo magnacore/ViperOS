@@ -86,9 +86,6 @@ typedef off_t		Tcl_SeekOffset;
 #endif
 
 #ifdef __CYGWIN__
-#ifdef __cplusplus
-extern "C" {
-#endif
     /* Make some symbols available without including <windows.h> */
 #   define DWORD unsigned int
 #   define CP_UTF8 65001
@@ -98,12 +95,8 @@ extern "C" {
 #   define SOCKET unsigned int
 #   define WSAEWOULDBLOCK 10035
     typedef unsigned short WCHAR;
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wignored-attributes"
-#endif
-    __declspec(dllimport) extern __stdcall int GetModuleHandleExW(unsigned int, const void *, void *);
-    __declspec(dllimport) extern __stdcall int GetModuleFileNameW(void *, const void *, int);
+    __declspec(dllimport) extern __stdcall int GetModuleHandleExW(unsigned int, const char *, void *);
+    __declspec(dllimport) extern __stdcall int GetModuleFileNameW(void *, const char *, int);
     __declspec(dllimport) extern __stdcall int WideCharToMultiByte(int, int, const void *, int,
 	    char *, int, const char *, void *);
     __declspec(dllimport) extern __stdcall int MultiByteToWideChar(int, int, const char *, int,
@@ -114,15 +107,9 @@ extern "C" {
     __declspec(dllimport) extern __stdcall int GetFileAttributesW(const WCHAR *);
     __declspec(dllimport) extern __stdcall int SetFileAttributesW(const WCHAR *, int);
     __declspec(dllimport) extern int cygwin_conv_path(int, const void *, void *, int);
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
 #   define timezone _timezone
     extern int TclOSstat(const char *name, void *statBuf);
     extern int TclOSlstat(const char *name, void *statBuf);
-#ifdef __cplusplus
-}
-#endif
 #elif defined(HAVE_STRUCT_STAT64) && !defined(__APPLE__)
 #   define TclOSstat(name, buf) stat64(name, (struct stat64 *)buf)
 #   define TclOSlstat(name,buf) lstat64(name, (struct stat64 *)buf)

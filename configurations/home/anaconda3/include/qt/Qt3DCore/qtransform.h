@@ -50,7 +50,7 @@ QT_BEGIN_NAMESPACE
 namespace Qt3DCore {
 
 class QTransformPrivate;
-class Q_3DCORESHARED_EXPORT QTransform : public QComponent
+class QT3DCORESHARED_EXPORT QTransform : public QComponent
 {
     Q_OBJECT
     Q_PROPERTY(QMatrix4x4 matrix READ matrix WRITE setMatrix NOTIFY matrixChanged)
@@ -61,7 +61,6 @@ class Q_3DCORESHARED_EXPORT QTransform : public QComponent
     Q_PROPERTY(float rotationX READ rotationX WRITE setRotationX NOTIFY rotationXChanged)
     Q_PROPERTY(float rotationY READ rotationY WRITE setRotationY NOTIFY rotationYChanged)
     Q_PROPERTY(float rotationZ READ rotationZ WRITE setRotationZ NOTIFY rotationZChanged)
-    Q_PROPERTY(QMatrix4x4 worldMatrix READ worldMatrix NOTIFY worldMatrixChanged REVISION 14)
 
 public:
     explicit QTransform(QNode *parent = nullptr);
@@ -80,16 +79,13 @@ public:
     Q_INVOKABLE static QQuaternion fromAxesAndAngles(const QVector3D &axis1, float angle1,
                                                      const QVector3D &axis2, float angle2,
                                                      const QVector3D &axis3, float angle3);
-    Q_INVOKABLE static QQuaternion fromAxes(const QVector3D &xAxis, const QVector3D &yAxis, const QVector3D &zAxis);
 
     Q_INVOKABLE static QQuaternion fromEulerAngles(const QVector3D &eulerAngles);
     Q_INVOKABLE static QQuaternion fromEulerAngles(float pitch, float yaw, float roll);
 
     Q_INVOKABLE static QMatrix4x4 rotateAround(const QVector3D &point, float angle, const QVector3D &axis);
-    Q_INVOKABLE static QMatrix4x4 rotateFromAxes(const QVector3D &xAxis, const QVector3D &yAxis, const QVector3D &zAxis);
 
     QMatrix4x4 matrix() const;
-    QMatrix4x4 worldMatrix() const;
 
     float rotationX() const;
     float rotationY() const;
@@ -115,16 +111,13 @@ Q_SIGNALS:
     void rotationXChanged(float rotationX);
     void rotationYChanged(float rotationY);
     void rotationZChanged(float rotationZ);
-    void worldMatrixChanged(const QMatrix4x4 &worldMatrix);
 
 protected:
     explicit QTransform(QTransformPrivate &dd, QNode *parent = nullptr);
-    // TODO Unused remove in Qt6
-    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override;
 
 private:
     Q_DECLARE_PRIVATE(QTransform)
-    QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DCore

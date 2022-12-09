@@ -39,7 +39,7 @@
 
 #include <QtCore/qshareddata.h>
 #include <QtCore/qstring.h>
-#include <QtSerialBus/qtserialbusglobal.h>
+#include <QtSerialBus/qserialbusglobal.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -65,9 +65,6 @@ public:
     }
 
     QString name() const;
-    QString description() const;
-    QString serialNumber() const;
-    int channel() const;
 
     bool hasFlexibleDataRate() const;
     bool isVirtual() const;

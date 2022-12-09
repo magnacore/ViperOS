@@ -79,7 +79,7 @@ public:
         ClosingState = QAbstractSocket::ClosingState
     };
 
-    QLocalSocket(QObject *parent = nullptr);
+    QLocalSocket(QObject *parent = Q_NULLPTR);
     ~QLocalSocket();
 
     void connectToServer(OpenMode openMode = ReadWrite);
@@ -91,12 +91,12 @@ public:
     QString fullServerName() const;
 
     void abort();
-    virtual bool isSequential() const override;
-    virtual qint64 bytesAvailable() const override;
-    virtual qint64 bytesToWrite() const override;
-    virtual bool canReadLine() const override;
-    virtual bool open(OpenMode openMode = ReadWrite) override;
-    virtual void close() override;
+    virtual bool isSequential() const Q_DECL_OVERRIDE;
+    virtual qint64 bytesAvailable() const Q_DECL_OVERRIDE;
+    virtual qint64 bytesToWrite() const Q_DECL_OVERRIDE;
+    virtual bool canReadLine() const Q_DECL_OVERRIDE;
+    virtual bool open(OpenMode openMode = ReadWrite) Q_DECL_OVERRIDE;
+    virtual void close() Q_DECL_OVERRIDE;
     LocalSocketError error() const;
     bool flush();
     bool isValid() const;
@@ -109,37 +109,33 @@ public:
     qintptr socketDescriptor() const;
 
     LocalSocketState state() const;
-    bool waitForBytesWritten(int msecs = 30000) override;
+    bool waitForBytesWritten(int msecs = 30000) Q_DECL_OVERRIDE;
     bool waitForConnected(int msecs = 30000);
     bool waitForDisconnected(int msecs = 30000);
-    bool waitForReadyRead(int msecs = 30000) override;
+    bool waitForReadyRead(int msecs = 30000) Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     void connected();
     void disconnected();
-#if QT_DEPRECATED_SINCE(5,15)
-    QT_DEPRECATED_NETWORK_API_5_15_X("Use QLocalSocket::errorOccurred(QLocalSocket::LocalSocketError) instead")
     void error(QLocalSocket::LocalSocketError socketError);
-#endif
-    void errorOccurred(QLocalSocket::LocalSocketError socketError);
     void stateChanged(QLocalSocket::LocalSocketState socketState);
 
 protected:
-    virtual qint64 readData(char*, qint64) override;
-    virtual qint64 writeData(const char*, qint64) override;
+    virtual qint64 readData(char*, qint64) Q_DECL_OVERRIDE;
+    virtual qint64 writeData(const char*, qint64) Q_DECL_OVERRIDE;
 
 private:
     Q_DISABLE_COPY(QLocalSocket)
 #if defined(QT_LOCALSOCKET_TCP)
     Q_PRIVATE_SLOT(d_func(), void _q_stateChanged(QAbstractSocket::SocketState))
-    Q_PRIVATE_SLOT(d_func(), void _q_errorOccurred(QAbstractSocket::SocketError))
+    Q_PRIVATE_SLOT(d_func(), void _q_error(QAbstractSocket::SocketError))
 #elif defined(Q_OS_WIN)
     Q_PRIVATE_SLOT(d_func(), void _q_canWrite())
     Q_PRIVATE_SLOT(d_func(), void _q_pipeClosed())
     Q_PRIVATE_SLOT(d_func(), void _q_winError(ulong, const QString &))
 #else
     Q_PRIVATE_SLOT(d_func(), void _q_stateChanged(QAbstractSocket::SocketState))
-    Q_PRIVATE_SLOT(d_func(), void _q_errorOccurred(QAbstractSocket::SocketError))
+    Q_PRIVATE_SLOT(d_func(), void _q_error(QAbstractSocket::SocketError))
     Q_PRIVATE_SLOT(d_func(), void _q_connectToSocket())
     Q_PRIVATE_SLOT(d_func(), void _q_abortConnectionAttempt())
 #endif

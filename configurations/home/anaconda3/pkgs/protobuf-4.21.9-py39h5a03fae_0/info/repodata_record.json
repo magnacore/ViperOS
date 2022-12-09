@@ -1,0 +1,30 @@
+{
+  "arch": "x86_64",
+  "build": "py39h5a03fae_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libprotobuf 3.21.9.*",
+    "libprotobuf >=3.21.9,<3.22.0a0",
+    "libstdcxx-ng >=12",
+    "python >=3.9,<3.10.0a0",
+    "python_abi 3.9.* *_cp39",
+    "setuptools"
+  ],
+  "features": "",
+  "fn": "protobuf-4.21.9-py39h5a03fae_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "aef7a17fef6bea0c48f7933ba8443964",
+  "name": "protobuf",
+  "platform": "linux",
+  "sha256": "e6c0152c98efdf68d557c6415ffe564fabbeea4676d5ba32c33d496a77e609ad",
+  "size": 347526,
+  "subdir": "linux-64",
+  "timestamp": 1666889968315,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/protobuf-4.21.9-py39h5a03fae_0.tar.bz2",
+  "version": "4.21.9"
+}

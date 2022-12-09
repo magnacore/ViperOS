@@ -43,7 +43,7 @@ class Q_PURCHASING_EXPORT QInAppTransaction: public QObject
     Q_OBJECT
     Q_ENUMS(TransactionStatus FailureReason)
     Q_PROPERTY(TransactionStatus status READ status CONSTANT)
-    Q_PROPERTY(QInAppProduct* product READ product CONSTANT)
+    Q_PROPERTY(QInAppProduct * product READ product CONSTANT)
     Q_PROPERTY(QString orderId READ orderId CONSTANT)
     Q_PROPERTY(FailureReason failureReason READ failureReason CONSTANT)
     Q_PROPERTY(QString errorString READ errorString CONSTANT)
@@ -79,7 +79,7 @@ public:
 protected:
     explicit QInAppTransaction(TransactionStatus status,
                                QInAppProduct *product,
-                               QObject *parent = nullptr);
+                               QObject *parent = Q_NULLPTR);
 
 private:
     Q_DISABLE_COPY(QInAppTransaction)

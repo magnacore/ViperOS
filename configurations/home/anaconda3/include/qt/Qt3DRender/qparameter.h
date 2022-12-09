@@ -51,7 +51,7 @@ namespace Qt3DRender {
 class QParameterPrivate;
 class QAbstractTexture;
 
-class Q_3DRENDERSHARED_EXPORT QParameter : public Qt3DCore::QNode
+class QT3DRENDERSHARED_EXPORT QParameter : public Qt3DCore::QNode
 {
     Q_OBJECT
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
@@ -79,7 +79,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(QParameter)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DRender

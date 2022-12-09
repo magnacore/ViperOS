@@ -32,8 +32,8 @@
 #include <QtDesigner/sdk_global.h>
 #include <QtDesigner/abstractformwindow.h>
 
-#include <QtCore/qobject.h>
-#include <QtCore/qscopedpointer.h>
+#include <QtCore/QObject>
+#include <QtCore/QScopedPointer>
 
 QT_BEGIN_NAMESPACE
 
@@ -49,23 +49,21 @@ class QDESIGNER_SDK_EXPORT QDesignerFormWindowManagerInterface: public QObject
 {
     Q_OBJECT
 public:
-    explicit QDesignerFormWindowManagerInterface(QObject *parent = nullptr);
+    explicit QDesignerFormWindowManagerInterface(QObject *parent = Q_NULLPTR);
     virtual ~QDesignerFormWindowManagerInterface();
 
     enum Action
     {
-#if QT_CONFIG(clipboard)
         CutAction = 100,
         CopyAction,
         PasteAction,
-#endif
-        DeleteAction = 103,
+        DeleteAction,
         SelectAllAction,
 
         LowerAction = 200,
         RaiseAction,
 
-        UndoAction = 300,
+        UndoAction =  300,
         RedoAction,
 
         HorizontalLayoutAction = 400,
@@ -80,7 +78,7 @@ public:
 
         DefaultPreviewAction = 500,
 
-        FormWindowSettingsDialogAction = 600
+        FormWindowSettingsDialogAction =  600
     };
 
     enum ActionGroup
@@ -91,11 +89,9 @@ public:
     virtual QAction *action(Action action) const = 0;
     virtual QActionGroup *actionGroup(ActionGroup actionGroup) const = 0;
 
-#if QT_CONFIG(clipboard)
     QAction *actionCut() const;
     QAction *actionCopy() const;
     QAction *actionPaste() const;
-#endif
     QAction *actionDelete() const;
     QAction *actionSelectAll() const;
     QAction *actionLower() const;
@@ -118,7 +114,7 @@ public:
     virtual int formWindowCount() const = 0;
     virtual QDesignerFormWindowInterface *formWindow(int index) const = 0;
 
-    virtual QDesignerFormWindowInterface *createFormWindow(QWidget *parentWidget = nullptr, Qt::WindowFlags flags = Qt::WindowFlags()) = 0;
+    virtual QDesignerFormWindowInterface *createFormWindow(QWidget *parentWidget = Q_NULLPTR, Qt::WindowFlags flags = Qt::WindowFlags()) = 0;
 
     virtual QDesignerFormEditorInterface *core() const = 0;
 

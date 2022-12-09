@@ -63,7 +63,7 @@ class Q_WIDGETS_EXPORT QAction : public QObject
     Q_DECLARE_PRIVATE(QAction)
 
     Q_PROPERTY(bool checkable READ isCheckable WRITE setCheckable NOTIFY changed)
-    Q_PROPERTY(bool checked READ isChecked WRITE setChecked NOTIFY toggled)
+    Q_PROPERTY(bool checked READ isChecked WRITE setChecked DESIGNABLE isCheckable NOTIFY toggled)
     Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled NOTIFY changed)
     Q_PROPERTY(QIcon icon READ icon WRITE setIcon NOTIFY changed)
     Q_PROPERTY(QString text READ text WRITE setText NOTIFY changed)
@@ -72,7 +72,7 @@ class Q_WIDGETS_EXPORT QAction : public QObject
     Q_PROPERTY(QString statusTip READ statusTip WRITE setStatusTip NOTIFY changed)
     Q_PROPERTY(QString whatsThis READ whatsThis WRITE setWhatsThis NOTIFY changed)
     Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY changed)
-#if QT_CONFIG(shortcut)
+#ifndef QT_NO_SHORTCUT
     Q_PROPERTY(QKeySequence shortcut READ shortcut WRITE setShortcut NOTIFY changed)
     Q_PROPERTY(Qt::ShortcutContext shortcutContext READ shortcutContext WRITE setShortcutContext NOTIFY changed)
     Q_PROPERTY(bool autoRepeat READ autoRepeat WRITE setAutoRepeat NOTIFY changed)
@@ -80,7 +80,6 @@ class Q_WIDGETS_EXPORT QAction : public QObject
     Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY changed)
     Q_PROPERTY(MenuRole menuRole READ menuRole WRITE setMenuRole NOTIFY changed)
     Q_PROPERTY(bool iconVisibleInMenu READ isIconVisibleInMenu WRITE setIconVisibleInMenu NOTIFY changed)
-    Q_PROPERTY(bool shortcutVisibleInContextMenu READ isShortcutVisibleInContextMenu WRITE setShortcutVisibleInContextMenu NOTIFY changed)
     Q_PROPERTY(Priority priority READ priority WRITE setPriority)
 
 public:
@@ -129,7 +128,7 @@ public:
     void setSeparator(bool b);
     bool isSeparator() const;
 
-#if QT_CONFIG(shortcut)
+#ifndef QT_NO_SHORTCUT
     void setShortcut(const QKeySequence &shortcut);
     QKeySequence shortcut() const;
 
@@ -161,7 +160,7 @@ public:
 
     enum ActionEvent { Trigger, Hover };
     void activate(ActionEvent event);
-    bool showStatusText(QWidget *widget = nullptr);
+    bool showStatusText(QWidget *widget = Q_NULLPTR);
 
     void setMenuRole(MenuRole menuRole);
     MenuRole menuRole() const;
@@ -169,8 +168,6 @@ public:
     void setIconVisibleInMenu(bool visible);
     bool isIconVisibleInMenu() const;
 
-    void setShortcutVisibleInContextMenu(bool show);
-    bool isShortcutVisibleInContextMenu() const;
 
     QWidget *parentWidget() const;
 
@@ -180,7 +177,7 @@ public:
 #endif
 
 protected:
-    bool event(QEvent *) override;
+    bool event(QEvent *) Q_DECL_OVERRIDE;
     QAction(QActionPrivate &dd, QObject *parent);
 
 public Q_SLOTS:

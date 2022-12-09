@@ -1,0 +1,36 @@
+{
+  "build": "h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/pandoc-2.12-h06a4308_0",
+  "features": "",
+  "files": [
+    "bin/pandoc"
+  ],
+  "fn": "pandoc-2.12-h06a4308_0.conda",
+  "legacy_bz2_md5": "ac2e8bbe67741ce1491e873033944ff0",
+  "legacy_bz2_size": 12966114,
+  "license": "GPL-2.0",
+  "license_family": "GPL",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/pandoc-2.12-h06a4308_0",
+    "type": 1
+  },
+  "md5": "b1de5a57d2bd761d1bf03bb89a12a933",
+  "name": "pandoc",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/pandoc-2.12-h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "pandoc==2.12=h06a4308_0",
+  "sha256": "a8c0bfe515532f57f1b156157f2c72025dc9cb799e46a6370e99a083ab7b3c27",
+  "size": 9916539,
+  "subdir": "linux-64",
+  "timestamp": 1615916811730,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pandoc-2.12-h06a4308_0.conda",
+  "version": "2.12"
+}

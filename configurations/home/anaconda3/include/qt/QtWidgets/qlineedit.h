@@ -90,8 +90,8 @@ public:
     };
     Q_ENUM(ActionPosition)
 
-    explicit QLineEdit(QWidget *parent = nullptr);
-    explicit QLineEdit(const QString &, QWidget *parent = nullptr);
+    explicit QLineEdit(QWidget *parent = Q_NULLPTR);
+    explicit QLineEdit(const QString &, QWidget *parent = Q_NULLPTR);
     ~QLineEdit();
 
     QString text() const;
@@ -128,8 +128,8 @@ public:
     QCompleter *completer() const;
 #endif
 
-    QSize sizeHint() const override;
-    QSize minimumSizeHint() const override;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
 
     int cursorPosition() const;
     void setCursorPosition(int);
@@ -154,8 +154,6 @@ public:
     bool hasSelectedText() const;
     QString selectedText() const;
     int selectionStart() const;
-    int selectionEnd() const;
-    int selectionLength() const;
 
     bool isUndoAvailable() const;
     bool isRedoAvailable() const;
@@ -172,10 +170,7 @@ public:
 
     void setTextMargins(int left, int top, int right, int bottom);
     void setTextMargins(const QMargins &margins);
-#if QT_DEPRECATED_SINCE(5, 14)
-    QT_DEPRECATED_X("use textMargins()")
     void getTextMargins(int *left, int *top, int *right, int *bottom) const;
-#endif
     QMargins textMargins() const;
 
 #if QT_CONFIG(action)
@@ -210,34 +205,33 @@ Q_SIGNALS:
     void returnPressed();
     void editingFinished();
     void selectionChanged();
-    void inputRejected();
 
 protected:
-    void mousePressEvent(QMouseEvent *) override;
-    void mouseMoveEvent(QMouseEvent *) override;
-    void mouseReleaseEvent(QMouseEvent *) override;
-    void mouseDoubleClickEvent(QMouseEvent *) override;
-    void keyPressEvent(QKeyEvent *) override;
-    void focusInEvent(QFocusEvent *) override;
-    void focusOutEvent(QFocusEvent *) override;
-    void paintEvent(QPaintEvent *) override;
-#if QT_CONFIG(draganddrop)
-    void dragEnterEvent(QDragEnterEvent *) override;
-    void dragMoveEvent(QDragMoveEvent *e) override;
-    void dragLeaveEvent(QDragLeaveEvent *e) override;
-    void dropEvent(QDropEvent *) override;
+    void mousePressEvent(QMouseEvent *) Q_DECL_OVERRIDE;
+    void mouseMoveEvent(QMouseEvent *) Q_DECL_OVERRIDE;
+    void mouseReleaseEvent(QMouseEvent *) Q_DECL_OVERRIDE;
+    void mouseDoubleClickEvent(QMouseEvent *) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *) Q_DECL_OVERRIDE;
+    void focusInEvent(QFocusEvent *) Q_DECL_OVERRIDE;
+    void focusOutEvent(QFocusEvent *) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
+#ifndef QT_NO_DRAGANDDROP
+    void dragEnterEvent(QDragEnterEvent *) Q_DECL_OVERRIDE;
+    void dragMoveEvent(QDragMoveEvent *e) Q_DECL_OVERRIDE;
+    void dragLeaveEvent(QDragLeaveEvent *e) Q_DECL_OVERRIDE;
+    void dropEvent(QDropEvent *) Q_DECL_OVERRIDE;
 #endif
-    void changeEvent(QEvent *) override;
+    void changeEvent(QEvent *) Q_DECL_OVERRIDE;
 #ifndef QT_NO_CONTEXTMENU
-    void contextMenuEvent(QContextMenuEvent *) override;
+    void contextMenuEvent(QContextMenuEvent *) Q_DECL_OVERRIDE;
 #endif
 
-    void inputMethodEvent(QInputMethodEvent *) override;
+    void inputMethodEvent(QInputMethodEvent *) Q_DECL_OVERRIDE;
     void initStyleOption(QStyleOptionFrame *option) const;
 public:
-    QVariant inputMethodQuery(Qt::InputMethodQuery) const override;
+    QVariant inputMethodQuery(Qt::InputMethodQuery) const Q_DECL_OVERRIDE;
     Q_INVOKABLE QVariant inputMethodQuery(Qt::InputMethodQuery property, QVariant argument) const;
-    bool event(QEvent *) override;
+    bool event(QEvent *) Q_DECL_OVERRIDE;
 protected:
     QRect cursorRect() const;
 

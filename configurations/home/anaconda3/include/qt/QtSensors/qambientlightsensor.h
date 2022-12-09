@@ -71,7 +71,7 @@ class Q_SENSORS_EXPORT QAmbientLightFilter : public QSensorFilter
 public:
     virtual bool filter(QAmbientLightReading *reading) = 0;
 private:
-    bool filter(QSensorReading *reading) override;
+    bool filter(QSensorReading *reading);
 };
 
 class Q_SENSORS_EXPORT QAmbientLightSensor : public QSensor

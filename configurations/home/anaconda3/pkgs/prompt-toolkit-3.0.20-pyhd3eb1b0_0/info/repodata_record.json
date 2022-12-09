@@ -1,0 +1,27 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [
+    "prompt_toolkit 3.0.20"
+  ],
+  "depends": [
+    "python",
+    "wcwidth"
+  ],
+  "features": "",
+  "fn": "prompt-toolkit-3.0.20-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "dd2ae7b95722775ab3f9c7ac27be6b50",
+  "license": "BSD-3-Clause",
+  "md5": "19fa1fa6a03645e39e7dce3bdbe9d72f",
+  "name": "prompt-toolkit",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "b7251f3c678beab7ef9d7b9a8491a5d61b2b2f3f85e4a18fa4d833c61e673945",
+  "size": 264741,
+  "subdir": "noarch",
+  "timestamp": 1633440195892,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/prompt-toolkit-3.0.20-pyhd3eb1b0_0.conda",
+  "version": "3.0.20"
+}

@@ -1,0 +1,3 @@
+[console_scripts]
+conda-suggest = conda_suggest.main:main
+

@@ -64,8 +64,7 @@ public:
         NoType = 0,
         ImageType,
         ReviewType,
-        EditorialType,
-        CustomType = 0x0100
+        EditorialType
     };
 
     QPlaceContent();

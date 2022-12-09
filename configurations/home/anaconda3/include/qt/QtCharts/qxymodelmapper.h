@@ -42,12 +42,12 @@ QT_CHARTS_BEGIN_NAMESPACE
 class QXYModelMapperPrivate;
 class QXYSeries;
 
-class Q_CHARTS_EXPORT QXYModelMapper : public QObject
+class QT_CHARTS_EXPORT QXYModelMapper : public QObject
 {
     Q_OBJECT
 
 protected:
-    explicit QXYModelMapper(QObject *parent = nullptr);
+    explicit QXYModelMapper(QObject *parent = Q_NULLPTR);
 
     QAbstractItemModel *model() const;
     void setModel(QAbstractItemModel *model);

@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,18 +24,15 @@
 #include "LIEF/Abstract/Symbol.hpp"
 
 #include "LIEF/MachO/LoadCommand.hpp"
-#include "LIEF/MachO/enums.hpp"
+
+#include "LIEF/MachO/ExportInfo.hpp"
+#include "LIEF/MachO/BindingInfo.hpp"
+
 
 namespace LIEF {
 namespace MachO {
 
 class BinaryParser;
-class BindingInfo;
-class ExportInfo;
-class DylibCommand;
-
-struct nlist_32;
-struct nlist_64;
 
 class LIEF_API Symbol : public LIEF::Symbol {
 

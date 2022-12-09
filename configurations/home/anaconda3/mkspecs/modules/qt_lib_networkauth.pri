@@ -1,4 +1,4 @@
-QT.networkauth.VERSION = 5.15.2
+QT.networkauth.VERSION = 5.9.7
 QT.networkauth.name = QtNetworkAuth
 QT.networkauth.module = Qt5NetworkAuth
 QT.networkauth.libs = $$QT_MODULE_LIB_BASE

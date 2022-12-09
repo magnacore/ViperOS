@@ -1,4 +1,4 @@
-#!/home/goldust/anaconda3/bin/python
+#!/home/manuj/anaconda3/bin/python
 
 # Author:
 # Contact: grubert@users.sf.net

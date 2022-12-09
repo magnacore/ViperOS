@@ -109,8 +109,8 @@
 
 KRB5INT_BEGIN_DECLS
 
-#if defined(__APPLE__) && (defined(__ppc__) || defined(__ppc64__) || defined(__i386__) || defined(__x86_64__))
-#pragma pack(push,2)
+#if defined(TARGET_OS_MAC) && TARGET_OS_MAC
+#    pragma pack(push,2)
 #endif
 
 #if (__GNUC__ * 10000 + __GNUC_MINOR__ * 100 + __GNUC_PATCHLEVEL__) >= 30203
@@ -257,7 +257,7 @@ typedef krb5_principal_data * krb5_principal;
 #define KRB5_NT_MS_PRINCIPAL_AND_ID  -129 /**< NT 4 style name */
 #define KRB5_NT_ENT_PRINCIPAL_AND_ID -130 /**< NT 4 style name and SID */
 
-/** Constant version of krb5_principal_data. */
+/** Constant version of krb5_principal_data */
 typedef const krb5_principal_data *krb5_const_principal;
 
 #define krb5_princ_realm(context, princ) (&(princ)->realm)
@@ -1912,7 +1912,6 @@ krb5_verify_checksum(krb5_context context, krb5_cksumtype ctype,
 #define KRB5_AUTHDATA_SIGNTICKET        512     /**< formerly 142 in krb5 1.8 */
 #define KRB5_AUTHDATA_FX_ARMOR 71
 #define KRB5_AUTHDATA_AUTH_INDICATOR 97
-#define KRB5_AUTHDATA_AP_OPTIONS 143
 /** @} */ /* end of KRB5_AUTHDATA group */
 
 /* password change constants */
@@ -1947,7 +1946,7 @@ typedef struct _krb5_ticket_times {
 typedef struct _krb5_authdata {
     krb5_magic magic;
     krb5_authdatatype ad_type; /**< ADTYPE */
-    unsigned int length;       /**< Length of data */
+    unsigned int length;       /**< Length of data  */
     krb5_octet *contents;      /**< Data */
 } krb5_authdata;
 
@@ -2137,7 +2136,7 @@ typedef struct _krb5_ap_rep {
     krb5_enc_data enc_part;     /**< Ciphertext of ApRepEncPart */
 } krb5_ap_rep;
 
-/** Cleartext that is encrypted and put into @c _krb5_ap_rep. */
+/** Cleartext that is encrypted and put into @c _krb5_ap_rep.  */
 typedef struct _krb5_ap_rep_enc_part {
     krb5_magic magic;
     krb5_timestamp ctime;       /**< Client time, seconds portion */
@@ -2166,7 +2165,7 @@ typedef struct _krb5_cred_info {
     krb5_address **caddrs;      /**< Array of pointers to addrs (optional) */
 } krb5_cred_info;
 
-/** Cleartext credentials information. */
+/** Cleartext credentials information.  */
 typedef struct _krb5_cred_enc_part {
     krb5_magic magic;
     krb5_int32 nonce;           /**< Nonce (optional) */
@@ -2247,14 +2246,14 @@ typedef struct _krb5_pa_pac_req {
 typedef struct krb5_replay_data {
     krb5_timestamp      timestamp;  /**< Timestamp, seconds portion */
     krb5_int32          usec;       /**< Timestamp, microseconds portion */
-    krb5_ui_4           seq;        /**< Sequence number */
+    krb5_ui_4           seq;        /**< Sequence number  */
 } krb5_replay_data;
 
 /* Flags for krb5_auth_con_genaddrs(). */
 
 /** Generate the local network address. */
 #define KRB5_AUTH_CONTEXT_GENERATE_LOCAL_ADDR       0x00000001
-/** Generate the remote network address. */
+/** Generate the remote network address.  */
 #define KRB5_AUTH_CONTEXT_GENERATE_REMOTE_ADDR      0x00000002
 /** Generate the local network address and the local port. */
 #define KRB5_AUTH_CONTEXT_GENERATE_LOCAL_FULL_ADDR  0x00000004
@@ -3434,7 +3433,6 @@ krb5_parse_name(krb5_context context, const char *name,
 #define KRB5_PRINCIPAL_PARSE_ENTERPRISE    0x4 /**< Create single-component
                                                   enterprise principle */
 #define KRB5_PRINCIPAL_PARSE_IGNORE_REALM  0x8 /**< Ignore realm if present */
-#define KRB5_PRINCIPAL_PARSE_NO_DEF_REALM  0x10 /**< Don't add default realm */
 
 /**
  * Convert a string principal name to a krb5_principal with flags.
@@ -4697,8 +4695,6 @@ krb5_free_checksum(krb5_context context, krb5_checksum *val);
  * @param [in] val              Checksum structure to free contents of
  *
  * This function frees the contents of @a val, but not the structure itself.
- * It sets the checksum's data pointer to null and (beginning in release 1.19)
- * sets its length to zero.
  */
 void KRB5_CALLCONV
 krb5_free_checksum_contents(krb5_context context, krb5_checksum *val);
@@ -4758,8 +4754,6 @@ krb5_free_octet_data(krb5_context context, krb5_octet_data *val);
  * @param [in] val              Data structure to free contents of
  *
  * This function frees the contents of @a val, but not the structure itself.
- * It sets the structure's data pointer to null and (beginning in release 1.19)
- * sets its length to zero.
  */
 void KRB5_CALLCONV
 krb5_free_data_contents(krb5_context context, krb5_data *val);
@@ -6426,7 +6420,7 @@ krb5_deltat_to_string(krb5_deltat deltat, char *buffer, size_t buflen);
 #define KRB5_RECVAUTH_BADAUTHVERS       0x0002
 /* initial ticket api functions */
 
-/** Text for prompt used in prompter callback function. */
+/** Text for prompt used in prompter callback function.  */
 typedef struct _krb5_prompt {
     char *prompt;      /**< The prompt to show to the user */
     int hidden;        /**< Boolean; informative prompt or hidden (e.g. PIN) */
@@ -6486,29 +6480,29 @@ krb5_prompter_posix(krb5_context context, void *data, const char *name,
  * value is required in order to complete the authentication.  The JSON format
  * of the challenge is:
  *
- *     {
- *       "service": <string (optional)>,
- *       "tokenInfo": [
- *         {
- *           "flags":     <number>,
- *           "vendor":    <string (optional)>,
- *           "challenge": <string (optional)>,
- *           "length":    <number (optional)>,
- *           "format":    <number (optional)>,
- *           "tokenID":   <string (optional)>,
- *           "algID":     <string (optional)>,
- *         },
- *         ...
- *       ]
- *     }
+ *  @n {
+ *  @n   "service": <string (optional)>,
+ *  @n   "tokenInfo": [
+ *  @n      {
+ *  @n        "flags":     <number>,
+ *  @n        "vendor":    <string (optional)>,
+ *  @n        "challenge": <string (optional)>,
+ *  @n        "length":    <number (optional)>,
+ *  @n        "format":    <number (optional)>,
+ *  @n        "tokenID":   <string (optional)>,
+ *  @n        "algID":     <string (optional)>,
+ *  @n      },
+ *  @n      ...
+ *  @n    ]
+ *  @n  }
  *
  * The answer to the question MUST be JSON formatted:
  *
- *     {
- *       "tokeninfo": <number>,
- *       "value":     <string (optional)>,
- *       "pin":       <string (optional)>,
- *     }
+ * @n  {
+ * @n    "tokeninfo": <number>,
+ * @n    "value":     <string (optional)>,
+ * @n    "pin":       <string (optional)>,
+ * @n  }
  *
  * For more detail, please see RFC 6560.
  *
@@ -6559,17 +6553,17 @@ krb5_prompter_posix(krb5_context context, void *data, const char *name,
  * below, and possibly other flags to be added later.  Any resemblance to
  * similarly-named CKF_* values in the PKCS#11 API should not be depended on.
  *
- *     {
- *         identity <string> : flags <number>,
- *         ...
- *     }
+ *  @n {
+ *  @n     identity <string> : flags <number>,
+ *  @n     ...
+ *  @n }
  *
  * The answer to the question MUST be JSON formatted:
  *
- *     {
- *         identity <string> : password <string>,
- *         ...
- *     }
+ *  @n {
+ *  @n     identity <string> : password <string>,
+ *  @n     ...
+ *  @n }
  *
  * @version New in 1.12
  */
@@ -7177,10 +7171,11 @@ typedef void
  *
  * Set a callback to receive password and account expiration times.
  *
- * @a cb will be invoked if and only if credentials are successfully acquired.
- * The callback will receive the @a context from the calling function and the
- * @a data argument supplied with this API.  The remaining arguments should be
- * interpreted as follows:
+ * This option only applies to krb5_get_init_creds_password().  @a cb will be
+ * invoked if and only if credentials are successfully acquired.  The callback
+ * will receive the @a context from the krb5_get_init_creds_password() call and
+ * the @a data argument supplied with this API.  The remaining arguments should
+ * be interpreted as follows:
  *
  * If @a is_last_req is true, then the KDC reply contained last-req entries
  * which unambiguously indicated the password expiration, account expiration,
@@ -8555,8 +8550,8 @@ void KRB5_CALLCONV
 krb5_set_kdc_recv_hook(krb5_context context, krb5_post_recv_fn recv_hook,
                        void *data);
 
-#if defined(__APPLE__) && (defined(__ppc__) || defined(__ppc64__) || defined(__i386__) || defined(__x86_64__))
-#pragma pack(pop)
+#if defined(TARGET_OS_MAC) && TARGET_OS_MAC
+#    pragma pack(pop)
 #endif
 
 KRB5INT_END_DECLS
@@ -8867,7 +8862,6 @@ extern void initialize_krb5_error_table (void) /*@modifies internalState@*/;
 #define KRB5_KCM_RPC_ERROR                       (-1750600183L)
 #define KRB5_KCM_REPLY_TOO_BIG                   (-1750600182L)
 #define KRB5_KCM_NO_SERVER                       (-1750600181L)
-#define KRB5_CERTAUTH_HWAUTH                     (-1750600180L)
 #define ERROR_TABLE_BASE_k5e1 (-1750600192L)
 
 extern const struct error_table et_k5e1_error_table;
@@ -9083,7 +9077,7 @@ extern void initialize_k524_error_table (void) /*@modifies internalState@*/;
 #define ASN1_BAD_FORMAT                          (1859794440L)
 #define ASN1_PARSE_ERROR                         (1859794441L)
 #define ASN1_BAD_GMTIME                          (1859794442L)
-#define ASN1_INDEF                               (1859794443L)
+#define ASN1_MISMATCH_INDEF                      (1859794443L)
 #define ASN1_MISSING_EOC                         (1859794444L)
 #define ASN1_OMITTED                             (1859794445L)
 #define ERROR_TABLE_BASE_asn1 (1859794432L)

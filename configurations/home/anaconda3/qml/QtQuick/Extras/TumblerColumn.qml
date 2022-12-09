@@ -89,7 +89,7 @@ QtObject {
     */
     property int __currentIndex: -1
 
-    property int accessibleRole: Accessible.ColumnHeader
+    Accessible.role: Accessible.ColumnHeader
 
     /*!
         \qmlproperty int TumblerColumn::currentIndex

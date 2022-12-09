@@ -52,7 +52,7 @@ private:
     typedef QArrayDataOps<T> DataOps;
 
 public:
-    QArrayDataPointer() noexcept
+    QArrayDataPointer() Q_DECL_NOTHROW
         : d(Data::sharedNull())
     {
     }
@@ -82,18 +82,20 @@ public:
         return *this;
     }
 
-    QArrayDataPointer(QArrayDataPointer &&other) noexcept
+#ifdef Q_COMPILER_RVALUE_REFS
+    QArrayDataPointer(QArrayDataPointer &&other) Q_DECL_NOTHROW
         : d(other.d)
     {
         other.d = Data::sharedNull();
     }
 
-    QArrayDataPointer &operator=(QArrayDataPointer &&other) noexcept
+    QArrayDataPointer &operator=(QArrayDataPointer &&other) Q_DECL_NOTHROW
     {
         QArrayDataPointer moved(std::move(other));
         this->swap(moved);
         return *this;
     }
+#endif
 
     DataOps &operator*() const
     {
@@ -148,7 +150,7 @@ public:
     bool isSharable() const { return d->isSharable(); }
 #endif
 
-    void swap(QArrayDataPointer &other) noexcept
+    void swap(QArrayDataPointer &other) Q_DECL_NOTHROW
     {
         qSwap(d, other.d);
     }
@@ -202,11 +204,22 @@ inline bool operator!=(const QArrayDataPointer<T> &lhs, const QArrayDataPointer<
 }
 
 template <class T>
-inline void swap(QArrayDataPointer<T> &p1, QArrayDataPointer<T> &p2)
+inline void qSwap(QArrayDataPointer<T> &p1, QArrayDataPointer<T> &p2)
 {
     p1.swap(p2);
 }
 
 QT_END_NAMESPACE
+
+namespace std
+{
+    template <class T>
+    inline void swap(
+            QT_PREPEND_NAMESPACE(QArrayDataPointer)<T> &p1,
+            QT_PREPEND_NAMESPACE(QArrayDataPointer)<T> &p2)
+    {
+        p1.swap(p2);
+    }
+}
 
 #endif // include guard

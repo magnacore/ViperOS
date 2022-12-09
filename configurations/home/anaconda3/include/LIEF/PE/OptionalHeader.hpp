@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,13 +21,10 @@
 #include "LIEF/Object.hpp"
 #include "LIEF/visibility.h"
 
-#include "LIEF/PE/enums.hpp"
+#include "LIEF/PE/Structures.hpp"
 
 namespace LIEF {
 namespace PE {
-struct pe32_optional_header;
-struct pe64_optional_header;
-
 class LIEF_API OptionalHeader : public Object {
   public:
     OptionalHeader(void);

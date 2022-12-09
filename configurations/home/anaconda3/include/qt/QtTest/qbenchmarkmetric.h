@@ -41,7 +41,7 @@
 #ifndef QBENCHMARKMETRIC_H
 #define QBENCHMARKMETRIC_H
 
-#include <QtTest/qttestglobal.h>
+#include <QtTest/qtest_global.h>
 
 QT_BEGIN_NAMESPACE
 

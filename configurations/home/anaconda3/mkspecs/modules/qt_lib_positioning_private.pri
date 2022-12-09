@@ -1,8 +1,8 @@
-QT.positioning_private.VERSION = 5.15.2
+QT.positioning_private.VERSION = 5.9.7
 QT.positioning_private.name = QtPositioning
 QT.positioning_private.module =
 QT.positioning_private.libs = $$QT_MODULE_LIB_BASE
-QT.positioning_private.includes = $$QT_MODULE_INCLUDE_BASE/QtPositioning/5.15.2 $$QT_MODULE_INCLUDE_BASE/QtPositioning/5.15.2/QtPositioning
+QT.positioning_private.includes = $$QT_MODULE_INCLUDE_BASE/QtPositioning/5.9.7 $$QT_MODULE_INCLUDE_BASE/QtPositioning/5.9.7/QtPositioning
 QT.positioning_private.frameworks =
 QT.positioning_private.depends = core_private positioning
 QT.positioning_private.uses =

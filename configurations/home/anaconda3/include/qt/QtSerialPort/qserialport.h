@@ -152,7 +152,7 @@ public:
     Q_DECLARE_FLAGS(PinoutSignals, PinoutSignal)
 
 #if QT_DEPRECATED_SINCE(5, 2)
-#if defined(Q_CC_MSVC) && !defined(Q_CC_CLANG)
+#if defined(_MSC_VER)
 #pragma deprecated(UnknownBaud)
 #pragma deprecated(UnknownDataBits)
 #pragma deprecated(UnknownParity)
@@ -193,7 +193,7 @@ public:
     Q_ENUM(SerialPortError)
 
 #if QT_DEPRECATED_SINCE(5, 6)
-#if defined(Q_CC_MSVC) && !defined(Q_CC_CLANG)
+#if defined(_MSC_VER)
 #pragma deprecated(ParityError)
 #pragma deprecated(FramingError)
 #pragma deprecated(BreakConditionError)
@@ -210,8 +210,8 @@ public:
 
     void setPort(const QSerialPortInfo &info);
 
-    bool open(OpenMode mode) override;
-    void close() override;
+    bool open(OpenMode mode) Q_DECL_OVERRIDE;
+    void close() Q_DECL_OVERRIDE;
 
 #if QT_DEPRECATED_SINCE(5, 3)
     QT_DEPRECATED void setSettingsRestoredOnClose(bool restore);
@@ -243,7 +243,7 @@ public:
 
     bool flush();
     bool clear(Directions directions = AllDirections);
-    bool atEnd() const override; // ### Qt6: remove me
+    bool atEnd() const Q_DECL_OVERRIDE; // ### Qt6: remove me
 
 #if QT_DEPRECATED_SINCE(5, 2)
     QT_DEPRECATED bool setDataErrorPolicy(DataErrorPolicy policy = IgnorePolicy);
@@ -256,14 +256,14 @@ public:
     qint64 readBufferSize() const;
     void setReadBufferSize(qint64 size);
 
-    bool isSequential() const override;
+    bool isSequential() const Q_DECL_OVERRIDE;
 
-    qint64 bytesAvailable() const override;
-    qint64 bytesToWrite() const override;
-    bool canReadLine() const override;
+    qint64 bytesAvailable() const Q_DECL_OVERRIDE;
+    qint64 bytesToWrite() const Q_DECL_OVERRIDE;
+    bool canReadLine() const Q_DECL_OVERRIDE;
 
-    bool waitForReadyRead(int msecs = 30000) override;
-    bool waitForBytesWritten(int msecs = 30000) override;
+    bool waitForReadyRead(int msecs = 30000) Q_DECL_OVERRIDE;
+    bool waitForBytesWritten(int msecs = 30000) Q_DECL_OVERRIDE;
 
 #if QT_DEPRECATED_SINCE(5, 5)
     QT_DEPRECATED bool sendBreak(int duration = 0);
@@ -294,9 +294,9 @@ Q_SIGNALS:
     void breakEnabledChanged(bool set);
 
 protected:
-    qint64 readData(char *data, qint64 maxSize) override;
-    qint64 readLineData(char *data, qint64 maxSize) override;
-    qint64 writeData(const char *data, qint64 maxSize) override;
+    qint64 readData(char *data, qint64 maxSize) Q_DECL_OVERRIDE;
+    qint64 readLineData(char *data, qint64 maxSize) Q_DECL_OVERRIDE;
+    qint64 writeData(const char *data, qint64 maxSize) Q_DECL_OVERRIDE;
 
 private:
     // ### Qt6: remove me.
@@ -306,6 +306,7 @@ private:
 
 #if defined(Q_OS_WIN32)
     Q_PRIVATE_SLOT(d_func(), bool _q_startAsyncWrite())
+    Q_PRIVATE_SLOT(d_func(), void _q_notified(quint32, quint32, OVERLAPPED*))
 #endif
 };
 

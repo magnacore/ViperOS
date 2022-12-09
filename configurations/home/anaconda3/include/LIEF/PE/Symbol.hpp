@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 #define LIEF_PE_SYMBOLS_H_
 
 #include <string>
+#include <memory>
 #include <vector>
 #include <iostream>
 
@@ -24,14 +25,16 @@
 #include "LIEF/visibility.h"
 
 #include "LIEF/Abstract/Symbol.hpp"
+
 #include "LIEF/PE/Structures.hpp"
+#include "LIEF/PE/AuxiliarySymbol.hpp"
+#include "LIEF/PE/Section.hpp"
 
 namespace LIEF {
 namespace PE {
 
 class Parser;
 class Builder;
-class Section;
 
 class LIEF_API Symbol : public LIEF::Symbol {
 
@@ -59,7 +62,7 @@ class LIEF_API Symbol : public LIEF::Symbol {
   const Section&       section(void) const;
 
   //! @brief ``True`` if symbols are located in a section
-  bool has_section(void) const;
+  bool                 has_section(void) const;
 
   virtual void accept(Visitor& visitor) const override;
 

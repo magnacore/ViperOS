@@ -1,0 +1,42 @@
+{
+  "build": "py38_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/simplegeneric-0.8.1-py38_2",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/__pycache__/simplegeneric.cpython-38.pyc",
+    "lib/python3.8/site-packages/simplegeneric-0.8.1-py3.8.egg-info/PKG-INFO",
+    "lib/python3.8/site-packages/simplegeneric-0.8.1-py3.8.egg-info/SOURCES.txt",
+    "lib/python3.8/site-packages/simplegeneric-0.8.1-py3.8.egg-info/dependency_links.txt",
+    "lib/python3.8/site-packages/simplegeneric-0.8.1-py3.8.egg-info/top_level.txt",
+    "lib/python3.8/site-packages/simplegeneric.py"
+  ],
+  "fn": "simplegeneric-0.8.1-py38_2.conda",
+  "legacy_bz2_md5": "50b14310648840fce4ea3f0abcc7def4",
+  "legacy_bz2_size": 9683,
+  "license": "Zope Public",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/simplegeneric-0.8.1-py38_2",
+    "type": 1
+  },
+  "md5": "da9542bf401604cfec6c4d14757b45a8",
+  "name": "simplegeneric",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/simplegeneric-0.8.1-py38_2.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "simplegeneric==0.8.1=py38_2",
+  "sha256": "a8954a6a0b595122e96f638dae520960063d014725b8ab7842938fe299f7486c",
+  "size": 10182,
+  "subdir": "linux-64",
+  "timestamp": 1573200417114,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/simplegeneric-0.8.1-py38_2.conda",
+  "version": "0.8.1"
+}

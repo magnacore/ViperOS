@@ -3,5 +3,4 @@
 #include <QtCore/QtCore>
 #include <QtGui/QtGui>
 #include <QtQuick/QtQuick>
-#include <QtQmlModels/QtQmlModels>
 #endif

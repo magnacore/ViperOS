@@ -46,14 +46,14 @@
 #include <QtCore/qurl.h>
 
 namespace QtWebEngineCore {
-class InterceptedRequest;
-} // namespace QtWebEngineCore
+class NetworkDelegateQt;
+}
 
 QT_BEGIN_NAMESPACE
 
 class QWebEngineUrlRequestInfoPrivate;
 
-class Q_WEBENGINECORE_EXPORT QWebEngineUrlRequestInfo {
+class QWEBENGINE_EXPORT QWebEngineUrlRequestInfo {
 public:
     enum ResourceType {
         ResourceTypeMainFrame = 0,  // top level page
@@ -75,10 +75,8 @@ public:
         ResourceTypeServiceWorker,  // the main resource of a service worker.
         ResourceTypeCspReport,      // Content Security Policy (CSP) violation report
         ResourceTypePluginResource, // A resource requested by a plugin
-        ResourceTypeNavigationPreloadMainFrame = 19, // A main-frame service worker navigation preload request
-        ResourceTypeNavigationPreloadSubFrame,  // A sub-frame service worker navigation preload request
 #ifndef Q_QDOC
-        ResourceTypeLast = ResourceTypeNavigationPreloadSubFrame,
+        ResourceTypeLast,
 #endif
         ResourceTypeUnknown = 255
     };
@@ -89,8 +87,7 @@ public:
         NavigationTypeFormSubmitted,
         NavigationTypeBackForward,
         NavigationTypeReload,
-        NavigationTypeOther,
-        NavigationTypeRedirect,
+        NavigationTypeOther
     };
 
     ResourceType resourceType() const;
@@ -98,7 +95,6 @@ public:
 
     QUrl requestUrl() const;
     QUrl firstPartyUrl() const;
-    QUrl initiator() const;
     QByteArray requestMethod() const;
     bool changed() const;
 
@@ -107,16 +103,11 @@ public:
     void setHttpHeader(const QByteArray &name, const QByteArray &value);
 
 private:
-    friend class QtWebEngineCore::InterceptedRequest;
+    friend class QtWebEngineCore::NetworkDelegateQt;
     Q_DISABLE_COPY(QWebEngineUrlRequestInfo)
     Q_DECLARE_PRIVATE(QWebEngineUrlRequestInfo)
 
-    void resetChanged();
-
-    QWebEngineUrlRequestInfo();
     QWebEngineUrlRequestInfo(QWebEngineUrlRequestInfoPrivate *p);
-    QWebEngineUrlRequestInfo(QWebEngineUrlRequestInfo &&p);
-    QWebEngineUrlRequestInfo &operator=(QWebEngineUrlRequestInfo &&p);
     ~QWebEngineUrlRequestInfo();
     QScopedPointer<QWebEngineUrlRequestInfoPrivate> d_ptr;
 };

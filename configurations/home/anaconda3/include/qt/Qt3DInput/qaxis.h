@@ -49,7 +49,7 @@ namespace Qt3DInput {
 class QAxisPrivate;
 class QAbstractAxisInput;
 
-class Q_3DINPUTSHARED_EXPORT QAxis : public Qt3DCore::QNode
+class QT3DINPUTSHARED_EXPORT QAxis : public Qt3DCore::QNode
 {
     Q_OBJECT
     Q_PROPERTY(float value READ value NOTIFY valueChanged)
@@ -67,12 +67,11 @@ Q_SIGNALS:
     void valueChanged(float value);
 
 protected:
-    // TODO Unused remove in Qt6
-    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override;
+    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(QAxis)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // Qt3DInput

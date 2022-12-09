@@ -70,8 +70,7 @@ public:
         TunnelFeature = 0x00000010,
         DirtRoadFeature = 0x00000020,
         ParksFeature = 0x00000040,
-        MotorPoolLaneFeature = 0x00000080,
-        TrafficFeature = 0x00000100
+        MotorPoolLaneFeature = 0x00000080
     };
     Q_DECLARE_FLAGS(FeatureTypes, FeatureType)
 
@@ -119,9 +118,6 @@ public:
     void setWaypoints(const QList<QGeoCoordinate> &waypoints);
     QList<QGeoCoordinate> waypoints() const;
 
-    void setWaypointsMetadata(const QList<QVariantMap> &waypointMetadata);
-    QList<QVariantMap> waypointsMetadata() const;
-
     void setExcludeAreas(const QList<QGeoRectangle> &areas);
     QList<QGeoRectangle> excludeAreas() const;
 
@@ -148,13 +144,6 @@ public:
     // defaults to BasicManeuvers
     void setManeuverDetail(ManeuverDetail maneuverDetail);
     ManeuverDetail maneuverDetail() const;
-
-    // defaults to invalid datetime
-    void setDepartureTime(const QDateTime &departureTime);
-    QDateTime departureTime() const;
-
-    void setExtraParameters(const QVariantMap &extraParameters);
-    QVariantMap extraParameters() const;
 
 private:
     QExplicitlySharedDataPointer<QGeoRouteRequestPrivate> d_ptr;

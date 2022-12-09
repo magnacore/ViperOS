@@ -50,13 +50,13 @@ class QComponent;
 class QEntity;
 class QComponentAddedChangePrivate;
 
-class Q_3DCORESHARED_EXPORT QComponentAddedChange : public QSceneChange
+class QT3DCORESHARED_EXPORT QComponentAddedChange : public QSceneChange
 {
 public:
-    Q3D_DECL_DEPRECATED explicit QComponentAddedChange(const QEntity *entity,
-                                                       const QComponent *component);
-    Q3D_DECL_DEPRECATED explicit QComponentAddedChange(const QComponent *component,
-                                                       const QEntity *entity);
+    explicit QComponentAddedChange(const QEntity *entity,
+                                   const QComponent *component);
+    explicit QComponentAddedChange(const QComponent *component,
+                                   const QEntity *entity);
     ~QComponentAddedChange();
 
     QNodeId entityId() const Q_DECL_NOTHROW;
@@ -67,7 +67,7 @@ private:
     Q_DECLARE_PRIVATE(QComponentAddedChange)
 };
 
-Q3D_DECL_DEPRECATED typedef QSharedPointer<QComponentAddedChange> QComponentAddedChangePtr;
+typedef QSharedPointer<QComponentAddedChange> QComponentAddedChangePtr;
 
 } // namespace Qt3DCore
 

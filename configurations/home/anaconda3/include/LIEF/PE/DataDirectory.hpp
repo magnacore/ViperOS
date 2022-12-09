@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,10 @@
 
 #include "LIEF/Object.hpp"
 #include "LIEF/visibility.h"
-#include "LIEF/PE/enums.hpp"
+
+#include "LIEF/PE/Structures.hpp"
+#include "LIEF/PE/Section.hpp"
+
 
 namespace LIEF {
 namespace PE {
@@ -29,8 +32,6 @@ namespace PE {
 class Builder;
 class Parser;
 class Binary;
-class Section;
-struct pe_data_directory;
 
 class LIEF_API DataDirectory : public Object {
 
@@ -69,7 +70,7 @@ class LIEF_API DataDirectory : public Object {
   uint32_t       rva_;
   uint32_t       size_;
   DATA_DIRECTORY type_;
-  Section*       section_{nullptr};
+  Section*       section_;
 };
 }
 }

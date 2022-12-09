@@ -1,4 +1,4 @@
-QT.positioning.VERSION = 5.15.2
+QT.positioning.VERSION = 5.9.7
 QT.positioning.name = QtPositioning
 QT.positioning.module = Qt5Positioning
 QT.positioning.libs = $$QT_MODULE_LIB_BASE

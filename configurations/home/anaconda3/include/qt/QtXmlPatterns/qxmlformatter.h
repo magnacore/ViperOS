@@ -56,27 +56,27 @@ public:
     QXmlFormatter(const QXmlQuery &query,
                   QIODevice *outputDevice);
 
-    void characters(const QStringRef &value) override;
-    void comment(const QString &value) override;
-    void startElement(const QXmlName &name) override;
-    void endElement() override;
+    virtual void characters(const QStringRef &value);
+    virtual void comment(const QString &value);
+    virtual void startElement(const QXmlName &name);
+    virtual void endElement();
 
-    void attribute(const QXmlName &name,
-                   const QStringRef &value) override;
-    void processingInstruction(const QXmlName &name,
-                               const QString &value) override;
-    void atomicValue(const QVariant &value) override;
-    void startDocument() override;
-    void endDocument() override;
-    void startOfSequence() override;
-    void endOfSequence() override;
+    virtual void attribute(const QXmlName &name,
+                           const QStringRef &value);
+    virtual void processingInstruction(const QXmlName &name,
+                                       const QString &value);
+    virtual void atomicValue(const QVariant &value);
+    virtual void startDocument();
+    virtual void endDocument();
+    virtual void startOfSequence();
+    virtual void endOfSequence();
 
     int indentationDepth() const;
     void setIndentationDepth(int depth);
 
     /* The members below are internal, not part of the public API, and
      * unsupported. Using them leads to undefined behavior. */
-    void item(const QPatternist::Item &item) override;
+    virtual void item(const QPatternist::Item &item);
 private:
     inline void startFormattingContent();
     Q_DECLARE_PRIVATE(QXmlFormatter)

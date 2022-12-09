@@ -55,9 +55,6 @@ public:
     int interFrameDelay() const;
     void setInterFrameDelay(int microseconds);
 
-    int turnaroundDelay() const;
-    void setTurnaroundDelay(int turnaroundDelay);
-
 protected:
     QModbusRtuSerialMaster(QModbusRtuSerialMasterPrivate &dd, QObject *parent = nullptr);
 

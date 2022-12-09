@@ -37,11 +37,11 @@ QT_CHARTS_BEGIN_NAMESPACE
 
 class QPercentBarSeriesPrivate;
 
-class Q_CHARTS_EXPORT QPercentBarSeries : public QAbstractBarSeries
+class QT_CHARTS_EXPORT QPercentBarSeries : public QAbstractBarSeries
 {
     Q_OBJECT
 public:
-    explicit QPercentBarSeries(QObject *parent = nullptr);
+    explicit QPercentBarSeries(QObject *parent = Q_NULLPTR);
     ~QPercentBarSeries();
     QAbstractSeries::SeriesType type() const;
 

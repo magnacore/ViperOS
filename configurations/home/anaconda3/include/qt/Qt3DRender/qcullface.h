@@ -50,7 +50,7 @@ namespace Qt3DRender {
 
 class QCullFacePrivate;
 
-class Q_3DRENDERSHARED_EXPORT QCullFace : public QRenderState
+class QT3DRENDERSHARED_EXPORT QCullFace : public QRenderState
 {
     Q_OBJECT
     Q_PROPERTY(CullingMode mode READ mode WRITE setMode NOTIFY modeChanged)
@@ -79,7 +79,7 @@ Q_SIGNALS:
 
 private:
     Q_DECLARE_PRIVATE(QCullFace)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DRender

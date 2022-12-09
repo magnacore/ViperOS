@@ -31,7 +31,7 @@
 
 #include <QtDesigner/sdk_global.h>
 
-#include <QtWidgets/qwidget.h>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -42,13 +42,13 @@ class QDESIGNER_SDK_EXPORT QDesignerNewFormWidgetInterface : public QWidget
     Q_DISABLE_COPY(QDesignerNewFormWidgetInterface)
     Q_OBJECT
 public:
-    explicit QDesignerNewFormWidgetInterface(QWidget *parent = nullptr);
+    explicit QDesignerNewFormWidgetInterface(QWidget *parent = Q_NULLPTR);
     virtual ~QDesignerNewFormWidgetInterface();
 
     virtual bool hasCurrentTemplate() const = 0;
-    virtual QString currentTemplate(QString *errorMessage = nullptr) = 0;
+    virtual QString currentTemplate(QString *errorMessage = Q_NULLPTR) = 0;
 
-    static QDesignerNewFormWidgetInterface *createNewFormWidget(QDesignerFormEditorInterface *core, QWidget *parent = nullptr);
+    static QDesignerNewFormWidgetInterface *createNewFormWidget(QDesignerFormEditorInterface *core, QWidget *parent = Q_NULLPTR);
 
 Q_SIGNALS:
     void templateActivated();

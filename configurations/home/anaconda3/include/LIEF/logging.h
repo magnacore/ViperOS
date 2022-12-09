@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,6 +37,10 @@ LIEF_API void lief_logging_enable(void);
 
 /** @brief Update logging level */
 LIEF_API void lief_logging_set_level(uint32_t level);
+
+/** @brief Update verbosity level */
+LIEF_API void lief_logging_set_verbose_level(uint32_t level);
+
 
 #ifdef __cplusplus
 }

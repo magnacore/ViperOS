@@ -40,26 +40,6 @@
 #ifndef QXML_H
 #define QXML_H
 
-#if 0
-// This is needed because of QTBUG-80347
-#pragma qt_class(QXmlNamespaceSupport)
-#pragma qt_class(QXmlAttributes)
-#pragma qt_class(QXmlInputSource)
-#pragma qt_class(QXmlParseException)
-#pragma qt_class(QXmlReader)
-#pragma qt_class(QXmlSimpleReader)
-#pragma qt_class(QXmlLocator)
-#pragma qt_class(QXmlContentHandler)
-#pragma qt_class(QXmlErrorHandler)
-#pragma qt_class(QXmlDTDHandler)
-#pragma qt_class(QXmlEntityResolver)
-#pragma qt_class(QXmlLexicalHandler)
-#pragma qt_class(QXmlDeclHandler)
-#pragma qt_class(QXmlDefaultHandler)
-#endif
-
-#include <QtCore/qglobal.h>
-
 #include <QtXml/qtxmlglobal.h>
 #include <QtCore/qtextstream.h>
 #include <QtCore/qfile.h>
@@ -68,12 +48,8 @@
 #include <QtCore/qlist.h>
 #include <QtCore/qscopedpointer.h>
 
-#if QT_DEPRECATED_SINCE(5, 15)
-
 QT_BEGIN_NAMESPACE
 
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
 
 class QXmlNamespaceSupport;
 class QXmlAttributes;
@@ -100,11 +76,12 @@ class QXmlParseExceptionPrivate;
 class QXmlLocatorPrivate;
 class QXmlDefaultHandlerPrivate;
 
+
 //
 // SAX Namespace Support
 //
 
-class QT_DEPRECATED_VERSION(5, 15) Q_XML_EXPORT QXmlNamespaceSupport
+class Q_XML_EXPORT QXmlNamespaceSupport
 {
 public:
     QXmlNamespaceSupport();
@@ -135,23 +112,22 @@ private:
 // SAX Attributes
 //
 
-// Although deprecated warnings are disabled, the intel icc 18 compiler
-// still complains during the instantiation of the templated qSwap() call below
-// (with the parameter QXmlAttributes::AttributeList) when QXmlAttributes is
-// deprecated. This makes the build fail when warnings are treated as errors.
-// To workaround this, deprecated only the constructor.
 class Q_XML_EXPORT QXmlAttributes
 {
 public:
-    QT_DEPRECATED_VERSION(5, 15) QXmlAttributes();
+    QXmlAttributes();
+#ifdef Q_COMPILER_DEFAULT_MEMBERS
     QXmlAttributes(const QXmlAttributes &) = default;
-    QXmlAttributes(QXmlAttributes &&) noexcept = default;
+    QXmlAttributes(QXmlAttributes &&) Q_DECL_NOTHROW = default;
     QXmlAttributes &operator=(const QXmlAttributes &) = default;
-    QXmlAttributes &operator=(QXmlAttributes &&) noexcept = default;
+    QXmlAttributes &operator=(QXmlAttributes &&) Q_DECL_NOTHROW = default;
+#endif // default members
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    virtual // ### Qt 6: this value class don't need no virtual dtor
+#endif
+    ~QXmlAttributes();
 
-    QT6_NOT_VIRTUAL ~QXmlAttributes();
-
-    void swap(QXmlAttributes &other) noexcept
+    void swap(QXmlAttributes &other) Q_DECL_NOTHROW
     {
         qSwap(attList, other.attList);
         qSwap(d, other.d);
@@ -186,7 +162,6 @@ private:
 
     QXmlAttributesPrivate *d;
 };
-
 Q_DECLARE_TYPEINFO(QXmlAttributes::Attribute, Q_MOVABLE_TYPE);
 Q_DECLARE_SHARED_NOT_MOVABLE_UNTIL_QT6(QXmlAttributes)
 
@@ -194,7 +169,7 @@ Q_DECLARE_SHARED_NOT_MOVABLE_UNTIL_QT6(QXmlAttributes)
 // SAX Input Source
 //
 
-class QT_DEPRECATED_VERSION(5, 15) Q_XML_EXPORT QXmlInputSource
+class Q_XML_EXPORT QXmlInputSource
 {
 public:
     QXmlInputSource();
@@ -223,7 +198,7 @@ private:
 // SAX Exception Classes
 //
 
-class QT_DEPRECATED_VERSION(5, 15) Q_XML_EXPORT QXmlParseException
+class Q_XML_EXPORT QXmlParseException
 {
 public:
     explicit QXmlParseException(const QString &name = QString(), int c = -1, int l = -1,
@@ -246,14 +221,14 @@ private:
 // XML Reader
 //
 
-class QT_DEPRECATED_VERSION_X(5, 15, "Use QXmlStreamReader") Q_XML_EXPORT QXmlReader
+class Q_XML_EXPORT QXmlReader
 {
 public:
     virtual ~QXmlReader() {}
-    virtual bool feature(const QString& name, bool *ok = nullptr) const = 0;
+    virtual bool feature(const QString& name, bool *ok = Q_NULLPTR) const = 0;
     virtual void setFeature(const QString& name, bool value) = 0;
     virtual bool hasFeature(const QString& name) const = 0;
-    virtual void* property(const QString& name, bool *ok = nullptr) const = 0;
+    virtual void* property(const QString& name, bool *ok = Q_NULLPTR) const = 0;
     virtual void setProperty(const QString& name, void* value) = 0;
     virtual bool hasProperty(const QString& name) const = 0;
     virtual void setEntityResolver(QXmlEntityResolver* handler) = 0;
@@ -272,36 +247,35 @@ public:
     virtual bool parse(const QXmlInputSource* input) = 0;
 };
 
-class QT_DEPRECATED_VERSION_X(5, 15, "Use QXmlStreamReader") Q_XML_EXPORT QXmlSimpleReader
-    : public QXmlReader
+class Q_XML_EXPORT QXmlSimpleReader : public QXmlReader
 {
 public:
     QXmlSimpleReader();
     virtual ~QXmlSimpleReader();
 
-    bool feature(const QString& name, bool *ok = nullptr) const override;
-    void setFeature(const QString& name, bool value) override;
-    bool hasFeature(const QString& name) const override;
+    bool feature(const QString& name, bool *ok = Q_NULLPTR) const Q_DECL_OVERRIDE;
+    void setFeature(const QString& name, bool value) Q_DECL_OVERRIDE;
+    bool hasFeature(const QString& name) const Q_DECL_OVERRIDE;
 
-    void* property(const QString& name, bool *ok = nullptr) const override;
-    void setProperty(const QString& name, void* value) override;
-    bool hasProperty(const QString& name) const override;
+    void* property(const QString& name, bool *ok = Q_NULLPTR) const Q_DECL_OVERRIDE;
+    void setProperty(const QString& name, void* value) Q_DECL_OVERRIDE;
+    bool hasProperty(const QString& name) const Q_DECL_OVERRIDE;
 
-    void setEntityResolver(QXmlEntityResolver* handler) override;
-    QXmlEntityResolver* entityResolver() const override;
-    void setDTDHandler(QXmlDTDHandler* handler) override;
-    QXmlDTDHandler* DTDHandler() const override;
-    void setContentHandler(QXmlContentHandler* handler) override;
-    QXmlContentHandler* contentHandler() const override;
-    void setErrorHandler(QXmlErrorHandler* handler) override;
-    QXmlErrorHandler* errorHandler() const override;
-    void setLexicalHandler(QXmlLexicalHandler* handler) override;
-    QXmlLexicalHandler* lexicalHandler() const override;
-    void setDeclHandler(QXmlDeclHandler* handler) override;
-    QXmlDeclHandler* declHandler() const override;
+    void setEntityResolver(QXmlEntityResolver* handler) Q_DECL_OVERRIDE;
+    QXmlEntityResolver* entityResolver() const Q_DECL_OVERRIDE;
+    void setDTDHandler(QXmlDTDHandler* handler) Q_DECL_OVERRIDE;
+    QXmlDTDHandler* DTDHandler() const Q_DECL_OVERRIDE;
+    void setContentHandler(QXmlContentHandler* handler) Q_DECL_OVERRIDE;
+    QXmlContentHandler* contentHandler() const Q_DECL_OVERRIDE;
+    void setErrorHandler(QXmlErrorHandler* handler) Q_DECL_OVERRIDE;
+    QXmlErrorHandler* errorHandler() const Q_DECL_OVERRIDE;
+    void setLexicalHandler(QXmlLexicalHandler* handler) Q_DECL_OVERRIDE;
+    QXmlLexicalHandler* lexicalHandler() const Q_DECL_OVERRIDE;
+    void setDeclHandler(QXmlDeclHandler* handler) Q_DECL_OVERRIDE;
+    QXmlDeclHandler* declHandler() const Q_DECL_OVERRIDE;
 
-    bool parse(const QXmlInputSource& input) override;
-    bool parse(const QXmlInputSource* input) override;
+    bool parse(const QXmlInputSource& input) Q_DECL_OVERRIDE;
+    bool parse(const QXmlInputSource* input) Q_DECL_OVERRIDE;
     virtual bool parse(const QXmlInputSource* input, bool incremental);
     virtual bool parseContinue();
 
@@ -318,7 +292,7 @@ private:
 // SAX Locator
 //
 
-class QT_DEPRECATED_VERSION(5, 15) Q_XML_EXPORT QXmlLocator
+class Q_XML_EXPORT QXmlLocator
 {
 public:
     QXmlLocator();
@@ -334,7 +308,7 @@ public:
 // SAX handler classes
 //
 
-class QT_DEPRECATED_VERSION(5, 15) Q_XML_EXPORT QXmlContentHandler
+class Q_XML_EXPORT QXmlContentHandler
 {
 public:
     virtual ~QXmlContentHandler() {}
@@ -352,7 +326,7 @@ public:
     virtual QString errorString() const = 0;
 };
 
-class QT_DEPRECATED_VERSION(5, 15) Q_XML_EXPORT QXmlErrorHandler
+class Q_XML_EXPORT QXmlErrorHandler
 {
 public:
     virtual ~QXmlErrorHandler() {}
@@ -362,7 +336,7 @@ public:
     virtual QString errorString() const = 0;
 };
 
-class QT_DEPRECATED_VERSION(5, 15) Q_XML_EXPORT QXmlDTDHandler
+class Q_XML_EXPORT QXmlDTDHandler
 {
 public:
     virtual ~QXmlDTDHandler() {}
@@ -371,7 +345,7 @@ public:
     virtual QString errorString() const = 0;
 };
 
-class QT_DEPRECATED_VERSION(5, 15) Q_XML_EXPORT QXmlEntityResolver
+class Q_XML_EXPORT QXmlEntityResolver
 {
 public:
     virtual ~QXmlEntityResolver() {}
@@ -379,7 +353,7 @@ public:
     virtual QString errorString() const = 0;
 };
 
-class QT_DEPRECATED_VERSION(5, 15) Q_XML_EXPORT QXmlLexicalHandler
+class Q_XML_EXPORT QXmlLexicalHandler
 {
 public:
     virtual ~QXmlLexicalHandler() {}
@@ -393,7 +367,7 @@ public:
     virtual QString errorString() const = 0;
 };
 
-class QT_DEPRECATED_VERSION(5, 15) Q_XML_EXPORT QXmlDeclHandler
+class Q_XML_EXPORT QXmlDeclHandler
 {
 public:
     virtual ~QXmlDeclHandler() {}
@@ -404,51 +378,47 @@ public:
     // ### Conform to SAX by adding elementDecl
 };
 
-class QT_DEPRECATED_VERSION(5, 15) Q_XML_EXPORT QXmlDefaultHandler : public QXmlContentHandler,
-                                                                     public QXmlErrorHandler,
-                                                                     public QXmlDTDHandler,
-                                                                     public QXmlEntityResolver,
-                                                                     public QXmlLexicalHandler,
-                                                                     public QXmlDeclHandler
+
+class Q_XML_EXPORT QXmlDefaultHandler : public QXmlContentHandler, public QXmlErrorHandler, public QXmlDTDHandler, public QXmlEntityResolver, public QXmlLexicalHandler, public QXmlDeclHandler
 {
 public:
     QXmlDefaultHandler();
     virtual ~QXmlDefaultHandler();
 
-    void setDocumentLocator(QXmlLocator* locator) override;
-    bool startDocument() override;
-    bool endDocument() override;
-    bool startPrefixMapping(const QString& prefix, const QString& uri) override;
-    bool endPrefixMapping(const QString& prefix) override;
-    bool startElement(const QString& namespaceURI, const QString& localName, const QString& qName, const QXmlAttributes& atts) override;
-    bool endElement(const QString& namespaceURI, const QString& localName, const QString& qName) override;
-    bool characters(const QString& ch) override;
-    bool ignorableWhitespace(const QString& ch) override;
-    bool processingInstruction(const QString& target, const QString& data) override;
-    bool skippedEntity(const QString& name) override;
+    void setDocumentLocator(QXmlLocator* locator) Q_DECL_OVERRIDE;
+    bool startDocument() Q_DECL_OVERRIDE;
+    bool endDocument() Q_DECL_OVERRIDE;
+    bool startPrefixMapping(const QString& prefix, const QString& uri) Q_DECL_OVERRIDE;
+    bool endPrefixMapping(const QString& prefix) Q_DECL_OVERRIDE;
+    bool startElement(const QString& namespaceURI, const QString& localName, const QString& qName, const QXmlAttributes& atts) Q_DECL_OVERRIDE;
+    bool endElement(const QString& namespaceURI, const QString& localName, const QString& qName) Q_DECL_OVERRIDE;
+    bool characters(const QString& ch) Q_DECL_OVERRIDE;
+    bool ignorableWhitespace(const QString& ch) Q_DECL_OVERRIDE;
+    bool processingInstruction(const QString& target, const QString& data) Q_DECL_OVERRIDE;
+    bool skippedEntity(const QString& name) Q_DECL_OVERRIDE;
 
-    bool warning(const QXmlParseException& exception) override;
-    bool error(const QXmlParseException& exception) override;
-    bool fatalError(const QXmlParseException& exception) override;
+    bool warning(const QXmlParseException& exception) Q_DECL_OVERRIDE;
+    bool error(const QXmlParseException& exception) Q_DECL_OVERRIDE;
+    bool fatalError(const QXmlParseException& exception) Q_DECL_OVERRIDE;
 
-    bool notationDecl(const QString& name, const QString& publicId, const QString& systemId) override;
-    bool unparsedEntityDecl(const QString& name, const QString& publicId, const QString& systemId, const QString& notationName) override;
+    bool notationDecl(const QString& name, const QString& publicId, const QString& systemId) Q_DECL_OVERRIDE;
+    bool unparsedEntityDecl(const QString& name, const QString& publicId, const QString& systemId, const QString& notationName) Q_DECL_OVERRIDE;
 
-    bool resolveEntity(const QString& publicId, const QString& systemId, QXmlInputSource*& ret) override;
+    bool resolveEntity(const QString& publicId, const QString& systemId, QXmlInputSource*& ret) Q_DECL_OVERRIDE;
 
-    bool startDTD(const QString& name, const QString& publicId, const QString& systemId) override;
-    bool endDTD() override;
-    bool startEntity(const QString& name) override;
-    bool endEntity(const QString& name) override;
-    bool startCDATA() override;
-    bool endCDATA() override;
-    bool comment(const QString& ch) override;
+    bool startDTD(const QString& name, const QString& publicId, const QString& systemId) Q_DECL_OVERRIDE;
+    bool endDTD() Q_DECL_OVERRIDE;
+    bool startEntity(const QString& name) Q_DECL_OVERRIDE;
+    bool endEntity(const QString& name) Q_DECL_OVERRIDE;
+    bool startCDATA() Q_DECL_OVERRIDE;
+    bool endCDATA() Q_DECL_OVERRIDE;
+    bool comment(const QString& ch) Q_DECL_OVERRIDE;
 
-    bool attributeDecl(const QString& eName, const QString& aName, const QString& type, const QString& valueDefault, const QString& value) override;
-    bool internalEntityDecl(const QString& name, const QString& value) override;
-    bool externalEntityDecl(const QString& name, const QString& publicId, const QString& systemId) override;
+    bool attributeDecl(const QString& eName, const QString& aName, const QString& type, const QString& valueDefault, const QString& value) Q_DECL_OVERRIDE;
+    bool internalEntityDecl(const QString& name, const QString& value) Q_DECL_OVERRIDE;
+    bool externalEntityDecl(const QString& name, const QString& publicId, const QString& systemId) Q_DECL_OVERRIDE;
 
-    QString errorString() const override;
+    QString errorString() const Q_DECL_OVERRIDE;
 
 private:
     QXmlDefaultHandlerPrivate *d;
@@ -460,10 +430,6 @@ private:
 inline int QXmlAttributes::count() const
 { return length(); }
 
-QT_WARNING_POP
-
 QT_END_NAMESPACE
-
-#endif // QT_DEPRECATED_SINCE(5, 15)
 
 #endif // QXML_H

@@ -1,0 +1,38 @@
+{
+  "build": "py38_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/sphinxcontrib-1.0-py38_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/sphinxcontrib/__init__.py",
+    "lib/python3.8/site-packages/sphinxcontrib/__pycache__/__init__.cpython-38.pyc"
+  ],
+  "fn": "sphinxcontrib-1.0-py38_1.conda",
+  "legacy_bz2_md5": "3c913a132fbdad4b6b5ea88dbbda0aa1",
+  "legacy_bz2_size": 3776,
+  "license": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/sphinxcontrib-1.0-py38_1",
+    "type": 1
+  },
+  "md5": "9dbfb31f0e00998fec42bb8236ebb021",
+  "name": "sphinxcontrib",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/sphinxcontrib-1.0-py38_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "sphinxcontrib==1.0=py38_1",
+  "sha256": "9bb997ddeb8d20aed546ed05b1c33f3ad12af488b614d07fa2c16854773ffd01",
+  "size": 4320,
+  "subdir": "linux-64",
+  "timestamp": 1573661755073,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/sphinxcontrib-1.0-py38_1.conda",
+  "version": "1.0"
+}

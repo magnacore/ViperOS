@@ -1,0 +1,31 @@
+{
+  "arch": "x86_64",
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "brotlipy >=0.6.0",
+    "certifi",
+    "cryptography >=1.3.4",
+    "idna >=2.0.0",
+    "pyopenssl >=0.14",
+    "pysocks >=1.5.6,<2.0,!=1.5.7",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "features": "",
+  "fn": "urllib3-1.26.12-py39h06a4308_0.conda",
+  "legacy_bz2_md5": "612cb2f1ece418be7923817e3f72537d",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "93c50f20fc6c5465cb3bf7de94315910",
+  "name": "urllib3",
+  "platform": "linux",
+  "sha256": "1df3a8da4a3a44c5b6f85a478997ea4028aa6bb75bfa969627eb65a07b115067",
+  "size": 185744,
+  "subdir": "linux-64",
+  "timestamp": 1666298972427,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/urllib3-1.26.12-py39h06a4308_0.conda",
+  "version": "1.26.12"
+}

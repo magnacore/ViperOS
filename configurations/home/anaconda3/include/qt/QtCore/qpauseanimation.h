@@ -42,9 +42,10 @@
 
 #include <QtCore/qanimationgroup.h>
 
-QT_REQUIRE_CONFIG(animation);
-
 QT_BEGIN_NAMESPACE
+
+
+#ifndef QT_NO_ANIMATION
 
 class QPauseAnimationPrivate;
 
@@ -53,21 +54,23 @@ class Q_CORE_EXPORT QPauseAnimation : public QAbstractAnimation
     Q_OBJECT
     Q_PROPERTY(int duration READ duration WRITE setDuration)
 public:
-    QPauseAnimation(QObject *parent = nullptr);
-    QPauseAnimation(int msecs, QObject *parent = nullptr);
+    QPauseAnimation(QObject *parent = Q_NULLPTR);
+    QPauseAnimation(int msecs, QObject *parent = Q_NULLPTR);
     ~QPauseAnimation();
 
-    int duration() const override;
+    int duration() const Q_DECL_OVERRIDE;
     void setDuration(int msecs);
 
 protected:
-    bool event(QEvent *e) override;
-    void updateCurrentTime(int) override;
+    bool event(QEvent *e) Q_DECL_OVERRIDE;
+    void updateCurrentTime(int) Q_DECL_OVERRIDE;
 
 private:
     Q_DISABLE_COPY(QPauseAnimation)
     Q_DECLARE_PRIVATE(QPauseAnimation)
 };
+
+#endif //QT_NO_ANIMATION
 
 QT_END_NAMESPACE
 

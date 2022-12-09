@@ -108,20 +108,18 @@ public:
     Q_FLAG(StandardButtons)
 
     enum ButtonLayout {
-        // keep this in sync with QPlatformDialogHelper::ButtonLayout
+        // keep this in sync with QMessageBox::ButtonLayout and QPlatformDialogHelper::ButtonLayout
         WinLayout,
         MacLayout,
         KdeLayout,
-        GnomeLayout,
-        // MacModelessLayout,
-        AndroidLayout = GnomeLayout + 2 // ### Qt 6: reorder
+        GnomeLayout
     };
 
-    QDialogButtonBox(QWidget *parent = nullptr);
-    QDialogButtonBox(Qt::Orientation orientation, QWidget *parent = nullptr);
-    explicit QDialogButtonBox(StandardButtons buttons, QWidget *parent = nullptr);
+    QDialogButtonBox(QWidget *parent = Q_NULLPTR);
+    QDialogButtonBox(Qt::Orientation orientation, QWidget *parent = Q_NULLPTR);
+    explicit QDialogButtonBox(StandardButtons buttons, QWidget *parent = Q_NULLPTR);
     QDialogButtonBox(StandardButtons buttons, Qt::Orientation orientation,
-                     QWidget *parent = nullptr);
+                     QWidget *parent = Q_NULLPTR);
     ~QDialogButtonBox();
 
     void setOrientation(Qt::Orientation orientation);
@@ -151,8 +149,8 @@ Q_SIGNALS:
     void rejected();
 
 protected:
-    void changeEvent(QEvent *event) override;
-    bool event(QEvent *event) override;
+    void changeEvent(QEvent *event) Q_DECL_OVERRIDE;
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
 
 private:
     Q_DISABLE_COPY(QDialogButtonBox)

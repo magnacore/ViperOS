@@ -31,7 +31,7 @@
 
 #include <QtDesigner/sdk_global.h>
 
-#include <QtCore/qvariant.h>
+#include <QtCore/QVariant>
 
 QT_BEGIN_NAMESPACE
 

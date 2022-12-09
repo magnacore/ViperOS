@@ -1,0 +1,129 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/attrs-20.3.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/attr/__init__.py",
+    "lib/python3.8/site-packages/attr/__init__.pyi",
+    "lib/python3.8/site-packages/attr/_compat.py",
+    "lib/python3.8/site-packages/attr/_config.py",
+    "lib/python3.8/site-packages/attr/_funcs.py",
+    "lib/python3.8/site-packages/attr/_make.py",
+    "lib/python3.8/site-packages/attr/_next_gen.py",
+    "lib/python3.8/site-packages/attr/_version_info.py",
+    "lib/python3.8/site-packages/attr/_version_info.pyi",
+    "lib/python3.8/site-packages/attr/converters.py",
+    "lib/python3.8/site-packages/attr/converters.pyi",
+    "lib/python3.8/site-packages/attr/exceptions.py",
+    "lib/python3.8/site-packages/attr/exceptions.pyi",
+    "lib/python3.8/site-packages/attr/filters.py",
+    "lib/python3.8/site-packages/attr/filters.pyi",
+    "lib/python3.8/site-packages/attr/py.typed",
+    "lib/python3.8/site-packages/attr/setters.py",
+    "lib/python3.8/site-packages/attr/setters.pyi",
+    "lib/python3.8/site-packages/attr/validators.py",
+    "lib/python3.8/site-packages/attr/validators.pyi",
+    "lib/python3.8/site-packages/attrs-20.3.0.dist-info/AUTHORS.rst",
+    "lib/python3.8/site-packages/attrs-20.3.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/attrs-20.3.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/attrs-20.3.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/attrs-20.3.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/attrs-20.3.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/attrs-20.3.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/attrs-20.3.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/attrs-20.3.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/attr/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/attr/__pycache__/_compat.cpython-38.pyc",
+    "lib/python3.8/site-packages/attr/__pycache__/_config.cpython-38.pyc",
+    "lib/python3.8/site-packages/attr/__pycache__/_funcs.cpython-38.pyc",
+    "lib/python3.8/site-packages/attr/__pycache__/_make.cpython-38.pyc",
+    "lib/python3.8/site-packages/attr/__pycache__/_next_gen.cpython-38.pyc",
+    "lib/python3.8/site-packages/attr/__pycache__/_version_info.cpython-38.pyc",
+    "lib/python3.8/site-packages/attr/__pycache__/converters.cpython-38.pyc",
+    "lib/python3.8/site-packages/attr/__pycache__/exceptions.cpython-38.pyc",
+    "lib/python3.8/site-packages/attr/__pycache__/filters.cpython-38.pyc",
+    "lib/python3.8/site-packages/attr/__pycache__/setters.cpython-38.pyc",
+    "lib/python3.8/site-packages/attr/__pycache__/validators.cpython-38.pyc"
+  ],
+  "fn": "attrs-20.3.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "edd2d539d41f1ba06544dc6dae005bb1",
+  "legacy_bz2_size": 42585,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/attrs-20.3.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "5605773235ba2c3d097b130132bc5907",
+  "name": "attrs",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/attrs-20.3.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/attr/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/attr/__pycache__/_compat.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/attr/__pycache__/_config.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/attr/__pycache__/_funcs.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/attr/__pycache__/_make.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/attr/__pycache__/_next_gen.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/attr/__pycache__/_version_info.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/attr/__pycache__/converters.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/attr/__pycache__/exceptions.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/attr/__pycache__/filters.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/attr/__pycache__/setters.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/attr/__pycache__/validators.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "attrs==20.3.0=pyhd3eb1b0_0",
+  "sha256": "ce707e806cc3d408edf953b2cefffce24095b124e7bb6b2ac66f8697a6db931e",
+  "size": 44318,
+  "subdir": "noarch",
+  "timestamp": 1604765619426,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/attrs-20.3.0-pyhd3eb1b0_0.conda",
+  "version": "20.3.0"
+}

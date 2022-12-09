@@ -45,7 +45,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Q_TEXTTOSPEECH_EXPORT QTextToSpeechPlugin
+class QTEXTTOSPEECH_EXPORT QTextToSpeechPlugin
 {
 public:
     virtual ~QTextToSpeechPlugin() {}

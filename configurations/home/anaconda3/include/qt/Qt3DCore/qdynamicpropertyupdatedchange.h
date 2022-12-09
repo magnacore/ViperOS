@@ -48,10 +48,10 @@ namespace Qt3DCore {
 
 class QDynamicPropertyUpdatedChangePrivate;
 
-class Q_3DCORESHARED_EXPORT QDynamicPropertyUpdatedChange : public QPropertyUpdatedChangeBase
+class QT3DCORESHARED_EXPORT QDynamicPropertyUpdatedChange : public QPropertyUpdatedChangeBase
 {
 public:
-    Q3D_DECL_DEPRECATED explicit QDynamicPropertyUpdatedChange(QNodeId subjectId);
+    explicit QDynamicPropertyUpdatedChange(QNodeId subjectId);
     ~QDynamicPropertyUpdatedChange();
 
     QByteArray propertyName() const;
@@ -65,7 +65,7 @@ protected:
     QDynamicPropertyUpdatedChange(QDynamicPropertyUpdatedChangePrivate &dd, QNodeId subjectId);
 };
 
-Q3D_DECL_DEPRECATED typedef QSharedPointer<QDynamicPropertyUpdatedChange> QDynamicPropertyUpdatedChangePtr;
+typedef QSharedPointer<QDynamicPropertyUpdatedChange> QDynamicPropertyUpdatedChangePtr;
 
 } // namespace Qt3DCore
 

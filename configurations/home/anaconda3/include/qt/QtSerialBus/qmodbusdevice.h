@@ -38,7 +38,7 @@
 
 #include <QtCore/qobject.h>
 #include <QtCore/qiodevice.h>
-#include <QtSerialBus/qtserialbusglobal.h>
+#include <QtSerialBus/qserialbusglobal.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -82,7 +82,7 @@ public:
         NetworkAddressParameter,
 
         // Reserved
-        UserParameter = 0x100 // ### Qt6: remove
+        UserParameter = 0x100
     };
     Q_ENUM(ConnectionParameter)
 
@@ -99,8 +99,6 @@ public:
 
     Error error() const;
     QString errorString() const;
-
-    QIODevice *device() const;
 
 Q_SIGNALS:
     void errorOccurred(QModbusDevice::Error error);

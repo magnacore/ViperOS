@@ -1,0 +1,47 @@
+# This file created by conda-build 3.22.0
+# ------------------------------------------------
+
+package:
+  name: libstdcxx-ng
+  version: 12.2.0
+source:
+  - patches:
+      - patches/0021-Hardcode-HAVE_ALIGNED_ALLOC-1-in-libstdc-v3-configur.patch
+      - patches/new-allow-commands-in-main-specfile.patch
+    sha256: ac6b317eb4d25444d87cf29c0d141dedc1323a1833ec9995211b13e1a851261c
+    url: https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.gz
+build:
+  detect_binary_files_with_prefix: false
+  ignore_run_exports:
+    - __glibc
+  missing_dso_whitelist:
+    - '*'
+  number: 19
+  string: h46fd767_19
+requirements:
+  build:
+    - binutils_impl_linux-64 2.39 h6ceecb4_0
+    - gcc_bootstrap_linux-64 12.2.0 hba5b598_11
+    - kernel-headers_linux-64 2.6.32 he073ed8_15
+    - ld_impl_linux-64 2.39 hc81fddc_0
+    - sysroot_linux-64 2.12 he073ed8_15
+  host:
+    - kernel-headers_linux-64 2.6.32 he073ed8_15
+    - libgcc-ng 12.2.0 h65d4601_19
+    - sysroot_linux-64 2.12 he073ed8_15
+  run: []
+test:
+  commands:
+    - test -f ${PREFIX}/lib/libstdc++.so
+about:
+  home: https://gcc.gnu.org/
+  license: GPL-3.0-only WITH GCC-exception-3.1
+  summary: The GNU C++ Runtime Library
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - beckermr
+    - isuruf
+    - timsnyder
+    - xhochy

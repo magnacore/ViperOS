@@ -64,9 +64,9 @@ public:
     Q_DECLARE_FLAGS(WatchMode, WatchModeFlag)
     Q_FLAG(WatchMode)
 
-    explicit QDBusServiceWatcher(QObject *parent = nullptr);
+    explicit QDBusServiceWatcher(QObject *parent = Q_NULLPTR);
     QDBusServiceWatcher(const QString &service, const QDBusConnection &connection,
-                        WatchMode watchMode = WatchForOwnerChange, QObject *parent = nullptr);
+                        WatchMode watchMode = WatchForOwnerChange, QObject *parent = Q_NULLPTR);
     ~QDBusServiceWatcher();
 
     QStringList watchedServices() const;

@@ -1,0 +1,50 @@
+{% set name = "google-cloud-texttospeech" %}
+{% set version = "2.12.3" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-cloud-texttospeech-{{ version }}.tar.gz
+  sha256: 8274a5fd6d264efe88b7fffec55e6d8b445dea2a351a1e32c5dd1aaeb6c43ed4
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+
+requirements:
+  host:
+    - python >=3.7
+    - pip >=18.1
+  run:
+    - python >=3.7
+    - google-api-core-grpc >=1.32.0,<3.0.0dev,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*
+    - proto-plus >=1.22.0,<2.0.0dev
+    - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
+
+test:
+  imports:
+    - grpc
+    - google.cloud.texttospeech_v1
+  requires:
+    - pip
+  commands:
+    - pip check
+
+about:
+  home: https://github.com/googleapis/python-texttospeech
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: Google Cloud Text-to-Speech API client library
+  description: "Google Cloud Text-to-Speech API synthesizes natural-sounding speech by applying powerful neural network models.\nSee the [quick start guide](https://googleapis.dev/python/texttospeech/latest/index.html#quick-start)."
+
+  doc_url: https://googleapis.dev/python/texttospeech/latest/index.html
+  dev_url: https://github.com/googleapis/python-texttospeech
+
+extra:
+  recipe-maintainers:
+    - xylar
+    - parthea

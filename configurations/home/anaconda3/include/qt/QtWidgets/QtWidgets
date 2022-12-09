@@ -280,9 +280,7 @@
 #if QT_CONFIG(textedit)
 #include "qtextedit.h"
 #endif
-#if QT_CONFIG(toolbar)
 #include "qtoolbar.h"
-#endif
 #if QT_CONFIG(toolbox)
 #include "qtoolbox.h"
 #endif

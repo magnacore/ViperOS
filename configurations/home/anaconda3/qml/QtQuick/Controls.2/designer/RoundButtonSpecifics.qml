@@ -34,15 +34,14 @@
 **
 ****************************************************************************/
 
-import QtQuick 2.12
+import QtQuick 2.1
 import HelperWidgets 2.0
-import QtQuick.Layouts 1.12
+import QtQuick.Layouts 1.0
 
 Column {
     width: parent.width
 
     Section {
-        width: parent.width
         caption: qsTr("RoundButton")
 
         SectionLayout {
@@ -52,8 +51,8 @@ Column {
             }
             SecondColumnLayout {
                 SpinBox {
-                    minimumValue: 0
-                    maximumValue: 10000
+                    maximumValue: 9999999
+                    minimumValue: -9999999
                     decimals: 0
                     backendValue: backendValues.radius
                     Layout.fillWidth: true

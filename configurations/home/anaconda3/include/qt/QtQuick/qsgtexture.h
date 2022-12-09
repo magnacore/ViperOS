@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** Copyright (C) 2019 The Qt Company Ltd.
+** Copyright (C) 2016 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
 ** This file is part of the QtQuick module of the Qt Toolkit.
@@ -47,10 +47,6 @@
 QT_BEGIN_NAMESPACE
 
 class QSGTexturePrivate;
-class QRhi;
-class QRhiTexture;
-class QRhiResourceUpdateBatch;
-
 class Q_QUICK_EXPORT QSGTexture : public QObject
 {
     Q_OBJECT
@@ -58,12 +54,11 @@ class Q_QUICK_EXPORT QSGTexture : public QObject
 
 public:
     QSGTexture();
-    ~QSGTexture() override;
+    ~QSGTexture();
 
     enum WrapMode {
         Repeat,
-        ClampToEdge,
-        MirroredRepeat
+        ClampToEdge
     };
 
     enum Filtering {
@@ -80,13 +75,7 @@ public:
         Anisotropy16x
     };
 
-    struct NativeTexture {
-        const void *object;
-        int layout;
-    };
-
-    virtual int textureId() const = 0; // ### Qt 6: remove
-    NativeTexture nativeTexture() const;
+    virtual int textureId() const = 0;
     virtual QSize textureSize() const = 0;
     virtual bool hasAlphaChannel() const = 0;
     virtual bool hasMipmaps() const = 0;
@@ -117,13 +106,6 @@ public:
 
     inline QRectF convertToNormalizedSourceRect(const QRectF &rect) const;
 
-    // ### Qt 6: make these virtual
-    int comparisonKey() const;
-    void updateRhiTexture(QRhi *rhi, QRhiResourceUpdateBatch *resourceUpdates);
-
-    // ### Qt 6: make this an argument for removedFromAtlas()
-    void setWorkResourceUpdateBatch(QRhiResourceUpdateBatch *resourceUpdates);
-
 protected:
     QSGTexture(QSGTexturePrivate &dd);
 };
@@ -142,16 +124,12 @@ QRectF QSGTexture::convertToNormalizedSourceRect(const QRectF &rect) const
                   rect.height() * sy);
 }
 
+
 class Q_QUICK_EXPORT QSGDynamicTexture : public QSGTexture
 {
     Q_OBJECT
-
 public:
-    QSGDynamicTexture() = default;
     virtual bool updateTexture() = 0;
-
-protected:
-    QSGDynamicTexture(QSGTexturePrivate &dd);
 };
 
 QT_END_NAMESPACE

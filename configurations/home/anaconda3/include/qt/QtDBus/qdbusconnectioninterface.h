@@ -68,7 +68,6 @@ class Q_DBUS_EXPORT QDBusConnectionInterface: public QDBusAbstractInterface
     ~QDBusConnectionInterface();
 
     Q_PROPERTY(QDBusReply<QStringList> registeredServiceNames READ registeredServiceNames)
-    Q_PROPERTY(QDBusReply<QStringList> activatableServiceNames READ activatableServiceNames)
 
 public:
     enum ServiceQueueOptions {
@@ -91,7 +90,6 @@ public:
 
 public Q_SLOTS:
     QDBusReply<QStringList> registeredServiceNames() const;
-    QDBusReply<QStringList> activatableServiceNames() const;
     QDBusReply<bool> isServiceRegistered(const QString &serviceName) const;
     QDBusReply<QString> serviceOwner(const QString &name) const;
     QDBusReply<bool> unregisterService(const QString &serviceName);
@@ -117,8 +115,8 @@ Q_SIGNALS:
     void NameLost(const QString &);
     void NameOwnerChanged(const QString &, const QString &, const QString &);
 protected:
-    void connectNotify(const QMetaMethod &) override;
-    void disconnectNotify(const QMetaMethod &) override;
+    void connectNotify(const QMetaMethod &) Q_DECL_OVERRIDE;
+    void disconnectNotify(const QMetaMethod &) Q_DECL_OVERRIDE;
 #endif
 };
 

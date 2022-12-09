@@ -1,0 +1,73 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/tblib-1.7.0-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/tblib-1.7.0.dist-info/AUTHORS.rst",
+    "lib/python3.8/site-packages/tblib-1.7.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/tblib-1.7.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/tblib-1.7.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/tblib-1.7.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/tblib-1.7.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/tblib-1.7.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/tblib-1.7.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/tblib-1.7.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/tblib/__init__.py",
+    "lib/python3.8/site-packages/tblib/cpython.py",
+    "lib/python3.8/site-packages/tblib/decorators.py",
+    "lib/python3.8/site-packages/tblib/pickling_support.py",
+    "lib/python3.8/site-packages/tblib/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/tblib/__pycache__/cpython.cpython-38.pyc",
+    "lib/python3.8/site-packages/tblib/__pycache__/decorators.cpython-38.pyc",
+    "lib/python3.8/site-packages/tblib/__pycache__/pickling_support.cpython-38.pyc"
+  ],
+  "fn": "tblib-1.7.0-py_0.conda",
+  "legacy_bz2_md5": "6add09c27775ac6f0870075d39e4730c",
+  "legacy_bz2_size": 16920,
+  "license": "BSD 2-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/tblib-1.7.0-py_0",
+    "type": 1
+  },
+  "md5": "d36c5472215891b29e1a678b5f382156",
+  "name": "tblib",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/tblib-1.7.0-py_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/tblib/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/tblib/__pycache__/cpython.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/tblib/__pycache__/decorators.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/tblib/__pycache__/pickling_support.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "tblib==1.7.0=py_0",
+  "sha256": "7a0c6b65c4dad656835af394e0c8fc317eed3b70b7605e96aa324a33eac7e5c1",
+  "size": 16813,
+  "subdir": "noarch",
+  "timestamp": 1597928539197,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/tblib-1.7.0-py_0.conda",
+  "version": "1.7.0"
+}

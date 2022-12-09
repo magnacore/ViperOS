@@ -33,13 +33,16 @@
 #include <QtDataVisualization/qabstractdataproxy.h>
 #include <QtDataVisualization/qsurfacedataitem.h>
 
+namespace QtDataVisualization {
+// typedefs introduced this way because QDoc doesn't understand namespace macros
+typedef QVector<QSurfaceDataItem> QSurfaceDataRow;
+typedef QList<QSurfaceDataRow *> QSurfaceDataArray;
+}
+
 QT_BEGIN_NAMESPACE_DATAVISUALIZATION
 
 class QSurfaceDataProxyPrivate;
 class QSurface3DSeries;
-
-typedef QVector<QSurfaceDataItem> QSurfaceDataRow;
-typedef QList<QSurfaceDataRow *> QSurfaceDataArray;
 
 class QT_DATAVISUALIZATION_EXPORT QSurfaceDataProxy : public QAbstractDataProxy
 {
@@ -50,7 +53,7 @@ class QT_DATAVISUALIZATION_EXPORT QSurfaceDataProxy : public QAbstractDataProxy
     Q_PROPERTY(QSurface3DSeries *series READ series NOTIFY seriesChanged)
 
 public:
-    explicit QSurfaceDataProxy(QObject *parent = nullptr);
+    explicit QSurfaceDataProxy(QObject *parent = Q_NULLPTR);
     virtual ~QSurfaceDataProxy();
 
     QSurface3DSeries *series() const;
@@ -89,7 +92,7 @@ Q_SIGNALS:
     void seriesChanged(QSurface3DSeries *series);
 
 protected:
-    explicit QSurfaceDataProxy(QSurfaceDataProxyPrivate *d, QObject *parent = nullptr);
+    explicit QSurfaceDataProxy(QSurfaceDataProxyPrivate *d, QObject *parent = Q_NULLPTR);
     QSurfaceDataProxyPrivate *dptr();
     const QSurfaceDataProxyPrivate *dptrc() const;
 

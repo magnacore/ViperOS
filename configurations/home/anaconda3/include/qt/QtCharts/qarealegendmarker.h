@@ -38,12 +38,12 @@ QT_CHARTS_BEGIN_NAMESPACE
 
 class QAreaLegendMarkerPrivate;
 
-class Q_CHARTS_EXPORT QAreaLegendMarker : public QLegendMarker
+class QT_CHARTS_EXPORT QAreaLegendMarker : public QLegendMarker
 {
     Q_OBJECT
 
 public:
-    explicit QAreaLegendMarker(QAreaSeries *series, QLegend *legend, QObject *parent = nullptr);
+    explicit QAreaLegendMarker(QAreaSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR);
     virtual ~QAreaLegendMarker();
 
     virtual LegendMarkerType type() { return LegendMarkerTypeArea; }
@@ -52,7 +52,7 @@ public:
     virtual QAreaSeries* series();
 
 protected:
-    QAreaLegendMarker(QAreaLegendMarkerPrivate &d, QObject *parent = nullptr);
+    QAreaLegendMarker(QAreaLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR);
 
 private:
     Q_DECLARE_PRIVATE(QAreaLegendMarker)

@@ -104,7 +104,7 @@ namespace QPatternist
         {
             data = 0;
             additionalData = 0;
-            model = nullptr;
+            model = Q_NULLPTR;
         }
     };
 }
@@ -126,8 +126,6 @@ public:
     inline QXmlNodeModelIndex(const QXmlNodeModelIndex &other) : m_storage(other.m_storage)
     {
     }
-
-    QXmlNodeModelIndex &operator=(const QXmlNodeModelIndex &) = default;
 
     bool operator==(const QXmlNodeModelIndex &other) const;
     bool operator!=(const QXmlNodeModelIndex &other) const;

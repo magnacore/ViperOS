@@ -50,20 +50,10 @@ namespace Qt3DRender {
 class QLayer;
 class QLayerFilterPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QLayerFilter : public QFrameGraphNode
+class QT3DRENDERSHARED_EXPORT QLayerFilter : public QFrameGraphNode
 {
     Q_OBJECT
-    Q_PROPERTY(FilterMode filterMode READ filterMode WRITE setFilterMode NOTIFY filterModeChanged)
 public:
-    enum FilterMode
-    {
-        AcceptAnyMatchingLayers = 0,
-        AcceptAllMatchingLayers,
-        DiscardAnyMatchingLayers,
-        DiscardAllMatchingLayers,
-    };
-    Q_ENUM(FilterMode) // LOVC_EXLC_LINE
-
     explicit QLayerFilter(Qt3DCore::QNode *parent = nullptr);
     ~QLayerFilter();
 
@@ -71,19 +61,12 @@ public:
     void removeLayer(QLayer *layer);
     QVector<QLayer *> layers() const;
 
-    FilterMode filterMode() const;
-    void setFilterMode(FilterMode filterMode);
-
-Q_SIGNALS:
-    void filterModeChanged(FilterMode filterMode);
-
-
 protected:
     explicit QLayerFilter(QLayerFilterPrivate &dd, Qt3DCore::QNode *parent = nullptr);
 
 private:
     Q_DECLARE_PRIVATE(QLayerFilter)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DRender

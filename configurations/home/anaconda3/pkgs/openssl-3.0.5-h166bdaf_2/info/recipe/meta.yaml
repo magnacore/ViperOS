@@ -1,0 +1,67 @@
+# This file created by conda-build 3.22.0
+# ------------------------------------------------
+
+package:
+  name: openssl
+  version: 3.0.5
+source:
+  sha256: aa7d8d9bef71ad6525c55ba11e5f4397889ce49c2c9349dcea6d3e4f0b024a7a
+  url: http://www.openssl.org/source/openssl-3.0.5.tar.gz
+build:
+  no_link: lib/libcrypto.so.3.0
+  number: 2
+  run_exports:
+    - openssl >=3.0.5,<4.0a0
+  string: h166bdaf_2
+requirements:
+  build:
+    - _libgcc_mutex 0.1 conda_forge
+    - _openmp_mutex 4.5 2_gnu
+    - binutils_impl_linux-64 2.36.1 h193b22a_2
+    - binutils_linux-64 2.36 hf3e587d_10
+    - gcc_impl_linux-64 10.4.0 h7ee1905_16
+    - gcc_linux-64 10.4.0 h9215b83_10
+    - kernel-headers_linux-64 2.6.32 he073ed8_15
+    - ld_impl_linux-64 2.36.1 hea4e1c9_2
+    - libgcc-devel_linux-64 10.4.0 h74af60c_16
+    - libgcc-ng 12.1.0 h8d9b700_16
+    - libgomp 12.1.0 h8d9b700_16
+    - libnsl 2.0.0 h7f98852_0
+    - libsanitizer 10.4.0 hde28e3b_16
+    - libstdcxx-ng 12.1.0 ha89aaad_16
+    - make 4.3 hd18ef5c_1
+    - perl 5.32.1 2_h7f98852_perl5
+    - sysroot_linux-64 2.12 he073ed8_15
+  host:
+    - _libgcc_mutex 0.1 conda_forge
+    - _openmp_mutex 4.5 2_gnu
+    - libgcc-ng 12.1.0 h8d9b700_16
+    - libgomp 12.1.0 h8d9b700_16
+  run:
+    - ca-certificates
+    - libgcc-ng >=12
+test:
+  commands:
+    - touch checksum.txt
+    - $PREFIX/bin/openssl sha256 checksum.txt
+    - pkg-config --print-errors --exact-version "3.0.5" openssl
+  requires:
+    - pkg-config
+about:
+  dev_url: https://github.com/openssl/openssl
+  doc_url: https://www.openssl.org/docs/man3.0/
+  home: http://www.openssl.org/
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE.txt
+  summary: OpenSSL is an open-source implementation of the SSL and TLS protocols
+extra:
+  copy_test_source_files: true
+  feedstock-name: openssl
+  final: true
+  recipe-maintainers:
+    - h-vetinari
+    - jakirkham
+    - msarahan
+    - ocefpaf
+    - pelson

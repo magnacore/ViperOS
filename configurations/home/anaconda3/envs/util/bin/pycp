@@ -1,4 +1,4 @@
-#!/home/goldust/anaconda3/envs/util/bin/python
+#!/home/manuj/anaconda3/envs/util/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

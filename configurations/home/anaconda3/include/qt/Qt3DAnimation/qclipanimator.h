@@ -51,7 +51,7 @@ class QAbstractAnimationClip;
 class QChannelMapper;
 class QClipAnimatorPrivate;
 
-class Q_3DANIMATIONSHARED_EXPORT QClipAnimator : public Qt3DAnimation::QAbstractClipAnimator
+class QT3DANIMATIONSHARED_EXPORT QClipAnimator : public Qt3DAnimation::QAbstractClipAnimator
 {
     Q_OBJECT
     Q_PROPERTY(Qt3DAnimation::QAbstractAnimationClip *clip READ clip WRITE setClip NOTIFY clipChanged)
@@ -73,7 +73,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(QClipAnimator)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DAnimation

@@ -40,7 +40,7 @@
 #ifndef QLOWENERGYADVERTISINGPARAMETERS_H
 #define QLOWENERGYADVERTISINGPARAMETERS_H
 
-#include <QtBluetooth/qtbluetoothglobal.h>
+#include <QtBluetooth/qbluetoothglobal.h>
 #include <QtBluetooth/qbluetoothaddress.h>
 #include <QtBluetooth/qlowenergycontroller.h>
 #include <QtCore/qlist.h>

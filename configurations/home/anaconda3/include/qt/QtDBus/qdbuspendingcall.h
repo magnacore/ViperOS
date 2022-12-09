@@ -60,12 +60,14 @@ class Q_DBUS_EXPORT QDBusPendingCall
 public:
     QDBusPendingCall(const QDBusPendingCall &other);
     ~QDBusPendingCall();
-    QDBusPendingCall &operator=(QDBusPendingCall &&other) noexcept { swap(other); return *this; }
+#ifdef Q_COMPILER_RVALUE_REFS
+    QDBusPendingCall &operator=(QDBusPendingCall &&other) Q_DECL_NOTHROW { swap(other); return *this; }
+#endif
     QDBusPendingCall &operator=(const QDBusPendingCall &other);
 
-    void swap(QDBusPendingCall &other) noexcept { qSwap(d, other.d); }
+    void swap(QDBusPendingCall &other) Q_DECL_NOTHROW { qSwap(d, other.d); }
 
-#ifndef Q_CLANG_QDOC
+#ifndef Q_QDOC
     // pretend that they aren't here
     bool isFinished() const;
     void waitForFinished();
@@ -98,7 +100,7 @@ class Q_DBUS_EXPORT QDBusPendingCallWatcher: public QObject, public QDBusPending
 {
     Q_OBJECT
 public:
-    explicit QDBusPendingCallWatcher(const QDBusPendingCall &call, QObject *parent = nullptr);
+    explicit QDBusPendingCallWatcher(const QDBusPendingCall &call, QObject *parent = Q_NULLPTR);
     ~QDBusPendingCallWatcher();
 
 #ifdef Q_QDOC
@@ -108,7 +110,7 @@ public:
     void waitForFinished();     // non-virtual override
 
 Q_SIGNALS:
-    void finished(QDBusPendingCallWatcher *self = nullptr);
+    void finished(QDBusPendingCallWatcher *self = Q_NULLPTR);
 
 private:
     Q_DECLARE_PRIVATE(QDBusPendingCallWatcher)

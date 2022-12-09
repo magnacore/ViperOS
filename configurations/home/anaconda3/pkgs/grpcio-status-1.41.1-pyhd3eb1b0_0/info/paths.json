@@ -1,0 +1,77 @@
+{
+  "paths": [
+    {
+      "_path": "site-packages/grpc_status/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "6389c23a1f650e352d38f2e83bb5561e407ef7a951354a3493a0acec7fc34cad",
+      "size_in_bytes": 580
+    },
+    {
+      "_path": "site-packages/grpc_status/_async.py",
+      "path_type": "hardlink",
+      "sha256": "7db8fc7b72b69a92f801b3bf77feba28cd1b1ee1d946d93bb4f6bb5a7262021c",
+      "size_in_bytes": 1969
+    },
+    {
+      "_path": "site-packages/grpc_status/_common.py",
+      "path_type": "hardlink",
+      "sha256": "a339bb4edd11e8a4e6d288c97524e54faf749f41a404fdda03cd619b1f73a36c",
+      "size_in_bytes": 959
+    },
+    {
+      "_path": "site-packages/grpc_status/rpc_status.py",
+      "path_type": "hardlink",
+      "sha256": "9f4130b527b9ca0bc1a25d8a360b6927dba8f0fd929e49c5194d3e45ed5b5f7a",
+      "size_in_bytes": 3017
+    },
+    {
+      "_path": "site-packages/grpcio_status-1.41.1.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "site-packages/grpcio_status-1.41.1.dist-info/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size_in_bytes": 11358
+    },
+    {
+      "_path": "site-packages/grpcio_status-1.41.1.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "3050bb0ff4bbac1e92e715a5bd227b7d666942bfc482083a441ae1286ffa06d4",
+      "size_in_bytes": 1221
+    },
+    {
+      "_path": "site-packages/grpcio_status-1.41.1.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "1c97b41ab334e1afd49ea3d0c1c4f34a8c26b03134fccda1f93de45a71c1178b",
+      "size_in_bytes": 1247
+    },
+    {
+      "_path": "site-packages/grpcio_status-1.41.1.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "site-packages/grpcio_status-1.41.1.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "7b0c04b9e8a8d42d977874ef4f5ee7f1d6542603afc82582b7459534b0a53fda",
+      "size_in_bytes": 92
+    },
+    {
+      "_path": "site-packages/grpcio_status-1.41.1.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "9ff08b3b1b8a6fa8c5e69e7c462287a552a62f2ec14520b6574866ca0ad39620",
+      "size_in_bytes": 86
+    },
+    {
+      "_path": "site-packages/grpcio_status-1.41.1.dist-info/top_level.txt",
+      "path_type": "hardlink",
+      "sha256": "c9093bcd7af761798ab60ece75d22fea39574d31453139c3a574a56b6c6d579f",
+      "size_in_bytes": 12
+    }
+  ],
+  "paths_version": 1
+}

@@ -57,15 +57,15 @@ class QT_DATAVISUALIZATION_EXPORT QItemModelScatterDataProxy : public QScatterDa
     Q_PROPERTY(QString rotationRoleReplace READ rotationRoleReplace WRITE setRotationRoleReplace NOTIFY rotationRoleReplaceChanged REVISION 1)
 
 public:
-    explicit QItemModelScatterDataProxy(QObject *parent = nullptr);
-    explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, QObject *parent = nullptr);
+    explicit QItemModelScatterDataProxy(QObject *parent = Q_NULLPTR);
+    explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, QObject *parent = Q_NULLPTR);
     explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel,
                                         const QString &xPosRole, const QString &yPosRole,
-                                        const QString &zPosRole, QObject *parent = nullptr);
+                                        const QString &zPosRole, QObject *parent = Q_NULLPTR);
     explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel,
                                         const QString &xPosRole, const QString &yPosRole,
                                         const QString &zPosRole, const QString &rotationRole,
-                                        QObject *parent = nullptr);
+                                        QObject *parent = Q_NULLPTR);
     virtual ~QItemModelScatterDataProxy();
 
     void setItemModel(QAbstractItemModel *itemModel);

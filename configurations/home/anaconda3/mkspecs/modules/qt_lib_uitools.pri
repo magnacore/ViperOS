@@ -1,4 +1,4 @@
-QT.uitools.VERSION = 5.15.2
+QT.uitools.VERSION = 5.9.7
 QT.uitools.name = QtUiTools
 QT.uitools.module = Qt5UiTools
 QT.uitools.libs = $$QT_MODULE_LIB_BASE

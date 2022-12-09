@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** Copyright (C) 2019 The Qt Company Ltd.
+** Copyright (C) 2016 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
 ** This file is part of the QtNetwork module of the Qt Toolkit.
@@ -62,14 +62,12 @@ namespace QSsl {
         Opaque,
         Rsa,
         Dsa,
-        Ec,
-        Dh,
+        Ec
     };
 
     enum AlternativeNameEntryType {
         EmailEntry,
-        DnsEntry,
-        IpAddressEntry
+        DnsEntry
     };
 
 #if QT_DEPRECATED_SINCE(5,0)
@@ -77,33 +75,21 @@ namespace QSsl {
 #endif
 
     enum SslProtocol {
-#if QT_DEPRECATED_SINCE(5, 15)
         SslV3,
         SslV2,
-#endif
-        TlsV1_0 = 2,
+        TlsV1_0,
 #if QT_DEPRECATED_SINCE(5,0)
         TlsV1 = TlsV1_0,
 #endif
         TlsV1_1,
         TlsV1_2,
         AnyProtocol,
-#if QT_DEPRECATED_SINCE(5, 15)
         TlsV1SslV3,
-#endif
-        SecureProtocols = AnyProtocol + 2,
+        SecureProtocols,
 
         TlsV1_0OrLater,
         TlsV1_1OrLater,
         TlsV1_2OrLater,
-
-        DtlsV1_0,
-        DtlsV1_0OrLater,
-        DtlsV1_2,
-        DtlsV1_2OrLater,
-
-        TlsV1_3,
-        TlsV1_3OrLater,
 
         UnknownProtocol = -1
     };

@@ -1,0 +1,32 @@
+# This file created by conda-build 3.21.4
+# meta.yaml template originally from:
+# /home/conda/recipe_root, last modified Tue Aug 24 15:37:48 2021
+# ------------------------------------------------
+
+package:
+  name: conda-suggest-conda-forge
+  version: 2021.8.24
+source:
+  sha256: bf14a463edbcc2e65523e96b265254eab74d48c6b4711f76bf72e36c44edc48e
+  url: https://github.com/regro/conda-suggest-conda-forge/releases/download/2021.8.24/conda-suggest-conda-forge-2021.8.24.tar.gz
+build:
+  number: '0'
+  string: ha770c72_0
+requirements:
+  build: []
+  run: []
+test:
+  commands:
+    - test -f $PREFIX/share/conda-suggest/conda-forge.noarch.map
+    - test -f $PREFIX/share/conda-suggest/conda-forge.linux-64.map
+about:
+  home: https://github.com/regro/conda-suggest-conda-forge
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Conda-suggest map files for conda-forge.
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - scopatz

@@ -1,0 +1,65 @@
+# This file created by conda-build 3.21.4
+# meta.yaml template originally from:
+# /tmp/build/80754af9/combined_recipe, last modified Wed Apr 28 08:09:15 2021
+# ------------------------------------------------
+
+package:
+  name: cachetools
+  version: 4.2.2
+source:
+  sha256: 61b5ed1e22a0924aed1d23b478f37e8d52549ff8a961de2909c69bf950020cff
+  url: https://pypi.io/packages/source/c/cachetools/cachetools-4.2.2.tar.gz
+build:
+  noarch: python
+  number: '0'
+  script: /tmp/build/80754af9/cachetools_1619597386817/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla/bin/python
+    -m pip install . -vv
+  string: pyhd3eb1b0_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - ca-certificates 2021.4.13 h06a4308_1
+    - certifi 2020.12.5 py39h06a4308_0
+    - ld_impl_linux-64 2.33.1 h53a641e_7
+    - libffi 3.3 he6710b0_2
+    - libgcc-ng 9.1.0 hdf63c60_0
+    - libstdcxx-ng 9.1.0 hdf63c60_0
+    - ncurses 6.2 he6710b0_1
+    - openssl 1.1.1k h27cfd23_0
+    - pip 21.0.1 py39h06a4308_0
+    - python 3.9.4 hdb3f193_0
+    - readline 8.1 h27cfd23_0
+    - setuptools 52.0.0 py39h06a4308_0
+    - sqlite 3.35.4 hdfb4753_0
+    - tk 8.6.10 hbc83047_0
+    - tzdata 2020f h52ac0ba_0
+    - wheel 0.36.2 pyhd3eb1b0_0
+    - xz 5.2.5 h7b6447c_0
+    - zlib 1.2.11 h7b6447c_3
+  run:
+    - python >=3.5
+test:
+  commands:
+    - pip check
+  imports:
+    - cachetools
+  requires:
+    - pip
+about:
+  description: 'This module provides various memoizing collections and decorators,
+    including variants of the Python 3 Standard Library @lru_cache function decorator.
+
+    '
+  dev_url: https://github.com/tkem/cachetools
+  doc_url: http://pythonhosted.org/cachetools/
+  home: https://github.com/tkem/cachetools
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Extensible memoizing collections and decorators
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - maartenbreddels
+    - marcelotrevisani

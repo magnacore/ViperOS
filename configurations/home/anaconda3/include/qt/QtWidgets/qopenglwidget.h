@@ -63,7 +63,7 @@ public:
         PartialUpdate
     };
 
-    explicit QOpenGLWidget(QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
+    explicit QOpenGLWidget(QWidget* parent = Q_NULLPTR, Qt::WindowFlags f = Qt::WindowFlags());
     ~QOpenGLWidget();
 
     void setUpdateBehavior(UpdateBehavior updateBehavior);
@@ -71,9 +71,6 @@ public:
 
     void setFormat(const QSurfaceFormat &format);
     QSurfaceFormat format() const;
-
-    GLenum textureFormat() const;
-    void setTextureFormat(GLenum texFormat);
 
     bool isValid() const;
 
@@ -96,13 +93,13 @@ protected:
     virtual void resizeGL(int w, int h);
     virtual void paintGL();
 
-    void paintEvent(QPaintEvent *e) override;
-    void resizeEvent(QResizeEvent *e) override;
-    bool event(QEvent *e) override;
+    void paintEvent(QPaintEvent *e) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *e) Q_DECL_OVERRIDE;
+    bool event(QEvent *e) Q_DECL_OVERRIDE;
 
-    int metric(QPaintDevice::PaintDeviceMetric metric) const override;
-    QPaintDevice *redirected(QPoint *p) const override;
-    QPaintEngine *paintEngine() const override;
+    int metric(QPaintDevice::PaintDeviceMetric metric) const Q_DECL_OVERRIDE;
+    QPaintDevice *redirected(QPoint *p) const Q_DECL_OVERRIDE;
+    QPaintEngine *paintEngine() const Q_DECL_OVERRIDE;
 
 private:
     Q_DISABLE_COPY(QOpenGLWidget)

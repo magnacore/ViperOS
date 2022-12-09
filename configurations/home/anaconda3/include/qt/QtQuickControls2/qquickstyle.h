@@ -51,8 +51,6 @@ public:
     static void setStyle(const QString &style);
     static void setFallbackStyle(const QString &style);
     static QStringList availableStyles();
-    static QStringList stylePathList();
-    static void addStylePath(const QString &path);
 };
 
 QT_END_NAMESPACE

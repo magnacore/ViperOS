@@ -1,0 +1,33 @@
+{
+  "arch": "x86_64",
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [
+    "grpcio-status >=1.33.2,<2.0dev",
+    "grpcio >=1.33.2,<2.0dev",
+    "grpcio-gcp >=0.2.2,<1.0dev"
+  ],
+  "depends": [
+    "google-auth >=1.25.0,<3.0dev",
+    "googleapis-common-protos >=1.56.2,<2.0dev",
+    "protobuf >=3.20.1",
+    "python >=3.9,<3.10.0a0",
+    "requests >=2.18.0,<3.0.0dev"
+  ],
+  "features": "",
+  "fn": "google-api-core-2.10.1-py39h06a4308_0.conda",
+  "legacy_bz2_md5": "d3c738b0d9606986b1b1ba4d6e81c0fa",
+  "license": "Apache-2.0",
+  "license_family": "APACHE",
+  "md5": "6b12af17189882c4dd64dce402bb9caa",
+  "name": "google-api-core",
+  "platform": "linux",
+  "sha256": "c1dd167d061cc724af68828eb9105091b23eaa5d0cfa4ac82af66dabd098400d",
+  "size": 120876,
+  "subdir": "linux-64",
+  "timestamp": 1663638739929,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/google-api-core-2.10.1-py39h06a4308_0.conda",
+  "version": "2.10.1"
+}

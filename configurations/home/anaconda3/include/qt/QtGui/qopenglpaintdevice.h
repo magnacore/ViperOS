@@ -59,7 +59,7 @@ public:
     QOpenGLPaintDevice();
     explicit QOpenGLPaintDevice(const QSize &size);
     QOpenGLPaintDevice(int width, int height);
-    ~QOpenGLPaintDevice();
+    virtual ~QOpenGLPaintDevice();
 
     int devType() const override { return QInternal::OpenGL; }
     QPaintEngine *paintEngine() const override;

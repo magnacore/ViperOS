@@ -165,10 +165,10 @@ public:
         FrontFace
     };
 
-    explicit QCamera(QObject *parent = nullptr);
-    explicit QCamera(const QByteArray& deviceName, QObject *parent = nullptr);
-    explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = nullptr);
-    explicit QCamera(QCamera::Position position, QObject *parent = nullptr);
+    explicit QCamera(QObject *parent = Q_NULLPTR);
+    explicit QCamera(const QByteArray& deviceName, QObject *parent = Q_NULLPTR);
+    explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = Q_NULLPTR);
+    explicit QCamera(QCamera::Position position, QObject *parent = Q_NULLPTR);
     ~QCamera();
 
 #if QT_DEPRECATED_SINCE(5, 3)
@@ -232,20 +232,17 @@ public Q_SLOTS:
     void unlock(QCamera::LockTypes locks);
 
 Q_SIGNALS:
-    void stateChanged(QCamera::State state);
+    void stateChanged(QCamera::State);
     void captureModeChanged(QCamera::CaptureModes);
-    void statusChanged(QCamera::Status status);
+    void statusChanged(QCamera::Status);
 
     void locked();
     void lockFailed();
 
-    void lockStatusChanged(QCamera::LockStatus status, QCamera::LockChangeReason reason);
-    void lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason);
+    void lockStatusChanged(QCamera::LockStatus, QCamera::LockChangeReason);
+    void lockStatusChanged(QCamera::LockType, QCamera::LockStatus, QCamera::LockChangeReason);
 
-#if QT_DEPRECATED_SINCE(5,15)
     void error(QCamera::Error);
-#endif
-    void errorOccurred(QCamera::Error);
 
 private:
     Q_DISABLE_COPY(QCamera)
@@ -265,10 +262,7 @@ QT_WARNING_DISABLE_CLANG("-Wfloat-equal")
 QT_WARNING_DISABLE_GCC("-Wfloat-equal")
 
 Q_DECL_CONSTEXPR Q_INLINE_TEMPLATE bool operator==(const QCamera::FrameRateRange &r1, const QCamera::FrameRateRange &r2) Q_DECL_NOTHROW
-{
-    return qFuzzyCompare(r1.minimumFrameRate, r2.minimumFrameRate)
-        && qFuzzyCompare(r1.maximumFrameRate, r2.maximumFrameRate);
-}
+{ return r1.minimumFrameRate == r2.minimumFrameRate && r1.maximumFrameRate == r2.maximumFrameRate; }
 
 QT_WARNING_POP
 

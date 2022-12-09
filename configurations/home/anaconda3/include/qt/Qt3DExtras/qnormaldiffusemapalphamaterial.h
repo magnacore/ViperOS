@@ -49,7 +49,7 @@ namespace Qt3DExtras {
 
 class QNormalDiffuseMapAlphaMaterialPrivate;
 
-class Q_3DEXTRASSHARED_EXPORT QNormalDiffuseMapAlphaMaterial : public QNormalDiffuseMapMaterial
+class QT3DEXTRASSHARED_EXPORT QNormalDiffuseMapAlphaMaterial : public QNormalDiffuseMapMaterial
 {
     Q_OBJECT
 public:

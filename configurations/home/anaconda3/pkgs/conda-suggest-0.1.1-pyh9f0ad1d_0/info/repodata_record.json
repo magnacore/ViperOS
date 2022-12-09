@@ -1,0 +1,26 @@
+{
+  "build": "pyh9f0ad1d_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "conda-suggest-conda-forge",
+    "python",
+    "tqdm"
+  ],
+  "features": "",
+  "fn": "conda-suggest-0.1.1-pyh9f0ad1d_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "185d73f1b2590441d75e997616942f85",
+  "name": "conda-suggest",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "5ed3ff2f34e385646acd60d845075519dba6036d436056cf425cf16610e5c760",
+  "size": 11415,
+  "subdir": "noarch",
+  "timestamp": 1599593596949,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/conda-suggest-0.1.1-pyh9f0ad1d_0.tar.bz2",
+  "version": "0.1.1"
+}

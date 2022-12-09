@@ -1,4 +1,4 @@
-QT.3dquick.VERSION = 5.15.2
+QT.3dquick.VERSION = 5.9.7
 QT.3dquick.name = Qt3DQuick
 QT.3dquick.module = Qt53DQuick
 QT.3dquick.libs = $$QT_MODULE_LIB_BASE

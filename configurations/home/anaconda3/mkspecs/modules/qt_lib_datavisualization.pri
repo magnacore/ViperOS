@@ -1,4 +1,4 @@
-QT.datavisualization.VERSION = 5.15.2
+QT.datavisualization.VERSION = 5.9.7
 QT.datavisualization.name = QtDataVisualization
 QT.datavisualization.module = Qt5DataVisualization
 QT.datavisualization.libs = $$QT_MODULE_LIB_BASE

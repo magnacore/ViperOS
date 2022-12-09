@@ -58,7 +58,7 @@ namespace Qt3DRender {
 
 class QCameraPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QCamera : public Qt3DCore::QEntity
+class QT3DRENDERSHARED_EXPORT QCamera : public Qt3DCore::QEntity
 {
     Q_OBJECT
     // CameraLens
@@ -79,9 +79,6 @@ class Q_3DRENDERSHARED_EXPORT QCamera : public Qt3DCore::QEntity
     Q_PROPERTY(QVector3D viewCenter READ viewCenter WRITE setViewCenter NOTIFY viewCenterChanged)
     Q_PROPERTY(QVector3D viewVector READ viewVector NOTIFY viewVectorChanged)
     Q_PROPERTY(QMatrix4x4 viewMatrix READ viewMatrix NOTIFY viewMatrixChanged)
-
-    Q_PROPERTY(Qt3DRender::QCameraLens *lens READ lens CONSTANT REVISION 14)
-    Q_PROPERTY(Qt3DCore::QTransform *transform  READ transform CONSTANT REVISION 14)
 
 public:
     explicit QCamera(QNode *parent = nullptr);
@@ -152,10 +149,6 @@ public Q_SLOTS:
     void setPosition(const QVector3D &position);
     void setUpVector(const QVector3D &upVector);
     void setViewCenter(const QVector3D &viewCenter);
-
-    void viewAll();
-    void viewSphere(const QVector3D &center, float radius);
-    void viewEntity(Qt3DCore::QEntity *entity);
 
 Q_SIGNALS:
     void projectionTypeChanged(QCameraLens::ProjectionType projectionType);

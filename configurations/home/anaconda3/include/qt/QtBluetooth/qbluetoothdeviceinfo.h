@@ -40,12 +40,10 @@
 #ifndef QBLUETOOTHDEVICEINFO_H
 #define QBLUETOOTHDEVICEINFO_H
 
-#include <QtBluetooth/qtbluetoothglobal.h>
+#include <QtBluetooth/qbluetoothglobal.h>
 
 #include <QtCore/qstring.h>
 #include <QtCore/qmetatype.h>
-#include <QtCore/qbytearray.h>
-#include <QtCore/qvector.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -60,10 +58,7 @@ public:
         MiscellaneousDevice = 0,
         ComputerDevice = 1,
         PhoneDevice = 2,
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        LANAccessDevice = 3,
-#endif
-        NetworkDevice = 3,
+        LANAccessDevice = 3, // TODO Qt 6 rename to NetworkDevice -> inconsistency with MinorNetworkClass
         AudioVideoDevice = 4,
         PeripheralDevice = 5,
         ImagingDevice = 6,
@@ -194,22 +189,11 @@ public:
     };
     Q_DECLARE_FLAGS(ServiceClasses, ServiceClass)
 
-#if QT_DEPRECATED_SINCE(5, 13)
-    // adding QT_DEPRECATED causes compile failure with gcc 7
     enum DataCompleteness {
         DataComplete,
         DataIncomplete,
         DataUnavailable
     };
-#endif
-
-    enum class Field {
-        None = 0x0000,
-        RSSI = 0x0001,
-        ManufacturerData = 0x0002,
-        All = 0x7fff
-    };
-    Q_DECLARE_FLAGS(Fields, Field)
 
     enum CoreConfiguration {
         UnknownCoreConfiguration = 0x0,
@@ -246,28 +230,9 @@ public:
     qint16 rssi() const;
     void setRssi(qint16 signal);
 
-#if QT_DEPRECATED_SINCE(5, 13)
-    QT_DEPRECATED void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness);
-    QT_DEPRECATED DataCompleteness serviceUuidsCompleteness() const;
-#endif
-
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-#ifndef Q_QDOC //suppress qdoc warnings
-    QVector<QBluetoothUuid> serviceUuids() const;
-#endif // Q_QDOC
-#elif QT_DEPRECATED_SINCE(5, 13)
-    QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = nullptr) const;
-#else
-    QList<QBluetoothUuid> serviceUuids() const;
-#endif
-    void setServiceUuids(const QVector<QBluetoothUuid> &uuids);
-
-    // TODO Qt6 manufacturerData() need to be changed to return
-    // QMultiHash<quint16, QByteArray>
-    QVector<quint16> manufacturerIds() const;
-    QByteArray manufacturerData(quint16 manufacturerId) const;
-    bool setManufacturerData(quint16 manufacturerId, const QByteArray &data);
-    QHash<quint16, QByteArray> manufacturerData() const;
+    void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness);
+    QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = Q_NULLPTR) const;
+    DataCompleteness serviceUuidsCompleteness() const;
 
     void setCoreConfigurations(QBluetoothDeviceInfo::CoreConfigurations coreConfigs);
     QBluetoothDeviceInfo::CoreConfigurations coreConfigurations() const;
@@ -288,8 +253,5 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(QBluetoothDeviceInfo::ServiceClasses)
 QT_END_NAMESPACE
 
 Q_DECLARE_METATYPE(QBluetoothDeviceInfo)
-#ifdef QT_WINRT_BLUETOOTH
-Q_DECLARE_METATYPE(QBluetoothDeviceInfo::Fields)
-#endif
 
 #endif

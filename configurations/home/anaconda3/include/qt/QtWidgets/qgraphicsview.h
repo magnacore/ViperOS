@@ -107,20 +107,18 @@ public:
     Q_ENUM(ViewportUpdateMode)
 
     enum OptimizationFlag {
-#if QT_DEPRECATED_SINCE(5, 14)
-        DontClipPainter Q_DECL_ENUMERATOR_DEPRECATED_X("This flag is unused") = 0x1, // obsolete
-#endif
+        DontClipPainter = 0x1, // obsolete
         DontSavePainterState = 0x2,
         DontAdjustForAntialiasing = 0x4,
         IndirectPainting = 0x8
     };
     Q_DECLARE_FLAGS(OptimizationFlags, OptimizationFlag)
 
-    QGraphicsView(QWidget *parent = nullptr);
-    QGraphicsView(QGraphicsScene *scene, QWidget *parent = nullptr);
+    QGraphicsView(QWidget *parent = Q_NULLPTR);
+    QGraphicsView(QGraphicsScene *scene, QWidget *parent = Q_NULLPTR);
     ~QGraphicsView();
 
-    QSize sizeHint() const override;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
 
     QPainter::RenderHints renderHints() const;
     void setRenderHint(QPainter::RenderHint hint, bool enabled = true);
@@ -165,11 +163,9 @@ public:
     void setSceneRect(const QRectF &rect);
     inline void setSceneRect(qreal x, qreal y, qreal w, qreal h);
 
-#if QT_DEPRECATED_SINCE(5, 15)
-    QT_DEPRECATED_X("Use transform()") QMatrix matrix() const;
-    QT_DEPRECATED_X("Use setTransform()") void setMatrix(const QMatrix &matrix, bool combine = false);
-    QT_DEPRECATED_X("Use resetTransform()") void resetMatrix();
-#endif // QT_DEPRECATED_SINCE(5, 15)
+    QMatrix matrix() const;
+    void setMatrix(const QMatrix &matrix, bool combine = false);
+    void resetMatrix();
     QTransform transform() const;
     QTransform viewportTransform() const;
     bool isTransformed() const;
@@ -218,7 +214,7 @@ public:
     inline QPoint mapFromScene(qreal x, qreal y) const;
     inline QPolygon mapFromScene(qreal x, qreal y, qreal w, qreal h) const;
 
-    QVariant inputMethodQuery(Qt::InputMethodQuery query) const override;
+    QVariant inputMethodQuery(Qt::InputMethodQuery query) const Q_DECL_OVERRIDE;
 
     QBrush backgroundBrush() const;
     void setBackgroundBrush(const QBrush &brush);
@@ -237,39 +233,39 @@ Q_SIGNALS:
 #endif
 
 protected Q_SLOTS:
-    void setupViewport(QWidget *widget) override;
+    void setupViewport(QWidget *widget) Q_DECL_OVERRIDE;
 
 protected:
-    QGraphicsView(QGraphicsViewPrivate &, QWidget *parent = nullptr);
-    bool event(QEvent *event) override;
-    bool viewportEvent(QEvent *event) override;
+    QGraphicsView(QGraphicsViewPrivate &, QWidget *parent = Q_NULLPTR);
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
+    bool viewportEvent(QEvent *event) Q_DECL_OVERRIDE;
 
 #ifndef QT_NO_CONTEXTMENU
-    void contextMenuEvent(QContextMenuEvent *event) override;
+    void contextMenuEvent(QContextMenuEvent *event) Q_DECL_OVERRIDE;
 #endif
 #if QT_CONFIG(draganddrop)
-    void dragEnterEvent(QDragEnterEvent *event) override;
-    void dragLeaveEvent(QDragLeaveEvent *event) override;
-    void dragMoveEvent(QDragMoveEvent *event) override;
-    void dropEvent(QDropEvent *event) override;
+    void dragEnterEvent(QDragEnterEvent *event) Q_DECL_OVERRIDE;
+    void dragLeaveEvent(QDragLeaveEvent *event) Q_DECL_OVERRIDE;
+    void dragMoveEvent(QDragMoveEvent *event) Q_DECL_OVERRIDE;
+    void dropEvent(QDropEvent *event) Q_DECL_OVERRIDE;
 #endif
-    void focusInEvent(QFocusEvent *event) override;
-    bool focusNextPrevChild(bool next) override;
-    void focusOutEvent(QFocusEvent *event) override;
-    void keyPressEvent(QKeyEvent *event) override;
-    void keyReleaseEvent(QKeyEvent *event) override;
-    void mouseDoubleClickEvent(QMouseEvent *event) override;
-    void mousePressEvent(QMouseEvent *event) override;
-    void mouseMoveEvent(QMouseEvent *event) override;
-    void mouseReleaseEvent(QMouseEvent *event) override;
+    void focusInEvent(QFocusEvent *event) Q_DECL_OVERRIDE;
+    bool focusNextPrevChild(bool next) Q_DECL_OVERRIDE;
+    void focusOutEvent(QFocusEvent *event) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
+    void keyReleaseEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
+    void mouseDoubleClickEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+    void mousePressEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+    void mouseMoveEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+    void mouseReleaseEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
 #if QT_CONFIG(wheelevent)
-    void wheelEvent(QWheelEvent *event) override;
+    void wheelEvent(QWheelEvent *event) Q_DECL_OVERRIDE;
 #endif
-    void paintEvent(QPaintEvent *event) override;
-    void resizeEvent(QResizeEvent *event) override;
-    void scrollContentsBy(int dx, int dy) override;
-    void showEvent(QShowEvent *event) override;
-    void inputMethodEvent(QInputMethodEvent *event) override;
+    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
+    void scrollContentsBy(int dx, int dy) Q_DECL_OVERRIDE;
+    void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
+    void inputMethodEvent(QInputMethodEvent *event) Q_DECL_OVERRIDE;
 
     virtual void drawBackground(QPainter *painter, const QRectF &rect);
     virtual void drawForeground(QPainter *painter, const QRectF &rect);

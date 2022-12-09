@@ -2,7 +2,7 @@
 #
 #
 AWK=gawk
-DIR=/home/goldust/anaconda3/share/et
+DIR=/home/manuj/anaconda3/share/et
 
 usage="usage: $0 [ -d scriptDir ] [ --textdomain domain [ --localedir dir ] ]"
 usage="$usage inputfile.et"

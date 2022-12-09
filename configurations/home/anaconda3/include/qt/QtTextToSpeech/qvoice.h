@@ -48,7 +48,7 @@ QT_BEGIN_NAMESPACE
 class QVoicePrivate;
 class QVariant;
 
-class Q_TEXTTOSPEECH_EXPORT QVoice
+class QTEXTTOSPEECH_EXPORT QVoice
 {
 public:
     enum Gender {

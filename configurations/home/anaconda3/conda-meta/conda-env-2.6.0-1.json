@@ -4,7 +4,7 @@
   "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
   "constrains": [],
   "depends": [],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/conda-env-2.6.0-1",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/conda-env-2.6.0-1",
   "features": "",
   "files": [],
   "fn": "conda-env-2.6.0-1.conda",
@@ -12,12 +12,12 @@
   "legacy_bz2_size": 2837,
   "license": "BSD 3-Clause",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/conda-env-2.6.0-1",
+    "source": "/home/manuj/anaconda3/pkgs/conda-env-2.6.0-1",
     "type": 1
   },
   "md5": "7e7b9e449c8e3ceffe23585d31be5f8a",
   "name": "conda-env",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/conda-env-2.6.0-1.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/conda-env-2.6.0-1.conda",
   "paths_data": {
     "paths": [],
     "paths_version": 1

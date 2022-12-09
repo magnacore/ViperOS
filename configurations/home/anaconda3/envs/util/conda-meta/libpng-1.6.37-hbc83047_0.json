@@ -7,7 +7,7 @@
     "libgcc-ng >=7.3.0",
     "zlib >=1.2.11,<1.3.0a0"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/libpng-1.6.37-hbc83047_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/libpng-1.6.37-hbc83047_0",
   "features": "",
   "files": [
     "bin/libpng-config",
@@ -36,12 +36,12 @@
   "legacy_bz2_md5": "9cb85601944ca7383b1769bff74b94e8",
   "license": "zlib/libpng",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/libpng-1.6.37-hbc83047_0",
+    "source": "/home/manuj/anaconda3/pkgs/libpng-1.6.37-hbc83047_0",
     "type": 1
   },
   "md5": "689f903925dcf6c5ab7bc1de0f58b67b",
   "name": "libpng",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/libpng-1.6.37-hbc83047_0.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/libpng-1.6.37-hbc83047_0.conda",
   "paths_data": {
     "paths": [
       {
@@ -56,7 +56,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
         "sha256": "5ee8287ea322bfa64a457ccd32ed2556528a43c891b587527173856ae1ed9e34",
-        "sha256_in_prefix": "c7ebbd5e934f242310d4c004fb5d0eb2a4b0338ef80861c964e4977f692bd698",
+        "sha256_in_prefix": "3f9534febb34956d94b40b43b29e09b5f533dc5765f98404f57cd449259059ef",
         "size_in_bytes": 2349
       },
       {
@@ -162,7 +162,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
         "sha256": "dbcb1357d66f3d55d44641dbb2a7ce77dddebb64ae79805b74bca80d7eda6ae2",
-        "sha256_in_prefix": "60d44e2b01a38c6f6f2606f00db10ce8d596b8d80a71d7406cf5e7a2a47d5e32",
+        "sha256_in_prefix": "3715e4a3e861bb78a4392b6cc1d3d685a6a4177bb65382e08930020add39d4e4",
         "size_in_bytes": 287
       },
       {

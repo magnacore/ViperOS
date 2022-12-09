@@ -1,0 +1,18 @@
+{
+  "arch": null,
+  "build": "pyh9f0ad1d_0",
+  "build_number": 0,
+  "depends": [
+    "conda-suggest-conda-forge",
+    "python",
+    "tqdm"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "conda-suggest",
+  "noarch": "python",
+  "platform": null,
+  "subdir": "noarch",
+  "timestamp": 1599593596949,
+  "version": "0.1.1"
+}

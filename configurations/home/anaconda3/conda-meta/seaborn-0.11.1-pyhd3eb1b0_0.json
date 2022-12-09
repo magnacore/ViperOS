@@ -1,0 +1,304 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "matplotlib >=2.1.2",
+    "numpy >=1.13.3",
+    "pandas >=0.22.0",
+    "python >=3.6",
+    "scipy >=1.0.1"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/seaborn-0.11.1-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/seaborn-0.11.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/seaborn-0.11.1.dist-info/LICENSE",
+    "lib/python3.8/site-packages/seaborn-0.11.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/seaborn-0.11.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/seaborn-0.11.1.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/seaborn-0.11.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/seaborn-0.11.1.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/seaborn-0.11.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/seaborn/__init__.py",
+    "lib/python3.8/site-packages/seaborn/_core.py",
+    "lib/python3.8/site-packages/seaborn/_decorators.py",
+    "lib/python3.8/site-packages/seaborn/_docstrings.py",
+    "lib/python3.8/site-packages/seaborn/_statistics.py",
+    "lib/python3.8/site-packages/seaborn/_testing.py",
+    "lib/python3.8/site-packages/seaborn/algorithms.py",
+    "lib/python3.8/site-packages/seaborn/axisgrid.py",
+    "lib/python3.8/site-packages/seaborn/categorical.py",
+    "lib/python3.8/site-packages/seaborn/cm.py",
+    "lib/python3.8/site-packages/seaborn/colors/__init__.py",
+    "lib/python3.8/site-packages/seaborn/colors/crayons.py",
+    "lib/python3.8/site-packages/seaborn/colors/xkcd_rgb.py",
+    "lib/python3.8/site-packages/seaborn/conftest.py",
+    "lib/python3.8/site-packages/seaborn/distributions.py",
+    "lib/python3.8/site-packages/seaborn/external/__init__.py",
+    "lib/python3.8/site-packages/seaborn/external/docscrape.py",
+    "lib/python3.8/site-packages/seaborn/external/husl.py",
+    "lib/python3.8/site-packages/seaborn/matrix.py",
+    "lib/python3.8/site-packages/seaborn/miscplot.py",
+    "lib/python3.8/site-packages/seaborn/palettes.py",
+    "lib/python3.8/site-packages/seaborn/rcmod.py",
+    "lib/python3.8/site-packages/seaborn/regression.py",
+    "lib/python3.8/site-packages/seaborn/relational.py",
+    "lib/python3.8/site-packages/seaborn/tests/__init__.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_algorithms.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_axisgrid.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_categorical.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_core.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_decorators.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_distributions.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_docstrings.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_matrix.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_miscplot.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_palettes.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_rcmod.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_regression.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_relational.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_statistics.py",
+    "lib/python3.8/site-packages/seaborn/tests/test_utils.py",
+    "lib/python3.8/site-packages/seaborn/utils.py",
+    "lib/python3.8/site-packages/seaborn/widgets.py",
+    "lib/python3.8/site-packages/seaborn/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/_core.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/_decorators.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/_docstrings.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/_statistics.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/_testing.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/algorithms.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/axisgrid.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/categorical.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/cm.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/colors/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/colors/__pycache__/crayons.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/colors/__pycache__/xkcd_rgb.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/conftest.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/distributions.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/external/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/external/__pycache__/docscrape.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/external/__pycache__/husl.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/matrix.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/miscplot.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/palettes.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/rcmod.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/regression.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/relational.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_algorithms.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_axisgrid.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_categorical.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_core.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_decorators.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_distributions.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_docstrings.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_matrix.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_miscplot.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_palettes.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_rcmod.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_regression.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_relational.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_statistics.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_utils.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/utils.cpython-38.pyc",
+    "lib/python3.8/site-packages/seaborn/__pycache__/widgets.cpython-38.pyc"
+  ],
+  "fn": "seaborn-0.11.1-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "eadb0b3f944f5e0128e0b1e70b971c4c",
+  "legacy_bz2_size": 222396,
+  "license": "BSD 3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/seaborn-0.11.1-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "ffbd2d692d2acdc84f2cdbd2c66d1098",
+  "name": "seaborn",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/seaborn-0.11.1-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/_core.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/_decorators.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/_docstrings.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/_statistics.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/_testing.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/algorithms.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/axisgrid.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/categorical.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/cm.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/colors/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/colors/__pycache__/crayons.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/colors/__pycache__/xkcd_rgb.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/conftest.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/distributions.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/external/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/external/__pycache__/docscrape.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/external/__pycache__/husl.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/matrix.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/miscplot.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/palettes.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/rcmod.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/regression.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/relational.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_algorithms.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_axisgrid.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_categorical.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_core.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_decorators.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_distributions.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_docstrings.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_matrix.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_miscplot.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_palettes.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_rcmod.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_regression.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_relational.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_statistics.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/tests/__pycache__/test_utils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/utils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/seaborn/__pycache__/widgets.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "seaborn==0.11.1=pyhd3eb1b0_0",
+  "sha256": "37a3d96b5cc0b888727f3cd2243f6ddf872a0be2431be17403ce225ade1d1187",
+  "size": 217146,
+  "subdir": "noarch",
+  "timestamp": 1608578583840,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/seaborn-0.11.1-pyhd3eb1b0_0.conda",
+  "version": "0.11.1"
+}

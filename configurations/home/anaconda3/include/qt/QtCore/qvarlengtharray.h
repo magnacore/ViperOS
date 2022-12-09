@@ -43,27 +43,28 @@
 #include <QtCore/qcontainerfwd.h>
 #include <QtCore/qglobal.h>
 #include <QtCore/qalgorithms.h>
-#include <QtCore/qcontainertools_impl.h>
-#include <QtCore/qhashfunctions.h>
 
-#include <algorithm>
-#include <initializer_list>
-#include <iterator>
 #include <new>
 #include <string.h>
 #include <stdlib.h>
+#include <algorithm>
+#ifdef Q_COMPILER_INITIALIZER_LISTS
+#include <initializer_list>
+#endif
+#include <iterator>
 
 QT_BEGIN_NAMESPACE
 
+
+template<class T, int Prealloc>
+class QPodList;
 
 // Prealloc = 256 by default, specified in qcontainerfwd.h
 template<class T, int Prealloc>
 class QVarLengthArray
 {
 public:
-    QVarLengthArray() : QVarLengthArray(0) {}
-
-    inline explicit QVarLengthArray(int size);
+    inline explicit QVarLengthArray(int size = 0);
 
     inline QVarLengthArray(const QVarLengthArray<T, Prealloc> &other)
         : a(Prealloc), s(0), ptr(reinterpret_cast<T *>(array))
@@ -71,18 +72,14 @@ public:
         append(other.constData(), other.size());
     }
 
+#ifdef Q_COMPILER_INITIALIZER_LISTS
     QVarLengthArray(std::initializer_list<T> args)
-        : QVarLengthArray(args.begin(), args.end())
+        : a(Prealloc), s(0), ptr(reinterpret_cast<T *>(array))
     {
+        if (args.size())
+            append(args.begin(), int(args.size()));
     }
-
-    template <typename InputIterator, QtPrivate::IfIsInputIterator<InputIterator> = true>
-    inline QVarLengthArray(InputIterator first, InputIterator last)
-        : QVarLengthArray()
-    {
-        QtPrivate::reserveIfForwardIterator(this, first, last);
-        std::copy(first, last, std::back_inserter(*this));
-    }
+#endif
 
     inline ~QVarLengthArray() {
         if (QTypeInfo<T>::isComplex) {
@@ -102,19 +99,19 @@ public:
         return *this;
     }
 
+#ifdef Q_COMPILER_INITIALIZER_LISTS
     QVarLengthArray<T, Prealloc> &operator=(std::initializer_list<T> list)
     {
-        resize(int(list.size())); // ### q6sizetype
+        resize(list.size());
         std::copy(list.begin(), list.end(),
                   QT_MAKE_CHECKED_ARRAY_ITERATOR(this->begin(), this->size()));
         return *this;
     }
+#endif
 
     inline void removeLast() {
         Q_ASSERT(s > 0);
-        if (QTypeInfo<T>::isComplex)
-            ptr[s - 1].~T();
-        --s;
+        realloc(s - 1, a);
     }
     inline int size() const { return s; }
     inline int count() const { return s; }
@@ -181,16 +178,10 @@ public:
     void append(const T *buf, int size);
     inline QVarLengthArray<T, Prealloc> &operator<<(const T &t)
     { append(t); return *this; }
-    inline QVarLengthArray<T, Prealloc> &operator<<(T &&t)
-    { append(std::move(t)); return *this; }
     inline QVarLengthArray<T, Prealloc> &operator+=(const T &t)
     { append(t); return *this; }
-    inline QVarLengthArray<T, Prealloc> &operator+=(T &&t)
-    { append(std::move(t)); return *this; }
 
-    void prepend(T &&t);
     void prepend(const T &t);
-    void insert(int i, T &&t);
     void insert(int i, const T &t);
     void insert(int i, int n, const T &t);
     void replace(int i, const T &t);
@@ -230,7 +221,6 @@ public:
     const_reverse_iterator crbegin() const { return const_reverse_iterator(end()); }
     const_reverse_iterator crend() const { return const_reverse_iterator(begin()); }
     iterator insert(const_iterator before, int n, const T &x);
-    iterator insert(const_iterator before, T &&x);
     inline iterator insert(const_iterator before, const T &x) { return insert(before, 1, x); }
     iterator erase(const_iterator begin, const_iterator end);
     inline iterator erase(const_iterator pos) { return erase(pos, pos+1); }
@@ -244,9 +234,9 @@ public:
     inline const T &front() const { return first(); }
     inline T &back() { return last(); }
     inline const T &back() const { return last(); }
-    void shrink_to_fit() { squeeze(); }
 
 private:
+    friend class QPodList<T, Prealloc>;
     void realloc(int size, int alloc);
 
     int a;      // capacity
@@ -260,17 +250,9 @@ private:
 
     bool isValidIterator(const const_iterator &i) const
     {
-        const std::less<const T*> less = {};
-        return !less(cend(), i) && !less(i, cbegin());
+        return (i <= constEnd()) && (constBegin() <= i);
     }
 };
-
-#if defined(__cpp_deduction_guides) && __cpp_deduction_guides >= 201606
-template <typename InputIterator,
-          typename ValueType = typename std::iterator_traits<InputIterator>::value_type,
-          QtPrivate::IfIsInputIterator<InputIterator> = true>
-QVarLengthArray(InputIterator, InputIterator) -> QVarLengthArray<ValueType>;
-#endif
 
 template <class T, int Prealloc>
 Q_INLINE_TEMPLATE QVarLengthArray<T, Prealloc>::QVarLengthArray(int asize)
@@ -394,9 +376,9 @@ Q_OUTOFLINE_TEMPLATE void QVarLengthArray<T, Prealloc>::realloc(int asize, int a
         s = 0;
         if (!QTypeInfoQuery<T>::isRelocatable) {
             QT_TRY {
-                // move all the old elements
+                // copy all the old elements
                 while (s < copySize) {
-                    new (ptr+s) T(std::move(*(oldPtr+s)));
+                    new (ptr+s) T(*(oldPtr+s));
                     (oldPtr+s)->~T();
                     s++;
                 }
@@ -448,10 +430,6 @@ Q_OUTOFLINE_TEMPLATE T QVarLengthArray<T, Prealloc>::value(int i, const T &defau
 }
 
 template <class T, int Prealloc>
-inline void QVarLengthArray<T, Prealloc>::insert(int i, T &&t)
-{ Q_ASSERT_X(i >= 0 && i <= s, "QVarLengthArray::insert", "index out of range");
-  insert(cbegin() + i, std::move(t)); }
-template <class T, int Prealloc>
 inline void QVarLengthArray<T, Prealloc>::insert(int i, const T &t)
 { Q_ASSERT_X(i >= 0 && i <= s, "QVarLengthArray::insert", "index out of range");
   insert(begin() + i, 1, t); }
@@ -468,9 +446,6 @@ inline void QVarLengthArray<T, Prealloc>::remove(int i)
 { Q_ASSERT_X(i >= 0 && i < s, "QVarLengthArray::remove", "index out of range");
   erase(begin() + i, begin() + i + 1); }
 template <class T, int Prealloc>
-inline void QVarLengthArray<T, Prealloc>::prepend(T &&t)
-{ insert(cbegin(), std::move(t)); }
-template <class T, int Prealloc>
 inline void QVarLengthArray<T, Prealloc>::prepend(const T &t)
 { insert(begin(), 1, t); }
 
@@ -482,34 +457,6 @@ inline void QVarLengthArray<T, Prealloc>::replace(int i, const T &t)
     data()[i] = copy;
 }
 
-template <class T, int Prealloc>
-Q_OUTOFLINE_TEMPLATE typename QVarLengthArray<T, Prealloc>::iterator QVarLengthArray<T, Prealloc>::insert(const_iterator before, T &&t)
-{
-    Q_ASSERT_X(isValidIterator(before), "QVarLengthArray::insert", "The specified const_iterator argument 'before' is invalid");
-
-    int offset = int(before - ptr);
-    reserve(s + 1);
-    if (!QTypeInfo<T>::isRelocatable) {
-        T *b = ptr + offset;
-        T *i = ptr + s;
-        T *j = i + 1;
-        // The new end-element needs to be constructed, the rest must be move assigned
-        if (i != b) {
-            new (--j) T(std::move(*--i));
-            while (i != b)
-                *--j = std::move(*--i);
-            *b = std::move(t);
-        } else {
-            new (b) T(std::move(t));
-        }
-    } else {
-        T *b = ptr + offset;
-        memmove(static_cast<void *>(b + 1), static_cast<const void *>(b), (s - offset) * sizeof(T));
-        new (b) T(std::move(t));
-    }
-    s += 1;
-    return ptr + offset;
-}
 
 template <class T, int Prealloc>
 Q_OUTOFLINE_TEMPLATE typename QVarLengthArray<T, Prealloc>::iterator QVarLengthArray<T, Prealloc>::insert(const_iterator before, size_type n, const T &t)
@@ -532,7 +479,7 @@ Q_OUTOFLINE_TEMPLATE typename QVarLengthArray<T, Prealloc>::iterator QVarLengthA
         } else {
             T *b = ptr + offset;
             T *i = b + n;
-            memmove(static_cast<void *>(i), static_cast<const void *>(b), (s - offset - n) * sizeof(T));
+            memmove(i, b, (s - offset - n) * sizeof(T));
             while (i != b)
                 new (--i) T(copy);
         }
@@ -558,7 +505,7 @@ Q_OUTOFLINE_TEMPLATE typename QVarLengthArray<T, Prealloc>::iterator QVarLengthA
             i->~T();
         }
     } else {
-        memmove(static_cast<void *>(ptr + f), static_cast<const void *>(ptr + l), (s - l) * sizeof(T));
+        memmove(ptr + f, ptr + l, (s - l) * sizeof(T));
     }
     s -= n;
     return ptr + f;
@@ -583,7 +530,7 @@ bool operator!=(const QVarLengthArray<T, Prealloc1> &l, const QVarLengthArray<T,
 
 template <typename T, int Prealloc1, int Prealloc2>
 bool operator<(const QVarLengthArray<T, Prealloc1> &lhs, const QVarLengthArray<T, Prealloc2> &rhs)
-    noexcept(noexcept(std::lexicographical_compare(lhs.begin(), lhs.end(),
+    Q_DECL_NOEXCEPT_EXPR(noexcept(std::lexicographical_compare(lhs.begin(), lhs.end(),
                                                                rhs.begin(), rhs.end())))
 {
     return std::lexicographical_compare(lhs.begin(), lhs.end(),
@@ -592,30 +539,23 @@ bool operator<(const QVarLengthArray<T, Prealloc1> &lhs, const QVarLengthArray<T
 
 template <typename T, int Prealloc1, int Prealloc2>
 inline bool operator>(const QVarLengthArray<T, Prealloc1> &lhs, const QVarLengthArray<T, Prealloc2> &rhs)
-    noexcept(noexcept(lhs < rhs))
+    Q_DECL_NOEXCEPT_EXPR(noexcept(lhs < rhs))
 {
     return rhs < lhs;
 }
 
 template <typename T, int Prealloc1, int Prealloc2>
 inline bool operator<=(const QVarLengthArray<T, Prealloc1> &lhs, const QVarLengthArray<T, Prealloc2> &rhs)
-    noexcept(noexcept(lhs < rhs))
+    Q_DECL_NOEXCEPT_EXPR(noexcept(lhs < rhs))
 {
     return !(lhs > rhs);
 }
 
 template <typename T, int Prealloc1, int Prealloc2>
 inline bool operator>=(const QVarLengthArray<T, Prealloc1> &lhs, const QVarLengthArray<T, Prealloc2> &rhs)
-    noexcept(noexcept(lhs < rhs))
+    Q_DECL_NOEXCEPT_EXPR(noexcept(lhs < rhs))
 {
     return !(lhs < rhs);
-}
-
-template <typename T, int Prealloc>
-uint qHash(const QVarLengthArray<T, Prealloc> &key, uint seed = 0)
-    noexcept(noexcept(qHashRange(key.cbegin(), key.cend(), seed)))
-{
-    return qHashRange(key.cbegin(), key.cend(), seed);
 }
 
 QT_END_NAMESPACE

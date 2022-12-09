@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,14 +15,16 @@
  */
 #ifndef LIEF_PE_RESOURCE_NODE_H_
 #define LIEF_PE_RESOURCE_NODE_H_
+
 #include <string>
 #include <vector>
+#include <memory>
 
 #include "LIEF/Object.hpp"
 #include "LIEF/visibility.h"
 
 #include "LIEF/PE/type_traits.hpp"
-#include "LIEF/PE/enums.hpp"
+#include "LIEF/PE/Structures.hpp"
 
 namespace LIEF {
 namespace PE {

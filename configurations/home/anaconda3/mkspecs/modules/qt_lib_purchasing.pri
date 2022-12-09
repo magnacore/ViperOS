@@ -1,4 +1,4 @@
-QT.purchasing.VERSION = 5.15.2
+QT.purchasing.VERSION = 5.9.7
 QT.purchasing.name = QtPurchasing
 QT.purchasing.module = Qt5Purchasing
 QT.purchasing.libs = $$QT_MODULE_LIB_BASE

@@ -61,10 +61,10 @@ class Q_WIDGETS_EXPORT QListWidgetItem
     friend class QListWidget;
 public:
     enum ItemType { Type = 0, UserType = 1000 };
-    explicit QListWidgetItem(QListWidget *listview = nullptr, int type = Type);
-    explicit QListWidgetItem(const QString &text, QListWidget *listview = nullptr, int type = Type);
+    explicit QListWidgetItem(QListWidget *view = Q_NULLPTR, int type = Type);
+    explicit QListWidgetItem(const QString &text, QListWidget *view = Q_NULLPTR, int type = Type);
     explicit QListWidgetItem(const QIcon &icon, const QString &text,
-                             QListWidget *listview = nullptr, int type = Type);
+                             QListWidget *view = Q_NULLPTR, int type = Type);
     QListWidgetItem(const QListWidgetItem &other);
     virtual ~QListWidgetItem();
 
@@ -72,8 +72,8 @@ public:
 
     inline QListWidget *listWidget() const { return view; }
 
-    void setSelected(bool select);
-    bool isSelected() const;
+    inline void setSelected(bool select);
+    inline bool isSelected() const;
 
     inline void setHidden(bool hide);
     inline bool isHidden() const;
@@ -114,34 +114,25 @@ public:
     inline void setTextAlignment(int alignment)
         { setData(Qt::TextAlignmentRole, alignment); }
 
-#if QT_DEPRECATED_SINCE(5, 13)
-    QT_DEPRECATED_X ("Use QListWidgetItem::background() instead")
     inline QColor backgroundColor() const
-        { return qvariant_cast<QColor>(data(Qt::BackgroundRole)); }
-#endif
-    // no QT_DEPRECATED_SINCE because it is a virtual function
-    QT_DEPRECATED_X ("Use QListWidgetItem::setBackground() instead")
+        { return qvariant_cast<QColor>(data(Qt::BackgroundColorRole)); }
     virtual void setBackgroundColor(const QColor &color)
-        { setData(Qt::BackgroundRole, color); }
+        { setData(Qt::BackgroundColorRole, color); }
 
     inline QBrush background() const
         { return qvariant_cast<QBrush>(data(Qt::BackgroundRole)); }
     inline void setBackground(const QBrush &brush)
-        { setData(Qt::BackgroundRole, brush.style() != Qt::NoBrush ? QVariant(brush) : QVariant()); }
+        { setData(Qt::BackgroundRole, brush); }
 
-#if QT_DEPRECATED_SINCE(5, 13)
-    QT_DEPRECATED_X ("Use QListWidgetItem::foreground() instead")
     inline QColor textColor() const
-        { return qvariant_cast<QColor>(data(Qt::ForegroundRole)); }
-    QT_DEPRECATED_X ("Use QListWidgetItem::setForeground() instead")
+        { return qvariant_cast<QColor>(data(Qt::TextColorRole)); }
     inline void setTextColor(const QColor &color)
-        { setData(Qt::ForegroundRole, color); }
-#endif
+        { setData(Qt::TextColorRole, color); }
 
     inline QBrush foreground() const
         { return qvariant_cast<QBrush>(data(Qt::ForegroundRole)); }
     inline void setForeground(const QBrush &brush)
-        { setData(Qt::ForegroundRole, brush.style() != Qt::NoBrush ? QVariant(brush) : QVariant()); }
+        { setData(Qt::ForegroundRole, brush); }
 
     inline Qt::CheckState checkState() const
         { return static_cast<Qt::CheckState>(data(Qt::CheckStateRole).toInt()); }
@@ -151,7 +142,7 @@ public:
     inline QSize sizeHint() const
         { return qvariant_cast<QSize>(data(Qt::SizeHintRole)); }
     inline void setSizeHint(const QSize &size)
-        { setData(Qt::SizeHintRole, size.isValid() ? QVariant(size) : QVariant()); }
+        { setData(Qt::SizeHintRole, size); }
 
     virtual QVariant data(int role) const;
     virtual void setData(int role, const QVariant &value);
@@ -167,7 +158,6 @@ public:
     inline int type() const { return rtti; }
 
 private:
-    QListModel *listModel() const;
     int rtti;
     QVector<void *> dummy;
     QListWidget *view;
@@ -214,10 +204,10 @@ class Q_WIDGETS_EXPORT QListWidget : public QListView
     friend class QListWidgetItem;
     friend class QListModel;
 public:
-    explicit QListWidget(QWidget *parent = nullptr);
+    explicit QListWidget(QWidget *parent = Q_NULLPTR);
     ~QListWidget();
 
-    void setSelectionModel(QItemSelectionModel *selectionModel) override;
+    void setSelectionModel(QItemSelectionModel *selectionModel) Q_DECL_OVERRIDE;
 
     QListWidgetItem *item(int row) const;
     int row(const QListWidgetItem *item) const;
@@ -249,33 +239,20 @@ public:
     void editItem(QListWidgetItem *item);
     void openPersistentEditor(QListWidgetItem *item);
     void closePersistentEditor(QListWidgetItem *item);
-    using QAbstractItemView::isPersistentEditorOpen;
-    bool isPersistentEditorOpen(QListWidgetItem *item) const;
 
     QWidget *itemWidget(QListWidgetItem *item) const;
     void setItemWidget(QListWidgetItem *item, QWidget *widget);
     inline void removeItemWidget(QListWidgetItem *item);
 
-#if QT_DEPRECATED_SINCE(5, 13)
-    QT_DEPRECATED_X ("Use QListWidgetItem::isSelected() instead")
     bool isItemSelected(const QListWidgetItem *item) const;
-    QT_DEPRECATED_X ("Use QListWidgetItem::setSelected() instead")
     void setItemSelected(const QListWidgetItem *item, bool select);
-#endif
     QList<QListWidgetItem*> selectedItems() const;
     QList<QListWidgetItem*> findItems(const QString &text, Qt::MatchFlags flags) const;
 
-#if QT_DEPRECATED_SINCE(5, 13)
-    QT_DEPRECATED_X ("Use QListWidgetItem::isHidden() instead")
     bool isItemHidden(const QListWidgetItem *item) const;
-    QT_DEPRECATED_X ("Use QListWidgetItem::setHidden() instead")
     void setItemHidden(const QListWidgetItem *item, bool hide);
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-protected:
-#endif
 #if QT_CONFIG(draganddrop)
-    void dropEvent(QDropEvent *event) override;
+    void dropEvent(QDropEvent *event) Q_DECL_OVERRIDE;
 #endif
 public Q_SLOTS:
     void scrollToItem(const QListWidgetItem *item, QAbstractItemView::ScrollHint hint = EnsureVisible);
@@ -287,7 +264,6 @@ Q_SIGNALS:
     void itemDoubleClicked(QListWidgetItem *item);
     void itemActivated(QListWidgetItem *item);
     void itemEntered(QListWidgetItem *item);
-    // ### Qt 6: add changed roles
     void itemChanged(QListWidgetItem *item);
 
     void currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
@@ -297,33 +273,24 @@ Q_SIGNALS:
     void itemSelectionChanged();
 
 protected:
-    bool event(QEvent *e) override;
+    bool event(QEvent *e) Q_DECL_OVERRIDE;
     virtual QStringList mimeTypes() const;
 #if QT_VERSION >= QT_VERSION_CHECK(6,0,0)
     virtual QMimeData *mimeData(const QList<QListWidgetItem *> &items) const;
 #else
     virtual QMimeData *mimeData(const QList<QListWidgetItem*> items) const;
 #endif
-#if QT_CONFIG(draganddrop)
+#ifndef QT_NO_DRAGANDDROP
     virtual bool dropMimeData(int index, const QMimeData *data, Qt::DropAction action);
     virtual Qt::DropActions supportedDropActions() const;
 #endif
-
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-public:
-#else
-protected:
-#endif
     QList<QListWidgetItem*> items(const QMimeData *data) const;
 
-    QModelIndex indexFromItem(const QListWidgetItem *item) const;
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QModelIndex indexFromItem(QListWidgetItem *item) const; // ### Qt 6: remove
-#endif
+    QModelIndex indexFromItem(QListWidgetItem *item) const;
     QListWidgetItem *itemFromIndex(const QModelIndex &index) const;
 
 private:
-    void setModel(QAbstractItemModel *model) override;
+    void setModel(QAbstractItemModel *model) Q_DECL_OVERRIDE;
     Qt::SortOrder sortOrder() const;
 
     Q_DECLARE_PRIVATE(QListWidget)
@@ -341,7 +308,7 @@ private:
 };
 
 inline void QListWidget::removeItemWidget(QListWidgetItem *aItem)
-{ setItemWidget(aItem, nullptr); }
+{ setItemWidget(aItem, Q_NULLPTR); }
 
 inline void QListWidget::addItem(QListWidgetItem *aitem)
 { insertItem(count(), aitem); }
@@ -349,11 +316,17 @@ inline void QListWidget::addItem(QListWidgetItem *aitem)
 inline QListWidgetItem *QListWidget::itemAt(int ax, int ay) const
 { return itemAt(QPoint(ax, ay)); }
 
+inline void QListWidgetItem::setSelected(bool aselect)
+{ if (view) view->setItemSelected(this, aselect); }
+
+inline bool QListWidgetItem::isSelected() const
+{ return (view ? view->isItemSelected(this) : false); }
+
 inline void QListWidgetItem::setHidden(bool ahide)
-{ if (view) view->setRowHidden(view->row(this), ahide); }
+{ if (view) view->setItemHidden(this, ahide); }
 
 inline bool QListWidgetItem::isHidden() const
-{ return (view ? view->isRowHidden(view->row(this)) : false); }
+{ return (view ? view->isItemHidden(this) : false); }
 
 QT_END_NAMESPACE
 

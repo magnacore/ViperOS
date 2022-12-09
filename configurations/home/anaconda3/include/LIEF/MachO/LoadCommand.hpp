@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,12 +23,12 @@
 #include "LIEF/Object.hpp"
 #include "LIEF/visibility.h"
 
-#include "LIEF/MachO/enums.hpp"
+#include "LIEF/MachO/Structures.hpp"
+
 
 namespace LIEF {
 namespace MachO {
 class Builder;
-struct load_command;
 class LIEF_API LoadCommand : public Object {
   friend class Builder;
   public:

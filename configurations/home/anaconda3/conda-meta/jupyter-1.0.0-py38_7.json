@@ -1,0 +1,48 @@
+{
+  "build": "py38_7",
+  "build_number": 7,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "ipykernel",
+    "ipywidgets",
+    "jupyter_console",
+    "nbconvert",
+    "notebook",
+    "python >=3.8,<3.9.0a0",
+    "qtconsole"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/jupyter-1.0.0-py38_7",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/jupyter-1.0.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/jupyter-1.0.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/jupyter-1.0.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/jupyter-1.0.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/jupyter-1.0.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/jupyter-1.0.0.dist-info/top_level.txt"
+  ],
+  "fn": "jupyter-1.0.0-py38_7.conda",
+  "legacy_bz2_md5": "2533b230365be386432c98967055490f",
+  "legacy_bz2_size": 7566,
+  "license": "BSD 3-Clause",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/jupyter-1.0.0-py38_7",
+    "type": 1
+  },
+  "md5": "a0948f111fccb0f9fd5895eac209d6c0",
+  "name": "jupyter",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/jupyter-1.0.0-py38_7.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "jupyter==1.0.0=py38_7",
+  "sha256": "4bcef7e49c4b36074f05b935f9824c47d486473f805fab2e0a3b76dd172c1087",
+  "size": 7603,
+  "subdir": "linux-64",
+  "timestamp": 1580250115272,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/jupyter-1.0.0-py38_7.conda",
+  "version": "1.0.0"
+}

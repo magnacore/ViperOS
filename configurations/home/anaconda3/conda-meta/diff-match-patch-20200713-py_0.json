@@ -1,0 +1,88 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/diff-match-patch-20200713-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/diff_match_patch-20200713.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/diff_match_patch-20200713.dist-info/LICENSE",
+    "lib/python3.8/site-packages/diff_match_patch-20200713.dist-info/METADATA",
+    "lib/python3.8/site-packages/diff_match_patch-20200713.dist-info/RECORD",
+    "lib/python3.8/site-packages/diff_match_patch-20200713.dist-info/WHEEL",
+    "lib/python3.8/site-packages/diff_match_patch-20200713.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/diff_match_patch-20200713.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/diff_match_patch/__init__.py",
+    "lib/python3.8/site-packages/diff_match_patch/diff_match_patch.py",
+    "lib/python3.8/site-packages/diff_match_patch/diff_match_patch_py2.py",
+    "lib/python3.8/site-packages/diff_match_patch/tests/__init__.py",
+    "lib/python3.8/site-packages/diff_match_patch/tests/diff_match_patch_test.py",
+    "lib/python3.8/site-packages/diff_match_patch/tests/diff_match_patch_test_py2.py",
+    "lib/python3.8/site-packages/diff_match_patch/tests/speedtest.py",
+    "lib/python3.8/site-packages/diff_match_patch/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/diff_match_patch/__pycache__/diff_match_patch.cpython-38.pyc",
+    "lib/python3.8/site-packages/diff_match_patch/__pycache__/diff_match_patch_py2.cpython-38.pyc",
+    "lib/python3.8/site-packages/diff_match_patch/tests/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/diff_match_patch/tests/__pycache__/diff_match_patch_test.cpython-38.pyc",
+    "lib/python3.8/site-packages/diff_match_patch/tests/__pycache__/diff_match_patch_test_py2.cpython-38.pyc",
+    "lib/python3.8/site-packages/diff_match_patch/tests/__pycache__/speedtest.cpython-38.pyc"
+  ],
+  "fn": "diff-match-patch-20200713-py_0.conda",
+  "legacy_bz2_md5": "2213c7e60b0af7c1f3adc0a1b22a38b8",
+  "legacy_bz2_size": 41601,
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/diff-match-patch-20200713-py_0",
+    "type": 1
+  },
+  "md5": "765a3dd4bf4508918d57ee171fae42d0",
+  "name": "diff-match-patch",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/diff-match-patch-20200713-py_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/diff_match_patch/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/diff_match_patch/__pycache__/diff_match_patch.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/diff_match_patch/__pycache__/diff_match_patch_py2.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/diff_match_patch/tests/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/diff_match_patch/tests/__pycache__/diff_match_patch_test.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/diff_match_patch/tests/__pycache__/diff_match_patch_test_py2.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/diff_match_patch/tests/__pycache__/speedtest.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "diff-match-patch==20200713=py_0",
+  "sha256": "4999092abe4dab4c24f0bbd131914d77c2d03886457227c4986d8c0b33aa6d10",
+  "size": 37035,
+  "subdir": "noarch",
+  "timestamp": 1594828770740,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/diff-match-patch-20200713-py_0.conda",
+  "version": "20200713"
+}

@@ -1,0 +1,245 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "importlib-metadata",
+    "mccabe >=0.6.0,<0.7.0",
+    "pycodestyle >=2.6.0,<2.7.0",
+    "pyflakes >=2.2.0,<2.3.0",
+    "python >=3",
+    "setuptools >=30.0.0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/flake8-3.9.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/flake8-3.9.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/flake8-3.9.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/flake8-3.9.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/flake8-3.9.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/flake8-3.9.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/flake8-3.9.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/flake8-3.9.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/flake8-3.9.0.dist-info/entry_points.txt",
+    "lib/python3.8/site-packages/flake8-3.9.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/flake8/__init__.py",
+    "lib/python3.8/site-packages/flake8/__main__.py",
+    "lib/python3.8/site-packages/flake8/_compat.py",
+    "lib/python3.8/site-packages/flake8/api/__init__.py",
+    "lib/python3.8/site-packages/flake8/api/legacy.py",
+    "lib/python3.8/site-packages/flake8/checker.py",
+    "lib/python3.8/site-packages/flake8/defaults.py",
+    "lib/python3.8/site-packages/flake8/exceptions.py",
+    "lib/python3.8/site-packages/flake8/formatting/__init__.py",
+    "lib/python3.8/site-packages/flake8/formatting/base.py",
+    "lib/python3.8/site-packages/flake8/formatting/default.py",
+    "lib/python3.8/site-packages/flake8/main/__init__.py",
+    "lib/python3.8/site-packages/flake8/main/application.py",
+    "lib/python3.8/site-packages/flake8/main/cli.py",
+    "lib/python3.8/site-packages/flake8/main/debug.py",
+    "lib/python3.8/site-packages/flake8/main/git.py",
+    "lib/python3.8/site-packages/flake8/main/mercurial.py",
+    "lib/python3.8/site-packages/flake8/main/options.py",
+    "lib/python3.8/site-packages/flake8/main/setuptools_command.py",
+    "lib/python3.8/site-packages/flake8/main/vcs.py",
+    "lib/python3.8/site-packages/flake8/options/__init__.py",
+    "lib/python3.8/site-packages/flake8/options/aggregator.py",
+    "lib/python3.8/site-packages/flake8/options/config.py",
+    "lib/python3.8/site-packages/flake8/options/manager.py",
+    "lib/python3.8/site-packages/flake8/plugins/__init__.py",
+    "lib/python3.8/site-packages/flake8/plugins/manager.py",
+    "lib/python3.8/site-packages/flake8/plugins/pyflakes.py",
+    "lib/python3.8/site-packages/flake8/processor.py",
+    "lib/python3.8/site-packages/flake8/statistics.py",
+    "lib/python3.8/site-packages/flake8/style_guide.py",
+    "lib/python3.8/site-packages/flake8/utils.py",
+    "lib/python3.8/site-packages/flake8/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/__pycache__/__main__.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/__pycache__/_compat.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/api/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/api/__pycache__/legacy.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/__pycache__/checker.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/__pycache__/defaults.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/__pycache__/exceptions.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/formatting/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/formatting/__pycache__/base.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/formatting/__pycache__/default.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/main/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/main/__pycache__/application.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/main/__pycache__/cli.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/main/__pycache__/debug.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/main/__pycache__/git.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/main/__pycache__/mercurial.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/main/__pycache__/options.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/main/__pycache__/setuptools_command.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/main/__pycache__/vcs.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/options/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/options/__pycache__/aggregator.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/options/__pycache__/config.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/options/__pycache__/manager.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/plugins/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/plugins/__pycache__/manager.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/plugins/__pycache__/pyflakes.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/__pycache__/processor.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/__pycache__/statistics.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/__pycache__/style_guide.cpython-38.pyc",
+    "lib/python3.8/site-packages/flake8/__pycache__/utils.cpython-38.pyc",
+    "bin/flake8"
+  ],
+  "fn": "flake8-3.9.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "9b93926b125680ec07b75ec2ec12f7f2",
+  "legacy_bz2_size": 91913,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/flake8-3.9.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "a6601b9378c69585cfdc0bb129efa872",
+  "name": "flake8",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/flake8-3.9.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/flake8/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/__pycache__/__main__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/__pycache__/_compat.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/api/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/api/__pycache__/legacy.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/__pycache__/checker.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/__pycache__/defaults.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/__pycache__/exceptions.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/formatting/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/formatting/__pycache__/base.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/formatting/__pycache__/default.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/main/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/main/__pycache__/application.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/main/__pycache__/cli.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/main/__pycache__/debug.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/main/__pycache__/git.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/main/__pycache__/mercurial.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/main/__pycache__/options.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/main/__pycache__/setuptools_command.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/main/__pycache__/vcs.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/options/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/options/__pycache__/aggregator.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/options/__pycache__/config.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/options/__pycache__/manager.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/plugins/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/plugins/__pycache__/manager.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/plugins/__pycache__/pyflakes.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/__pycache__/processor.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/__pycache__/statistics.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/__pycache__/style_guide.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/flake8/__pycache__/utils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/flake8",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "flake8==3.9.0=pyhd3eb1b0_0",
+  "sha256": "bc5803198e5385af31c8d9888af5d3a044e3a93975b13b61fafa667b1361104a",
+  "size": 132060,
+  "subdir": "noarch",
+  "timestamp": 1615834882660,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/flake8-3.9.0-pyhd3eb1b0_0.conda",
+  "version": "3.9.0"
+}

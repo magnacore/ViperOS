@@ -1,0 +1,156 @@
+{
+  "build": "pyha847dfd_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.6",
+    "soupsieve >=1.2"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/beautifulsoup4-4.9.3-pyha847dfd_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/beautifulsoup4-4.9.3.dist-info/COPYING.txt",
+    "lib/python3.8/site-packages/beautifulsoup4-4.9.3.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/beautifulsoup4-4.9.3.dist-info/LICENSE",
+    "lib/python3.8/site-packages/beautifulsoup4-4.9.3.dist-info/METADATA",
+    "lib/python3.8/site-packages/beautifulsoup4-4.9.3.dist-info/RECORD",
+    "lib/python3.8/site-packages/beautifulsoup4-4.9.3.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/beautifulsoup4-4.9.3.dist-info/WHEEL",
+    "lib/python3.8/site-packages/beautifulsoup4-4.9.3.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/beautifulsoup4-4.9.3.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/bs4/__init__.py",
+    "lib/python3.8/site-packages/bs4/builder/__init__.py",
+    "lib/python3.8/site-packages/bs4/builder/_html5lib.py",
+    "lib/python3.8/site-packages/bs4/builder/_htmlparser.py",
+    "lib/python3.8/site-packages/bs4/builder/_lxml.py",
+    "lib/python3.8/site-packages/bs4/dammit.py",
+    "lib/python3.8/site-packages/bs4/diagnose.py",
+    "lib/python3.8/site-packages/bs4/element.py",
+    "lib/python3.8/site-packages/bs4/formatter.py",
+    "lib/python3.8/site-packages/bs4/testing.py",
+    "lib/python3.8/site-packages/bs4/tests/__init__.py",
+    "lib/python3.8/site-packages/bs4/tests/test_builder_registry.py",
+    "lib/python3.8/site-packages/bs4/tests/test_docs.py",
+    "lib/python3.8/site-packages/bs4/tests/test_html5lib.py",
+    "lib/python3.8/site-packages/bs4/tests/test_htmlparser.py",
+    "lib/python3.8/site-packages/bs4/tests/test_lxml.py",
+    "lib/python3.8/site-packages/bs4/tests/test_soup.py",
+    "lib/python3.8/site-packages/bs4/tests/test_tree.py",
+    "lib/python3.8/site-packages/bs4/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/builder/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/builder/__pycache__/_html5lib.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/builder/__pycache__/_htmlparser.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/builder/__pycache__/_lxml.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/__pycache__/dammit.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/__pycache__/diagnose.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/__pycache__/element.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/__pycache__/formatter.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/__pycache__/testing.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/tests/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/tests/__pycache__/test_builder_registry.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/tests/__pycache__/test_docs.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/tests/__pycache__/test_html5lib.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/tests/__pycache__/test_htmlparser.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/tests/__pycache__/test_lxml.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/tests/__pycache__/test_soup.cpython-38.pyc",
+    "lib/python3.8/site-packages/bs4/tests/__pycache__/test_tree.cpython-38.pyc"
+  ],
+  "fn": "beautifulsoup4-4.9.3-pyha847dfd_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/beautifulsoup4-4.9.3-pyha847dfd_0",
+    "type": 1
+  },
+  "md5": "d8bbc79b4e5b52c1ea2876cf659ab251",
+  "name": "beautifulsoup4",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/beautifulsoup4-4.9.3-pyha847dfd_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/bs4/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/builder/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/builder/__pycache__/_html5lib.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/builder/__pycache__/_htmlparser.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/builder/__pycache__/_lxml.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/__pycache__/dammit.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/__pycache__/diagnose.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/__pycache__/element.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/__pycache__/formatter.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/__pycache__/testing.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/tests/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/tests/__pycache__/test_builder_registry.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/tests/__pycache__/test_docs.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/tests/__pycache__/test_html5lib.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/tests/__pycache__/test_htmlparser.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/tests/__pycache__/test_lxml.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/tests/__pycache__/test_soup.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/bs4/tests/__pycache__/test_tree.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "beautifulsoup4==4.9.3=pyha847dfd_0",
+  "sha256": "18b904ab0a92ba008a0f7a8837157d8edf7e9ad90791b5cd5b901d4d59fd2eb5",
+  "size": 87694,
+  "subdir": "noarch",
+  "timestamp": 1610988775764,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/beautifulsoup4-4.9.3-pyha847dfd_0.tar.bz2",
+  "version": "4.9.3"
+}

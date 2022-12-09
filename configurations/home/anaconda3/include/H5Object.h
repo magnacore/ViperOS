@@ -40,30 +40,16 @@ namespace H5 {
 // Inheritance: H5Location -> IdComponent
 
 // Define the operator function pointer for H5Aiterate().
-typedef void (*attr_operator_t)(H5Object& loc,
-                                 const H5std_string attr_name,
-                                 void *operator_data);
-
-// Define the operator function pointer for H5Ovisit2().
-typedef int (*visit_operator_t)(H5Object& obj,
-                                 const H5std_string attr_name,
-                                 const H5O_info_t *oinfo,
-                                 void *operator_data);
+typedef void (*attr_operator_t)(H5Object& loc/*in*/,
+                                 const H5std_string attr_name/*in*/,
+                                 void *operator_data/*in,out*/);
 
 // User data for attribute iteration
 class UserData4Aiterate {
     public:
         attr_operator_t op;
         void* opData;
-        H5Object* location; // Consider changing to H5Location
-};
-
-// User data for visit iteration
-class UserData4Visit {
-    public:
-        visit_operator_t op;
-        void* opData;
-        H5Object* obj;
+        H5Object* location;
 };
 
 class H5_DLLCPP H5Object : public H5Location {
@@ -84,9 +70,6 @@ class H5_DLLCPP H5Object : public H5Location {
 
         // Iterate user's function over the attributes of this object.
         int iterateAttrs(attr_operator_t user_op, unsigned* idx = NULL, void* op_data = NULL);
-
-        // Recursively visit elements reachable from this object.
-        void visit(H5_index_t idx_type, H5_iter_order_t order, visit_operator_t user_op, void *op_data, unsigned int fields);
 
         // Returns the object header version of an object
         unsigned objVersion() const;
@@ -114,7 +97,6 @@ class H5_DLLCPP H5Object : public H5Location {
         ssize_t getObjName(char *obj_name, size_t buf_size = 0) const;
         ssize_t getObjName(H5std_string& obj_name, size_t len = 0) const;
         H5std_string getObjName() const;
-
 
 #ifndef DOXYGEN_SHOULD_SKIP_THIS
 

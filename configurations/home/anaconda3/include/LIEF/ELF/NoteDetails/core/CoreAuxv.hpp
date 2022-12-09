@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,8 @@
 
 #include "LIEF/Object.hpp"
 #include "LIEF/visibility.h"
-#include "LIEF/ELF/enums.hpp"
+
+#include "LIEF/ELF/Note.hpp"
 #include "LIEF/ELF/NoteDetails.hpp"
 
 namespace LIEF {
@@ -32,7 +33,6 @@ namespace ELF {
 class Parser;
 class Builder;
 class Binary;
-class Note;
 
 //! Class representing core Auxv object
 class LIEF_API CoreAuxv : public NoteDetails {

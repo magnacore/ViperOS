@@ -1,0 +1,76 @@
+{
+  "build": "py38hdd07704_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "numpy >=1.11.3,<2.0a0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/tifffile-2020.10.1-py38hdd07704_2",
+  "features": "",
+  "files": [
+    "bin/lsm2bin",
+    "bin/tifffile",
+    "lib/python3.8/site-packages/tifffile-2020.10.1-py3.8.egg-info/PKG-INFO",
+    "lib/python3.8/site-packages/tifffile-2020.10.1-py3.8.egg-info/SOURCES.txt",
+    "lib/python3.8/site-packages/tifffile-2020.10.1-py3.8.egg-info/dependency_links.txt",
+    "lib/python3.8/site-packages/tifffile-2020.10.1-py3.8.egg-info/entry_points.txt",
+    "lib/python3.8/site-packages/tifffile-2020.10.1-py3.8.egg-info/requires.txt",
+    "lib/python3.8/site-packages/tifffile-2020.10.1-py3.8.egg-info/top_level.txt",
+    "lib/python3.8/site-packages/tifffile/__init__.py",
+    "lib/python3.8/site-packages/tifffile/__main__.py",
+    "lib/python3.8/site-packages/tifffile/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/tifffile/__pycache__/__main__.cpython-38.pyc",
+    "lib/python3.8/site-packages/tifffile/__pycache__/lsm2bin.cpython-38.pyc",
+    "lib/python3.8/site-packages/tifffile/__pycache__/tifffile.cpython-38.pyc",
+    "lib/python3.8/site-packages/tifffile/__pycache__/tifffile_geodb.cpython-38.pyc",
+    "lib/python3.8/site-packages/tifffile/lsm2bin.py",
+    "lib/python3.8/site-packages/tifffile/tifffile.py",
+    "lib/python3.8/site-packages/tifffile/tifffile_geodb.py"
+  ],
+  "fn": "tifffile-2020.10.1-py38hdd07704_2.conda",
+  "legacy_bz2_md5": "178da0ad5bb23acaf80005358b444344",
+  "legacy_bz2_size": 270087,
+  "license": "BSD 3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/tifffile-2020.10.1-py38hdd07704_2",
+    "type": 1
+  },
+  "md5": "686a4f5aa0a9f51a3cee4ce722ce7624",
+  "name": "tifffile",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/tifffile-2020.10.1-py38hdd07704_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/lsm2bin",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/tifffile_1602000660630/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "ad1216c818cd62534630d841ed7d982d139615ca3d550af2dda876ad809a30ab",
+        "sha256_in_prefix": "7683a998dcbe8cd2b1860ebd331274ab6515a9bb851b13c3f6c671a6470eb63c",
+        "size_in_bytes": 1223
+      },
+      {
+        "_path": "bin/tifffile",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/tifffile_1602000660630/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "8c401f3151fae10bfa84b6aaff5619145034306d9c6c15a33fd383c5550d4475",
+        "sha256_in_prefix": "e4bcc13a1619ca4edb8ac7a0fa6247fab400b924a18f9cb6252b35b4bded4f5b",
+        "size_in_bytes": 1225
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "tifffile==2020.10.1=py38hdd07704_2",
+  "sha256": "57ff695206eb38579997b1a942c4ce5097a5baf4ae754d883b18a46da6b5b684",
+  "size": 254339,
+  "subdir": "linux-64",
+  "timestamp": 1602000718859,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/tifffile-2020.10.1-py38hdd07704_2.conda",
+  "version": "2020.10.1"
+}

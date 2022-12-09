@@ -40,14 +40,10 @@
 #ifndef QT3DRENDER_TEXTUREIMAGEDATA_H
 #define QT3DRENDER_TEXTUREIMAGEDATA_H
 
-#include <Qt3DRender/qt3drender_global.h>
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-#  include <QOpenGLTexture>
-#else
-#  include <QtGui/qopengltexture.h>
-#endif
+#include <QtGui/QOpenGLTexture>
 #include <QtGui/QImage>
 #include <QtCore/QSharedPointer>
+#include <Qt3DRender/qt3drender_global.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -55,7 +51,7 @@ namespace Qt3DRender {
 
 class QTextureImageDataPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QTextureImageData
+class QT3DRENDERSHARED_EXPORT QTextureImageData
 {
 public:
     QTextureImageData();

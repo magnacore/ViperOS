@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ class ResourcesManager;
 
 //! @brief Modelization of the data associated with the ``RT_VERSION`` entry
 //!
-//! See: ``VS_VERSIONINFO`` - https://docs.microsoft.com/en-us/windows/win32/menurc/vs-versioninfo
+//! See: ``VS_VERSIONINFO`` - https://msdn.microsoft.com/en-us/library/windows/desktop/ms647001(v=vs.85).aspx
 class LIEF_API ResourceVersion : public Object {
   friend class ResourcesManager;
 

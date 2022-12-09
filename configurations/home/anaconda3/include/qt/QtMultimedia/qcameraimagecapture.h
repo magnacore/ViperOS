@@ -87,7 +87,7 @@ public:
     };
     Q_DECLARE_FLAGS(CaptureDestinations, CaptureDestination)
 
-    explicit QCameraImageCapture(QMediaObject *mediaObject, QObject *parent = nullptr);
+    explicit QCameraImageCapture(QMediaObject *mediaObject, QObject *parent = Q_NULLPTR);
     ~QCameraImageCapture();
 
     bool isAvailable() const;
@@ -104,7 +104,7 @@ public:
     QString imageCodecDescription(const QString &codecName) const;
 
     QList<QSize> supportedResolutions(const QImageEncoderSettings &settings = QImageEncoderSettings(),
-                                      bool *continuous = nullptr) const;
+                                      bool *continuous = Q_NULLPTR) const;
 
     QImageEncoderSettings encodingSettings() const;
     void setEncodingSettings(const QImageEncoderSettings& settings);
@@ -124,14 +124,14 @@ public Q_SLOTS:
 Q_SIGNALS:
     void error(int id, QCameraImageCapture::Error error, const QString &errorString);
 
-    void readyForCaptureChanged(bool ready);
-    void bufferFormatChanged(QVideoFrame::PixelFormat format);
-    void captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination);
+    void readyForCaptureChanged(bool);
+    void bufferFormatChanged(QVideoFrame::PixelFormat);
+    void captureDestinationChanged(QCameraImageCapture::CaptureDestinations);
 
     void imageExposed(int id);
     void imageCaptured(int id, const QImage &preview);
     void imageMetadataAvailable(int id, const QString &key, const QVariant &value);
-    void imageAvailable(int id, const QVideoFrame &frame);
+    void imageAvailable(int id, const QVideoFrame &image);
     void imageSaved(int id, const QString &fileName);
 
 protected:

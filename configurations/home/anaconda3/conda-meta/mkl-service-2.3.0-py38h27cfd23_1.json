@@ -1,0 +1,49 @@
+{
+  "build": "py38h27cfd23_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "mkl >=2021.2.0,<2022.0a0",
+    "python >=3.8,<3.9.0a0",
+    "six"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/mkl-service-2.3.0-py38h27cfd23_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/mkl/__init__.py",
+    "lib/python3.8/site-packages/mkl/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/mkl/_mklinit.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/mkl/_py_mkl_service.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/mkl_service-2.3.0-py3.8.egg-info/PKG-INFO",
+    "lib/python3.8/site-packages/mkl_service-2.3.0-py3.8.egg-info/SOURCES.txt",
+    "lib/python3.8/site-packages/mkl_service-2.3.0-py3.8.egg-info/dependency_links.txt",
+    "lib/python3.8/site-packages/mkl_service-2.3.0-py3.8.egg-info/requires.txt",
+    "lib/python3.8/site-packages/mkl_service-2.3.0-py3.8.egg-info/top_level.txt"
+  ],
+  "fn": "mkl-service-2.3.0-py38h27cfd23_1.conda",
+  "legacy_bz2_md5": "20fce816b422dc529fa78b44c36a6b28",
+  "legacy_bz2_size": 61717,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/mkl-service-2.3.0-py38h27cfd23_1",
+    "type": 1
+  },
+  "md5": "acae2ba3d7cdcbba920d047eff310ae9",
+  "name": "mkl-service",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/mkl-service-2.3.0-py38h27cfd23_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "mkl-service==2.3.0=py38h27cfd23_1",
+  "sha256": "dc85112d17d7d4fc625208fd116025b1b7766ca636084428ae2557222f66becb",
+  "size": 58757,
+  "subdir": "linux-64",
+  "timestamp": 1618348300432,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/mkl-service-2.3.0-py38h27cfd23_1.conda",
+  "version": "2.3.0"
+}

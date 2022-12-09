@@ -1,0 +1,163 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "appdirs",
+    "attrs >=18.1.0",
+    "click >=6.5",
+    "mypy_extensions",
+    "pathspec",
+    "python >=3.6",
+    "regex",
+    "toml >=0.9.4",
+    "typed-ast",
+    "typing_extensions"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/black-19.10b0-py_0",
+  "features": "",
+  "files": [
+    "bin/blackd",
+    "lib/python3.8/site-packages/_black_version.py",
+    "lib/python3.8/site-packages/black-19.10b0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/black-19.10b0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/black-19.10b0.dist-info/METADATA",
+    "lib/python3.8/site-packages/black-19.10b0.dist-info/RECORD",
+    "lib/python3.8/site-packages/black-19.10b0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/black-19.10b0.dist-info/entry_points.txt",
+    "lib/python3.8/site-packages/black-19.10b0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/black.py",
+    "lib/python3.8/site-packages/blackd.py",
+    "lib/python3.8/site-packages/blib2to3/Grammar.txt",
+    "lib/python3.8/site-packages/blib2to3/PatternGrammar.txt",
+    "lib/python3.8/site-packages/blib2to3/__init__.py",
+    "lib/python3.8/site-packages/blib2to3/pgen2/__init__.py",
+    "lib/python3.8/site-packages/blib2to3/pgen2/conv.py",
+    "lib/python3.8/site-packages/blib2to3/pgen2/driver.py",
+    "lib/python3.8/site-packages/blib2to3/pgen2/grammar.py",
+    "lib/python3.8/site-packages/blib2to3/pgen2/literals.py",
+    "lib/python3.8/site-packages/blib2to3/pgen2/parse.py",
+    "lib/python3.8/site-packages/blib2to3/pgen2/pgen.py",
+    "lib/python3.8/site-packages/blib2to3/pgen2/token.py",
+    "lib/python3.8/site-packages/blib2to3/pgen2/tokenize.py",
+    "lib/python3.8/site-packages/blib2to3/pygram.py",
+    "lib/python3.8/site-packages/blib2to3/pytree.py",
+    "lib/python3.8/site-packages/__pycache__/_black_version.cpython-38.pyc",
+    "lib/python3.8/site-packages/__pycache__/black.cpython-38.pyc",
+    "lib/python3.8/site-packages/__pycache__/blackd.cpython-38.pyc",
+    "lib/python3.8/site-packages/blib2to3/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/conv.cpython-38.pyc",
+    "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/driver.cpython-38.pyc",
+    "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/grammar.cpython-38.pyc",
+    "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/literals.cpython-38.pyc",
+    "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/parse.cpython-38.pyc",
+    "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/pgen.cpython-38.pyc",
+    "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/token.cpython-38.pyc",
+    "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/tokenize.cpython-38.pyc",
+    "lib/python3.8/site-packages/blib2to3/__pycache__/pygram.cpython-38.pyc",
+    "lib/python3.8/site-packages/blib2to3/__pycache__/pytree.cpython-38.pyc",
+    "bin/black"
+  ],
+  "fn": "black-19.10b0-py_0.conda",
+  "legacy_bz2_md5": "efe4364cd657c3195f26835683a620a9",
+  "legacy_bz2_size": 86311,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/black-19.10b0-py_0",
+    "type": 1
+  },
+  "md5": "dda9c1964ca705ed9dc055eb3a3d813a",
+  "name": "black",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/black-19.10b0-py_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "python-scripts/blackd",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "0d49fc4de899b1d0d26e7bfda14d58e44a61588415e560494e0e580033dff784",
+        "sha256_in_prefix": "3fd24dbaa695fc2dd2c4649417a36d521d87630d423e960edde7ccbd0cd17837",
+        "size_in_bytes": 281
+      },
+      {
+        "_path": "lib/python3.8/site-packages/__pycache__/_black_version.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/__pycache__/black.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/__pycache__/blackd.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/blib2to3/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/conv.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/driver.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/grammar.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/literals.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/parse.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/pgen.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/token.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/blib2to3/pgen2/__pycache__/tokenize.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/blib2to3/__pycache__/pygram.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/blib2to3/__pycache__/pytree.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/black",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "black==19.10b0=py_0",
+  "sha256": "01a92043ef222e513d5f7f0bdf71f147b542b7f21b4d5f9fb589b92847cbaa8d",
+  "size": 88382,
+  "subdir": "noarch",
+  "timestamp": 1582216009714,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/black-19.10b0-py_0.conda",
+  "version": "19.10b0"
+}

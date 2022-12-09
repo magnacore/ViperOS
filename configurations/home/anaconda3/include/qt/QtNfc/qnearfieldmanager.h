@@ -41,7 +41,7 @@
 #define QNEARFIELDMANAGER_H
 
 #include <QtCore/QObject>
-#include <QtNfc/qtnfcglobal.h>
+#include <QtNfc/qnfcglobal.h>
 #include <QtNfc/QNearFieldTarget>
 #include <QtNfc/QNdefRecord>
 #include <QtNfc/QNdefFilter>
@@ -56,13 +56,6 @@ class Q_NFC_EXPORT QNearFieldManager : public QObject
     Q_DECLARE_PRIVATE(QNearFieldManager)
 
 public:
-    enum class AdapterState {
-        Offline = 1,
-        TurningOn = 2,
-        Online = 3,
-        TurningOff = 4
-    };
-    Q_ENUM(AdapterState)
     enum TargetAccessMode {
         NoTargetAccess = 0x00,
         NdefReadTargetAccess = 0x01,
@@ -72,12 +65,11 @@ public:
     Q_ENUM(TargetAccessMode)
     Q_DECLARE_FLAGS(TargetAccessModes, TargetAccessMode)
 
-    explicit QNearFieldManager(QObject *parent = nullptr);
-    explicit QNearFieldManager(QNearFieldManagerPrivate *backend, QObject *parent = nullptr);
+    explicit QNearFieldManager(QObject *parent = Q_NULLPTR);
+    explicit QNearFieldManager(QNearFieldManagerPrivate *backend, QObject *parent = Q_NULLPTR);
     ~QNearFieldManager();
 
     bool isAvailable() const;
-    bool isSupported() const;
 
     void setTargetAccessModes(TargetAccessModes accessModes);
     TargetAccessModes targetAccessModes() const;
@@ -99,7 +91,6 @@ public:
     bool unregisterNdefMessageHandler(int handlerId);
 
 Q_SIGNALS:
-    void adapterStateChanged(QNearFieldManager::AdapterState state);
     void targetDetected(QNearFieldTarget *target);
     void targetLost(QNearFieldTarget *target);
 

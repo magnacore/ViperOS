@@ -1,0 +1,81 @@
+# This file created by conda-build 3.21.9
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Tue Sep  6 13:07:59 2022
+# ------------------------------------------------
+
+package:
+  name: pypdf2
+  version: 2.10.5
+source:
+  sha256: a568453329f8ad73bb001bcf70fd2fd97ec6525669c54552b2b9e99c2e469459
+  url: https://pypi.io/packages/source/P/PyPDF2/PyPDF2-2.10.5.tar.gz
+build:
+  number: '0'
+  script: /opt/conda/conda-bld/pypdf2_1662469682626/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh/bin/python
+    -m pip install . --no-deps -vv
+  string: py39h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - ca-certificates 2022.07.19 h06a4308_0
+    - certifi 2022.6.15 py39h06a4308_0
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.3 he6710b0_2
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - ncurses 6.3 h5eee18b_3
+    - openssl 1.1.1q h7f8727e_0
+    - pip 22.1.2 py39h06a4308_0
+    - python 3.9.13 haa1d7c7_1
+    - readline 8.1.2 h7f8727e_1
+    - setuptools 63.4.1 py39h06a4308_0
+    - sqlite 3.39.2 h5082296_0
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2022a hda174b7_0
+    - wheel 0.37.1 pyhd3eb1b0_0
+    - xz 5.2.5 h7f8727e_1
+    - zlib 1.2.12 h7f8727e_2
+  run:
+    - python >=3.9,<3.10.0a0
+    - typing_extensions >=3.10
+test:
+  commands:
+    - pip check
+  imports:
+    - PyPDF2
+    - PyPDF2._codecs
+    - PyPDF2.generic
+  requires:
+    - pip
+    - pycryptodome
+about:
+  description: 'PyPDF2 is a free and open-source pure-python PDF library capable of
+    splitting,
+
+    merging, cropping, and transforming the pages of PDF files. It can also add
+
+    custom data, viewing options, and passwords to PDF files. PyPDF2 can retrieve
+
+    text and metadata from PDFs as well.
+
+    '
+  dev_url: https://github.com/py-pdf/PyPDF2
+  doc_source_url: https://github.com/py-pdf/PyPDF2/tree/main/docs
+  doc_url: https://pypdf2.readthedocs.io/
+  home: https://pypdf2.readthedocs.io/
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: A pure-python PDF library capable of splitting, merging, cropping, and
+    transforming PDF files
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: bd42fd16-910a-4343-bf24-5e2cac303aab
+  recipe-maintainers:
+    - carlodri
+    - pmlandwehr
+  remote_url: git@github.com:AnacondaRecipes/pypdf2-feedstock.git
+  sha: 42675c28350a87ed6e4f2d815243be9d568bf37d

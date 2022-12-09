@@ -40,6 +40,10 @@
 #ifndef QTCORE_QEXCEPTION_H
 #define QTCORE_QEXCEPTION_H
 
+#include <QtCore/qglobal.h>
+
+#ifndef QT_NO_QFUTURE
+
 #include <QtCore/qatomic.h>
 #include <QtCore/qshareddata.h>
 
@@ -47,12 +51,10 @@
 #  include <exception>
 #endif
 
-QT_REQUIRE_CONFIG(future);
-
 QT_BEGIN_NAMESPACE
 
 
-#if !defined(QT_NO_EXCEPTIONS) || defined(Q_CLANG_QDOC)
+#ifndef QT_NO_EXCEPTIONS
 
 class Q_CORE_EXPORT QException : public std::exception
 {
@@ -78,8 +80,8 @@ public:
     throw()
 #endif
     ;
-    void raise() const override;
-    QUnhandledException *clone() const override;
+    void raise() const Q_DECL_OVERRIDE;
+    QUnhandledException *clone() const Q_DECL_OVERRIDE;
 };
 
 namespace QtPrivate {
@@ -88,7 +90,7 @@ class Base;
 class Q_CORE_EXPORT ExceptionHolder
 {
 public:
-    ExceptionHolder(QException *exception = nullptr);
+    ExceptionHolder(QException *exception = Q_NULLPTR);
     ExceptionHolder(const ExceptionHolder &other);
     void operator=(const ExceptionHolder &other); // ### Qt6: copy-assign operator shouldn't return void. Remove this method and the copy-ctor, they are unneeded.
     ~ExceptionHolder();
@@ -125,5 +127,7 @@ public:
 #endif // QT_NO_EXCEPTIONS
 
 QT_END_NAMESPACE
+
+#endif // QT_NO_QFUTURE
 
 #endif

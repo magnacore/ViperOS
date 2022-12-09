@@ -58,7 +58,7 @@ class Q_WIDGETS_EXPORT QFontComboBox : public QComboBox
     Q_PROPERTY(QFont currentFont READ currentFont WRITE setCurrentFont NOTIFY currentFontChanged)
 
 public:
-    explicit QFontComboBox(QWidget *parent = nullptr);
+    explicit QFontComboBox(QWidget *parent = Q_NULLPTR);
     ~QFontComboBox();
 
     void setWritingSystem(QFontDatabase::WritingSystem);
@@ -78,7 +78,7 @@ public:
     FontFilters fontFilters() const;
 
     QFont currentFont() const;
-    QSize sizeHint() const override;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
     void setCurrentFont(const QFont &f);
@@ -87,7 +87,7 @@ Q_SIGNALS:
     void currentFontChanged(const QFont &f);
 
 protected:
-    bool event(QEvent *e) override;
+    bool event(QEvent *e) Q_DECL_OVERRIDE;
 
 private:
     Q_DISABLE_COPY(QFontComboBox)

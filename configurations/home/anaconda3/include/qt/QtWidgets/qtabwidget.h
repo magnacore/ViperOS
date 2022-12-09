@@ -68,7 +68,7 @@ class Q_WIDGETS_EXPORT QTabWidget : public QWidget
     Q_PROPERTY(bool tabBarAutoHide READ tabBarAutoHide WRITE setTabBarAutoHide)
 
 public:
-    explicit QTabWidget(QWidget *parent = nullptr);
+    explicit QTabWidget(QWidget *parent = Q_NULLPTR);
     ~QTabWidget();
 
     int addTab(QWidget *widget, const QString &);
@@ -80,13 +80,10 @@ public:
     void removeTab(int index);
 
     bool isTabEnabled(int index) const;
-    void setTabEnabled(int index, bool enabled);
-
-    bool isTabVisible(int index) const;
-    void setTabVisible(int index, bool visible);
+    void setTabEnabled(int index, bool);
 
     QString tabText(int index) const;
-    void setTabText(int index, const QString &text);
+    void setTabText(int index, const QString &);
 
     QIcon tabIcon(int index) const;
     void setTabIcon(int index, const QIcon & icon);
@@ -110,7 +107,7 @@ public:
     enum TabPosition { North, South, West, East };
     Q_ENUM(TabPosition)
     TabPosition tabPosition() const;
-    void setTabPosition(TabPosition position);
+    void setTabPosition(TabPosition);
 
     bool tabsClosable() const;
     void setTabsClosable(bool closeable);
@@ -123,16 +120,16 @@ public:
     TabShape tabShape() const;
     void setTabShape(TabShape s);
 
-    QSize sizeHint() const override;
-    QSize minimumSizeHint() const override;
-    int heightForWidth(int width) const override;
-    bool hasHeightForWidth() const override;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+    int heightForWidth(int width) const Q_DECL_OVERRIDE;
+    bool hasHeightForWidth() const Q_DECL_OVERRIDE;
 
     void setCornerWidget(QWidget * w, Qt::Corner corner = Qt::TopRightCorner);
     QWidget * cornerWidget(Qt::Corner corner = Qt::TopRightCorner) const;
 
     Qt::TextElideMode elideMode() const;
-    void setElideMode(Qt::TextElideMode mode);
+    void setElideMode(Qt::TextElideMode);
 
     QSize iconSize() const;
     void setIconSize(const QSize &size);
@@ -164,13 +161,13 @@ protected:
     virtual void tabInserted(int index);
     virtual void tabRemoved(int index);
 
-    void showEvent(QShowEvent *) override;
-    void resizeEvent(QResizeEvent *) override;
-    void keyPressEvent(QKeyEvent *) override;
-    void paintEvent(QPaintEvent *) override;
+    void showEvent(QShowEvent *) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
     void setTabBar(QTabBar *);
-    void changeEvent(QEvent *) override;
-    bool event(QEvent *) override;
+    void changeEvent(QEvent *) Q_DECL_OVERRIDE;
+    bool event(QEvent *) Q_DECL_OVERRIDE;
     void initStyleOption(QStyleOptionTabWidgetFrame *option) const;
 
 

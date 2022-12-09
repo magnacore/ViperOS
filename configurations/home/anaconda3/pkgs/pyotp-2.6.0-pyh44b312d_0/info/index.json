@@ -1,0 +1,16 @@
+{
+  "arch": null,
+  "build": "pyh44b312d_0",
+  "build_number": 0,
+  "depends": [
+    "python"
+  ],
+  "license": "MIT",
+  "license_family": "MIT",
+  "name": "pyotp",
+  "noarch": "python",
+  "platform": null,
+  "subdir": "noarch",
+  "timestamp": 1612473286398,
+  "version": "2.6.0"
+}

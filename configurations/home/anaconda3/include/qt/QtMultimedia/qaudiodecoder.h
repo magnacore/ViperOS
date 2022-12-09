@@ -75,7 +75,7 @@ public:
         ServiceMissingError
     };
 
-    explicit QAudioDecoder(QObject *parent = nullptr);
+    explicit QAudioDecoder(QObject *parent = Q_NULLPTR);
     ~QAudioDecoder();
 
     static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList& codecs = QStringList());

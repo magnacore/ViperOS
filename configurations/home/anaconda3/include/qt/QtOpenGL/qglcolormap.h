@@ -69,7 +69,7 @@ public:
     int    findNearest(QRgb color) const;
 
 protected:
-    Qt::HANDLE handle() { return d ? d->cmapHandle : nullptr; }
+    Qt::HANDLE handle() { return d ? d->cmapHandle : Q_NULLPTR; }
     void setHandle(Qt::HANDLE ahandle) { d->cmapHandle = ahandle; }
 
 private:
@@ -90,7 +90,7 @@ private:
 
 inline void QGLColormap::detach()
 {
-    if (d->ref.loadRelaxed() != 1)
+    if (d->ref.load() != 1)
         detach_helper();
 }
 

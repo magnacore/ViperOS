@@ -1,0 +1,58 @@
+{
+  "build": "py38h27cfd23_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/typed-ast-1.4.2-py38h27cfd23_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/typed_ast-1.4.2.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/typed_ast-1.4.2.dist-info/LICENSE",
+    "lib/python3.8/site-packages/typed_ast-1.4.2.dist-info/METADATA",
+    "lib/python3.8/site-packages/typed_ast-1.4.2.dist-info/RECORD",
+    "lib/python3.8/site-packages/typed_ast-1.4.2.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/typed_ast-1.4.2.dist-info/WHEEL",
+    "lib/python3.8/site-packages/typed_ast-1.4.2.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/typed_ast-1.4.2.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/typed_ast/__init__.py",
+    "lib/python3.8/site-packages/typed_ast/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/typed_ast/__pycache__/ast27.cpython-38.pyc",
+    "lib/python3.8/site-packages/typed_ast/__pycache__/ast3.cpython-38.pyc",
+    "lib/python3.8/site-packages/typed_ast/__pycache__/conversions.cpython-38.pyc",
+    "lib/python3.8/site-packages/typed_ast/_ast27.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/typed_ast/_ast3.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/typed_ast/ast27.py",
+    "lib/python3.8/site-packages/typed_ast/ast3.py",
+    "lib/python3.8/site-packages/typed_ast/conversions.py",
+    "lib/python3.8/site-packages/typed_ast/tests/__pycache__/test_basics.cpython-38.pyc",
+    "lib/python3.8/site-packages/typed_ast/tests/test_basics.py"
+  ],
+  "fn": "typed-ast-1.4.2-py38h27cfd23_1.conda",
+  "legacy_bz2_md5": "7e3fb7e89d40f9beda56e1617944ac22",
+  "legacy_bz2_size": 219418,
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/typed-ast-1.4.2-py38h27cfd23_1",
+    "type": 1
+  },
+  "md5": "ce0143f42e0ffe523e4343b75963f1e0",
+  "name": "typed-ast",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/typed-ast-1.4.2-py38h27cfd23_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "typed-ast==1.4.2=py38h27cfd23_1",
+  "sha256": "bf62297f08d4ef17dc2ebdddab2c802324115ae41d256dba8fb860568858ff78",
+  "size": 193350,
+  "subdir": "linux-64",
+  "timestamp": 1610484596524,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/typed-ast-1.4.2-py38h27cfd23_1.conda",
+  "version": "1.4.2"
+}

@@ -1,0 +1,139 @@
+{
+  "build": "h7b6447c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libedit >=3.1.20191231,<3.2.0a0",
+    "libgcc-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/unixodbc-2.3.9-h7b6447c_0",
+  "features": "",
+  "files": [
+    "bin/dltest",
+    "bin/isql",
+    "bin/iusql",
+    "bin/odbc_config",
+    "bin/odbcinst",
+    "bin/slencheck",
+    "include/autotest.h",
+    "include/odbcinst.h",
+    "include/odbcinstext.h",
+    "include/sql.h",
+    "include/sqlext.h",
+    "include/sqlspi.h",
+    "include/sqltypes.h",
+    "include/sqlucode.h",
+    "include/unixodbc_conf.h",
+    "include/uodbc_extras.h",
+    "include/uodbc_stats.h",
+    "lib/libodbc.so",
+    "lib/libodbc.so.2",
+    "lib/libodbc.so.2.0.0",
+    "lib/libodbccr.so",
+    "lib/libodbccr.so.2",
+    "lib/libodbccr.so.2.0.0",
+    "lib/libodbcinst.so",
+    "lib/libodbcinst.so.2",
+    "lib/libodbcinst.so.2.0.0",
+    "lib/pkgconfig/odbc.pc",
+    "lib/pkgconfig/odbccr.pc",
+    "lib/pkgconfig/odbcinst.pc",
+    "share/man/man1/dltest.1",
+    "share/man/man1/isql.1",
+    "share/man/man1/iusql.1",
+    "share/man/man1/odbc_config.1",
+    "share/man/man1/odbcinst.1",
+    "share/man/man5/odbc.ini.5",
+    "share/man/man5/odbcinst.ini.5",
+    "share/man/man7/unixODBC.7"
+  ],
+  "fn": "unixodbc-2.3.9-h7b6447c_0.conda",
+  "legacy_bz2_md5": "9e7ee3f8ae9c1046728cbde28bb976f3",
+  "legacy_bz2_size": 306225,
+  "license": "LGPL-2.1",
+  "license_family": "LGPL",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/unixodbc-2.3.9-h7b6447c_0",
+    "type": 1
+  },
+  "md5": "67c4d497ed9f7ccc936b9e7eb663e970",
+  "name": "unixodbc",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/unixodbc-2.3.9-h7b6447c_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/odbc_config",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/unixodbc_1602700001820/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "2cec1466f92741f9619317046738cf46bcaa3dc5c52b6b5aeecc200fe0041083",
+        "sha256_in_prefix": "a8e5f963e4c35a07d6e4c8712016211608539426d54dd4a0c0fa5c5e4f2924e5",
+        "size_in_bytes": 19944
+      },
+      {
+        "_path": "include/unixodbc_conf.h",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/unixodbc_1602700001820/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "c00e23d010fa6819bc2ff8ed29de326935a01c9605c41c5f3c780a59cd4d1a25",
+        "sha256_in_prefix": "6f1c7221ce2de164f32e5857003e964961f109329577defbfd3da2e4a18894df",
+        "size_in_bytes": 15444
+      },
+      {
+        "_path": "lib/libodbc.so.2.0.0",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/unixodbc_1602700001820/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "625a41c35b8bb422d18873f8fa6ef24a0b48b8ec4856c315ae91d81c1a023a1e",
+        "sha256_in_prefix": "a78077956a077b15ec9f2fcdf276020dc37f66b60308e4986d435ad8cf2410b2",
+        "size_in_bytes": 465144
+      },
+      {
+        "_path": "lib/libodbcinst.so.2.0.0",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/unixodbc_1602700001820/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "887d8bfeb2f4d3480a9a6f1f3f043d28ddc4b39480d9ebf589747e60bdf16a05",
+        "sha256_in_prefix": "3798f1c0a396e1bec897708a626cc4bcfe7dc377d3fd0c481116aa9430709165",
+        "size_in_bytes": 102344
+      },
+      {
+        "_path": "lib/pkgconfig/odbc.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/unixodbc_1602700001820/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "f96ae19dd2b579d11b3a9ab43f25bc3afb2820a9f52f286d48c92778845782e0",
+        "sha256_in_prefix": "025623c697db3651853e8bc352844c08fb2de99fe8d58a2d408fa404c49a5ae7",
+        "size_in_bytes": 771
+      },
+      {
+        "_path": "lib/pkgconfig/odbccr.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/unixodbc_1602700001820/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "d11c1c6eb8febf7a57e709eb9e159404ea593718d1c941d8cb1d99b7714a2156",
+        "sha256_in_prefix": "2128e05ac3992a303b648cbc33820f63e64a5ad0c5d5012ebbccfc2c91c0080c",
+        "size_in_bytes": 508
+      },
+      {
+        "_path": "lib/pkgconfig/odbcinst.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/unixodbc_1602700001820/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "c3b19f829f082a47f8927a54cb217aed12a53600066b8981a8af6ed1b9f7fff7",
+        "sha256_in_prefix": "6630fe55649f58f0cec1e2ce8f4d61fb933fca76376f69d5885db863159ecdb8",
+        "size_in_bytes": 568
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "unixodbc==2.3.9=h7b6447c_0",
+  "sha256": "8b0d87b99cdd5bee2f72382aae2cccde9b5b965b4698af63fe98ea90266d9fdc",
+  "size": 282425,
+  "subdir": "linux-64",
+  "timestamp": 1602700091394,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/unixodbc-2.3.9-h7b6447c_0.conda",
+  "version": "2.3.9"
+}

@@ -47,9 +47,8 @@ Item {
     visible: false
 
     property alias text: toolTip.text
-    property int delayTimerInterval: 500
-    property int hideTimerInterval: 10000
-    property int toolTipMaxWidth: 400
+    property int delayTimerInterval: 1000
+    property int hideTimerInterval: 1500
 
     Timer {
         id: delayTimer
@@ -78,8 +77,7 @@ Item {
        Text {
             id: toolTip
             anchors {fill: parent; margins: 5}
-            wrapMode: Text.Wrap
-            width: Math.min(toolTipMaxWidth, (toolTip.text.length +1) * 8)
+            wrapMode: Text.WrapAnywhere
         }
     }
 

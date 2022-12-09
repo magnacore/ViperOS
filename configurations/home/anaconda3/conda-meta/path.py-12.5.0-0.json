@@ -1,0 +1,38 @@
+{
+  "build": "0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "path",
+    "python >=3.5"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/path.py-12.5.0-0",
+  "features": "",
+  "files": [],
+  "fn": "path.py-12.5.0-0.conda",
+  "legacy_bz2_md5": "7d530d592b77e525ec757d8ac9cf825b",
+  "legacy_bz2_size": 3495,
+  "license": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/path.py-12.5.0-0",
+    "type": 1
+  },
+  "md5": "2420f79b1954cf1cfa1fbc5b80706492",
+  "name": "path.py",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/path.py-12.5.0-0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "path.py==12.5.0=0",
+  "sha256": "c7cdf23312eb1f5abb94e0a7575cc95e8c9d8505a5849517a572bb431b54ca0a",
+  "size": 3883,
+  "subdir": "noarch",
+  "timestamp": 1596908307223,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/path.py-12.5.0-0.conda",
+  "version": "12.5.0"
+}

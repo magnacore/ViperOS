@@ -1,0 +1,41 @@
+{% set name = "zoxide" %}
+{% set version = "0.7.7" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/ajeetdsouza/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 6c190f84e4d4c22fef6948b06afd451d67c558d5afee5225745fbcbe256b0194
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ compiler('rust') }}
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - cargo-bundle-licenses
+
+test:
+  commands:
+    - zoxide --help
+
+about:
+  home: https://github.com/ajeetdsouza/zoxide
+  license: MIT
+  license_family: MIT
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
+  summary: A faster way to navigate your filesystem
+  description: |
+    zoxide is a blazing fast alternative to cd, inspired by z and z.lua. It keeps track of the directories you use most frequently, and uses a ranking algorithm to navigate to the best match.
+  doc_url: https://github.com/ajeetdsouza/zoxide/blob/master/README.md
+  dev_url: https://github.com/ajeetdsouza/zoxide
+
+extra:
+  recipe-maintainers:
+    - daizeng1984

@@ -1,0 +1,17 @@
+commit 219272b58f01c7b557d4b52cacd0500ab68e89d4
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Wed Dec 15 07:08:12 2021 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CondaForgeGHAWithMain
+
+commit b3a4d797dc0702c9da377887ef65597ef5f46659
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Thu Nov 11 01:44:20 2021 +0000
+
+    Re-render the feedstock after CI registration.
+
+commit 3463ed34ea44887c72690b2ac0881765a6267dc2
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Thu Nov 11 01:39:39 2021 +0000
+
+    Initial feedstock commit with conda-smithy 3.14.3.

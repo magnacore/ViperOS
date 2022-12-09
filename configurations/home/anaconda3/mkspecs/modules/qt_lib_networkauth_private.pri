@@ -1,8 +1,8 @@
-QT.networkauth_private.VERSION = 5.15.2
+QT.networkauth_private.VERSION = 5.9.7
 QT.networkauth_private.name = QtNetworkAuth
 QT.networkauth_private.module =
 QT.networkauth_private.libs = $$QT_MODULE_LIB_BASE
-QT.networkauth_private.includes = $$QT_MODULE_INCLUDE_BASE/QtNetworkAuth/5.15.2 $$QT_MODULE_INCLUDE_BASE/QtNetworkAuth/5.15.2/QtNetworkAuth
+QT.networkauth_private.includes = $$QT_MODULE_INCLUDE_BASE/QtNetworkAuth/5.9.7 $$QT_MODULE_INCLUDE_BASE/QtNetworkAuth/5.9.7/QtNetworkAuth
 QT.networkauth_private.frameworks =
 QT.networkauth_private.depends = core_private networkauth
 QT.networkauth_private.uses =

@@ -40,7 +40,6 @@
 #ifndef QSCXMLGLOBALS_H
 #define QSCXMLGLOBALS_H
 #include <QtCore/qglobal.h>
-#include <QtScxml/qtscxml-config.h>
 
 QT_BEGIN_NAMESPACE
 

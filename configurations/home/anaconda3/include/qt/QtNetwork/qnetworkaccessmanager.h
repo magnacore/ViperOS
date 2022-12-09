@@ -42,7 +42,6 @@
 
 #include <QtNetwork/qtnetworkglobal.h>
 #include <QtNetwork/qnetworkrequest.h>
-#include <QtCore/QString>
 #include <QtCore/QVector>
 #include <QtCore/QObject>
 #ifndef QT_NO_SSL
@@ -64,7 +63,7 @@ class QNetworkProxy;
 class QNetworkProxyFactory;
 class QSslError;
 class QHstsPolicy;
-#ifndef QT_NO_BEARERMANAGEMENT // ### Qt6: Remove section
+#ifndef QT_NO_BEARERMANAGEMENT
 class QNetworkConfiguration;
 #endif
 class QHttpMultiPart;
@@ -75,7 +74,7 @@ class Q_NETWORK_EXPORT QNetworkAccessManager: public QObject
 {
     Q_OBJECT
 
-#ifndef QT_NO_BEARERMANAGEMENT // ### Qt6: Remove section
+#ifndef QT_NO_BEARERMANAGEMENT
     Q_PROPERTY(NetworkAccessibility networkAccessible READ networkAccessible WRITE setNetworkAccessible NOTIFY networkAccessibleChanged)
 #endif
 
@@ -91,19 +90,16 @@ public:
         UnknownOperation = 0
     };
 
-#ifndef QT_NO_BEARERMANAGEMENT // ### Qt6: Remove section
-    enum QT_DEPRECATED_NETWORK_API_5_15 NetworkAccessibility {
+#ifndef QT_NO_BEARERMANAGEMENT
+    enum NetworkAccessibility {
         UnknownAccessibility = -1,
         NotAccessible = 0,
         Accessible = 1
     };
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
     Q_ENUM(NetworkAccessibility)
-QT_WARNING_POP
 #endif
 
-    explicit QNetworkAccessManager(QObject *parent = nullptr);
+    explicit QNetworkAccessManager(QObject *parent = Q_NULLPTR);
     ~QNetworkAccessManager();
 
     // ### Qt 6: turn into virtual
@@ -128,8 +124,6 @@ QT_WARNING_POP
 
     void setStrictTransportSecurityEnabled(bool enabled);
     bool isStrictTransportSecurityEnabled() const;
-    void enableStrictTransportSecurityStore(bool enabled, const QString &storeDir = QString());
-    bool isStrictTransportSecurityStoreEnabled() const;
     void addStrictTransportSecurityHosts(const QVector<QHstsPolicy> &knownHosts);
     QVector<QHstsPolicy> strictTransportSecurityHosts() const;
 
@@ -140,7 +134,7 @@ QT_WARNING_POP
     QNetworkReply *put(const QNetworkRequest &request, QIODevice *data);
     QNetworkReply *put(const QNetworkRequest &request, const QByteArray &data);
     QNetworkReply *deleteResource(const QNetworkRequest &request);
-    QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = nullptr);
+    QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = Q_NULLPTR);
     QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data);
 
 #if QT_CONFIG(http)
@@ -149,35 +143,23 @@ QT_WARNING_POP
     QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *multiPart);
 #endif
 
-#if !defined(QT_NO_BEARERMANAGEMENT) // ### Qt6: Remove section
-    QT_DEPRECATED_VERSION_5_15 void setConfiguration(const QNetworkConfiguration &config);
-    QT_DEPRECATED_VERSION_5_15 QNetworkConfiguration configuration() const;
-    QT_DEPRECATED_VERSION_5_15 QNetworkConfiguration activeConfiguration() const;
+#ifndef QT_NO_BEARERMANAGEMENT
+    void setConfiguration(const QNetworkConfiguration &config);
+    QNetworkConfiguration configuration() const;
+    QNetworkConfiguration activeConfiguration() const;
 
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
-    QT_DEPRECATED_VERSION_5_15 void setNetworkAccessible(NetworkAccessibility accessible);
-    QT_DEPRECATED_VERSION_5_15 NetworkAccessibility networkAccessible() const;
-QT_WARNING_POP
+    void setNetworkAccessible(NetworkAccessibility accessible);
+    NetworkAccessibility networkAccessible() const;
 #endif
 
 #ifndef QT_NO_SSL
     void connectToHostEncrypted(const QString &hostName, quint16 port = 443,
                                 const QSslConfiguration &sslConfiguration = QSslConfiguration::defaultConfiguration());
-    void connectToHostEncrypted(const QString &hostName, quint16 port,
-                                const QSslConfiguration &sslConfiguration,
-                                const QString &peerName);
 #endif
     void connectToHost(const QString &hostName, quint16 port = 80);
 
     void setRedirectPolicy(QNetworkRequest::RedirectPolicy policy);
     QNetworkRequest::RedirectPolicy redirectPolicy() const;
-
-    bool autoDeleteReplies() const;
-    void setAutoDeleteReplies(bool autoDelete);
-
-    int transferTimeout() const;
-    void setTransferTimeout(int timeout = QNetworkRequest::DefaultTransferTimeoutConstant);
 
 Q_SIGNALS:
 #ifndef QT_NO_NETWORKPROXY
@@ -191,22 +173,15 @@ Q_SIGNALS:
     void preSharedKeyAuthenticationRequired(QNetworkReply *reply, QSslPreSharedKeyAuthenticator *authenticator);
 #endif
 
-#ifndef QT_NO_BEARERMANAGEMENT // ### Qt6: Remove section
-    QT_DEPRECATED_VERSION_5_15 void networkSessionConnected();
+#ifndef QT_NO_BEARERMANAGEMENT
+    void networkSessionConnected();
 
-#ifndef Q_MOC_RUN // moc has trouble with the expansion of these macros
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
-#endif
-    QT_DEPRECATED_VERSION_5_15 void networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility accessible);
-#ifndef Q_MOC_RUN // moc has trouble with the expansion of these macros
-QT_WARNING_POP
-#endif
+    void networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility accessible);
 #endif
 
 protected:
     virtual QNetworkReply *createRequest(Operation op, const QNetworkRequest &request,
-                                         QIODevice *outgoingData = nullptr);
+                                         QIODevice *outgoingData = Q_NULLPTR);
 
 protected Q_SLOTS:
     QStringList supportedSchemesImplementation() const;
@@ -217,19 +192,18 @@ private:
     friend class QNetworkReplyHttpImplPrivate;
     friend class QNetworkReplyFileImpl;
 
-#ifdef Q_OS_WASM
-    friend class QNetworkReplyWasmImpl;
-#endif
     Q_DECLARE_PRIVATE(QNetworkAccessManager)
+    Q_PRIVATE_SLOT(d_func(), void _q_replyFinished())
+    Q_PRIVATE_SLOT(d_func(), void _q_replyEncrypted())
     Q_PRIVATE_SLOT(d_func(), void _q_replySslErrors(QList<QSslError>))
     Q_PRIVATE_SLOT(d_func(), void _q_replyPreSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*))
-#ifndef QT_NO_BEARERMANAGEMENT // ### Qt6: Remove section
+#ifndef QT_NO_BEARERMANAGEMENT
     Q_PRIVATE_SLOT(d_func(), void _q_networkSessionClosed())
     Q_PRIVATE_SLOT(d_func(), void _q_networkSessionStateChanged(QNetworkSession::State))
+    Q_PRIVATE_SLOT(d_func(), void _q_onlineStateChanged(bool))
     Q_PRIVATE_SLOT(d_func(), void _q_configurationChanged(const QNetworkConfiguration &))
     Q_PRIVATE_SLOT(d_func(), void _q_networkSessionFailed(QNetworkSession::SessionError))
 #endif
-    Q_PRIVATE_SLOT(d_func(), void _q_onlineStateChanged(bool))
 };
 
 QT_END_NAMESPACE

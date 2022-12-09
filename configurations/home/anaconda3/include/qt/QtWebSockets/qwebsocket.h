@@ -68,8 +68,8 @@ class Q_WEBSOCKETS_EXPORT QWebSocket : public QObject
 public:
     explicit QWebSocket(const QString &origin = QString(),
                         QWebSocketProtocol::Version version = QWebSocketProtocol::VersionLatest,
-                        QObject *parent = nullptr);
-    ~QWebSocket() override;
+                        QObject *parent = Q_NULLPTR);
+    virtual ~QWebSocket();
 
     void abort();
     QAbstractSocket::SocketError error() const;
@@ -113,19 +113,6 @@ public:
     QSslConfiguration sslConfiguration() const;
 #endif
 
-    qint64 bytesToWrite() const;
-
-    void setMaxAllowedIncomingFrameSize(quint64 maxAllowedIncomingFrameSize);
-    quint64 maxAllowedIncomingFrameSize() const;
-    void setMaxAllowedIncomingMessageSize(quint64 maxAllowedIncomingMessageSize);
-    quint64 maxAllowedIncomingMessageSize() const;
-    static quint64 maxIncomingMessageSize();
-    static quint64 maxIncomingFrameSize();
-
-    void setOutgoingFrameSize(quint64 outgoingFrameSize);
-    quint64 outgoingFrameSize() const;
-    static quint64 maxOutgoingFrameSize();
-
 public Q_SLOTS:
     void close(QWebSocketProtocol::CloseCode closeCode = QWebSocketProtocol::CloseCodeNormal,
                const QString &reason = QString());
@@ -160,7 +147,7 @@ Q_SIGNALS:
 
 private:
     QWebSocket(QTcpSocket *pTcpSocket, QWebSocketProtocol::Version version,
-               QObject *parent = nullptr);
+               QObject *parent = Q_NULLPTR);
 };
 
 QT_END_NAMESPACE

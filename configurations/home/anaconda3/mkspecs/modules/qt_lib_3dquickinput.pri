@@ -1,4 +1,4 @@
-QT.3dquickinput.VERSION = 5.15.2
+QT.3dquickinput.VERSION = 5.9.7
 QT.3dquickinput.name = Qt3DQuickInput
 QT.3dquickinput.module = Qt53DQuickInput
 QT.3dquickinput.libs = $$QT_MODULE_LIB_BASE

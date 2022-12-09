@@ -149,8 +149,6 @@ inline qreal qPow(qreal x, qreal y)
     return pow(x, y);
 }
 
-// TODO: use template variables (e.g. Qt::pi<type>) for these once we have C++14 support:
-
 #ifndef M_E
 #define M_E (2.7182818284590452354)
 #endif
@@ -244,13 +242,16 @@ Q_DECL_CONSTEXPR inline double qRadiansToDegrees(double radians)
 }
 
 
-Q_DECL_RELAXED_CONSTEXPR inline quint32 qNextPowerOfTwo(quint32 v)
-{
 #if defined(QT_HAS_BUILTIN_CLZ)
+inline quint32 qNextPowerOfTwo(quint32 v)
+{
     if (v == 0)
         return 1;
     return 2U << (31 ^ QAlgorithmsPrivate::qt_builtin_clz(v));
+}
 #else
+inline quint32 qNextPowerOfTwo(quint32 v)
+{
     v |= v >> 1;
     v |= v >> 2;
     v |= v >> 4;
@@ -258,16 +259,19 @@ Q_DECL_RELAXED_CONSTEXPR inline quint32 qNextPowerOfTwo(quint32 v)
     v |= v >> 16;
     ++v;
     return v;
-#endif
 }
+#endif
 
-Q_DECL_RELAXED_CONSTEXPR inline quint64 qNextPowerOfTwo(quint64 v)
-{
 #if defined(QT_HAS_BUILTIN_CLZLL)
+inline quint64 qNextPowerOfTwo(quint64 v)
+{
     if (v == 0)
         return 1;
     return Q_UINT64_C(2) << (63 ^ QAlgorithmsPrivate::qt_builtin_clzll(v));
+}
 #else
+inline quint64 qNextPowerOfTwo(quint64 v)
+{
     v |= v >> 1;
     v |= v >> 2;
     v |= v >> 4;
@@ -276,15 +280,15 @@ Q_DECL_RELAXED_CONSTEXPR inline quint64 qNextPowerOfTwo(quint64 v)
     v |= v >> 32;
     ++v;
     return v;
-#endif
 }
+#endif
 
-Q_DECL_RELAXED_CONSTEXPR inline quint32 qNextPowerOfTwo(qint32 v)
+inline quint32 qNextPowerOfTwo(qint32 v)
 {
     return qNextPowerOfTwo(quint32(v));
 }
 
-Q_DECL_RELAXED_CONSTEXPR inline quint64 qNextPowerOfTwo(qint64 v)
+inline quint64 qNextPowerOfTwo(qint64 v)
 {
     return qNextPowerOfTwo(quint64(v));
 }

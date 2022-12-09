@@ -77,7 +77,9 @@ public:
         TransformNodeType,
         ClipNodeType,
         OpacityNodeType,
+#ifndef qdoc
         RootNodeType,
+#endif
         RenderNodeType
     };
 
@@ -94,9 +96,10 @@ public:
         OwnsOpaqueMaterial          = 0x00040000,
 
         // Uppermost 8 bits are reserved for internal use.
+#ifndef qdoc
         IsVisitableNode             = 0x01000000
-#ifdef Q_CLANG_QDOC
-        , InternalReserved            = 0x01000000
+#else
+        InternalReserved            = 0x01000000
 #endif
     };
     Q_DECLARE_FLAGS(Flags, Flag)
@@ -110,6 +113,7 @@ public:
         DirtyMaterial               = 0x2000,
         DirtyOpacity                = 0x4000,
 
+#ifndef qdoc
         DirtyForceUpdate            = 0x8000,
 
         DirtyUsePreprocess          = UsePreprocess,
@@ -118,6 +122,7 @@ public:
                                       | DirtyNodeAdded
                                       | DirtyOpacity
                                       | DirtyForceUpdate
+#endif
 
     };
     Q_DECLARE_FLAGS(DirtyState, DirtyStateBit)
@@ -146,7 +151,7 @@ public:
 
     QT_DEPRECATED void clearDirty() { }
     void markDirty(DirtyState bits);
-    QT_DEPRECATED DirtyState dirtyState() const { return { }; }
+    QT_DEPRECATED DirtyState dirtyState() const { return Q_NULLPTR; }
 
     virtual bool isSubtreeBlocked() const;
 
@@ -168,13 +173,13 @@ private:
     void init();
     void destroy();
 
-    QSGNode *m_parent = nullptr;
-    NodeType m_type = BasicNodeType;
-    QSGNode *m_firstChild = nullptr;
-    QSGNode *m_lastChild = nullptr;
-    QSGNode *m_nextSibling = nullptr;
-    QSGNode *m_previousSibling = nullptr;
-    int m_subtreeRenderableCount = 0;
+    QSGNode *m_parent;
+    NodeType m_type;
+    QSGNode *m_firstChild;
+    QSGNode *m_lastChild;
+    QSGNode *m_nextSibling;
+    QSGNode *m_previousSibling;
+    int m_subtreeRenderableCount;
 
     Flags m_nodeFlags;
     DirtyState m_dirtyState; // Obsolete, remove in Qt 6
@@ -190,7 +195,7 @@ void Q_QUICK_EXPORT qsgnode_set_description(QSGNode *node, const QString &descri
 class Q_QUICK_EXPORT QSGBasicGeometryNode : public QSGNode
 {
 public:
-    ~QSGBasicGeometryNode() override;
+    ~QSGBasicGeometryNode();
 
     void setGeometry(QSGGeometry *geometry);
     const QSGGeometry *geometry() const { return m_geometry; }
@@ -224,7 +229,7 @@ class Q_QUICK_EXPORT QSGGeometryNode : public QSGBasicGeometryNode
 {
 public:
     QSGGeometryNode();
-    ~QSGGeometryNode() override;
+    ~QSGGeometryNode();
 
     void setMaterial(QSGMaterial *material);
     QSGMaterial *material() const { return m_material; }
@@ -246,18 +251,18 @@ protected:
 private:
     friend class QSGNodeUpdater;
 
-    int m_render_order = 0;
-    QSGMaterial *m_material = nullptr;
-    QSGMaterial *m_opaque_material = nullptr;
+    int m_render_order;
+    QSGMaterial *m_material;
+    QSGMaterial *m_opaque_material;
 
-    qreal m_opacity = 1;
+    qreal m_opacity;
 };
 
 class Q_QUICK_EXPORT QSGClipNode : public QSGBasicGeometryNode
 {
 public:
     QSGClipNode();
-    ~QSGClipNode() override;
+    ~QSGClipNode();
 
     void setIsRectangular(bool rectHint);
     bool isRectangular() const { return m_is_rectangular; }
@@ -277,7 +282,7 @@ class Q_QUICK_EXPORT QSGTransformNode : public QSGNode
 {
 public:
     QSGTransformNode();
-    ~QSGTransformNode() override;
+    ~QSGTransformNode();
 
     void setMatrix(const QMatrix4x4 &matrix);
     const QMatrix4x4 &matrix() const { return m_matrix; }
@@ -295,7 +300,7 @@ class Q_QUICK_EXPORT QSGRootNode : public QSGNode
 {
 public:
     QSGRootNode();
-    ~QSGRootNode() override;
+    ~QSGRootNode();
 
 private:
     void notifyNodeChange(QSGNode *node, DirtyState state);
@@ -312,7 +317,7 @@ class Q_QUICK_EXPORT QSGOpacityNode : public QSGNode
 {
 public:
     QSGOpacityNode();
-    ~QSGOpacityNode() override;
+    ~QSGOpacityNode();
 
     void setOpacity(qreal opacity);
     qreal opacity() const { return m_opacity; }
@@ -323,8 +328,8 @@ public:
     bool isSubtreeBlocked() const override;
 
 private:
-    qreal m_opacity = 1;
-    qreal m_combined_opacity = 1;
+    qreal m_opacity;
+    qreal m_combined_opacity;
 };
 
 class Q_QUICK_EXPORT QSGNodeVisitor {

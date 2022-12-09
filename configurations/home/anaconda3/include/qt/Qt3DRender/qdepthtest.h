@@ -49,7 +49,7 @@ namespace Qt3DRender {
 
 class QDepthTestPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QDepthTest : public QRenderState
+class QT3DRENDERSHARED_EXPORT QDepthTest : public QRenderState
 {
     Q_OBJECT
     Q_PROPERTY(DepthFunction depthFunction READ depthFunction WRITE setDepthFunction NOTIFY depthFunctionChanged)
@@ -80,7 +80,7 @@ Q_SIGNALS:
 
 private:
     Q_DECLARE_PRIVATE(QDepthTest)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DRender

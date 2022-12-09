@@ -42,18 +42,18 @@
 
 #include <QtRemoteObjects/qtremoteobjectglobal.h>
 
-#include <QtCore/qabstractitemmodel.h>
-#include <QtCore/qitemselectionmodel.h>
+#include <QAbstractItemModel>
+#include <QItemSelectionModel>
 
 QT_BEGIN_NAMESPACE
 
-class QAbstractItemModelReplicaImplementation;
+class QAbstractItemModelReplicaPrivate;
 
 class Q_REMOTEOBJECTS_EXPORT QAbstractItemModelReplica : public QAbstractItemModel
 {
     Q_OBJECT
 public:
-    ~QAbstractItemModelReplica() override;
+    ~QAbstractItemModelReplica();
 
     QItemSelectionModel* selectionModel() const;
 
@@ -79,9 +79,9 @@ Q_SIGNALS:
     void initialized();
 
 private:
-    explicit QAbstractItemModelReplica(QAbstractItemModelReplicaImplementation *rep, QtRemoteObjects::InitialAction action, const QVector<int> &rolesHint);
-    QScopedPointer<QAbstractItemModelReplicaImplementation> d;
-    friend class QAbstractItemModelReplicaImplementation;
+    explicit QAbstractItemModelReplica(QAbstractItemModelReplicaPrivate *rep);
+    QScopedPointer<QAbstractItemModelReplicaPrivate> d;
+    friend class QAbstractItemModelReplicaPrivate;
     friend class QRemoteObjectNode;
 };
 

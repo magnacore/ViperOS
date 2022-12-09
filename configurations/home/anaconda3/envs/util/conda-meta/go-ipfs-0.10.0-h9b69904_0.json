@@ -1,0 +1,44 @@
+{
+  "build": "h9b69904_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=9.4.0",
+    "openssl >=1.1.1l,<1.1.2a"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/go-ipfs-0.10.0-h9b69904_0",
+  "features": "",
+  "files": [
+    "bin/ipfs"
+  ],
+  "fn": "go-ipfs-0.10.0-h9b69904_0.tar.bz2",
+  "license": "Apache-2.0 or MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/go-ipfs-0.10.0-h9b69904_0",
+    "type": 1
+  },
+  "md5": "c2ffc6a127d6c626583be7a43577949b",
+  "name": "go-ipfs",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/go-ipfs-0.10.0-h9b69904_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/ipfs",
+        "path_type": "hardlink",
+        "sha256": "278670863ed8fd125920009141b2f9553f37b3829daecf13fca1d54256c9301d",
+        "sha256_in_prefix": "278670863ed8fd125920009141b2f9553f37b3829daecf13fca1d54256c9301d",
+        "size_in_bytes": 74785120
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "go-ipfs",
+  "sha256": "18a13d5e496c7ab7b0eedd4264342ee1796197ba7d427d839f7ca7fcf18922bc",
+  "size": 26881577,
+  "subdir": "linux-64",
+  "timestamp": 1633640326535,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/go-ipfs-0.10.0-h9b69904_0.tar.bz2",
+  "version": "0.10.0"
+}

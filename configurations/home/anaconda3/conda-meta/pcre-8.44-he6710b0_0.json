@@ -1,0 +1,99 @@
+{
+  "build": "he6710b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/pcre-8.44-he6710b0_0",
+  "features": "",
+  "files": [
+    "bin/pcre-config",
+    "bin/pcregrep",
+    "bin/pcretest",
+    "include/pcre.h",
+    "include/pcre_scanner.h",
+    "include/pcre_stringpiece.h",
+    "include/pcrecpp.h",
+    "include/pcrecpparg.h",
+    "include/pcreposix.h",
+    "lib/libpcre.a",
+    "lib/libpcre.so",
+    "lib/libpcre.so.1",
+    "lib/libpcre.so.1.2.12",
+    "lib/libpcrecpp.a",
+    "lib/libpcrecpp.so",
+    "lib/libpcrecpp.so.0",
+    "lib/libpcrecpp.so.0.0.2",
+    "lib/libpcreposix.a",
+    "lib/libpcreposix.so",
+    "lib/libpcreposix.so.0",
+    "lib/libpcreposix.so.0.0.7",
+    "lib/pkgconfig/libpcre.pc",
+    "lib/pkgconfig/libpcrecpp.pc",
+    "lib/pkgconfig/libpcreposix.pc"
+  ],
+  "fn": "pcre-8.44-he6710b0_0.conda",
+  "legacy_bz2_md5": "50cc854152beb1dfb6dbd492ccf8cc1c",
+  "legacy_bz2_size": 275679,
+  "license": "BSD 3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/pcre-8.44-he6710b0_0",
+    "type": 1
+  },
+  "md5": "e337926bb92177a2a3aded95a895470d",
+  "name": "pcre",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/pcre-8.44-he6710b0_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/pcre-config",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "0fd7deed9fe6520535f8d556198eedf2dae1f1c9e14bccb11b3171e239a8abc6",
+        "sha256_in_prefix": "4bc2b2172c83557415b43ef46e07c55ea8acb03b7408fc2c1689b29e80bc4598",
+        "size_in_bytes": 2385
+      },
+      {
+        "_path": "lib/pkgconfig/libpcre.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "ac688ea1179f8156c78450c0d9ea9c423def7332149aed7d93a26b8ba2394659",
+        "sha256_in_prefix": "1bd2eb6f3cafa1159e260569f93ed07ebef007c1bfbd83348123e156d1949404",
+        "size_in_bytes": 345
+      },
+      {
+        "_path": "lib/pkgconfig/libpcrecpp.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "4a4c8c32277a5af6ba088af249e5c645c7bee689a1b8cae3bf38e1d0b9d38797",
+        "sha256_in_prefix": "70030c1e9c19124a1f1b726fcbf8d58ce9c4db1ade07f93155f36223aa0f116f",
+        "size_in_bytes": 291
+      },
+      {
+        "_path": "lib/pkgconfig/libpcreposix.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "a271784b8390b4d305d7a4e6900a5faff6330e29b375641e18f08ebaedcba711",
+        "sha256_in_prefix": "094f428d90c97a5e5da7aaf1cf6379e4b76f639da059b2f3049d5956e56dd2ae",
+        "size_in_bytes": 333
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pcre==8.44=he6710b0_0",
+  "sha256": "033e48e5ce9fe1e5bd581da8ca8d8ef40db31ef26f23559a645cb865a7416708",
+  "size": 216927,
+  "subdir": "linux-64",
+  "timestamp": 1593049055043,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pcre-8.44-he6710b0_0.conda",
+  "version": "8.44"
+}

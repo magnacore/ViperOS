@@ -48,7 +48,7 @@ namespace Qt3DCore {
 
 class QStaticPropertyUpdatedChangeBasePrivate;
 
-class Q_3DCORESHARED_EXPORT QStaticPropertyUpdatedChangeBase : public QPropertyUpdatedChangeBase
+class QT3DCORESHARED_EXPORT QStaticPropertyUpdatedChangeBase : public QPropertyUpdatedChangeBase
 {
 public:
     ~QStaticPropertyUpdatedChangeBase();
@@ -57,12 +57,12 @@ public:
     void setPropertyName(const char *name);
 
 protected:
-    Q3D_DECL_DEPRECATED explicit QStaticPropertyUpdatedChangeBase(QNodeId subjectId);
-    Q3D_DECL_DEPRECATED explicit QStaticPropertyUpdatedChangeBase(QStaticPropertyUpdatedChangeBasePrivate &dd, QNodeId subjectId);
+    explicit QStaticPropertyUpdatedChangeBase(QNodeId subjectId);
+    explicit QStaticPropertyUpdatedChangeBase(QStaticPropertyUpdatedChangeBasePrivate &dd, QNodeId subjectId);
     Q_DECLARE_PRIVATE(QStaticPropertyUpdatedChangeBase)
 };
 
-Q3D_DECL_DEPRECATED typedef QSharedPointer<QStaticPropertyUpdatedChangeBase> QStaticPropertyUpdatedChangeBasePtr;
+typedef QSharedPointer<QStaticPropertyUpdatedChangeBase> QStaticPropertyUpdatedChangeBasePtr;
 
 } // namespace Qt3DCore
 

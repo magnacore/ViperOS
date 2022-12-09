@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,44 +16,43 @@
 #ifndef LIEF_MACHO_PARSER_H_
 #define LIEF_MACHO_PARSER_H_
 #include <string>
-#include <vector>
-#include <memory>
+#include <list>
 
 #include "LIEF/types.hpp"
 #include "LIEF/visibility.h"
+#include "LIEF/BinaryStream/VectorStream.hpp"
 
 #include "LIEF/Abstract/Parser.hpp"
 
 #include "LIEF/MachO/ParserConfig.hpp"
+#include "LIEF/MachO/Structures.hpp"
+#include "LIEF/MachO/Binary.hpp"
+#include "LIEF/MachO/FatBinary.hpp"
+
 
 namespace LIEF {
-class VectorStream;
-
 namespace MachO {
-class Binary;
-class FatBinary;
-
 class LIEF_API Parser : public LIEF::Parser {
   public:
-  Parser& operator=(const Parser& copy) = delete;
-  Parser(const Parser& copy)            = delete;
+    Parser& operator=(const Parser& copy) = delete;
+    Parser(const Parser& copy)            = delete;
 
-  ~Parser(void);
+    ~Parser(void);
 
-  static std::unique_ptr<FatBinary> parse(const std::string& filename, const ParserConfig& conf = ParserConfig::deep());
-  static std::unique_ptr<FatBinary> parse(const std::vector<uint8_t>& data, const std::string& name = "", const ParserConfig& conf = ParserConfig::deep());
+    static std::unique_ptr<FatBinary> parse(const std::string& filename, const ParserConfig& conf = ParserConfig::deep());
+    static std::unique_ptr<FatBinary> parse(const std::vector<uint8_t>& data, const std::string& name = "", const ParserConfig& conf = ParserConfig::deep());
 
   private:
-  Parser(const std::string& file, const ParserConfig& conf);
-  Parser(const std::vector<uint8_t>& data, const std::string& name, const ParserConfig& conf);
-  Parser(void);
+    Parser(const std::string& file, const ParserConfig& conf);
+    Parser(const std::vector<uint8_t>& data, const std::string& name, const ParserConfig& conf);
+    Parser(void);
 
-  void build(void);
-  void build_fat(void);
+    void build(void);
+    void build_fat(void);
 
-  std::unique_ptr<VectorStream> stream_;
-  std::vector<Binary*>          binaries_;
-  ParserConfig                  config_;
+    std::unique_ptr<VectorStream> stream_;
+    std::vector<Binary*>          binaries_;
+    ParserConfig                  config_;
 };
 }
 }

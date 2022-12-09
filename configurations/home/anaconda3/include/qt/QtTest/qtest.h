@@ -41,20 +41,15 @@
 #ifndef QTEST_H
 #define QTEST_H
 
-#include <QtTest/qttestglobal.h>
+#include <QtTest/qtest_global.h>
 #include <QtTest/qtestcase.h>
 #include <QtTest/qtestdata.h>
 #include <QtTest/qbenchmark.h>
 
-#include <QtCore/qbitarray.h>
 #include <QtCore/qbytearray.h>
 #include <QtCore/qstring.h>
 #include <QtCore/qstringlist.h>
-#include <QtCore/qcborcommon.h>
 #include <QtCore/qdatetime.h>
-#if QT_CONFIG(itemmodel)
-#include <QtCore/qabstractitemmodel.h>
-#endif
 #include <QtCore/qobject.h>
 #include <QtCore/qvariant.h>
 #include <QtCore/qurl.h>
@@ -64,22 +59,15 @@
 #include <QtCore/qsize.h>
 #include <QtCore/qrect.h>
 
-#include <memory>
-
 QT_BEGIN_NAMESPACE
 
 
 namespace QTest
 {
 
-template <> inline char *toString(const QStringView &str)
-{
-    return QTest::toPrettyUnicode(str);
-}
-
 template<> inline char *toString(const QString &str)
 {
-    return toString(QStringView(str));
+    return QTest::toPrettyUnicode(reinterpret_cast<const ushort *>(str.constData()), str.length());
 }
 
 template<> inline char *toString(const QLatin1String &str)
@@ -92,44 +80,28 @@ template<> inline char *toString(const QByteArray &ba)
     return QTest::toPrettyCString(ba.constData(), ba.length());
 }
 
-template<> inline char *toString(const QBitArray &ba)
-{
-    qsizetype size = ba.size();
-    char *str = new char[size + 1];
-    for (qsizetype i = 0; i < size; ++i)
-        str[i] = "01"[ba.testBit(i)];
-    str[size] = '\0';
-    return str;
-}
-
-#if QT_CONFIG(datestring)
+#ifndef QT_NO_DATESTRING
 template<> inline char *toString(const QTime &time)
 {
     return time.isValid()
-        ? qstrdup(qPrintable(time.toString(u"hh:mm:ss.zzz")))
+        ? qstrdup(qPrintable(time.toString(QLatin1String("hh:mm:ss.zzz"))))
         : qstrdup("Invalid QTime");
 }
 
 template<> inline char *toString(const QDate &date)
 {
     return date.isValid()
-        ? qstrdup(qPrintable(date.toString(u"yyyy/MM/dd")))
+        ? qstrdup(qPrintable(date.toString(QLatin1String("yyyy/MM/dd"))))
         : qstrdup("Invalid QDate");
 }
 
 template<> inline char *toString(const QDateTime &dateTime)
 {
     return dateTime.isValid()
-        ? qstrdup(qPrintable(dateTime.toString(u"yyyy/MM/dd hh:mm:ss.zzz[t]")))
+        ? qstrdup(qPrintable(dateTime.toString(QLatin1String("yyyy/MM/dd hh:mm:ss.zzz[t]"))))
         : qstrdup("Invalid QDateTime");
 }
-#endif // datestring
-
-template<> inline char *toString(const QCborError &c)
-{
-    // use the Q_ENUM formatting
-    return toString(c.c);
-}
+#endif // QT_NO_DATESTRING
 
 template<> inline char *toString(const QChar &c)
 {
@@ -141,15 +113,6 @@ template<> inline char *toString(const QChar &c)
     }
     return qstrdup(qPrintable(QString::fromLatin1("QChar: '%1' (0x%2)").arg(c).arg(QString::number(static_cast<int>(c.unicode()), 16))));
 }
-
-#if QT_CONFIG(itemmodel)
-template<> inline char *toString(const QModelIndex &idx)
-{
-    char msg[128];
-    qsnprintf(msg, sizeof(msg), "QModelIndex(%d,%d,%p,%p)", idx.row(), idx.column(), idx.internalPointer(), idx.model());
-    return qstrdup(msg);
-}
-#endif
 
 template<> inline char *toString(const QPoint &p)
 {
@@ -218,7 +181,7 @@ template<> inline char *toString(const QVariant &v)
         vstring.append(type);
         if (!v.isNull()) {
             vstring.append(',');
-            if (v.canConvert(QMetaType::QString)) {
+            if (v.canConvert(QVariant::String)) {
                 vstring.append(v.toString().toLocal8Bit());
             }
             else {
@@ -229,41 +192,6 @@ template<> inline char *toString(const QVariant &v)
     vstring.append(')');
 
     return qstrdup(vstring.constData());
-}
-
-template <typename T1, typename T2>
-inline char *toString(const QPair<T1, T2> &pair)
-{
-    const QScopedArrayPointer<char> first(toString(pair.first));
-    const QScopedArrayPointer<char> second(toString(pair.second));
-    return toString(QString::asprintf("QPair(%s,%s)", first.data(), second.data()));
-}
-
-template <typename T1, typename T2>
-inline char *toString(const std::pair<T1, T2> &pair)
-{
-    const QScopedArrayPointer<char> first(toString(pair.first));
-    const QScopedArrayPointer<char> second(toString(pair.second));
-    return toString(QString::asprintf("std::pair(%s,%s)", first.data(), second.data()));
-}
-
-template <typename Tuple, int... I>
-inline char *toString(const Tuple & tuple, QtPrivate::IndexesList<I...>) {
-    using UP = std::unique_ptr<char[]>;
-    // Generate a table of N + 1 elements where N is the number of
-    // elements in the tuple.
-    // The last element is needed to support the empty tuple use case.
-    const UP data[] = {
-        UP(toString(std::get<I>(tuple)))..., UP{}
-    };
-    return formatString("std::tuple(", ")", sizeof...(I), data[I].get()...);
-}
-
-template <class... Types>
-inline char *toString(const std::tuple<Types...> &tuple)
-{
-    static const std::size_t params_count = sizeof...(Types);
-    return toString(tuple, typename QtPrivate::Indexes<params_count>::Value());
 }
 
 inline char *toString(std::nullptr_t)
@@ -314,7 +242,7 @@ inline bool qCompare(QList<T> const &t1, QList<T> const &t2, const char *actual,
             delete [] val2;
         }
     }
-    return compare_helper(isOk, msg, nullptr, nullptr, actual, expected, file, line);
+    return compare_helper(isOk, msg, Q_NULLPTR, Q_NULLPTR, actual, expected, file, line);
 }
 
 template <>
@@ -379,36 +307,8 @@ inline bool qCompare(quint32 const &t1, quint64 const &t2, const char *actual,
 {
     return qCompare(static_cast<quint64>(t1), t2, actual, expected, file, line);
 }
-namespace Internal {
 
-template <typename T>
-class HasInitMain // SFINAE test for the presence of initMain()
-{
-private:
-    using YesType = char[1];
-    using NoType = char[2];
-
-    template <typename C> static YesType& test( decltype(&C::initMain) ) ;
-    template <typename C> static NoType& test(...);
-
-public:
-    enum { value = sizeof(test<T>(nullptr)) == sizeof(YesType) };
-};
-
-template<typename T>
-typename std::enable_if<HasInitMain<T>::value, void>::type callInitMain()
-{
-    T::initMain();
 }
-
-template<typename T>
-typename std::enable_if<!HasInitMain<T>::value, void>::type callInitMain()
-{
-}
-
-} // namespace Internal
-
-} // namespace QTest
 QT_END_NAMESPACE
 
 #ifdef QT_TESTCASE_BUILDDIR
@@ -417,41 +317,27 @@ QT_END_NAMESPACE
 #  define QTEST_SET_MAIN_SOURCE_PATH  QTest::setMainSourcePath(__FILE__);
 #endif
 
-// Hooks for coverage-testing of QTestLib itself:
-#if QT_CONFIG(testlib_selfcover) && defined(__COVERAGESCANNER__)
-struct QtCoverageScanner
-{
-    QtCoverageScanner(const char *name)
-    {
-        __coveragescanner_clear();
-        __coveragescanner_testname(name);
-    }
-    ~QtCoverageScanner()
-    {
-        __coveragescanner_save();
-        __coveragescanner_testname("");
-    }
-};
-#define TESTLIB_SELFCOVERAGE_START(name) QtCoverageScanner _qtCoverageScanner(name);
-#else
-#define TESTLIB_SELFCOVERAGE_START(name)
-#endif
-
 #define QTEST_APPLESS_MAIN(TestObject) \
 int main(int argc, char *argv[]) \
 { \
-    TESTLIB_SELFCOVERAGE_START(TestObject) \
     TestObject tc; \
     QTEST_SET_MAIN_SOURCE_PATH \
     return QTest::qExec(&tc, argc, argv); \
 }
 
 #include <QtTest/qtestsystem.h>
+#include <set>
 
-// Two backwards-compatibility defines for an obsolete feature:
-#define QTEST_ADD_GPU_BLACKLIST_SUPPORT_DEFS
-#define QTEST_ADD_GPU_BLACKLIST_SUPPORT
-// ### Qt 6: fully remove these.
+#ifndef QT_NO_OPENGL
+#  define QTEST_ADD_GPU_BLACKLIST_SUPPORT_DEFS \
+    extern Q_TESTLIB_EXPORT std::set<QByteArray> *(*qgpu_features_ptr)(const QString &); \
+    extern Q_GUI_EXPORT std::set<QByteArray> *qgpu_features(const QString &);
+#  define QTEST_ADD_GPU_BLACKLIST_SUPPORT \
+    qgpu_features_ptr = qgpu_features;
+#else
+#  define QTEST_ADD_GPU_BLACKLIST_SUPPORT_DEFS
+#  define QTEST_ADD_GPU_BLACKLIST_SUPPORT
+#endif
 
 #if defined(QT_NETWORK_LIB)
 #  include <QtTest/qtest_network.h>
@@ -467,53 +353,56 @@ int main(int argc, char *argv[]) \
 #  define QTEST_DISABLE_KEYPAD_NAVIGATION
 #endif
 
-#define QTEST_MAIN_IMPL(TestObject) \
-    TESTLIB_SELFCOVERAGE_START(#TestObject) \
-    QT_PREPEND_NAMESPACE(QTest::Internal::callInitMain)<TestObject>(); \
+#define QTEST_MAIN(TestObject) \
+QT_BEGIN_NAMESPACE \
+QTEST_ADD_GPU_BLACKLIST_SUPPORT_DEFS \
+QT_END_NAMESPACE \
+int main(int argc, char *argv[]) \
+{ \
     QApplication app(argc, argv); \
     app.setAttribute(Qt::AA_Use96Dpi, true); \
     QTEST_DISABLE_KEYPAD_NAVIGATION \
+    QTEST_ADD_GPU_BLACKLIST_SUPPORT \
     TestObject tc; \
     QTEST_SET_MAIN_SOURCE_PATH \
-    return QTest::qExec(&tc, argc, argv);
+    return QTest::qExec(&tc, argc, argv); \
+}
 
 #elif defined(QT_GUI_LIB)
 
 #include <QtTest/qtest_gui.h>
 
-#define QTEST_MAIN_IMPL(TestObject) \
-    TESTLIB_SELFCOVERAGE_START(#TestObject) \
-    QT_PREPEND_NAMESPACE(QTest::Internal::callInitMain)<TestObject>(); \
+#define QTEST_MAIN(TestObject) \
+QT_BEGIN_NAMESPACE \
+QTEST_ADD_GPU_BLACKLIST_SUPPORT_DEFS \
+QT_END_NAMESPACE \
+int main(int argc, char *argv[]) \
+{ \
     QGuiApplication app(argc, argv); \
     app.setAttribute(Qt::AA_Use96Dpi, true); \
+    QTEST_ADD_GPU_BLACKLIST_SUPPORT \
     TestObject tc; \
     QTEST_SET_MAIN_SOURCE_PATH \
-    return QTest::qExec(&tc, argc, argv);
+    return QTest::qExec(&tc, argc, argv); \
+}
 
 #else
-
-#define QTEST_MAIN_IMPL(TestObject) \
-    TESTLIB_SELFCOVERAGE_START(#TestObject) \
-    QT_PREPEND_NAMESPACE(QTest::Internal::callInitMain)<TestObject>(); \
-    QCoreApplication app(argc, argv); \
-    app.setAttribute(Qt::AA_Use96Dpi, true); \
-    TestObject tc; \
-    QTEST_SET_MAIN_SOURCE_PATH \
-    return QTest::qExec(&tc, argc, argv);
-
-#endif // QT_GUI_LIB
 
 #define QTEST_MAIN(TestObject) \
 int main(int argc, char *argv[]) \
 { \
-    QTEST_MAIN_IMPL(TestObject) \
+    QCoreApplication app(argc, argv); \
+    app.setAttribute(Qt::AA_Use96Dpi, true); \
+    TestObject tc; \
+    QTEST_SET_MAIN_SOURCE_PATH \
+    return QTest::qExec(&tc, argc, argv); \
 }
+
+#endif // QT_GUI_LIB
 
 #define QTEST_GUILESS_MAIN(TestObject) \
 int main(int argc, char *argv[]) \
 { \
-    TESTLIB_SELFCOVERAGE_START(#TestObject) \
-    QT_PREPEND_NAMESPACE(QTest::Internal::callInitMain)<TestObject>(); \
     QCoreApplication app(argc, argv); \
     app.setAttribute(Qt::AA_Use96Dpi, true); \
     TestObject tc; \

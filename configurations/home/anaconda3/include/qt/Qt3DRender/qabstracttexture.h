@@ -52,10 +52,10 @@ class QAbstractTexturePrivate;
 class QTextureWrapMode;
 class QAbstractTextureImage;
 class QTextureGenerator;
-class QTextureDataUpdate;
+
 typedef QSharedPointer<QTextureGenerator> QTextureGeneratorPtr;
 
-class Q_3DRENDERSHARED_EXPORT QAbstractTexture : public Qt3DCore::QNode
+class QT3DRENDERSHARED_EXPORT QAbstractTexture : public Qt3DCore::QNode
 {
     Q_OBJECT
     Q_PROPERTY(Target target READ target CONSTANT)
@@ -73,8 +73,6 @@ class Q_3DRENDERSHARED_EXPORT QAbstractTexture : public Qt3DCore::QNode
     Q_PROPERTY(ComparisonMode comparisonMode READ comparisonMode WRITE setComparisonMode NOTIFY comparisonModeChanged)
     Q_PROPERTY(int layers READ layers WRITE setLayers NOTIFY layersChanged)
     Q_PROPERTY(int samples READ samples WRITE setSamples NOTIFY samplesChanged)
-    Q_PROPERTY(HandleType handleType READ handleType NOTIFY handleTypeChanged REVISION 13)
-    Q_PROPERTY(QVariant handle READ handle NOTIFY handleChanged REVISION 13)
 
 public:
 
@@ -178,8 +176,7 @@ public:
         R5G6B5                 = 0x8D62,    // GL_RGB565
         RGB5A1                 = 0x8057,    // GL_RGB5_A1
         RGBA4                  = 0x8056,    // GL_RGBA4
-        RGB10A2                = 0x8059,    // GL_RGB10_A2
-        RGB10A2U               = 0x906F,    // GL_RGB10_A2UI
+        RGB10A2                = 0x906F,    // GL_RGB10_A2UI
 
         // Depth formats
         D16                    = 0x81A5,    // GL_DEPTH_COMPONENT16
@@ -271,12 +268,6 @@ public:
     };
     Q_ENUM(ComparisonMode) // LCOV_EXCL_LINE
 
-    enum HandleType {
-        NoHandle,
-        OpenGLTextureId
-    };
-    Q_ENUM(HandleType) // LCOV_EXCL_LINE
-
     ~QAbstractTexture();
 
     Target target() const;
@@ -306,12 +297,7 @@ public:
     int depth() const;
     int layers() const;
     int samples() const;
-    Q3D_DECL_DEPRECATED QTextureGeneratorPtr dataGenerator() const;
-    HandleType handleType() const;
-    QVariant handle() const;
-
-    Q_INVOKABLE void updateData(const QTextureDataUpdate &update);
-
+    QTextureGeneratorPtr dataGenerator() const;
 
 public Q_SLOTS:
     void setFormat(TextureFormat format);
@@ -341,23 +327,17 @@ Q_SIGNALS:
     void comparisonModeChanged(ComparisonMode comparisonMode);
     void layersChanged(int layers);
     void samplesChanged(int samples);
-    Q_REVISION(13) void handleTypeChanged(HandleType handleType);
-    Q_REVISION(13) void handleChanged(QVariant handle);
 
 protected:
     explicit QAbstractTexture(Qt3DCore::QNode *parent = nullptr);
     explicit QAbstractTexture(Target target, Qt3DCore::QNode *parent = nullptr);
     explicit QAbstractTexture(QAbstractTexturePrivate &dd, Qt3DCore::QNode *parent = nullptr);
-    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override;
 
-    // TO DO Qt6, should be on private class
     void setStatus(Status status);
-    void setHandle(const QVariant &handle);
-    void setHandleType(HandleType type);
 
 private:
     Q_DECLARE_PRIVATE(QAbstractTexture)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DRender

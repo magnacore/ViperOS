@@ -1,0 +1,16 @@
+{
+  "arch": "x86_64",
+  "build": "py39h5eee18b_0",
+  "build_number": 0,
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "name": "multidict",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1665674339367,
+  "version": "6.0.2"
+}

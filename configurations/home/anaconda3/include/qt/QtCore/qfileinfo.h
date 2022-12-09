@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** Copyright (C) 2020 The Qt Company Ltd.
+** Copyright (C) 2016 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
 ** This file is part of the QtCore module of the Qt Toolkit.
@@ -67,9 +67,11 @@ public:
     ~QFileInfo();
 
     QFileInfo &operator=(const QFileInfo &fileinfo);
-    QFileInfo &operator=(QFileInfo &&other) noexcept { swap(other); return *this; }
+#ifdef Q_COMPILER_RVALUE_REFS
+    QFileInfo &operator=(QFileInfo &&other) Q_DECL_NOTHROW { swap(other); return *this; }
+#endif
 
-    void swap(QFileInfo &other) noexcept
+    void swap(QFileInfo &other) Q_DECL_NOTHROW
     { qSwap(d_ptr, other.d_ptr); }
 
     bool operator==(const QFileInfo &fileinfo) const;
@@ -111,17 +113,11 @@ public:
     bool isFile() const;
     bool isDir() const;
     bool isSymLink() const;
-    bool isSymbolicLink() const;
-    bool isShortcut() const;
-    bool isJunction() const;
     bool isRoot() const;
     bool isBundle() const;
 
-#if QT_DEPRECATED_SINCE(5, 13)
-    QT_DEPRECATED_X("Use QFileInfo::symLinkTarget() instead")
     QString readLink() const;
-#endif
-    QString symLinkTarget() const;
+    inline QString symLinkTarget() const { return readLink(); }
 
     QString owner() const;
     uint ownerId() const;
@@ -133,16 +129,9 @@ public:
 
     qint64 size() const;
 
-    // ### Qt6: inline these functions
-#if QT_DEPRECATED_SINCE(5, 10)
-    QT_DEPRECATED_X("Use either birthTime() or metadataChangeTime()")
     QDateTime created() const;
-#endif
-    QDateTime birthTime() const;
-    QDateTime metadataChangeTime() const;
     QDateTime lastModified() const;
     QDateTime lastRead() const;
-    QDateTime fileTime(QFile::FileTime time) const;
 
     bool caching() const;
     void setCaching(bool on);
@@ -151,8 +140,6 @@ protected:
     QSharedDataPointer<QFileInfoPrivate> d_ptr;
 
 private:
-    friend class QFileInfoGatherer;
-    void stat();
     QFileInfoPrivate* d_func();
     inline const QFileInfoPrivate* d_func() const
     {
@@ -163,10 +150,6 @@ private:
 Q_DECLARE_SHARED(QFileInfo)
 
 typedef QList<QFileInfo> QFileInfoList;
-
-#ifndef QT_NO_DEBUG_STREAM
-Q_CORE_EXPORT QDebug operator<<(QDebug, const QFileInfo &);
-#endif
 
 QT_END_NAMESPACE
 

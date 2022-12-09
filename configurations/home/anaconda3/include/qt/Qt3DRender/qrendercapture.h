@@ -47,7 +47,7 @@ namespace Qt3DRender {
 class QRenderCapturePrivate;
 class QRenderCaptureReplyPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QRenderCaptureReply : public QObject
+class QT3DRENDERSHARED_EXPORT QRenderCaptureReply : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QImage image READ image CONSTANT)
@@ -78,23 +78,22 @@ private:
     friend class QRenderCapturePrivate;
 };
 
-class Q_3DRENDERSHARED_EXPORT QRenderCapture : public QFrameGraphNode
+class QT3DRENDERSHARED_EXPORT QRenderCapture : public QFrameGraphNode
 {
     Q_OBJECT
 public:
     explicit QRenderCapture(Qt3DCore::QNode *parent = nullptr);
 
-    Q_INVOKABLE Q_DECL_DEPRECATED_X("Use the overload with no id parameter")
+    Q_INVOKABLE Q_DECL_DEPRECATED_X("Use the overload with no parameter")
     Qt3DRender::QRenderCaptureReply *requestCapture(int captureId);
     Q_REVISION(9) Q_INVOKABLE Qt3DRender::QRenderCaptureReply *requestCapture();
-    Q_REVISION(10) Q_INVOKABLE Qt3DRender::QRenderCaptureReply *requestCapture(const QRect &rect);
 
 protected:
-    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override;
+    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(QRenderCapture)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // Qt3DRender

@@ -53,7 +53,7 @@ class Q_LOCATION_EXPORT QPlaceManagerEngine : public QObject
     Q_OBJECT
 
 public:
-    explicit QPlaceManagerEngine(const QVariantMap &parameters, QObject *parent = nullptr);
+    explicit QPlaceManagerEngine(const QVariantMap &parameters, QObject *parent = Q_NULLPTR);
     virtual ~QPlaceManagerEngine();
 
     QString managerName() const;

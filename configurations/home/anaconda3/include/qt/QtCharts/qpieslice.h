@@ -40,7 +40,7 @@ QT_CHARTS_BEGIN_NAMESPACE
 class QPieSlicePrivate;
 class QPieSeries;
 
-class Q_CHARTS_EXPORT QPieSlice : public QObject
+class QT_CHARTS_EXPORT QPieSlice : public QObject
 {
     Q_OBJECT
     Q_ENUMS(LabelPosition)
@@ -72,8 +72,8 @@ public:
     };
 
 public:
-    explicit QPieSlice(QObject *parent = nullptr);
-    QPieSlice(QString label, qreal value, QObject *parent = nullptr);
+    explicit QPieSlice(QObject *parent = Q_NULLPTR);
+    QPieSlice(QString label, qreal value, QObject *parent = Q_NULLPTR);
     virtual ~QPieSlice();
 
     void setLabel(QString label);

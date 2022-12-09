@@ -1,4 +1,4 @@
-QT.bluetooth.VERSION = 5.15.2
+QT.bluetooth.VERSION = 5.9.7
 QT.bluetooth.name = QtBluetooth
 QT.bluetooth.module = Qt5Bluetooth
 QT.bluetooth.libs = $$QT_MODULE_LIB_BASE
@@ -10,6 +10,6 @@ QT.bluetooth.uses =
 QT.bluetooth.module_config = v2
 QT.bluetooth.DEFINES = QT_BLUETOOTH_LIB
 QT.bluetooth.enabled_features =
-QT.bluetooth.disabled_features = bluez native-win32-bluetooth
+QT.bluetooth.disabled_features = bluez
 QT_CONFIG +=
 QT_MODULES += bluetooth

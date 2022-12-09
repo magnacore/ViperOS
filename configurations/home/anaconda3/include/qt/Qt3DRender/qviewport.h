@@ -50,7 +50,7 @@ namespace Qt3DRender {
 
 class QViewportPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QViewport : public QFrameGraphNode
+class QT3DRENDERSHARED_EXPORT QViewport : public QFrameGraphNode
 {
     Q_OBJECT
     Q_PROPERTY(QRectF normalizedRect READ normalizedRect WRITE setNormalizedRect NOTIFY normalizedRectChanged)
@@ -76,7 +76,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(QViewport)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DRender

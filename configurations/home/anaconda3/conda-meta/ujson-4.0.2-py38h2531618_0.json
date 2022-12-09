@@ -1,0 +1,47 @@
+{
+  "build": "py38h2531618_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/ujson-4.0.2-py38h2531618_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/ujson-4.0.2.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/ujson-4.0.2.dist-info/LICENSE.txt",
+    "lib/python3.8/site-packages/ujson-4.0.2.dist-info/METADATA",
+    "lib/python3.8/site-packages/ujson-4.0.2.dist-info/RECORD",
+    "lib/python3.8/site-packages/ujson-4.0.2.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/ujson-4.0.2.dist-info/WHEEL",
+    "lib/python3.8/site-packages/ujson-4.0.2.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/ujson-4.0.2.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so"
+  ],
+  "fn": "ujson-4.0.2-py38h2531618_0.conda",
+  "legacy_bz2_md5": "624edc0a547750a659c708917999b3bf",
+  "legacy_bz2_size": 49118,
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/ujson-4.0.2-py38h2531618_0",
+    "type": 1
+  },
+  "md5": "cbc923c14baf7f00266426d7fe4263b6",
+  "name": "ujson",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/ujson-4.0.2-py38h2531618_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "ujson==4.0.2=py38h2531618_0",
+  "sha256": "0aa072dbb581b4471aa88c641200bb83b541cec13937cae4bfd121e68a28ceaf",
+  "size": 46447,
+  "subdir": "linux-64",
+  "timestamp": 1611259568435,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/ujson-4.0.2-py38h2531618_0.conda",
+  "version": "4.0.2"
+}

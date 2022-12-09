@@ -52,7 +52,6 @@
 #define QT3DWINDOW_H
 
 #include <Qt3DExtras/qt3dextras_global.h>
-#include <Qt3DRender/qrenderapi.h>
 #include <QtGui/QWindow>
 
 QT_BEGIN_NAMESPACE
@@ -87,11 +86,11 @@ namespace Qt3DExtras {
 
 class Qt3DWindowPrivate;
 
-class Q_3DEXTRASSHARED_EXPORT Qt3DWindow : public QWindow
+class QT3DEXTRASSHARED_EXPORT Qt3DWindow : public QWindow
 {
     Q_OBJECT
 public:
-    Qt3DWindow(QScreen *screen = nullptr, Qt3DRender::API = Qt3DRender::API::OpenGL);
+    Qt3DWindow(QScreen *screen = nullptr);
     ~Qt3DWindow();
 
     void registerAspect(Qt3DCore::QAbstractAspect *aspect);
@@ -111,16 +110,12 @@ public Q_SLOTS:
 Q_SIGNALS:
 
 protected:
-    void showEvent(QShowEvent *e) override;
-    void resizeEvent(QResizeEvent *) override;
-    bool event(QEvent *e) override;
+    void showEvent(QShowEvent *e) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(Qt3DWindow)
 };
-
-Q_3DEXTRASSHARED_EXPORT
-void setupWindowSurface(QWindow* window, Qt3DRender::API) noexcept;
 
 } // Qt3DExtras
 

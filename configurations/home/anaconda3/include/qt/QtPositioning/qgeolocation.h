@@ -70,10 +70,8 @@ public:
     void setAddress(const QGeoAddress &address);
     QGeoCoordinate coordinate() const;
     void setCoordinate(const QGeoCoordinate &position);
-    QGeoRectangle boundingBox() const; // ### Qt6: change this into QGeoShape geometry
+    QGeoRectangle boundingBox() const;
     void setBoundingBox(const QGeoRectangle &box);
-    QVariantMap extendedAttributes() const;
-    void setExtendedAttributes(const QVariantMap &data);
 
     bool isEmpty() const;
 

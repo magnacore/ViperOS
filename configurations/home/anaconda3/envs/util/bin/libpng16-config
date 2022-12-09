@@ -12,7 +12,7 @@
 # Modeled after libxml-config.
 
 version="1.6.37"
-prefix="/home/goldust/anaconda3/envs/util"
+prefix="/home/manuj/anaconda3/envs/util"
 exec_prefix="${prefix}"
 libdir="${exec_prefix}/lib"
 includedir="${prefix}/include/libpng16"

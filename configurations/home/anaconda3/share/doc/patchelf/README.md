@@ -99,12 +99,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ## Release History
 
-0.13 (August 5, 2021):
-
-* New `--add-rpath` flag.
-
-* Bug fixes.
-
 0.12 (August 27, 2020):
 
 * New `--clear-symbol-version` flag.

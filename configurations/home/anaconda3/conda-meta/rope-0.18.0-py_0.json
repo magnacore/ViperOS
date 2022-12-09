@@ -1,0 +1,593 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/rope-0.18.0-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/rope-0.18.0.dist-info/COPYING",
+    "lib/python3.8/site-packages/rope-0.18.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/rope-0.18.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/rope-0.18.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/rope-0.18.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/rope-0.18.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/rope-0.18.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/rope-0.18.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/rope/__init__.py",
+    "lib/python3.8/site-packages/rope/base/__init__.py",
+    "lib/python3.8/site-packages/rope/base/arguments.py",
+    "lib/python3.8/site-packages/rope/base/ast.py",
+    "lib/python3.8/site-packages/rope/base/astutils.py",
+    "lib/python3.8/site-packages/rope/base/builtins.py",
+    "lib/python3.8/site-packages/rope/base/change.py",
+    "lib/python3.8/site-packages/rope/base/codeanalyze.py",
+    "lib/python3.8/site-packages/rope/base/default_config.py",
+    "lib/python3.8/site-packages/rope/base/evaluate.py",
+    "lib/python3.8/site-packages/rope/base/exceptions.py",
+    "lib/python3.8/site-packages/rope/base/fscommands.py",
+    "lib/python3.8/site-packages/rope/base/history.py",
+    "lib/python3.8/site-packages/rope/base/libutils.py",
+    "lib/python3.8/site-packages/rope/base/oi/__init__.py",
+    "lib/python3.8/site-packages/rope/base/oi/doa.py",
+    "lib/python3.8/site-packages/rope/base/oi/memorydb.py",
+    "lib/python3.8/site-packages/rope/base/oi/objectdb.py",
+    "lib/python3.8/site-packages/rope/base/oi/objectinfo.py",
+    "lib/python3.8/site-packages/rope/base/oi/runmod.py",
+    "lib/python3.8/site-packages/rope/base/oi/soa.py",
+    "lib/python3.8/site-packages/rope/base/oi/soi.py",
+    "lib/python3.8/site-packages/rope/base/oi/transform.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/__init__.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/evaluate.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/factory.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/interfaces.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__init__.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/composite.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/docstrings.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/inheritance.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/interfaces.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/numpydocstrings.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/pep0484_type_comments.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/resolvers/__init__.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/resolvers/composite.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/resolvers/interfaces.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/resolvers/types.py",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/utils.py",
+    "lib/python3.8/site-packages/rope/base/prefs.py",
+    "lib/python3.8/site-packages/rope/base/project.py",
+    "lib/python3.8/site-packages/rope/base/pycore.py",
+    "lib/python3.8/site-packages/rope/base/pynames.py",
+    "lib/python3.8/site-packages/rope/base/pynamesdef.py",
+    "lib/python3.8/site-packages/rope/base/pyobjects.py",
+    "lib/python3.8/site-packages/rope/base/pyobjectsdef.py",
+    "lib/python3.8/site-packages/rope/base/pyscopes.py",
+    "lib/python3.8/site-packages/rope/base/resourceobserver.py",
+    "lib/python3.8/site-packages/rope/base/resources.py",
+    "lib/python3.8/site-packages/rope/base/simplify.py",
+    "lib/python3.8/site-packages/rope/base/stdmods.py",
+    "lib/python3.8/site-packages/rope/base/taskhandle.py",
+    "lib/python3.8/site-packages/rope/base/utils/__init__.py",
+    "lib/python3.8/site-packages/rope/base/utils/datastructures.py",
+    "lib/python3.8/site-packages/rope/base/utils/pycompat.py",
+    "lib/python3.8/site-packages/rope/base/worder.py",
+    "lib/python3.8/site-packages/rope/contrib/__init__.py",
+    "lib/python3.8/site-packages/rope/contrib/autoimport.py",
+    "lib/python3.8/site-packages/rope/contrib/changestack.py",
+    "lib/python3.8/site-packages/rope/contrib/codeassist.py",
+    "lib/python3.8/site-packages/rope/contrib/finderrors.py",
+    "lib/python3.8/site-packages/rope/contrib/findit.py",
+    "lib/python3.8/site-packages/rope/contrib/fixmodnames.py",
+    "lib/python3.8/site-packages/rope/contrib/fixsyntax.py",
+    "lib/python3.8/site-packages/rope/contrib/generate.py",
+    "lib/python3.8/site-packages/rope/refactor/__init__.py",
+    "lib/python3.8/site-packages/rope/refactor/change_signature.py",
+    "lib/python3.8/site-packages/rope/refactor/encapsulate_field.py",
+    "lib/python3.8/site-packages/rope/refactor/extract.py",
+    "lib/python3.8/site-packages/rope/refactor/functionutils.py",
+    "lib/python3.8/site-packages/rope/refactor/importutils/__init__.py",
+    "lib/python3.8/site-packages/rope/refactor/importutils/actions.py",
+    "lib/python3.8/site-packages/rope/refactor/importutils/importinfo.py",
+    "lib/python3.8/site-packages/rope/refactor/importutils/module_imports.py",
+    "lib/python3.8/site-packages/rope/refactor/inline.py",
+    "lib/python3.8/site-packages/rope/refactor/introduce_factory.py",
+    "lib/python3.8/site-packages/rope/refactor/introduce_parameter.py",
+    "lib/python3.8/site-packages/rope/refactor/localtofield.py",
+    "lib/python3.8/site-packages/rope/refactor/method_object.py",
+    "lib/python3.8/site-packages/rope/refactor/move.py",
+    "lib/python3.8/site-packages/rope/refactor/multiproject.py",
+    "lib/python3.8/site-packages/rope/refactor/occurrences.py",
+    "lib/python3.8/site-packages/rope/refactor/patchedast.py",
+    "lib/python3.8/site-packages/rope/refactor/rename.py",
+    "lib/python3.8/site-packages/rope/refactor/restructure.py",
+    "lib/python3.8/site-packages/rope/refactor/similarfinder.py",
+    "lib/python3.8/site-packages/rope/refactor/sourceutils.py",
+    "lib/python3.8/site-packages/rope/refactor/suites.py",
+    "lib/python3.8/site-packages/rope/refactor/topackage.py",
+    "lib/python3.8/site-packages/rope/refactor/usefunction.py",
+    "lib/python3.8/site-packages/rope/refactor/wildcards.py",
+    "lib/python3.8/site-packages/rope/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/arguments.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/ast.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/astutils.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/builtins.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/change.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/codeanalyze.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/default_config.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/evaluate.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/exceptions.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/fscommands.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/history.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/libutils.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/__pycache__/doa.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/__pycache__/memorydb.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/__pycache__/objectdb.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/__pycache__/objectinfo.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/__pycache__/runmod.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/__pycache__/soa.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/__pycache__/soi.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/__pycache__/transform.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/__pycache__/evaluate.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/__pycache__/factory.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/__pycache__/interfaces.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/composite.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/docstrings.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/inheritance.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/interfaces.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/numpydocstrings.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/pep0484_type_comments.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/resolvers/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/resolvers/__pycache__/composite.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/resolvers/__pycache__/interfaces.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/resolvers/__pycache__/types.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/oi/type_hinting/__pycache__/utils.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/prefs.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/project.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/pycore.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/pynames.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/pynamesdef.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/pyobjects.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/pyobjectsdef.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/pyscopes.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/resourceobserver.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/resources.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/simplify.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/stdmods.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/taskhandle.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/utils/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/utils/__pycache__/datastructures.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/utils/__pycache__/pycompat.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/base/__pycache__/worder.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/contrib/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/contrib/__pycache__/autoimport.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/contrib/__pycache__/changestack.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/contrib/__pycache__/codeassist.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/contrib/__pycache__/finderrors.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/contrib/__pycache__/findit.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/contrib/__pycache__/fixmodnames.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/contrib/__pycache__/fixsyntax.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/contrib/__pycache__/generate.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/change_signature.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/encapsulate_field.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/extract.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/functionutils.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/importutils/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/importutils/__pycache__/actions.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/importutils/__pycache__/importinfo.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/importutils/__pycache__/module_imports.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/inline.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/introduce_factory.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/introduce_parameter.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/localtofield.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/method_object.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/move.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/multiproject.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/occurrences.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/patchedast.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/rename.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/restructure.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/similarfinder.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/sourceutils.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/suites.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/topackage.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/usefunction.cpython-38.pyc",
+    "lib/python3.8/site-packages/rope/refactor/__pycache__/wildcards.cpython-38.pyc"
+  ],
+  "fn": "rope-0.18.0-py_0.conda",
+  "legacy_bz2_md5": "74f90e57f76420eb2000c5973c45e68c",
+  "legacy_bz2_size": 121629,
+  "license": "GPL 2.0",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/rope-0.18.0-py_0",
+    "type": 1
+  },
+  "md5": "5929f451bc2496c707cdc1e6111fdc25",
+  "name": "rope",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/rope-0.18.0-py_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/rope/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/arguments.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/ast.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/astutils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/builtins.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/change.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/codeanalyze.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/default_config.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/evaluate.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/exceptions.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/fscommands.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/history.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/libutils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/__pycache__/doa.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/__pycache__/memorydb.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/__pycache__/objectdb.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/__pycache__/objectinfo.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/__pycache__/runmod.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/__pycache__/soa.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/__pycache__/soi.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/__pycache__/transform.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/__pycache__/evaluate.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/__pycache__/factory.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/__pycache__/interfaces.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/composite.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/docstrings.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/inheritance.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/interfaces.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/numpydocstrings.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/providers/__pycache__/pep0484_type_comments.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/resolvers/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/resolvers/__pycache__/composite.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/resolvers/__pycache__/interfaces.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/resolvers/__pycache__/types.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/oi/type_hinting/__pycache__/utils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/prefs.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/project.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/pycore.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/pynames.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/pynamesdef.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/pyobjects.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/pyobjectsdef.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/pyscopes.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/resourceobserver.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/resources.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/simplify.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/stdmods.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/taskhandle.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/utils/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/utils/__pycache__/datastructures.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/utils/__pycache__/pycompat.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/base/__pycache__/worder.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/contrib/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/contrib/__pycache__/autoimport.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/contrib/__pycache__/changestack.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/contrib/__pycache__/codeassist.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/contrib/__pycache__/finderrors.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/contrib/__pycache__/findit.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/contrib/__pycache__/fixmodnames.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/contrib/__pycache__/fixsyntax.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/contrib/__pycache__/generate.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/change_signature.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/encapsulate_field.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/extract.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/functionutils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/importutils/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/importutils/__pycache__/actions.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/importutils/__pycache__/importinfo.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/importutils/__pycache__/module_imports.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/inline.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/introduce_factory.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/introduce_parameter.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/localtofield.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/method_object.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/move.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/multiproject.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/occurrences.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/patchedast.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/rename.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/restructure.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/similarfinder.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/sourceutils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/suites.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/topackage.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/usefunction.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/rope/refactor/__pycache__/wildcards.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "rope==0.18.0=py_0",
+  "sha256": "60cd9ffe8da03cb2d7c514bddd35898d416c95f6b45cb7f9aa9c03a5eb712416",
+  "size": 128712,
+  "subdir": "noarch",
+  "timestamp": 1602264139465,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/rope-0.18.0-py_0.conda",
+  "version": "0.18.0"
+}

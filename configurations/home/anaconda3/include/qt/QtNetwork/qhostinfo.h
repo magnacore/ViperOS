@@ -62,12 +62,8 @@ public:
 
     explicit QHostInfo(int lookupId = -1);
     QHostInfo(const QHostInfo &d);
-    QHostInfo(QHostInfo &&other) noexcept : d_ptr(qExchange(other.d_ptr, nullptr)) {}
     QHostInfo &operator=(const QHostInfo &d);
-    QHostInfo &operator=(QHostInfo &&other) noexcept { swap(other); return *this; }
     ~QHostInfo();
-
-    void swap(QHostInfo &other) noexcept { qSwap(d_ptr, other.d_ptr); }
 
     QString hostName() const;
     void setHostName(const QString &name);
@@ -91,11 +87,14 @@ public:
     static QString localHostName();
     static QString localDomainName();
 
-#ifdef Q_CLANG_QDOC
+#ifdef Q_QDOC
+    template<typename PointerToMemberFunction>
+    static int QHostInfo::lookupHost(const QString &name, const QObject *receiver,
+                              PointerToMemberFunction function);
     template<typename Functor>
-    static int lookupHost(const QString &name, Functor functor);
+    static int QHostInfo::lookupHost(const QString &name, Functor functor);
     template<typename Functor>
-    static int lookupHost(const QString &name, const QObject *context, Functor functor);
+    static int QHostInfo::lookupHost(const QString &name, const QObject *context, Functor functor);
 #else
     // lookupHost to a QObject slot
     template <typename Func>
@@ -126,7 +125,7 @@ public:
                                           !std::is_same<const char *, Func>::value, int>::type
         lookupHost(const QString &name, Func slot)
     {
-        return lookupHost(name, nullptr, std::move(slot));
+        return lookupHost(name, nullptr, slot);
     }
 
     // lookupHost to a functor or function pointer (with context)
@@ -142,21 +141,18 @@ public:
 
         auto slotObj = new QtPrivate::QFunctorSlotObject<Func1, 1,
                                                          typename QtPrivate::List<QHostInfo>,
-                                                         void>(std::move(slot));
+                                                         void>(slot);
         return lookupHostImpl(name, context, slotObj);
     }
 #endif // Q_QDOC
 
 private:
-    QHostInfoPrivate *d_ptr;
-    Q_DECLARE_PRIVATE(QHostInfo)
+    QScopedPointer<QHostInfoPrivate> d;
 
     static int lookupHostImpl(const QString &name,
                               const QObject *receiver,
                               QtPrivate::QSlotObjectBase *slotObj);
 };
-
-Q_DECLARE_SHARED_NOT_MOVABLE_UNTIL_QT6(QHostInfo)
 
 QT_END_NAMESPACE
 

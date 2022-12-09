@@ -38,7 +38,7 @@
 QT_CHARTS_BEGIN_NAMESPACE
 class QBoxSetPrivate;
 
-class Q_CHARTS_EXPORT QBoxSet : public QObject
+class QT_CHARTS_EXPORT QBoxSet : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
@@ -54,8 +54,8 @@ public:
     };
 
 public:
-    explicit QBoxSet(const QString label = QString(), QObject *parent = nullptr);
-    explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = nullptr);
+    explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR);
+    explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR);
     virtual ~QBoxSet();
 
     void append(const qreal value);

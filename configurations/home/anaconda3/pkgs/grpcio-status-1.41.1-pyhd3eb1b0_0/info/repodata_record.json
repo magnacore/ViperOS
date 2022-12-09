@@ -1,0 +1,27 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "googleapis-common-protos >=1.5.5",
+    "grpcio >=1.41.1",
+    "protobuf >=3.6.0",
+    "python >=3.6"
+  ],
+  "features": "",
+  "fn": "grpcio-status-1.41.1-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "8aa89e3bc4e150c80c3d245f8c595ddd",
+  "license": "Apache-2.0",
+  "md5": "cbdebc10181ea5ee66a84d7f40951c0c",
+  "name": "grpcio-status",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "059dfa305bcca2a05070abdb93c7a3dae80d9c6814c8c9906e6e4deeed0d81e0",
+  "size": 11248,
+  "subdir": "noarch",
+  "timestamp": 1639661045709,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/grpcio-status-1.41.1-pyhd3eb1b0_0.conda",
+  "version": "1.41.1"
+}

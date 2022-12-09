@@ -49,8 +49,6 @@
 
 QT_BEGIN_NAMESPACE
 
-class QDebug;
-
 class QStorageInfoPrivate;
 class Q_CORE_EXPORT QStorageInfo
 {
@@ -62,9 +60,11 @@ public:
     ~QStorageInfo();
 
     QStorageInfo &operator=(const QStorageInfo &other);
-    QStorageInfo &operator=(QStorageInfo &&other) noexcept { swap(other); return *this; }
+#ifdef Q_COMPILER_RVALUE_REFS
+    QStorageInfo &operator=(QStorageInfo &&other) Q_DECL_NOTHROW { swap(other); return *this; }
+#endif
 
-    inline void swap(QStorageInfo &other) noexcept
+    inline void swap(QStorageInfo &other) Q_DECL_NOTHROW
     { qSwap(d, other.d); }
 
     void setPath(const QString &path);
@@ -94,7 +94,6 @@ public:
 private:
     friend class QStorageInfoPrivate;
     friend bool operator==(const QStorageInfo &first, const QStorageInfo &second);
-    friend Q_CORE_EXPORT QDebug operator<<(QDebug, const QStorageInfo &);
     QExplicitlySharedDataPointer<QStorageInfoPrivate> d;
 };
 
@@ -114,10 +113,6 @@ inline bool QStorageInfo::isRoot() const
 { return *this == QStorageInfo::root(); }
 
 Q_DECLARE_SHARED(QStorageInfo)
-
-#ifndef QT_NO_DEBUG_STREAM
-Q_CORE_EXPORT QDebug operator<<(QDebug debug, const QStorageInfo &);
-#endif
 
 QT_END_NAMESPACE
 

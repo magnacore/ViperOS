@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 #ifndef LIEF_BINARY_STREAM_H_
 #define LIEF_BINARY_STREAM_H_
 
-#include <cstdint>
+#include <stdint.h>
 #include <climits>
 #include <vector>
 #include <istream>
@@ -24,12 +24,7 @@
 #include <memory>
 
 #include "LIEF/BinaryStream/Convert.hpp"
-#include "LIEF/errors.hpp"
 
-struct mbedtls_x509_crt;
-struct mbedtls_x509_time;
-
-namespace LIEF {
 class BinaryStream {
   public:
   BinaryStream(void);
@@ -41,14 +36,14 @@ class BinaryStream {
 
   int64_t read_dwarf_encoded(uint8_t encoding);
 
-  std::string read_string(size_t maxsize = ~static_cast<size_t>(0)) const;
-  std::string peek_string(size_t maxsize = ~static_cast<size_t>(0)) const;
-  std::string peek_string_at(size_t offset, size_t maxsize = ~static_cast<size_t>(0)) const;
+  std::string read_string(size_t maxsize = -1u) const;
+  std::string peek_string(size_t maxsize = -1u) const;
+  std::string peek_string_at(size_t offset, size_t maxsize = -1u) const;
 
   std::u16string read_u16string(void) const;
   std::u16string peek_u16string(void) const;
 
-  std::string read_mutf8(size_t maxsize = ~static_cast<size_t>(0)) const;
+  std::string read_mutf8(size_t maxsize = -1ull) const;
 
   std::u16string read_u16string(size_t length) const;
   std::u16string peek_u16string(size_t length) const;
@@ -104,19 +99,6 @@ class BinaryStream {
   std::unique_ptr<T[]> peek_conv_array(size_t offset, size_t size, bool check = true) const;
 
   void set_endian_swap(bool swap);
-
-  // ASN1 related functions
-  virtual result<size_t> asn1_read_tag(int tag) = 0;
-  virtual result<size_t> asn1_read_len() = 0;
-  virtual result<std::string> asn1_read_alg() = 0;
-  virtual result<std::string> asn1_read_oid() = 0;
-  virtual result<int32_t> asn1_read_int() = 0;
-  virtual result<std::vector<uint8_t>> asn1_read_bitstring() = 0;
-  virtual result<std::vector<uint8_t>> asn1_read_octet_string() = 0;
-  virtual result<std::unique_ptr<mbedtls_x509_crt>> asn1_read_cert() = 0;
-  virtual result<std::string> x509_read_names() = 0;
-  virtual result<std::vector<uint8_t>> x509_read_serial() = 0;
-  virtual result<std::unique_ptr<mbedtls_x509_time>> x509_read_time() = 0;
 
   protected:
   virtual const void* read_at(uint64_t offset, uint64_t size, bool throw_error = true) const = 0;
@@ -222,7 +204,7 @@ std::unique_ptr<T[]> BinaryStream::read_conv_array(size_t size, bool check) cons
   const T *t = this->read_array<T>(size, check);
 
   if (t == nullptr) {
-    return nullptr;
+	  return nullptr;
   }
 
   std::unique_ptr<T[]> uptr(new T[size]);
@@ -251,7 +233,7 @@ std::unique_ptr<T[]> BinaryStream::peek_conv_array(size_t offset, size_t size, b
   const T *t = this->peek_array<T>(offset, size, check);
 
   if (t == nullptr) {
-    return nullptr;
+	  return nullptr;
   }
 
   std::unique_ptr<T[]> uptr(new T[size]);
@@ -264,5 +246,5 @@ std::unique_ptr<T[]> BinaryStream::peek_conv_array(size_t offset, size_t size, b
   }
   return uptr;
 }
-}
+
 #endif

@@ -8,7 +8,7 @@
     "libsodium >=1.0.18,<1.0.19.0a0",
     "libstdcxx-ng >=7.3.0"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/zeromq-4.3.4-h2531618_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/zeromq-4.3.4-h2531618_0",
   "features": "",
   "files": [
     "bin/curve_keygen",
@@ -95,12 +95,12 @@
   "legacy_bz2_size": 366479,
   "license": "LGPL-3.0-or-later",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/zeromq-4.3.4-h2531618_0",
+    "source": "/home/manuj/anaconda3/pkgs/zeromq-4.3.4-h2531618_0",
     "type": 1
   },
   "md5": "45ce422428d9c98f354aec4b5cbd1046",
   "name": "zeromq",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/zeromq-4.3.4-h2531618_0.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/zeromq-4.3.4-h2531618_0.conda",
   "paths_data": {
     "paths": [
       {
@@ -109,7 +109,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/tmp/build/80754af9/zeromq_1616055189256/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
         "sha256": "b7648706ecb4cbe07113cf48894453796b9137241a35b85125a08469f609b1f0",
-        "sha256_in_prefix": "7ddda4d035cec46f12d755f8aab7563207b738148cf08571d9f0ff54c5ad66d6",
+        "sha256_in_prefix": "e9b535f38d19b357c58b591eef50823e975ce2607455b8d0bdfc81edd9e7b85d",
         "size_in_bytes": 1085
       },
       {
@@ -118,7 +118,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/tmp/build/80754af9/zeromq_1616055189256/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
         "sha256": "23ce0cb8b7a876ba582785e45dece989e0a956d9d435008266ca7e50c9cecd57",
-        "sha256_in_prefix": "8dd7f603ed22d468f9bb5e18be3f311440573d5dd4edee3bda18983299f1e932",
+        "sha256_in_prefix": "5d4949fc76fc06ea51b8c54e4e63128ee4e6dd8c1c7bb2c75bb85a6c59a47a19",
         "size_in_bytes": 515
       }
     ],

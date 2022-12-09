@@ -53,7 +53,7 @@ class QAttributePrivate;
 
 typedef QSharedPointer<QBuffer> QBufferPtr;
 
-class Q_3DRENDERSHARED_EXPORT QAttribute : public Qt3DCore::QNode
+class QT3DRENDERSHARED_EXPORT QAttribute : public Qt3DCore::QNode
 {
     Q_OBJECT
     Q_PROPERTY(Qt3DRender::QBuffer *buffer READ buffer WRITE setBuffer NOTIFY bufferChanged)
@@ -69,11 +69,7 @@ class Q_3DRENDERSHARED_EXPORT QAttribute : public Qt3DCore::QNode
     Q_PROPERTY(QString defaultNormalAttributeName READ defaultNormalAttributeName CONSTANT)
     Q_PROPERTY(QString defaultColorAttributeName READ defaultColorAttributeName CONSTANT)
     Q_PROPERTY(QString defaultTextureCoordinateAttributeName READ defaultTextureCoordinateAttributeName CONSTANT)
-    Q_PROPERTY(QString defaultTextureCoordinate1AttributeName READ defaultTextureCoordinate1AttributeName CONSTANT REVISION 11)
-    Q_PROPERTY(QString defaultTextureCoordinate2AttributeName READ defaultTextureCoordinate2AttributeName CONSTANT REVISION 11)
     Q_PROPERTY(QString defaultTangentAttributeName READ defaultTangentAttributeName CONSTANT)
-    Q_PROPERTY(QString defaultJointIndicesAttributeName READ defaultJointIndicesAttributeName CONSTANT REVISION 10)
-    Q_PROPERTY(QString defaultJointWeightsAttributeName READ defaultJointWeightsAttributeName CONSTANT REVISION 10)
 
 public:
     enum AttributeType {
@@ -117,10 +113,6 @@ public:
     Q_INVOKABLE static QString defaultColorAttributeName();
     Q_INVOKABLE static QString defaultTextureCoordinateAttributeName();
     Q_INVOKABLE static QString defaultTangentAttributeName();
-    static QString defaultJointIndicesAttributeName();
-    static QString defaultJointWeightsAttributeName();
-    static QString defaultTextureCoordinate1AttributeName();
-    static QString defaultTextureCoordinate2AttributeName();
 
 public Q_SLOTS:
     void setBuffer(QBuffer *buffer);
@@ -150,7 +142,7 @@ Q_SIGNALS:
 
 private:
     Q_DECLARE_PRIVATE(QAttribute)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // Qt3DRender

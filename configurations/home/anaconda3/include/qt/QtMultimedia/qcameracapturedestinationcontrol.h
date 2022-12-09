@@ -59,10 +59,10 @@ public:
     virtual void setCaptureDestination(QCameraImageCapture::CaptureDestinations destination) = 0;
 
 Q_SIGNALS:
-    void captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination);
+    void captureDestinationChanged(QCameraImageCapture::CaptureDestinations);
 
 protected:
-    explicit QCameraCaptureDestinationControl(QObject *parent = nullptr);
+    explicit QCameraCaptureDestinationControl(QObject *parent = Q_NULLPTR);
 };
 
 #define QCameraCaptureDestinationControl_iid "org.qt-project.qt.cameracapturedestinationcontrol/5.0"

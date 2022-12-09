@@ -3,7 +3,7 @@
 ** Copyright (C) 2016 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
-** This file is part of the QtConcurrent module of the Qt Toolkit.
+** This file is part of the QtCore module of the Qt Toolkit.
 **
 ** $QT_BEGIN_LICENSE:LGPL$
 ** Commercial License Usage
@@ -41,9 +41,10 @@
 #define QTCONCURRENT_EXCEPTION_H
 
 #include <QtConcurrent/qtconcurrent_global.h>
-#include <QtCore/qexception.h>
 
-QT_REQUIRE_CONFIG(concurrent);
+#ifndef QT_NO_QFUTURE
+
+#include <QtCore/qexception.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -51,7 +52,7 @@ QT_BEGIN_NAMESPACE
 namespace QtConcurrent
 {
 
-#if !defined(QT_NO_EXCEPTIONS) || defined(Q_CLANG_QDOC)
+#ifndef QT_NO_EXCEPTIONS
 
 typedef Q_DECL_DEPRECATED QException Exception;
 typedef Q_DECL_DEPRECATED QUnhandledException UnhandledException;
@@ -61,5 +62,7 @@ typedef Q_DECL_DEPRECATED QUnhandledException UnhandledException;
 } // namespace QtConcurrent
 
 QT_END_NAMESPACE
+
+#endif // QT_NO_QFUTURE
 
 #endif

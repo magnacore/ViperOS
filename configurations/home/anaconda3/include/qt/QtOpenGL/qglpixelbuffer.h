@@ -53,9 +53,9 @@ class Q_OPENGL_EXPORT QGLPixelBuffer : public QPaintDevice
     Q_DECLARE_PRIVATE(QGLPixelBuffer)
 public:
     QGLPixelBuffer(const QSize &size, const QGLFormat &format = QGLFormat::defaultFormat(),
-                   QGLWidget *shareWidget = nullptr);
+                   QGLWidget *shareWidget = Q_NULLPTR);
     QGLPixelBuffer(int width, int height, const QGLFormat &format = QGLFormat::defaultFormat(),
-                   QGLWidget *shareWidget = nullptr);
+                   QGLWidget *shareWidget = Q_NULLPTR);
     virtual ~QGLPixelBuffer();
 
     bool isValid() const;
@@ -81,14 +81,14 @@ public:
     Qt::HANDLE handle() const;
     QImage toImage() const;
 
-    QPaintEngine *paintEngine() const override;
+    QPaintEngine *paintEngine() const Q_DECL_OVERRIDE;
     QGLFormat format() const;
 
     static bool hasOpenGLPbuffers();
 
 protected:
-    int metric(PaintDeviceMetric metric) const override;
-    int devType() const override { return QInternal::Pbuffer; }
+    int metric(PaintDeviceMetric metric) const Q_DECL_OVERRIDE;
+    int devType() const Q_DECL_OVERRIDE { return QInternal::Pbuffer; }
 
 private:
     Q_DISABLE_COPY(QGLPixelBuffer)

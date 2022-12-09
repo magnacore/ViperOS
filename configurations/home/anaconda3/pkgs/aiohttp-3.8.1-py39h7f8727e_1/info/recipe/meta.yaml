@@ -1,0 +1,88 @@
+# This file created by conda-build 3.21.7
+# meta.yaml template originally from:
+# /tmp/build/80754af9/rsync-recipes/aiohttp-3.8.1-python_3.9-on-linux_64, last modified Wed Mar  9 06:07:04 2022
+# ------------------------------------------------
+
+package:
+  name: aiohttp
+  version: 3.8.1
+source:
+  sha256: fc5471e1a54de15ef71c1bc6ebe80d4dc681ea600e68bfd1cbce40427f0b7578
+  url: https://pypi.io/packages/source/a/aiohttp/aiohttp-3.8.1.tar.gz
+build:
+  number: '1'
+  script: /tmp/build/80754af9/aiohttp_1646806365504/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh/bin/python
+    -m pip install . -vv
+  string: py39h7f8727e_1
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 4.5 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.35.1 h27ae35d_9
+    - binutils_linux-64 2.35.1 h454624a_30
+    - gcc_impl_linux-64 7.5.0 h7105cf2_17
+    - gcc_linux-64 7.5.0 h8f34230_30
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.35.1 h7274673_9
+    - libgcc-devel_linux-64 7.5.0 hbbeae57_17
+    - libgcc-ng 9.3.0 h5101ec6_17
+    - libgomp 9.3.0 h5101ec6_17
+    - libstdcxx-ng 9.3.0 hd4cf53a_17
+    - sysroot_linux-64 2.17 h57e8cba_10
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 4.5 1_gnu
+    - ca-certificates 2022.2.1 h06a4308_0
+    - certifi 2021.10.8 py39h06a4308_2
+    - cython 0.29.25 py39hdbfa776_0
+    - ld_impl_linux-64 2.35.1 h7274673_9
+    - libffi 3.3 he6710b0_2
+    - libgcc-ng 9.3.0 h5101ec6_17
+    - libgomp 9.3.0 h5101ec6_17
+    - libstdcxx-ng 9.3.0 hd4cf53a_17
+    - ncurses 6.3 h7f8727e_2
+    - openssl 1.1.1m h7f8727e_0
+    - pip 21.2.4 py39h06a4308_0
+    - python 3.9.7 h12debd9_1
+    - readline 8.1.2 h7f8727e_1
+    - setuptools 58.0.4 py39h06a4308_0
+    - sqlite 3.37.2 hc218d9a_0
+    - tk 8.6.11 h1ccaba5_0
+    - tzdata 2021e hda174b7_0
+    - wheel 0.37.1 pyhd3eb1b0_0
+    - xz 5.2.5 h7b6447c_0
+    - zlib 1.2.11 h7f8727e_4
+  run:
+    - aiosignal >=1.1.2
+    - async-timeout >=4.0.0a3,<5.0
+    - attrs >=17.3.0
+    - charset-normalizer >=2.0,<3.0
+    - frozenlist >=1.1.1
+    - libgcc-ng >=7.5.0
+    - multidict >=4.5,<7.0
+    - python >=3.9,<3.10.0a0
+    - yarl >=1.0,<2.0
+test:
+  commands:
+    - pip check
+  imports:
+    - aiohttp
+  requires:
+    - pip
+about:
+  dev_url: https://github.com/aio-libs/aiohttp
+  doc_source_url: https://github.com/aio-libs/aiohttp/tree/master/docs
+  doc_url: https://aiohttp.readthedocs.io/
+  home: https://github.com/aio-libs/aiohttp
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE.txt
+  summary: Async http client/server framework (asyncio)
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - ocefpaf
+    - sodre
+    - xhochy

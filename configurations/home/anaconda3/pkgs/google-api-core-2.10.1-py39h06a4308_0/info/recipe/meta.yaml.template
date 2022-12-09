@@ -1,0 +1,155 @@
+{% set name = "google-api-core" %}
+{% set version = "2.10.1" %}
+{% set sha256 = "e16c15a11789bc5a3457afb2818a3540a03f341e6e710d7f9bbf6cde2ef4a7c8" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  # noarch: python
+  skip: True      # [py<37]
+
+outputs:
+  - name: {{ name }}
+    build:
+      script: python -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python
+        - setuptools
+        - wheel
+        - pip
+      run:
+        - python
+        - googleapis-common-protos >=1.56.2,<2.0dev
+        - protobuf >=3.20.1
+        - google-auth >=1.25.0,<3.0dev
+        - requests >=2.18.0,<3.0.0dev
+      run_constrained:
+        - grpcio >=1.33.2,<2.0dev
+        - grpcio-status >=1.33.2,<2.0dev
+        - grpcio-gcp >=0.2.2,<1.0dev
+    test:
+      requires:
+        - pip
+      imports:
+        - google.auth
+        - google.auth.credentials
+        - google.auth.transport.requests
+        - google.longrunning
+        - google.longrunning.operations_pb2
+        - google.protobuf
+        - google.rpc
+        - google.api_core
+        - google.api_core.exceptions
+        - google.api_core.future
+        - google.api_core.future.base
+        - google.api_core.future.polling
+        - google.api_core.general_helpers
+        - google.api_core.page_iterator
+        - google.api_core.protobuf_helpers
+        - google.api_core.retry
+        - google.api_core.timeout
+      commands:
+        - pip check
+
+  - name: {{ name }}-grpc
+    build:
+      # noarch: generic
+    requirements:
+      host:
+        - python
+      run:
+        - python
+        - {{ pin_subpackage(name, exact=True) }}
+        - grpcio >=1.33.2,<2.0dev
+        - grpcio-status >=1.33.2,<2.0dev
+    test:
+      requires:
+        - pip
+      imports:
+        - google.api_core
+      commands:
+        - pip check
+    about:
+      home: https://github.com/googleapis/python-api-core
+      license: Apache-2.0
+      license_family: APACHE
+      summary: Core Library for Google Client Libraries with grpc
+
+  - name: {{ name }}-grpcio-gcp
+    build:
+      # noarch: generic
+    requirements:
+      host:
+        - python
+      run:
+        - python
+        - {{ pin_subpackage(name, exact=True) }}
+        - grpcio-gcp >=0.2.2,<1.0dev
+    test:
+      requires:
+        - pip
+      imports:
+        - google.api_core
+        - grpc
+      commands:
+        - pip check
+    about:
+      home: https://github.com/googleapis/python-api-core
+      license: Apache-2.0
+      license_family: APACHE
+      summary: Core Library for Google Client Libraries with grpcio-gcp
+
+  - name: {{ name }}-grpcgcp
+    build:
+      # noarch: generic
+    requirements:
+      host:
+        - python
+      run:
+        - python
+        - {{ pin_subpackage(name + '-grpcio-gcp', exact=True) }}
+    test:
+      requires:
+        - pip
+      imports:
+        - google.api_core
+        - grpc
+        - grpc_gcp
+      commands:
+        - pip check
+    about:
+      home: https://github.com/googleapis/python-api-core
+      license: Apache-2.0
+      license_family: APACHE
+      summary: Core Library for Google Client Libraries with grpcio-gcp
+
+about:
+  home: https://github.com/googleapis/python-api-core
+  license: Apache-2.0
+  license_family: APACHE
+  license_file: LICENSE
+  summary: Core Library for Google Client Libraries
+  description: |
+    Core Library for Google Client Libraries
+    -------------------------
+    This library is not meant to stand-alone. Instead it defines common helpers used by
+    all Google API clients. For more information, see the documentation.
+  doc_url: https://googleapis.dev/python/google-api-core/latest/index.html
+  doc_source_url: https://github.com/googleapis/python-api-core/tree/main/docs
+  dev_url: https://github.com/googleapis/python-api-core
+
+extra:
+  feedstock-name: google-api-core
+  recipe-maintainers:
+    - BrentDorsey
+    - leahecole
+    - parthea
+    - tswast

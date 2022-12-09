@@ -1,4 +1,4 @@
-QT.x11extras.VERSION = 5.15.2
+QT.x11extras.VERSION = 5.9.7
 QT.x11extras.name = QtX11Extras
 QT.x11extras.module = Qt5X11Extras
 QT.x11extras.libs = $$QT_MODULE_LIB_BASE

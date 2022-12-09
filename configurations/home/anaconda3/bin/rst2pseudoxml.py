@@ -1,4 +1,4 @@
-#!/home/goldust/anaconda3/bin/python
+#!/home/manuj/anaconda3/bin/python
 
 # $Id: rst2pseudoxml.py 4564 2006-05-21 20:44:42Z wiemann $
 # Author: David Goodger <goodger@python.org>

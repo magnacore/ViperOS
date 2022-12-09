@@ -1,0 +1,14 @@
+site-packages/conda_suggest-0.1.1.dist-info/AUTHORS.md
+site-packages/conda_suggest-0.1.1.dist-info/INSTALLER
+site-packages/conda_suggest-0.1.1.dist-info/LICENSE
+site-packages/conda_suggest-0.1.1.dist-info/METADATA
+site-packages/conda_suggest-0.1.1.dist-info/RECORD
+site-packages/conda_suggest-0.1.1.dist-info/REQUESTED
+site-packages/conda_suggest-0.1.1.dist-info/WHEEL
+site-packages/conda_suggest-0.1.1.dist-info/direct_url.json
+site-packages/conda_suggest-0.1.1.dist-info/entry_points.txt
+site-packages/conda_suggest-0.1.1.dist-info/top_level.txt
+site-packages/conda_suggest/__init__.py
+site-packages/conda_suggest/find.py
+site-packages/conda_suggest/generate.py
+site-packages/conda_suggest/main.py

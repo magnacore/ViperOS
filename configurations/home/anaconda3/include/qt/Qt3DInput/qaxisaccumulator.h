@@ -50,7 +50,7 @@ namespace Qt3DInput {
 class QAxis;
 class QAxisAccumulatorPrivate;
 
-class Q_3DINPUTSHARED_EXPORT QAxisAccumulator : public Qt3DCore::QComponent
+class QT3DINPUTSHARED_EXPORT QAxisAccumulator : public Qt3DCore::QComponent
 {
     Q_OBJECT
     Q_PROPERTY(Qt3DInput::QAxis *sourceAxis READ sourceAxis WRITE setSourceAxis NOTIFY sourceAxisChanged)
@@ -88,12 +88,11 @@ Q_SIGNALS:
     void scaleChanged(float scale);
 
 protected:
-    // TODO Unused remove in Qt6
-    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override;
+    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(QAxisAccumulator)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DInput

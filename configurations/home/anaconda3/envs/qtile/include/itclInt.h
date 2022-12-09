@@ -60,19 +60,6 @@
 #   endif
 #endif
 
-#ifndef JOIN
-#  define JOIN(a,b) JOIN1(a,b)
-#  define JOIN1(a,b) a##b
-#endif
-
-#ifndef TCL_UNUSED
-#   if defined(__cplusplus)
-#	define TCL_UNUSED(T) T
-#   else
-#	define TCL_UNUSED(T) T JOIN(dummy, __LINE__)
-#   endif
-#endif
-
 /*
  * Since the Tcl/Tk distribution doesn't perform any asserts,
  * dynamic loading can fail to find the __assert function.
@@ -666,7 +653,7 @@ MODULE_SCOPE int _itcl_debug_level;
 MODULE_SCOPE void ItclShowArgs(int level, const char *str, int objc,
 	Tcl_Obj * const* objv);
 #else
-#define ItclShowArgs(a,b,c,d) do {(void)(c);(void)(d);} while(0)
+#define ItclShowArgs(a,b,c,d)
 #endif
 
 MODULE_SCOPE Tcl_ObjCmdProc ItclCallCCommand;

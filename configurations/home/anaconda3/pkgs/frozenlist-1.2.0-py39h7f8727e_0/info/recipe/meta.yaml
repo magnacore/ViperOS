@@ -1,0 +1,77 @@
+# This file created by conda-build 3.21.6
+# meta.yaml template originally from:
+# /tmp/build/80754af9/rsync-recipes/frozenlist-1.2.0-python_3.9-on-linux_64, last modified Wed Nov 24 15:15:33 2021
+# ------------------------------------------------
+
+package:
+  name: frozenlist
+  version: 1.2.0
+source:
+  sha256: 68201be60ac56aff972dc18085800b6ee07973c49103a8aba669dee3d71079de
+  url: https://pypi.io/packages/source/f/frozenlist/frozenlist-1.2.0.tar.gz
+build:
+  number: '0'
+  script: /tmp/build/80754af9/frozenlist_1637767113340/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla/bin/python
+    -m pip install . -vv
+  string: py39h7f8727e_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 4.5 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.35.1 h27ae35d_9
+    - binutils_linux-64 2.35.1 h454624a_30
+    - gcc_impl_linux-64 7.5.0 h7105cf2_17
+    - gcc_linux-64 7.5.0 h8f34230_30
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.35.1 h7274673_9
+    - libgcc-devel_linux-64 7.5.0 hbbeae57_17
+    - libgcc-ng 9.3.0 h5101ec6_17
+    - libgomp 9.3.0 h5101ec6_17
+    - libstdcxx-ng 9.3.0 hd4cf53a_17
+    - sysroot_linux-64 2.17 h57e8cba_10
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 4.5 1_gnu
+    - ca-certificates 2021.10.26 h06a4308_2
+    - certifi 2021.10.8 py39h06a4308_0
+    - ld_impl_linux-64 2.35.1 h7274673_9
+    - libffi 3.3 he6710b0_2
+    - libgcc-ng 9.3.0 h5101ec6_17
+    - libgomp 9.3.0 h5101ec6_17
+    - libstdcxx-ng 9.3.0 hd4cf53a_17
+    - ncurses 6.3 h7f8727e_2
+    - openssl 1.1.1l h7f8727e_0
+    - pip 21.2.4 py39h06a4308_0
+    - python 3.9.7 h12debd9_1
+    - readline 8.1 h27cfd23_0
+    - setuptools 58.0.4 py39h06a4308_0
+    - sqlite 3.36.0 hc218d9a_0
+    - tk 8.6.11 h1ccaba5_0
+    - tzdata 2021e hda174b7_0
+    - wheel 0.37.0 pyhd3eb1b0_1
+    - xz 5.2.5 h7b6447c_0
+    - zlib 1.2.11 h7b6447c_3
+  run:
+    - libgcc-ng >=7.5.0
+    - python >=3.9,<3.10.0a0
+test:
+  commands:
+    - pip check
+  imports:
+    - frozenlist
+  requires:
+    - pip
+about:
+  dev_url: https://github.com/aio-libs/frozenlist
+  doc_url: https://frozenlist.readthedocs.io/en/latest/
+  home: https://github.com/aio-libs/frozenlist
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: A list-like structure which implements collections.abc.MutableSequence
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - ocefpaf

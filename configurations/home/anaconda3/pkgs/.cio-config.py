@@ -72,18 +72,11 @@ def main():
         print("Warning: no such file: %s" % installer_path)
         return
 
-    try:
-        dir_path = dirname(installer_path)
-        for fn in os.listdir(dir_path):
-            path = join(dir_path, fn)
-            if fn.endswith('.aic') and isfile(path):
-                process(path)
-    except PermissionError:
-        print(
-            "Warning: PermissionError: [Errno 1] Operation not permitted: %s" %
-            installer_path
-        )
-        return
+    dir_path = dirname(installer_path)
+    for fn in os.listdir(dir_path):
+        path = join(dir_path, fn)
+        if fn.endswith('.aic') and isfile(path):
+            process(path)
 
 
 if __name__ == '__main__':

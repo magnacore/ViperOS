@@ -43,15 +43,6 @@
 QT_BEGIN_NAMESPACE
 
 class QModbusTcpServerPrivate;
-class QTcpSocket;
-
-class Q_SERIALBUS_EXPORT QModbusTcpConnectionObserver
-{
-public:
-    virtual ~QModbusTcpConnectionObserver();
-
-    virtual bool acceptNewConnection(QTcpSocket *newClient) = 0;
-};
 
 class Q_SERIALBUS_EXPORT QModbusTcpServer : public QModbusServer
 {
@@ -61,11 +52,6 @@ class Q_SERIALBUS_EXPORT QModbusTcpServer : public QModbusServer
 public:
     explicit QModbusTcpServer(QObject *parent = nullptr);
     ~QModbusTcpServer();
-
-    void installConnectionObserver(QModbusTcpConnectionObserver *observer);
-
-Q_SIGNALS:
-    void modbusClientDisconnected(QTcpSocket *modbusClient);
 
 protected:
     QModbusTcpServer(QModbusTcpServerPrivate &dd, QObject *parent = nullptr);

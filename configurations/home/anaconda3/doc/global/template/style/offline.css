@@ -297,12 +297,9 @@ table.buildversion {
 
 #buildversion {
     font-style: italic;
+    font-size: small;
     float: right;
     margin-right: 5px;
-}
-
-#buildversion a {
-    background: none;
 }
 
 /*
@@ -386,9 +383,6 @@ h3.fn, span.fn {
     font-size: 14px;
     margin: 0px;
     margin-top: 45px;
-}
-.fngroup h3.fngroupitem {
-    margin-bottom: 5px;
 }
 h3.fn code {
     float: right;

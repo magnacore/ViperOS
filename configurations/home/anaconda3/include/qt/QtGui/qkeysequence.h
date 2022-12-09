@@ -47,26 +47,26 @@
 QT_BEGIN_NAMESPACE
 
 
-#if !defined(QT_NO_SHORTCUT) || defined(Q_CLANG_QDOC)
+#ifndef QT_NO_SHORTCUT
 
 class QKeySequence;
 
 /*****************************************************************************
   QKeySequence stream functions
  *****************************************************************************/
-#if !defined(QT_NO_DATASTREAM) || defined(Q_CLANG_QDOC)
+#ifndef QT_NO_DATASTREAM
 Q_GUI_EXPORT QDataStream &operator<<(QDataStream &in, const QKeySequence &ks);
 Q_GUI_EXPORT QDataStream &operator>>(QDataStream &out, QKeySequence &ks);
 #endif
 
-#if defined(Q_CLANG_QDOC)
+#ifdef Q_QDOC
 void qt_set_sequence_auto_mnemonic(bool b);
 #endif
 
 class QVariant;
 class QKeySequencePrivate;
 
-Q_GUI_EXPORT Q_DECL_PURE_FUNCTION uint qHash(const QKeySequence &key, uint seed = 0) noexcept;
+Q_GUI_EXPORT Q_DECL_PURE_FUNCTION uint qHash(const QKeySequence &key, uint seed = 0) Q_DECL_NOTHROW;
 
 class Q_GUI_EXPORT QKeySequence
 {
@@ -186,8 +186,10 @@ public:
     operator QVariant() const;
     int operator[](uint i) const;
     QKeySequence &operator=(const QKeySequence &other);
-    QKeySequence &operator=(QKeySequence &&other) noexcept { swap(other); return *this; }
-    void swap(QKeySequence &other) noexcept { qSwap(d, other.d); }
+#ifdef Q_COMPILER_RVALUE_REFS
+    QKeySequence &operator=(QKeySequence &&other) Q_DECL_NOTHROW { swap(other); return *this; }
+#endif
+    void swap(QKeySequence &other) Q_DECL_NOTHROW { qSwap(d, other.d); }
 
     bool operator==(const QKeySequence &other) const;
     inline bool operator!= (const QKeySequence &other) const
@@ -212,7 +214,7 @@ private:
 
     friend Q_GUI_EXPORT QDataStream &operator<<(QDataStream &in, const QKeySequence &ks);
     friend Q_GUI_EXPORT QDataStream &operator>>(QDataStream &in, QKeySequence &ks);
-    friend Q_GUI_EXPORT uint qHash(const QKeySequence &key, uint seed) noexcept;
+    friend Q_GUI_EXPORT uint qHash(const QKeySequence &key, uint seed) Q_DECL_NOTHROW;
     friend class QShortcutMap;
     friend class QShortcut;
 
@@ -223,7 +225,7 @@ public:
 
 Q_DECLARE_SHARED(QKeySequence)
 
-#if !defined(QT_NO_DEBUG_STREAM) || defined(Q_CLANG_QDOC)
+#ifndef QT_NO_DEBUG_STREAM
 Q_GUI_EXPORT QDebug operator<<(QDebug, const QKeySequence &);
 #endif
 

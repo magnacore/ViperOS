@@ -307,7 +307,7 @@ public:
     inline void accept() { m_accept = true; }
     inline void ignore() { m_accept = false; }
 
-    static int registerEventType(int hint = -1) noexcept;
+    static int registerEventType(int hint = -1) Q_DECL_NOTHROW;
 
 protected:
     QEventPrivate *d;

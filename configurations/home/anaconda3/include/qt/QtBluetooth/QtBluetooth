@@ -1,7 +1,7 @@
 #ifndef QT_QTBLUETOOTH_MODULE_H
 #define QT_QTBLUETOOTH_MODULE_H
 #include <QtBluetooth/QtBluetoothDepends>
-#include "qtbluetoothglobal.h"
+#include "qbluetoothglobal.h"
 #include "qbluetooth.h"
 #include "qbluetoothaddress.h"
 #include "qbluetoothdevicediscoveryagent.h"

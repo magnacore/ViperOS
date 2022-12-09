@@ -9,7 +9,6 @@
 #include "qgeocoordinate.h"
 #include "qgeolocation.h"
 #include "qgeopath.h"
-#include "qgeopolygon.h"
 #include "qgeopositioninfo.h"
 #include "qgeopositioninfosource.h"
 #include "qgeopositioninfosourcefactory.h"

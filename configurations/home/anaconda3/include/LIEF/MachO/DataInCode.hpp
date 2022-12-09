@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,8 +27,8 @@
 
 namespace LIEF {
 namespace MachO {
+
 class BinaryParser;
-struct linkedit_data_command;
 
 //! Interface of the LC_DATA_IN_CODE command
 class LIEF_API DataInCode : public LoadCommand {

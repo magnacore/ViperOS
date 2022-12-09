@@ -51,14 +51,14 @@ class Q_CORE_EXPORT QFinalState : public QAbstractState
 {
     Q_OBJECT
 public:
-    QFinalState(QState *parent = nullptr);
+    QFinalState(QState *parent = Q_NULLPTR);
     ~QFinalState();
 
 protected:
-    void onEntry(QEvent *event) override;
-    void onExit(QEvent *event) override;
+    void onEntry(QEvent *event) Q_DECL_OVERRIDE;
+    void onExit(QEvent *event) Q_DECL_OVERRIDE;
 
-    bool event(QEvent *e) override;
+    bool event(QEvent *e) Q_DECL_OVERRIDE;
 
 protected:
     explicit QFinalState(QFinalStatePrivate &dd, QState *parent);

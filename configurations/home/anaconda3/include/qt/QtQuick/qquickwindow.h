@@ -47,7 +47,6 @@
 #include <QtGui/qwindow.h>
 #include <QtGui/qevent.h>
 #include <QtQml/qqml.h>
-#include <QtQml/qqmldebug.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -66,7 +65,6 @@ class QQuickRenderControl;
 class QSGRectangleNode;
 class QSGImageNode;
 class QSGNinePatchNode;
-class QRhi;
 
 class Q_QUICK_EXPORT QQuickWindow : public QWindow
 {
@@ -96,39 +94,25 @@ public:
     };
 
     Q_DECLARE_FLAGS(CreateTextureOptions, CreateTextureOption)
-    Q_FLAG(CreateTextureOptions)
 
     enum SceneGraphError {
         ContextNotAvailable = 1
     };
     Q_ENUM(SceneGraphError)
 
-    enum TextRenderType {
-        QtTextRendering,
-        NativeTextRendering
-    };
-    Q_ENUM(TextRenderType)
-
-    enum NativeObjectType {
-        NativeObjectTexture
-    };
-    Q_ENUM(NativeObjectType)
-
-    explicit QQuickWindow(QWindow *parent = nullptr);
+    explicit QQuickWindow(QWindow *parent = Q_NULLPTR);
     explicit QQuickWindow(QQuickRenderControl *renderControl);
 
-    ~QQuickWindow() override;
+    virtual ~QQuickWindow();
 
     QQuickItem *contentItem() const;
 
     QQuickItem *activeFocusItem() const;
-    QObject *focusObject() const override;
+    QObject *focusObject() const Q_DECL_OVERRIDE;
 
     QQuickItem *mouseGrabberItem() const;
 
-#if QT_DEPRECATED_SINCE(5, 8)
-    QT_DEPRECATED bool sendEvent(QQuickItem *, QEvent *);
-#endif
+    bool sendEvent(QQuickItem *, QEvent *);
 
     QImage grabWindow();
 #if QT_CONFIG(opengl)
@@ -141,33 +125,16 @@ public:
 #if QT_CONFIG(opengl)
     void resetOpenGLState();
 #endif
-    struct GraphicsStateInfo {
-        int currentFrameSlot;
-        int framesInFlight;
-    };
-    const GraphicsStateInfo &graphicsStateInfo();
-    void beginExternalCommands();
-    void endExternalCommands();
     QQmlIncubationController *incubationController() const;
 
 #if QT_CONFIG(accessibility)
-    QAccessibleInterface *accessibleRoot() const override;
+    QAccessibleInterface *accessibleRoot() const Q_DECL_OVERRIDE;
 #endif
 
     // Scene graph specific functions
     QSGTexture *createTextureFromImage(const QImage &image) const;
     QSGTexture *createTextureFromImage(const QImage &image, CreateTextureOptions options) const;
-
-#if QT_DEPRECATED_SINCE(5, 15)
-    QT_DEPRECATED_X("Use createTextureFromNativeObject() instead")
     QSGTexture *createTextureFromId(uint id, const QSize &size, CreateTextureOptions options = CreateTextureOption()) const;
-#endif
-
-    QSGTexture *createTextureFromNativeObject(NativeObjectType type,
-                                              const void *nativeObjectPtr,
-                                              int nativeLayout,
-                                              const QSize &size,
-                                              CreateTextureOptions options = CreateTextureOption()) const;
 
     void setClearBeforeRendering(bool enabled);
     bool clearBeforeRendering() const;
@@ -201,9 +168,6 @@ public:
     QSGImageNode *createImageNode() const;
     QSGNinePatchNode *createNinePatchNode() const;
 
-    static TextRenderType textRenderType();
-    static void setTextRenderType(TextRenderType renderType);
-
 Q_SIGNALS:
     void frameSwapped();
     Q_REVISION(2) void openglContextCreated(QOpenGLContext *context);
@@ -221,39 +185,33 @@ Q_SIGNALS:
     Q_REVISION(1) void activeFocusItemChanged();
     Q_REVISION(2) void sceneGraphError(QQuickWindow::SceneGraphError error, const QString &message);
 
-    Q_REVISION(14) void beforeRenderPassRecording();
-    Q_REVISION(14) void afterRenderPassRecording();
 
 public Q_SLOTS:
     void update();
     void releaseResources();
 
 protected:
-    QQuickWindow(QQuickWindowPrivate &dd, QWindow *parent = nullptr);
-    QQuickWindow(QQuickWindowPrivate &dd, QQuickRenderControl *control);
+    QQuickWindow(QQuickWindowPrivate &dd, QWindow *parent = Q_NULLPTR);
 
-    void exposeEvent(QExposeEvent *) override;
-    void resizeEvent(QResizeEvent *) override;
+    void exposeEvent(QExposeEvent *) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
 
-    void showEvent(QShowEvent *) override;
-    void hideEvent(QHideEvent *) override;
+    void showEvent(QShowEvent *) Q_DECL_OVERRIDE;
+    void hideEvent(QHideEvent *) Q_DECL_OVERRIDE;
     // TODO Qt 6: reimplement QWindow::closeEvent to emit closing
 
-    void focusInEvent(QFocusEvent *) override;
-    void focusOutEvent(QFocusEvent *) override;
+    void focusInEvent(QFocusEvent *) Q_DECL_OVERRIDE;
+    void focusOutEvent(QFocusEvent *) Q_DECL_OVERRIDE;
 
-    bool event(QEvent *) override;
-    void keyPressEvent(QKeyEvent *) override;
-    void keyReleaseEvent(QKeyEvent *) override;
-    void mousePressEvent(QMouseEvent *) override;
-    void mouseReleaseEvent(QMouseEvent *) override;
-    void mouseDoubleClickEvent(QMouseEvent *) override;
-    void mouseMoveEvent(QMouseEvent *) override;
+    bool event(QEvent *) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *) Q_DECL_OVERRIDE;
+    void keyReleaseEvent(QKeyEvent *) Q_DECL_OVERRIDE;
+    void mousePressEvent(QMouseEvent *) Q_DECL_OVERRIDE;
+    void mouseReleaseEvent(QMouseEvent *) Q_DECL_OVERRIDE;
+    void mouseDoubleClickEvent(QMouseEvent *) Q_DECL_OVERRIDE;
+    void mouseMoveEvent(QMouseEvent *) Q_DECL_OVERRIDE;
 #if QT_CONFIG(wheelevent)
-    void wheelEvent(QWheelEvent *) override;
-#endif
-#if QT_CONFIG(tabletevent)
-    void tabletEvent(QTabletEvent *) override;
+    void wheelEvent(QWheelEvent *) Q_DECL_OVERRIDE;
 #endif
 
 private Q_SLOTS:
@@ -269,7 +227,6 @@ private:
     friend class QQuickWidget;
     friend class QQuickRenderControl;
     friend class QQuickAnimatorController;
-    friend class QQuickWidgetPrivate;
     Q_DISABLE_COPY(QQuickWindow)
 };
 

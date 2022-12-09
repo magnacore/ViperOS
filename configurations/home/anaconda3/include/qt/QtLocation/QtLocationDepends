@@ -2,7 +2,6 @@
 #ifdef __cplusplus /* create empty PCH in C mode */
 #include <QtCore/QtCore>
 #include <QtPositioning/QtPositioning>
-#include <QtPositioningQuick/QtPositioningQuick>
 #include <QtGui/QtGui>
 #include <QtQuick/QtQuick>
 #include <QtNetwork/QtNetwork>

@@ -48,7 +48,7 @@ QT_BEGIN_NAMESPACE
 
 namespace Qt3DCore {
 
-enum Q3D_DECL_DEPRECATED ChangeFlag {
+enum ChangeFlag {
     NodeCreated             = 1 << 0,
     NodeDeleted             = 1 << 1,
     PropertyUpdated         = 1 << 2,
@@ -56,21 +56,14 @@ enum Q3D_DECL_DEPRECATED ChangeFlag {
     PropertyValueRemoved    = 1 << 4,
     ComponentAdded          = 1 << 5,
     ComponentRemoved        = 1 << 6,
-    CommandRequested        = 1 << 7,
-    CallbackTriggered       = 1 << 8,
     AllChanges              = 0xFFFFFFFF
 };
-
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
 Q_DECLARE_FLAGS(ChangeFlags, ChangeFlag)
 Q_DECLARE_OPERATORS_FOR_FLAGS(ChangeFlags)
-QT_WARNING_POP
 
-class QNode;
 class QSceneChangePrivate;
 
-class Q_3DCORESHARED_EXPORT QSceneChange
+class QT3DCORESHARED_EXPORT QSceneChange
 {
 public:
     enum DeliveryFlag {
@@ -82,10 +75,7 @@ public:
 
     virtual ~QSceneChange();
 
-    QT_WARNING_PUSH
-    QT_WARNING_DISABLE_DEPRECATED
     ChangeFlag type() const Q_DECL_NOTHROW;
-    QT_WARNING_POP
 
     void setDeliveryFlags(DeliveryFlags flags) Q_DECL_NOTHROW;
     DeliveryFlags deliveryFlags() const Q_DECL_NOTHROW;
@@ -94,12 +84,9 @@ public:
 
 protected:
     Q_DECLARE_PRIVATE(QSceneChange)
-    QT_WARNING_PUSH
-    QT_WARNING_DISABLE_DEPRECATED
-    Q3D_DECL_DEPRECATED explicit QSceneChange(ChangeFlag type, QNodeId subjectId);
-    Q3D_DECL_DEPRECATED explicit QSceneChange(QSceneChangePrivate &dd,
-                                              ChangeFlag type, QNodeId subjectId);
-    QT_WARNING_POP
+    explicit QSceneChange(ChangeFlag type, QNodeId subjectId);
+    explicit QSceneChange(QSceneChangePrivate &dd,
+                 ChangeFlag type, QNodeId subjectId);
     QSceneChangePrivate *d_ptr;
 
 private:

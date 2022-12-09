@@ -41,7 +41,6 @@
 #define QDBUSERROR_H
 
 #include <QtDBus/qtdbusglobal.h>
-#include <QtCore/qobjectdefs.h>
 #include <QtCore/qstring.h>
 
 #ifndef QT_NO_DBUS
@@ -55,7 +54,6 @@ class QDBusMessage;
 
 class Q_DBUS_EXPORT QDBusError
 {
-    Q_GADGET
 public:
     enum ErrorType {
         NoError = 0,
@@ -92,7 +90,6 @@ public:
         LastErrorType = InvalidMember
 #endif
     };
-    Q_ENUM(ErrorType)
 
     QDBusError();
 #ifndef QT_BOOTSTRAPPED
@@ -101,16 +98,18 @@ public:
 #endif
     QDBusError(ErrorType error, const QString &message);
     QDBusError(const QDBusError &other);
-    QDBusError(QDBusError &&other) noexcept
+#ifdef Q_COMPILER_RVALUE_REFS
+    QDBusError(QDBusError &&other) Q_DECL_NOTHROW
         : code(other.code), msg(std::move(other.msg)), nm(std::move(other.nm))
     {}
-    QDBusError &operator=(QDBusError &&other) noexcept { swap(other); return *this; }
+    QDBusError &operator=(QDBusError &&other) Q_DECL_NOTHROW { swap(other); return *this; }
+#endif
     QDBusError &operator=(const QDBusError &other);
 #ifndef QT_BOOTSTRAPPED
     QDBusError &operator=(const QDBusMessage &msg);
 #endif
 
-    void swap(QDBusError &other) noexcept
+    void swap(QDBusError &other) Q_DECL_NOTHROW
     {
         qSwap(code,   other.code);
         qSwap(msg,    other.msg);

@@ -40,13 +40,11 @@
 #ifndef QREMOTEOBJECTNODE_H
 #define QREMOTEOBJECTNODE_H
 
-#include <QtCore/qsharedpointer.h>
-#include <QtCore/qmetaobject.h>
+#include <QtCore/QSharedPointer>
+#include <QtCore/QMetaClassInfo>
 #include <QtRemoteObjects/qtremoteobjectglobal.h>
 #include <QtRemoteObjects/qremoteobjectregistry.h>
 #include <QtRemoteObjects/qremoteobjectdynamicreplica.h>
-
-#include <functional>
 
 QT_BEGIN_NAMESPACE
 
@@ -55,34 +53,24 @@ class SourceApiMap;
 class QAbstractItemModel;
 class QAbstractItemModelReplica;
 class QItemSelectionModel;
-class QRemoteObjectAbstractPersistedStorePrivate;
 class QRemoteObjectNodePrivate;
 class QRemoteObjectHostBasePrivate;
 class QRemoteObjectHostPrivate;
 class QRemoteObjectRegistryHostPrivate;
+class ClientIoDevice;
 
-class Q_REMOTEOBJECTS_EXPORT QRemoteObjectAbstractPersistedStore : public QObject
+class Q_REMOTEOBJECTS_EXPORT QRemoteObjectPersistedStore
 {
-    Q_OBJECT
-
 public:
-    QRemoteObjectAbstractPersistedStore (QObject *parent = nullptr);
-    virtual ~QRemoteObjectAbstractPersistedStore();
-
+    virtual ~QRemoteObjectPersistedStore() {}
     virtual void saveProperties(const QString &repName, const QByteArray &repSig, const QVariantList &values) = 0;
     virtual QVariantList restoreProperties(const QString &repName, const QByteArray &repSig) = 0;
-
-protected:
-    QRemoteObjectAbstractPersistedStore(QRemoteObjectAbstractPersistedStorePrivate &, QObject *parent);
-    Q_DECLARE_PRIVATE(QRemoteObjectAbstractPersistedStore)
 };
 
 class Q_REMOTEOBJECTS_EXPORT QRemoteObjectNode : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QUrl registryUrl READ registryUrl WRITE setRegistryUrl)
-    Q_PROPERTY(QRemoteObjectAbstractPersistedStore* persistedStore READ persistedStore WRITE setPersistedStore)
-    Q_PROPERTY(int heartbeatInterval READ heartbeatInterval WRITE setHeartbeatInterval NOTIFY heartbeatIntervalChanged)
 
 public:
     enum ErrorCode{
@@ -95,18 +83,19 @@ public:
         OperationNotValidOnClientNode,
         SourceNotRegistered,
         MissingObjectName,
-        HostUrlInvalid,
-        ProtocolMismatch,
-        ListenFailed
+        HostUrlInvalid
     };
     Q_ENUM(ErrorCode)
+    enum StorageOwnership {
+        DoNotPassOwnership,
+        PassOwnershipToNode
+    };
 
     QRemoteObjectNode(QObject *parent = nullptr);
     QRemoteObjectNode(const QUrl &registryAddress, QObject *parent = nullptr);
-    ~QRemoteObjectNode() override;
+    virtual ~QRemoteObjectNode();
 
     Q_INVOKABLE bool connectToNode(const QUrl &address);
-    void addClientSideConnection(QIODevice *ioDevice);
     virtual void setName(const QString &name);
     template < class ObjectType >
     ObjectType *acquire(const QString &name = QString())
@@ -128,41 +117,36 @@ public:
     QStringList instances(const QString &typeName) const;
 
     QRemoteObjectDynamicReplica *acquireDynamic(const QString &name);
-    QAbstractItemModelReplica *acquireModel(const QString &name, QtRemoteObjects::InitialAction action = QtRemoteObjects::FetchRootSize, const QVector<int> &rolesHint = {});
+    QAbstractItemModelReplica *acquireModel(const QString &name);
     QUrl registryUrl() const;
     virtual bool setRegistryUrl(const QUrl &registryAddress);
     bool waitForRegistry(int timeout = 30000);
     const QRemoteObjectRegistry *registry() const;
-
-    QRemoteObjectAbstractPersistedStore *persistedStore() const;
-    void setPersistedStore(QRemoteObjectAbstractPersistedStore *persistedStore);
+    void setPersistedStore(QRemoteObjectPersistedStore *store, StorageOwnership ownership=DoNotPassOwnership);
 
     ErrorCode lastError() const;
 
-    int heartbeatInterval() const;
-    void setHeartbeatInterval(int interval);
-
-    typedef std::function<void (QUrl)> RemoteObjectSchemaHandler;
-    void registerExternalSchema(const QString &schema, RemoteObjectSchemaHandler handler);
+    void timerEvent(QTimerEvent*);
 
 Q_SIGNALS:
     void remoteObjectAdded(const QRemoteObjectSourceLocation &);
     void remoteObjectRemoved(const QRemoteObjectSourceLocation &);
 
     void error(QRemoteObjectNode::ErrorCode errorCode);
-    void heartbeatIntervalChanged(int heartbeatInterval);
 
 protected:
     QRemoteObjectNode(QRemoteObjectNodePrivate &, QObject *parent);
-
-    void timerEvent(QTimerEvent*) override;
 
 private:
     void initializeReplica(QRemoteObjectReplica *instance, const QString &name = QString());
     void persistProperties(const QString &repName, const QByteArray &repSig, const QVariantList &props);
     QVariantList retrieveProperties(const QString &repName, const QByteArray &repSig);
-
     Q_DECLARE_PRIVATE(QRemoteObjectNode)
+    Q_PRIVATE_SLOT(d_func(), void onClientRead(QObject *obj))
+    Q_PRIVATE_SLOT(d_func(), void onRemoteObjectSourceAdded(const QRemoteObjectSourceLocation &entry))
+    Q_PRIVATE_SLOT(d_func(), void onRemoteObjectSourceRemoved(const QRemoteObjectSourceLocation &entry))
+    Q_PRIVATE_SLOT(d_func(), void onRegistryInitialized())
+    Q_PRIVATE_SLOT(d_func(), void onShouldReconnect(ClientIoDevice *ioDevice))
     friend class QRemoteObjectReplica;
 };
 
@@ -170,9 +154,6 @@ class Q_REMOTEOBJECTS_EXPORT QRemoteObjectHostBase : public QRemoteObjectNode
 {
     Q_OBJECT
 public:
-    enum AllowedSchemas { BuiltInSchemasOnly, AllowExternalRegistration };
-    Q_ENUM(AllowedSchemas)
-    ~QRemoteObjectHostBase() override;
     void setName(const QString &name) override;
 
     template <template <typename> class ApiDefinition, typename ObjectType>
@@ -181,21 +162,13 @@ public:
         ApiDefinition<ObjectType> *api = new ApiDefinition<ObjectType>(object);
         return enableRemoting(object, api);
     }
-    Q_INVOKABLE bool enableRemoting(QObject *object, const QString &name = QString());
+    bool enableRemoting(QObject *object, const QString &name = QString());
     bool enableRemoting(QAbstractItemModel *model, const QString &name, const QVector<int> roles, QItemSelectionModel *selectionModel = nullptr);
-    Q_INVOKABLE bool disableRemoting(QObject *remoteObject);
-    void addHostSideConnection(QIODevice *ioDevice);
-
-    typedef std::function<bool(const QString &, const QString &)> RemoteObjectNameFilter;
-    bool proxy(const QUrl &registryUrl, const QUrl &hostUrl={},
-               RemoteObjectNameFilter filter=[](const QString &, const QString &) {return true; });
-    // ### Qt 6: Fix -> This should only be part of the QRemoteObjectRegistryHost type, since the
-    // reverse aspect requires the registry.
-    bool reverseProxy(RemoteObjectNameFilter filter=[](const QString &, const QString &) {return true; });
+    bool disableRemoting(QObject *remoteObject);
 
 protected:
     virtual QUrl hostUrl() const;
-    virtual bool setHostUrl(const QUrl &hostAddress, AllowedSchemas allowedSchemas=BuiltInSchemasOnly);
+    virtual bool setHostUrl(const QUrl &hostAddress);
     QRemoteObjectHostBase(QRemoteObjectHostBasePrivate &, QObject *);
 
 private:
@@ -206,19 +179,13 @@ private:
 class Q_REMOTEOBJECTS_EXPORT QRemoteObjectHost : public QRemoteObjectHostBase
 {
     Q_OBJECT
-    Q_PROPERTY(QUrl hostUrl READ hostUrl WRITE setHostUrl NOTIFY hostUrlChanged)
-
 public:
     QRemoteObjectHost(QObject *parent = nullptr);
-    QRemoteObjectHost(const QUrl &address, const QUrl &registryAddress = QUrl(),
-                      AllowedSchemas allowedSchemas=BuiltInSchemasOnly, QObject *parent = nullptr);
+    QRemoteObjectHost(const QUrl &address, const QUrl &registryAddress = QUrl(), QObject *parent = nullptr);
     QRemoteObjectHost(const QUrl &address, QObject *parent);
-    ~QRemoteObjectHost() override;
+    virtual ~QRemoteObjectHost();
     QUrl hostUrl() const override;
-    bool setHostUrl(const QUrl &hostAddress, AllowedSchemas allowedSchemas=BuiltInSchemasOnly) override;
-
-Q_SIGNALS:
-    void hostUrlChanged();
+    bool setHostUrl(const QUrl &hostAddress) override;
 
 protected:
     QRemoteObjectHost(QRemoteObjectHostPrivate &, QObject *);
@@ -232,7 +199,7 @@ class Q_REMOTEOBJECTS_EXPORT QRemoteObjectRegistryHost : public QRemoteObjectHos
     Q_OBJECT
 public:
     QRemoteObjectRegistryHost(const QUrl &registryAddress = QUrl(), QObject *parent = nullptr);
-    ~QRemoteObjectRegistryHost() override;
+    virtual ~QRemoteObjectRegistryHost();
     bool setRegistryUrl(const QUrl &registryUrl) override;
 
 protected:

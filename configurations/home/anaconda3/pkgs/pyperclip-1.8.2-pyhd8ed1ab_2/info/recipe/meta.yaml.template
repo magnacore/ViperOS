@@ -1,0 +1,43 @@
+{% set name = "pyperclip" %}
+{% set version = "1.8.2" %}
+{% set bundle = "tar.gz" %}
+{% set hash = "105254a8b04934f0bc84e9c24eb360a591aaf6535c9def5f29d92af107a9bf57" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  sha256: {{ hash }}
+
+build:
+  noarch: python
+  number: 2
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+
+requirements:
+  host:
+    - python >=3.6
+    - pip
+
+  run:
+    - python >=3.6
+
+test:
+  imports:
+    - pyperclip
+
+about:
+  home: https://github.com/asweigart/pyperclip
+  license_file: {{ RECIPE_DIR }}/LICENSE.txt
+  license: BSD-3-Clause
+  license_family: BSD
+  summary: A cross-platform clipboard module for Python. (only handles plain text for now)
+  dev_url: https://github.com/asweigart/pyperclip
+  doc_url: https://pyperclip.readthedocs.io
+
+extra:
+  recipe-maintainers:
+    - jan-janssen

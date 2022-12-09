@@ -1,4 +1,4 @@
-QT.3dlogic.VERSION = 5.15.2
+QT.3dlogic.VERSION = 5.9.7
 QT.3dlogic.name = Qt3DLogic
 QT.3dlogic.module = Qt53DLogic
 QT.3dlogic.libs = $$QT_MODULE_LIB_BASE

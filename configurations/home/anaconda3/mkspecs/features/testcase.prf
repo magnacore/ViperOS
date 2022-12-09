@@ -9,33 +9,11 @@ testcase_exceptions: CONFIG += exceptions
 # Set in qt_build_config.prf
 testcase_no_bundle: CONFIG -= app_bundle
 
-# cmdline may have been specified and not processed yet
-cmdline: CONFIG -= app_bundle
-
-# Allow testcases to mark themselves as not supporting high-DPI
-testcase_lowdpi {
-    macos {
-        !isEmpty(QMAKE_INFO_PLIST): \
-            error("QMAKE_INFO_PLIST already set, can't apply testcase_lowdpi")
-
-        QMAKE_INFO_PLIST = $$QMAKESPEC/Info.plist.disable_highdpi
-    } else {
-        # TODO: Add support for other platforms if possible
-    }
-}
-
 benchmark: type = benchmark
 else: type = check
 
 $${type}.files =
 $${type}.path = .
-
-# Make sure we explicitly load the debug version of the Qt libraries if needed
-macos {
-    dyld_image_suffix.name = DYLD_IMAGE_SUFFIX
-    dyld_image_suffix.value = $$qtPlatformTargetSuffix()
-    QT_TOOL_ENV += dyld_image_suffix
-}
 
 # Add environment for non-installed builds. Do this first, so the
 # 'make' variable expansions don't end up in a batch file/script.
@@ -55,26 +33,14 @@ debug_and_release:debug_and_release_target {
 }
 
 # Allow for a custom test runner script
-
-android: isEmpty($(TESTRUNNER)) {
-    APK_PATH = $$shell_path($$OUT_PWD/android-build/$${TARGET}.apk)
-    qtPrepareTool(ANDROIDTESTRUNNER, androidtestrunner)
-    qtPrepareTool(ANDROIDDEPLOYQT, androiddeployqt)
-    isEmpty(ANDROID_DEPLOYMENT_SETTINGS_FILE): ANDROID_DEPLOYMENT_SETTINGS_FILE = $$OUT_PWD/android-$$TARGET-deployment-settings.json
-    contains(QMAKE_HOST.os, Windows): extension = .exe
-    $${type}.commands  = $$ANDROIDTESTRUNNER --androiddeployqt \"$$ANDROIDDEPLOYQT --input $$ANDROID_DEPLOYMENT_SETTINGS_FILE\"
-    $${type}.commands += --path \"$$OUT_PWD/android-build\"
-    $${type}.commands += --adb \"$$shell_path($${ANDROID_SDK_ROOT}$${QMAKE_DIR_SEP}platform-tools$${QMAKE_DIR_SEP}adb$${extension})\"
-    $${type}.commands += --make \"$(MAKE) -f $(MAKEFILE)\"
-    $${type}.commands += --apk $$APK_PATH
-} else: $${type}.commands += $(TESTRUNNER)
+$${type}.commands += $(TESTRUNNER)
 
 unix {
     isEmpty(TEST_TARGET_DIR): TEST_TARGET_DIR = .
 
     app_bundle: \
         $${type}.commands += $${TEST_TARGET_DIR}/$(QMAKE_TARGET).app/Contents/MacOS/$(QMAKE_TARGET)
-    else: !android: \
+    else: \
         $${type}.commands += $${TEST_TARGET_DIR}/$(QMAKE_TARGET)
 } else {
     # Windows
@@ -111,11 +77,12 @@ isEmpty(BUILDS)|build_pass {
     # Install tests unless no_testcase_installs is set, or there is already
     # a `target' in INSTALLS.
     #
-    # Tests are installed under a directory named after their source folder
-    # so that each test has its own directory for testdata etc.
+    # Tests are installed under a directory named after the target so that each
+    # test has its own directory for testdata etc.
     #
-    TEST_FOLDER = $$basename(_PRO_FILE_PWD_)
-    target.path = $$[QT_INSTALL_TESTS]/$$TEST_FOLDER
+    load(resolve_target)
+    TARGET_BASENAME = $$basename(QMAKE_RESOLVED_TARGET)
+    target.path = $$[QT_INSTALL_TESTS]/$$TARGET_BASENAME
     INSTALLS += target
 }
 
@@ -216,24 +183,18 @@ isEmpty(BUILDS)|build_pass {
 }
 
 builtin_testdata {
-    # RESOURCES does not support wildcards (for good reasons)
-    for (td, TESTDATA): \
-        testdata.files += $$files($$absolute_path($$td, $$_PRO_FILE_PWD_))
+    ALL_TESTDATA = $$TESTDATA $$GENERATED_TESTDATA
+
     # BLACKLIST needs to be added to the testdata
     BLACKLISTPATH = $$_PRO_FILE_PWD_/BLACKLIST
-    exists($$BLACKLISTPATH): \
-        testdata.files *= $$BLACKLISTPATH
+    exists($$BLACKLISTPATH): ALL_TESTDATA *= $$BLACKLISTPATH
+
+    # RESOURCES does not support wildcards (for good reasons)
+    for(td, ALL_TESTDATA): \
+        testdata.files += $$files($$absolute_path($$td, $$_PRO_FILE_PWD_))
     !isEmpty(testdata.files) {
         testdata.base = $$_PRO_FILE_PWD_
         RESOURCES += testdata
-    }
-
-    # Extra compilers don't create wildcards to start with.
-    for (td, GENERATED_TESTDATA): \
-        gentestdata.files += $$absolute_path($$td, $$OUT_PWD)
-    !isEmpty(gentestdata.files) {
-        gentestdata.base = $$OUT_PWD
-        RESOURCES += gentestdata
     }
 
     !isEmpty(TEST_HELPER_INSTALLS): \

@@ -56,9 +56,9 @@ public:
         Infinite = -1
     };
 
-    static void play(const QString &filename);
+    static void play(const QString& filename);
 
-    explicit QSound(const QString &filename, QObject *parent = nullptr);
+    explicit QSound(const QString &filename, QObject *parent = Q_NULLPTR);
     ~QSound();
 
     int loops() const;
@@ -76,7 +76,7 @@ private Q_SLOTS:
     void deleteOnComplete();
 
 private:
-    QSoundEffect *m_soundEffect = nullptr;
+    QSoundEffect *m_soundEffect;
 };
 
 QT_END_NAMESPACE

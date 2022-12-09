@@ -25,16 +25,14 @@ defineTest(addInstallFiles) {
     export($$1)
 }
 
-moduleRoot = $$dirname(_QMAKE_CONF_)
-probase = $$relative_path($$_PRO_FILE_PWD_, $$moduleRoot/examples)
+probase = $$relative_path($$_PRO_FILE_PWD_, $$dirname(_QMAKE_CONF_)/examples)
 isEmpty(probase)|contains(probase, ^\\..*): \
     return()
 
 isEmpty(_QMAKE_CACHE_) {
-    moduleRootRelativeToBuildDir = $$relative_path($$moduleRoot, $$OUT_PWD)
-    # Check if OUT_PWD is inside module root
-    equals(moduleRootRelativeToBuildDir, .)|contains(moduleRootRelativeToBuildDir, \(\.\./\)+\(\.\.\)?): \
-        error("You cannot build examples inside the Qt source tree, except as part of a proper Qt build.")
+    !equals(OUT_PWD, $$_PRO_FILE_PWD_): \
+        return()
+    error("You cannot build examples inside the Qt source tree, except as part of a proper Qt build.")
 }
 
 contains(TEMPLATE, "vc.*"): \
@@ -74,7 +72,6 @@ sourcefiles += \
 extras = \
     $$_PRO_FILE_PWD_/README \
     $$_PRO_FILE_PWD_/README.TXT \
-    $$_PRO_FILE_PWD_/qmldir \
     $$files($$_PRO_FILE_PWD_/*.pri) \
     $$replace(_PRO_FILE_, \\.pro$, .qmlproject) \
     $$replace(_PRO_FILE_, \\.pro$, .json) \
@@ -141,9 +138,6 @@ equals(TEMPLATE, app)|equals(TEMPLATE, lib) {
     SOURCES =
     OBJECTIVE_SOURCES =
     INSTALLS -= target
-    QMAKE_SUBSTITUTES =
-    QMAKE_EXTRA_COMPILERS =
-    COPIES =
 } else {
     CONFIG += relative_qt_rpath  # Examples built as part of Qt should be relocatable
 }

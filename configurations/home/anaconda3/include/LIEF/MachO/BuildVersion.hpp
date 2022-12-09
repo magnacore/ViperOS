@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,6 +15,7 @@
  */
 #ifndef LIEF_MACHO_BUILD_VERSION_COMMAND_H_
 #define LIEF_MACHO_BUILD_VERSION_COMMAND_H_
+#include <string>
 #include <vector>
 #include <iostream>
 #include <array>
@@ -26,8 +27,7 @@
 
 namespace LIEF {
 namespace MachO {
-struct build_tool_version;
-struct build_version_command;
+
 
 class LIEF_API BuildToolVersion : public LIEF::Object {
   public:

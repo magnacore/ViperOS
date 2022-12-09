@@ -1,5 +1,6 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,6 +16,8 @@
  */
 #ifndef LIEF_MACHO_DATA_CODE_ENTRY_H_
 #define LIEF_MACHO_DATA_CODE_ENTRY_H_
+#include <string>
+#include <vector>
 #include <iostream>
 
 #include "LIEF/visibility.h"
@@ -24,7 +27,6 @@
 
 namespace LIEF {
 namespace MachO {
-struct data_in_code_entry;
 
 //! Interface of an entry in DataInCode
 class LIEF_API DataCodeEntry : public LIEF::Object {

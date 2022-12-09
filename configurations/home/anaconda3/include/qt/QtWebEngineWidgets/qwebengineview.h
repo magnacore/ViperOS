@@ -53,7 +53,6 @@ class QContextMenuEvent;
 class QUrl;
 class QWebEnginePage;
 class QWebEngineSettings;
-class QWebEngineViewAccessible;
 class QWebEngineViewPrivate;
 
 class QWEBENGINEWIDGETS_EXPORT QWebEngineView : public QWidget {
@@ -96,9 +95,15 @@ public:
 
     qreal zoomFactor() const;
     void setZoomFactor(qreal factor);
-    void findText(const QString &subString, QWebEnginePage::FindFlags options = QWebEnginePage::FindFlags(), const QWebEngineCallback<bool> &resultCallback = QWebEngineCallback<bool>());
 
-    QSize sizeHint() const override;
+#ifdef Q_QDOC
+    void findText(const QString &subString, QWebEnginePage::FindFlags options = QWebEnginePage::FindFlags());
+    void findText(const QString &subString, QWebEnginePage::FindFlags options, FunctorOrLambda resultCallback);
+#else
+    void findText(const QString &subString, QWebEnginePage::FindFlags options = QWebEnginePage::FindFlags(), const QWebEngineCallback<bool> &resultCallback = QWebEngineCallback<bool>());
+#endif
+
+    virtual QSize sizeHint() const Q_DECL_OVERRIDE;
     QWebEngineSettings *settings() const;
 
 public Q_SLOTS:
@@ -121,19 +126,14 @@ Q_SIGNALS:
 
 protected:
     virtual QWebEngineView *createWindow(QWebEnginePage::WebWindowType type);
-#if QT_CONFIG(contextmenu)
-    void contextMenuEvent(QContextMenuEvent*) override;
-#endif // QT_CONFIG(contextmenu)
-    bool event(QEvent*) override;
-    void showEvent(QShowEvent *) override;
-    void hideEvent(QHideEvent *) override;
-    void closeEvent(QCloseEvent *) override;
-#if QT_CONFIG(draganddrop)
-    void dragEnterEvent(QDragEnterEvent *e) override;
-    void dragLeaveEvent(QDragLeaveEvent *e) override;
-    void dragMoveEvent(QDragMoveEvent *e) override;
-    void dropEvent(QDropEvent *e) override;
-#endif // QT_CONFIG(draganddrop)
+    virtual void contextMenuEvent(QContextMenuEvent*) Q_DECL_OVERRIDE;
+    virtual bool event(QEvent*) Q_DECL_OVERRIDE;
+    virtual void showEvent(QShowEvent *) Q_DECL_OVERRIDE;
+    virtual void hideEvent(QHideEvent *) Q_DECL_OVERRIDE;
+    void dragEnterEvent(QDragEnterEvent *e) Q_DECL_OVERRIDE;
+    void dragLeaveEvent(QDragLeaveEvent *e) Q_DECL_OVERRIDE;
+    void dragMoveEvent(QDragMoveEvent *e) Q_DECL_OVERRIDE;
+    void dropEvent(QDropEvent *e) Q_DECL_OVERRIDE;
 
 private:
     Q_DISABLE_COPY(QWebEngineView)
@@ -142,9 +142,6 @@ private:
 
     friend class QWebEnginePage;
     friend class QWebEnginePagePrivate;
-#if QT_CONFIG(accessibility)
-    friend class QWebEngineViewAccessible;
-#endif
 };
 
 QT_END_NAMESPACE

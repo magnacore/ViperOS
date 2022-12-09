@@ -54,7 +54,7 @@
 #include <QtCore/qdebug.h>
 #include <QtGui/qaccessible.h>
 #include <QtGui/qguiapplication.h>
-#include <QtTest/qttestglobal.h>
+#include <QtTest/qtest_global.h>
 #include <QtTest/qtestsystem.h>
 
 #if QT_CONFIG(accessibility)
@@ -65,7 +65,7 @@ QT_BEGIN_NAMESPACE
 class QObject;
 
 // Use pointers since we subclass QAccessibleEvent
-using EventList = QList<QAccessibleEvent*>;
+typedef QList<QAccessibleEvent*> EventList;
 
 bool operator==(const QAccessibleEvent &l, const QAccessibleEvent &r)
 {
@@ -132,7 +132,7 @@ public:
     static void cleanup()
     {
         delete instance();
-        instance() = nullptr;
+        instance() = Q_NULLPTR;
     }
     static void clearEvents() { eventList().clear(); }
     static EventList events() { return eventList(); }
@@ -167,8 +167,8 @@ private:
 
     ~QTestAccessibility()
     {
-        QAccessible::installUpdateHandler(nullptr);
-        QAccessible::installRootObjectHandler(nullptr);
+        QAccessible::installUpdateHandler(Q_NULLPTR);
+        QAccessible::installRootObjectHandler(Q_NULLPTR);
     }
 
     static void rootObjectHandler(QObject *object)
@@ -273,7 +273,7 @@ private:
 
     static QTestAccessibility *&instance()
     {
-        static QTestAccessibility *ta = nullptr;
+        static QTestAccessibility *ta = Q_NULLPTR;
         return ta;
     }
 

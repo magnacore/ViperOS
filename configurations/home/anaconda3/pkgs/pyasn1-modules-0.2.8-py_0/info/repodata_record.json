@@ -1,0 +1,26 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "pyasn1 >=0.4.6,<0.5.0",
+    "python"
+  ],
+  "features": "",
+  "fn": "pyasn1-modules-0.2.8-py_0.conda",
+  "legacy_bz2_md5": "4c5ff5474d4df03476d42c6c02c1878c",
+  "license": "BSD 2-Clause",
+  "license_family": "BSD",
+  "md5": "9f3232c42eed255f0877d3f7c955e237",
+  "name": "pyasn1-modules",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "57471a55ea5596c554c4bb54a2a415be4317e7c7e5c88e4bbe23d7deef59d96f",
+  "size": 73368,
+  "subdir": "noarch",
+  "timestamp": 1600458175964,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/pyasn1-modules-0.2.8-py_0.conda",
+  "version": "0.2.8"
+}

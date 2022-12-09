@@ -55,7 +55,7 @@ class Q_GUI_EXPORT QIconEnginePlugin : public QObject
 {
     Q_OBJECT
 public:
-    QIconEnginePlugin(QObject *parent = nullptr);
+    QIconEnginePlugin(QObject *parent = Q_NULLPTR);
     ~QIconEnginePlugin();
 
     virtual QIconEngine *create(const QString &filename = QString()) = 0;

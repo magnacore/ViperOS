@@ -51,25 +51,19 @@ class QQmlEngine;
 class Q_QML_EXPORT QQmlTypesExtensionInterface
 {
 public:
-    virtual ~QQmlTypesExtensionInterface() = default;
+    virtual ~QQmlTypesExtensionInterface() {}
     virtual void registerTypes(const char *uri) = 0;
 };
 
 class Q_QML_EXPORT QQmlExtensionInterface : public QQmlTypesExtensionInterface
 {
 public:
-    ~QQmlExtensionInterface() override = default;
-    virtual void initializeEngine(QQmlEngine *engine, const char *uri) = 0;
-};
-
-class Q_QML_EXPORT QQmlEngineExtensionInterface
-{
-public:
-    virtual ~QQmlEngineExtensionInterface() = default;
+    virtual ~QQmlExtensionInterface() {}
     virtual void initializeEngine(QQmlEngine *engine, const char *uri) = 0;
 };
 
 #define QQmlTypesExtensionInterface_iid "org.qt-project.Qt.QQmlTypesExtensionInterface"
+
 Q_DECLARE_INTERFACE(QQmlTypesExtensionInterface, "org.qt-project.Qt.QQmlTypesExtensionInterface/1.0")
 
 // NOTE: When changing this to a new version and deciding to add backup code to
@@ -78,9 +72,6 @@ Q_DECLARE_INTERFACE(QQmlTypesExtensionInterface, "org.qt-project.Qt.QQmlTypesExt
 #define QQmlExtensionInterface_iid_old "org.qt-project.Qt.QQmlExtensionInterface"
 
 Q_DECLARE_INTERFACE(QQmlExtensionInterface, QQmlExtensionInterface_iid)
-
-#define QQmlEngineExtensionInterface_iid "org.qt-project.Qt.QQmlEngineExtensionInterface"
-Q_DECLARE_INTERFACE(QQmlEngineExtensionInterface, QQmlEngineExtensionInterface_iid)
 
 QT_END_NAMESPACE
 

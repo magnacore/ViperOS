@@ -41,7 +41,7 @@
 #ifndef QBLUETOOTHSERVER_H
 #define QBLUETOOTHSERVER_H
 
-#include <QtBluetooth/qtbluetoothglobal.h>
+#include <QtBluetooth/qbluetoothglobal.h>
 
 #include <QtCore/QObject>
 
@@ -70,7 +70,7 @@ public:
     };
     Q_ENUM(Error)
 
-    explicit QBluetoothServer(QBluetoothServiceInfo::Protocol serverType, QObject *parent = nullptr);
+    explicit QBluetoothServer(QBluetoothServiceInfo::Protocol serverType, QObject *parent = Q_NULLPTR);
     ~QBluetoothServer();
 
     void close();
@@ -104,6 +104,10 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(QBluetoothServer)
+
+#if QT_CONFIG(bluez)
+    Q_PRIVATE_SLOT(d_func(), void _q_newConnection())
+#endif
 };
 
 QT_END_NAMESPACE

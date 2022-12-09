@@ -260,9 +260,6 @@ typedef struct xcb_xv_bad_port_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_xv_bad_port_error_t;
 
 /** Opcode for xcb_xv_bad_encoding. */
@@ -275,9 +272,6 @@ typedef struct xcb_xv_bad_encoding_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_xv_bad_encoding_error_t;
 
 /** Opcode for xcb_xv_bad_control. */
@@ -290,9 +284,6 @@ typedef struct xcb_xv_bad_control_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_xv_bad_control_error_t;
 
 /** Opcode for xcb_xv_video_notify. */

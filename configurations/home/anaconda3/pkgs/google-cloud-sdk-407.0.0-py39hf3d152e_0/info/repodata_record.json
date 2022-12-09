@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "py39hf3d152e_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0",
+    "python_abi 3.9.* *_cp39"
+  ],
+  "features": "",
+  "fn": "google-cloud-sdk-407.0.0-py39hf3d152e_0.tar.bz2",
+  "license": "Apache v2.0",
+  "license_family": "Apache",
+  "md5": "200b6a487de79a4508c103d72567c6c4",
+  "name": "google-cloud-sdk",
+  "platform": "linux",
+  "sha256": "1dd0fa05d207f5eef94903be54c0ce5211d1371d6a51b71495b9333d033a94a4",
+  "size": 175246195,
+  "subdir": "linux-64",
+  "timestamp": 1666736056609,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/google-cloud-sdk-407.0.0-py39hf3d152e_0.tar.bz2",
+  "version": "407.0.0"
+}

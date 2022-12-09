@@ -60,11 +60,9 @@ class Q_SCXML_EXPORT QScxmlDataModel : public QObject
     Q_PROPERTY(QScxmlStateMachine *stateMachine READ stateMachine WRITE setStateMachine NOTIFY stateMachineChanged)
 
 public:
-    class Q_SCXML_EXPORT ForeachLoopBody
+    class ForeachLoopBody
     {
-        Q_DISABLE_COPY(ForeachLoopBody)
     public:
-        ForeachLoopBody();
         virtual ~ForeachLoopBody();
         virtual void run(bool *ok) = 0;
     };
@@ -99,7 +97,5 @@ protected:
 };
 
 QT_END_NAMESPACE
-
-Q_DECLARE_METATYPE(QScxmlDataModel *)
 
 #endif // QSCXMLDATAMODEL_H

@@ -1,0 +1,45 @@
+{
+  "build": "py38_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/mccabe-0.6.1-py38_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/__pycache__/mccabe.cpython-38.pyc",
+    "lib/python3.8/site-packages/mccabe-0.6.1-py3.8.egg-info/PKG-INFO",
+    "lib/python3.8/site-packages/mccabe-0.6.1-py3.8.egg-info/SOURCES.txt",
+    "lib/python3.8/site-packages/mccabe-0.6.1-py3.8.egg-info/dependency_links.txt",
+    "lib/python3.8/site-packages/mccabe-0.6.1-py3.8.egg-info/entry_points.txt",
+    "lib/python3.8/site-packages/mccabe-0.6.1-py3.8.egg-info/not-zip-safe",
+    "lib/python3.8/site-packages/mccabe-0.6.1-py3.8.egg-info/top_level.txt",
+    "lib/python3.8/site-packages/mccabe.py"
+  ],
+  "fn": "mccabe-0.6.1-py38_1.conda",
+  "legacy_bz2_md5": "2db2b0299b2b89a7ace2b6602efdce40",
+  "legacy_bz2_size": 14402,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/mccabe-0.6.1-py38_1",
+    "type": 1
+  },
+  "md5": "5dec11e3e49e564e6c3a50877767444e",
+  "name": "mccabe",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/mccabe-0.6.1-py38_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "mccabe==0.6.1=py38_1",
+  "sha256": "3349b74a44d698b5a1f8444c19710df4529497581056c1ccc75c27418413ad15",
+  "size": 14957,
+  "subdir": "linux-64",
+  "timestamp": 1573489052083,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/mccabe-0.6.1-py38_1.conda",
+  "version": "0.6.1"
+}

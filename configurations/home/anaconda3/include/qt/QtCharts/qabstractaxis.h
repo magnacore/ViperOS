@@ -39,7 +39,7 @@ QT_CHARTS_BEGIN_NAMESPACE
 
 class QAbstractAxisPrivate;
 
-class Q_CHARTS_EXPORT QAbstractAxis : public QObject
+class QT_CHARTS_EXPORT QAbstractAxis : public QObject
 {
     Q_OBJECT
     //visibility
@@ -92,7 +92,7 @@ public:
     Q_DECLARE_FLAGS(AxisTypes, AxisType)
 
 protected:
-    explicit QAbstractAxis(QAbstractAxisPrivate &d, QObject *parent = nullptr);
+    explicit QAbstractAxis(QAbstractAxisPrivate &d, QObject *parent = Q_NULLPTR);
 
 public:
     ~QAbstractAxis();
@@ -173,10 +173,6 @@ public:
     void setReverse(bool reverse = true);
     bool isReverse() const;
 
-    //label editable handling
-    void setLabelsEditable(bool editable = true);
-    bool labelsEditable() const;
-
 Q_SIGNALS:
     void visibleChanged(bool visible);
     void linePenChanged(const QPen &pen);
@@ -203,7 +199,6 @@ Q_SIGNALS:
     void shadesPenChanged(const QPen &pen);
     void shadesBrushChanged(const QBrush &brush);
     void reverseChanged(bool reverse);
-    void labelsEditableChanged(bool editable);
 
 protected:
     QScopedPointer<QAbstractAxisPrivate> d_ptr;

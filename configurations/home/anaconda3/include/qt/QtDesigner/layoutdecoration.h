@@ -31,8 +31,8 @@
 
 #include <QtDesigner/extension.h>
 
-#include <QtCore/qobject.h>
-#include <QtCore/qpair.h>
+#include <QtCore/QObject>
+#include <QtCore/QPair>
 
 QT_BEGIN_NAMESPACE
 

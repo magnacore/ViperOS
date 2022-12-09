@@ -53,7 +53,8 @@
  * <br />
  * \section install_sec Installation
  *
- * The HDF5 C++ API is included with the HDF5 source code.
+ * The HDF5 C++ API is included with the HDF5 source code and can 
+ * be obtained from 
  * 
  * Please refer to the release_docs/INSTALL file under the top directory 
  * of the HDF5 source code for information about installing, building, 

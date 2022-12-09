@@ -44,17 +44,26 @@
 
 #include <QtCore/qobject.h>
 
+namespace QtWebEngineCore {
+class URLRequestContextGetterQt;
+}
+
 QT_BEGIN_NAMESPACE
 
 class QWebEngineUrlRequestJob;
 
-class Q_WEBENGINECORE_EXPORT QWebEngineUrlSchemeHandler : public QObject {
+class QWEBENGINE_EXPORT QWebEngineUrlSchemeHandler : public QObject {
     Q_OBJECT
 public:
     QWebEngineUrlSchemeHandler(QObject *parent = Q_NULLPTR);
     ~QWebEngineUrlSchemeHandler();
 
-    virtual void requestStarted(QWebEngineUrlRequestJob *) = 0;
+    virtual void requestStarted(QWebEngineUrlRequestJob*) = 0;
+
+#ifndef Q_QDOC
+Q_SIGNALS:
+    void _q_destroyedUrlSchemeHandler(QWebEngineUrlSchemeHandler*);
+#endif
 
 private:
     Q_DISABLE_COPY(QWebEngineUrlSchemeHandler)

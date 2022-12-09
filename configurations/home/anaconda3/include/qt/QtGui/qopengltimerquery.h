@@ -56,7 +56,7 @@ class Q_GUI_EXPORT QOpenGLTimerQuery : public QObject
     Q_OBJECT
 
 public:
-    explicit QOpenGLTimerQuery(QObject *parent = nullptr);
+    explicit QOpenGLTimerQuery(QObject *parent = Q_NULLPTR);
     ~QOpenGLTimerQuery();
 
     bool create();
@@ -84,7 +84,7 @@ class Q_GUI_EXPORT QOpenGLTimeMonitor : public QObject
     Q_OBJECT
 
 public:
-    explicit QOpenGLTimeMonitor(QObject *parent = nullptr);
+    explicit QOpenGLTimeMonitor(QObject *parent = Q_NULLPTR);
     ~QOpenGLTimeMonitor();
 
     void setSampleCount(int sampleCount);

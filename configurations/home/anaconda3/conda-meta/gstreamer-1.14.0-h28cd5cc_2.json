@@ -7,7 +7,7 @@
     "glib >=2.66.1,<3.0a0",
     "libgcc-ng >=7.3.0"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/gstreamer-1.14.0-h28cd5cc_2",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/gstreamer-1.14.0-h28cd5cc_2",
   "features": "",
   "files": [
     "bin/gst-inspect-1.0",
@@ -169,12 +169,12 @@
   "legacy_bz2_md5": "83453eb716b94c66fb64391760c0eeb1",
   "legacy_bz2_size": 4178090,
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/gstreamer-1.14.0-h28cd5cc_2",
+    "source": "/home/manuj/anaconda3/pkgs/gstreamer-1.14.0-h28cd5cc_2",
     "type": 1
   },
   "md5": "6af5d0cbd7310e1cd8a6a5c1c99649b2",
   "name": "gstreamer",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/gstreamer-1.14.0-h28cd5cc_2.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/gstreamer-1.14.0-h28cd5cc_2.conda",
   "paths_data": {
     "paths": [
       {
@@ -183,7 +183,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/tmp/build/80754af9/gstreamer_and_plugins_1609866453447/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
         "sha256": "fa7815340b0bddc6836b5c93a6ba3f5a12c2a0975d2b32c4a765aa926f168634",
-        "sha256_in_prefix": "1a0c1cd427a356f48be2df2e7e66cdb66036ec43e73cc6c411051e1f0c2aea78",
+        "sha256_in_prefix": "090223cd1df21eaea7ae6b45cfe94d7b0057ba183b1bada371e7c03aa5291558",
         "size_in_bytes": 745
       },
       {
@@ -192,7 +192,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/tmp/build/80754af9/gstreamer_and_plugins_1609866453447/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
         "sha256": "b4fe1312a11677675fc150d67aa9b782ad3861122ffa1f0f7445d297de403626",
-        "sha256_in_prefix": "ca383d8d08efc525792f8a1845d8f5c200c2f9008f192788e5e9163ce1c3c8d9",
+        "sha256_in_prefix": "c42ad094cfb5c2471633f2636ce4fc76a425ab0093c63f5075b7e787f4b77bb2",
         "size_in_bytes": 644
       },
       {
@@ -201,7 +201,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/tmp/build/80754af9/gstreamer_and_plugins_1609866453447/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
         "sha256": "2e55fe68213ad33000e5610e091273dd2868c45cefc305dd30489d7711bebd0e",
-        "sha256_in_prefix": "327a9e5eddc4d9f5f6b5b62b5e8cdb8ac4419573222c455ffc77d8e9d0dc681f",
+        "sha256_in_prefix": "75c6a0bb6d4cd5e0ebacac79557bcb9353799aa20082720f210c0d036c8ecfbc",
         "size_in_bytes": 669
       },
       {
@@ -210,7 +210,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/tmp/build/80754af9/gstreamer_and_plugins_1609866453447/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
         "sha256": "49ff68eb58eda5ddd1ef303960875d99cf6855472324bfaed0b896146a933bf7",
-        "sha256_in_prefix": "46ee93787656d5add6d19388be2ed6dcdbd852400e8ce028a4ce3990f76f2a66",
+        "sha256_in_prefix": "dd3f2f8e52350223232fd98172b20bad5de74b108a66388eae6140b6febd996b",
         "size_in_bytes": 661
       },
       {
@@ -219,7 +219,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/tmp/build/80754af9/gstreamer_and_plugins_1609866453447/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
         "sha256": "656fd07e6f884d574725881305484cd17eb080676d449fc129b38ad11c9b0be4",
-        "sha256_in_prefix": "bc11ddadb39516d15ac4517bed063b324c769901ef5f821028d9002032bb09fd",
+        "sha256_in_prefix": "eae1648bbc962cb917f4b769007239db3188f4edaa10a8ee5aed2a7e986e9570",
         "size_in_bytes": 669
       }
     ],

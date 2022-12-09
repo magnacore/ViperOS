@@ -2,7 +2,6 @@
 #define QT_QTQML_MODULE_H
 #include <QtQml/QtQmlDepends>
 #include "qtqmlglobal.h"
-#include "qtqmlcompilerglobal.h"
 #include "qjsengine.h"
 #include "qjsvalue.h"
 #include "qjsvalueiterator.h"
@@ -22,7 +21,6 @@
 #include "qqmlincubator.h"
 #include "qqmlinfo.h"
 #include "qqmllist.h"
-#include "qqmlmoduleregistration.h"
 #include "qqmlnetworkaccessmanagerfactory.h"
 #include "qqmlparserstatus.h"
 #include "qqmlprivate.h"

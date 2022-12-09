@@ -7,7 +7,7 @@
     "gmp >=6.1.2",
     "libgcc-ng >=7.3.0"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/mpfr-4.0.2-hb69a4c5_1",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/mpfr-4.0.2-hb69a4c5_1",
   "features": "",
   "files": [
     "include/mpf2mpfr.h",
@@ -37,12 +37,12 @@
   "legacy_bz2_size": 668948,
   "license": "LGPL-3.0-only",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/mpfr-4.0.2-hb69a4c5_1",
+    "source": "/home/manuj/anaconda3/pkgs/mpfr-4.0.2-hb69a4c5_1",
     "type": 1
   },
   "md5": "9000a148d49baa5a3b3428397889d37d",
   "name": "mpfr",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/mpfr-4.0.2-hb69a4c5_1.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/mpfr-4.0.2-hb69a4c5_1.conda",
   "paths_data": {
     "paths": [
       {
@@ -51,7 +51,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
         "sha256": "44b281d0d1f698c5d49afee8f1e425af651841eb28c9a61a950a559ff39417d4",
-        "sha256_in_prefix": "d30a9638d76c07ba498398c4c18cd52cf30c4dba31f91be51a0faaa3386de0f2",
+        "sha256_in_prefix": "136f6d8b81e7ac9becea8b6ae48ae48e5d178a8fdb057abceb6308a7acf896aa",
         "size_in_bytes": 300
       }
     ],

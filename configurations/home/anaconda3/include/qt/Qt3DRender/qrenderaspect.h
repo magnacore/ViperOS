@@ -65,7 +65,7 @@ class QRenderAspectPrivate;
 class QRenderAspectTester;
 #endif
 
-class Q_3DRENDERSHARED_EXPORT QRenderAspect : public Qt3DCore::QAbstractAspect
+class QT3DRENDERSHARED_EXPORT QRenderAspect : public Qt3DCore::QAbstractAspect
 {
     Q_OBJECT
 public:
@@ -83,14 +83,14 @@ protected:
     Q_DECLARE_PRIVATE(QRenderAspect)
 
 private:
-    QVector<Qt3DCore::QAspectJobPtr> jobsToExecute(qint64 time) override;
+    QVector<Qt3DCore::QAspectJobPtr> jobsToExecute(qint64 time) Q_DECL_OVERRIDE;
 
-    QVariant executeCommand(const QStringList &args) override;
+    QVariant executeCommand(const QStringList &args) Q_DECL_OVERRIDE;
 
-    void onRegistered() override;
-    void onUnregistered() override;
+    void onRegistered() Q_DECL_OVERRIDE;
+    void onUnregistered() Q_DECL_OVERRIDE;
 
-    void onEngineStartup() override;
+    void onEngineStartup() Q_DECL_OVERRIDE;
 
     friend class Render::Renderer;
     friend class Render::QRenderPlugin;

@@ -1,0 +1,278 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "autopep8",
+    "flake8 >=3.8.0",
+    "jedi >=0.17.2,<0.18.0a0",
+    "mccabe >=0.6.0,<0.7.0",
+    "pluggy",
+    "pycodestyle >=2.6.0,<2.7.0",
+    "pydocstyle >=2.0.0",
+    "pyflakes >=2.2.0,<2.3.0",
+    "pylint >=2.5.0",
+    "python >=3.6",
+    "python-jsonrpc-server >=0.4.0",
+    "rope >=0.10.5",
+    "setuptools",
+    "ujson >=3.0",
+    "yapf"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/python-language-server-0.36.2-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/pyls/__init__.py",
+    "lib/python3.8/site-packages/pyls/__main__.py",
+    "lib/python3.8/site-packages/pyls/_utils.py",
+    "lib/python3.8/site-packages/pyls/_version.py",
+    "lib/python3.8/site-packages/pyls/config/__init__.py",
+    "lib/python3.8/site-packages/pyls/config/config.py",
+    "lib/python3.8/site-packages/pyls/config/flake8_conf.py",
+    "lib/python3.8/site-packages/pyls/config/pycodestyle_conf.py",
+    "lib/python3.8/site-packages/pyls/config/source.py",
+    "lib/python3.8/site-packages/pyls/hookspecs.py",
+    "lib/python3.8/site-packages/pyls/lsp.py",
+    "lib/python3.8/site-packages/pyls/plugins/__init__.py",
+    "lib/python3.8/site-packages/pyls/plugins/autopep8_format.py",
+    "lib/python3.8/site-packages/pyls/plugins/definition.py",
+    "lib/python3.8/site-packages/pyls/plugins/flake8_lint.py",
+    "lib/python3.8/site-packages/pyls/plugins/folding.py",
+    "lib/python3.8/site-packages/pyls/plugins/highlight.py",
+    "lib/python3.8/site-packages/pyls/plugins/hover.py",
+    "lib/python3.8/site-packages/pyls/plugins/jedi_completion.py",
+    "lib/python3.8/site-packages/pyls/plugins/jedi_rename.py",
+    "lib/python3.8/site-packages/pyls/plugins/mccabe_lint.py",
+    "lib/python3.8/site-packages/pyls/plugins/preload_imports.py",
+    "lib/python3.8/site-packages/pyls/plugins/pycodestyle_lint.py",
+    "lib/python3.8/site-packages/pyls/plugins/pydocstyle_lint.py",
+    "lib/python3.8/site-packages/pyls/plugins/pyflakes_lint.py",
+    "lib/python3.8/site-packages/pyls/plugins/pylint_lint.py",
+    "lib/python3.8/site-packages/pyls/plugins/references.py",
+    "lib/python3.8/site-packages/pyls/plugins/rope_completion.py",
+    "lib/python3.8/site-packages/pyls/plugins/rope_rename.py",
+    "lib/python3.8/site-packages/pyls/plugins/signature.py",
+    "lib/python3.8/site-packages/pyls/plugins/symbols.py",
+    "lib/python3.8/site-packages/pyls/plugins/yapf_format.py",
+    "lib/python3.8/site-packages/pyls/python_ls.py",
+    "lib/python3.8/site-packages/pyls/uris.py",
+    "lib/python3.8/site-packages/pyls/workspace.py",
+    "lib/python3.8/site-packages/python_language_server-0.36.2.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/python_language_server-0.36.2.dist-info/LICENSE",
+    "lib/python3.8/site-packages/python_language_server-0.36.2.dist-info/METADATA",
+    "lib/python3.8/site-packages/python_language_server-0.36.2.dist-info/RECORD",
+    "lib/python3.8/site-packages/python_language_server-0.36.2.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/python_language_server-0.36.2.dist-info/WHEEL",
+    "lib/python3.8/site-packages/python_language_server-0.36.2.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/python_language_server-0.36.2.dist-info/entry_points.txt",
+    "lib/python3.8/site-packages/python_language_server-0.36.2.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/pyls/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/__pycache__/__main__.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/__pycache__/_utils.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/__pycache__/_version.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/config/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/config/__pycache__/config.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/config/__pycache__/flake8_conf.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/config/__pycache__/pycodestyle_conf.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/config/__pycache__/source.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/__pycache__/hookspecs.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/__pycache__/lsp.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/autopep8_format.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/definition.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/flake8_lint.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/folding.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/highlight.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/hover.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/jedi_completion.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/jedi_rename.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/mccabe_lint.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/preload_imports.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/pycodestyle_lint.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/pydocstyle_lint.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/pyflakes_lint.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/pylint_lint.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/references.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/rope_completion.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/rope_rename.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/signature.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/symbols.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/plugins/__pycache__/yapf_format.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/__pycache__/python_ls.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/__pycache__/uris.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyls/__pycache__/workspace.cpython-38.pyc",
+    "bin/pyls"
+  ],
+  "fn": "python-language-server-0.36.2-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "7d5e6fdf513f1786c0fff699942edcee",
+  "legacy_bz2_size": 40433,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/python-language-server-0.36.2-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "8ecfba3c1ae04ebd2c5f07c7a289d347",
+  "name": "python-language-server",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/python-language-server-0.36.2-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/pyls/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/__pycache__/__main__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/__pycache__/_utils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/__pycache__/_version.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/config/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/config/__pycache__/config.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/config/__pycache__/flake8_conf.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/config/__pycache__/pycodestyle_conf.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/config/__pycache__/source.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/__pycache__/hookspecs.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/__pycache__/lsp.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/autopep8_format.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/definition.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/flake8_lint.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/folding.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/highlight.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/hover.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/jedi_completion.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/jedi_rename.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/mccabe_lint.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/preload_imports.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/pycodestyle_lint.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/pydocstyle_lint.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/pyflakes_lint.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/pylint_lint.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/references.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/rope_completion.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/rope_rename.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/signature.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/symbols.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/plugins/__pycache__/yapf_format.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/__pycache__/python_ls.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/__pycache__/uris.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyls/__pycache__/workspace.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/pyls",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "python-language-server==0.36.2=pyhd3eb1b0_0",
+  "sha256": "a30db8f0d6844bbaee87c0ea2f27f5616aafdaebb4b5ddd07d775f5dfe733a5d",
+  "size": 42235,
+  "subdir": "noarch",
+  "timestamp": 1607972539592,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/python-language-server-0.36.2-pyhd3eb1b0_0.conda",
+  "version": "0.36.2"
+}

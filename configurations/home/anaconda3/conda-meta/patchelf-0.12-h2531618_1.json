@@ -1,0 +1,50 @@
+{
+  "build": "h2531618_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/patchelf-0.12-h2531618_1",
+  "features": "",
+  "files": [
+    "bin/patchelf",
+    "share/doc/patchelf/README.md",
+    "share/man/man1/patchelf.1"
+  ],
+  "fn": "patchelf-0.12-h2531618_1.conda",
+  "legacy_bz2_md5": "397d56524e124b469e3c088e27527f9e",
+  "legacy_bz2_size": 94453,
+  "license": "GPL-3.0-or-later",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/patchelf-0.12-h2531618_1",
+    "type": 1
+  },
+  "md5": "9f60c3a6d4d86a25197f5bf25b091d45",
+  "name": "patchelf",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/patchelf-0.12-h2531618_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/patchelf",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/patchelf_1607736073553/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "5630b2c6c8a59b8b78c47fb046e0e8766aca04389950557b0d1da6121e7170d4",
+        "sha256_in_prefix": "00ba3fa45f892e544f35bbcce6d0e9d02002655c5261dce39cffda26d903bac3",
+        "size_in_bytes": 187208
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "patchelf==0.12=h2531618_1",
+  "sha256": "7cff9b74ea07c97a65974466adf71da9049c0885befc4e1d1154a1e4527ac6b4",
+  "size": 90019,
+  "subdir": "linux-64",
+  "timestamp": 1607736113848,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/patchelf-0.12-h2531618_1.conda",
+  "version": "0.12"
+}

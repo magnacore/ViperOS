@@ -1,0 +1,49 @@
+{
+  "build": "py38_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/unicodecsv-0.14.1-py38_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/unicodecsv-0.14.1-py3.8.egg-info/PKG-INFO",
+    "lib/python3.8/site-packages/unicodecsv-0.14.1-py3.8.egg-info/SOURCES.txt",
+    "lib/python3.8/site-packages/unicodecsv-0.14.1-py3.8.egg-info/dependency_links.txt",
+    "lib/python3.8/site-packages/unicodecsv-0.14.1-py3.8.egg-info/top_level.txt",
+    "lib/python3.8/site-packages/unicodecsv/__init__.py",
+    "lib/python3.8/site-packages/unicodecsv/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/unicodecsv/__pycache__/py2.cpython-38.pyc",
+    "lib/python3.8/site-packages/unicodecsv/__pycache__/py3.cpython-38.pyc",
+    "lib/python3.8/site-packages/unicodecsv/__pycache__/test.cpython-38.pyc",
+    "lib/python3.8/site-packages/unicodecsv/py2.py",
+    "lib/python3.8/site-packages/unicodecsv/py3.py",
+    "lib/python3.8/site-packages/unicodecsv/test.py"
+  ],
+  "fn": "unicodecsv-0.14.1-py38_0.conda",
+  "legacy_bz2_md5": "410aaf6ee2d0024afa27aab4b0e560d5",
+  "legacy_bz2_size": 26834,
+  "license": "BSD",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/unicodecsv-0.14.1-py38_0",
+    "type": 1
+  },
+  "md5": "972b0695b177ff0268173c75bebd3842",
+  "name": "unicodecsv",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/unicodecsv-0.14.1-py38_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "unicodecsv==0.14.1=py38_0",
+  "sha256": "f446cfe261c97a72d27432d2537ea7ae4fa2720973f224c98dfcc3cf66b405a4",
+  "size": 27917,
+  "subdir": "linux-64",
+  "timestamp": 1573200564391,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/unicodecsv-0.14.1-py38_0.conda",
+  "version": "0.14.1"
+}

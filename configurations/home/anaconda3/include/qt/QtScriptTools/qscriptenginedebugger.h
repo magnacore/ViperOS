@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** Copyright (C) 2018 The Qt Company Ltd.
+** Copyright (C) 2017 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
 ** This file is part of the QtSCriptTools module of the Qt Toolkit.
@@ -95,7 +95,7 @@ public:
         SuspendedState
     };
 
-    explicit QScriptEngineDebugger(QObject *parent = nullptr);
+    explicit QScriptEngineDebugger(QObject *parent = Q_NULLPTR);
     ~QScriptEngineDebugger();
 
     void attachTo(QScriptEngine *engine);
@@ -107,8 +107,8 @@ public:
 #ifndef QT_NO_MAINWINDOW
     QMainWindow *standardWindow() const;
 #endif
-    QToolBar *createStandardToolBar(QWidget *parent = nullptr);
-    QMenu *createStandardMenu(QWidget *parent = nullptr);
+    QToolBar *createStandardToolBar(QWidget *parent = Q_NULLPTR);
+    QMenu *createStandardMenu(QWidget *parent = Q_NULLPTR);
 
     QWidget *widget(DebuggerWidget widget) const;
     QAction *action(DebuggerAction action) const;

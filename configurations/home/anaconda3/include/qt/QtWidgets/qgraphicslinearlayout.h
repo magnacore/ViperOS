@@ -53,8 +53,8 @@ class QGraphicsLinearLayoutPrivate;
 class Q_WIDGETS_EXPORT QGraphicsLinearLayout : public QGraphicsLayout
 {
 public:
-    QGraphicsLinearLayout(QGraphicsLayoutItem *parent = nullptr);
-    QGraphicsLinearLayout(Qt::Orientation orientation, QGraphicsLayoutItem *parent = nullptr);
+    QGraphicsLinearLayout(QGraphicsLayoutItem *parent = Q_NULLPTR);
+    QGraphicsLinearLayout(Qt::Orientation orientation, QGraphicsLayoutItem *parent = Q_NULLPTR);
     virtual ~QGraphicsLinearLayout();
 
     void setOrientation(Qt::Orientation orientation);
@@ -67,7 +67,7 @@ public:
     void insertStretch(int index, int stretch = 1);
 
     void removeItem(QGraphicsLayoutItem *item);
-    void removeAt(int index) override;
+    void removeAt(int index) Q_DECL_OVERRIDE;
 
     void setSpacing(qreal spacing);
     qreal spacing() const;
@@ -80,13 +80,13 @@ public:
     void setAlignment(QGraphicsLayoutItem *item, Qt::Alignment alignment);
     Qt::Alignment alignment(QGraphicsLayoutItem *item) const;
 
-    void setGeometry(const QRectF &rect) override;
+    void setGeometry(const QRectF &rect) Q_DECL_OVERRIDE;
 
-    int count() const override;
-    QGraphicsLayoutItem *itemAt(int index) const override;
+    int count() const Q_DECL_OVERRIDE;
+    QGraphicsLayoutItem *itemAt(int index) const Q_DECL_OVERRIDE;
 
-    void invalidate() override;
-    QSizeF sizeHint(Qt::SizeHint which, const QSizeF &constraint = QSizeF()) const override;
+    void invalidate() Q_DECL_OVERRIDE;
+    QSizeF sizeHint(Qt::SizeHint which, const QSizeF &constraint = QSizeF()) const Q_DECL_OVERRIDE;
 
 #if 0 // ###
     Q5SizePolicy::ControlTypes controlTypes(LayoutSide side) const;

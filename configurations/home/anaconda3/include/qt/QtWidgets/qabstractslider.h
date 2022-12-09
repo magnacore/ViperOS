@@ -67,7 +67,7 @@ class Q_WIDGETS_EXPORT QAbstractSlider : public QWidget
     Q_PROPERTY(bool sliderDown READ isSliderDown WRITE setSliderDown DESIGNABLE false)
 
 public:
-    explicit QAbstractSlider(QWidget *parent = nullptr);
+    explicit QAbstractSlider(QWidget *parent = Q_NULLPTR);
     ~QAbstractSlider();
 
     Qt::Orientation orientation() const;
@@ -131,7 +131,7 @@ Q_SIGNALS:
     void actionTriggered(int action);
 
 protected:
-    bool event(QEvent *e) override;
+    bool event(QEvent *e) Q_DECL_OVERRIDE;
 
     void setRepeatAction(SliderAction action, int thresholdTime = 500, int repeatTime = 50);
     SliderAction repeatAction() const;
@@ -144,16 +144,16 @@ protected:
     };
     virtual void sliderChange(SliderChange change);
 
-    void keyPressEvent(QKeyEvent *ev) override;
-    void timerEvent(QTimerEvent *) override;
+    void keyPressEvent(QKeyEvent *ev) Q_DECL_OVERRIDE;
+    void timerEvent(QTimerEvent *) Q_DECL_OVERRIDE;
 #if QT_CONFIG(wheelevent)
-    void wheelEvent(QWheelEvent *e) override;
+    void wheelEvent(QWheelEvent *e) Q_DECL_OVERRIDE;
 #endif
-    void changeEvent(QEvent *e) override;
+    void changeEvent(QEvent *e) Q_DECL_OVERRIDE;
 
 
 protected:
-    QAbstractSlider(QAbstractSliderPrivate &dd, QWidget *parent = nullptr);
+    QAbstractSlider(QAbstractSliderPrivate &dd, QWidget *parent = Q_NULLPTR);
 
 private:
     Q_DISABLE_COPY(QAbstractSlider)

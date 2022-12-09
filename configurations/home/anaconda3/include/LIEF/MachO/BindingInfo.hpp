@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,20 +15,22 @@
  */
 #ifndef LIEF_MACHO_BINDING_INFO_COMMAND_H_
 #define LIEF_MACHO_BINDING_INFO_COMMAND_H_
+#include <string>
+#include <vector>
 #include <iostream>
+#include <array>
 
 #include "LIEF/visibility.h"
 #include "LIEF/types.hpp"
-#include "LIEF/Object.hpp"
 
 #include "LIEF/MachO/enums.hpp"
+
+#include "LIEF/MachO/DylibCommand.hpp"
 
 
 namespace LIEF {
 namespace MachO {
-class DylibCommand;
-class SegmentCommand;
-class Symbol;
+
 class BinaryParser;
 
 class LIEF_API BindingInfo : public Object {
@@ -42,7 +44,7 @@ class LIEF_API BindingInfo : public Object {
         int64_t addend = 0,
         int32_t oridnal = 0,
         bool is_weak = false,
-        bool is_non_weak_definition = false, uint64_t offset = 0);
+        bool is_non_weak_definition = false);
 
     BindingInfo& operator=(BindingInfo other);
     BindingInfo(const BindingInfo& other);
@@ -99,9 +101,6 @@ class LIEF_API BindingInfo : public Object {
       this->is_non_weak_definition_ = val;
     }
 
-    //! Original relative offset of the binding opcodes
-    uint64_t original_offset() const;
-
     virtual ~BindingInfo(void);
 
     bool operator==(const BindingInfo& rhs) const;
@@ -121,8 +120,7 @@ class LIEF_API BindingInfo : public Object {
     bool            is_weak_import_;
     bool            is_non_weak_definition_;
     DylibCommand*   library_{nullptr};
-    uint64_t        address_{0};
-    uint64_t        offset_{0};
+    uint64_t        address_;
 
 
 };

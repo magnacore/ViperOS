@@ -1,0 +1,184 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/asn1crypto-1.4.0-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/asn1crypto-1.4.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/asn1crypto-1.4.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/asn1crypto-1.4.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/asn1crypto-1.4.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/asn1crypto-1.4.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/asn1crypto-1.4.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/asn1crypto-1.4.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/asn1crypto/__init__.py",
+    "lib/python3.8/site-packages/asn1crypto/_errors.py",
+    "lib/python3.8/site-packages/asn1crypto/_inet.py",
+    "lib/python3.8/site-packages/asn1crypto/_int.py",
+    "lib/python3.8/site-packages/asn1crypto/_iri.py",
+    "lib/python3.8/site-packages/asn1crypto/_ordereddict.py",
+    "lib/python3.8/site-packages/asn1crypto/_teletex_codec.py",
+    "lib/python3.8/site-packages/asn1crypto/_types.py",
+    "lib/python3.8/site-packages/asn1crypto/algos.py",
+    "lib/python3.8/site-packages/asn1crypto/cms.py",
+    "lib/python3.8/site-packages/asn1crypto/core.py",
+    "lib/python3.8/site-packages/asn1crypto/crl.py",
+    "lib/python3.8/site-packages/asn1crypto/csr.py",
+    "lib/python3.8/site-packages/asn1crypto/keys.py",
+    "lib/python3.8/site-packages/asn1crypto/ocsp.py",
+    "lib/python3.8/site-packages/asn1crypto/parser.py",
+    "lib/python3.8/site-packages/asn1crypto/pdf.py",
+    "lib/python3.8/site-packages/asn1crypto/pem.py",
+    "lib/python3.8/site-packages/asn1crypto/pkcs12.py",
+    "lib/python3.8/site-packages/asn1crypto/tsp.py",
+    "lib/python3.8/site-packages/asn1crypto/util.py",
+    "lib/python3.8/site-packages/asn1crypto/version.py",
+    "lib/python3.8/site-packages/asn1crypto/x509.py",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/_errors.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/_inet.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/_int.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/_iri.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/_ordereddict.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/_teletex_codec.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/_types.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/algos.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/cms.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/core.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/crl.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/csr.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/keys.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/ocsp.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/parser.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/pdf.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/pem.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/pkcs12.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/tsp.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/util.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/version.cpython-38.pyc",
+    "lib/python3.8/site-packages/asn1crypto/__pycache__/x509.cpython-38.pyc"
+  ],
+  "fn": "asn1crypto-1.4.0-py_0.conda",
+  "legacy_bz2_md5": "853613e912b3af7f304a744767bb5280",
+  "legacy_bz2_size": 79271,
+  "license": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/asn1crypto-1.4.0-py_0",
+    "type": 1
+  },
+  "md5": "d36ab1e53d5b6e555761287f6a7d316e",
+  "name": "asn1crypto",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/asn1crypto-1.4.0-py_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/_errors.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/_inet.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/_int.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/_iri.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/_ordereddict.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/_teletex_codec.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/_types.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/algos.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/cms.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/core.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/crl.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/csr.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/keys.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/ocsp.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/parser.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/pdf.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/pem.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/pkcs12.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/tsp.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/util.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/version.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/asn1crypto/__pycache__/x509.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "asn1crypto==1.4.0=py_0",
+  "sha256": "e965333eb331bd4379e65516b838b517c4d1afdc12c6667127aad163d5a74ef4",
+  "size": 82008,
+  "subdir": "noarch",
+  "timestamp": 1596577668445,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/asn1crypto-1.4.0-py_0.conda",
+  "version": "1.4.0"
+}

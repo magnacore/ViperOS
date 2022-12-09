@@ -1,8 +1,6 @@
 #ifndef QT_QT3DEXTRAS_MODULE_H
 #define QT_QT3DEXTRAS_MODULE_H
 #include <Qt3DExtras/Qt3DExtrasDepends>
-#include "qabstractcameracontroller.h"
-#include "qabstractspritesheet.h"
 #include "qconegeometry.h"
 #include "qconemesh.h"
 #include "qcuboidgeometry.h"
@@ -11,7 +9,6 @@
 #include "qcylindermesh.h"
 #include "qdiffusemapmaterial.h"
 #include "qdiffusespecularmapmaterial.h"
-#include "qdiffusespecularmaterial.h"
 #include "qextrudedtextgeometry.h"
 #include "qextrudedtextmesh.h"
 #include "qfirstpersoncameracontroller.h"
@@ -31,9 +28,6 @@
 #include "qskyboxentity.h"
 #include "qspheregeometry.h"
 #include "qspheremesh.h"
-#include "qspritegrid.h"
-#include "qspritesheet.h"
-#include "qspritesheetitem.h"
 #include "qt3dwindow.h"
 #include "qtext2dentity.h"
 #include "qtexturedmetalroughmaterial.h"

@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,23 +17,28 @@
 #define LIEF_PE_EXPORT_H_
 
 #include <iostream>
+#include <vector>
 #include <string>
+#include <functional>
 
 #include "LIEF/Object.hpp"
 #include "LIEF/visibility.h"
 
 #include "LIEF/PE/type_traits.hpp"
+#include "LIEF/PE/Structures.hpp"
+#include "LIEF/PE/ExportEntry.hpp"
 
 namespace LIEF {
 namespace PE {
 
 class Builder;
 class Parser;
-struct pe_export_directory_table;
 
 class LIEF_API Export : public Object {
+
   friend class Builder;
   friend class Parser;
+
 
   public:
   Export(void);
@@ -42,14 +47,14 @@ class LIEF_API Export : public Object {
   Export& operator=(const Export&);
   virtual ~Export(void);
 
-  uint32_t                export_flags(void) const;
-  uint32_t                timestamp(void) const;
-  uint16_t                major_version(void) const;
-  uint16_t                minor_version(void) const;
-  uint32_t                ordinal_base(void) const;
-  const std::string&      name(void) const;
-  it_export_entries       entries(void);
-  it_const_export_entries entries(void) const;
+  uint32_t                      export_flags(void) const;
+  uint32_t                      timestamp(void) const;
+  uint16_t                      major_version(void) const;
+  uint16_t                      minor_version(void) const;
+  uint32_t                      ordinal_base(void) const;
+  const std::string&            name(void) const;
+  it_export_entries             entries(void);
+  it_const_export_entries       entries(void) const;
 
   void export_flags(uint32_t flags);
   void timestamp(uint32_t timestamp);

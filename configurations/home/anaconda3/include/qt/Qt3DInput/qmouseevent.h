@@ -49,7 +49,7 @@ QT_BEGIN_NAMESPACE
 
 namespace Qt3DInput {
 
-class Q_3DINPUTSHARED_EXPORT QMouseEvent : public QObject
+class QT3DINPUTSHARED_EXPORT QMouseEvent : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(int x READ x CONSTANT)
@@ -79,7 +79,6 @@ public:
         KeypadModifier = Qt::KeypadModifier
     };
     Q_ENUM(Modifiers) // LCOV_EXCL_LINE
-    // TO DO Qt6 Modifiers -> Modifier and add Q_FLAG(Modifiers)
 
     explicit QMouseEvent(const QT_PREPEND_NAMESPACE(QMouseEvent) &e);
     ~QMouseEvent();
@@ -108,7 +107,7 @@ private:
 typedef QSharedPointer<QMouseEvent> QMouseEventPtr;
 
 #if QT_CONFIG(wheelevent)
-class Q_3DINPUTSHARED_EXPORT QWheelEvent : public QObject
+class QT3DINPUTSHARED_EXPORT QWheelEvent : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(int x READ x CONSTANT)
@@ -137,13 +136,12 @@ public:
         KeypadModifier = Qt::KeypadModifier
     };
     Q_ENUM(Modifiers) // LCOV_EXCL_LINE
-    // TO DO Qt6 Modifiers -> Modifier and add Q_FLAG(Modifiers)
 
     explicit QWheelEvent(const QT_PREPEND_NAMESPACE(QWheelEvent) &e);
     ~QWheelEvent();
 
-    inline int x() const { return int(m_event.position().x()); }
-    inline int y() const { return int(m_event.position().y()); }
+    inline int x() const { return m_event.x(); }
+    inline int y() const { return m_event.y(); }
     inline QPoint angleDelta() const { return m_event.angleDelta(); }
     int buttons() const;
     Modifiers modifiers() const;

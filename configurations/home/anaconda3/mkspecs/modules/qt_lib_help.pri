@@ -1,4 +1,4 @@
-QT.help.VERSION = 5.15.2
+QT.help.VERSION = 5.9.7
 QT.help.name = QtHelp
 QT.help.module = Qt5Help
 QT.help.libs = $$QT_MODULE_LIB_BASE

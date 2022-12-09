@@ -7,11 +7,11 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) 1998 - 2022, Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) 1998 - 2020, Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
- * are also available at https://curl.se/docs/copyright.html.
+ * are also available at https://curl.haxx.se/docs/copyright.html.
  *
  * You may opt to use, copy, modify, merge, publish, distribute and/or sell
  * copies of the Software, and permit persons to whom the Software is
@@ -19,8 +19,6 @@
  *
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
- *
- * SPDX-License-Identifier: curl
  *
  ***************************************************************************/
 /*
@@ -75,9 +73,7 @@ typedef enum {
   CURLM_RECURSIVE_API_CALL, /* an api function was called from inside a
                                callback */
   CURLM_WAKEUP_FAILURE,  /* wakeup is unavailable or failed */
-  CURLM_BAD_FUNCTION_ARGUMENT, /* function called with a bad parameter */
-  CURLM_ABORTED_BY_CALLBACK,
-  CURLM_UNRECOVERABLE_POLL,
+  CURLM_BAD_FUNCTION_ARGUMENT,  /* function called with a bad parameter */
   CURLM_LAST
 } CURLMcode;
 
@@ -431,14 +427,12 @@ CURL_EXTERN CURLMcode curl_multi_assign(CURLM *multi_handle,
  * Name: curl_push_callback
  *
  * Desc: This callback gets called when a new stream is being pushed by the
- *       server. It approves or denies the new stream. It can also decide
- *       to completely fail the connection.
+ *       server. It approves or denies the new stream.
  *
- * Returns: CURL_PUSH_OK, CURL_PUSH_DENY or CURL_PUSH_ERROROUT
+ * Returns: CURL_PUSH_OK or CURL_PUSH_DENY.
  */
-#define CURL_PUSH_OK       0
-#define CURL_PUSH_DENY     1
-#define CURL_PUSH_ERROROUT 2 /* added in 7.72.0 */
+#define CURL_PUSH_OK   0
+#define CURL_PUSH_DENY 1
 
 struct curl_pushheaders;  /* forward declaration only */
 

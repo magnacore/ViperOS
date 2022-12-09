@@ -111,7 +111,7 @@ namespace QDBusPendingReplyTypes {
 template<typename T1 = void, typename T2 = void, typename T3 = void, typename T4 = void,
          typename T5 = void, typename T6 = void, typename T7 = void, typename T8 = void>
 class QDBusPendingReply:
-#ifdef Q_CLANG_QDOC
+#ifdef Q_QDOC
     public QDBusPendingCall
 #else
     public QDBusPendingReplyData
@@ -144,23 +144,13 @@ public:
 
     inline int count() const { return Count; }
 
-#if defined(Q_CLANG_QDOC)
+#if defined(Q_QDOC)
     QVariant argumentAt(int index) const;
 #else
     using QDBusPendingReplyData::argumentAt;
 #endif
 
-#ifndef Q_CLANG_QDOC
-    template<int Index> inline
-    const typename Select<Index>::Type argumentAt() const
-    {
-        Q_STATIC_ASSERT_X(Index >= 0 && Index < Count, "Index out of bounds");
-        typedef typename Select<Index>::Type ResultType;
-        return qdbus_cast<ResultType>(argumentAt(Index), nullptr);
-    }
-#endif
-
-#if defined(Q_CLANG_QDOC)
+#if defined(Q_QDOC)
     bool isFinished() const;
     void waitForFinished();
 
@@ -169,9 +159,18 @@ public:
     QDBusError error() const;
     QDBusMessage reply() const;
 
+    template<int Index> inline Type argumentAt() const;
     inline T1 value() const;
     inline operator T1() const;
 #else
+    template<int Index> inline
+    const typename Select<Index>::Type argumentAt() const
+    {
+        Q_STATIC_ASSERT_X(Index >= 0 && Index < Count, "Index out of bounds");
+        typedef typename Select<Index>::Type ResultType;
+        return qdbus_cast<ResultType>(argumentAt(Index), 0);
+    }
+
     inline typename Select<0>::Type value() const
     {
         return argumentAt<0>();

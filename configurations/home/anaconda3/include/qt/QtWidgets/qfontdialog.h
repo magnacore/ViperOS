@@ -72,8 +72,8 @@ public:
 
     Q_DECLARE_FLAGS(FontDialogOptions, FontDialogOption)
 
-    explicit QFontDialog(QWidget *parent = nullptr);
-    explicit QFontDialog(const QFont &initial, QWidget *parent = nullptr);
+    explicit QFontDialog(QWidget *parent = Q_NULLPTR);
+    explicit QFontDialog(const QFont &initial, QWidget *parent = Q_NULLPTR);
     ~QFontDialog();
 
     void setCurrentFont(const QFont &font);
@@ -89,10 +89,10 @@ public:
     using QDialog::open;
     void open(QObject *receiver, const char *member);
 
-    void setVisible(bool visible) override;
+    void setVisible(bool visible) Q_DECL_OVERRIDE;
 
-    static QFont getFont(bool *ok, QWidget *parent = nullptr);
-    static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = nullptr, const QString &title = QString(),
+    static QFont getFont(bool *ok, QWidget *parent = Q_NULLPTR);
+    static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = Q_NULLPTR, const QString &title = QString(),
                          FontDialogOptions options = FontDialogOptions());
 
 Q_SIGNALS:
@@ -100,9 +100,9 @@ Q_SIGNALS:
     void fontSelected(const QFont &font);
 
 protected:
-    void changeEvent(QEvent *event) override;
-    void done(int result) override;
-    bool eventFilter(QObject *object, QEvent *event) override;
+    void changeEvent(QEvent *event) Q_DECL_OVERRIDE;
+    void done(int result) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *object, QEvent *event) Q_DECL_OVERRIDE;
 
 private:
     Q_DISABLE_COPY(QFontDialog)

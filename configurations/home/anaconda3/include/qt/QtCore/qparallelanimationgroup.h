@@ -42,9 +42,10 @@
 
 #include <QtCore/qanimationgroup.h>
 
-QT_REQUIRE_CONFIG(animation);
-
 QT_BEGIN_NAMESPACE
+
+
+#ifndef QT_NO_ANIMATION
 
 class QParallelAnimationGroupPrivate;
 class Q_CORE_EXPORT QParallelAnimationGroup : public QAnimationGroup
@@ -52,24 +53,26 @@ class Q_CORE_EXPORT QParallelAnimationGroup : public QAnimationGroup
     Q_OBJECT
 
 public:
-    QParallelAnimationGroup(QObject *parent = nullptr);
+    QParallelAnimationGroup(QObject *parent = Q_NULLPTR);
     ~QParallelAnimationGroup();
 
-    int duration() const override;
+    int duration() const Q_DECL_OVERRIDE;
 
 protected:
     QParallelAnimationGroup(QParallelAnimationGroupPrivate &dd, QObject *parent);
-    bool event(QEvent *event) override;
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
 
-    void updateCurrentTime(int currentTime) override;
-    void updateState(QAbstractAnimation::State newState, QAbstractAnimation::State oldState) override;
-    void updateDirection(QAbstractAnimation::Direction direction) override;
+    void updateCurrentTime(int currentTime) Q_DECL_OVERRIDE;
+    void updateState(QAbstractAnimation::State newState, QAbstractAnimation::State oldState) Q_DECL_OVERRIDE;
+    void updateDirection(QAbstractAnimation::Direction direction) Q_DECL_OVERRIDE;
 
 private:
     Q_DISABLE_COPY(QParallelAnimationGroup)
     Q_DECLARE_PRIVATE(QParallelAnimationGroup)
     Q_PRIVATE_SLOT(d_func(), void _q_uncontrolledAnimationFinished())
 };
+
+#endif //QT_NO_ANIMATION
 
 QT_END_NAMESPACE
 

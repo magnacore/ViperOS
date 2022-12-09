@@ -51,7 +51,7 @@ class Q_LOCATION_EXPORT QGeoRoutingManagerEngine : public QObject
 {
     Q_OBJECT
 public:
-    explicit QGeoRoutingManagerEngine(const QVariantMap &parameters, QObject *parent = nullptr);
+    explicit QGeoRoutingManagerEngine(const QVariantMap &parameters, QObject *parent = Q_NULLPTR);
     virtual ~QGeoRoutingManagerEngine();
 
     QString managerName() const;

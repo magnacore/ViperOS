@@ -63,7 +63,7 @@ public:
         UnknownError
     };
 
-    explicit QGeoCodeReply(Error error, const QString &errorString, QObject *parent = nullptr);
+    explicit QGeoCodeReply(Error error, const QString &errorString, QObject *parent = Q_NULLPTR);
     virtual ~QGeoCodeReply();
 
     bool isFinished() const;
@@ -84,8 +84,7 @@ Q_SIGNALS:
     void error(QGeoCodeReply::Error error, const QString &errorString = QString());
 
 protected:
-    explicit QGeoCodeReply(QObject *parent = nullptr);
-    explicit QGeoCodeReply(QGeoCodeReplyPrivate &dd, QObject *parent = nullptr);
+    explicit QGeoCodeReply(QObject *parent = Q_NULLPTR);
 
     void setError(Error error, const QString &errorString);
     void setFinished(bool finished);
@@ -100,7 +99,6 @@ protected:
 private:
     QGeoCodeReplyPrivate *d_ptr;
     Q_DISABLE_COPY(QGeoCodeReply)
-    friend class QGeoCodeReplyPrivate;
 };
 
 QT_END_NAMESPACE

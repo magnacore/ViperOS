@@ -1,0 +1,26 @@
+{
+  "build": "pyhd3eb1b0_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "pyasn1 >=0.1.3",
+    "python"
+  ],
+  "features": "",
+  "fn": "rsa-4.7.2-pyhd3eb1b0_1.conda",
+  "legacy_bz2_md5": "45f93f7851c1420317c50d8919ebe52c",
+  "license": "Apache-2.0",
+  "license_family": "APACHE",
+  "md5": "4a7551a8d3da2725b6994751bad902f2",
+  "name": "rsa",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "43c65a3509dbb376093566f29122fa9bb0574f42324e941baff064a978db9c9b",
+  "size": 28511,
+  "subdir": "noarch",
+  "timestamp": 1614366267903,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/rsa-4.7.2-pyhd3eb1b0_1.conda",
+  "version": "4.7.2"
+}

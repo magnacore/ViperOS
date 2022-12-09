@@ -23,7 +23,7 @@
 # specified via XZ_OPT.
 xz='xz --format=auto'
 
-version='xzmore (XZ Utils) 5.2.6'
+version='xzmore (XZ Utils) 5.2.5'
 
 usage="Usage: ${0##*/} [OPTION]... [FILE]...
 Like 'more', but operate on the uncompressed contents of xz compressed FILEs.
@@ -31,8 +31,8 @@ Like 'more', but operate on the uncompressed contents of xz compressed FILEs.
 Report bugs to <lasse.collin@tukaani.org>."
 
 case $1 in
-	--help)    printf '%s\n' "$usage" || exit 2; exit;;
-	--version) printf '%s\n' "$version" || exit 2; exit;;
+	--help)    echo "$usage" || exit 2; exit;;
+	--version) echo "$version" || exit 2; exit;;
 esac
 
 oldtty=`stty -g 2>/dev/null`
@@ -50,7 +50,7 @@ fi
 
 if test $# = 0; then
 	if test -t 0; then
-		printf '%s\n' "$usage"; exit 1
+		echo "$usage"; exit 1
 	else
 		$xz -cdfq | eval "${PAGER:-more}"
 	fi
@@ -69,7 +69,7 @@ else
 			esac
 		fi
 		if test "$ANS" != 's'; then
-			printf '%s\n' "------> $FILE <------"
+			echo "------> $FILE <------"
 			$xz -cdfq -- "$FILE" | eval "${PAGER:-more}"
 		fi
 		if test -t 1; then

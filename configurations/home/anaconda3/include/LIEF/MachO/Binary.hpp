@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,30 @@
 #include "LIEF/Abstract/Binary.hpp"
 
 #include "LIEF/MachO/type_traits.hpp"
+#include "LIEF/MachO/Structures.hpp"
 #include "LIEF/MachO/Header.hpp"
+#include "LIEF/MachO/LoadCommand.hpp"
+#include "LIEF/MachO/SegmentCommand.hpp"
+#include "LIEF/MachO/DylibCommand.hpp"
+#include "LIEF/MachO/DylinkerCommand.hpp"
+#include "LIEF/MachO/UUIDCommand.hpp"
+#include "LIEF/MachO/Symbol.hpp"
+#include "LIEF/MachO/SymbolCommand.hpp"
+#include "LIEF/MachO/MainCommand.hpp"
+#include "LIEF/MachO/DynamicSymbolCommand.hpp"
+#include "LIEF/MachO/DyldInfo.hpp"
+#include "LIEF/MachO/FunctionStarts.hpp"
+#include "LIEF/MachO/SourceVersion.hpp"
+#include "LIEF/MachO/VersionMin.hpp"
+#include "LIEF/MachO/ThreadCommand.hpp"
+#include "LIEF/MachO/RPathCommand.hpp"
+#include "LIEF/MachO/CodeSignature.hpp"
+#include "LIEF/MachO/DataInCode.hpp"
+#include "LIEF/MachO/SegmentSplitInfo.hpp"
+#include "LIEF/MachO/SubFramework.hpp"
+#include "LIEF/MachO/DyldEnvironment.hpp"
+#include "LIEF/MachO/EncryptionInfo.hpp"
+#include "LIEF/MachO/BuildVersion.hpp"
 
 namespace LIEF {
 namespace MachO {
@@ -32,28 +55,6 @@ namespace MachO {
 class BinaryParser;
 class Builder;
 class DyldInfo;
-class BuildVersion;
-class EncryptionInfo;
-class DyldEnvironment;
-class SubFramework;
-class SegmentSplitInfo;
-class DataInCode;
-class CodeSignature;
-class RPathCommand;
-class ThreadCommand;
-class VersionMin;
-class SourceVersion;
-class FunctionStarts;
-class DynamicSymbolCommand;
-class MainCommand;
-class SymbolCommand;
-class Symbol;
-class UUIDCommand;
-class DylinkerCommand;
-class DylibCommand;
-class SegmentCommand;
-class LoadCommand;
-class Header;
 
 //! Class which represent a MachO binary
 class LIEF_API Binary : public LIEF::Binary  {
@@ -180,9 +181,6 @@ class LIEF_API Binary : public LIEF::Binary  {
   //! Return binary's imagebase. ``0`` if not relevant
   uint64_t imagebase(void) const;
 
-  //! Size of the binary in memory when mapped
-  uint64_t virtual_size(void) const;
-
   //! Return binary's loader (e.g. ``/usr/lib/dyld``)
   const std::string& loader(void) const;
 
@@ -276,15 +274,14 @@ class LIEF_API Binary : public LIEF::Binary  {
   //!
   //! @param[in] address Address to patch
   //! @param[in] patch_value Patch to apply
-  //! @param[in] addr_type Specify if the address should be used as an absolute virtual address or an RVA
   virtual void patch_address(uint64_t address, const std::vector<uint8_t>& patch_value, LIEF::Binary::VA_TYPES addr_type = LIEF::Binary::VA_TYPES::AUTO) override;
+
 
   //! Patch the address with the given value
   //!
   //! @param[in] address Address to patch
   //! @param[in] patch_value Patch to apply
   //! @param[in] size Size of the value in **bytes** (1, 2, ... 8)
-  //! @param[in] addr_type Specify if the address should be used as an absolute virtual address or an RVA
   virtual void patch_address(uint64_t address, uint64_t patch_value, size_t size = sizeof(uint64_t), LIEF::Binary::VA_TYPES addr_type = LIEF::Binary::VA_TYPES::AUTO) override;
 
   //! Return the content located at virtual address
@@ -382,19 +379,12 @@ class LIEF_API Binary : public LIEF::Binary  {
   DynamicSymbolCommand&       dynamic_symbol_command(void);
   const DynamicSymbolCommand& dynamic_symbol_command(void) const;
 
-  //! ``true`` if the binary is signed with `LC_CODE_SIGNATURE` command
+  //! ``true`` if the binary is signed.
   bool has_code_signature(void) const;
 
-  //! Return the MachO::CodeSignature
+  //! Return the MachO::Signature
   CodeSignature&       code_signature(void);
   const CodeSignature& code_signature(void) const;
-
-  //! ``true`` if the binary is signed with the command `DYLIB_CODE_SIGN_DRS`
-  bool has_code_signature_dir(void) const;
-
-  //! Return the MachO::CodeSignature
-  CodeSignature&       code_signature_dir(void);
-  const CodeSignature& code_signature_dir(void) const;
 
   //! ``true`` if the binaryhas a MachO::DataInCode command.
   bool has_data_in_code(void) const;

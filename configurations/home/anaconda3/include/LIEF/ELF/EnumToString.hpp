@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,7 +35,6 @@ LIEF_API const char* to_string(RELOC_i386 e);
 LIEF_API const char* to_string(RELOC_AARCH64 e);
 LIEF_API const char* to_string(RELOC_POWERPC32 e);
 LIEF_API const char* to_string(RELOC_POWERPC64 e);
-LIEF_API const char* to_string(RELOC_MIPS e);
 LIEF_API const char* to_string(ELF_CLASS e);
 LIEF_API const char* to_string(ELF_DATA e);
 LIEF_API const char* to_string(OS_ABI e);

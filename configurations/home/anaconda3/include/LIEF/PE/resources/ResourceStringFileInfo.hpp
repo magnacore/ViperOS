@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,11 +32,11 @@ namespace PE {
 class ResourcesManager;
 class ResourceVersion;
 
-//! Modelization of the ``StringFileInfo`` structure
+//! @brief Modelization of the ``StringFileInfo`` structure
 //!
 //! It contains version information that can be displayed for a particular language and code page.
 //!
-//! See: https://docs.microsoft.com/en-us/windows/win32/menurc/stringfileinfo
+//! See: https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms646989(v=vs.85).aspx
 class LIEF_API ResourceStringFileInfo : public Object {
 
   friend class ResourcesManager;
@@ -47,16 +47,16 @@ class LIEF_API ResourceStringFileInfo : public Object {
   ResourceStringFileInfo& operator=(const ResourceStringFileInfo&);
   virtual ~ResourceStringFileInfo(void);
 
-  //! The type of data in the version resource
+  //! @brief The type of data in the version resource
   //! * ``1`` if it contains text data
   //! * ``0`` if it contains binary data
   uint16_t type(void) const;
 
-  //! Signature of the structure:
+  //! @brief Signature of the structure:
   //! Must be the unicode string "StringFileInfo"
   const std::u16string& key(void) const;
 
-  //! List of the LangCodeItem items.
+  //! @brief List of the LangCodeItem items.
   //!
   //! Each LangCodeItem::key indicates the appropriate
   //! language and code page for displaying the ``key: value`` of

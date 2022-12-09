@@ -42,7 +42,7 @@
 
 #include <QtCore/QSharedDataPointer>
 #include <QtCore/QByteArray>
-#include <QtNfc/qtnfcglobal.h>
+#include <QtNfc/qnfcglobal.h>
 
 QT_BEGIN_NAMESPACE
 

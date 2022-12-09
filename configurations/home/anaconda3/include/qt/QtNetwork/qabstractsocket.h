@@ -120,8 +120,7 @@ public:
         MulticastLoopbackOption, // IP_MULTICAST_LOOPBACK
         TypeOfServiceOption, //IP_TOS
         SendBufferSizeSocketOption,    //SO_SNDBUF
-        ReceiveBufferSizeSocketOption,  //SO_RCVBUF
-        PathMtuSocketOption // IP_MTU
+        ReceiveBufferSizeSocketOption  //SO_RCVBUF
     };
     Q_ENUM(SocketOption)
     enum BindFlag {
@@ -155,10 +154,10 @@ public:
 
     bool isValid() const;
 
-    qint64 bytesAvailable() const override;
-    qint64 bytesToWrite() const override;
+    qint64 bytesAvailable() const Q_DECL_OVERRIDE;
+    qint64 bytesToWrite() const Q_DECL_OVERRIDE;
 
-    bool canReadLine() const override; // ### Qt6: remove me
+    bool canReadLine() const Q_DECL_OVERRIDE; // ### Qt6: remove me
 
     quint16 localPort() const;
     QHostAddress localAddress() const;
@@ -183,22 +182,20 @@ public:
     SocketError error() const;
 
     // from QIODevice
-    void close() override;
-    bool isSequential() const override;
-    bool atEnd() const override; // ### Qt6: remove me
+    void close() Q_DECL_OVERRIDE;
+    bool isSequential() const Q_DECL_OVERRIDE;
+    bool atEnd() const Q_DECL_OVERRIDE; // ### Qt6: remove me
     bool flush();
 
     // for synchronous access
     virtual bool waitForConnected(int msecs = 30000);
-    bool waitForReadyRead(int msecs = 30000) override;
-    bool waitForBytesWritten(int msecs = 30000) override;
+    bool waitForReadyRead(int msecs = 30000) Q_DECL_OVERRIDE;
+    bool waitForBytesWritten(int msecs = 30000) Q_DECL_OVERRIDE;
     virtual bool waitForDisconnected(int msecs = 30000);
 
 #ifndef QT_NO_NETWORKPROXY
     void setProxy(const QNetworkProxy &networkProxy);
     QNetworkProxy proxy() const;
-    QString protocolTag() const;
-    void setProtocolTag(const QString &tag);
 #endif
 
 Q_SIGNALS:
@@ -206,19 +203,15 @@ Q_SIGNALS:
     void connected();
     void disconnected();
     void stateChanged(QAbstractSocket::SocketState);
-#if QT_DEPRECATED_SINCE(5,15)
-    QT_DEPRECATED_NETWORK_API_5_15_X("Use QAbstractSocket::errorOccurred(QAbstractSocket::SocketError) instead")
     void error(QAbstractSocket::SocketError);
-#endif
-    void errorOccurred(QAbstractSocket::SocketError);
 #ifndef QT_NO_NETWORKPROXY
     void proxyAuthenticationRequired(const QNetworkProxy &proxy, QAuthenticator *authenticator);
 #endif
 
 protected:
-    qint64 readData(char *data, qint64 maxlen) override;
-    qint64 readLineData(char *data, qint64 maxlen) override;
-    qint64 writeData(const char *data, qint64 len) override;
+    qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE;
+    qint64 readLineData(char *data, qint64 maxlen) Q_DECL_OVERRIDE;
+    qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE;
 
     void setSocketState(SocketState state);
     void setSocketError(SocketError socketError);
@@ -228,7 +221,7 @@ protected:
     void setPeerAddress(const QHostAddress &address);
     void setPeerName(const QString &name);
 
-    QAbstractSocket(SocketType socketType, QAbstractSocketPrivate &dd, QObject *parent = nullptr);
+    QAbstractSocket(SocketType socketType, QAbstractSocketPrivate &dd, QObject *parent = Q_NULLPTR);
 
 private:
     Q_DECLARE_PRIVATE(QAbstractSocket)

@@ -1,0 +1,17 @@
+{
+  "paths": [
+    {
+      "_path": "share/conda-suggest/conda-forge.linux-64.map",
+      "path_type": "hardlink",
+      "sha256": "782ae9c1afed62cd9e58422b6b251fc70588a24e34a48879c82069b09f11badd",
+      "size_in_bytes": 451233
+    },
+    {
+      "_path": "share/conda-suggest/conda-forge.noarch.map",
+      "path_type": "hardlink",
+      "sha256": "aa78dbbd6d806a451d3ee12480db9d4ff4059b9645e1ec9971b741d1fc0fe1dc",
+      "size_in_bytes": 57569
+    }
+  ],
+  "paths_version": 1
+}

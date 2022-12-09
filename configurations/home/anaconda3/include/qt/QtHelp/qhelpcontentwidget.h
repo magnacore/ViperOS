@@ -50,6 +50,7 @@ QT_BEGIN_NAMESPACE
 
 
 class QHelpEnginePrivate;
+class QHelpDBReader;
 class QHelpContentItemPrivate;
 class QHelpContentModelPrivate;
 class QHelpEngine;
@@ -69,8 +70,8 @@ public:
     int childPosition(QHelpContentItem *child) const;
 
 private:
-    QHelpContentItem(const QString &name, const QUrl &link,
-                     QHelpContentItem *parent = nullptr);
+    QHelpContentItem(const QString &name, const QString &link,
+        QHelpDBReader *reader, QHelpContentItem *parent = Q_NULLPTR);
 
     QHelpContentItemPrivate *d;
     friend class QHelpContentProvider;
@@ -81,7 +82,7 @@ class QHELP_EXPORT QHelpContentModel : public QAbstractItemModel
     Q_OBJECT
 
 public:
-    ~QHelpContentModel() override;
+    ~QHelpContentModel();
 
     void createContents(const QString &customFilterName);
     QHelpContentItem *contentItemAt(const QModelIndex &index) const;
@@ -100,6 +101,7 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void insertContents();
+    void invalidateContents(bool onShutDown = false);
 
 private:
     QHelpContentModel(QHelpEnginePrivate *helpEngine);

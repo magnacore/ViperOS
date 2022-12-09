@@ -1,0 +1,90 @@
+{
+  "build": "pyhd3eb1b0_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/send2trash-1.5.0-pyhd3eb1b0_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/Send2Trash-1.5.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/Send2Trash-1.5.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/Send2Trash-1.5.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/Send2Trash-1.5.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/Send2Trash-1.5.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/Send2Trash-1.5.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/Send2Trash-1.5.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/Send2Trash-1.5.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/send2trash/__init__.py",
+    "lib/python3.8/site-packages/send2trash/compat.py",
+    "lib/python3.8/site-packages/send2trash/exceptions.py",
+    "lib/python3.8/site-packages/send2trash/plat_gio.py",
+    "lib/python3.8/site-packages/send2trash/plat_osx.py",
+    "lib/python3.8/site-packages/send2trash/plat_other.py",
+    "lib/python3.8/site-packages/send2trash/plat_win.py",
+    "lib/python3.8/site-packages/send2trash/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/send2trash/__pycache__/compat.cpython-38.pyc",
+    "lib/python3.8/site-packages/send2trash/__pycache__/exceptions.cpython-38.pyc",
+    "lib/python3.8/site-packages/send2trash/__pycache__/plat_gio.cpython-38.pyc",
+    "lib/python3.8/site-packages/send2trash/__pycache__/plat_osx.cpython-38.pyc",
+    "lib/python3.8/site-packages/send2trash/__pycache__/plat_other.cpython-38.pyc",
+    "lib/python3.8/site-packages/send2trash/__pycache__/plat_win.cpython-38.pyc"
+  ],
+  "fn": "send2trash-1.5.0-pyhd3eb1b0_1.conda",
+  "legacy_bz2_md5": "1e2697e4a68a4cbff22fe5890bb2e55d",
+  "legacy_bz2_size": 13981,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/send2trash-1.5.0-pyhd3eb1b0_1",
+    "type": 1
+  },
+  "md5": "0e7ec21f7c16d7119c0e465d8868a549",
+  "name": "send2trash",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/send2trash-1.5.0-pyhd3eb1b0_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/send2trash/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/send2trash/__pycache__/compat.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/send2trash/__pycache__/exceptions.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/send2trash/__pycache__/plat_gio.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/send2trash/__pycache__/plat_osx.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/send2trash/__pycache__/plat_other.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/send2trash/__pycache__/plat_win.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "send2trash==1.5.0=pyhd3eb1b0_1",
+  "sha256": "41d8e5680c79f2c1095b37b05125476557d34b49093df3190753df23246ccbdc",
+  "size": 13874,
+  "subdir": "noarch",
+  "timestamp": 1607525535403,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/send2trash-1.5.0-pyhd3eb1b0_1.conda",
+  "version": "1.5.0"
+}

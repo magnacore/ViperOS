@@ -116,19 +116,15 @@ public:
     void setColorFilter(ColorFilter filter);
     bool isColorFilterSupported(ColorFilter filter) const;
 
-protected:
-    ~QCameraImageProcessing();
-
 private:
     friend class QCamera;
     friend class QCameraPrivate;
     QCameraImageProcessing(QCamera *camera);
+    ~QCameraImageProcessing();
 
     Q_DISABLE_COPY(QCameraImageProcessing)
     Q_DECLARE_PRIVATE(QCameraImageProcessing)
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QCameraImageProcessingPrivate *d_ptr_deprecated;
-#endif
+    QCameraImageProcessingPrivate *d_ptr;
 };
 
 QT_END_NAMESPACE

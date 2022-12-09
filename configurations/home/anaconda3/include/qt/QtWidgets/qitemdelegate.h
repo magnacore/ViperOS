@@ -59,7 +59,7 @@ class Q_WIDGETS_EXPORT QItemDelegate : public QAbstractItemDelegate
     Q_PROPERTY(bool clipping READ hasClipping WRITE setClipping)
 
 public:
-    explicit QItemDelegate(QObject *parent = nullptr);
+    explicit QItemDelegate(QObject *parent = Q_NULLPTR);
     ~QItemDelegate();
 
     bool hasClipping() const;
@@ -68,21 +68,21 @@ public:
     // painting
     void paint(QPainter *painter,
                const QStyleOptionViewItem &option,
-               const QModelIndex &index) const override;
+               const QModelIndex &index) const Q_DECL_OVERRIDE;
     QSize sizeHint(const QStyleOptionViewItem &option,
-                   const QModelIndex &index) const override;
+                   const QModelIndex &index) const Q_DECL_OVERRIDE;
 
     // editing
     QWidget *createEditor(QWidget *parent,
                           const QStyleOptionViewItem &option,
-                          const QModelIndex &index) const override;
+                          const QModelIndex &index) const Q_DECL_OVERRIDE;
 
-    void setEditorData(QWidget *editor, const QModelIndex &index) const override;
-    void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override;
+    void setEditorData(QWidget *editor, const QModelIndex &index) const Q_DECL_OVERRIDE;
+    void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const Q_DECL_OVERRIDE;
 
     void updateEditorGeometry(QWidget *editor,
                               const QStyleOptionViewItem &option,
-                              const QModelIndex &index) const override;
+                              const QModelIndex &index) const Q_DECL_OVERRIDE;
 
     // editor factory
     QItemEditorFactory *itemEditorFactory() const;
@@ -105,20 +105,15 @@ protected:
 
     QRect rect(const QStyleOptionViewItem &option, const QModelIndex &index, int role) const;
 
-    bool eventFilter(QObject *object, QEvent *event) override;
+    bool eventFilter(QObject *object, QEvent *event) Q_DECL_OVERRIDE;
     bool editorEvent(QEvent *event, QAbstractItemModel *model,
-                     const QStyleOptionViewItem &option, const QModelIndex &index) override;
+                     const QStyleOptionViewItem &option, const QModelIndex &index) Q_DECL_OVERRIDE;
 
     QStyleOptionViewItem setOptions(const QModelIndex &index,
                                     const QStyleOptionViewItem &option) const;
 
     QPixmap decoration(const QStyleOptionViewItem &option, const QVariant &variant) const;
-
-#if QT_DEPRECATED_SINCE(5, 13)
-    QT_DEPRECATED_X("Use selectedPixmap() instead")
     QPixmap *selected(const QPixmap &pixmap, const QPalette &palette, bool enabled) const;
-#endif
-    static QPixmap selectedPixmap(const QPixmap &pixmap, const QPalette &palette, bool enabled);
 
     QRect doCheck(const QStyleOptionViewItem &option, const QRect &bounding,
                 const QVariant &variant) const;

@@ -40,7 +40,7 @@ QT_CHARTS_BEGIN_NAMESPACE
 
 class QDateTimeAxisPrivate;
 
-class Q_CHARTS_EXPORT QDateTimeAxis : public QAbstractAxis
+class QT_CHARTS_EXPORT QDateTimeAxis : public QAbstractAxis
 {
     Q_OBJECT
     Q_PROPERTY(int tickCount READ tickCount WRITE setTickCount NOTIFY tickCountChanged)
@@ -49,11 +49,11 @@ class Q_CHARTS_EXPORT QDateTimeAxis : public QAbstractAxis
     Q_PROPERTY(QString format READ format WRITE setFormat NOTIFY formatChanged)
 
 public:
-    explicit QDateTimeAxis(QObject *parent = nullptr);
+    explicit QDateTimeAxis(QObject *parent = Q_NULLPTR);
     ~QDateTimeAxis();
 
 protected:
-    QDateTimeAxis(QDateTimeAxisPrivate &d, QObject *parent = nullptr);
+    QDateTimeAxis(QDateTimeAxisPrivate &d, QObject *parent = Q_NULLPTR);
 
 public:
     AxisType type() const;

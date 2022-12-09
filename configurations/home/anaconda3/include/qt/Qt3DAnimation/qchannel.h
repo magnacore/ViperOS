@@ -51,7 +51,7 @@ namespace Qt3DAnimation {
 
 class QChannelPrivate;
 
-class Q_3DANIMATIONSHARED_EXPORT QChannel
+class QT3DANIMATIONSHARED_EXPORT QChannel
 {
 public:
     QChannel();
@@ -62,9 +62,6 @@ public:
 
     void setName(const QString &name);
     QString name() const;
-
-    void setJointIndex(int jointIndex);
-    int jointIndex() const;
 
     int channelComponentCount() const;
     void appendChannelComponent(const QChannelComponent &component);

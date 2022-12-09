@@ -1,0 +1,49 @@
+{
+  "build": "py38h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/certifi-2020.12.5-py38h06a4308_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/certifi-2020.12.5-py3.8.egg-info/PKG-INFO",
+    "lib/python3.8/site-packages/certifi-2020.12.5-py3.8.egg-info/SOURCES.txt",
+    "lib/python3.8/site-packages/certifi-2020.12.5-py3.8.egg-info/dependency_links.txt",
+    "lib/python3.8/site-packages/certifi-2020.12.5-py3.8.egg-info/installed-files.txt",
+    "lib/python3.8/site-packages/certifi-2020.12.5-py3.8.egg-info/not-zip-safe",
+    "lib/python3.8/site-packages/certifi-2020.12.5-py3.8.egg-info/top_level.txt",
+    "lib/python3.8/site-packages/certifi/__init__.py",
+    "lib/python3.8/site-packages/certifi/__main__.py",
+    "lib/python3.8/site-packages/certifi/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/certifi/__pycache__/__main__.cpython-38.pyc",
+    "lib/python3.8/site-packages/certifi/__pycache__/core.cpython-38.pyc",
+    "lib/python3.8/site-packages/certifi/cacert.pem",
+    "lib/python3.8/site-packages/certifi/core.py"
+  ],
+  "fn": "certifi-2020.12.5-py38h06a4308_0.conda",
+  "legacy_bz2_md5": "e756e50071490addcb191e409946c60e",
+  "legacy_bz2_size": 146592,
+  "license": "ISC",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/certifi-2020.12.5-py38h06a4308_0",
+    "type": 1
+  },
+  "md5": "a0284d282349498e5e88dd3be1a4b61d",
+  "name": "certifi",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/certifi-2020.12.5-py38h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "certifi==2020.12.5=py38h06a4308_0",
+  "sha256": "3ada7feea92eada57161fe8b6b32399d15ada9c4f29c5d2818f84502b9505920",
+  "size": 144178,
+  "subdir": "linux-64",
+  "timestamp": 1607365752742,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/certifi-2020.12.5-py38h06a4308_0.conda",
+  "version": "2020.12.5"
+}

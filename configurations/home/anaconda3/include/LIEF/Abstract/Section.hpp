@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@
 
 #include <string>
 #include <vector>
+#include <memory>
 #include <iostream>
 
 #include "LIEF/types.hpp"
@@ -27,79 +28,80 @@
 namespace LIEF {
 class LIEF_API Section : public Object {
   public:
-  static constexpr size_t npos = -1;
 
-  Section(void);
-  Section(const std::string& name);
+    static constexpr size_t npos = -1;
 
-  virtual ~Section(void);
+    Section(void);
+    Section(const std::string& name);
 
-  Section& operator=(const Section&);
-  Section(const Section&);
+    virtual ~Section(void);
 
-  //! @brief section's name
-  virtual std::string name(void) const;
+    Section& operator=(const Section&);
+    Section(const Section&);
 
-  //! @brief section's content
-  virtual std::vector<uint8_t> content(void) const;
+    //! @brief section's name
+    virtual const std::string& name(void) const;
 
-  //! @brief section's size (size in the binary)
-  virtual void size(uint64_t size);
+    //! @brief section's content
+    virtual std::vector<uint8_t> content(void) const;
 
-  //! @brief section's size (size in the binary)
-  virtual uint64_t size(void) const;
+    //! @brief section's size (size in the binary)
+    virtual void size(uint64_t size);
 
-  //! @brief offset in the binary
-  virtual uint64_t offset(void) const;
+    //! @brief section's size (size in the binary)
+    virtual uint64_t size(void) const;
 
-  //! @brief Address where the section should be mapped
-  virtual uint64_t virtual_address(void) const;
+    //! @brief offset in the binary
+    virtual uint64_t offset(void) const;
 
-  virtual void virtual_address(uint64_t virtual_address);
+    //! @brief Address where the section should be mapped
+    virtual uint64_t virtual_address(void) const;
 
-  //! @brief Set the section's name
-  virtual void name(const std::string& name);
+    virtual void virtual_address(uint64_t virtual_address);
 
-  //! @brief Set section content
-  virtual void content(const std::vector<uint8_t>& data);
+    //! @brief Set the section's name
+    virtual void name(const std::string& name);
 
-  virtual void offset(uint64_t offset);
+    //! @brief Set section content
+    virtual void content(const std::vector<uint8_t>& data);
 
-  //! @brief Section's entropy
-  double entropy(void) const;
+    virtual void offset(uint64_t offset);
 
-  // Search functions
-  // ================
-  size_t search(uint64_t integer, size_t pos, size_t size) const;
-  size_t search(const std::vector<uint8_t>& pattern, size_t pos = 0) const;
-  size_t search(const std::string& pattern, size_t pos = 0) const;
-  size_t search(uint64_t integer, size_t pos = 0) const;
+    //! @brief Section's entropy
+    double entropy(void) const;
 
-  // Search all functions
-  // ====================
-  std::vector<size_t> search_all(uint64_t v, size_t size) const;
+    // Search functions
+    // ================
+    size_t search(uint64_t integer, size_t pos, size_t size) const;
+    size_t search(const std::vector<uint8_t>& pattern, size_t pos = 0) const;
+    size_t search(const std::string& pattern, size_t pos = 0) const;
+    size_t search(uint64_t integer, size_t pos = 0) const;
 
-  std::vector<size_t> search_all(uint64_t v) const;
+    // Search all functions
+    // ====================
+    std::vector<size_t> search_all(uint64_t v, size_t size) const;
 
-  std::vector<size_t> search_all(const std::string& v) const;
+    std::vector<size_t> search_all(uint64_t v) const;
 
-  //! @brief Method so that the ``visitor`` can visit us
-  virtual void accept(Visitor& visitor) const override;
+    std::vector<size_t> search_all(const std::string& v) const;
 
-  bool operator==(const Section& rhs) const;
-  bool operator!=(const Section& rhs) const;
+    //! @brief Method so that the ``visitor`` can visit us
+    virtual void accept(Visitor& visitor) const override;
 
-  LIEF_API friend std::ostream& operator<<(std::ostream& os, const Section& entry);
+    bool operator==(const Section& rhs) const;
+    bool operator!=(const Section& rhs) const;
+
+    LIEF_API friend std::ostream& operator<<(std::ostream& os, const Section& entry);
 
   protected:
-  std::string name_;
-  uint64_t    virtual_address_;
-  uint64_t    size_;
-  uint64_t    offset_;
+    std::string name_;
+    uint64_t    virtual_address_;
+    uint64_t    size_;
+    uint64_t    offset_;
 
   private:
-  template<typename T>
-  std::vector<size_t> search_all_(const T& v) const;
+    template<typename T>
+    std::vector<size_t> search_all_(const T& v) const;
 
 
 };

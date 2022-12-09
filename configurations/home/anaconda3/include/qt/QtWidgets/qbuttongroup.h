@@ -57,7 +57,7 @@ class Q_WIDGETS_EXPORT QButtonGroup : public QObject
 
     Q_PROPERTY(bool exclusive READ exclusive WRITE setExclusive)
 public:
-    explicit QButtonGroup(QObject *parent = nullptr);
+    explicit QButtonGroup(QObject *parent = Q_NULLPTR);
     ~QButtonGroup();
 
     void setExclusive(bool);
@@ -78,23 +78,13 @@ public:
 
 Q_SIGNALS:
     void buttonClicked(QAbstractButton *);
-    void buttonPressed(QAbstractButton *);
-    void buttonReleased(QAbstractButton *);
-    void buttonToggled(QAbstractButton *, bool);
-    void idClicked(int);
-    void idPressed(int);
-    void idReleased(int);
-    void idToggled(int, bool);
-#if QT_DEPRECATED_SINCE(5, 15)
-    QT_DEPRECATED_VERSION_X_5_15("Use QButtonGroup::idClicked(int) instead")
     void buttonClicked(int);
-    QT_DEPRECATED_VERSION_X_5_15("Use QButtonGroup::idPressed(int) instead")
+    void buttonPressed(QAbstractButton *);
     void buttonPressed(int);
-    QT_DEPRECATED_VERSION_X_5_15("Use QButtonGroup::idReleased(int) instead")
+    void buttonReleased(QAbstractButton *);
     void buttonReleased(int);
-    QT_DEPRECATED_VERSION_X_5_15("Use QButtonGroup::idToggled(int, bool) instead")
+    void buttonToggled(QAbstractButton *, bool);
     void buttonToggled(int, bool);
-#endif
 
 private:
     Q_DISABLE_COPY(QButtonGroup)

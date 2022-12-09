@@ -67,16 +67,18 @@ public:
     QPalette(const QPalette &palette);
     ~QPalette();
     QPalette &operator=(const QPalette &palette);
-    QPalette(QPalette &&other) noexcept
+#ifdef Q_COMPILER_RVALUE_REFS
+    QPalette(QPalette &&other) Q_DECL_NOTHROW
         : d(other.d), data(other.data)
-    { other.d = nullptr; }
-    inline QPalette &operator=(QPalette &&other) noexcept
+    { other.d = Q_NULLPTR; }
+    inline QPalette &operator=(QPalette &&other) Q_DECL_NOEXCEPT
     {
         for_faster_swapping_dont_use = other.for_faster_swapping_dont_use;
         qSwap(d, other.d); return *this;
     }
+#endif
 
-    void swap(QPalette &other) noexcept
+    void swap(QPalette &other) Q_DECL_NOEXCEPT
     {
         qSwap(d, other.d);
         qSwap(for_faster_swapping_dont_use, other.for_faster_swapping_dont_use);
@@ -94,12 +96,8 @@ public:
                      AlternateBase,
                      NoRole,
                      ToolTipBase, ToolTipText,
-                     PlaceholderText,
-                     NColorRoles = PlaceholderText + 1,
-#if QT_DEPRECATED_SINCE(5, 13)
-                     Foreground Q_DECL_ENUMERATOR_DEPRECATED_X("Use QPalette::WindowText instead") = WindowText,
-                     Background Q_DECL_ENUMERATOR_DEPRECATED_X("Use QPalette::Window instead") = Window
-#endif
+                     NColorRoles = ToolTipText + 1,
+                     Foreground = WindowText, Background = Window
                    };
     Q_ENUM(ColorRole)
 
@@ -122,6 +120,7 @@ public:
 
     inline const QColor &color(ColorRole cr) const { return color(Current, cr); }
     inline const QBrush &brush(ColorRole cr) const { return brush(Current, cr); }
+    inline const QBrush &foreground() const { return brush(WindowText); }
     inline const QBrush &windowText() const { return brush(WindowText); }
     inline const QBrush &button() const { return brush(Button); }
     inline const QBrush &light() const { return brush(Light); }
@@ -132,6 +131,7 @@ public:
     inline const QBrush &alternateBase() const { return brush(AlternateBase); }
     inline const QBrush &toolTipBase() const { return brush(ToolTipBase); }
     inline const QBrush &toolTipText() const { return brush(ToolTipText); }
+    inline const QBrush &background() const { return brush(Window); }
     inline const QBrush &window() const { return brush(Window); }
     inline const QBrush &midlight() const { return brush(Midlight); }
     inline const QBrush &brightText() const { return brush(BrightText); }
@@ -141,13 +141,6 @@ public:
     inline const QBrush &highlightedText() const { return brush(HighlightedText); }
     inline const QBrush &link() const { return brush(Link); }
     inline const QBrush &linkVisited() const { return brush(LinkVisited); }
-    inline const QBrush &placeholderText() const { return brush(PlaceholderText); }
-#if QT_DEPRECATED_SINCE(5, 13)
-    QT_DEPRECATED_X("Use QPalette::windowText() instead")
-    inline const QBrush &foreground() const { return windowText(); }
-    QT_DEPRECATED_X("Use QPalette::window() instead")
-    inline const QBrush &background() const { return window(); }
-#endif
 
     bool operator==(const QPalette &p) const;
     inline bool operator!=(const QPalette &p) const { return !(operator==(p)); }

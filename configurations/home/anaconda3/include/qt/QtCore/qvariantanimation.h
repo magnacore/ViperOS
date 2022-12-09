@@ -46,9 +46,10 @@
 #include <QtCore/qvariant.h>
 #include <QtCore/qpair.h>
 
-QT_REQUIRE_CONFIG(animation);
-
 QT_BEGIN_NAMESPACE
+
+
+#ifndef QT_NO_ANIMATION
 
 class QVariantAnimationPrivate;
 class Q_CORE_EXPORT QVariantAnimation : public QAbstractAnimation
@@ -64,7 +65,7 @@ public:
     typedef QPair<qreal, QVariant> KeyValue;
     typedef QVector<KeyValue> KeyValues;
 
-    QVariantAnimation(QObject *parent = nullptr);
+    QVariantAnimation(QObject *parent = Q_NULLPTR);
     ~QVariantAnimation();
 
     QVariant startValue() const;
@@ -81,7 +82,7 @@ public:
 
     QVariant currentValue() const;
 
-    int duration() const override;
+    int duration() const Q_DECL_OVERRIDE;
     void setDuration(int msecs);
 
     QEasingCurve easingCurve() const;
@@ -93,11 +94,11 @@ Q_SIGNALS:
     void valueChanged(const QVariant &value);
 
 protected:
-    QVariantAnimation(QVariantAnimationPrivate &dd, QObject *parent = nullptr);
-    bool event(QEvent *event) override;
+    QVariantAnimation(QVariantAnimationPrivate &dd, QObject *parent = Q_NULLPTR);
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
 
-    void updateCurrentTime(int) override;
-    void updateState(QAbstractAnimation::State newState, QAbstractAnimation::State oldState) override;
+    void updateCurrentTime(int) Q_DECL_OVERRIDE;
+    void updateState(QAbstractAnimation::State newState, QAbstractAnimation::State oldState) Q_DECL_OVERRIDE;
 
     virtual void updateCurrentValue(const QVariant &value);
     virtual QVariant interpolated(const QVariant &from, const QVariant &to, qreal progress) const;
@@ -112,8 +113,10 @@ private:
 
 template <typename T>
 void qRegisterAnimationInterpolator(QVariant (*func)(const T &from, const T &to, qreal progress)) {
-    QVariantAnimation::registerInterpolator(reinterpret_cast<QVariantAnimation::Interpolator>(reinterpret_cast<void(*)()>(func)), qMetaTypeId<T>());
+    QVariantAnimation::registerInterpolator(reinterpret_cast<QVariantAnimation::Interpolator>(func), qMetaTypeId<T>());
 }
+
+#endif //QT_NO_ANIMATION
 
 QT_END_NAMESPACE
 

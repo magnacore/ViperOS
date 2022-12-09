@@ -67,10 +67,12 @@ public:
     QNetworkCacheMetaData(const QNetworkCacheMetaData &other);
     ~QNetworkCacheMetaData();
 
-    QNetworkCacheMetaData &operator=(QNetworkCacheMetaData &&other) noexcept { swap(other); return *this; }
+#ifdef Q_COMPILER_RVALUE_REFS
+    QNetworkCacheMetaData &operator=(QNetworkCacheMetaData &&other) Q_DECL_NOTHROW { swap(other); return *this; }
+#endif
     QNetworkCacheMetaData &operator=(const QNetworkCacheMetaData &other);
 
-    void swap(QNetworkCacheMetaData &other) noexcept
+    void swap(QNetworkCacheMetaData &other) Q_DECL_NOTHROW
     { qSwap(d, other.d); }
 
     bool operator==(const QNetworkCacheMetaData &other) const;
@@ -129,7 +131,7 @@ public Q_SLOTS:
     virtual void clear() = 0;
 
 protected:
-    explicit QAbstractNetworkCache(QObject *parent = nullptr);
+    explicit QAbstractNetworkCache(QObject *parent = Q_NULLPTR);
     QAbstractNetworkCache(QAbstractNetworkCachePrivate &dd, QObject *parent);
 
 private:

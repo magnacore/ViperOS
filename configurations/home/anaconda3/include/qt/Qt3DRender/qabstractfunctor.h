@@ -62,21 +62,21 @@ struct FunctorType
 };
 
 template<class T>
-Q3D_DECL_DEPRECATED qintptr functorTypeId()
+qintptr functorTypeId()
 {
     return reinterpret_cast<qintptr>(&FunctorType<T>::id);
 }
 
 #define QT3D_FUNCTOR(Class)                     \
-   qintptr id() const override {         \
+   qintptr id() const Q_DECL_OVERRIDE {         \
         return Qt3DRender::functorTypeId<Class>();    \
    }
 
 
-class Q_3DRENDERSHARED_EXPORT QAbstractFunctor
+class QT3DRENDERSHARED_EXPORT QAbstractFunctor
 {
 public:
-    Q3D_DECL_DEPRECATED QAbstractFunctor() = default;
+    QAbstractFunctor() = default;
     virtual ~QAbstractFunctor();
     virtual qintptr id() const = 0;
 

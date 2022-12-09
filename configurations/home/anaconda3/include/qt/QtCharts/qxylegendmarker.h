@@ -38,11 +38,11 @@ QT_CHARTS_BEGIN_NAMESPACE
 
 class QXYLegendMarkerPrivate;
 
-class Q_CHARTS_EXPORT QXYLegendMarker : public QLegendMarker
+class QT_CHARTS_EXPORT QXYLegendMarker : public QLegendMarker
 {
     Q_OBJECT
 public:
-    explicit QXYLegendMarker(QXYSeries *series, QLegend *legend, QObject *parent = nullptr);
+    explicit QXYLegendMarker(QXYSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR);
     virtual ~QXYLegendMarker();
 
     virtual LegendMarkerType type() { return LegendMarkerTypeXY; }
@@ -51,7 +51,7 @@ public:
     virtual QXYSeries* series();
 
 protected:
-    QXYLegendMarker(QXYLegendMarkerPrivate &d, QObject *parent = nullptr);
+    QXYLegendMarker(QXYLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR);
 
 private:
     Q_DECLARE_PRIVATE(QXYLegendMarker)

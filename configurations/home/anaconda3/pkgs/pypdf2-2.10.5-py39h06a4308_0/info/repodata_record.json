@@ -1,0 +1,26 @@
+{
+  "arch": "x86_64",
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0",
+    "typing_extensions >=3.10"
+  ],
+  "features": "",
+  "fn": "pypdf2-2.10.5-py39h06a4308_0.conda",
+  "legacy_bz2_md5": "6383c7c5ef0a8f6f1cfe599c8b1b38f1",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "5dedd9128b64fa44e85a8d23113b5b30",
+  "name": "pypdf2",
+  "platform": "linux",
+  "sha256": "bee8c484cda1b16d4fc9676a4ad2f945992e48e628f9a1e600b367203454884a",
+  "size": 366140,
+  "subdir": "linux-64",
+  "timestamp": 1662469803867,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pypdf2-2.10.5-py39h06a4308_0.conda",
+  "version": "2.10.5"
+}

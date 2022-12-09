@@ -49,7 +49,7 @@ enum _LIEF_EN(VERSION) {
 /**
  * @brief Machine architectures
  * See current registered ELF machine architectures at:
- * http://www.sco.com/developers/gabi/latest/ch4.eheader.html
+ * http://www.uxsglobal.com/developers/gabi/latest/ch4.eheader.html
  */
 enum _LIEF_EN(ARCH) {
   _LIEF_EI(EM_NONE)          = 0,  /**< No machine */
@@ -232,8 +232,7 @@ enum _LIEF_EN(ARCH) {
   _LIEF_EI(EM_COOL)          = 217, /**< iCelero CoolEngine */
   _LIEF_EI(EM_NORC)          = 218, /**< Nanoradio Optimized RISC */
   _LIEF_EI(EM_CSR_KALIMBA)   = 219, /**< CSR Kalimba architecture family */
-  _LIEF_EI(EM_AMDGPU)        = 224, /**< AMD GPU architecture */
-  _LIEF_EI(EM_BPF)           = 247  /**< eBPF Filter */
+  _LIEF_EI(EM_AMDGPU)        = 224  /**< AMD GPU architecture */
 };
 
 
@@ -472,10 +471,6 @@ enum _LIEF_EN(ELF_SECTION_TYPES) {
   _LIEF_EI(SHT_GROUP)               = 17, /**< Section group. */
   _LIEF_EI(SHT_SYMTAB_SHNDX)        = 18, /**< Indices for SHN_XINDEX entries. */
   _LIEF_EI(SHT_LOOS)                = 0x60000000, /**< Lowest operating system-specific type. */
-  _LIEF_EI(SHT_ANDROID_REL)         = 0x60000001, /**< Packed relocations (Android specific). */
-  _LIEF_EI(SHT_ANDROID_RELA)        = 0x60000002, /**< Packed relocations (Android specific). */
-  _LIEF_EI(SHT_LLVM_ADDRSIG)        = 0x6fff4c03, /**< This section is used to mark symbols as address-significant. */
-  _LIEF_EI(SHT_RELR)                = 0x6fffff00, /**< New relr relocations (Android specific). */
   _LIEF_EI(SHT_GNU_ATTRIBUTES)      = 0x6ffffff5, /**< Object attributes. */
   _LIEF_EI(SHT_GNU_HASH)            = 0x6ffffff6, /**< GNU-style hash table. */
   _LIEF_EI(SHT_GNU_verdef)          = 0x6ffffffd, /**< GNU version definitions. */
@@ -622,7 +617,6 @@ enum _LIEF_EN(SEGMENT_TYPES) {
   _LIEF_EI(PT_SUNW_UNWIND)   = 0x6464e550,
 
   _LIEF_EI(PT_GNU_STACK)     = 0x6474e551, /**< Indicates stack executability. */
-  _LIEF_EI(PT_GNU_PROPERTY)  = 0x6474e553, /**< GNU property */
   _LIEF_EI(PT_GNU_RELRO)     = 0x6474e552, /**< Read-only after relocation. */
 
   /* ARM program header types. */
@@ -750,19 +744,7 @@ enum _LIEF_EN(DYNAMIC_TAGS) {
   _LIEF_EI(DT_MIPS_GP_VALUE)              = 0x70000030, /**< GP value for auxiliary GOTs. */
   _LIEF_EI(DT_MIPS_AUX_DYNAMIC)           = 0x70000031, /**< Address of auxiliary .dynamic. */
   _LIEF_EI(DT_MIPS_PLTGOT)                = 0x70000032, /**< Address of the base of the PLTGOT. */
-  _LIEF_EI(DT_MIPS_RWPLT)                 = 0x70000034, /**< Points to the base of a writable PLT. */
-
-  /* Android specific dynamic table entry tags. */
-  _LIEF_EI(DT_ANDROID_REL_OFFSET)         = 0x6000000D, /**< The offset of packed relocation data (older version < M) (Android specific). */
-  _LIEF_EI(DT_ANDROID_REL_SIZE)           = 0x6000000E, /**< The size of packed relocation data in bytes (older version < M) (Android specific). */
-  _LIEF_EI(DT_ANDROID_REL)                = 0x6000000F, /**< The offset of packed relocation data (Android specific). */
-  _LIEF_EI(DT_ANDROID_RELSZ)              = 0x60000010, /**< The size of packed relocation data in bytes (Android specific). */
-  _LIEF_EI(DT_ANDROID_RELA)               = 0x60000011, /**< The offset of packed relocation data (Android specific). */
-  _LIEF_EI(DT_ANDROID_RELASZ)             = 0x60000012, /**< The size of packed relocation data in bytes (Android specific). */
-  _LIEF_EI(DT_RELR)                       = 0x6FFFE000, /**< The offset of new relr relocation data (Android specific). */
-  _LIEF_EI(DT_RELRSZ)                     = 0x6FFFE001, /**< The size of nre relr relocation data in bytes (Android specific). */
-  _LIEF_EI(DT_RELRENT)                    = 0x6FFFE003, /**< The size of a new relr relocation entry (Android specific). */
-  _LIEF_EI(DT_RELRCOUNT)                  = 0x6FFFE005 /**< Specifies the relative count of new relr relocation entries (Android specific). */
+  _LIEF_EI(DT_MIPS_RWPLT)                 = 0x70000034  /**< Points to the base of a writable PLT. */
 };
 
 /** DT_FLAGS and DT_FLAGS_1 values. */
@@ -800,8 +782,7 @@ enum _LIEF_EN(DYNAMIC_FLAGS_1) {
   _LIEF_EI(DF_1_NORELOC)    = 0x00400000,
   _LIEF_EI(DF_1_SYMINTPOSE) = 0x00800000, /**< Object has individual interposers. */
   _LIEF_EI(DF_1_GLOBAUDIT)  = 0x01000000, /**< Global auditing required. */
-  _LIEF_EI(DF_1_SINGLETON)  = 0x02000000,  /**< Singleton symbols are used. */
-  _LIEF_EI(DF_1_PIE)        = 0x08000000  /**< Singleton symbols are used. */
+  _LIEF_EI(DF_1_SINGLETON)  = 0x02000000  /**< Singleton symbols are used. */
 };
 
 /* DT_MIPS_FLAGS values. */
@@ -957,7 +938,7 @@ enum _LIEF_EN(NOTE_TYPES_CORE) {
 
 
 enum _LIEF_EN(NOTE_ABIS) {
-  _LIEF_EI(ELF_NOTE_UNKNOWN)     = ~(unsigned int)(0),
+  _LIEF_EI(ELF_NOTE_UNKNOWN)     = -1u,
   _LIEF_EI(ELF_NOTE_OS_LINUX)    = 0,
   _LIEF_EI(ELF_NOTE_OS_GNU)      = 1,
   _LIEF_EI(ELF_NOTE_OS_SOLARIS2) = 2,

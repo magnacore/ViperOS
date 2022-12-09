@@ -48,7 +48,7 @@ QT_BEGIN_NAMESPACE
 
 namespace Qt3DRender {
 
-class Q_3DRENDERSHARED_EXPORT QBufferDataGenerator : public QAbstractFunctor
+class QT3DRENDERSHARED_EXPORT QBufferDataGenerator : public QAbstractFunctor
 {
 public:
     virtual ~QBufferDataGenerator() {}

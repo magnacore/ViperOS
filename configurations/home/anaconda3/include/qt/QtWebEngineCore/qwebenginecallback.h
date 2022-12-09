@@ -54,7 +54,7 @@ QT_BEGIN_NAMESPACE
 
 namespace QtWebEnginePrivate {
 
-template<typename T>
+template <typename T>
 class QWebEngineCallbackPrivateBase : public QSharedData {
 public:
     QWebEngineCallbackPrivateBase() {}
@@ -62,39 +62,41 @@ public:
     virtual void operator()(T) = 0;
 };
 
-template<typename T, typename F>
+template <typename T, typename F>
 class QWebEngineCallbackPrivate : public QWebEngineCallbackPrivateBase<T> {
 public:
-    QWebEngineCallbackPrivate(F callable) : m_callable(callable) {}
+    QWebEngineCallbackPrivate(F callable)
+        : m_callable(callable)
+    {}
     void operator()(T value) override { m_callable(value); }
-
 private:
     F m_callable;
 };
 
 } // namespace QtWebEnginePrivate
 
-template<typename T>
+template <typename T>
 class QWebEngineCallback {
 public:
-    template<typename F>
+    template <typename F>
     QWebEngineCallback(F f)
         : d(new QtWebEnginePrivate::QWebEngineCallbackPrivate<T, F>(f))
-    {}
-    QWebEngineCallback() {}
+    { }
+    QWebEngineCallback() { }
     void swap(QWebEngineCallback &other) Q_DECL_NOTHROW { qSwap(d, other.d); }
     operator bool() const { return d; }
-
 private:
     friend class QtWebEngineCore::CallbackDirectory;
-    QExplicitlySharedDataPointer<QtWebEnginePrivate::QWebEngineCallbackPrivateBase<T>> d;
+    QExplicitlySharedDataPointer<QtWebEnginePrivate::QWebEngineCallbackPrivateBase<T> > d;
 };
 
 Q_DECLARE_SHARED(QWebEngineCallback<int>)
 Q_DECLARE_SHARED(QWebEngineCallback<const QByteArray &>)
+#if QT_VERSION >= QT_VERSION_CHECK(5,6,0)
 Q_DECLARE_SHARED_NOT_MOVABLE_UNTIL_QT6(QWebEngineCallback<bool>)
 Q_DECLARE_SHARED_NOT_MOVABLE_UNTIL_QT6(QWebEngineCallback<const QString &>)
 Q_DECLARE_SHARED_NOT_MOVABLE_UNTIL_QT6(QWebEngineCallback<const QVariant &>)
+#endif
 
 QT_END_NAMESPACE
 

@@ -37,8 +37,8 @@
 **
 ****************************************************************************/
 
-#ifndef QCOCOAWINDOWFUNCTIONS_H
-#define QCOCOAWINDOWFUNCTIONS_H
+#ifndef QXCBWINDOWFUNCTIONS_H
+#define QXCBWINDOWFUNCTIONS_H
 
 #include <QtPlatformHeaders/QPlatformHeaderHelper>
 
@@ -60,4 +60,4 @@ public:
 
 QT_END_NAMESPACE
 
-#endif // QCOCOAWINDOWFUNCTIONS_H
+#endif // QXCBWINDOWFUNCTIONS_H

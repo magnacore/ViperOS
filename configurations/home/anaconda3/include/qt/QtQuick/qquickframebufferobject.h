@@ -44,12 +44,10 @@
 
 QT_BEGIN_NAMESPACE
 
+
 class QOpenGLFramebufferObject;
 class QQuickFramebufferObjectPrivate;
 class QSGFramebufferObjectNode;
-
-// ### Qt 6: Consider what to do here. QQuickFbo supports both direct OpenGL and
-// OpenGL via QRhi, but it cannot function when running with another rhi backend.
 
 class Q_QUICK_EXPORT QQuickFramebufferObject : public QQuickItem
 {
@@ -77,7 +75,7 @@ public:
         void *data;
     };
 
-    QQuickFramebufferObject(QQuickItem *parent = nullptr);
+    QQuickFramebufferObject(QQuickItem *parent = Q_NULLPTR);
 
     bool textureFollowsItemSize() const;
     void setTextureFollowsItemSize(bool follows);
@@ -87,15 +85,15 @@ public:
 
     virtual Renderer *createRenderer() const = 0;
 
-    bool isTextureProvider() const override;
-    QSGTextureProvider *textureProvider() const override;
-    void releaseResources() override;
+    bool isTextureProvider() const Q_DECL_OVERRIDE;
+    QSGTextureProvider *textureProvider() const Q_DECL_OVERRIDE;
+    void releaseResources() Q_DECL_OVERRIDE;
 
 protected:
-    void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
+    void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) Q_DECL_OVERRIDE;
 
 protected:
-    QSGNode *updatePaintNode(QSGNode *, UpdatePaintNodeData *) override;
+    QSGNode *updatePaintNode(QSGNode *, UpdatePaintNodeData *) Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     void textureFollowsItemSizeChanged(bool);

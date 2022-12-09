@@ -1,0 +1,13 @@
+{
+  "arch": "x86_64",
+  "build": "ha770c72_0",
+  "build_number": 0,
+  "depends": [],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "conda-suggest-conda-forge",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1629819573249,
+  "version": "2021.8.24"
+}

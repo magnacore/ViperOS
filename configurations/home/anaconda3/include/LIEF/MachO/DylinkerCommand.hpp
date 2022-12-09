@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
  */
 #ifndef LIEF_MACHO_DYLINKER_COMMAND_H_
 #define LIEF_MACHO_DYLINKER_COMMAND_H_
-#include <string>
+
 #include <iostream>
 
 #include "LIEF/types.hpp"
@@ -26,34 +26,32 @@
 
 namespace LIEF {
 namespace MachO {
-struct dylinker_command;
-
 class LIEF_API DylinkerCommand : public LoadCommand {
   public:
-  DylinkerCommand(void);
-  DylinkerCommand(const dylinker_command *cmd);
+    DylinkerCommand(void);
+    DylinkerCommand(const dylinker_command *cmd);
 
-  DylinkerCommand& operator=(const DylinkerCommand& copy);
-  DylinkerCommand(const DylinkerCommand& copy);
+    DylinkerCommand& operator=(const DylinkerCommand& copy);
+    DylinkerCommand(const DylinkerCommand& copy);
 
-  virtual DylinkerCommand* clone(void) const override;
+    virtual DylinkerCommand* clone(void) const override;
 
-  virtual ~DylinkerCommand(void);
+    virtual ~DylinkerCommand(void);
 
-  virtual std::ostream& print(std::ostream& os) const override;
+    virtual std::ostream& print(std::ostream& os) const override;
 
-  const std::string& name(void) const;
+    const std::string& name(void) const;
 
-  void name(const std::string& name);
+    void name(const std::string& name);
 
-  bool operator==(const DylinkerCommand& rhs) const;
-  bool operator!=(const DylinkerCommand& rhs) const;
+    bool operator==(const DylinkerCommand& rhs) const;
+    bool operator!=(const DylinkerCommand& rhs) const;
 
-  virtual void accept(Visitor& visitor) const override;
+    virtual void accept(Visitor& visitor) const override;
 
 
   private:
-  std::string name_;
+    std::string name_;
 };
 
 }

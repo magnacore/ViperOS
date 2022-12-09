@@ -1,0 +1,18 @@
+{
+  "arch": null,
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "depends": [
+    "googleapis-common-protos >=1.5.5",
+    "grpcio >=1.41.1",
+    "protobuf >=3.6.0",
+    "python >=3.6"
+  ],
+  "license": "Apache-2.0",
+  "name": "grpcio-status",
+  "noarch": "python",
+  "platform": null,
+  "subdir": "noarch",
+  "timestamp": 1639661045709,
+  "version": "1.41.1"
+}

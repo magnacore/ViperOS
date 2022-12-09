@@ -1,0 +1,55 @@
+{
+  "build": "py38h7b6447c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/markupsafe-1.1.1-py38h7b6447c_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/__pycache__/_sysconfigdata_x86_64_conda_cos6_linux_gnu.cpython-38.pyc",
+    "lib/python3.8/site-packages/MarkupSafe-1.1.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/MarkupSafe-1.1.1.dist-info/LICENSE.rst",
+    "lib/python3.8/site-packages/MarkupSafe-1.1.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/MarkupSafe-1.1.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/MarkupSafe-1.1.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/MarkupSafe-1.1.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/markupsafe/__init__.py",
+    "lib/python3.8/site-packages/markupsafe/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/markupsafe/__pycache__/_compat.cpython-38.pyc",
+    "lib/python3.8/site-packages/markupsafe/__pycache__/_constants.cpython-38.pyc",
+    "lib/python3.8/site-packages/markupsafe/__pycache__/_native.cpython-38.pyc",
+    "lib/python3.8/site-packages/markupsafe/_compat.py",
+    "lib/python3.8/site-packages/markupsafe/_constants.py",
+    "lib/python3.8/site-packages/markupsafe/_native.py",
+    "lib/python3.8/site-packages/markupsafe/_speedups.c",
+    "lib/python3.8/site-packages/markupsafe/_speedups.cpython-38-x86_64-linux-gnu.so"
+  ],
+  "fn": "markupsafe-1.1.1-py38h7b6447c_0.conda",
+  "legacy_bz2_md5": "49c211162360afb259473cfb1b51dd89",
+  "legacy_bz2_size": 34532,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/markupsafe-1.1.1-py38h7b6447c_0",
+    "type": 1
+  },
+  "md5": "3c00b559514e80ca92a4648f5045f29d",
+  "name": "markupsafe",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/markupsafe-1.1.1-py38h7b6447c_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "markupsafe==1.1.1=py38h7b6447c_0",
+  "sha256": "cea6b51aaca8f1e16396b26d0e0da35e0d84acf6591a9deddfdd40dbc4919b33",
+  "size": 33560,
+  "subdir": "linux-64",
+  "timestamp": 1573489028734,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/markupsafe-1.1.1-py38h7b6447c_0.conda",
+  "version": "1.1.1"
+}

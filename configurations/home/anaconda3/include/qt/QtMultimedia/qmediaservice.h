@@ -74,9 +74,7 @@ protected:
     QMediaService(QObject* parent);
     QMediaService(QMediaServicePrivate &dd, QObject *parent);
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QMediaServicePrivate *d_ptr_deprecated;
-#endif
+    QMediaServicePrivate *d_ptr;
 
 private:
     Q_DECLARE_PRIVATE(QMediaService)

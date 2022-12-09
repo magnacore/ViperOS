@@ -38,8 +38,7 @@
 #define QT3DANIMATION_QCHANNELMAPPING_H
 
 #include <Qt3DAnimation/qt3danimation_global.h>
-#include <Qt3DAnimation/qanimationcallback.h>
-#include <Qt3DAnimation/qabstractchannelmapping.h>
+#include <Qt3DCore/qnode.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -47,7 +46,7 @@ namespace Qt3DAnimation {
 
 class QChannelMappingPrivate;
 
-class Q_3DANIMATIONSHARED_EXPORT QChannelMapping : public QAbstractChannelMapping
+class QT3DANIMATIONSHARED_EXPORT QChannelMapping : public Qt3DCore::QNode
 {
     Q_OBJECT
     Q_PROPERTY(QString channelName READ channelName WRITE setChannelName NOTIFY channelNameChanged)
@@ -77,7 +76,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(QChannelMapping)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DAnimation

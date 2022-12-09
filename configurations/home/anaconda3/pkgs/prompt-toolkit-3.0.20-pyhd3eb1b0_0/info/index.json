@@ -1,0 +1,19 @@
+{
+  "arch": null,
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "constrains": [
+    "prompt_toolkit 3.0.20"
+  ],
+  "depends": [
+    "python",
+    "wcwidth"
+  ],
+  "license": "BSD-3-Clause",
+  "name": "prompt-toolkit",
+  "noarch": "python",
+  "platform": null,
+  "subdir": "noarch",
+  "timestamp": 1633440195892,
+  "version": "3.0.20"
+}

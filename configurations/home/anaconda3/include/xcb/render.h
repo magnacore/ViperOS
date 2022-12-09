@@ -196,9 +196,6 @@ typedef struct xcb_render_pict_format_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_render_pict_format_error_t;
 
 /** Opcode for xcb_render_picture. */
@@ -211,9 +208,6 @@ typedef struct xcb_render_picture_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_render_picture_error_t;
 
 /** Opcode for xcb_render_pict_op. */
@@ -226,9 +220,6 @@ typedef struct xcb_render_pict_op_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_render_pict_op_error_t;
 
 /** Opcode for xcb_render_glyph_set. */
@@ -241,9 +232,6 @@ typedef struct xcb_render_glyph_set_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_render_glyph_set_error_t;
 
 /** Opcode for xcb_render_glyph. */
@@ -256,9 +244,6 @@ typedef struct xcb_render_glyph_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_render_glyph_error_t;
 
 /**

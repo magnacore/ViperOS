@@ -48,14 +48,20 @@ exists($$QMLTYPEFILE): AUX_QML_FILES += $$QMLTYPEFILE
 
 load(qt_build_paths)
 
-DESTDIR = $$MODULE_BASE_OUTDIR/qml/$$TARGETPATH
+qml1_target {
+    DESTDIR = $$MODULE_BASE_OUTDIR/imports/$$TARGETPATH
+    instbase = $$[QT_INSTALL_IMPORTS]
+} else {
+    DESTDIR = $$MODULE_BASE_OUTDIR/qml/$$TARGETPATH
+    instbase = $$[QT_INSTALL_QML]
+}
 
-target.path = $$[QT_INSTALL_QML]/$$TARGETPATH
+target.path = $$instbase/$$TARGETPATH
 INSTALLS += target
 
 # Some final setup
 
-TARGET = $$qt5LibraryTarget($$TARGET, "qml/$$TARGETPATH/")
+TARGET = $$qt5LibraryTarget($$TARGET)
 
 load(qt_targets)
 load(qt_common)
@@ -68,15 +74,21 @@ load(qt_common)
 # To regenerate run 'make qmltypes' which will update the plugins.qmltypes file in the source
 # directory.  Then review and commit the changes made to plugins.qmltypes.
 #
-# Due to the above mentioned drawbacks, there is a better mechanism available now: qmltyperegistrar
-# can generate the .qmltypes files at compile time. It will do this when CONFIG += qmltypes is set.
-# Therefore, don't try to generate the qmltypes files via qmlplugindump in that case.
-!cross_compile:!qmltypes {
-    qmlplugindump = qmlplugindump
-    importpath.name = QML2_IMPORT_PATH
+!cross_compile {
+    qml1_target {
+        qmlplugindump = qml1plugindump
+        importpath.name = QML_IMPORT_PATH
+    } else {
+        qmlplugindump = qmlplugindump
+        importpath.name = QML2_IMPORT_PATH
+    }
     importpath.value =
     for(qmod, QTREPOS) {
-        exists($$qmod/qml): importpath.value += $$shell_path($$qmod/qml)
+        qml1_target: \
+            qmod = $$qmod/imports
+        else: \
+            qmod = $$qmod/qml
+        exists($$qmod): importpath.value += $$shell_path($$qmod)
     }
     importpath.value = $$unique(importpath.value)
     QT_TOOL_ENV = importpath
@@ -97,17 +109,9 @@ load(qt_common)
         }
 
         load(resolve_target)
-        isEmpty(IMPORT_NAME): IMPORT_NAME = $$replace(TARGETPATH, \\.\\d+\$, )
-
-        !qml1_target {
-            isEmpty(QMAKE_PLUGINDUMP_DEPENDENCIES_FILE):exists($$_PRO_FILE_PWD_/dependencies.json): \
-                QMAKE_PLUGINDUMP_DEPENDENCIES_FILE = $$_PRO_FILE_PWD_/dependencies.json
-            !isEmpty(QMAKE_PLUGINDUMP_DEPENDENCIES_FILE): \
-                QMAKE_QMLPLUGINDUMP_FLAGS += -dependencies $$shell_quote($$QMAKE_PLUGINDUMP_DEPENDENCIES_FILE)
-        }
-
+        TARGETPATHBASE = $$replace(TARGETPATH, \\.\\d+\$, )
         qmltypes.target = qmltypes
-        qmltypes.commands = $$QMLPLUGINDUMP -nonrelocatable $$QMAKE_QMLPLUGINDUMP_FLAGS $$replace(IMPORT_NAME, /, .) $$IMPORT_VERSION > $$QMLTYPEFILE
+        qmltypes.commands = $$QMLPLUGINDUMP -nonrelocatable $$replace(TARGETPATHBASE, /, .) $$IMPORT_VERSION > $$QMLTYPEFILE
         qmltypes.depends = $$QMAKE_RESOLVED_TARGET
     } else {
         qmltypes.CONFIG += recursive

@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,8 +15,11 @@
  */
 #ifndef LIEF_PE_CODE_VIEW_PDB_H_
 #define LIEF_PE_CODE_VIEW_PDB_H_
-#include <iostream>
 #include <array>
+#include <set>
+#include <functional>
+#include <algorithm>
+#include <iostream>
 
 #include "LIEF/Object.hpp"
 #include "LIEF/visibility.h"
@@ -60,9 +63,9 @@ class LIEF_API CodeViewPDB : public CodeView {
   virtual ~CodeViewPDB(void);
 
   private:
-  signature_t signature_;
-  uint32_t    age_;
-  std::string filename_;
+  signature_t          signature_;
+  uint32_t             age_;
+  std::string          filename_;
 };
 
 } // Namespace PE

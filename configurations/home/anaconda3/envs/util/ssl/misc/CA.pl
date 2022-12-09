@@ -1,4 +1,4 @@
-#!/croot/openssl_1667573533299/_build_env/bin/perl
+#!/usr/bin/env perl
 # Copyright 2000-2018 The OpenSSL Project Authors. All Rights Reserved.
 #
 # Licensed under the OpenSSL license (the "License").  You may not use

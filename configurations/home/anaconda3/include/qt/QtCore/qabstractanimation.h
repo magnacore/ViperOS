@@ -42,9 +42,10 @@
 
 #include <QtCore/qobject.h>
 
-QT_REQUIRE_CONFIG(animation);
-
 QT_BEGIN_NAMESPACE
+
+
+#ifndef QT_NO_ANIMATION
 
 class QAnimationGroup;
 class QSequentialAnimationGroup;
@@ -81,7 +82,7 @@ public:
         DeleteWhenStopped
     };
 
-    QAbstractAnimation(QObject *parent = nullptr);
+    QAbstractAnimation(QObject *parent = Q_NULLPTR);
     virtual ~QAbstractAnimation();
 
     State state() const;
@@ -116,8 +117,8 @@ public Q_SLOTS:
     void setCurrentTime(int msecs);
 
 protected:
-    QAbstractAnimation(QAbstractAnimationPrivate &dd, QObject *parent = nullptr);
-    bool event(QEvent *event) override;
+    QAbstractAnimation(QAbstractAnimationPrivate &dd, QObject *parent = Q_NULLPTR);
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
 
     virtual void updateCurrentTime(int currentTime) = 0;
     virtual void updateState(QAbstractAnimation::State newState, QAbstractAnimation::State oldState);
@@ -135,7 +136,7 @@ class Q_CORE_EXPORT QAnimationDriver : public QObject
     Q_DECLARE_PRIVATE(QAnimationDriver)
 
 public:
-    QAnimationDriver(QObject *parent = nullptr);
+    QAnimationDriver(QObject *parent = Q_NULLPTR);
     ~QAnimationDriver();
 
     virtual void advance();
@@ -147,10 +148,9 @@ public:
 
     virtual qint64 elapsed() const;
 
-#if QT_DEPRECATED_SINCE(5, 13)
-    QT_DEPRECATED void setStartTime(qint64 startTime);
-    QT_DEPRECATED qint64 startTime() const;
-#endif
+    // ### Qt6: Remove these two functions
+    void setStartTime(qint64 startTime);
+    qint64 startTime() const;
 
 Q_SIGNALS:
     void started();
@@ -162,12 +162,17 @@ protected:
     virtual void start();
     virtual void stop();
 
-    QAnimationDriver(QAnimationDriverPrivate &dd, QObject *parent = nullptr);
+    QAnimationDriver(QAnimationDriverPrivate &dd, QObject *parent = Q_NULLPTR);
 
 private:
     friend class QUnifiedTimer;
 
 };
+
+
+
+
+#endif //QT_NO_ANIMATION
 
 QT_END_NAMESPACE
 

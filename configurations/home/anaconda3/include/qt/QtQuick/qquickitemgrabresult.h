@@ -45,7 +45,6 @@
 #include <QtCore/QUrl>
 #include <QtGui/QImage>
 #include <QtQml/QJSValue>
-#include <QtQml/qqml.h>
 #include <QtQuick/qtquickglobal.h>
 
 QT_BEGIN_NAMESPACE
@@ -61,17 +60,12 @@ class Q_QUICK_EXPORT QQuickItemGrabResult : public QObject
 
     Q_PROPERTY(QImage image READ image CONSTANT)
     Q_PROPERTY(QUrl url READ url CONSTANT)
-    QML_ANONYMOUS
-
 public:
     QImage image() const;
     QUrl url() const;
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#if QT_DEPRECATED_SINCE(5, 15)
-    QT_DEPRECATED_X("This overload is deprecated. Use the const member function instead")
-    Q_INVOKABLE bool saveToFile(const QString &fileName);
-#endif
+    Q_INVOKABLE bool saveToFile(const QString &fileName); // ### Qt 6: remove
 #endif
     Q_INVOKABLE bool saveToFile(const QString &fileName) const;
 
@@ -88,7 +82,7 @@ private Q_SLOTS:
 private:
     friend class QQuickItem;
 
-    QQuickItemGrabResult(QObject *parent = nullptr);
+    QQuickItemGrabResult(QObject *parent = Q_NULLPTR);
 };
 
 QT_END_NAMESPACE

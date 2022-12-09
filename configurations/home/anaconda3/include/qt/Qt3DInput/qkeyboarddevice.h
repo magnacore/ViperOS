@@ -51,7 +51,7 @@ namespace Qt3DInput {
 class QKeyboardDevicePrivate;
 class QKeyboardHandler;
 
-class Q_3DINPUTSHARED_EXPORT QKeyboardDevice : public Qt3DInput::QAbstractPhysicalDevice
+class QT3DINPUTSHARED_EXPORT QKeyboardDevice : public Qt3DInput::QAbstractPhysicalDevice
 {
     Q_OBJECT
     Q_PROPERTY(Qt3DInput::QKeyboardHandler *activeInput READ activeInput NOTIFY activeInputChanged)
@@ -62,17 +62,16 @@ public:
 
     QKeyboardHandler *activeInput() const;
 
-    int axisCount() const final;
-    int buttonCount() const final;
-    QStringList axisNames() const final;
-    QStringList buttonNames() const final;
-    int axisIdentifier(const QString &name) const final;
-    int buttonIdentifier(const QString &name) const final;
+    int axisCount() const Q_DECL_FINAL;
+    int buttonCount() const Q_DECL_FINAL;
+    QStringList axisNames() const Q_DECL_FINAL;
+    QStringList buttonNames() const Q_DECL_FINAL;
+    int axisIdentifier(const QString &name) const Q_DECL_FINAL;
+    int buttonIdentifier(const QString &name) const Q_DECL_FINAL;
 
 protected:
     explicit QKeyboardDevice(QKeyboardDevicePrivate &dd, QNode *parent = nullptr);
-    // TODO Unused remove in Qt6
-    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override;
+    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     void activeInputChanged(QKeyboardHandler *activeInput);

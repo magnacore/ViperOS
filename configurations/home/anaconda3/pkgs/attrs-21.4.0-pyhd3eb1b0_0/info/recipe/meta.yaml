@@ -1,0 +1,84 @@
+# This file created by conda-build 3.21.7
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Tue Jan 18 12:54:01 2022
+# ------------------------------------------------
+
+package:
+  name: attrs
+  version: 21.4.0
+source:
+  fn: attrs-21.4.0.tar.gz
+  sha256: 626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd
+  url: https://pypi.io/packages/source/a/attrs/attrs-21.4.0.tar.gz
+build:
+  noarch: python
+  number: '0'
+  script: python -m pip install . --no-deps --ignore-installed
+  string: pyhd3eb1b0_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 4.5 1_gnu
+    - ca-certificates 2021.10.26 h06a4308_2
+    - certifi 2021.10.8 py39h06a4308_2
+    - ld_impl_linux-64 2.35.1 h7274673_9
+    - libffi 3.3 he6710b0_2
+    - libgcc-ng 9.3.0 h5101ec6_17
+    - libgomp 9.3.0 h5101ec6_17
+    - libstdcxx-ng 9.3.0 hd4cf53a_17
+    - ncurses 6.3 h7f8727e_2
+    - openssl 1.1.1m h7f8727e_0
+    - pip 21.2.4 py39h06a4308_0
+    - python 3.9.7 h12debd9_1
+    - readline 8.1.2 h7f8727e_1
+    - setuptools 58.0.4 py39h06a4308_0
+    - sqlite 3.37.0 hc218d9a_0
+    - tk 8.6.11 h1ccaba5_0
+    - tzdata 2021e hda174b7_0
+    - wheel 0.37.1 pyhd3eb1b0_0
+    - xz 5.2.5 h7b6447c_0
+    - zlib 1.2.11 h7f8727e_4
+  run:
+    - python
+test:
+  commands:
+    - pip check
+  imports:
+    - attr
+  requires:
+    - coverage
+    - hypothesis
+    - pip
+    - pympler
+    - six
+about:
+  description: 'attrs is the Python package that will bring back the joy of writing
+
+    classes by relieving you from the drudgery of implementing object
+
+    protocols (aka dunder methods). Its main goal is to help you to write
+
+    concise and correct software without slowing down your code. For that, it
+
+    gives you a class decorator and a way to declaratively define the
+
+    attributes on that class:
+
+    '
+  dev_url: https://github.com/python-attrs/attrs
+  doc_url: https://attrs.readthedocs.io/en/stable/
+  home: https://attrs.readthedocs.io/en/stable/
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: attrs is the Python package that will bring back the joy of writing classes
+    by relieving you from the drudgery of implementing object protocols (aka dunder
+    methods).
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - CJ-Wright
+    - jochym
+    - licode
+    - nicoddemus

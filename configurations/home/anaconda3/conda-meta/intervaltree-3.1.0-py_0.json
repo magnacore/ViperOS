@@ -1,0 +1,74 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "sortedcontainers"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/intervaltree-3.1.0-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/intervaltree-3.1.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/intervaltree-3.1.0.dist-info/LICENSE.txt",
+    "lib/python3.8/site-packages/intervaltree-3.1.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/intervaltree-3.1.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/intervaltree-3.1.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/intervaltree-3.1.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/intervaltree-3.1.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/intervaltree-3.1.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/intervaltree-3.1.0.dist-info/zip-safe",
+    "lib/python3.8/site-packages/intervaltree/__init__.py",
+    "lib/python3.8/site-packages/intervaltree/interval.py",
+    "lib/python3.8/site-packages/intervaltree/intervaltree.py",
+    "lib/python3.8/site-packages/intervaltree/node.py",
+    "lib/python3.8/site-packages/intervaltree/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/intervaltree/__pycache__/interval.cpython-38.pyc",
+    "lib/python3.8/site-packages/intervaltree/__pycache__/intervaltree.cpython-38.pyc",
+    "lib/python3.8/site-packages/intervaltree/__pycache__/node.cpython-38.pyc"
+  ],
+  "fn": "intervaltree-3.1.0-py_0.conda",
+  "legacy_bz2_md5": "c4d3e39c0f44f561bd26300706f9fe52",
+  "legacy_bz2_size": 27845,
+  "license": "Apache-2.0",
+  "license_family": "APACHE",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/intervaltree-3.1.0-py_0",
+    "type": 1
+  },
+  "md5": "af2beb06f4862dc492d9a194aec00f46",
+  "name": "intervaltree",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/intervaltree-3.1.0-py_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/intervaltree/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/intervaltree/__pycache__/interval.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/intervaltree/__pycache__/intervaltree.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/intervaltree/__pycache__/node.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "intervaltree==3.1.0=py_0",
+  "sha256": "c228a4ff1df4b303a95ee833c001047079a1fa1cfc7126a40a0804c2f8c26298",
+  "size": 26966,
+  "subdir": "noarch",
+  "timestamp": 1598376475639,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/intervaltree-3.1.0-py_0.conda",
+  "version": "3.1.0"
+}

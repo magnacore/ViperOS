@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** Copyright (C) 2020 The Qt Company Ltd.
+** Copyright (C) 2016 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
 ** This file is part of the QtCore module of the Qt Toolkit.
@@ -40,10 +40,6 @@
 #ifndef QTIMELINE_H
 #define QTIMELINE_H
 
-#include <QtCore/qglobal.h>
-
-QT_REQUIRE_CONFIG(easingcurve);
-
 #include <QtCore/qeasingcurve.h>
 #include <QtCore/qobject.h>
 
@@ -59,9 +55,7 @@ class Q_CORE_EXPORT QTimeLine : public QObject
     Q_PROPERTY(int currentTime READ currentTime WRITE setCurrentTime)
     Q_PROPERTY(Direction direction READ direction WRITE setDirection)
     Q_PROPERTY(int loopCount READ loopCount WRITE setLoopCount)
-#if QT_DEPRECATED_SINCE(5, 15)
     Q_PROPERTY(CurveShape curveShape READ curveShape WRITE setCurveShape)
-#endif
     Q_PROPERTY(QEasingCurve easingCurve READ easingCurve WRITE setEasingCurve)
 public:
     enum State {
@@ -73,7 +67,6 @@ public:
         Forward,
         Backward
     };
-#if QT_DEPRECATED_SINCE(5, 15)
     enum CurveShape {
         EaseInCurve,
         EaseOutCurve,
@@ -82,9 +75,8 @@ public:
         SineCurve,
         CosineCurve
     };
-#endif
 
-    explicit QTimeLine(int duration = 1000, QObject *parent = nullptr);
+    explicit QTimeLine(int duration = 1000, QObject *parent = Q_NULLPTR);
     virtual ~QTimeLine();
 
     State state() const;
@@ -107,12 +99,8 @@ public:
     int updateInterval() const;
     void setUpdateInterval(int interval);
 
-#if QT_DEPRECATED_SINCE(5, 15)
-    QT_DEPRECATED_X("Access easingCurve directly")
     CurveShape curveShape() const;
-    QT_DEPRECATED_X("Access easingCurve directly")
     void setCurveShape(CurveShape shape);
-#endif
 
     QEasingCurve easingCurve() const;
     void setEasingCurve(const QEasingCurve &curve);
@@ -139,7 +127,7 @@ Q_SIGNALS:
     void finished(QPrivateSignal);
 
 protected:
-    void timerEvent(QTimerEvent *event) override;
+    void timerEvent(QTimerEvent *event) Q_DECL_OVERRIDE;
 
 private:
     Q_DISABLE_COPY(QTimeLine)

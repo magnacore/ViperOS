@@ -1,0 +1,468 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "google-api-core-grpc >=1.32.0,<3.0.0dev,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*",
+    "proto-plus >=1.22.0,<2.0.0dev",
+    "protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5",
+    "python >=3.7"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/google-cloud-texttospeech-2.12.3-pyhd8ed1ab_0",
+  "features": "",
+  "files": [
+    "bin/fixup_keywords.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech/__init__.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech/py.typed",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/__init__.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/gapic_metadata.json",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/py.typed",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/__init__.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/__init__.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/async_client.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/client.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/__init__.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/base.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/grpc.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/grpc_asyncio.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/types/__init__.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/types/cloud_tts.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/__init__.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/gapic_metadata.json",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/py.typed",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/__init__.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/__init__.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/async_client.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/client.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/__init__.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/base.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/grpc.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/grpc_asyncio.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/types/__init__.py",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/types/cloud_tts.py",
+    "lib/python3.9/site-packages/google_cloud_texttospeech-2.12.3-py3.10-nspkg.pth",
+    "lib/python3.9/site-packages/google_cloud_texttospeech-2.12.3.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/google_cloud_texttospeech-2.12.3.dist-info/LICENSE",
+    "lib/python3.9/site-packages/google_cloud_texttospeech-2.12.3.dist-info/METADATA",
+    "lib/python3.9/site-packages/google_cloud_texttospeech-2.12.3.dist-info/RECORD",
+    "lib/python3.9/site-packages/google_cloud_texttospeech-2.12.3.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/google_cloud_texttospeech-2.12.3.dist-info/WHEEL",
+    "lib/python3.9/site-packages/google_cloud_texttospeech-2.12.3.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/google_cloud_texttospeech-2.12.3.dist-info/namespace_packages.txt",
+    "lib/python3.9/site-packages/google_cloud_texttospeech-2.12.3.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/google/cloud/texttospeech/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/__pycache__/async_client.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/__pycache__/client.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/__pycache__/base.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/__pycache__/grpc.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/__pycache__/grpc_asyncio.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/types/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1/types/__pycache__/cloud_tts.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/__pycache__/async_client.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/__pycache__/client.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/__pycache__/base.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/__pycache__/grpc.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/__pycache__/grpc_asyncio.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/types/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/types/__pycache__/cloud_tts.cpython-39.pyc"
+  ],
+  "fn": "google-cloud-texttospeech-2.12.3-pyhd8ed1ab_0.tar.bz2",
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/google-cloud-texttospeech-2.12.3-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "89796684b57f9ee868601d2f44890a77",
+  "name": "google-cloud-texttospeech",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/google-cloud-texttospeech-2.12.3-pyhd8ed1ab_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "python-scripts/fixup_keywords.py",
+        "path_type": "hardlink",
+        "sha256": "179fce54595e6ab268b492cf7bd9c84ddbe41ac8a3fc54ebaed540fef668d577",
+        "sha256_in_prefix": "179fce54595e6ab268b492cf7bd9c84ddbe41ac8a3fc54ebaed540fef668d577",
+        "size_in_bytes": 6017
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "45d9a6029a39eb03dc2a2314ba4a509ae8b4a614f6572e77001885a026beabba",
+        "sha256_in_prefix": "45d9a6029a39eb03dc2a2314ba4a509ae8b4a614f6572e77001885a026beabba",
+        "size_in_bytes": 1453
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech/py.typed",
+        "path_type": "hardlink",
+        "sha256": "7a87ee8280c3adcafcef531e3dea49af88ada665d7fb7adbc9d1d54917ac0bdd",
+        "sha256_in_prefix": "7a87ee8280c3adcafcef531e3dea49af88ada665d7fb7adbc9d1d54917ac0bdd",
+        "size_in_bytes": 86
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "03fd26002aae42d91ac7e7fe0bce9b5a1b9df5c166dcab5065e5e160d698e9f8",
+        "sha256_in_prefix": "03fd26002aae42d91ac7e7fe0bce9b5a1b9df5c166dcab5065e5e160d698e9f8",
+        "size_in_bytes": 1295
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1/gapic_metadata.json",
+        "path_type": "hardlink",
+        "sha256": "49e1259d47e92f4e4a381c67126fab2d4d1290328461c99c98066ac064feeb44",
+        "sha256_in_prefix": "49e1259d47e92f4e4a381c67126fab2d4d1290328461c99c98066ac064feeb44",
+        "size_in_bytes": 1037
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1/py.typed",
+        "path_type": "hardlink",
+        "sha256": "7a87ee8280c3adcafcef531e3dea49af88ada665d7fb7adbc9d1d54917ac0bdd",
+        "sha256_in_prefix": "7a87ee8280c3adcafcef531e3dea49af88ada665d7fb7adbc9d1d54917ac0bdd",
+        "size_in_bytes": 86
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1/services/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "732d96d00ac6d1d1f673a18ee8c4969a67590d84aed259dce0a7ef818c69d1a9",
+        "sha256_in_prefix": "732d96d00ac6d1d1f673a18ee8c4969a67590d84aed259dce0a7ef818c69d1a9",
+        "size_in_bytes": 600
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1/services/text_to_speech/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "56e78a62e1739a1f63a9238171ba0ca76626502a1973866d4f412bef58d713d8",
+        "sha256_in_prefix": "56e78a62e1739a1f63a9238171ba0ca76626502a1973866d4f412bef58d713d8",
+        "size_in_bytes": 761
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1/services/text_to_speech/async_client.py",
+        "path_type": "hardlink",
+        "sha256": "e17c3437a458d83244a5dfe731f5c764d088fcd44a0d5c45252accc1c799f160",
+        "sha256_in_prefix": "e17c3437a458d83244a5dfe731f5c764d088fcd44a0d5c45252accc1c799f160",
+        "size_in_bytes": 18763
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1/services/text_to_speech/client.py",
+        "path_type": "hardlink",
+        "sha256": "4d7f009b6b34206aa6e9d4f64d7dc790e513122f9d3807638719c2de52cd0497",
+        "sha256_in_prefix": "4d7f009b6b34206aa6e9d4f64d7dc790e513122f9d3807638719c2de52cd0497",
+        "size_in_bytes": 27836
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "189b59970aa1ad2aee339223d6873cfc04c235d1c663d0d3553e8da832d30b79",
+        "sha256_in_prefix": "189b59970aa1ad2aee339223d6873cfc04c235d1c663d0d3553e8da832d30b79",
+        "size_in_bytes": 1175
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/base.py",
+        "path_type": "hardlink",
+        "sha256": "8e2f6025ceb206b76d2f7072f025e300ff7eb2f13883f0af9521ec9f454b608b",
+        "sha256_in_prefix": "8e2f6025ceb206b76d2f7072f025e300ff7eb2f13883f0af9521ec9f454b608b",
+        "size_in_bytes": 6619
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/grpc.py",
+        "path_type": "hardlink",
+        "sha256": "36e436f3399ff358924b8f1383b1176c97b72c4801eb45010f4b54c7384ad3cc",
+        "sha256_in_prefix": "36e436f3399ff358924b8f1383b1176c97b72c4801eb45010f4b54c7384ad3cc",
+        "size_in_bytes": 12840
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/grpc_asyncio.py",
+        "path_type": "hardlink",
+        "sha256": "961009a59f2ae71028a0566c49ab2d5402ab1e2b245301a4885676f627ec15f9",
+        "sha256_in_prefix": "961009a59f2ae71028a0566c49ab2d5402ab1e2b245301a4885676f627ec15f9",
+        "size_in_bytes": 13101
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1/types/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "91c5b845f301dbca9ae7c9bb04ede03a321f2ba601302b3aea0941b00390e0e8",
+        "sha256_in_prefix": "91c5b845f301dbca9ae7c9bb04ede03a321f2ba601302b3aea0941b00390e0e8",
+        "size_in_bytes": 1150
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1/types/cloud_tts.py",
+        "path_type": "hardlink",
+        "sha256": "9e3239fe15a3aa77a52c9a2c86379634b121d9ad43f2ea5907203c772a0dd8bd",
+        "sha256_in_prefix": "9e3239fe15a3aa77a52c9a2c86379634b121d9ad43f2ea5907203c772a0dd8bd",
+        "size_in_bytes": 13248
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1beta1/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "dad3cbd163499eeddad8bba7bd9c5e8db3841e0251fc1f958e9325bedc7a519d",
+        "sha256_in_prefix": "dad3cbd163499eeddad8bba7bd9c5e8db3841e0251fc1f958e9325bedc7a519d",
+        "size_in_bytes": 1327
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1beta1/gapic_metadata.json",
+        "path_type": "hardlink",
+        "sha256": "fbea1fbd78240b48ddde388e9ab105ea54d6f669d76eaf84d4d74e35f103afce",
+        "sha256_in_prefix": "fbea1fbd78240b48ddde388e9ab105ea54d6f669d76eaf84d4d74e35f103afce",
+        "size_in_bytes": 1047
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1beta1/py.typed",
+        "path_type": "hardlink",
+        "sha256": "7a87ee8280c3adcafcef531e3dea49af88ada665d7fb7adbc9d1d54917ac0bdd",
+        "sha256_in_prefix": "7a87ee8280c3adcafcef531e3dea49af88ada665d7fb7adbc9d1d54917ac0bdd",
+        "size_in_bytes": 86
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1beta1/services/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "732d96d00ac6d1d1f673a18ee8c4969a67590d84aed259dce0a7ef818c69d1a9",
+        "sha256_in_prefix": "732d96d00ac6d1d1f673a18ee8c4969a67590d84aed259dce0a7ef818c69d1a9",
+        "size_in_bytes": 600
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "56e78a62e1739a1f63a9238171ba0ca76626502a1973866d4f412bef58d713d8",
+        "sha256_in_prefix": "56e78a62e1739a1f63a9238171ba0ca76626502a1973866d4f412bef58d713d8",
+        "size_in_bytes": 761
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/async_client.py",
+        "path_type": "hardlink",
+        "sha256": "db838dfbe209c35a4352b6c813d3663e9865c30f44c052634fc322290021aafc",
+        "sha256_in_prefix": "db838dfbe209c35a4352b6c813d3663e9865c30f44c052634fc322290021aafc",
+        "size_in_bytes": 18848
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/client.py",
+        "path_type": "hardlink",
+        "sha256": "300e1525da96126090c3738c7d480140146ae383c2a08042e9044eef1531502d",
+        "sha256_in_prefix": "300e1525da96126090c3738c7d480140146ae383c2a08042e9044eef1531502d",
+        "size_in_bytes": 27921
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "189b59970aa1ad2aee339223d6873cfc04c235d1c663d0d3553e8da832d30b79",
+        "sha256_in_prefix": "189b59970aa1ad2aee339223d6873cfc04c235d1c663d0d3553e8da832d30b79",
+        "size_in_bytes": 1175
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/base.py",
+        "path_type": "hardlink",
+        "sha256": "08a2935a53d0ed46363e5061bfa418da63211242f21dec6a7279bb29299d1500",
+        "sha256_in_prefix": "08a2935a53d0ed46363e5061bfa418da63211242f21dec6a7279bb29299d1500",
+        "size_in_bytes": 6624
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/grpc.py",
+        "path_type": "hardlink",
+        "sha256": "66dd6719f9dbcab584bd3681072f764abe163ccc2a5cabdbd2aa3600f46531cc",
+        "sha256_in_prefix": "66dd6719f9dbcab584bd3681072f764abe163ccc2a5cabdbd2aa3600f46531cc",
+        "size_in_bytes": 12855
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/grpc_asyncio.py",
+        "path_type": "hardlink",
+        "sha256": "332736e1bb400e7f78bc90766124b8e98ed842a4e1717f818d94001735fdca3a",
+        "sha256_in_prefix": "332736e1bb400e7f78bc90766124b8e98ed842a4e1717f818d94001735fdca3a",
+        "size_in_bytes": 13116
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1beta1/types/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "2b57d46720a98dc323817cfe49c9a7cfa413e140d768ce2739786c9d267e8432",
+        "sha256_in_prefix": "2b57d46720a98dc323817cfe49c9a7cfa413e140d768ce2739786c9d267e8432",
+        "size_in_bytes": 1182
+      },
+      {
+        "_path": "site-packages/google/cloud/texttospeech_v1beta1/types/cloud_tts.py",
+        "path_type": "hardlink",
+        "sha256": "9e03aa276a4be4727914db8b6f785c7bed746db044e20c8fd03105d2d95bb0a8",
+        "sha256_in_prefix": "9e03aa276a4be4727914db8b6f785c7bed746db044e20c8fd03105d2d95bb0a8",
+        "size_in_bytes": 15053
+      },
+      {
+        "_path": "site-packages/google_cloud_texttospeech-2.12.3-py3.10-nspkg.pth",
+        "path_type": "hardlink",
+        "sha256": "6f40f9759937454ccae78b59f62643bcb9bbbbc96d73913362b1829a1b2ea0dc",
+        "sha256_in_prefix": "6f40f9759937454ccae78b59f62643bcb9bbbbc96d73913362b1829a1b2ea0dc",
+        "size_in_bytes": 1698
+      },
+      {
+        "_path": "site-packages/google_cloud_texttospeech-2.12.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/google_cloud_texttospeech-2.12.3.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "sha256_in_prefix": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size_in_bytes": 11358
+      },
+      {
+        "_path": "site-packages/google_cloud_texttospeech-2.12.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "b01bcd5809fb4cdd787f8be4062e077a8f9ad258ffb148121c6d9893a5b82ed5",
+        "sha256_in_prefix": "b01bcd5809fb4cdd787f8be4062e077a8f9ad258ffb148121c6d9893a5b82ed5",
+        "size_in_bytes": 5076
+      },
+      {
+        "_path": "site-packages/google_cloud_texttospeech-2.12.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "3041de5c26349dd012cae61b6a34f71acbb5837532e0eac7f0ac3c28d23c0fe8",
+        "sha256_in_prefix": "3041de5c26349dd012cae61b6a34f71acbb5837532e0eac7f0ac3c28d23c0fe8",
+        "size_in_bytes": 6568
+      },
+      {
+        "_path": "site-packages/google_cloud_texttospeech-2.12.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/google_cloud_texttospeech-2.12.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "cfd8f4c406bf26650a3299b3ef62b464600b48cfe7fb04159866e5797c765478",
+        "sha256_in_prefix": "cfd8f4c406bf26650a3299b3ef62b464600b48cfe7fb04159866e5797c765478",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/google_cloud_texttospeech-2.12.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "56e8ee930ef7dc6776b609dc816ca6186d28b643590d3475d7c0f06ec8129c86",
+        "sha256_in_prefix": "56e8ee930ef7dc6776b609dc816ca6186d28b643590d3475d7c0f06ec8129c86",
+        "size_in_bytes": 121
+      },
+      {
+        "_path": "site-packages/google_cloud_texttospeech-2.12.3.dist-info/namespace_packages.txt",
+        "path_type": "hardlink",
+        "sha256": "bfc21a62a444d9ad289c018922965e164907f37c1749665147d78ec9f330a137",
+        "sha256_in_prefix": "bfc21a62a444d9ad289c018922965e164907f37c1749665147d78ec9f330a137",
+        "size_in_bytes": 20
+      },
+      {
+        "_path": "site-packages/google_cloud_texttospeech-2.12.3.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "ff542f48922114019fc5befd0fa0e107b494c365fa4f8af09f3fcb2eb6dc0f77",
+        "sha256_in_prefix": "ff542f48922114019fc5befd0fa0e107b494c365fa4f8af09f3fcb2eb6dc0f77",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/__pycache__/async_client.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/__pycache__/client.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/__pycache__/base.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/__pycache__/grpc.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1/services/text_to_speech/transports/__pycache__/grpc_asyncio.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1/types/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1/types/__pycache__/cloud_tts.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/__pycache__/async_client.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/__pycache__/client.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/__pycache__/base.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/__pycache__/grpc.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/services/text_to_speech/transports/__pycache__/grpc_asyncio.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/types/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/cloud/texttospeech_v1beta1/types/__pycache__/cloud_tts.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "google-cloud-texttospeech[version='>=2']",
+  "sha256": "379196e435eeaeb2972b1303211dd5f7a7b75fbc5454c240ce98260d2243b5ab",
+  "size": 35397,
+  "subdir": "noarch",
+  "timestamp": 1665454366633,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/google-cloud-texttospeech-2.12.3-pyhd8ed1ab_0.tar.bz2",
+  "version": "2.12.3"
+}

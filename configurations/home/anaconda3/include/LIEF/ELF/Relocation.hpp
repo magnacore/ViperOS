@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,8 @@
 
 #include "LIEF/Abstract/Relocation.hpp"
 
-#include "LIEF/ELF/enums.hpp"
+#include "LIEF/ELF/Structures.hpp"
+#include "LIEF/ELF/Symbol.hpp"
 
 namespace LIEF {
 namespace ELF {
@@ -33,14 +34,6 @@ namespace ELF {
 class Parser;
 class Binary;
 class Builder;
-class Symbol;
-class Section;
-
-struct Elf32_Rel;
-struct Elf32_Rela;
-
-struct Elf64_Rel;
-struct Elf64_Rela;
 
 class LIEF_API Relocation : public LIEF::Relocation {
 
@@ -97,7 +90,6 @@ class LIEF_API Relocation : public LIEF::Relocation {
   void purpose(RELOCATION_PURPOSES purpose);
   void info(uint32_t v);
   void symbol(Symbol* symbol);
-  void section(Section* section);
 
   virtual void accept(Visitor& visitor) const override;
 

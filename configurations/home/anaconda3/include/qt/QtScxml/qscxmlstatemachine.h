@@ -41,10 +41,10 @@
 #define QSCXMLSTATEMACHINE_H
 
 #include <QtScxml/qscxmldatamodel.h>
+#include <QtScxml/qscxmlexecutablecontent.h>
 #include <QtScxml/qscxmlerror.h>
 #include <QtScxml/qscxmlevent.h>
 #include <QtScxml/qscxmlcompiler.h>
-#include <QtScxml/qscxmlinvokableservice.h>
 
 #include <QtCore/qstring.h>
 #include <QtCore/qvector.h>
@@ -58,6 +58,7 @@ QT_BEGIN_NAMESPACE
 class QIODevice;
 class QXmlStreamWriter;
 class QTextStream;
+class QScxmlInvokableService;
 
 class QScxmlStateMachinePrivate;
 class Q_SCXML_EXPORT QScxmlStateMachine: public QObject
@@ -68,7 +69,7 @@ class Q_SCXML_EXPORT QScxmlStateMachine: public QObject
     Q_PROPERTY(bool initialized READ isInitialized NOTIFY initializedChanged)
     Q_PROPERTY(QScxmlDataModel *dataModel READ dataModel WRITE setDataModel NOTIFY dataModelChanged)
     Q_PROPERTY(QVariantMap initialValues READ initialValues WRITE setInitialValues NOTIFY initialValuesChanged)
-    Q_PROPERTY(QVector<QScxmlInvokableService*> invokedServices READ invokedServices NOTIFY invokedServicesChanged)
+    Q_PROPERTY(QVector<QScxmlInvokableService *> invokedServices READ invokedServices NOTIFY invokedServicesChanged)
     Q_PROPERTY(QString sessionId READ sessionId CONSTANT)
     Q_PROPERTY(QString name READ name CONSTANT)
     Q_PROPERTY(bool invoked READ isInvoked CONSTANT)
@@ -110,49 +111,79 @@ public:
     QMetaObject::Connection connectToState(const QString &scxmlStateName,
                                            const QObject *receiver, const char *method,
                                            Qt::ConnectionType type = Qt::AutoConnection);
+#ifdef Q_QDOC
+    template<typename PointerToMemberFunction>
+    QMetaObject::Connection connectToState(const QString &scxmlStateName,
+                                           const QObject *receiver, PointerToMemberFunction method,
+                                           Qt::ConnectionType type = Qt::AutoConnection);
+    template<typename Functor>
+    QMetaObject::Connection connectToState(const QString &scxmlStateName, Functor functor,
+                                           Qt::ConnectionType type = Qt::AutoConnection);
+    template<typename Functor>
+    QMetaObject::Connection connectToState(const QString &scxmlStateName,
+                                           const QObject *context, Functor functor,
+                                           Qt::ConnectionType type = Qt::AutoConnection);
+#else
 
     // connect state to a QObject slot
-    template <typename PointerToMemberFunction>
+    template <typename Func1>
     inline QMetaObject::Connection connectToState(
             const QString &scxmlStateName,
-            const typename QtPrivate::FunctionPointer<PointerToMemberFunction>::Object *receiver,
-            PointerToMemberFunction method,
+            const typename QtPrivate::FunctionPointer<Func1>::Object *receiver, Func1 slot,
             Qt::ConnectionType type = Qt::AutoConnection)
     {
-        typedef QtPrivate::FunctionPointer<PointerToMemberFunction> SlotType;
+        typedef QtPrivate::FunctionPointer<Func1> SlotType;
         return connectToStateImpl(
                     scxmlStateName, receiver, nullptr,
-                    new QtPrivate::QSlotObject<PointerToMemberFunction,
-                    typename SlotType::Arguments, void>(method),
+                    new QtPrivate::QSlotObject<Func1, typename SlotType::Arguments, void>(slot),
                     type);
     }
 
     // connect state to a functor or function pointer (without context)
-    template <typename Functor>
+    template <typename Func1>
     inline typename QtPrivate::QEnableIf<
-            !QtPrivate::FunctionPointer<Functor>::IsPointerToMemberFunction &&
-            !std::is_same<const char*, Functor>::value, QMetaObject::Connection>::Type
-    connectToState(const QString &scxmlStateName, Functor functor,
+            !QtPrivate::FunctionPointer<Func1>::IsPointerToMemberFunction &&
+            !std::is_same<const char*, Func1>::value, QMetaObject::Connection>::Type
+    connectToState(const QString &scxmlStateName, Func1 slot,
                    Qt::ConnectionType type = Qt::AutoConnection)
     {
         // Use this as context
-        return connectToState(scxmlStateName, this, functor, type);
+        return connectToState(scxmlStateName, this, slot, type);
     }
 
     // connectToState to a functor or function pointer (with context)
-    template <typename Functor>
+    template <typename Func1>
     inline typename QtPrivate::QEnableIf<
-            !QtPrivate::FunctionPointer<Functor>::IsPointerToMemberFunction &&
-            !std::is_same<const char*, Functor>::value, QMetaObject::Connection>::Type
-    connectToState(const QString &scxmlStateName, const QObject *context, Functor functor,
+            !QtPrivate::FunctionPointer<Func1>::IsPointerToMemberFunction &&
+            !std::is_same<const char*, Func1>::value, QMetaObject::Connection>::Type
+    connectToState(const QString &scxmlStateName, QObject *context, Func1 slot,
                    Qt::ConnectionType type = Qt::AutoConnection)
     {
-        QtPrivate::QSlotObjectBase *slotObj = new QtPrivate::QFunctorSlotObject<Functor, 1,
-                QtPrivate::List<bool>, void>(functor);
-        return connectToStateImpl(scxmlStateName, context, reinterpret_cast<void **>(&functor),
+        QtPrivate::QSlotObjectBase *slotObj = new QtPrivate::QFunctorSlotObject<Func1, 1,
+                QtPrivate::List<bool>, void>(slot);
+        return connectToStateImpl(scxmlStateName, context, reinterpret_cast<void **>(&slot),
                                   slotObj, type);
     }
+#endif
 
+#ifdef Q_QDOC
+    static std::function<void(bool)> onEntry(const QObject *receiver, const char *method);
+    static std::function<void(bool)> onExit(const QObject *receiver, const char *method);
+
+    template<typename Functor>
+    static std::function<void(bool)> onEntry(Functor functor);
+
+    template<typename Functor>
+    static std::function<void(bool)> onExit(Functor functor);
+
+    template<typename PointerToMemberFunction>
+    static std::function<void(bool)> onEntry(const QObject *receiver,
+                                             PointerToMemberFunction method);
+
+    template<typename PointerToMemberFunction>
+    static std::function<void(bool)> onExit(const QObject *receiver,
+                                            PointerToMemberFunction method);
+#else
     static std::function<void(bool)> onEntry(const QObject *receiver, const char *method)
     {
         const QPointer<QObject> receiverPointer(const_cast<QObject *>(receiver));
@@ -189,77 +220,89 @@ public:
         };
     }
 
-    template<typename PointerToMemberFunction>
+    template<typename Func1>
     static std::function<void(bool)> onEntry(
-            const typename QtPrivate::FunctionPointer<PointerToMemberFunction>::Object *receiver,
-            PointerToMemberFunction method)
+            const typename QtPrivate::FunctionPointer<Func1>::Object *receiver, Func1 slot)
     {
-        typedef typename QtPrivate::FunctionPointer<PointerToMemberFunction>::Object Object;
+        typedef typename QtPrivate::FunctionPointer<Func1>::Object Object;
         const QPointer<Object> receiverPointer(const_cast<Object *>(receiver));
-        return [receiverPointer, method](bool isEnteringState) {
+        return [receiverPointer, slot](bool isEnteringState) {
             if (isEnteringState && !receiverPointer.isNull())
-                (receiverPointer->*method)();
+                (receiverPointer->*slot)();
         };
     }
 
-    template<typename PointerToMemberFunction>
+    template<typename Func1>
     static std::function<void(bool)> onExit(
-            const typename QtPrivate::FunctionPointer<PointerToMemberFunction>::Object *receiver,
-            PointerToMemberFunction method)
+            const typename QtPrivate::FunctionPointer<Func1>::Object *receiver, Func1 slot)
     {
-        typedef typename QtPrivate::FunctionPointer<PointerToMemberFunction>::Object Object;
+        typedef typename QtPrivate::FunctionPointer<Func1>::Object Object;
         const QPointer<Object> receiverPointer(const_cast<Object *>(receiver));
-        return [receiverPointer, method](bool isEnteringState) {
+        return [receiverPointer, slot](bool isEnteringState) {
             if (!isEnteringState && !receiverPointer.isNull())
-                (receiverPointer->*method)();
+                (receiverPointer->*slot)();
         };
     }
+#endif // !Q_QDOC
 
     QMetaObject::Connection connectToEvent(const QString &scxmlEventSpec,
                                            const QObject *receiver, const char *method,
                                            Qt::ConnectionType type = Qt::AutoConnection);
 
+#ifdef Q_QDOC
+    template<typename PointerToMemberFunction>
+    QMetaObject::Connection connectToEvent(const QString &scxmlEventSpec,
+                                           const QObject *receiver, PointerToMemberFunction method,
+                                           Qt::ConnectionType type = Qt::AutoConnection);
+    template<typename Functor>
+    QMetaObject::Connection connectToEvent(const QString &scxmlEventSpec, Functor functor,
+                                           Qt::ConnectionType type = Qt::AutoConnection);
+    template<typename Functor>
+    QMetaObject::Connection connectToEvent(const QString &scxmlEventSpec,
+                                           const QObject *context, Functor functor,
+                                           Qt::ConnectionType type = Qt::AutoConnection);
+#else
+
     // connect state to a QObject slot
-    template <typename PointerToMemberFunction>
+    template <typename Func1>
     inline QMetaObject::Connection connectToEvent(
             const QString &scxmlEventSpec,
-            const typename QtPrivate::FunctionPointer<PointerToMemberFunction>::Object *receiver,
-            PointerToMemberFunction method,
+            const typename QtPrivate::FunctionPointer<Func1>::Object *receiver, Func1 slot,
             Qt::ConnectionType type = Qt::AutoConnection)
     {
-        typedef QtPrivate::FunctionPointer<PointerToMemberFunction> SlotType;
+        typedef QtPrivate::FunctionPointer<Func1> SlotType;
         return connectToEventImpl(
                     scxmlEventSpec, receiver, nullptr,
-                    new QtPrivate::QSlotObject<PointerToMemberFunction,
-                    typename SlotType::Arguments, void>(method),
+                    new QtPrivate::QSlotObject<Func1, typename SlotType::Arguments, void>(slot),
                     type);
     }
 
     // connect state to a functor or function pointer (without context)
-    template <typename Functor>
+    template <typename Func1>
     inline typename QtPrivate::QEnableIf<
-            !QtPrivate::FunctionPointer<Functor>::IsPointerToMemberFunction &&
-            !std::is_same<const char*, Functor>::value, QMetaObject::Connection>::Type
-    connectToEvent(const QString &scxmlEventSpec, Functor functor,
+            !QtPrivate::FunctionPointer<Func1>::IsPointerToMemberFunction &&
+            !std::is_same<const char*, Func1>::value, QMetaObject::Connection>::Type
+    connectToEvent(const QString &scxmlEventSpec, Func1 slot,
                    Qt::ConnectionType type = Qt::AutoConnection)
     {
         // Use this as context
-        return connectToEvent(scxmlEventSpec, this, functor, type);
+        return connectToEvent(scxmlEventSpec, this, slot, type);
     }
 
     // connectToEvent to a functor or function pointer (with context)
-    template <typename Functor>
+    template <typename Func1>
     inline typename QtPrivate::QEnableIf<
-            !QtPrivate::FunctionPointer<Functor>::IsPointerToMemberFunction &&
-            !std::is_same<const char*, Functor>::value, QMetaObject::Connection>::Type
-    connectToEvent(const QString &scxmlEventSpec, const QObject *context, Functor functor,
+            !QtPrivate::FunctionPointer<Func1>::IsPointerToMemberFunction &&
+            !std::is_same<const char*, Func1>::value, QMetaObject::Connection>::Type
+    connectToEvent(const QString &scxmlEventSpec, QObject *context, Func1 slot,
                    Qt::ConnectionType type = Qt::AutoConnection)
     {
-        QtPrivate::QSlotObjectBase *slotObj = new QtPrivate::QFunctorSlotObject<Functor, 1,
-                QtPrivate::List<QScxmlEvent>, void>(functor);
-        return connectToEventImpl(scxmlEventSpec, context, reinterpret_cast<void **>(&functor),
+        QtPrivate::QSlotObjectBase *slotObj = new QtPrivate::QFunctorSlotObject<Func1, 1,
+                QtPrivate::List<QScxmlEvent>, void>(slot);
+        return connectToEventImpl(scxmlEventSpec, context, reinterpret_cast<void **>(&slot),
                                   slotObj, type);
     }
+#endif
 
     Q_INVOKABLE void submitEvent(QScxmlEvent *event);
     Q_INVOKABLE void submitEvent(const QString &eventName);
@@ -311,8 +354,5 @@ private:
 };
 
 QT_END_NAMESPACE
-
-Q_DECLARE_METATYPE(QScxmlStateMachine *)
-Q_DECLARE_METATYPE(QVector<QScxmlInvokableService *>)
 
 #endif // QSCXMLSTATEMACHINE_H

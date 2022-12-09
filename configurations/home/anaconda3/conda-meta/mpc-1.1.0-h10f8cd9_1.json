@@ -8,7 +8,7 @@
     "libgcc-ng >=7.2.0",
     "mpfr >=4.0.1,<5.0a0"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/mpc-1.1.0-h10f8cd9_1",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/mpc-1.1.0-h10f8cd9_1",
   "features": "",
   "files": [
     "include/mpc.h",
@@ -24,12 +24,12 @@
   "legacy_bz2_size": 96138,
   "license": "LGPL 3",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/mpc-1.1.0-h10f8cd9_1",
+    "source": "/home/manuj/anaconda3/pkgs/mpc-1.1.0-h10f8cd9_1",
     "type": 1
   },
   "md5": "a04e160ec0a1117f7638590e534f16c7",
   "name": "mpc",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/mpc-1.1.0-h10f8cd9_1.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/mpc-1.1.0-h10f8cd9_1.conda",
   "paths_data": {
     "paths": [
       {
@@ -38,7 +38,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
         "sha256": "9bc0c05b45aae8f5f04fc983126d0c7105108b5c24cea7645799cfca064b81a6",
-        "sha256_in_prefix": "f684a5ece640a88ef448b0add61edbb557298330001387f07921e21a8b237332",
+        "sha256_in_prefix": "d2901ee30ac13e22851bdbb3463885127748be59bba3988219a8c456bd9a2f28",
         "size_in_bytes": 1069
       }
     ],

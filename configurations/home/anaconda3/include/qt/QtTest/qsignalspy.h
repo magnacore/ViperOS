@@ -59,8 +59,15 @@ public:
     explicit QSignalSpy(const QObject *obj, const char *aSignal)
         : m_waiting(false)
     {
-        if (!isObjectValid(obj))
+#ifdef Q_CC_BOR
+        const int memberOffset = QObject::staticMetaObject.methodCount();
+#else
+        static const int memberOffset = QObject::staticMetaObject.methodCount();
+#endif
+        if (!obj) {
+            qWarning("QSignalSpy: Cannot spy on a null object");
             return;
+        }
 
         if (!aSignal) {
             qWarning("QSignalSpy: Null signal name is not valid");
@@ -80,23 +87,31 @@ public:
             return;
         }
 
-        if (!connectToSignal(obj, sigIndex))
+        if (!QMetaObject::connect(obj, sigIndex, this, memberOffset,
+                    Qt::DirectConnection, Q_NULLPTR)) {
+            qWarning("QSignalSpy: QMetaObject::connect returned false. Unable to connect.");
             return;
-
+        }
         sig = ba;
         initArgs(mo->method(sigIndex), obj);
     }
 
-#ifdef Q_CLANG_QDOC
-    template <typename PointerToMemberFunction>
+#ifdef Q_QDOC
     QSignalSpy(const QObject *object, PointerToMemberFunction signal);
 #else
     template <typename Func>
     QSignalSpy(const typename QtPrivate::FunctionPointer<Func>::Object *obj, Func signal0)
         : m_waiting(false)
     {
-        if (!isObjectValid(obj))
+#ifdef Q_CC_BOR
+        const int memberOffset = QObject::staticMetaObject.methodCount();
+#else
+        static const int memberOffset = QObject::staticMetaObject.methodCount();
+#endif
+        if (!obj) {
+            qWarning("QSignalSpy: Cannot spy on a null object");
             return;
+        }
 
         if (!signal0) {
             qWarning("QSignalSpy: Null signal name is not valid");
@@ -106,27 +121,22 @@ public:
         const QMetaObject * const mo = obj->metaObject();
         const QMetaMethod signalMetaMethod = QMetaMethod::fromSignal(signal0);
         const int sigIndex = signalMetaMethod.methodIndex();
-
-        if (!isSignalMetaMethodValid(signalMetaMethod))
+        if (!signalMetaMethod.isValid() ||
+            signalMetaMethod.methodType() != QMetaMethod::Signal) {
+            qWarning("QSignalSpy: Not a valid signal: '%s'",
+                     signalMetaMethod.methodSignature().constData());
             return;
+        }
 
-        if (!connectToSignal(obj, sigIndex))
+        if (!QMetaObject::connect(obj, sigIndex, this, memberOffset,
+                    Qt::DirectConnection, 0)) {
+            qWarning("QSignalSpy: QMetaObject::connect returned false. Unable to connect.");
             return;
-
+        }
         sig = signalMetaMethod.methodSignature();
         initArgs(mo->method(sigIndex), obj);
     }
-#endif // Q_CLANG_QDOC
-
-    QSignalSpy(const QObject *obj, const QMetaMethod &signal)
-        : m_waiting(false)
-    {
-        if (isObjectValid(obj) && isSignalMetaMethodValid(signal) &&
-            connectToSignal(obj, signal.methodIndex())) {
-            sig = signal.methodSignature();
-            initArgs(signal, obj);
-        }
-    }
+#endif // Q_QDOC
 
     inline bool isValid() const { return !sig.isEmpty(); }
     inline QByteArray signal() const { return sig; }
@@ -141,7 +151,7 @@ public:
         return count() > origCount;
     }
 
-    int qt_metacall(QMetaObject::Call call, int methodId, void **a) override
+    int qt_metacall(QMetaObject::Call call, int methodId, void **a) Q_DECL_OVERRIDE
     {
         methodId = QObject::qt_metacall(call, methodId, a);
         if (methodId < 0)
@@ -157,38 +167,6 @@ public:
     }
 
 private:
-    bool connectToSignal(const QObject *sender, int sigIndex)
-    {
-        static const int memberOffset = QObject::staticMetaObject.methodCount();
-        const bool connected = QMetaObject::connect(
-            sender, sigIndex, this, memberOffset, Qt::DirectConnection, nullptr);
-
-        if (!connected)
-            qWarning("QSignalSpy: QMetaObject::connect returned false. Unable to connect.");
-
-        return connected;
-    }
-
-    static bool isSignalMetaMethodValid(const QMetaMethod &signal)
-    {
-        const bool valid = signal.isValid() && signal.methodType() == QMetaMethod::Signal;
-
-        if (!valid)
-            qWarning("QSignalSpy: Not a valid signal: '%s'", signal.methodSignature().constData());
-
-        return valid;
-    }
-
-    static bool isObjectValid(const QObject *object)
-    {
-        const bool valid = !!object;
-
-        if (!valid)
-            qWarning("QSignalSpy: Cannot spy on a null object");
-
-        return valid;
-    }
-
     void initArgs(const QMetaMethod &member, const QObject *obj)
     {
         args.reserve(member.parameterCount());

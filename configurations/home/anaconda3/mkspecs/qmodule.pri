@@ -1,22 +1,16 @@
 QMAKE_CFLAGS_WARN_ON += -Wno-expansion-to-defined
 QMAKE_CXXFLAGS_WARN_ON += -Wno-expansion-to-defined
-EXTRA_DEFINES += " _X_INLINE=inline -D XK_dead_currency=0xfe6f -D _FORTIFY_SOURCE=2 -D FC_WEIGHT_EXTRABLACK=215 -D FC_WEIGHT_ULTRABLACK=FC_WEIGHT_EXTRABLACK -D GLX_GLXEXT_PROTOTYPES" _X_INLINE=inline XK_dead_currency=0xfe6f _FORTIFY_SOURCE=2 XK_ISO_Level5_Lock=0xfe13 FC_WEIGHT_EXTRABLACK=215 FC_WEIGHT_ULTRABLACK=FC_WEIGHT_EXTRABLACK GLX_GLXEXT_PROTOTYPES
-EXTRA_INCLUDEPATH += /home/goldust/anaconda3/include
-EXTRA_LIBDIR += /home/goldust/anaconda3/lib /opt/conda/conda-bld/qt-main_1660123285207/_build_env/x86_64-conda-linux-gnu/sysroot/usr/lib64 /opt/conda/conda-bld/qt-main_1660123285207/_build_env/x86_64-conda-linux-gnu/sysroot/usr/lib
-!host_build|!cross_compile {
-    QMAKE_LFLAGS+=-Wl,-rpath,/home/goldust/anaconda3/lib -Wl,-rpath-link,/home/goldust/anaconda3/lib -L/home/goldust/anaconda3/lib
-}
+EXTRA_DEFINES += _X_INLINE=inline XK_dead_currency=0xfe6f _FORTIFY_SOURCE=2 XK_ISO_Level5_Lock=0xfe13 FC_WEIGHT_EXTRABLACK=215 FC_WEIGHT_ULTRABLACK=FC_WEIGHT_EXTRABLACK GLX_GLXEXT_PROTOTYPES
+EXTRA_INCLUDEPATH += /tmp/build/80754af9/qt_1544551193539/work/openssl_hack/include /home/manuj/anaconda3/include /home/manuj/anaconda3/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/../../../../x86_64-conda_cos6-linux-gnu/include/c++/7.3.0 /home/manuj/anaconda3/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/../../../../x86_64-conda_cos6-linux-gnu/include/c++/7.3.0/x86_64-conda_cos6-linux-gnu /home/manuj/anaconda3/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/../../../../x86_64-conda_cos6-linux-gnu/include/c++/7.3.0/backward /home/manuj/anaconda3/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/include /home/manuj/anaconda3/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/include-fixed /home/manuj/anaconda3/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/../../../../x86_64-conda_cos6-linux-gnu/include /home/manuj/anaconda3/bin/../x86_64-conda_cos6-linux-gnu/sysroot/usr/include
+EXTRA_LIBDIR += /home/manuj/anaconda3/lib
 QT_CPU_FEATURES.x86_64 = mmx sse sse2
-QT.global_private.enabled_features = sse2 alloca_h alloca dbus dbus-linked dlopen gui network posix_fallocate reduce_exports reduce_relocations relocatable sql system-zlib testlib widgets xml zstd
-QT.global_private.disabled_features = alloca_malloc_h android-style-assets avx2 private_tests gc_binaries intelcet libudev release_tools stack-protector-strong
-PKG_CONFIG_EXECUTABLE = /opt/conda/conda-bld/qt-main_1660123285207/_build_env/bin/pkg-config
-QMAKE_LIBS_DBUS = -L/home/goldust/anaconda3/lib -ldbus-1
-QMAKE_INCDIR_DBUS = /home/goldust/anaconda3/include/dbus-1.0 /home/goldust/anaconda3/lib/dbus-1.0/include
-QMAKE_LIBS_LIBDL = -ldl
+QT.global_private.enabled_features = alloca_h alloca dbus dbus-linked gui network posix_fallocate qml-debug reduce_exports reduce_relocations sql sse2 system-zlib testlib widgets xml
+QT.global_private.disabled_features = alloca_malloc_h android-style-assets private_tests libudev release_tools stack-protector-strong
+PKG_CONFIG_EXECUTABLE = /tmp/build/80754af9/qt_1544551193539/work/pkg-config
+QMAKE_LIBS_DBUS = -L/home/manuj/anaconda3/lib -ldbus-1
+QMAKE_INCDIR_DBUS = /home/manuj/anaconda3/include/dbus-1.0 /home/manuj/anaconda3/lib/dbus-1.0/include
 QT_COORD_TYPE = double
 QMAKE_LIBS_ZLIB = -lz
-QMAKE_LIBS_ZSTD = -L/home/goldust/anaconda3/lib -lzstd
-QMAKE_INCDIR_ZSTD = /home/goldust/anaconda3/include
-CONFIG += sse2 aesni compile_examples enable_new_dtags largefile optimize_size precompile_header rdrnd rdseed shani sse3 ssse3 sse4_1 sse4_2 x86SimdAlways
+CONFIG += use_gold_linker compile_examples enable_new_dtags largefile optimize_size precompile_header sse2 sse3 ssse3 sse4_1 sse4_2
 QT_BUILD_PARTS += libs tools
-QT_HOST_CFLAGS_DBUS += -I/home/goldust/anaconda3/include/dbus-1.0 -I/home/goldust/anaconda3/lib/dbus-1.0/include
+QT_HOST_CFLAGS_DBUS += -I/home/manuj/anaconda3/include/dbus-1.0 -I/home/manuj/anaconda3/lib/dbus-1.0/include

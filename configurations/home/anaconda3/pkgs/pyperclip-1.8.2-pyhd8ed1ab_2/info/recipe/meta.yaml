@@ -1,0 +1,61 @@
+# This file created by conda-build 3.21.4
+# meta.yaml template originally from:
+# /home/conda/recipe_root, last modified Sun May 30 01:19:09 2021
+# ------------------------------------------------
+
+package:
+  name: pyperclip
+  version: 1.8.2
+source:
+  fn: pyperclip-1.8.2.tar.gz
+  sha256: 105254a8b04934f0bc84e9c24eb360a591aaf6535c9def5f29d92af107a9bf57
+  url: https://pypi.org/packages/source/p/pyperclip/pyperclip-1.8.2.tar.gz
+build:
+  noarch: python
+  number: '2'
+  script: /home/conda/feedstock_root/build_artifacts/pyperclip_1622337600177/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/bin/python
+    -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  string: pyhd8ed1ab_2
+requirements:
+  host:
+    - _libgcc_mutex 0.1 conda_forge
+    - _openmp_mutex 4.5 1_gnu
+    - ca-certificates 2020.12.5 ha878542_0
+    - certifi 2020.12.5 py39hf3d152e_1
+    - ld_impl_linux-64 2.35.1 hea4e1c9_2
+    - libffi 3.3 h58526e2_2
+    - libgcc-ng 9.3.0 h2828fa1_19
+    - libgomp 9.3.0 h2828fa1_19
+    - libstdcxx-ng 9.3.0 h6de172a_19
+    - ncurses 6.2 h58526e2_4
+    - openssl 1.1.1k h7f98852_0
+    - pip 21.1.2 pyhd8ed1ab_0
+    - python 3.9.4 hffdb5ce_0_cpython
+    - python_abi 3.9 1_cp39
+    - readline 8.1 h46c0cb4_0
+    - setuptools 49.6.0 py39hf3d152e_3
+    - sqlite 3.35.5 h74cdb3f_0
+    - tk 8.6.10 h21135ba_1
+    - tzdata 2021a he74cb21_0
+    - wheel 0.36.2 pyhd3deb0d_0
+    - xz 5.2.5 h516909a_1
+    - zlib 1.2.11 h516909a_1010
+  run:
+    - python >=3.6
+test:
+  imports:
+    - pyperclip
+about:
+  dev_url: https://github.com/asweigart/pyperclip
+  doc_url: https://pyperclip.readthedocs.io
+  home: https://github.com/asweigart/pyperclip
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: /home/conda/recipe_root/LICENSE.txt
+  summary: A cross-platform clipboard module for Python. (only handles plain text
+    for now)
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - jan-janssen

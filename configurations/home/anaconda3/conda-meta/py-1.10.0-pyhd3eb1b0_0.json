@@ -1,0 +1,285 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=2.7"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/py-1.10.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/py-1.10.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/py-1.10.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/py-1.10.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/py-1.10.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/py-1.10.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/py-1.10.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/py-1.10.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/py-1.10.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/py/__init__.py",
+    "lib/python3.8/site-packages/py/__init__.pyi",
+    "lib/python3.8/site-packages/py/__metainfo.py",
+    "lib/python3.8/site-packages/py/_builtin.py",
+    "lib/python3.8/site-packages/py/_code/__init__.py",
+    "lib/python3.8/site-packages/py/_code/_assertionnew.py",
+    "lib/python3.8/site-packages/py/_code/_assertionold.py",
+    "lib/python3.8/site-packages/py/_code/_py2traceback.py",
+    "lib/python3.8/site-packages/py/_code/assertion.py",
+    "lib/python3.8/site-packages/py/_code/code.py",
+    "lib/python3.8/site-packages/py/_code/source.py",
+    "lib/python3.8/site-packages/py/_error.py",
+    "lib/python3.8/site-packages/py/_io/__init__.py",
+    "lib/python3.8/site-packages/py/_io/capture.py",
+    "lib/python3.8/site-packages/py/_io/saferepr.py",
+    "lib/python3.8/site-packages/py/_io/terminalwriter.py",
+    "lib/python3.8/site-packages/py/_log/__init__.py",
+    "lib/python3.8/site-packages/py/_log/log.py",
+    "lib/python3.8/site-packages/py/_log/warning.py",
+    "lib/python3.8/site-packages/py/_path/__init__.py",
+    "lib/python3.8/site-packages/py/_path/cacheutil.py",
+    "lib/python3.8/site-packages/py/_path/common.py",
+    "lib/python3.8/site-packages/py/_path/local.py",
+    "lib/python3.8/site-packages/py/_path/svnurl.py",
+    "lib/python3.8/site-packages/py/_path/svnwc.py",
+    "lib/python3.8/site-packages/py/_process/__init__.py",
+    "lib/python3.8/site-packages/py/_process/cmdexec.py",
+    "lib/python3.8/site-packages/py/_process/forkedfunc.py",
+    "lib/python3.8/site-packages/py/_process/killproc.py",
+    "lib/python3.8/site-packages/py/_std.py",
+    "lib/python3.8/site-packages/py/_vendored_packages/__init__.py",
+    "lib/python3.8/site-packages/py/_vendored_packages/apipkg-1.5.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/py/_vendored_packages/apipkg-1.5.dist-info/METADATA",
+    "lib/python3.8/site-packages/py/_vendored_packages/apipkg-1.5.dist-info/RECORD",
+    "lib/python3.8/site-packages/py/_vendored_packages/apipkg-1.5.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/py/_vendored_packages/apipkg-1.5.dist-info/WHEEL",
+    "lib/python3.8/site-packages/py/_vendored_packages/apipkg-1.5.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/py/_vendored_packages/apipkg/__init__.py",
+    "lib/python3.8/site-packages/py/_vendored_packages/apipkg/version.py",
+    "lib/python3.8/site-packages/py/_vendored_packages/iniconfig-1.1.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/py/_vendored_packages/iniconfig-1.1.1.dist-info/LICENSE",
+    "lib/python3.8/site-packages/py/_vendored_packages/iniconfig-1.1.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/py/_vendored_packages/iniconfig-1.1.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/py/_vendored_packages/iniconfig-1.1.1.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/py/_vendored_packages/iniconfig-1.1.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/py/_vendored_packages/iniconfig-1.1.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/py/_vendored_packages/iniconfig/__init__.py",
+    "lib/python3.8/site-packages/py/_vendored_packages/iniconfig/__init__.pyi",
+    "lib/python3.8/site-packages/py/_vendored_packages/iniconfig/py.typed",
+    "lib/python3.8/site-packages/py/_version.py",
+    "lib/python3.8/site-packages/py/_xmlgen.py",
+    "lib/python3.8/site-packages/py/error.pyi",
+    "lib/python3.8/site-packages/py/iniconfig.pyi",
+    "lib/python3.8/site-packages/py/io.pyi",
+    "lib/python3.8/site-packages/py/path.pyi",
+    "lib/python3.8/site-packages/py/py.typed",
+    "lib/python3.8/site-packages/py/test.py",
+    "lib/python3.8/site-packages/py/xml.pyi",
+    "lib/python3.8/site-packages/py/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/__pycache__/__metainfo.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/__pycache__/_builtin.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_code/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_code/__pycache__/_assertionnew.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_code/__pycache__/_assertionold.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_code/__pycache__/_py2traceback.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_code/__pycache__/assertion.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_code/__pycache__/code.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_code/__pycache__/source.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/__pycache__/_error.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_io/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_io/__pycache__/capture.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_io/__pycache__/saferepr.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_io/__pycache__/terminalwriter.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_log/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_log/__pycache__/log.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_log/__pycache__/warning.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_path/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_path/__pycache__/cacheutil.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_path/__pycache__/common.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_path/__pycache__/local.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_path/__pycache__/svnurl.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_path/__pycache__/svnwc.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_process/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_process/__pycache__/cmdexec.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_process/__pycache__/forkedfunc.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_process/__pycache__/killproc.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/__pycache__/_std.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_vendored_packages/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_vendored_packages/apipkg/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_vendored_packages/apipkg/__pycache__/version.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/_vendored_packages/iniconfig/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/__pycache__/_version.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/__pycache__/_xmlgen.cpython-38.pyc",
+    "lib/python3.8/site-packages/py/__pycache__/test.cpython-38.pyc"
+  ],
+  "fn": "py-1.10.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "a1c14ab46a6cc82261c42a4ccf60ca39",
+  "legacy_bz2_size": 75816,
+  "license": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/py-1.10.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "b0af4a71b430f3700de3ea0ab3bd9771",
+  "name": "py",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/py-1.10.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/py/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/__pycache__/__metainfo.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/__pycache__/_builtin.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_code/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_code/__pycache__/_assertionnew.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_code/__pycache__/_assertionold.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_code/__pycache__/_py2traceback.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_code/__pycache__/assertion.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_code/__pycache__/code.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_code/__pycache__/source.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/__pycache__/_error.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_io/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_io/__pycache__/capture.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_io/__pycache__/saferepr.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_io/__pycache__/terminalwriter.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_log/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_log/__pycache__/log.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_log/__pycache__/warning.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_path/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_path/__pycache__/cacheutil.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_path/__pycache__/common.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_path/__pycache__/local.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_path/__pycache__/svnurl.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_path/__pycache__/svnwc.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_process/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_process/__pycache__/cmdexec.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_process/__pycache__/forkedfunc.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_process/__pycache__/killproc.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/__pycache__/_std.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_vendored_packages/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_vendored_packages/apipkg/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_vendored_packages/apipkg/__pycache__/version.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/_vendored_packages/iniconfig/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/__pycache__/_version.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/__pycache__/_xmlgen.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/py/__pycache__/test.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "py==1.10.0=pyhd3eb1b0_0",
+  "sha256": "7fd76d5a09c63a552d6d3fc1b176bf53ef8d476190ba00a6648bc65acfe385af",
+  "size": 77899,
+  "subdir": "noarch",
+  "timestamp": 1607971620561,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/py-1.10.0-pyhd3eb1b0_0.conda",
+  "version": "1.10.0"
+}

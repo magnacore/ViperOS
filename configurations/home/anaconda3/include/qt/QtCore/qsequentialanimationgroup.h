@@ -42,9 +42,10 @@
 
 #include <QtCore/qanimationgroup.h>
 
-QT_REQUIRE_CONFIG(animation);
-
 QT_BEGIN_NAMESPACE
+
+
+#ifndef QT_NO_ANIMATION
 
 class QPauseAnimation;
 class QSequentialAnimationGroupPrivate;
@@ -55,31 +56,33 @@ class Q_CORE_EXPORT QSequentialAnimationGroup : public QAnimationGroup
     Q_PROPERTY(QAbstractAnimation* currentAnimation READ currentAnimation NOTIFY currentAnimationChanged)
 
 public:
-    QSequentialAnimationGroup(QObject *parent = nullptr);
+    QSequentialAnimationGroup(QObject *parent = Q_NULLPTR);
     ~QSequentialAnimationGroup();
 
     QPauseAnimation *addPause(int msecs);
     QPauseAnimation *insertPause(int index, int msecs);
 
     QAbstractAnimation *currentAnimation() const;
-    int duration() const override;
+    int duration() const Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     void currentAnimationChanged(QAbstractAnimation *current);
 
 protected:
     QSequentialAnimationGroup(QSequentialAnimationGroupPrivate &dd, QObject *parent);
-    bool event(QEvent *event) override;
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
 
-    void updateCurrentTime(int) override;
-    void updateState(QAbstractAnimation::State newState, QAbstractAnimation::State oldState) override;
-    void updateDirection(QAbstractAnimation::Direction direction) override;
+    void updateCurrentTime(int) Q_DECL_OVERRIDE;
+    void updateState(QAbstractAnimation::State newState, QAbstractAnimation::State oldState) Q_DECL_OVERRIDE;
+    void updateDirection(QAbstractAnimation::Direction direction) Q_DECL_OVERRIDE;
 
 private:
     Q_DISABLE_COPY(QSequentialAnimationGroup)
     Q_DECLARE_PRIVATE(QSequentialAnimationGroup)
     Q_PRIVATE_SLOT(d_func(), void _q_uncontrolledAnimationFinished())
 };
+
+#endif //QT_NO_ANIMATION
 
 QT_END_NAMESPACE
 

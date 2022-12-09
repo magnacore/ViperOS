@@ -59,14 +59,6 @@ class QTimeZonePrivate;
 class Q_CORE_EXPORT QTimeZone
 {
 public:
-    // Sane UTC offsets range from -14 to +14 hours:
-    enum {
-        // No known zone > 12 hrs West of Greenwich (Baker Island, USA)
-        MinUtcOffsetSecs = -14 * 3600,
-        // No known zone > 14 hrs East of Greenwich (Kiritimati, Christmas Island, Kiribati)
-        MaxUtcOffsetSecs = +14 * 3600
-    };
-
     enum TimeType {
         StandardTime = 0,
         DaylightTime = 1,
@@ -89,7 +81,7 @@ public:
     };
     typedef QVector<OffsetData> OffsetDataList;
 
-    QTimeZone() noexcept;
+    QTimeZone() Q_DECL_NOTHROW;
     explicit QTimeZone(const QByteArray &ianaId);
     explicit QTimeZone(int offsetSeconds);
     /*implicit*/ QTimeZone(const QByteArray &zoneId, int offsetSeconds, const QString &name,
@@ -99,9 +91,11 @@ public:
     ~QTimeZone();
 
     QTimeZone &operator=(const QTimeZone &other);
-    QTimeZone &operator=(QTimeZone &&other) noexcept { swap(other); return *this; }
+ #ifdef Q_COMPILER_RVALUE_REFS
+    QTimeZone &operator=(QTimeZone &&other) Q_DECL_NOTHROW { swap(other); return *this; }
+#endif
 
-    void swap(QTimeZone &other) noexcept
+    void swap(QTimeZone &other) Q_DECL_NOTHROW
     { d.swap(other.d); }
 
     bool operator==(const QTimeZone &other) const;

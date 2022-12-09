@@ -13,8 +13,6 @@
 /* #undef CARES_HAVE_WS2TCPIP_H */
 /* #undef CARES_HAVE_WINSOCK2_H */
 /* #undef CARES_HAVE_WINDOWS_H */
-#define CARES_HAVE_ARPA_NAMESER_H
-#define CARES_HAVE_ARPA_NAMESER_COMPAT_H
 
 #ifdef CARES_HAVE_SYS_TYPES_H
 #  include <sys/types.h>

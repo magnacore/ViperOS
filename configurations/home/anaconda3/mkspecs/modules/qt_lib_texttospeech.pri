@@ -1,4 +1,4 @@
-QT.texttospeech.VERSION = 5.15.2
+QT.texttospeech.VERSION = 5.9.7
 QT.texttospeech.name = QtTextToSpeech
 QT.texttospeech.module = Qt5TextToSpeech
 QT.texttospeech.libs = $$QT_MODULE_LIB_BASE
@@ -11,6 +11,6 @@ QT.texttospeech.uses =
 QT.texttospeech.module_config = v2
 QT.texttospeech.DEFINES = QT_TEXTTOSPEECH_LIB
 QT.texttospeech.enabled_features =
-QT.texttospeech.disabled_features = speechd
+QT.texttospeech.disabled_features =
 QT_CONFIG +=
 QT_MODULES += texttospeech

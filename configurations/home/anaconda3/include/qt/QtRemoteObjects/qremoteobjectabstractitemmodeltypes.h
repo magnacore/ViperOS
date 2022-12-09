@@ -40,16 +40,15 @@
 #ifndef QREMOTEOBJECTS_ABSTRACT_ITEM_MODEL_TYPES_H
 #define QREMOTEOBJECTS_ABSTRACT_ITEM_MODEL_TYPES_H
 
-#include <QtCore/qdatastream.h>
-#include <QtCore/qlist.h>
-#include <QtCore/qvector.h>
-#include <QtCore/qpair.h>
-#include <QtCore/qvariant.h>
-#include <QtCore/qabstractitemmodel.h>
-#include <QtCore/qitemselectionmodel.h>
-#include <QtCore/qsize.h>
-#include <QtCore/qdebug.h>
-#include <QtCore/qnamespace.h>
+#include <QDataStream>
+#include <QList>
+#include <QVector>
+#include <QPair>
+#include <QVariant>
+#include <QModelIndex>
+#include <QItemSelectionModel>
+#include <QDebug>
+#include <qnamespace.h>
 #include <QtRemoteObjects/qtremoteobjectglobal.h>
 
 QT_BEGIN_NAMESPACE
@@ -72,13 +71,11 @@ typedef QList<ModelIndex> IndexList;
 
 struct IndexValuePair
 {
-    explicit IndexValuePair(const IndexList index_ = IndexList(), const QVariantList &data_ = QVariantList(),
-                            bool hasChildren_ = false, const Qt::ItemFlags &flags_ = Qt::ItemFlags(), const QSize &size_ = {})
+    explicit IndexValuePair(const IndexList index_ = IndexList(), const QVariantList &data_ = QVariantList(), bool hasChildren_ = false, const Qt::ItemFlags &flags_ = Qt::ItemFlags())
         : index(index_)
         , data(data_)
         , flags(flags_)
         , hasChildren(hasChildren_)
-        , size(size_)
     {}
 
     inline bool operator==(const IndexValuePair &other) const { return index == other.index && data == other.data && hasChildren == other.hasChildren && flags == other.flags; }
@@ -88,8 +85,6 @@ struct IndexValuePair
     QVariantList data;
     Qt::ItemFlags flags;
     bool hasChildren;
-    QVector<IndexValuePair> children;
-    QSize size;
 };
 
 struct DataEntries
@@ -98,12 +93,6 @@ struct DataEntries
     inline bool operator!=(const DataEntries &other) const { return !(*this == other); }
 
     QVector<IndexValuePair> data;
-};
-
-struct MetaAndDataEntries : DataEntries
-{
-    QVector<int> roles;
-    QSize size;
 };
 
 inline QDebug operator<<(QDebug stream, const ModelIndex &index)
@@ -167,25 +156,15 @@ inline QDataStream& operator>>(QDataStream &stream, DataEntries &entries)
     return stream >> entries.data;
 }
 
-inline QDataStream& operator<<(QDataStream &stream, const MetaAndDataEntries &entries)
-{
-    return stream << entries.data << entries.roles << entries.size;
-}
-
-inline QDataStream& operator>>(QDataStream &stream, MetaAndDataEntries &entries)
-{
-    return stream >> entries.data >> entries.roles >> entries.size;
-}
-
 inline QDataStream& operator<<(QDataStream &stream, const IndexValuePair &pair)
 {
-    return stream << pair.index << pair.data << pair.hasChildren << static_cast<int>(pair.flags) << pair.children << pair.size;
+    return stream << pair.index << pair.data << pair.hasChildren << static_cast<int>(pair.flags);
 }
 
 inline QDataStream& operator>>(QDataStream &stream, IndexValuePair &pair)
 {
     int flags;
-    QDataStream &ret = stream >> pair.index >> pair.data >> pair.hasChildren >> flags >> pair.children >> pair.size;
+    QDataStream &ret = stream >> pair.index >> pair.data >> pair.hasChildren >> flags;
     pair.flags = static_cast<Qt::ItemFlags>(flags);
     return ret;
 }
@@ -244,7 +223,6 @@ QT_END_NAMESPACE
 Q_DECLARE_METATYPE(ModelIndex)
 Q_DECLARE_METATYPE(IndexList)
 Q_DECLARE_METATYPE(DataEntries)
-Q_DECLARE_METATYPE(MetaAndDataEntries)
 Q_DECLARE_METATYPE(IndexValuePair)
 Q_DECLARE_METATYPE(Qt::Orientation)
 Q_DECLARE_METATYPE(QItemSelectionModel::SelectionFlags)

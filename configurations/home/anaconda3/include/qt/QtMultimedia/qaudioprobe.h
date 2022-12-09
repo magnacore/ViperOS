@@ -53,7 +53,7 @@ class Q_MULTIMEDIA_EXPORT QAudioProbe : public QObject
 {
     Q_OBJECT
 public:
-    explicit QAudioProbe(QObject *parent = nullptr);
+    explicit QAudioProbe(QObject *parent = Q_NULLPTR);
     ~QAudioProbe();
 
     bool setSource(QMediaObject *source);
@@ -62,7 +62,7 @@ public:
     bool isActive() const;
 
 Q_SIGNALS:
-    void audioBufferProbed(const QAudioBuffer &buffer);
+    void audioBufferProbed(const QAudioBuffer &audioBuffer);
     void flush();
 
 private:

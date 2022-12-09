@@ -41,7 +41,7 @@
 #define QNDEFNFCSMARTPOSTERRECORD_H
 
 #include <QtCore/QList>
-#include <QtNfc/qtnfcglobal.h>
+#include <QtNfc/qnfcglobal.h>
 #include <QtNfc/QNdefRecord>
 #include <QtNfc/qndefnfctextrecord.h>
 #include <QtNfc/qndefnfcurirecord.h>

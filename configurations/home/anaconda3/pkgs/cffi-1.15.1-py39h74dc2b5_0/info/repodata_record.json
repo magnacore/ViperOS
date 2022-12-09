@@ -1,0 +1,28 @@
+{
+  "arch": "x86_64",
+  "build": "py39h74dc2b5_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libffi >=3.3",
+    "libgcc-ng >=11.2.0",
+    "pycparser",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "features": "",
+  "fn": "cffi-1.15.1-py39h74dc2b5_0.conda",
+  "legacy_bz2_md5": "2953f22399cb56381016d7a039d0c5ac",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "ebf7649f0c1ef085bd69c785e1ea433a",
+  "name": "cffi",
+  "platform": "linux",
+  "sha256": "e1af66cdeba836d9b2aedf6ccde2d49f42a8183e9f0b8bd653180e6842418705",
+  "size": 233787,
+  "subdir": "linux-64",
+  "timestamp": 1659598749654,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/cffi-1.15.1-py39h74dc2b5_0.conda",
+  "version": "1.15.1"
+}

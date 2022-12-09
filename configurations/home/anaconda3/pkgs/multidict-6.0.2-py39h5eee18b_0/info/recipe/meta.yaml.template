@@ -1,0 +1,58 @@
+{% set name = "multidict" %}
+{% set version = "6.0.2" %}
+{% set sha256 = "5ff3bd75f38e4c43f1f470f2df7a4d430b821c4ce22be384e1459cb57d6bb013" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [py<37]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - cython
+    - python
+    - pip
+    - setuptools >=40
+    - wheel
+  run:
+    - python
+
+test:
+  source_files:
+    - tests
+  requires:
+    - pytest
+    - pip
+  commands:
+    - pip check
+    - py.test tests
+
+about:
+  home: https://github.com/aio-libs/multidict
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE
+  license_url: https://github.com/aio-libs/multidict/blob/master/LICENSE
+  summary: The multidict implementation
+
+  description: |
+    Multidicts are useful for working with HTTP headers, URL query args etc.
+  doc_url: https://multidict.aio-libs.org/
+  dev_url: https://github.com/aio-libs/multidict
+  doc_source_url: https://github.com/aio-libs/multidict/tree/master/docs
+
+extra:
+  recipe-maintainers:
+    - sodre
+    - kszucs

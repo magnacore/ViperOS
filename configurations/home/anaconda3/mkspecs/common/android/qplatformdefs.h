@@ -70,6 +70,10 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 
+#ifndef QT_NO_IPV6IFNAME
+#include <net/if.h>
+#endif
+
 #ifndef _GNU_SOURCE
 #  define _GNU_SOURCE
 #endif
@@ -115,7 +119,6 @@
 #define QT_OPEN_CREAT           O_CREAT
 #define QT_OPEN_TRUNC           O_TRUNC
 #define QT_OPEN_APPEND          O_APPEND
-#define QT_OPEN_EXCL            O_EXCL
 
 // Directory iteration
 #define QT_DIR                  DIR

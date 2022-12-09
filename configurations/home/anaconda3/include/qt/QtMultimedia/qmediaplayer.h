@@ -40,7 +40,6 @@
 #ifndef QMEDIAPLAYER_H
 #define QMEDIAPLAYER_H
 
-#include <QtMultimedia/qtmultimediaglobal.h>
 #include <QtMultimedia/qmediaobject.h>
 #include <QtMultimedia/qmediacontent.h>
 #include <QtMultimedia/qmediaenumdebug.h>
@@ -62,7 +61,7 @@ class Q_MULTIMEDIA_EXPORT QMediaPlayer : public QMediaObject
     Q_OBJECT
     Q_PROPERTY(QMediaContent media READ media WRITE setMedia NOTIFY mediaChanged)
     Q_PROPERTY(QMediaContent currentMedia READ currentMedia NOTIFY currentMediaChanged)
-    Q_PROPERTY(QMediaPlaylist* playlist READ playlist WRITE setPlaylist)
+    Q_PROPERTY(QMediaPlaylist * playlist READ playlist WRITE setPlaylist)
     Q_PROPERTY(qint64 duration READ duration NOTIFY durationChanged)
     Q_PROPERTY(qint64 position READ position WRITE setPosition NOTIFY positionChanged)
     Q_PROPERTY(int volume READ volume WRITE setVolume NOTIFY volumeChanged)
@@ -74,8 +73,7 @@ class Q_MULTIMEDIA_EXPORT QMediaPlayer : public QMediaObject
     Q_PROPERTY(qreal playbackRate READ playbackRate WRITE setPlaybackRate NOTIFY playbackRateChanged)
     Q_PROPERTY(State state READ state NOTIFY stateChanged)
     Q_PROPERTY(MediaStatus mediaStatus READ mediaStatus NOTIFY mediaStatusChanged)
-    Q_PROPERTY(QAudio::Role audioRole READ audioRole WRITE setAudioRole NOTIFY audioRoleChanged)
-    Q_PROPERTY(QString customAudioRole READ customAudioRole WRITE setCustomAudioRole NOTIFY customAudioRoleChanged)
+    Q_PROPERTY(QAudio::Role audioRole READ audioRole WRITE setAudioRole)
     Q_PROPERTY(QString error READ errorString)
     Q_ENUMS(State)
     Q_ENUMS(MediaStatus)
@@ -121,7 +119,7 @@ public:
         MediaIsPlaylist
     };
 
-    explicit QMediaPlayer(QObject *parent = nullptr, Flags flags = Flags());
+    explicit QMediaPlayer(QObject *parent = Q_NULLPTR, Flags flags = Flags());
     ~QMediaPlayer();
 
     static QMultimedia::SupportEstimate hasSupport(const QString &mimeType,
@@ -132,7 +130,6 @@ public:
     void setVideoOutput(QVideoWidget *);
     void setVideoOutput(QGraphicsVideoItem *);
     void setVideoOutput(QAbstractVideoSurface *surface);
-    void setVideoOutput(const QVector<QAbstractVideoSurface *> &surfaces);
 
     QMediaContent media() const;
     const QIODevice *mediaStream() const;
@@ -158,21 +155,13 @@ public:
     Error error() const;
     QString errorString() const;
 
-#ifndef QT_NO_BEARERMANAGEMENT
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
-    QT_DEPRECATED_VERSION_5_15 QNetworkConfiguration currentNetworkConfiguration() const;
-QT_WARNING_POP
-#endif
+    QNetworkConfiguration currentNetworkConfiguration() const;
 
     QMultimedia::AvailabilityStatus availability() const override;
 
     QAudio::Role audioRole() const;
     void setAudioRole(QAudio::Role audioRole);
     QList<QAudio::Role> supportedAudioRoles() const;
-    QString customAudioRole() const;
-    void setCustomAudioRole(const QString &audioRole);
-    QStringList supportedCustomAudioRoles() const;
 
 public Q_SLOTS:
     void play();
@@ -185,19 +174,10 @@ public Q_SLOTS:
 
     void setPlaybackRate(qreal rate);
 
-    void setMedia(const QMediaContent &media, QIODevice *stream = nullptr);
+    void setMedia(const QMediaContent &media, QIODevice *stream = Q_NULLPTR);
     void setPlaylist(QMediaPlaylist *playlist);
 
-#ifndef QT_NO_BEARERMANAGEMENT
-#ifndef Q_MOC_RUN // moc fails to parse the expanded macro
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
-#endif
-    QT_DEPRECATED_VERSION_5_15 void setNetworkConfigurations(const QList<QNetworkConfiguration> &configurations);
-#ifndef Q_MOC_RUN // moc fails to parse the expanded macro
-QT_WARNING_POP
-#endif
-#endif
+    void setNetworkConfigurations(const QList<QNetworkConfiguration> &configurations);
 
 Q_SIGNALS:
     void mediaChanged(const QMediaContent &media);
@@ -220,20 +200,10 @@ Q_SIGNALS:
     void playbackRateChanged(qreal rate);
 
     void audioRoleChanged(QAudio::Role role);
-    void customAudioRoleChanged(const QString &role);
 
     void error(QMediaPlayer::Error error);
 
-#ifndef QT_NO_BEARERMANAGEMENT
-#ifndef Q_MOC_RUN // moc fails to parse the expanded macro
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
-#endif
-    QT_DEPRECATED_VERSION_5_15 void networkConfigurationChanged(const QNetworkConfiguration &configuration);
-#ifndef Q_MOC_RUN // moc fails to parse the expanded macro
-QT_WARNING_POP
-#endif
-#endif
+    void networkConfigurationChanged(const QNetworkConfiguration &configuration);
 public:
     bool bind(QObject *) override;
     void unbind(QObject *) override;

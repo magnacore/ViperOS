@@ -51,7 +51,7 @@ class QTechniqueFilterPrivate;
 class QFilterKey;
 class QParameter;
 
-class Q_3DRENDERSHARED_EXPORT QTechniqueFilter : public QFrameGraphNode
+class QT3DRENDERSHARED_EXPORT QTechniqueFilter : public QFrameGraphNode
 {
     Q_OBJECT
 public:
@@ -71,7 +71,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(QTechniqueFilter)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DRender

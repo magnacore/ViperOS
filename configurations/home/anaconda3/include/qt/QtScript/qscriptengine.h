@@ -5,33 +5,17 @@
 **
 ** This file is part of the QtScript module of the Qt Toolkit.
 **
-** $QT_BEGIN_LICENSE:LGPL$
-** Commercial License Usage
-** Licensees holding valid commercial Qt licenses may use this file in
-** accordance with the commercial license agreement provided with the
-** Software or, alternatively, in accordance with the terms contained in
-** a written agreement between you and The Qt Company. For licensing terms
-** and conditions see https://www.qt.io/terms-conditions. For further
-** information use the contact form at https://www.qt.io/contact-us.
-**
+** $QT_BEGIN_LICENSE:LGPL-ONLY$
 ** GNU Lesser General Public License Usage
-** Alternatively, this file may be used under the terms of the GNU Lesser
-** General Public License version 3 as published by the Free Software
-** Foundation and appearing in the file LICENSE.LGPL3 included in the
+** This file may be used under the terms of the GNU Lesser
+** General Public License version 2.1 as published by the Free Software
+** Foundation and appearing in the file LICENSE.LGPL included in the
 ** packaging of this file. Please review the following information to
-** ensure the GNU Lesser General Public License version 3 requirements
-** will be met: https://www.gnu.org/licenses/lgpl-3.0.html.
+** ensure the GNU Lesser General Public License version 2.1 requirements
+** will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
 **
-** GNU General Public License Usage
-** Alternatively, this file may be used under the terms of the GNU
-** General Public License version 2.0 or (at your option) the GNU General
-** Public license version 3 or any later version approved by the KDE Free
-** Qt Foundation. The licenses are as published by the Free Software
-** Foundation and appearing in the file LICENSE.GPL2 and LICENSE.GPL3
-** included in the packaging of this file. Please review the following
-** information to ensure the GNU General Public License requirements will
-** be met: https://www.gnu.org/licenses/gpl-2.0.html and
-** https://www.gnu.org/licenses/gpl-3.0.html.
+** If you have questions regarding the use of this file, please contact
+** us via http://www.qt.io/contact-us/.
 **
 ** $QT_END_LICENSE$
 **
@@ -280,7 +264,7 @@ protected:
 
     QScriptEngine(QScriptEnginePrivate &dd);
 #else
-    explicit QScriptEngine(QScriptEnginePrivate &dd, QObject *parent = nullptr);
+    explicit QScriptEngine(QScriptEnginePrivate &dd, QObject *parent = Q_NULLPTR);
 #endif
 
 private:
@@ -394,8 +378,11 @@ int qScriptRegisterMetaType(
     QScriptEngine *eng,
     QScriptValue (*toScriptValue)(QScriptEngine *, const T &t),
     void (*fromScriptValue)(const QScriptValue &, T &t),
-    const QScriptValue &prototype = QScriptValue(),
-    T * /* dummy */ = 0)
+    const QScriptValue &prototype = QScriptValue()
+#ifndef qdoc
+    , T * /* dummy */ = 0
+#endif
+)
 {
     const int id = qRegisterMetaType<T>(); // make sure it's registered
 
@@ -433,8 +420,11 @@ void qScriptValueToSequence(const QScriptValue &value, Container &cont)
 template<typename T>
 int qScriptRegisterSequenceMetaType(
     QScriptEngine *engine,
-    const QScriptValue &prototype = QScriptValue(),
-    T * /* dummy */ = 0)
+    const QScriptValue &prototype = QScriptValue()
+#ifndef qdoc
+    , T * /* dummy */ = 0
+#endif
+)
 {
     return qScriptRegisterMetaType<T>(engine, qScriptValueFromSequence,
                                       qScriptValueToSequence, prototype);

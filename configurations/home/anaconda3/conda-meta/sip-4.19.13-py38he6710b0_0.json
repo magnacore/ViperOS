@@ -1,0 +1,59 @@
+{
+  "build": "py38he6710b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/sip-4.19.13-py38he6710b0_0",
+  "features": "",
+  "files": [
+    "bin/sip",
+    "include/python3.8/sip.h",
+    "lib/python3.8/site-packages/__pycache__/sipconfig.cpython-38.pyc",
+    "lib/python3.8/site-packages/__pycache__/sipdistutils.cpython-38.pyc",
+    "lib/python3.8/site-packages/sip-4.19.13.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/sip-4.19.13.dist-info/METADATA",
+    "lib/python3.8/site-packages/sip-4.19.13.dist-info/RECORD",
+    "lib/python3.8/site-packages/sip.pyi",
+    "lib/python3.8/site-packages/sip.so",
+    "lib/python3.8/site-packages/sipconfig.py",
+    "lib/python3.8/site-packages/sipdistutils.py"
+  ],
+  "fn": "sip-4.19.13-py38he6710b0_0.conda",
+  "legacy_bz2_md5": "8300829923f37c4267613755632770b8",
+  "legacy_bz2_size": 301151,
+  "license": "GPL-3.0",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/sip-4.19.13-py38he6710b0_0",
+    "type": 1
+  },
+  "md5": "47810340069a33face31cc56e48d746e",
+  "name": "sip",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/sip-4.19.13-py38he6710b0_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/sipconfig.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "e4296c25cc106f972420fe2c7b9cb6d8bf15c74656b5ff3c988262afcbcae217",
+        "sha256_in_prefix": "27adaf5b0287e61d1dcf3001c99c4e05dc5076c0a06c9ad9af8b9cb099448ac8",
+        "size_in_bytes": 96870
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "sip==4.19.13=py38he6710b0_0",
+  "sha256": "2a0affc13ad28dbf10a0c79fec3a04ab12d26f3b0cc4fd3d66927f85419a3c7b",
+  "size": 283579,
+  "subdir": "linux-64",
+  "timestamp": 1573200494589,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/sip-4.19.13-py38he6710b0_0.conda",
+  "version": "4.19.13"
+}

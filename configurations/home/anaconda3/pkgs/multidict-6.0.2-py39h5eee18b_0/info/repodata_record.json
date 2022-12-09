@@ -1,0 +1,26 @@
+{
+  "arch": "x86_64",
+  "build": "py39h5eee18b_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "features": "",
+  "fn": "multidict-6.0.2-py39h5eee18b_0.conda",
+  "legacy_bz2_md5": "ff5a785881ed1be4202e5b15a6a7def3",
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "md5": "b1f4043f7e1d5974f58d2fdb88f19b01",
+  "name": "multidict",
+  "platform": "linux",
+  "sha256": "ed4ee04acea93a606e43a5889e6fdba2ac4d93be198f6dfb641b97d402fbb1a3",
+  "size": 50144,
+  "subdir": "linux-64",
+  "timestamp": 1665674339367,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/multidict-6.0.2-py39h5eee18b_0.conda",
+  "version": "6.0.2"
+}

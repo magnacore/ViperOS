@@ -50,18 +50,18 @@ namespace Qt3DCore {
 
 class QPropertyValueRemovedChangeBasePrivate;
 
-class Q_3DCORESHARED_EXPORT QPropertyValueRemovedChangeBase : public QSceneChange
+class QT3DCORESHARED_EXPORT QPropertyValueRemovedChangeBase : public QSceneChange
 {
 public:
     ~QPropertyValueRemovedChangeBase();
 
 protected:
     Q_DECLARE_PRIVATE(QPropertyValueRemovedChangeBase)
-    Q3D_DECL_DEPRECATED explicit QPropertyValueRemovedChangeBase(QNodeId subjectId);
-    Q3D_DECL_DEPRECATED explicit QPropertyValueRemovedChangeBase(QPropertyValueRemovedChangeBasePrivate &dd, QNodeId subjectId);
+    explicit QPropertyValueRemovedChangeBase(QNodeId subjectId);
+    explicit QPropertyValueRemovedChangeBase(QPropertyValueRemovedChangeBasePrivate &dd, QNodeId subjectId);
 };
 
-Q3D_DECL_DEPRECATED typedef QSharedPointer<QPropertyValueRemovedChangeBase> QPropertyValueRemovedChangeBasePtr;
+typedef QSharedPointer<QPropertyValueRemovedChangeBase> QPropertyValueRemovedChangeBasePtr;
 
 } // namespace Qt3DCore
 

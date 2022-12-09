@@ -36,11 +36,11 @@ QT_CHARTS_BEGIN_NAMESPACE
 
 class QHorizontalStackedBarSeriesPrivate;
 
-class Q_CHARTS_EXPORT QHorizontalStackedBarSeries : public QAbstractBarSeries
+class QT_CHARTS_EXPORT QHorizontalStackedBarSeries : public QAbstractBarSeries
 {
     Q_OBJECT
 public:
-    explicit QHorizontalStackedBarSeries(QObject *parent = nullptr);
+    explicit QHorizontalStackedBarSeries(QObject *parent = Q_NULLPTR);
     ~QHorizontalStackedBarSeries();
     QAbstractSeries::SeriesType type() const;
 

@@ -53,7 +53,7 @@ namespace Qt3DRender {
 
 class QCameraLensPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QCameraLens : public Qt3DCore::QComponent
+class QT3DRENDERSHARED_EXPORT QCameraLens : public Qt3DCore::QComponent
 {
     Q_OBJECT
     Q_PROPERTY(ProjectionType projectionType READ projectionType WRITE setProjectionType NOTIFY projectionTypeChanged)
@@ -105,9 +105,6 @@ public:
 
     float exposure() const;
 
-    void viewAll(Qt3DCore::QNodeId cameraId);
-    void viewEntity(Qt3DCore::QNodeId entityId, Qt3DCore::QNodeId cameraId);
-
 public Q_SLOTS:
     void setProjectionType(ProjectionType projectionType);
     void setNearPlane(float nearPlane);
@@ -133,15 +130,13 @@ Q_SIGNALS:
     void topChanged(float top);
     void projectionMatrixChanged(const QMatrix4x4 &projectionMatrix);
     void exposureChanged(float exposure);
-    void viewSphere(const QVector3D &center, float radius);
 
 protected:
     explicit QCameraLens(QCameraLensPrivate &dd, QNode *parent = nullptr);
 
 private:
     Q_DECLARE_PRIVATE(QCameraLens)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
-    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // Qt3DRender

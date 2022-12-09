@@ -1,0 +1,42 @@
+{
+  "build": "hdba287a_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.2.0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/jbig-2.1-hdba287a_0",
+  "features": "",
+  "files": [
+    "include/jbig.h",
+    "include/jbig85.h",
+    "include/jbig_ar.h",
+    "lib/libjbig.a",
+    "lib/libjbig85.a"
+  ],
+  "fn": "jbig-2.1-hdba287a_0.conda",
+  "legacy_bz2_md5": "e9aca70f11e42d8ab5d4e111e0dfb03b",
+  "legacy_bz2_size": 42165,
+  "license": "GPL-2.0",
+  "license_family": "GPL",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/jbig-2.1-hdba287a_0",
+    "type": 1
+  },
+  "md5": "17d909449cd89da0324bf755aee5a9ef",
+  "name": "jbig",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/jbig-2.1-hdba287a_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "jbig==2.1=hdba287a_0",
+  "sha256": "924971b5e00ec6f599a7bb7af32548efdf8106182691a5306ca5405931d5970a",
+  "size": 40737,
+  "subdir": "linux-64",
+  "timestamp": 1505744775994,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/jbig-2.1-hdba287a_0.conda",
+  "version": "2.1"
+}

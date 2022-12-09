@@ -1,0 +1,77 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/wcwidth-0.2.5-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/wcwidth-0.2.5.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/wcwidth-0.2.5.dist-info/LICENSE",
+    "lib/python3.8/site-packages/wcwidth-0.2.5.dist-info/METADATA",
+    "lib/python3.8/site-packages/wcwidth-0.2.5.dist-info/RECORD",
+    "lib/python3.8/site-packages/wcwidth-0.2.5.dist-info/WHEEL",
+    "lib/python3.8/site-packages/wcwidth-0.2.5.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/wcwidth-0.2.5.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/wcwidth-0.2.5.dist-info/zip-safe",
+    "lib/python3.8/site-packages/wcwidth/__init__.py",
+    "lib/python3.8/site-packages/wcwidth/table_wide.py",
+    "lib/python3.8/site-packages/wcwidth/table_zero.py",
+    "lib/python3.8/site-packages/wcwidth/unicode_versions.py",
+    "lib/python3.8/site-packages/wcwidth/wcwidth.py",
+    "lib/python3.8/site-packages/wcwidth/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/wcwidth/__pycache__/table_wide.cpython-38.pyc",
+    "lib/python3.8/site-packages/wcwidth/__pycache__/table_zero.cpython-38.pyc",
+    "lib/python3.8/site-packages/wcwidth/__pycache__/unicode_versions.cpython-38.pyc",
+    "lib/python3.8/site-packages/wcwidth/__pycache__/wcwidth.cpython-38.pyc"
+  ],
+  "fn": "wcwidth-0.2.5-py_0.conda",
+  "legacy_bz2_md5": "d2e33d50573939f4724f8fbd0dcc3439",
+  "legacy_bz2_size": 37820,
+  "license": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/wcwidth-0.2.5-py_0",
+    "type": 1
+  },
+  "md5": "b7c958085cc261c78cf66df14926fafe",
+  "name": "wcwidth",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/wcwidth-0.2.5-py_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/wcwidth/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/wcwidth/__pycache__/table_wide.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/wcwidth/__pycache__/table_zero.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/wcwidth/__pycache__/unicode_versions.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/wcwidth/__pycache__/wcwidth.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "wcwidth==0.2.5=py_0",
+  "sha256": "dd65cf97be27f680389a4c8e4f23a5f3622d0338e7e3520d0f8d6a6030f4adb4",
+  "size": 29552,
+  "subdir": "noarch",
+  "timestamp": 1593447215490,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/wcwidth-0.2.5-py_0.conda",
+  "version": "0.2.5"
+}

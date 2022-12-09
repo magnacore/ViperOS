@@ -215,7 +215,6 @@ class Q_CORE_EXPORT QLineF {
 public:
 
     enum IntersectType { NoIntersection, BoundedIntersection, UnboundedIntersection };
-    using IntersectionType = IntersectType;
 
     Q_DECL_CONSTEXPR inline QLineF();
     Q_DECL_CONSTEXPR inline QLineF(const QPointF &pt1, const QPointF &pt2);
@@ -249,14 +248,10 @@ public:
     Q_REQUIRED_RESULT QLineF unitVector() const;
     Q_REQUIRED_RESULT Q_DECL_CONSTEXPR inline QLineF normalVector() const;
 
-    IntersectionType intersects(const QLineF &l, QPointF *intersectionPoint) const;
-
-#if QT_DEPRECATED_SINCE(5, 14)
-    QT_DEPRECATED_VERSION_X(5, 14, "Use intersects() instead")
+    // ### Qt 6: rename intersects() or intersection() and rename IntersectType IntersectionType
     IntersectType intersect(const QLineF &l, QPointF *intersectionPoint) const;
-    QT_DEPRECATED_X("Use qMin(l1.angleTo(l2), l2.angleTo(l1)) instead")
+
     qreal angle(const QLineF &l) const;
-#endif
 
     Q_DECL_CONSTEXPR inline QPointF pointAt(qreal t) const;
     inline void translate(const QPointF &p);
@@ -380,10 +375,8 @@ inline void QLineF::setLength(qreal len)
 {
     if (isNull())
         return;
-    Q_ASSERT(length() > 0);
-    const QLineF v = unitVector();
-    len /= v.length(); // In case it's not quite exactly 1.
-    pt2 = QPointF(pt1.x() + len * v.dx(), pt1.y() + len * v.dy());
+    QLineF v = unitVector();
+    pt2 = QPointF(pt1.x() + v.dx() * len, pt1.y() + v.dy() * len);
 }
 
 Q_DECL_CONSTEXPR inline QPointF QLineF::pointAt(qreal t) const

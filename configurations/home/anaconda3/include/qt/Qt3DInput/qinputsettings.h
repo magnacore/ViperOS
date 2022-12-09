@@ -49,7 +49,7 @@ namespace Qt3DInput {
 
 class QInputSettingsPrivate;
 
-class Q_3DINPUTSHARED_EXPORT QInputSettings : public Qt3DCore::QComponent
+class QT3DINPUTSHARED_EXPORT QInputSettings : public Qt3DCore::QComponent
 {
     Q_OBJECT
     Q_PROPERTY(QObject *eventSource READ eventSource WRITE setEventSource NOTIFY eventSourceChanged)
@@ -67,7 +67,7 @@ Q_SIGNALS:
 
 private:
     Q_DECLARE_PRIVATE(QInputSettings)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
     void eventSourceDestroyed();
 };
 

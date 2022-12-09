@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -55,7 +55,7 @@ struct Pe_Binary_t {
 
 typedef struct Pe_Binary_t Pe_Binary_t;
 
-/** Wrapper on LIEF::PE::Parser::parse */
+/** @brief Wrapper on LIEF::PE::Parser::parse */
 LIEF_API Pe_Binary_t* pe_parse(const char *file);
 
 LIEF_API void pe_binary_destroy(Pe_Binary_t* binary);

@@ -2323,8 +2323,8 @@ enum
 };
 
 /* Define CC and CFLAGS which were used to build this version of GMP */
-#define __GMP_CC "/opt/conda/conda-bld/gmp_1653996257004/_build_env/bin/x86_64-conda-linux-gnu-cc"
-#define __GMP_CFLAGS "-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/goldust/anaconda3/include -fdebug-prefix-map=/opt/conda/conda-bld/gmp_1653996257004/work=/usr/local/src/conda/gmp-6.2.1 -fdebug-prefix-map=/home/goldust/anaconda3=/usr/local/src/conda-prefix"
+#define __GMP_CC "/tmp/build/80754af9/gmp_1612242747963/_build_env/bin/x86_64-conda_cos6-linux-gnu-cc"
+#define __GMP_CFLAGS "-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/manuj/anaconda3/include -fdebug-prefix-map=/tmp/build/80754af9/gmp_1612242747963/work=/usr/local/src/conda/gmp-6.2.1 -fdebug-prefix-map=/home/manuj/anaconda3=/usr/local/src/conda-prefix"
 
 /* Major version number is the value of __GNU_MP__ too, above. */
 #define __GNU_MP_VERSION            6

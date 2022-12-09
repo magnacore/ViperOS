@@ -1,0 +1,55 @@
+{
+  "build": "py38h27cfd23_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/regex-2021.4.4-py38h27cfd23_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/regex-2021.4.4.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/regex-2021.4.4.dist-info/LICENSE.txt",
+    "lib/python3.8/site-packages/regex-2021.4.4.dist-info/METADATA",
+    "lib/python3.8/site-packages/regex-2021.4.4.dist-info/RECORD",
+    "lib/python3.8/site-packages/regex-2021.4.4.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/regex-2021.4.4.dist-info/WHEEL",
+    "lib/python3.8/site-packages/regex-2021.4.4.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/regex-2021.4.4.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/regex/__init__.py",
+    "lib/python3.8/site-packages/regex/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/regex/__pycache__/_regex_core.cpython-38.pyc",
+    "lib/python3.8/site-packages/regex/__pycache__/regex.cpython-38.pyc",
+    "lib/python3.8/site-packages/regex/__pycache__/test_regex.cpython-38.pyc",
+    "lib/python3.8/site-packages/regex/_regex.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/regex/_regex_core.py",
+    "lib/python3.8/site-packages/regex/regex.py",
+    "lib/python3.8/site-packages/regex/test_regex.py"
+  ],
+  "fn": "regex-2021.4.4-py38h27cfd23_0.conda",
+  "legacy_bz2_md5": "0acbf25cd02a13f2517cb8fa990c6489",
+  "legacy_bz2_size": 365538,
+  "license": "Python-2.0",
+  "license_family": "PSF",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/regex-2021.4.4-py38h27cfd23_0",
+    "type": 1
+  },
+  "md5": "96385ad1650339994d741b5a39542db5",
+  "name": "regex",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/regex-2021.4.4-py38h27cfd23_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "regex==2021.4.4=py38h27cfd23_0",
+  "sha256": "cd64cc9e8b84cfeabb3e1cf9f4b190b4e0d5b2e76ab874da74ab979327fda780",
+  "size": 329994,
+  "subdir": "linux-64",
+  "timestamp": 1617569251269,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/regex-2021.4.4-py38h27cfd23_0.conda",
+  "version": "2021.4.4"
+}

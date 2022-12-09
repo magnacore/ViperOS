@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -230,7 +230,6 @@
 #undef EM_NORC
 #undef EM_CSR_KALIMBA
 #undef EM_AMDGPU
-#undef EM_BPF
 
 
 #undef ELFCLASSNONE
@@ -400,10 +399,6 @@
 #undef SHT_LOUSER
 #undef SHT_HIUSER
 
-#undef SHT_ANDROID_REL
-#undef SHT_ANDROID_RELA
-#undef SHT_LLVM_ADDRSIG
-#undef SHT_RELR
 
 #undef SHF_NONE
 #undef SHF_WRITE
@@ -595,17 +590,6 @@
 #undef DT_MIPS_AUX_DYNAMIC
 #undef DT_MIPS_PLTGOT
 #undef DT_MIPS_RWPLT
-
-#undef DT_ANDROID_REL_OFFSET
-#undef DT_ANDROID_REL_SIZE
-#undef DT_ANDROID_REL
-#undef DT_ANDROID_RELSZ
-#undef DT_ANDROID_RELA
-#undef DT_ANDROID_RELASZ
-#undef DT_RELR
-#undef DT_RELRSZ
-#undef DT_RELRENT
-#undef DT_RELRCOUNT
 
 #undef DF_ORIGIN
 #undef DF_SYMBOLIC

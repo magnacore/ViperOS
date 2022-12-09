@@ -1,0 +1,248 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "six >=1.9",
+    "webencodings"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/html5lib-1.1-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/html5lib-1.1.dist-info/AUTHORS.rst",
+    "lib/python3.8/site-packages/html5lib-1.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/html5lib-1.1.dist-info/LICENSE",
+    "lib/python3.8/site-packages/html5lib-1.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/html5lib-1.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/html5lib-1.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/html5lib-1.1.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/html5lib-1.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/html5lib/__init__.py",
+    "lib/python3.8/site-packages/html5lib/_ihatexml.py",
+    "lib/python3.8/site-packages/html5lib/_inputstream.py",
+    "lib/python3.8/site-packages/html5lib/_tokenizer.py",
+    "lib/python3.8/site-packages/html5lib/_trie/__init__.py",
+    "lib/python3.8/site-packages/html5lib/_trie/_base.py",
+    "lib/python3.8/site-packages/html5lib/_trie/py.py",
+    "lib/python3.8/site-packages/html5lib/_utils.py",
+    "lib/python3.8/site-packages/html5lib/constants.py",
+    "lib/python3.8/site-packages/html5lib/filters/__init__.py",
+    "lib/python3.8/site-packages/html5lib/filters/alphabeticalattributes.py",
+    "lib/python3.8/site-packages/html5lib/filters/base.py",
+    "lib/python3.8/site-packages/html5lib/filters/inject_meta_charset.py",
+    "lib/python3.8/site-packages/html5lib/filters/lint.py",
+    "lib/python3.8/site-packages/html5lib/filters/optionaltags.py",
+    "lib/python3.8/site-packages/html5lib/filters/sanitizer.py",
+    "lib/python3.8/site-packages/html5lib/filters/whitespace.py",
+    "lib/python3.8/site-packages/html5lib/html5parser.py",
+    "lib/python3.8/site-packages/html5lib/serializer.py",
+    "lib/python3.8/site-packages/html5lib/treeadapters/__init__.py",
+    "lib/python3.8/site-packages/html5lib/treeadapters/genshi.py",
+    "lib/python3.8/site-packages/html5lib/treeadapters/sax.py",
+    "lib/python3.8/site-packages/html5lib/treebuilders/__init__.py",
+    "lib/python3.8/site-packages/html5lib/treebuilders/base.py",
+    "lib/python3.8/site-packages/html5lib/treebuilders/dom.py",
+    "lib/python3.8/site-packages/html5lib/treebuilders/etree.py",
+    "lib/python3.8/site-packages/html5lib/treebuilders/etree_lxml.py",
+    "lib/python3.8/site-packages/html5lib/treewalkers/__init__.py",
+    "lib/python3.8/site-packages/html5lib/treewalkers/base.py",
+    "lib/python3.8/site-packages/html5lib/treewalkers/dom.py",
+    "lib/python3.8/site-packages/html5lib/treewalkers/etree.py",
+    "lib/python3.8/site-packages/html5lib/treewalkers/etree_lxml.py",
+    "lib/python3.8/site-packages/html5lib/treewalkers/genshi.py",
+    "lib/python3.8/site-packages/html5lib/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/__pycache__/_ihatexml.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/__pycache__/_inputstream.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/__pycache__/_tokenizer.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/_trie/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/_trie/__pycache__/_base.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/_trie/__pycache__/py.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/__pycache__/_utils.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/__pycache__/constants.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/filters/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/filters/__pycache__/alphabeticalattributes.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/filters/__pycache__/base.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/filters/__pycache__/inject_meta_charset.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/filters/__pycache__/lint.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/filters/__pycache__/optionaltags.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/filters/__pycache__/sanitizer.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/filters/__pycache__/whitespace.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/__pycache__/html5parser.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/__pycache__/serializer.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treeadapters/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treeadapters/__pycache__/genshi.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treeadapters/__pycache__/sax.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treebuilders/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treebuilders/__pycache__/base.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treebuilders/__pycache__/dom.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treebuilders/__pycache__/etree.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treebuilders/__pycache__/etree_lxml.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treewalkers/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treewalkers/__pycache__/base.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treewalkers/__pycache__/dom.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treewalkers/__pycache__/etree.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treewalkers/__pycache__/etree_lxml.cpython-38.pyc",
+    "lib/python3.8/site-packages/html5lib/treewalkers/__pycache__/genshi.cpython-38.pyc"
+  ],
+  "fn": "html5lib-1.1-py_0.conda",
+  "legacy_bz2_md5": "55727fc1bbdb82fba5e600e15b1fbe80",
+  "legacy_bz2_size": 94055,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/html5lib-1.1-py_0",
+    "type": 1
+  },
+  "md5": "db124af3030657ec01eee57ebd9f3b6a",
+  "name": "html5lib",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/html5lib-1.1-py_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/__pycache__/_ihatexml.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/__pycache__/_inputstream.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/__pycache__/_tokenizer.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/_trie/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/_trie/__pycache__/_base.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/_trie/__pycache__/py.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/__pycache__/_utils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/__pycache__/constants.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/filters/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/filters/__pycache__/alphabeticalattributes.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/filters/__pycache__/base.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/filters/__pycache__/inject_meta_charset.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/filters/__pycache__/lint.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/filters/__pycache__/optionaltags.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/filters/__pycache__/sanitizer.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/filters/__pycache__/whitespace.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/__pycache__/html5parser.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/__pycache__/serializer.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treeadapters/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treeadapters/__pycache__/genshi.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treeadapters/__pycache__/sax.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treebuilders/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treebuilders/__pycache__/base.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treebuilders/__pycache__/dom.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treebuilders/__pycache__/etree.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treebuilders/__pycache__/etree_lxml.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treewalkers/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treewalkers/__pycache__/base.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treewalkers/__pycache__/dom.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treewalkers/__pycache__/etree.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treewalkers/__pycache__/etree_lxml.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/html5lib/treewalkers/__pycache__/genshi.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "html5lib==1.1=py_0",
+  "sha256": "61cb7388edfa28c649225081365f83ecebdb32f6262337c5edc8c9beeb56c060",
+  "size": 95377,
+  "subdir": "noarch",
+  "timestamp": 1593446248463,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/html5lib-1.1-py_0.conda",
+  "version": "1.1"
+}

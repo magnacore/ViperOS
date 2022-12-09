@@ -1,0 +1,58 @@
+# This file created by conda-build 3.21.7
+# meta.yaml template originally from:
+# /feedstock/backports-feedstock/recipe, last modified Thu Jan 20 09:54:58 2022
+# ------------------------------------------------
+
+package:
+  name: backports
+  version: '1.1'
+source:
+  sha256: 64fbda275c95e04f09ca5c11e33527866b1b1c8f16bb0eea2f504f2d3b60195c
+  url: https://github.com/brandon-rhodes/backports/archive/refs/tags/v1.1.tar.gz
+build:
+  noarch: python
+  number: '0'
+  string: pyhd3eb1b0_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 4.5 1_gnu
+    - ca-certificates 2021.10.26 h06a4308_2
+    - certifi 2021.10.8 py39h06a4308_2
+    - ld_impl_linux-64 2.35.1 h7274673_9
+    - libffi 3.3 he6710b0_2
+    - libgcc-ng 9.3.0 h5101ec6_17
+    - libgomp 9.3.0 h5101ec6_17
+    - libstdcxx-ng 9.3.0 hd4cf53a_17
+    - ncurses 6.3 h7f8727e_2
+    - openssl 1.1.1m h7f8727e_0
+    - python 3.9.7 h12debd9_1
+    - readline 8.1.2 h7f8727e_1
+    - setuptools 58.0.4 py39h06a4308_0
+    - sqlite 3.37.0 hc218d9a_0
+    - tk 8.6.11 h1ccaba5_0
+    - tzdata 2021e hda174b7_0
+    - xz 5.2.5 h7b6447c_0
+    - zlib 1.2.11 h7f8727e_4
+  run:
+    - python
+test:
+  commands:
+    - pip check
+  imports:
+    - backports
+  requires:
+    - pip
+about:
+  description: 'Namespace for backported Python features.
+
+    '
+  dev_url: https://github.com/brandon-rhodes/backports
+  doc_url: https://pypi.python.org/pypi/backports/
+  home: https://github.com/brandon-rhodes/backports
+  license: MIT
+  license_family: MIT
+  summary: Namespace for backported Python features.
+extra:
+  copy_test_source_files: true
+  final: true

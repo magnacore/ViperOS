@@ -1,0 +1,80 @@
+{
+  "build": "py_1001",
+  "build_number": 1001,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/et_xmlfile-1.0.1-py_1001",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/et_xmlfile-1.0.1-py3.7.egg-info/PKG-INFO",
+    "lib/python3.8/site-packages/et_xmlfile-1.0.1-py3.7.egg-info/SOURCES.txt",
+    "lib/python3.8/site-packages/et_xmlfile-1.0.1-py3.7.egg-info/dependency_links.txt",
+    "lib/python3.8/site-packages/et_xmlfile-1.0.1-py3.7.egg-info/top_level.txt",
+    "lib/python3.8/site-packages/et_xmlfile/__init__.py",
+    "lib/python3.8/site-packages/et_xmlfile/tests/__init__.py",
+    "lib/python3.8/site-packages/et_xmlfile/tests/common_imports.py",
+    "lib/python3.8/site-packages/et_xmlfile/tests/helper.py",
+    "lib/python3.8/site-packages/et_xmlfile/tests/test_incremental_xmlfile.py",
+    "lib/python3.8/site-packages/et_xmlfile/xmlfile.py",
+    "lib/python3.8/site-packages/et_xmlfile/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/et_xmlfile/tests/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/et_xmlfile/tests/__pycache__/common_imports.cpython-38.pyc",
+    "lib/python3.8/site-packages/et_xmlfile/tests/__pycache__/helper.cpython-38.pyc",
+    "lib/python3.8/site-packages/et_xmlfile/tests/__pycache__/test_incremental_xmlfile.cpython-38.pyc",
+    "lib/python3.8/site-packages/et_xmlfile/__pycache__/xmlfile.cpython-38.pyc"
+  ],
+  "fn": "et_xmlfile-1.0.1-py_1001.conda",
+  "legacy_bz2_md5": "05e1ab8acba9c2ed26f2ad21a31d6d56",
+  "legacy_bz2_size": 11239,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/et_xmlfile-1.0.1-py_1001",
+    "type": 1
+  },
+  "md5": "4de97cf37237ab3079f55e285ee1d7e9",
+  "name": "et_xmlfile",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/et_xmlfile-1.0.1-py_1001.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/et_xmlfile/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/et_xmlfile/tests/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/et_xmlfile/tests/__pycache__/common_imports.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/et_xmlfile/tests/__pycache__/helper.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/et_xmlfile/tests/__pycache__/test_incremental_xmlfile.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/et_xmlfile/__pycache__/xmlfile.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "et_xmlfile==1.0.1=py_1001",
+  "sha256": "f5288c3162fa793572f253fd0f63d8b8a7ba519f68f19d508575591d1314862c",
+  "size": 12339,
+  "subdir": "noarch",
+  "timestamp": 1594352151282,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/et_xmlfile-1.0.1-py_1001.conda",
+  "version": "1.0.1"
+}

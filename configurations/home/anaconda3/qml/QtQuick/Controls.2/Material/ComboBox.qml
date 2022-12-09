@@ -34,25 +34,22 @@
 **
 ****************************************************************************/
 
-import QtQuick 2.15
-import QtQuick.Window 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Controls.impl 2.15
-import QtQuick.Templates 2.15 as T
-import QtQuick.Controls.Material 2.15
-import QtQuick.Controls.Material.impl 2.15
+import QtQuick 2.9
+import QtQuick.Window 2.3
+import QtQuick.Controls 2.2
+import QtQuick.Templates 2.2 as T
+import QtQuick.Controls.Material 2.2
+import QtQuick.Controls.Material.impl 2.2
 
 T.ComboBox {
     id: control
 
-    implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
-                            implicitContentWidth + leftPadding + rightPadding)
-    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
-                             implicitContentHeight + topPadding + bottomPadding,
-                             implicitIndicatorHeight + topPadding + bottomPadding)
-
-    topInset: 6
-    bottomInset: 6
+    implicitWidth: Math.max(background ? background.implicitWidth : 0,
+                            contentItem.implicitWidth + leftPadding + rightPadding)
+    implicitHeight: Math.max(background ? background.implicitHeight : 0,
+                             Math.max(contentItem.implicitHeight,
+                                      indicator ? indicator.implicitHeight : 0) + topPadding + bottomPadding)
+    baselineOffset: contentItem.y + contentItem.baselineOffset
 
     leftPadding: padding + (!control.mirrored || !indicator || !indicator.visible ? 0 : indicator.width + spacing)
     rightPadding: padding + (control.mirrored || !indicator || !indicator.visible ? 0 : indicator.width + spacing)
@@ -63,18 +60,19 @@ T.ComboBox {
     Material.foreground: flat ? undefined : Material.primaryTextColor
 
     delegate: MenuItem {
-        width: ListView.view.width
+        width: parent.width
         text: control.textRole ? (Array.isArray(control.model) ? modelData[control.textRole] : model[control.textRole]) : modelData
-        Material.foreground: control.currentIndex === index ? ListView.view.contentItem.Material.accent : ListView.view.contentItem.Material.foreground
+        Material.foreground: control.currentIndex === index ? parent.Material.accent : parent.Material.foreground
         highlighted: control.highlightedIndex === index
         hoverEnabled: control.hoverEnabled
     }
 
-    indicator: ColorImage {
+    indicator: Image {
         x: control.mirrored ? control.padding : control.width - width - control.padding
         y: control.topPadding + (control.availableHeight - height) / 2
-        color: control.enabled ? control.Material.foreground : control.Material.hintTextColor
-        source: "qrc:/qt-project.org/imports/QtQuick/Controls.2/Material/images/drop-indicator.png"
+        source: "image://material/drop-indicator/" + (control.enabled ? control.Material.foreground : control.Material.hintTextColor)
+        sourceSize.width: width
+        sourceSize.height: height
     }
 
     contentItem: T.TextField {
@@ -89,7 +87,6 @@ T.ComboBox {
         readOnly: control.down
         inputMethodHints: control.inputMethodHints
         validator: control.validator
-        selectByMouse: control.selectTextByMouse
 
         font: control.font
         color: control.enabled ? control.Material.foreground : control.Material.hintTextColor
@@ -102,8 +99,11 @@ T.ComboBox {
 
     background: Rectangle {
         implicitWidth: 120
-        implicitHeight: control.Material.buttonHeight
+        implicitHeight: 48
 
+        // external vertical padding is 6 (to increase touch area)
+        y: 6
+        height: parent.height - 12
         radius: control.flat ? 0 : 2
         color: !control.editable ? control.Material.dialogColor : "transparent"
 
@@ -162,6 +162,7 @@ T.ComboBox {
             implicitHeight: contentHeight
             model: control.delegateModel
             currentIndex: control.highlightedIndex
+            highlightRangeMode: ListView.ApplyRange
             highlightMoveDuration: 0
 
             T.ScrollIndicator.vertical: ScrollIndicator { }

@@ -1,0 +1,17 @@
+{
+  "arch": null,
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "depends": [
+    "frozenlist >=1.1.0",
+    "python >=3.6"
+  ],
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "name": "aiosignal",
+  "noarch": "python",
+  "platform": null,
+  "subdir": "noarch",
+  "timestamp": 1637843091841,
+  "version": "1.2.0"
+}

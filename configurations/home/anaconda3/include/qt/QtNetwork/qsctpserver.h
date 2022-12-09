@@ -63,7 +63,7 @@ public:
     QSctpSocket *nextPendingDatagramConnection();
 
 protected:
-    void incomingConnection(qintptr handle) override;
+    void incomingConnection(qintptr handle) Q_DECL_OVERRIDE;
 
 private:
     Q_DISABLE_COPY(QSctpServer)

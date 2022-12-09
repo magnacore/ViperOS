@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 J. Rieck (based on R. Thomas's work)
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 J. Rieck (based on R. Thomas's work)
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,32 +25,31 @@
 
 namespace LIEF {
 namespace MachO {
-struct rpath_command;
 
 class LIEF_API RPathCommand : public LoadCommand {
   public:
-  RPathCommand(void);
-  RPathCommand(const rpath_command *rpathCmd);
+    RPathCommand(void);
+    RPathCommand(const rpath_command *rpathCmd);
 
-  RPathCommand& operator=(const RPathCommand& copy);
-  RPathCommand(const RPathCommand& copy);
+    RPathCommand& operator=(const RPathCommand& copy);
+    RPathCommand(const RPathCommand& copy);
 
-  virtual RPathCommand* clone(void) const override;
+    virtual RPathCommand* clone(void) const override;
 
-  virtual ~RPathCommand(void);
+    virtual ~RPathCommand(void);
 
-  const std::string& path(void) const;
-  void path(const std::string& path);
+    const std::string& path(void) const;
+    void   path(const std::string& path);
 
-  bool operator==(const RPathCommand& rhs) const;
-  bool operator!=(const RPathCommand& rhs) const;
+    bool operator==(const RPathCommand& rhs) const;
+    bool operator!=(const RPathCommand& rhs) const;
 
-  virtual void accept(Visitor& visitor) const override;
+    virtual void accept(Visitor& visitor) const override;
 
-  virtual std::ostream& print(std::ostream& os) const override;
+    virtual std::ostream& print(std::ostream& os) const override;
 
   private:
-  std::string path_;
+    std::string path_;
 };
 
 }

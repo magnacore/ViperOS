@@ -37,19 +37,19 @@ Usage: glib-gettextize [OPTION]... [package-dir]
   -f, --force          force writing of new files even if old exist
 Report bugs to https://gitlab.gnome.org/GNOME/glib/issues/new."
 package=glib
-version=2.69.1
+version=2.68.1
 try_ln_s=:
 
 # Directory where the sources are stored.
-prefix=/home/goldust/anaconda3
+prefix=/home/manuj/anaconda3
 case `uname` in
 MINGW32*)
     prefix="`dirname $0`/.."
     ;;
 esac
 
-datarootdir=/home/goldust/anaconda3/share
-datadir=/home/goldust/anaconda3/share
+datarootdir=/home/manuj/anaconda3/share
+datadir=/home/manuj/anaconda3/share
 
 gettext_dir=$datadir/glib-2.0/gettext
 

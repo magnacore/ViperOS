@@ -41,7 +41,7 @@
 #define QNEARFIELDSHAREMANAGER_H
 
 #include <QtCore/QObject>
-#include <QtNfc/qtnfcglobal.h>
+#include <QtNfc/qnfcglobal.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -53,7 +53,7 @@ class Q_NFC_EXPORT QNearFieldShareManager : public QObject
     Q_OBJECT
 
 public:
-    explicit QNearFieldShareManager(QObject *parent = nullptr);
+    explicit QNearFieldShareManager(QObject *parent = Q_NULLPTR);
     ~QNearFieldShareManager();
 
     enum ShareError {

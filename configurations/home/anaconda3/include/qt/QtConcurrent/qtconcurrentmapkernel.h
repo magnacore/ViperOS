@@ -3,7 +3,7 @@
 ** Copyright (C) 2016 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
-** This file is part of the QtConcurrent module of the Qt Toolkit.
+** This file is part of the QtCore module of the Qt Toolkit.
 **
 ** $QT_BEGIN_LICENSE:LGPL$
 ** Commercial License Usage
@@ -42,7 +42,7 @@
 
 #include <QtConcurrent/qtconcurrent_global.h>
 
-#if !defined(QT_NO_CONCURRENT) || defined (Q_CLANG_QDOC)
+#ifndef QT_NO_CONCURRENT
 
 #include <QtConcurrent/qtconcurrentiteratekernel.h>
 #include <QtConcurrent/qtconcurrentreducekernel.h>
@@ -50,6 +50,7 @@
 QT_BEGIN_NAMESPACE
 
 
+#ifndef Q_QDOC
 namespace QtConcurrent {
 
 // map kernel, works with both parallel-for and parallel-while
@@ -74,7 +75,7 @@ public:
         Iterator it = sequenceBeginIterator;
         std::advance(it, beginIndex);
         for (int i = beginIndex; i < endIndex; ++i) {
-            runIteration(it, i, nullptr);
+            runIteration(it, i, 0);
             std::advance(it, 1);
         }
 
@@ -118,16 +119,16 @@ public:
         return false;
     }
 
-    bool runIterations(Iterator sequenceBeginIterator, int beginIndex, int endIndex, ReducedResultType *) override
+    bool runIterations(Iterator sequenceBeginIterator, int begin, int end, ReducedResultType *) override
     {
         IntermediateResults<typename MapFunctor::result_type> results;
-        results.begin = beginIndex;
-        results.end = endIndex;
-        results.vector.reserve(endIndex - beginIndex);
+        results.begin = begin;
+        results.end = end;
+        results.vector.reserve(end - begin);
 
         Iterator it = sequenceBeginIterator;
-        std::advance(it, beginIndex);
-        for (int i = beginIndex; i < endIndex; ++i) {
+        std::advance(it, begin);
+        for (int i = begin; i < end; ++i) {
             results.vector.append(map(*(it)));
             std::advance(it, 1);
         }
@@ -176,13 +177,13 @@ public:
         return true;
     }
 
-    bool runIterations(Iterator sequenceBeginIterator, int beginIndex, int endIndex, T *results) override
+    bool runIterations(Iterator sequenceBeginIterator, int begin, int end, T *results) override
     {
 
         Iterator it = sequenceBeginIterator;
-        std::advance(it, beginIndex);
-        for (int i = beginIndex; i < endIndex; ++i) {
-            runIteration(it, i, results + (i - beginIndex));
+        std::advance(it, begin);
+        for (int i = begin; i < end; ++i) {
+            runIteration(it, i, results + (i - begin));
             std::advance(it, 1);
         }
 
@@ -190,14 +191,12 @@ public:
     }
 };
 
-//! [qtconcurrentmapkernel-1]
 template <typename Iterator, typename Functor>
 inline ThreadEngineStarter<void> startMap(Iterator begin, Iterator end, Functor functor)
 {
     return startThreadEngine(new MapKernel<Iterator, Functor>(begin, end, functor));
 }
 
-//! [qtconcurrentmapkernel-2]
 template <typename T, typename Iterator, typename Functor>
 inline ThreadEngineStarter<T> startMapped(Iterator begin, Iterator end, Functor functor)
 {
@@ -226,7 +225,6 @@ struct SequenceHolder1 : public Base
     }
 };
 
-//! [qtconcurrentmapkernel-3]
 template <typename T, typename Sequence, typename Functor>
 inline ThreadEngineStarter<T> startMapped(const Sequence &sequence, Functor functor)
 {
@@ -237,7 +235,6 @@ inline ThreadEngineStarter<T> startMapped(const Sequence &sequence, Functor func
     return startThreadEngine(new SequenceHolderType(sequence, functor));
 }
 
-//! [qtconcurrentmapkernel-4]
 template <typename IntermediateType, typename ResultType, typename Sequence, typename MapFunctor, typename ReduceFunctor>
 inline ThreadEngineStarter<ResultType> startMappedReduced(const Sequence & sequence,
                                                            MapFunctor mapFunctor, ReduceFunctor reduceFunctor,
@@ -250,7 +247,6 @@ inline ThreadEngineStarter<ResultType> startMappedReduced(const Sequence & seque
     return startThreadEngine(new SequenceHolderType(sequence, mapFunctor, reduceFunctor, options));
 }
 
-//! [qtconcurrentmapkernel-5]
 template <typename IntermediateType, typename ResultType, typename Iterator, typename MapFunctor, typename ReduceFunctor>
 inline ThreadEngineStarter<ResultType> startMappedReduced(Iterator begin, Iterator end,
                                                            MapFunctor mapFunctor, ReduceFunctor reduceFunctor,
@@ -263,6 +259,7 @@ inline ThreadEngineStarter<ResultType> startMappedReduced(Iterator begin, Iterat
 
 } // namespace QtConcurrent
 
+#endif //Q_QDOC
 
 QT_END_NAMESPACE
 

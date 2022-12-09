@@ -1,4 +1,4 @@
-#!/home/goldust/anaconda3/envs/qtile/bin/python3.10
+#!/home/manuj/anaconda3/envs/qtile/bin/python3.8
 # -*- coding: utf-8 -*-
 import re
 import sys

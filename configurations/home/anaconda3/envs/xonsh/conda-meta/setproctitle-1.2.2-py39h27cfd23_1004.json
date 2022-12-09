@@ -1,0 +1,102 @@
+{
+  "build": "py39h27cfd23_1004",
+  "build_number": 1004,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/setproctitle-1.2.2-py39h27cfd23_1004",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/METADATA",
+    "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/RECORD",
+    "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/WHEEL",
+    "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/setproctitle.cpython-39-x86_64-linux-gnu.so"
+  ],
+  "fn": "setproctitle-1.2.2-py39h27cfd23_1004.conda",
+  "legacy_bz2_md5": "c77c8cf6035ad09b6f9a8c133c499dcf",
+  "license": "BSD 3-clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/setproctitle-1.2.2-py39h27cfd23_1004",
+    "type": 1
+  },
+  "md5": "42f1e20e0591ca72eaa1b35d45209ef1",
+  "name": "setproctitle",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/setproctitle-1.2.2-py39h27cfd23_1004.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "a5603ae43a8c640cf9cfd55080403fcd9716bdcdb9b3507b2d815beb7cce7605",
+        "sha256_in_prefix": "a5603ae43a8c640cf9cfd55080403fcd9716bdcdb9b3507b2d815beb7cce7605",
+        "size_in_bytes": 8802
+      },
+      {
+        "_path": "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "92325a90835c271e1aaf8525e5da0f491a9fb2536f46a4efd868bcc6959367cc",
+        "sha256_in_prefix": "92325a90835c271e1aaf8525e5da0f491a9fb2536f46a4efd868bcc6959367cc",
+        "size_in_bytes": 711
+      },
+      {
+        "_path": "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "8d1fc321f87460fad37b3ee2dd8a81cc662e29d56cef916364c74cb6f2308a83",
+        "sha256_in_prefix": "8d1fc321f87460fad37b3ee2dd8a81cc662e29d56cef916364c74cb6f2308a83",
+        "size_in_bytes": 103
+      },
+      {
+        "_path": "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "5d7bff32915789005e25b87136e2f39b75b5109e0540d4f9cc3a538db6dc5fa3",
+        "sha256_in_prefix": "5d7bff32915789005e25b87136e2f39b75b5109e0540d4f9cc3a538db6dc5fa3",
+        "size_in_bytes": 85
+      },
+      {
+        "_path": "lib/python3.9/site-packages/setproctitle-1.2.2.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "92196ed92b8d10ad82b79f785e13134fada597ca74a05cdafb8766cd41530614",
+        "sha256_in_prefix": "92196ed92b8d10ad82b79f785e13134fada597ca74a05cdafb8766cd41530614",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "lib/python3.9/site-packages/setproctitle.cpython-39-x86_64-linux-gnu.so",
+        "path_type": "hardlink",
+        "sha256": "387fe6d28565f7a2551ec49dd2059a09b98a23a2755b25a521a01d8d863e509b",
+        "sha256_in_prefix": "387fe6d28565f7a2551ec49dd2059a09b98a23a2755b25a521a01d8d863e509b",
+        "size_in_bytes": 27736
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "8fb210894e6c634f67290b1f0345049404ce898bde19ab784bcd8745e4ee405b",
+  "size": 16781,
+  "subdir": "linux-64",
+  "timestamp": 1611517581520,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/setproctitle-1.2.2-py39h27cfd23_1004.conda",
+  "version": "1.2.2"
+}

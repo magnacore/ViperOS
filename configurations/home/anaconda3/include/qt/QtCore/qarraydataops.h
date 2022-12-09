@@ -65,7 +65,7 @@ struct QPodArrayOps
         Q_ASSERT(newSize > uint(this->size));
         Q_ASSERT(newSize <= this->alloc);
 
-        ::memset(static_cast<void *>(this->end()), 0, (newSize - this->size) * sizeof(T));
+        ::memset(this->end(), 0, (newSize - this->size) * sizeof(T));
         this->size = int(newSize);
     }
 
@@ -106,7 +106,7 @@ struct QPodArrayOps
     void destroyAll() // Call from destructors, ONLY!
     {
         Q_ASSERT(this->isMutable());
-        Q_ASSERT(this->ref.atomic.loadRelaxed() == 0);
+        Q_ASSERT(this->ref.atomic.load() == 0);
 
         // As this is to be called only from destructor, it doesn't need to be
         // exception safe; size not updated.
@@ -121,9 +121,8 @@ struct QPodArrayOps
         Q_ASSERT(e <= where || b > this->end()); // No overlap
         Q_ASSERT(size_t(e - b) <= this->alloc - uint(this->size));
 
-        ::memmove(static_cast<void *>(where + (e - b)), static_cast<void *>(where),
-                  (static_cast<const T*>(this->end()) - where) * sizeof(T));
-        ::memcpy(static_cast<void *>(where), static_cast<const void *>(b), (e - b) * sizeof(T));
+        ::memmove(where + (e - b), where, (static_cast<const T*>(this->end()) - where) * sizeof(T));
+        ::memcpy(where, b, (e - b) * sizeof(T));
         this->size += (e - b);
     }
 
@@ -134,8 +133,7 @@ struct QPodArrayOps
         Q_ASSERT(b >= this->begin() && b < this->end());
         Q_ASSERT(e > this->begin() && e < this->end());
 
-        ::memmove(static_cast<void *>(b), static_cast<void *>(e),
-                  (static_cast<T *>(this->end()) - e) * sizeof(T));
+        ::memmove(b, e, (static_cast<T *>(this->end()) - e) * sizeof(T));
         this->size -= (e - b);
     }
 };
@@ -204,7 +202,7 @@ struct QGenericArrayOps
         // As this is to be called only from destructor, it doesn't need to be
         // exception safe; size not updated.
 
-        Q_ASSERT(this->ref.atomic.loadRelaxed() == 0);
+        Q_ASSERT(this->ref.atomic.load() == 0);
 
         const T *const b = this->begin();
         const T *i = this->end();

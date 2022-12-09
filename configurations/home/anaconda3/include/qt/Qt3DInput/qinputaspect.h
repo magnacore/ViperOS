@@ -51,7 +51,7 @@ class QAbstractPhysicalDevice;
 class QInputAspectPrivate;
 class QInputDeviceIntegration;
 
-class Q_3DINPUTSHARED_EXPORT QInputAspect : public Qt3DCore::QAbstractAspect
+class QT3DINPUTSHARED_EXPORT QInputAspect : public Qt3DCore::QAbstractAspect
 {
     Q_OBJECT
 public:
@@ -62,10 +62,10 @@ public:
     QStringList availablePhysicalDevices() const;
 
 private:
-    QVector<Qt3DCore::QAspectJobPtr> jobsToExecute(qint64 time) override;
+    QVector<Qt3DCore::QAspectJobPtr> jobsToExecute(qint64 time) Q_DECL_OVERRIDE;
 
-    void onRegistered() override;
-    void onUnregistered() override;
+    void onRegistered() Q_DECL_OVERRIDE;
+    void onUnregistered() Q_DECL_OVERRIDE;
 
     Q_DECLARE_PRIVATE(QInputAspect)
     explicit QInputAspect(QInputAspectPrivate &dd, QObject *parent);

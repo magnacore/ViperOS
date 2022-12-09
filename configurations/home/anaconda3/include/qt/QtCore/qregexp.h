@@ -53,7 +53,7 @@ struct QRegExpPrivate;
 class QStringList;
 class QRegExp;
 
-Q_CORE_EXPORT uint qHash(const QRegExp &key, uint seed = 0) noexcept;
+Q_CORE_EXPORT uint qHash(const QRegExp &key, uint seed = 0) Q_DECL_NOTHROW;
 
 class Q_CORE_EXPORT QRegExp
 {
@@ -73,8 +73,10 @@ public:
     QRegExp(const QRegExp &rx);
     ~QRegExp();
     QRegExp &operator=(const QRegExp &rx);
-    QRegExp &operator=(QRegExp &&other) noexcept { swap(other); return *this; }
-    void swap(QRegExp &other) noexcept { qSwap(priv, other.priv); }
+#ifdef Q_COMPILER_RVALUE_REFS
+    QRegExp &operator=(QRegExp &&other) Q_DECL_NOTHROW { swap(other); return *this; }
+#endif
+    void swap(QRegExp &other) Q_DECL_NOTHROW { qSwap(priv, other.priv); }
 
     bool operator==(const QRegExp &rx) const;
     inline bool operator!=(const QRegExp &rx) const { return !operator==(rx); }
@@ -110,7 +112,7 @@ public:
 
     static QString escape(const QString &str);
 
-    friend Q_CORE_EXPORT uint qHash(const QRegExp &key, uint seed) noexcept;
+    friend Q_CORE_EXPORT uint qHash(const QRegExp &key, uint seed) Q_DECL_NOTHROW;
 
 private:
     QRegExpPrivate *priv;

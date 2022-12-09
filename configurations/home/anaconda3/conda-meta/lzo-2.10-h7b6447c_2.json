@@ -6,7 +6,7 @@
   "depends": [
     "libgcc-ng >=7.3.0"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/lzo-2.10-h7b6447c_2",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/lzo-2.10-h7b6447c_2",
   "features": "",
   "files": [
     "include/lzo/lzo1.h",
@@ -45,12 +45,12 @@
   "license": "GPL v2+",
   "license_family": "GPL2",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/lzo-2.10-h7b6447c_2",
+    "source": "/home/manuj/anaconda3/pkgs/lzo-2.10-h7b6447c_2",
     "type": 1
   },
   "md5": "65722a7644f424de73fea6e87edd7653",
   "name": "lzo",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/lzo-2.10-h7b6447c_2.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/lzo-2.10-h7b6447c_2.conda",
   "paths_data": {
     "paths": [
       {
@@ -59,7 +59,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
         "sha256": "1e26097934e2a2e0193fd4b5ce0a6af5c7615d520630fc284d768b588ec1f81a",
-        "sha256_in_prefix": "7c37f2f88af6befe861952d1cfe4b389cf3447d12684480e9780cb8cc9d38fd7",
+        "sha256_in_prefix": "2f9bf09d3b1cda09095342e9403a6477fcd10f64bc34cd2342eb73168dd0b88d",
         "size_in_bytes": 616
       }
     ],

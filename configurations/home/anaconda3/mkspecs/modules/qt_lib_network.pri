@@ -1,4 +1,4 @@
-QT.network.VERSION = 5.15.2
+QT.network.VERSION = 5.9.7
 QT.network.name = QtNetwork
 QT.network.module = Qt5Network
 QT.network.libs = $$QT_MODULE_LIB_BASE
@@ -10,7 +10,7 @@ QT.network.depends = core
 QT.network.uses =
 QT.network.module_config = v2
 QT.network.DEFINES = QT_NETWORK_LIB
-QT.network.enabled_features = networkinterface bearermanagement dnslookup udpsocket dtls ftp gssapi http localserver networkdiskcache networkproxy opensslv11 ocsp socks5 ssl
-QT.network.disabled_features = securetransport schannel sctp sspi
-QT_CONFIG += networkinterface bearermanagement openssl udpsocket ftp getifaddrs gssapi http ipv6ifname localserver networkdiskcache networkproxy socks5 ssl
+QT.network.enabled_features = networkinterface bearermanagement ftp http localserver networkdiskcache networkproxy opensslv11 socks5 ssl udpsocket
+QT.network.disabled_features = sctp
+QT_CONFIG += networkinterface bearermanagement ftp getaddrinfo getifaddrs http ipv6ifname localserver networkdiskcache networkproxy openssl socks5 ssl udpsocket
 QT_MODULES += network

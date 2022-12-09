@@ -1,9 +1,9 @@
-This is libffi.info, produced by makeinfo version 6.7 from libffi.texi.
+This is libffi.info, produced by makeinfo version 6.6 from libffi.texi.
 
 This manual is for libffi, a portable foreign function interface
 library.
 
-   Copyright (C) 2008-2019, 2021 Anthony Green and Red Hat, Inc.
+   Copyright (C) 2008-2019 Anthony Green and Red Hat, Inc.
 
    Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -38,7 +38,7 @@ libffi
 This manual is for libffi, a portable foreign function interface
 library.
 
-   Copyright (C) 2008-2019, 2021 Anthony Green and Red Hat, Inc.
+   Copyright (C) 2008-2019 Anthony Green and Red Hat, Inc.
 
    Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -63,7 +63,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 * Introduction::                What is libffi?
 * Using libffi::                How to use libffi.
-* Memory Usage::                Where memory for closures comes from.
 * Missing Features::            Things libffi can't do.
 * Index::                       Index.
 
@@ -101,7 +100,7 @@ fully featured foreign function interface.  A layer must exist above
 languages.
 
 
-File: libffi.info,  Node: Using libffi,  Next: Memory Usage,  Prev: Introduction,  Up: Top
+File: libffi.info,  Node: Using libffi,  Next: Missing Features,  Prev: Introduction,  Up: Top
 
 2 Using libffi
 **************
@@ -167,11 +166,6 @@ prepare a call interface object, use the function 'ffi_prep_cif'.
 
      NTOTALARGS the total number of arguments, including variadic and
      fixed arguments.  ARGTYPES must have this many elements.
-
-     'ffi_prep_cif_var' will return 'FFI_BAD_ARGTYPE' if any of the
-     variable argument types are 'ffi_type_float' (promote to
-     'ffi_type_double' first), or any integer type small than an int
-     (promote to an int-sized type first).
 
      Note that, different cif's must be prepped for calls to the same
      function when different numbers of arguments are passed.
@@ -916,46 +910,9 @@ program.
      affected type is 'long double'.
 
 
-File: libffi.info,  Node: Memory Usage,  Next: Missing Features,  Prev: Using libffi,  Up: Top
+File: libffi.info,  Node: Missing Features,  Next: Index,  Prev: Using libffi,  Up: Top
 
-3 Memory Usage
-**************
-
-Note that memory allocated by 'ffi_closure_alloc' and freed by
-'ffi_closure_free' does not come from the same general pool of memory
-that 'malloc' and 'free' use.  To accomodate security settings, 'libffi'
-may aquire memory, for example, by mapping temporary files into multiple
-places in the address space (once to write out the closure, a second to
-execute it).  The search follows this list, using the first that works:
-
-   * A anonymous mapping (i.e.  not file-backed)
-
-   * 'memfd_create()', if the kernel supports it.
-
-   * A file created in the directory referenced by the environment
-     variable 'LIBFFI_TMPDIR'.
-
-   * Likewise for the environment variable 'TMPDIR'.
-
-   * A file created in '/tmp'.
-
-   * A file created in '/var/tmp'.
-
-   * A file created in '/dev/shm'.
-
-   * A file created in the user's home directory ('$HOME').
-
-   * A file created in any directory listed in '/etc/mtab'.
-
-   * A file created in any directory listed in '/proc/mounts'.
-
-   If security settings prohibit using any of these for closures,
-'ffi_closure_alloc' will fail.
-
-
-File: libffi.info,  Node: Missing Features,  Next: Index,  Prev: Memory Usage,  Up: Top
-
-4 Missing Features
+3 Missing Features
 ******************
 
 'libffi' is missing a few features.  We welcome patches to add support
@@ -968,6 +925,9 @@ for these.
    * The "raw" API is undocumented.
 
    * The Go API is undocumented.
+
+   Note that variadic support is very new and tested on a relatively
+small number of platforms.
 
 
 File: libffi.info,  Node: Index,  Prev: Missing Features,  Up: Top
@@ -985,7 +945,7 @@ Index
 * closure API:                           The Closure API.      (line 13)
 * closures:                              The Closure API.      (line 13)
 * FFI:                                   Introduction.         (line 31)
-* ffi_call:                              The Basics.           (line 72)
+* ffi_call:                              The Basics.           (line 67)
 * FFI_CLOSURES:                          The Closure API.      (line 13)
 * ffi_closure_alloc:                     The Closure API.      (line 19)
 * ffi_closure_free:                      The Closure API.      (line 26)
@@ -1026,37 +986,31 @@ Index
 * ffi_type_ushort:                       Primitive Types.      (line 53)
 * ffi_type_void:                         Primitive Types.      (line 10)
 * Foreign Function Interface:            Introduction.         (line 31)
-* void:                                  The Basics.           (line 72)
+* void:                                  The Basics.           (line 67)
 * void <1>:                              The Closure API.      (line 19)
 * void <2>:                              The Closure API.      (line 26)
 
 
 
 Tag Table:
-Node: Top1394
-Node: Introduction2923
-Node: Using libffi4555
-Node: The Basics5084
-Node: Simple Example10191
-Node: Types11222
-Node: Primitive Types11733
-Node: Structures13854
-Node: Size and Alignment14893
-Node: Arrays Unions Enums17090
-Node: Type Example20019
-Node: Complex21310
-Node: Complex Type Example22728
-Node: Multiple ABIs25780
-Node: The Closure API26151
-Node: Closure Example29977
-Node: Thread Safety31609
-Node: Memory Usage32410
-Node: Missing Features33605
-Node: Index33970
+Node: Top1388
+Node: Introduction2841
+Node: Using libffi4473
+Node: The Basics5006
+Node: Simple Example9870
+Node: Types10901
+Node: Primitive Types11412
+Node: Structures13533
+Node: Size and Alignment14572
+Node: Arrays Unions Enums16769
+Node: Type Example19698
+Node: Complex20989
+Node: Complex Type Example22407
+Node: Multiple ABIs25459
+Node: The Closure API25830
+Node: Closure Example29656
+Node: Thread Safety31288
+Node: Missing Features32089
+Node: Index32551
 
 End Tag Table
-
-
-Local Variables:
-coding: utf-8
-End:

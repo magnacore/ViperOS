@@ -1,0 +1,52 @@
+{
+  "build": "py38h7b6447c_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/wrapt-1.12.1-py38h7b6447c_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/wrapt-1.12.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/wrapt-1.12.1.dist-info/LICENSE",
+    "lib/python3.8/site-packages/wrapt-1.12.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/wrapt-1.12.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/wrapt-1.12.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/wrapt-1.12.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/wrapt/__init__.py",
+    "lib/python3.8/site-packages/wrapt/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/wrapt/__pycache__/decorators.cpython-38.pyc",
+    "lib/python3.8/site-packages/wrapt/__pycache__/importer.cpython-38.pyc",
+    "lib/python3.8/site-packages/wrapt/__pycache__/wrappers.cpython-38.pyc",
+    "lib/python3.8/site-packages/wrapt/_wrappers.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/wrapt/decorators.py",
+    "lib/python3.8/site-packages/wrapt/importer.py",
+    "lib/python3.8/site-packages/wrapt/wrappers.py"
+  ],
+  "fn": "wrapt-1.12.1-py38h7b6447c_1.conda",
+  "legacy_bz2_md5": "461c635433e2c73f0a1bbf744120adc0",
+  "legacy_bz2_size": 51428,
+  "license": "BSD 2-Clause",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/wrapt-1.12.1-py38h7b6447c_1",
+    "type": 1
+  },
+  "md5": "73f3e24df328715b26f1e74a27487cce",
+  "name": "wrapt",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/wrapt-1.12.1-py38h7b6447c_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "wrapt==1.12.1=py38h7b6447c_1",
+  "sha256": "f723c6deac3d0ae7b48d5fdd19a31cac274d79741cd8d5aae854cca714e10da3",
+  "size": 51215,
+  "subdir": "linux-64",
+  "timestamp": 1584459748636,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/wrapt-1.12.1-py38h7b6447c_1.conda",
+  "version": "1.12.1"
+}

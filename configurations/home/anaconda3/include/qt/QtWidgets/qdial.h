@@ -61,7 +61,7 @@ class Q_WIDGETS_EXPORT QDial: public QAbstractSlider
     Q_PROPERTY(qreal notchTarget READ notchTarget WRITE setNotchTarget)
     Q_PROPERTY(bool notchesVisible READ notchesVisible WRITE setNotchesVisible)
 public:
-    explicit QDial(QWidget *parent = nullptr);
+    explicit QDial(QWidget *parent = Q_NULLPTR);
 
     ~QDial();
 
@@ -73,23 +73,23 @@ public:
     qreal notchTarget() const;
     bool notchesVisible() const;
 
-    QSize sizeHint() const override;
-    QSize minimumSizeHint() const override;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
     void setNotchesVisible(bool visible);
     void setWrapping(bool on);
 
 protected:
-    bool event(QEvent *e) override;
-    void resizeEvent(QResizeEvent *re) override;
-    void paintEvent(QPaintEvent *pe) override;
+    bool event(QEvent *e) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *re) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *pe) Q_DECL_OVERRIDE;
 
-    void mousePressEvent(QMouseEvent *me) override;
-    void mouseReleaseEvent(QMouseEvent *me) override;
-    void mouseMoveEvent(QMouseEvent *me) override;
+    void mousePressEvent(QMouseEvent *me) Q_DECL_OVERRIDE;
+    void mouseReleaseEvent(QMouseEvent *me) Q_DECL_OVERRIDE;
+    void mouseMoveEvent(QMouseEvent *me) Q_DECL_OVERRIDE;
 
-    void sliderChange(SliderChange change) override;
+    void sliderChange(SliderChange change) Q_DECL_OVERRIDE;
     void initStyleOption(QStyleOptionSlider *option) const;
 
 

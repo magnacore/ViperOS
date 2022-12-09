@@ -8,40 +8,40 @@
     "python",
     "tqdm"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/conda-suggest-0.1.1-pyh9f0ad1d_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/conda-suggest-0.1.1-pyh9f0ad1d_0",
   "features": "",
   "files": [
-    "lib/python3.10/site-packages/conda_suggest-0.1.1.dist-info/AUTHORS.md",
-    "lib/python3.10/site-packages/conda_suggest-0.1.1.dist-info/INSTALLER",
-    "lib/python3.10/site-packages/conda_suggest-0.1.1.dist-info/LICENSE",
-    "lib/python3.10/site-packages/conda_suggest-0.1.1.dist-info/METADATA",
-    "lib/python3.10/site-packages/conda_suggest-0.1.1.dist-info/RECORD",
-    "lib/python3.10/site-packages/conda_suggest-0.1.1.dist-info/REQUESTED",
-    "lib/python3.10/site-packages/conda_suggest-0.1.1.dist-info/WHEEL",
-    "lib/python3.10/site-packages/conda_suggest-0.1.1.dist-info/direct_url.json",
-    "lib/python3.10/site-packages/conda_suggest-0.1.1.dist-info/entry_points.txt",
-    "lib/python3.10/site-packages/conda_suggest-0.1.1.dist-info/top_level.txt",
-    "lib/python3.10/site-packages/conda_suggest/__init__.py",
-    "lib/python3.10/site-packages/conda_suggest/find.py",
-    "lib/python3.10/site-packages/conda_suggest/generate.py",
-    "lib/python3.10/site-packages/conda_suggest/main.py",
-    "lib/python3.10/site-packages/conda_suggest/__pycache__/__init__.cpython-310.pyc",
-    "lib/python3.10/site-packages/conda_suggest/__pycache__/find.cpython-310.pyc",
-    "lib/python3.10/site-packages/conda_suggest/__pycache__/generate.cpython-310.pyc",
-    "lib/python3.10/site-packages/conda_suggest/__pycache__/main.cpython-310.pyc",
+    "lib/python3.9/site-packages/conda_suggest-0.1.1.dist-info/AUTHORS.md",
+    "lib/python3.9/site-packages/conda_suggest-0.1.1.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/conda_suggest-0.1.1.dist-info/LICENSE",
+    "lib/python3.9/site-packages/conda_suggest-0.1.1.dist-info/METADATA",
+    "lib/python3.9/site-packages/conda_suggest-0.1.1.dist-info/RECORD",
+    "lib/python3.9/site-packages/conda_suggest-0.1.1.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/conda_suggest-0.1.1.dist-info/WHEEL",
+    "lib/python3.9/site-packages/conda_suggest-0.1.1.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/conda_suggest-0.1.1.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/conda_suggest-0.1.1.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/conda_suggest/__init__.py",
+    "lib/python3.9/site-packages/conda_suggest/find.py",
+    "lib/python3.9/site-packages/conda_suggest/generate.py",
+    "lib/python3.9/site-packages/conda_suggest/main.py",
+    "lib/python3.9/site-packages/conda_suggest/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_suggest/__pycache__/find.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_suggest/__pycache__/generate.cpython-39.pyc",
+    "lib/python3.9/site-packages/conda_suggest/__pycache__/main.cpython-39.pyc",
     "bin/conda-suggest"
   ],
   "fn": "conda-suggest-0.1.1-pyh9f0ad1d_0.tar.bz2",
   "license": "BSD-3-Clause",
   "license_family": "BSD",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/conda-suggest-0.1.1-pyh9f0ad1d_0",
+    "source": "/home/manuj/anaconda3/pkgs/conda-suggest-0.1.1-pyh9f0ad1d_0",
     "type": 1
   },
   "md5": "185d73f1b2590441d75e997616942f85",
   "name": "conda-suggest",
   "noarch": "python",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/conda-suggest-0.1.1-pyh9f0ad1d_0.tar.bz2",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/conda-suggest-0.1.1-pyh9f0ad1d_0.tar.bz2",
   "package_type": "noarch_python",
   "paths_data": {
     "paths": [
@@ -144,19 +144,19 @@
         "size_in_bytes": 1382
       },
       {
-        "_path": "lib/python3.10/site-packages/conda_suggest/__pycache__/__init__.cpython-310.pyc",
+        "_path": "lib/python3.9/site-packages/conda_suggest/__pycache__/__init__.cpython-39.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.10/site-packages/conda_suggest/__pycache__/find.cpython-310.pyc",
+        "_path": "lib/python3.9/site-packages/conda_suggest/__pycache__/find.cpython-39.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.10/site-packages/conda_suggest/__pycache__/generate.cpython-310.pyc",
+        "_path": "lib/python3.9/site-packages/conda_suggest/__pycache__/generate.cpython-39.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.10/site-packages/conda_suggest/__pycache__/main.cpython-310.pyc",
+        "_path": "lib/python3.9/site-packages/conda_suggest/__pycache__/main.cpython-39.pyc",
         "path_type": "pyc_file"
       },
       {
@@ -166,7 +166,7 @@
     ],
     "paths_version": 1
   },
-  "requested_spec": "None",
+  "requested_spec": "conda-forge/noarch::conda-suggest==0.1.1=pyh9f0ad1d_0",
   "sha256": "5ed3ff2f34e385646acd60d845075519dba6036d436056cf425cf16610e5c760",
   "size": 11415,
   "subdir": "noarch",

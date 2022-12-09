@@ -11,14 +11,10 @@
 /* #undef H5_DEBUG_BUILD */
 
 /* Define the default plugins path to compile */
-#define H5_DEFAULT_PLUGINDIR "/home/goldust/anaconda3/lib/hdf5/plugin"
+#define H5_DEFAULT_PLUGINDIR "/home/manuj/anaconda3/lib/hdf5/plugin"
 
 /* Define if dev_t is a scalar */
 #define H5_DEV_T_IS_SCALAR 1
-
-/* Define if your system is IBM ppc64le and cannot convert some long double
-   values correctly. */
-/* #undef H5_DISABLE_SOME_LDOUBLE_CONV */
 
 /* Define to dummy `main' function (if any) required to link to the Fortran
    libraries. */
@@ -92,9 +88,6 @@
 /* Define if the function stack tracing code is to be compiled in */
 /* #undef H5_HAVE_CODESTACK */
 
-/* Define to 1 if you have the <curl/curl.h> header file. */
-/* #undef H5_HAVE_CURL_CURL_H */
-
 /* Define if Darwin or Mac OS X */
 /* #undef H5_HAVE_DARWIN */
 
@@ -167,9 +160,6 @@
 /* Define to 1 if you have the `gettimeofday' function. */
 #define H5_HAVE_GETTIMEOFDAY 1
 
-/* Define to 1 if you have the <hdfs.h> header file. */
-/* #undef H5_HAVE_HDFS_H */
-
 /* Define if the compiler understands inline */
 #define H5_HAVE_INLINE 1
 
@@ -186,23 +176,11 @@
 /* Define to 1 if you have the <io.h> header file. */
 /* #undef H5_HAVE_IO_H */
 
-/* Define to 1 if you have the `crypto' library (-lcrypto). */
-/* #undef H5_HAVE_LIBCRYPTO */
-
-/* Define to 1 if you have the `curl' library (-lcurl). */
-/* #undef H5_HAVE_LIBCURL */
-
 /* Define to 1 if you have the `dl' library (-ldl). */
 #define H5_HAVE_LIBDL 1
 
 /* Define to 1 if you have the `dmalloc' library (-ldmalloc). */
 /* #undef H5_HAVE_LIBDMALLOC */
-
-/* Proceed to build with libhdfs */
-/* #undef H5_HAVE_LIBHDFS */
-
-/* Define to 1 if you have the `jvm' library (-ljvm). */
-/* #undef H5_HAVE_LIBJVM */
 
 /* Define to 1 if you have the `m' library (-lm). */
 #define H5_HAVE_LIBM 1
@@ -258,20 +236,8 @@
 /* Define if MPI_Info_c2f and MPI_Info_f2c exist */
 /* #undef H5_HAVE_MPI_MULTI_LANG_Info */
 
-/* Define to 1 if you have the <openssl/evp.h> header file. */
-/* #undef H5_HAVE_OPENSSL_EVP_H */
-
-/* Define to 1 if you have the <openssl/hmac.h> header file. */
-/* #undef H5_HAVE_OPENSSL_HMAC_H */
-
-/* Define to 1 if you have the <openssl/sha.h> header file. */
-/* #undef H5_HAVE_OPENSSL_SHA_H */
-
 /* Define if we have parallel support */
 /* #undef H5_HAVE_PARALLEL */
-
-/* Define if both pread and pwrite exist. */
-#define H5_HAVE_PREADWRITE 1
 
 /* Define to 1 if you have the <pthread.h> header file. */
 #define H5_HAVE_PTHREAD_H 1
@@ -284,10 +250,6 @@
 
 /* Define to 1 if you have the `rand_r' function. */
 #define H5_HAVE_RAND_R 1
-
-/* Define whether the Read-Only S3 virtual file driver (VFD) should be
-   compiled */
-/* #undef H5_HAVE_ROS3_VFD */
 
 /* Define to 1 if you have the `round' function. */
 #define H5_HAVE_ROUND 1
@@ -447,7 +409,7 @@
 
 /* Define if your system can convert long double to (unsigned) long long
    values correctly. */
-#define H5_LDOUBLE_TO_LLONG_ACCURATE 1
+/* #undef H5_LDOUBLE_TO_LLONG_ACCURATE */
 
 /* Define if your system converts long double to (unsigned) long values with
    special algorithm. */
@@ -455,7 +417,7 @@
 
 /* Define if your system can convert (unsigned) long long to long double
    values correctly. */
-#define H5_LLONG_TO_LDOUBLE_CORRECT 1
+/* #undef H5_LLONG_TO_LDOUBLE_CORRECT */
 
 /* Define if your system can convert (unsigned) long to long double values
    with special algorithm. */
@@ -467,8 +429,11 @@
 /* Define to enable internal memory allocation sanity checking. */
 /* #undef H5_MEMORY_ALLOC_SANITY_CHECK */
 
+/* Define if the metadata trace file code is to be compiled in */
+/* #undef H5_METADATA_TRACE_FILE */
+
 /* Define if we can violate pointer alignment restrictions */
-#define H5_NO_ALIGNMENT_RESTRICTIONS 1
+/* #undef H5_NO_ALIGNMENT_RESTRICTIONS */
 
 /* Define if deprecated public API symbols are disabled */
 /* #undef H5_NO_DEPRECATED_SYMBOLS */
@@ -483,7 +448,7 @@
 #define H5_PACKAGE_NAME "HDF5"
 
 /* Define to the full name and version of this package. */
-#define H5_PACKAGE_STRING "HDF5 1.10.6"
+#define H5_PACKAGE_STRING "HDF5 1.10.4"
 
 /* Define to the one symbol short name of this package. */
 #define H5_PACKAGE_TARNAME "hdf5"
@@ -492,7 +457,7 @@
 #define H5_PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define H5_PACKAGE_VERSION "1.10.6"
+#define H5_PACKAGE_VERSION "1.10.4"
 
 /* Determine the maximum decimal precision in C */
 #define H5_PAC_C_MAX_REAL_PRECISION 33
@@ -578,9 +543,6 @@
 /* The size of `ssize_t', as computed by sizeof. */
 #define H5_SIZEOF_SSIZE_T 8
 
-/* The size of `time_t', as computed by sizeof. */
-#define H5_SIZEOF_TIME_T 8
-
 /* The size of `uint16_t', as computed by sizeof. */
 #define H5_SIZEOF_UINT16_T 2
 
@@ -657,7 +619,7 @@
 #define H5_USING_MEMCHECKER 1
 
 /* Version number of package */
-#define H5_VERSION "1.10.6"
+#define H5_VERSION "1.10.4"
 
 /* Data accuracy is prefered to speed during data conversions */
 #define H5_WANT_DATA_ACCURACY 1

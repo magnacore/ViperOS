@@ -42,12 +42,12 @@ QT_CHARTS_BEGIN_NAMESPACE
 class QBarModelMapperPrivate;
 class QAbstractBarSeries;
 
-class Q_CHARTS_EXPORT QBarModelMapper : public QObject
+class QT_CHARTS_EXPORT QBarModelMapper : public QObject
 {
     Q_OBJECT
 
 protected:
-    explicit QBarModelMapper(QObject *parent = nullptr);
+    explicit QBarModelMapper(QObject *parent = Q_NULLPTR);
 
     QAbstractItemModel *model() const;
     void setModel(QAbstractItemModel *model);

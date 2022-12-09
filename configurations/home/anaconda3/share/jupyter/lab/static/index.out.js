@@ -210,16 +210,6 @@ export async function main() {
       console.error(e);
     }
   }
-  if (!queuedFederated.includes('@jupyterlab/cell-toolbar-extension')) {
-    try {
-      let ext = require('@jupyterlab/cell-toolbar-extension');
-      for (let plugin of activePlugins(ext)) {
-        register.push(plugin);
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  }
   if (!queuedFederated.includes('@jupyterlab/celltags-extension')) {
     try {
       let ext = require('@jupyterlab/celltags-extension');
@@ -283,16 +273,6 @@ export async function main() {
   if (!queuedFederated.includes('@jupyterlab/docmanager-extension')) {
     try {
       let ext = require('@jupyterlab/docmanager-extension');
-      for (let plugin of activePlugins(ext)) {
-        register.push(plugin);
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  }
-  if (!queuedFederated.includes('@jupyterlab/docprovider-extension')) {
-    try {
-      let ext = require('@jupyterlab/docprovider-extension');
       for (let plugin of activePlugins(ext)) {
         register.push(plugin);
       }
@@ -620,7 +600,6 @@ export async function main() {
 
   if (exposeAppInBrowser || devMode) {
     window.jupyterlab = lab;
-    window.jupyterapp = lab;
   }
 
   // Handle a browser test.

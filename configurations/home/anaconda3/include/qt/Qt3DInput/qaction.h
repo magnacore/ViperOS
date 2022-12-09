@@ -50,7 +50,7 @@ namespace Qt3DInput {
 class QActionPrivate;
 class QAbstractActionInput;
 
-class Q_3DINPUTSHARED_EXPORT QAction : public Qt3DCore::QNode
+class QT3DINPUTSHARED_EXPORT QAction : public Qt3DCore::QNode
 {
     Q_OBJECT
     Q_PROPERTY(bool active READ isActive NOTIFY activeChanged)
@@ -68,12 +68,11 @@ Q_SIGNALS:
     void activeChanged(bool isActive);
 
 protected:
-    // TODO Unused remove in Qt6
-    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override;
+    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(QAction)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // Qt3DInput

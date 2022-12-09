@@ -1,0 +1,57 @@
+{
+  "build": "py38h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/pluggy-0.13.1-py38h06a4308_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/pluggy-0.13.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/pluggy-0.13.1.dist-info/LICENSE",
+    "lib/python3.8/site-packages/pluggy-0.13.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/pluggy-0.13.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/pluggy-0.13.1.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/pluggy-0.13.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/pluggy-0.13.1.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/pluggy-0.13.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/pluggy/__init__.py",
+    "lib/python3.8/site-packages/pluggy/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/pluggy/__pycache__/_tracing.cpython-38.pyc",
+    "lib/python3.8/site-packages/pluggy/__pycache__/_version.cpython-38.pyc",
+    "lib/python3.8/site-packages/pluggy/__pycache__/callers.cpython-38.pyc",
+    "lib/python3.8/site-packages/pluggy/__pycache__/hooks.cpython-38.pyc",
+    "lib/python3.8/site-packages/pluggy/__pycache__/manager.cpython-38.pyc",
+    "lib/python3.8/site-packages/pluggy/_tracing.py",
+    "lib/python3.8/site-packages/pluggy/_version.py",
+    "lib/python3.8/site-packages/pluggy/callers.py",
+    "lib/python3.8/site-packages/pluggy/hooks.py",
+    "lib/python3.8/site-packages/pluggy/manager.py"
+  ],
+  "fn": "pluggy-0.13.1-py38h06a4308_0.conda",
+  "legacy_bz2_md5": "1e0fef8df1a6bd1f56dcdd8c9b994dc8",
+  "legacy_bz2_size": 33358,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/pluggy-0.13.1-py38h06a4308_0",
+    "type": 1
+  },
+  "md5": "4e25e8a00605b6b286f96900d6e8caa9",
+  "name": "pluggy",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/pluggy-0.13.1-py38h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "pluggy==0.13.1=py38h06a4308_0",
+  "sha256": "da03b35b906cd0e2ef293bd634fa084083702dcbbfbe9a4265b884776335f654",
+  "size": 34176,
+  "subdir": "linux-64",
+  "timestamp": 1615976360217,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pluggy-0.13.1-py38h06a4308_0.conda",
+  "version": "0.13.1"
+}

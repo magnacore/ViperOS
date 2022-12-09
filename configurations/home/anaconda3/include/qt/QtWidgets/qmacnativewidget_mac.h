@@ -47,13 +47,11 @@ Q_FORWARD_DECLARE_OBJC_CLASS(NSView);
 
 QT_BEGIN_NAMESPACE
 
-#if QT_DEPRECATED_SINCE(5, 15)
-class QT_DEPRECATED_X("Use QWidget::winId instead")
-Q_WIDGETS_EXPORT QMacNativeWidget : public QWidget
+class Q_WIDGETS_EXPORT QMacNativeWidget : public QWidget
 {
     Q_OBJECT
 public:
-    QMacNativeWidget(NSView *parentView = nullptr);
+    QMacNativeWidget(NSView *parentView = Q_NULLPTR);
     ~QMacNativeWidget();
 
     QSize sizeHint() const override;
@@ -62,7 +60,6 @@ public:
 protected:
     bool event(QEvent *ev) override;
 };
-#endif
 
 QT_END_NAMESPACE
 

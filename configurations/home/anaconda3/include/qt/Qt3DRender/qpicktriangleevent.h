@@ -41,14 +41,13 @@
 #define QT3DRENDER_QPICKTRIANGLEEVENT_H
 
 #include <Qt3DRender/qpickevent.h>
-#include <QtCore/qsharedpointer.h>
 
 QT_BEGIN_NAMESPACE
 
 namespace Qt3DRender {
 class QPickTriangleEventPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QPickTriangleEvent : public QPickEvent
+class QT3DRENDERSHARED_EXPORT QPickTriangleEvent : public QPickEvent
 {
     Q_OBJECT
     Q_PROPERTY(uint triangleIndex READ triangleIndex CONSTANT)
@@ -75,8 +74,6 @@ public:
 private:
     Q_DECLARE_PRIVATE(QPickTriangleEvent)
 };
-
-typedef QSharedPointer<QPickTriangleEvent> QPickTriangleEventPtr;
 
 } // Qt3DRender
 

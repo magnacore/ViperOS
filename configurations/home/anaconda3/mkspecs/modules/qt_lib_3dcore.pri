@@ -1,4 +1,4 @@
-QT.3dcore.VERSION = 5.15.2
+QT.3dcore.VERSION = 5.9.7
 QT.3dcore.name = Qt3DCore
 QT.3dcore.module = Qt53DCore
 QT.3dcore.libs = $$QT_MODULE_LIB_BASE
@@ -9,7 +9,7 @@ QT.3dcore.depends = core gui network
 QT.3dcore.uses =
 QT.3dcore.module_config = v2
 QT.3dcore.DEFINES = QT_3DCORE_LIB
-QT.3dcore.enabled_features = qt3d-render qt3d-animation qt3d-input qt3d-logic qt3d-extras
+QT.3dcore.enabled_features =
 QT.3dcore.disabled_features =
 QT_CONFIG += assimp
 QT_MODULES += 3dcore

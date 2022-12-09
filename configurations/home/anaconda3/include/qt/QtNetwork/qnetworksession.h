@@ -40,19 +40,12 @@
 #ifndef QNETWORKSESSION_H
 #define QNETWORKSESSION_H
 
-#if 0
-#pragma qt_class(QNetworkSession)
-#endif
-
 #include <QtNetwork/qtnetworkglobal.h>
 #include <QtCore/qobject.h>
 #include <QtCore/qstring.h>
 #include <QtNetwork/qnetworkinterface.h>
 #include <QtCore/qvariant.h>
 #include <QtNetwork/qnetworkconfiguration.h>
-
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
 
 #ifndef QT_NO_BEARERMANAGEMENT
 
@@ -64,7 +57,7 @@ QT_WARNING_DISABLE_DEPRECATED
 QT_BEGIN_NAMESPACE
 
 class QNetworkSessionPrivate;
-class QT_DEPRECATED_BEARER_MANAGEMENT Q_NETWORK_EXPORT QNetworkSession : public QObject
+class Q_NETWORK_EXPORT QNetworkSession : public QObject
 {
     Q_OBJECT
 
@@ -94,7 +87,7 @@ public:
 
     Q_DECLARE_FLAGS(UsagePolicies, UsagePolicy)
 
-    explicit QNetworkSession(const QNetworkConfiguration &connConfig, QObject *parent = nullptr);
+    explicit QNetworkSession(const QNetworkConfiguration &connConfig, QObject *parent = Q_NULLPTR);
     virtual ~QNetworkSession();
 
     bool isOpen() const;
@@ -138,8 +131,8 @@ Q_SIGNALS:
     void usagePoliciesChanged(QNetworkSession::UsagePolicies usagePolicies);
 
 protected:
-    virtual void connectNotify(const QMetaMethod &signal) override;
-    virtual void disconnectNotify(const QMetaMethod &signal) override;
+    virtual void connectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE;
+    virtual void disconnectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE;
 
 private:
     Q_DISABLE_COPY(QNetworkSession)
@@ -153,7 +146,5 @@ Q_DECLARE_METATYPE(QNetworkSession::SessionError)
 Q_DECLARE_METATYPE(QNetworkSession::UsagePolicies)
 
 #endif // QT_NO_BEARERMANAGEMENT
-
-QT_WARNING_POP
 
 #endif // QNETWORKSESSION_H

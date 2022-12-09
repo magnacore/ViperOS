@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,25 +16,29 @@
 #ifndef LIEF_PE_PARSER_H_
 #define LIEF_PE_PARSER_H_
 
-#include <set>
 #include <string>
 #include <vector>
 
+#include "LIEF/exception.hpp"
 #include "LIEF/visibility.h"
 #include "LIEF/utils.hpp"
 
 #include "LIEF/Abstract/Parser.hpp"
-#include "LIEF/PE/enums.hpp"
+
+#include "LIEF/BinaryStream/VectorStream.hpp"
+
+#include "LIEF/PE/Binary.hpp"
+
+#include "LIEF/PE/ResourceNode.hpp"
+#include "LIEF/PE/ResourceData.hpp"
+#include "LIEF/PE/ResourceDirectory.hpp"
+
+#include "LIEF/PE/EnumToString.hpp"
+
+
 
 namespace LIEF {
-class VectorStream;
-
 namespace PE {
-class Debug;
-class ResourceNode;
-class Binary;
-struct pe_resource_directory_table;
-
 class LIEF_API Parser : public LIEF::Parser {
 
   public:
@@ -42,9 +46,6 @@ class LIEF_API Parser : public LIEF::Parser {
   static constexpr size_t MAX_DATA_SIZE = 3_GB;
 
   static constexpr size_t MAX_TLS_CALLBACKS = 3000;
-
-  // According to https://stackoverflow.com/a/265782/87207
-  static constexpr size_t MAX_DLL_NAME_SIZE = 255;
 
   public:
   static bool is_valid_import_name(const std::string& name);
@@ -109,7 +110,7 @@ class LIEF_API Parser : public LIEF::Parser {
 
 
   std::unique_ptr<VectorStream> stream_;
-  Binary*                       binary_{nullptr};
+  Binary*                       binary_;
   PE_TYPE                       type_;
   std::set<uint32_t>            resource_visited_;
 };

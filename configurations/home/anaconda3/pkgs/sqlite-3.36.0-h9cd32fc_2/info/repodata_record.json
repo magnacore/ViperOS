@@ -1,0 +1,26 @@
+{
+  "arch": "x86_64",
+  "build": "h9cd32fc_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=9.4.0",
+    "ncurses >=6.2,<6.3.0a0",
+    "readline >=8.1,<9.0a0",
+    "zlib >=1.2.11,<1.3.0a0"
+  ],
+  "features": "",
+  "fn": "sqlite-3.36.0-h9cd32fc_2.tar.bz2",
+  "license": "Unlicense",
+  "md5": "3588c2c6cb9f9bcc65b544ab1c715d60",
+  "name": "sqlite",
+  "platform": "linux",
+  "sha256": "71a7ffc6aa30b0fbfe70c7174e0e881af1d5f879f7667d1c59070eb2a476ece1",
+  "size": 1510861,
+  "subdir": "linux-64",
+  "timestamp": 1632599056860,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/sqlite-3.36.0-h9cd32fc_2.tar.bz2",
+  "version": "3.36.0"
+}

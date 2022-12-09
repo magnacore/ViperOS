@@ -1,4 +1,4 @@
-QT.sensors.VERSION = 5.15.2
+QT.sensors.VERSION = 5.9.7
 QT.sensors.name = QtSensors
 QT.sensors.module = Qt5Sensors
 QT.sensors.libs = $$QT_MODULE_LIB_BASE

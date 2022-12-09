@@ -1,0 +1,24 @@
+{
+  "build": "pyh44b312d_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "features": "",
+  "fn": "pyotp-2.6.0-pyh44b312d_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "fa76f2e1af918e4e109153e72e0659a2",
+  "name": "pyotp",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "c3195b0afec918d44e6243153f767ec7c8ea21f43345b61f2ed3d034aeb1e0b5",
+  "size": 13653,
+  "subdir": "noarch",
+  "timestamp": 1612473286398,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pyotp-2.6.0-pyh44b312d_0.tar.bz2",
+  "version": "2.6.0"
+}

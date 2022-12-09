@@ -1,0 +1,65 @@
+{
+  "build": "h024ee3a_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.2.0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/jpeg-9b-h024ee3a_2",
+  "features": "",
+  "files": [
+    "bin/cjpeg",
+    "bin/djpeg",
+    "bin/jpegtran",
+    "bin/rdjpgcom",
+    "bin/wrjpgcom",
+    "include/jconfig.h",
+    "include/jerror.h",
+    "include/jmorecfg.h",
+    "include/jpeglib.h",
+    "lib/libjpeg.a",
+    "lib/libjpeg.la",
+    "lib/libjpeg.so",
+    "lib/libjpeg.so.9",
+    "lib/libjpeg.so.9.2.0",
+    "share/man/man1/cjpeg.1",
+    "share/man/man1/djpeg.1",
+    "share/man/man1/jpegtran.1",
+    "share/man/man1/rdjpgcom.1",
+    "share/man/man1/wrjpgcom.1"
+  ],
+  "fn": "jpeg-9b-h024ee3a_2.conda",
+  "legacy_bz2_md5": "30883b0c44d35192a9b7967b0da9bf98",
+  "legacy_bz2_size": 254074,
+  "license": "Custom free software license",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/jpeg-9b-h024ee3a_2",
+    "type": 1
+  },
+  "md5": "d8f003a909108eaa4a6d898dacb740f8",
+  "name": "jpeg",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/jpeg-9b-h024ee3a_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libjpeg.la",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "a05e4a0eb081537358d0c6de515c014d79874d9c9009207f2fdeed7fb2f034d9",
+        "sha256_in_prefix": "9869df65ccbc7b33147367e02b7f756fb86b9aa75d8e838ae5f550deb77d3d19",
+        "size_in_bytes": 939
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "jpeg==9b=h024ee3a_2",
+  "sha256": "3771b5c80500813ee442f6360a1453fc32d30e84d9f6ea71ef0c67de1860a0a0",
+  "size": 219316,
+  "subdir": "linux-64",
+  "timestamp": 1510201951443,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/jpeg-9b-h024ee3a_2.conda",
+  "version": "9b"
+}

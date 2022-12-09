@@ -56,27 +56,27 @@ public:
     QXmlSerializer(const QXmlQuery &query,
                    QIODevice *outputDevice);
 
-    void namespaceBinding(const QXmlName &nb) override;
+    virtual void namespaceBinding(const QXmlName &nb);
 
-    void characters(const QStringRef &value) override;
-    void comment(const QString &value) override;
+    virtual void characters(const QStringRef &value);
+    virtual void comment(const QString &value);
 
-    void startElement(const QXmlName &name) override;
+    virtual void startElement(const QXmlName &name);
 
-    void endElement() override;
+    virtual void endElement();
 
-    void attribute(const QXmlName &name,
-                   const QStringRef &value) override;
+    virtual void attribute(const QXmlName &name,
+                           const QStringRef &value);
 
-    void processingInstruction(const QXmlName &name,
-                               const QString &value) override;
+    virtual void processingInstruction(const QXmlName &name,
+                                       const QString &value);
 
-    void atomicValue(const QVariant &value) override;
+    virtual void atomicValue(const QVariant &value);
 
-    void startDocument() override;
-    void endDocument() override;
-    void startOfSequence() override;
-    void endOfSequence() override;
+    virtual void startDocument();
+    virtual void endDocument();
+    virtual void startOfSequence();
+    virtual void endOfSequence();
 
     QIODevice *outputDevice() const;
 
@@ -85,7 +85,7 @@ public:
 
     /* The members below are internal, not part of the public API, and
      * unsupported. Using them leads to undefined behavior. */
-    void item(const QPatternist::Item &item) override;
+    virtual void item(const QPatternist::Item &item);
 protected:
     QXmlSerializer(QAbstractXmlReceiverPrivate *d);
 

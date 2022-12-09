@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -114,7 +114,6 @@ class LIEF_API Binary : public Object {
   //!
   //! @param[in] address Address to patch
   //! @param[in] patch_value Patch to apply
-  //! @param[in] addr_type Specify if the address should be used as an absolute virtual address or an RVA
   virtual void patch_address(uint64_t address, const std::vector<uint8_t>& patch_value, VA_TYPES addr_type = VA_TYPES::AUTO) = 0;
 
   //! @brief Patch the address with the given value
@@ -122,7 +121,6 @@ class LIEF_API Binary : public Object {
   //! @param[in] address Address to patch
   //! @param[in] patch_value Patch to apply
   //! @param[in] size Size of the value in **bytes** (1, 2, ... 8)
-  //! @param[in] addr_type Specify if the address should be used as an absolute virtual address or an RVA
   virtual void patch_address(uint64_t address, uint64_t patch_value, size_t size = sizeof(uint64_t), VA_TYPES addr_type = VA_TYPES::AUTO) = 0;
 
   //! @brief Return the content located at virtual address

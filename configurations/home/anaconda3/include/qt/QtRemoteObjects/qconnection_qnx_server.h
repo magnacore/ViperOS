@@ -65,7 +65,7 @@ public:
     bool hasPendingConnections() const;
     bool isListening() const;
     bool listen(const QString &name);
-    QSharedPointer<QIOQnxSource> nextPendingConnection();
+    QIOQnxSource *nextPendingConnection();
     QString serverName() const;
     bool waitForNewConnection(int msec = 0, bool *timedOut = nullptr);
 

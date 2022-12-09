@@ -1,0 +1,25 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "protobuf >=3.19.0,<5.0.0dev",
+    "python >=3.6"
+  ],
+  "features": "",
+  "fn": "proto-plus-1.22.1-pyhd8ed1ab_0.tar.bz2",
+  "license": "Apache-2.0",
+  "license_family": "APACHE",
+  "md5": "cc84503b1141d76dd2872661a56b82bf",
+  "name": "proto-plus",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "0b5b5a561190f8a0d7e61c1213b1bda6fe839762c5fd26512e498c057a255a08",
+  "size": 35924,
+  "subdir": "noarch",
+  "timestamp": 1661885350473,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/proto-plus-1.22.1-pyhd8ed1ab_0.tar.bz2",
+  "version": "1.22.1"
+}

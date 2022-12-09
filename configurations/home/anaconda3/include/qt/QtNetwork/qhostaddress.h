@@ -66,7 +66,7 @@ typedef QIPv6Address Q_IPV6ADDR;
 
 class QHostAddress;
 // qHash is a friend, but we can't use default arguments for friends (§8.3.6.4)
-Q_NETWORK_EXPORT uint qHash(const QHostAddress &key, uint seed = 0) noexcept;
+Q_NETWORK_EXPORT uint qHash(const QHostAddress &key, uint seed = 0) Q_DECL_NOTHROW;
 
 class Q_NETWORK_EXPORT QHostAddress
 {
@@ -102,8 +102,11 @@ public:
     QHostAddress(SpecialAddress address);
     ~QHostAddress();
 
-    QHostAddress &operator=(QHostAddress &&other) noexcept
+#ifdef Q_COMPILER_RVALUE_REFS
+    QHostAddress &operator=(QHostAddress &&other) Q_DECL_NOTHROW
     { swap(other); return *this; }
+#endif
+
     QHostAddress &operator=(const QHostAddress &other);
 #if QT_DEPRECATED_SINCE(5, 8)
     QT_DEPRECATED_X("use = QHostAddress(string) instead")
@@ -111,7 +114,7 @@ public:
 #endif
     QHostAddress &operator=(SpecialAddress address);
 
-    void swap(QHostAddress &other) noexcept { d.swap(other.d); }
+    void swap(QHostAddress &other) Q_DECL_NOTHROW { d.swap(other.d); }
 
     void setAddress(quint32 ip4Addr);
     void setAddress(quint8 *ip6Addr);   // ### Qt 6: remove me
@@ -145,18 +148,12 @@ public:
     bool isInSubnet(const QPair<QHostAddress, int> &subnet) const;
 
     bool isLoopback() const;
-    bool isGlobal() const;
-    bool isLinkLocal() const;
-    bool isSiteLocal() const;
-    bool isUniqueLocalUnicast() const;
     bool isMulticast() const;
-    bool isBroadcast() const;
 
     static QPair<QHostAddress, int> parseSubnet(const QString &subnet);
 
-    friend Q_NETWORK_EXPORT uint qHash(const QHostAddress &key, uint seed) noexcept;
+    friend Q_NETWORK_EXPORT uint qHash(const QHostAddress &key, uint seed) Q_DECL_NOTHROW;
 protected:
-    friend class QHostAddressPrivate;
     QExplicitlySharedDataPointer<QHostAddressPrivate> d;
 };
 Q_DECLARE_OPERATORS_FOR_FLAGS(QHostAddress::ConversionMode)

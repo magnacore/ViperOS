@@ -1,0 +1,51 @@
+{
+  "build": "py38_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/webencodings-0.5.1-py38_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/webencodings-0.5.1-py3.8.egg-info/PKG-INFO",
+    "lib/python3.8/site-packages/webencodings-0.5.1-py3.8.egg-info/SOURCES.txt",
+    "lib/python3.8/site-packages/webencodings-0.5.1-py3.8.egg-info/dependency_links.txt",
+    "lib/python3.8/site-packages/webencodings-0.5.1-py3.8.egg-info/top_level.txt",
+    "lib/python3.8/site-packages/webencodings/__init__.py",
+    "lib/python3.8/site-packages/webencodings/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/webencodings/__pycache__/labels.cpython-38.pyc",
+    "lib/python3.8/site-packages/webencodings/__pycache__/mklabels.cpython-38.pyc",
+    "lib/python3.8/site-packages/webencodings/__pycache__/tests.cpython-38.pyc",
+    "lib/python3.8/site-packages/webencodings/__pycache__/x_user_defined.cpython-38.pyc",
+    "lib/python3.8/site-packages/webencodings/labels.py",
+    "lib/python3.8/site-packages/webencodings/mklabels.py",
+    "lib/python3.8/site-packages/webencodings/tests.py",
+    "lib/python3.8/site-packages/webencodings/x_user_defined.py"
+  ],
+  "fn": "webencodings-0.5.1-py38_1.conda",
+  "legacy_bz2_md5": "46be58263b91ea0ce41774c6cef974b7",
+  "legacy_bz2_size": 20211,
+  "license": "BSD 3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/webencodings-0.5.1-py38_1",
+    "type": 1
+  },
+  "md5": "5c9a80af48919815917612e58474a391",
+  "name": "webencodings",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/webencodings-0.5.1-py38_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "webencodings==0.5.1=py38_1",
+  "sha256": "4960e28532cceefc6ba7fe7afa87ce4d5d00abd2cc51b5e87e9f796d2341102c",
+  "size": 20101,
+  "subdir": "linux-64",
+  "timestamp": 1573200372707,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/webencodings-0.5.1-py38_1.conda",
+  "version": "0.5.1"
+}

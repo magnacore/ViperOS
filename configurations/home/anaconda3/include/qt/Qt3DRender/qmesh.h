@@ -54,28 +54,18 @@ class QMeshPrivate;
 * @brief Simple static mesh
 *
 */
-class Q_3DRENDERSHARED_EXPORT QMesh : public QGeometryRenderer
+class QT3DRENDERSHARED_EXPORT QMesh : public QGeometryRenderer
 {
     Q_OBJECT
     Q_PROPERTY(QUrl source READ source WRITE setSource NOTIFY sourceChanged)
     Q_PROPERTY(QString meshName READ meshName WRITE setMeshName NOTIFY meshNameChanged)
-    Q_PROPERTY(Status status READ status NOTIFY statusChanged REVISION 11)
+
 public:
     explicit QMesh(Qt3DCore::QNode *parent = nullptr);
     ~QMesh();
 
-    enum Status {
-        None = 0,
-        Loading,
-        Ready,
-        Error
-    };
-    Q_ENUM(Status) // LCOV_EXCL_LINE
-
-
     QUrl source() const;
     QString meshName() const;
-    Status status() const;
 
 public Q_SLOTS:
     void setSource(const QUrl &source);
@@ -84,12 +74,9 @@ public Q_SLOTS:
 Q_SIGNALS:
     void sourceChanged(const QUrl &source);
     void meshNameChanged(const QString &meshName);
-    void statusChanged(Status status);
 
 protected:
     explicit QMesh(QMeshPrivate &dd, Qt3DCore::QNode *parent = nullptr);
-    // TODO Unused remove in Qt6
-    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override;
 
 private:
     Q_DECLARE_PRIVATE(QMesh)

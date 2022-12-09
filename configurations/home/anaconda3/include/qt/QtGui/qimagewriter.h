@@ -60,8 +60,7 @@ public:
     enum ImageWriterError {
         UnknownError,
         DeviceError,
-        UnsupportedFormatError,
-        InvalidImageError
+        UnsupportedFormatError
     };
 
     QImageWriter();
@@ -84,12 +83,8 @@ public:
     void setCompression(int compression);
     int compression() const;
 
-#if QT_DEPRECATED_SINCE(5, 15)
-    QT_DEPRECATED_VERSION_X_5_15("Use QColorSpace instead")
     void setGamma(float gamma);
-    QT_DEPRECATED_VERSION_X_5_15("Use QColorSpace instead")
     float gamma() const;
-#endif
 
     void setSubType(const QByteArray &type);
     QByteArray subType() const;
@@ -104,12 +99,9 @@ public:
     QImageIOHandler::Transformations transformation() const;
     void setTransformation(QImageIOHandler::Transformations orientation);
 
-#if QT_DEPRECATED_SINCE(5, 13)
-    QT_DEPRECATED_X("Use QImageWriter::setText() instead")
+    // Obsolete as of 4.1
     void setDescription(const QString &description);
-    QT_DEPRECATED_X("Use QImageReader::text() instead")
     QString description() const;
-#endif
 
     void setText(const QString &key, const QString &text);
 
@@ -123,7 +115,6 @@ public:
 
     static QList<QByteArray> supportedImageFormats();
     static QList<QByteArray> supportedMimeTypes();
-    static QList<QByteArray> imageFormatsForMimeType(const QByteArray &mimeType);
 
 private:
     Q_DISABLE_COPY(QImageWriter)

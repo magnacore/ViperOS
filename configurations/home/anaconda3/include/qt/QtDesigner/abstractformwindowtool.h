@@ -31,7 +31,7 @@
 
 #include <QtDesigner/sdk_global.h>
 
-#include <QtCore/qobject.h>
+#include <QtCore/QObject>
 
 QT_BEGIN_NAMESPACE
 
@@ -45,7 +45,7 @@ class QDESIGNER_SDK_EXPORT QDesignerFormWindowToolInterface: public QObject
 {
     Q_OBJECT
 public:
-    explicit QDesignerFormWindowToolInterface(QObject *parent = nullptr);
+    explicit QDesignerFormWindowToolInterface(QObject *parent = Q_NULLPTR);
     virtual ~QDesignerFormWindowToolInterface();
 
     virtual QDesignerFormEditorInterface *core() const = 0;

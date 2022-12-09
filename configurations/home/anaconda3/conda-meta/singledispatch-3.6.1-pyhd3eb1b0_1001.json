@@ -1,0 +1,60 @@
+{
+  "build": "pyhd3eb1b0_1001",
+  "build_number": 1001,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "six"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/singledispatch-3.6.1-pyhd3eb1b0_1001",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/singledispatch-0.0.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/singledispatch-0.0.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/singledispatch-0.0.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/singledispatch-0.0.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/singledispatch-0.0.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/singledispatch-0.0.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/singledispatch-0.0.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/singledispatch-0.0.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/singledispatch/__init__.py",
+    "lib/python3.8/site-packages/singledispatch/helpers.py",
+    "lib/python3.8/site-packages/singledispatch/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/singledispatch/__pycache__/helpers.cpython-38.pyc"
+  ],
+  "fn": "singledispatch-3.6.1-pyhd3eb1b0_1001.conda",
+  "legacy_bz2_md5": "381b98dcef744c7d7c65538ce1bbc4f9",
+  "legacy_bz2_size": 12488,
+  "license": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/singledispatch-3.6.1-pyhd3eb1b0_1001",
+    "type": 1
+  },
+  "md5": "22888c9033839d6d2b2723419526b351",
+  "name": "singledispatch",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/singledispatch-3.6.1-pyhd3eb1b0_1001.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/singledispatch/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/singledispatch/__pycache__/helpers.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "singledispatch==3.6.1=pyhd3eb1b0_1001",
+  "sha256": "189e766bf4f2942dd536cb36304ca58139fb9ffe51ccb9186b49d78bef9f261e",
+  "size": 12834,
+  "subdir": "noarch",
+  "timestamp": 1614366041890,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/singledispatch-3.6.1-pyhd3eb1b0_1001.conda",
+  "version": "3.6.1"
+}

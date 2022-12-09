@@ -34,10 +34,10 @@
 
 QT_CHARTS_BEGIN_NAMESPACE
 /* Comment line for syncqt to generate the fwd-include correctly, due to QTBUG-22432 */
-class Q_CHARTS_EXPORT QHPieModelMapper : public QPieModelMapper
+class QT_CHARTS_EXPORT QHPieModelMapper : public QPieModelMapper
 {
     Q_OBJECT
-    Q_PROPERTY(QtCharts::QPieSeries *series READ series WRITE setSeries NOTIFY seriesReplaced)
+    Q_PROPERTY(QPieSeries *series READ series WRITE setSeries NOTIFY seriesReplaced)
     Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelReplaced)
     Q_PROPERTY(int valuesRow READ valuesRow WRITE setValuesRow NOTIFY valuesRowChanged)
     Q_PROPERTY(int labelsRow READ labelsRow WRITE setLabelsRow NOTIFY labelsRowChanged)
@@ -45,7 +45,7 @@ class Q_CHARTS_EXPORT QHPieModelMapper : public QPieModelMapper
     Q_PROPERTY(int columnCount READ columnCount WRITE setColumnCount NOTIFY columnCountChanged)
 
 public:
-    explicit QHPieModelMapper(QObject *parent = nullptr);
+    explicit QHPieModelMapper(QObject *parent = Q_NULLPTR);
 
     QAbstractItemModel *model() const;
     void setModel(QAbstractItemModel *model);

@@ -1,0 +1,33 @@
+{
+  "arch": "x86_64",
+  "build": "py39h7f8727e_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "aiosignal >=1.1.2",
+    "async-timeout >=4.0.0a3,<5.0",
+    "attrs >=17.3.0",
+    "charset-normalizer >=2.0,<3.0",
+    "frozenlist >=1.1.1",
+    "libgcc-ng >=7.5.0",
+    "multidict >=4.5,<7.0",
+    "python >=3.9,<3.10.0a0",
+    "yarl >=1.0,<2.0"
+  ],
+  "features": "",
+  "fn": "aiohttp-3.8.1-py39h7f8727e_1.conda",
+  "legacy_bz2_md5": "371d5a9514830bd15ddb3a0d72066d70",
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "md5": "552f4d51953e986357ef31f70bb3a8ad",
+  "name": "aiohttp",
+  "platform": "linux",
+  "sha256": "b51837c0defc2a8ab88f55f70bab37d16099139f25325f23e47eb8389056cd4e",
+  "size": 537133,
+  "subdir": "linux-64",
+  "timestamp": 1646806413651,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/aiohttp-3.8.1-py39h7f8727e_1.conda",
+  "version": "3.8.1"
+}

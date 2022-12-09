@@ -40,7 +40,6 @@
 #ifndef QQMLINFO_H
 #define QQMLINFO_H
 
-#include <QtQml/qtqmlglobal.h>
 #include <QtCore/qdebug.h>
 #include <QtCore/qurl.h>
 #include <QtQml/qqmlerror.h>

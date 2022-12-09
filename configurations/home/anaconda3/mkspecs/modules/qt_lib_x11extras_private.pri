@@ -1,8 +1,8 @@
-QT.x11extras_private.VERSION = 5.15.2
+QT.x11extras_private.VERSION = 5.9.7
 QT.x11extras_private.name = QtX11Extras
 QT.x11extras_private.module =
 QT.x11extras_private.libs = $$QT_MODULE_LIB_BASE
-QT.x11extras_private.includes = $$QT_MODULE_INCLUDE_BASE/QtX11Extras/5.15.2 $$QT_MODULE_INCLUDE_BASE/QtX11Extras/5.15.2/QtX11Extras
+QT.x11extras_private.includes = $$QT_MODULE_INCLUDE_BASE/QtX11Extras/5.9.7 $$QT_MODULE_INCLUDE_BASE/QtX11Extras/5.9.7/QtX11Extras
 QT.x11extras_private.frameworks =
 QT.x11extras_private.depends = x11extras
 QT.x11extras_private.uses =

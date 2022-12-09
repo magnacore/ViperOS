@@ -1,0 +1,27 @@
+{
+  "arch": "x86_64",
+  "build": "h65d4601_19",
+  "build_number": 19,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [
+    "libgomp 12.2.0 h65d4601_19"
+  ],
+  "depends": [
+    "_libgcc_mutex 0.1 conda_forge",
+    "_openmp_mutex >=4.5"
+  ],
+  "features": "",
+  "fn": "libgcc-ng-12.2.0-h65d4601_19.tar.bz2",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "license_family": "GPL",
+  "md5": "e4c94f80aef025c17ab0828cd85ef535",
+  "name": "libgcc-ng",
+  "platform": "linux",
+  "sha256": "f3899c26824cee023f1e360bd0859b0e149e2b3e8b1668bc6dd04bfc70dcd659",
+  "size": 953812,
+  "subdir": "linux-64",
+  "timestamp": 1666519671227,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libgcc-ng-12.2.0-h65d4601_19.tar.bz2",
+  "version": "12.2.0"
+}

@@ -7,21 +7,21 @@
     "diff-match-patch",
     "python"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/three-merge-0.1.1-pyhd3eb1b0_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/three-merge-0.1.1-pyhd3eb1b0_0",
   "features": "",
   "files": [
-    "lib/python3.9/site-packages/three_merge-0.1.1.dist-info/INSTALLER",
-    "lib/python3.9/site-packages/three_merge-0.1.1.dist-info/LICENSE",
-    "lib/python3.9/site-packages/three_merge-0.1.1.dist-info/METADATA",
-    "lib/python3.9/site-packages/three_merge-0.1.1.dist-info/RECORD",
-    "lib/python3.9/site-packages/three_merge-0.1.1.dist-info/REQUESTED",
-    "lib/python3.9/site-packages/three_merge-0.1.1.dist-info/WHEEL",
-    "lib/python3.9/site-packages/three_merge-0.1.1.dist-info/direct_url.json",
-    "lib/python3.9/site-packages/three_merge-0.1.1.dist-info/top_level.txt",
-    "lib/python3.9/site-packages/three_merge/__init__.py",
-    "lib/python3.9/site-packages/three_merge/merge.py",
-    "lib/python3.9/site-packages/three_merge/__pycache__/__init__.cpython-39.pyc",
-    "lib/python3.9/site-packages/three_merge/__pycache__/merge.cpython-39.pyc"
+    "lib/python3.8/site-packages/three_merge-0.1.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/three_merge-0.1.1.dist-info/LICENSE",
+    "lib/python3.8/site-packages/three_merge-0.1.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/three_merge-0.1.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/three_merge-0.1.1.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/three_merge-0.1.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/three_merge-0.1.1.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/three_merge-0.1.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/three_merge/__init__.py",
+    "lib/python3.8/site-packages/three_merge/merge.py",
+    "lib/python3.8/site-packages/three_merge/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/three_merge/__pycache__/merge.cpython-38.pyc"
   ],
   "fn": "three-merge-0.1.1-pyhd3eb1b0_0.conda",
   "legacy_bz2_md5": "5b636c1b924357e4d25f03d0e33b6dcc",
@@ -29,22 +29,22 @@
   "license": "MIT",
   "license_family": "MIT",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/three-merge-0.1.1-pyhd3eb1b0_0",
+    "source": "/home/manuj/anaconda3/pkgs/three-merge-0.1.1-pyhd3eb1b0_0",
     "type": 1
   },
   "md5": "5ae0f5c203a35f7138e0199df9c7d5bc",
   "name": "three-merge",
   "noarch": "python",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/three-merge-0.1.1-pyhd3eb1b0_0.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/three-merge-0.1.1-pyhd3eb1b0_0.conda",
   "package_type": "noarch_python",
   "paths_data": {
     "paths": [
       {
-        "_path": "lib/python3.9/site-packages/three_merge/__pycache__/__init__.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/three_merge/__pycache__/__init__.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/three_merge/__pycache__/merge.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/three_merge/__pycache__/merge.cpython-38.pyc",
         "path_type": "pyc_file"
       }
     ],

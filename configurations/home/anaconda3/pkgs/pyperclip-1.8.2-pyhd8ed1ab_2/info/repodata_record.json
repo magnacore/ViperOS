@@ -1,0 +1,24 @@
+{
+  "build": "pyhd8ed1ab_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.6"
+  ],
+  "features": "",
+  "fn": "pyperclip-1.8.2-pyhd8ed1ab_2.tar.bz2",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "8d7c6507e902193f9b1e9612f0210a4b",
+  "name": "pyperclip",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "ccd049b620584b8cff340df8ea591bc73badc1e366768358e20e7cab9cf795dc",
+  "size": 14533,
+  "subdir": "noarch",
+  "timestamp": 1622337733033,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pyperclip-1.8.2-pyhd8ed1ab_2.tar.bz2",
+  "version": "1.8.2"
+}

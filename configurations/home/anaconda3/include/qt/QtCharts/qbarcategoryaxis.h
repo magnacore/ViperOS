@@ -36,7 +36,7 @@ QT_CHARTS_BEGIN_NAMESPACE
 
 class QBarCategoryAxisPrivate;
 
-class Q_CHARTS_EXPORT QBarCategoryAxis : public QAbstractAxis
+class QT_CHARTS_EXPORT QBarCategoryAxis : public QAbstractAxis
 {
     Q_OBJECT
     Q_PROPERTY(QStringList categories READ categories WRITE setCategories NOTIFY categoriesChanged)
@@ -45,11 +45,11 @@ class Q_CHARTS_EXPORT QBarCategoryAxis : public QAbstractAxis
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
-    explicit QBarCategoryAxis(QObject *parent = nullptr);
+    explicit QBarCategoryAxis(QObject *parent = Q_NULLPTR);
     ~QBarCategoryAxis();
 
 protected:
-    QBarCategoryAxis(QBarCategoryAxisPrivate &d, QObject *parent = nullptr);
+    QBarCategoryAxis(QBarCategoryAxisPrivate &d, QObject *parent = Q_NULLPTR);
 
 public:
     AxisType type() const;

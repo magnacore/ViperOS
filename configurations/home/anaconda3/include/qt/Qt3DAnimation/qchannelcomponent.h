@@ -51,7 +51,7 @@ namespace Qt3DAnimation {
 
 class QChannelComponentPrivate;
 
-class Q_3DANIMATIONSHARED_EXPORT QChannelComponent
+class QT3DANIMATIONSHARED_EXPORT QChannelComponent
 {
 public:
     QChannelComponent();

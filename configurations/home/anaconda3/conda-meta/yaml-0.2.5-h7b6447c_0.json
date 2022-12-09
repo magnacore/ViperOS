@@ -6,7 +6,7 @@
   "depends": [
     "libgcc-ng >=7.3.0"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/yaml-0.2.5-h7b6447c_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/yaml-0.2.5-h7b6447c_0",
   "features": "",
   "files": [
     "include/yaml.h",
@@ -21,12 +21,12 @@
   "legacy_bz2_size": 88839,
   "license": "MIT",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/yaml-0.2.5-h7b6447c_0",
+    "source": "/home/manuj/anaconda3/pkgs/yaml-0.2.5-h7b6447c_0",
     "type": 1
   },
   "md5": "39fdbf4db769e494ffb06d95680c83d8",
   "name": "yaml",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/yaml-0.2.5-h7b6447c_0.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/yaml-0.2.5-h7b6447c_0.conda",
   "paths_data": {
     "paths": [
       {
@@ -35,7 +35,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
         "sha256": "ccaa923d9a666534b8b05bd03b38e0ce1f92ee3ccf4e2c0aad93b29f19db613f",
-        "sha256_in_prefix": "d75519e9fe9bbacc4fbafcb64b5aaf98038c320c392bef70e57eb1d51e0bcd26",
+        "sha256_in_prefix": "5fd39efac9729f3dd26671d5dd37647e3640162426ca8c74a94e566dd463ac2f",
         "size_in_bytes": 240
       }
     ],

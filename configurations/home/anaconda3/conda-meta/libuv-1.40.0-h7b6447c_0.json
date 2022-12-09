@@ -1,0 +1,58 @@
+{
+  "build": "h7b6447c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/libuv-1.40.0-h7b6447c_0",
+  "features": "",
+  "files": [
+    "include/uv.h",
+    "include/uv/errno.h",
+    "include/uv/linux.h",
+    "include/uv/threadpool.h",
+    "include/uv/unix.h",
+    "include/uv/version.h",
+    "lib/libuv.a",
+    "lib/libuv.so",
+    "lib/libuv.so.1",
+    "lib/libuv.so.1.0.0",
+    "lib/pkgconfig/libuv.pc"
+  ],
+  "fn": "libuv-1.40.0-h7b6447c_0.conda",
+  "legacy_bz2_md5": "440323c587792bbd97e2b3e62e214176",
+  "legacy_bz2_size": 955846,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/libuv-1.40.0-h7b6447c_0",
+    "type": 1
+  },
+  "md5": "bb1eff3862d3729995c38fc1f5d71ca4",
+  "name": "libuv",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/libuv-1.40.0-h7b6447c_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/libuv.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/libuv_1601048951262/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "c346fbba4f11aadb6a03c88c519f95fdae27897b6e26447f9f9828b45c61fda0",
+        "sha256_in_prefix": "06ec126898033e5a3300885cb1e545be07aea7c42510efcdcda9a1aaad32ffe2",
+        "size_in_bytes": 530
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "libuv==1.40.0=h7b6447c_0",
+  "sha256": "c6fc151ab1135a13ff6f1d93530c5d16ff0f333e1bcf01b9ed52c3cfc014f55a",
+  "size": 753230,
+  "subdir": "linux-64",
+  "timestamp": 1601049115502,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libuv-1.40.0-h7b6447c_0.conda",
+  "version": "1.40.0"
+}

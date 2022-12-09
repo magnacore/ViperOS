@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,36 +26,6 @@
 
 namespace LIEF {
 namespace ELF {
-
-class AndroidNote;
-class Binary;
-class CoreAuxv;
-class CoreFile;
-class CorePrPsInfo;
-class CorePrStatus;
-class CoreSigInfo;
-class DynamicEntry;
-class DynamicEntryArray;
-class DynamicEntryFlags;
-class DynamicEntryLibrary;
-class DynamicEntryRpath;
-class DynamicEntryRunPath;
-class DynamicSharedObject;
-class GnuHash;
-class Header;
-class Note;
-class NoteAbi;
-class NoteDetails;
-class Relocation;
-class Section;
-class Segment;
-class Symbol;
-class SymbolVersion;
-class SymbolVersionAux;
-class SymbolVersionAuxRequirement;
-class SymbolVersionDefinition;
-class SymbolVersionRequirement;
-class SysvHash;
 
 LIEF_API json to_json(const Object& v);
 LIEF_API std::string to_json_str(const Object& v);

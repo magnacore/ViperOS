@@ -1,0 +1,850 @@
+commit f6a8e3760de90a15e7256b543570f567f1b807b5
+Author: Serhii Kupriienko <skupriienko@anaconda.com>
+Date:   Wed Mar 9 06:08:04 2022 +0000
+
+    Rebuild for python 3.10 support
+
+commit 2f3080da1e1903bf11976013d2f1e426fd6e1716
+Merge: ecec42d 9ee4099
+Author: Serhii Kupriienko <79282962+skupr-anaconda@users.noreply.github.com>
+Date:   Thu Nov 25 18:29:40 2021 +0200
+
+    Merge pull request #4 from AnacondaRecipes/pbs_3.8.1_20211123T100120
+    
+    aiohttp 3.8.1
+
+commit 9ee4099917b587acd9a9067ecd72005a789440ae
+Author: Serhii Kupriienko <79282962+skupr-anaconda@users.noreply.github.com>
+Date:   Thu Nov 25 18:16:41 2021 +0200
+
+    Small fix
+
+commit d8f4c1e15f56a2189da5d545fe8e2eb8c9e5f9de
+Author: Serhii Kupriienko <79282962+skupr-anaconda@users.noreply.github.com>
+Date:   Tue Nov 23 16:27:24 2021 +0200
+
+    Update dependencies
+
+commit 3567c8941a999b08795b2c2f3033b54595c93cb6
+Author: anaconda-pkg-build <anaconda-pkg-build@anaconda.com>
+Date:   Tue Nov 23 10:01:21 2021 +0000
+
+    DOR update to 3.8.1
+
+commit ecec42d4b67ef7eada5cec929e7630afc76f33c7
+Author: Kai Tietz <ktietz@anaconda.com>
+Date:   Fri Aug 13 15:07:45 2021 +0200
+
+    updated to post0 version for chardet 4.x support
+
+commit 03cf3c3cb2e4bef9fdf4c28a7129260b5b417df5
+Author: Kai Tietz <ktietz@anaconda.com>
+Date:   Fri Aug 13 15:04:01 2021 +0200
+
+    add support for chardet 4.x version
+
+commit 20c3cdc10a17ed6486d73b23923269db66c80eb6
+Author: anaconda-pkg-build <anaconda-pkg-build@anaconda.com>
+Date:   Fri Feb 26 17:33:41 2021 +0000
+
+    DOR update to 3.7.4
+
+commit 1321fc16fb48ddd7458a8783d22285c94218862b
+Author: Kai Tietz <ktietz@anaconda.com>
+Date:   Mon Feb 15 13:06:48 2021 +0100
+
+    relax multidict, and yarl as done by CF
+
+commit cfd0545588a3129a43a2b935c4e9258a5a4d2133
+Author: anaconda-pkg-build <anaconda-pkg-build@anaconda.com>
+Date:   Fri Dec 4 19:18:10 2020 +0000
+
+    DOR update to 3.7.3
+
+commit e49eab90261a8098d44475055bf86d155c6b9849
+Author: anaconda-pkg-build <anaconda-pkg-build@anaconda.com>
+Date:   Wed Oct 28 13:51:07 2020 +0000
+
+    DOR update to 3.7.2
+
+commit b79165a739227d96146a793b13c4345d6c83a1eb
+Author: Connor Martin <connormartin7@gmail.com>
+Date:   Tue Oct 20 09:41:18 2020 -0500
+
+    typing extensions
+
+commit 251dd91fa6d10cb266734e04f6d1aa03153df5ec
+Merge: 3b3c523 ac0869b
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Mon Oct 19 10:39:58 2020 -0300
+
+    Merge pull request #42 from conda-forge/fix_deps
+
+commit ac0869b0c7bbaa8553ea90266ed5a6254971bd12
+Author: Filipe Fernandes <ocefpaf@gmail.com>
+Date:   Mon Oct 19 09:36:03 2020 -0300
+
+    MNT: Re-rendered with conda-build 3.20.4, conda-smithy 3.8.2, and conda-forge-pinning 2020.10.18.17.43.44
+
+commit 7d5a96d5ef4b6cdb96de84ce15593adcebec0b71
+Author: Filipe Fernandes <ocefpaf@gmail.com>
+Date:   Mon Oct 19 09:34:17 2020 -0300
+
+    update with grayskull
+
+commit 3b3c523f122653e9bcd25a8d642def64b19681ff
+Merge: 68f71bf c213ec6
+Author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+Date:   Sun Oct 18 19:22:52 2020 +0000
+
+    aiohttp v3.6.3
+    
+    automerged PR by conda-forge/automerge-action
+
+commit c213ec6ff5345ac6130f7436305baef700152a57
+Author: conda-forge-linter <github-actions@email.com>
+Date:   Sun Oct 18 19:06:46 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.4, conda-smithy 3.8.2, and conda-forge-pinning 2020.10.18.17.43.44
+
+commit 9b45d2228647dbcb4aa8c451825cbcccb76eb62a
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Sun Oct 18 21:05:01 2020 +0200
+
+    Update meta.yaml
+
+commit eb2f8afe49659099494295f1d1de31d269c47803
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Mon Oct 12 12:44:39 2020 +0000
+
+    updated v3.6.3
+
+commit 68f71bfd21800ebb8c94842c2f881b1cb6d5207a
+Merge: 014eec2 0d6bf9f
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Mon Oct 12 09:29:26 2020 +0200
+
+    Merge pull request #38 from regro-cf-autotick-bot/rebuild-python39-0-2_h25f342
+    
+    Rebuild for python39
+
+commit 0d6bf9f7882b7f487f26dc335f2f106e939e4cb0
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sat Oct 10 22:46:45 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.3, conda-smithy 3.8.1, and conda-forge-pinning 2020.10.09.16.47.17
+
+commit 2983b4b6b1d6ba62c48c58e26f996255bd4b3def
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sat Oct 10 22:46:32 2020 +0000
+
+    Rebuild for python39
+
+commit 014eec204f87d9526e4b1cf7ee4289dd2e20925a
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Fri Aug 7 18:15:11 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokenCleanup
+
+commit 96e565c8f9f518a9d8a8ffa2357cc3009ea2530c
+Author: Matthew R Becker <becker.mr@gmail.com>
+Date:   Mon May 18 06:39:35 2020 -0500
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CondaForgeAutomerge
+
+commit 4ce2ad691b760d61fa724d5b41e5699ec9493956
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Fri May 15 17:20:31 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokensAndConfig
+
+commit 61cacf8df8d7b2d9e1f373a463aaf061918a11e0
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Wed May 13 02:47:27 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TurnOff
+
+commit 2371bc0930a07beaf809c1e2f22ada50b066a01e
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Tue May 12 17:12:47 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokensAndConfig
+
+commit 47dea88b10baf51389d397aaaf67027a9b7a2d8e
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Mon Mar 2 13:12:58 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration AutomergeAndRerender
+
+commit e7f6e5319b2a3cd646caee0fdf721db29fe0131f
+Merge: 39a10e6 bab487b
+Author: Marcel Bargull <mbargull@users.noreply.github.com>
+Date:   Thu Nov 28 23:13:35 2019 +0000
+
+    Merge pull request #36 from regro-cf-autotick-bot/rebuild-python3801
+    
+    Rebuild for python38
+
+commit bab487b5587183c2676690364f9eca6b64c9e675
+Merge: 9beffb5 6f7f840
+Author: Marcel Bargull <marcel.bargull@udo.edu>
+Date:   Fri Nov 29 00:01:06 2019 +0100
+
+    Merge branch '3.6.2' into rebuild-python3801
+
+commit 9beffb5ad8e67f9a7b0f3d3a1712c5e538132f44
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Nov 28 17:28:23 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.18.11, conda-smithy 3.6.3, and conda-forge-pinning 2019.11.26
+
+commit a1141a856fc2c0ae53459ca05141a968897753b7
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Nov 28 17:28:01 2019 +0000
+
+    bump build number
+
+commit 6f7f84085478ce415a9b99df75744ee48fd55831
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Wed Oct 9 18:17:56 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.18.9, conda-smithy 3.5.0, and conda-forge-pinning 2019.10.08
+
+commit c07f889e5904686e26a29873545706928f05e1bb
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Wed Oct 9 18:17:40 2019 +0000
+
+    updated v3.6.2
+
+commit 39a10e67e4481373661bba024fb616fce2ec3839
+Merge: eeb6a0a fb34d7b
+Author: Patrick Sodré <sodre@sodre.co>
+Date:   Sun Sep 22 02:02:34 2019 -0400
+
+    Merge pull request #34 from regro-cf-autotick-bot/3.6.1
+    
+    aiohttp v3.6.1
+
+commit fb34d7b24d3df3ee7767935f2795f34fa614a57b
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sun Sep 22 01:32:58 2019 -0400
+
+    Update meta.yaml
+
+commit 04dd33784c51bc450e56d671534e17e077c11157
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Sep 19 17:15:41 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.18.9, conda-smithy 3.4.7, and conda-forge-pinning 2019.09.08
+
+commit df5788c3ef0bd42203eab389facf9dfa7ee7df64
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Sep 19 17:15:26 2019 +0000
+
+    updated v3.6.1
+
+commit eeb6a0ae4e34b8ab1fa68452e208d0602ad6549e
+Merge: 0fd1091 7eeefd4
+Author: Patrick Sodré <sodre@sodre.co>
+Date:   Fri Sep 6 22:40:58 2019 -0400
+
+    Merge pull request #33 from regro-cf-autotick-bot/3.6.0
+    
+    aiohttp v3.6.0
+
+commit 0fd1091da977437c7d45ecc35c4fb524de9419a7
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Fri Sep 6 19:12:12 2019 -0500
+
+    [ci skip] ***NO_CI*** Move from appveyor to azure.
+    
+    See https://github.com/conda-forge/conda-forge.github.io/issues/857
+
+commit 7eeefd44aa5867adb15bd417e5c0f24e357dfc08
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Fri Sep 6 13:42:51 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.18.9, conda-smithy 3.4.3, and conda-forge-pinning 2019.08.27
+
+commit 48aa9a5defa40da2bee7a429a76b19f21275b954
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Fri Sep 6 13:42:38 2019 +0000
+
+    updated v3.6.0
+
+commit 063b3f8b70e35ee390362d48dda004fbd764c05b
+Merge: 3062194 fb21671
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sat Jan 26 07:58:25 2019 -0500
+
+    Merge pull request #32 from regro-cf-autotick-bot/3.5.4
+    
+    aiohttp v3.5.4
+
+commit fb21671bd7f8f76f5231337e0590568aea300b78
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat Jan 26 00:24:47 2019 +0000
+
+    updated v3.5.4
+
+commit 306219415ffa414c442fdb68301aced10e9689c5
+Merge: 90e5576 6bfaecc
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sun Jan 20 12:42:33 2019 -0500
+
+    Merge pull request #30 from regro-cf-autotick-bot/3.5.3
+    
+    aiohttp v3.5.3
+
+commit 6bfaecc2239ae24ee4c9edf81a1afde669718e83
+Merge: 4794395 90e5576
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sun Jan 20 11:49:36 2019 -0500
+
+    Merge branch 'master' into 3.5.3
+
+commit 90e5576dcb23408e7e56f399c06f58b3c2580472
+Merge: feefc12 40d1156
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sun Jan 20 11:49:01 2019 -0500
+
+    Merge pull request #29 from regro-cf-autotick-bot/3.5.2
+    
+    aiohttp v3.5.2
+
+commit 40d115631bc368394646d6bfb632c58073b191d4
+Merge: 64e732f feefc12
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sat Jan 19 04:06:56 2019 -0500
+
+    Merge branch 'master' into 3.5.2
+
+commit 64e732ff4066dac1f415bb5d9e1e015853532373
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Sat Jan 19 09:06:04 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.17.5, conda-smithy 3.2.9, and conda-forge-pinning 2019.01.18
+
+commit feefc12e50926b833e883556a8baf06141b62a01
+Merge: 4aef173 8af79ca
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sat Jan 19 04:04:13 2019 -0500
+
+    Merge pull request #28 from regro-cf-autotick-bot/3.5.1
+    
+    aiohttp v3.5.1
+
+commit 8af79caf5628c2a9709f41f470aee47ba66b4ec3
+Merge: c464d75 4aef173
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sat Jan 19 02:37:06 2019 -0500
+
+    Merge branch 'master' into 3.5.1
+
+commit 4aef173f4f5e6e690f14088664cd4eb79b5adacf
+Merge: d05a6e1 2297663
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sat Jan 19 02:36:25 2019 -0500
+
+    Merge pull request #27 from regro-cf-autotick-bot/3.5.0
+    
+    aiohttp v3.5.0
+
+commit 229766310f4b61afdd136cd47e3977c0f47865bb
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Sat Jan 19 00:07:04 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.17.5, conda-smithy 3.2.9, and conda-forge-pinning 2019.01.18
+
+commit 47943950b60f6d0e1530d6d0a229c56261483f8f
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Sat Jan 19 00:06:42 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.17.5, conda-smithy 3.2.9, and conda-forge-pinning 2019.01.18
+
+commit f8b9046f3c4c298b75f81120ec6cca6bd491de63
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Jan 10 21:20:51 2019 +0000
+
+    MNT: Re-rendered with conda-smithy 3.2.2 and pinning 2019.01.09
+
+commit 25628a16d0ba4ff9cf0cf4f4ff671c7b5b835f2e
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Jan 10 21:20:44 2019 +0000
+
+    updated v3.5.3
+
+commit dd09e85ef4660b5f3d6fd6fb4f1d78727a3d6f9a
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Tue Jan 8 11:19:50 2019 +0000
+
+    MNT: Re-rendered with conda-smithy 3.2.2 and pinning 2019.01.05
+
+commit 54544eb78081ba0737874b56b5a02b4d329877ca
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Tue Jan 8 11:19:43 2019 +0000
+
+    updated v3.5.2
+
+commit ab52e3ae80fe22fa27d8f423186721d6f39a0ed9
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sun Dec 30 06:50:19 2018 +0000
+
+    Revert to _
+
+commit b68eca2bddebc62700f6b903a77f70491ba928b2
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sun Dec 30 06:36:17 2018 +0000
+
+    switch _ for -
+
+commit 70865ebb6e4e1dcaeb319fa434ee228e7319d9fa
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sun Dec 30 06:25:26 2018 +0000
+
+    Add typing_extensions requirement for py<37
+
+commit c464d753fabbfba78af7f12e9150fe8475795f6b
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Mon Dec 24 21:14:14 2018 +0000
+
+    updated v3.5.1
+
+commit 227b46e8227ca5ec836b64535c4454d6ef50886a
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat Dec 22 23:13:36 2018 +0000
+
+    MNT: Re-rendered with conda-smithy 3.2.2 and pinning 2018.12.18
+
+commit 4ad2e6b45c472b25a4efdc16cd71a9f7b61fdb69
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat Dec 22 23:13:29 2018 +0000
+
+    updated v3.5.0
+
+commit d05a6e1783aac26609d856ed5a1a1a2a964a5c8c
+Merge: 12b4309 fdb231e
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sun Nov 11 18:29:59 2018 -0500
+
+    Merge pull request #26 from regro-cf-autotick-bot/rebuild
+    
+    Rebuild for Python 3.7, GCC 7, R 3.5.1, openBLAS 0.3.2
+
+commit fdb231e6e9556370cd08aab7a09ce35fb47bc1f9
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sun Nov 11 20:15:25 2018 +0000
+
+    MNT: Re-rendered with conda-smithy 3.1.12 and pinning 2018.11.9
+
+commit ed39d000e080899cf9378fa2d45f512e31a2b37e
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sun Nov 11 20:15:20 2018 +0000
+
+    bump build number
+
+commit 12b4309597ef565978d79d70c024658a16dabd2d
+Merge: f253cbb fb0638a
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Fri Oct 12 19:08:50 2018 -0400
+
+    Merge pull request #25 from regro-cf-autotick-bot/3.4.4
+    
+    aiohttp v3.4.4
+
+commit fb0638ad73ffe6f44572d0c5bcb11f269750222a
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Wed Sep 5 08:13:36 2018 +0000
+
+    updated v3.4.4
+
+commit f253cbb9f82dfd78b4a0137be241ffb90fb938e0
+Merge: fab07bc c43412a
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Tue Sep 4 21:38:19 2018 -0400
+
+    Merge pull request #24 from regro-cf-autotick-bot/3.4.3
+    
+    aiohttp v3.4.3
+
+commit c43412a784d49a4af9a7bf287f2d991810e9d723
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Tue Sep 4 15:13:26 2018 +0000
+
+    updated v3.4.3
+
+commit fab07bca9b2b3ed1a16b20721059544839785edf
+Merge: 683c6ed 5df084d
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sat Sep 1 20:32:20 2018 -0400
+
+    Merge pull request #23 from regro-cf-autotick-bot/3.4.2
+    
+    aiohttp v3.4.2
+
+commit 5df084d2211f12bb994ea99d96d9617368cb141e
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat Sep 1 20:08:40 2018 +0000
+
+    MNT: Re-rendered with conda-smithy 3.1.12 and pinning 2018.08.31
+
+commit 4459265265af82fb684fbf50f4062378aea962e3
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat Sep 1 20:08:33 2018 +0000
+
+    updated v3.4.2
+
+commit 683c6ed902e4c05742b1a81624eead646d96410f
+Author: Travis CI User <travis@example.org>
+Date:   Sat Aug 4 18:17:14 2018 +0000
+
+    [ci skip] [skip ci] Update anaconda token
+
+commit 240fe17ed732c302c9cd11450cd46d54c19304d1
+Merge: e140427 c9f6b8c
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Thu Aug 2 22:09:27 2018 -0400
+
+    Merge pull request #20 from CJ-Wright/cython
+    
+    add cython
+
+commit c9f6b8cdde5aea72dab8318a39ff12c2f01c73a6
+Author: christopher <cjwright4242@gmail.com>
+Date:   Thu Aug 2 11:12:05 2018 -0400
+
+    use pip
+
+commit a9205ef3e0409b81d340f50231e0ce8723e2990e
+Author: christopher <cjwright4242@gmail.com>
+Date:   Thu Aug 2 10:53:07 2018 -0400
+
+    bump build no
+
+commit 9f124e6cdf18945e91c3dbdd42f79d2c39a52f3e
+Author: christopher <cjwright4242@gmail.com>
+Date:   Thu Aug 2 10:51:44 2018 -0400
+
+    MNT: Re-rendered with conda-smithy 3.1.10 and pinning 2018.07.24
+
+commit 546743a77357fb2115d33b59f21390109338084b
+Author: christopher <cjwright4242@gmail.com>
+Date:   Thu Aug 2 10:48:34 2018 -0400
+
+    use cython
+
+commit e140427183709fef291bc8cbea0c7ee557df5486
+Merge: dd844da 23b467d
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Tue Jun 19 14:20:36 2018 -0400
+
+    Merge pull request #18 from jjhelmus/ar_sync
+    
+    Sync recipe with AnacondaRecipes
+
+commit 23b467de29a5a9a9545b6fb0d0c5348b195b8cdb
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Tue Jun 19 10:07:22 2018 -0500
+
+    reorder host and build sections
+
+commit cfd3a8e2f08b89df5866ab8ae8b3e4dd357c4590
+Author: Ray Donnelly <mingw.android@gmail.com>
+Date:   Sun Jun 17 11:24:15 2018 +0000
+
+    Do not need idna_ssl for Python >= 3.7
+
+commit 71f8649be870b3dcbac9d38c46d28cd3277c7d55
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Mon May 21 12:50:28 2018 -0500
+
+    update requirements
+
+commit 30c2b948e8ff18fa0028bb67ddd9a86ec9df2f80
+Author: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date:   Tue Mar 13 01:30:03 2018 -0500
+
+    aiohttp uses C extensions now
+
+commit b53a1ab8a744cdedc84081a3861bd23a493628b3
+Author: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date:   Wed Aug 9 17:10:55 2017 +0000
+
+    Make recipe cross-compile capable, update about section
+
+commit dd844da920dc46b58f64fd6b4172d2836c8167f8
+Merge: 2cb9bed d1b5f10
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Tue Jun 12 18:44:36 2018 -0400
+
+    Merge pull request #17 from regro-cf-autotick-bot/3.3.2
+    
+    aiohttp v3.3.2
+
+commit d1b5f10d8fce953aa7ccd9b2bef4f8f765a794ba
+Author: Travis CI User <travis@example.org>
+Date:   Tue Jun 12 17:53:44 2018 +0000
+
+    updated v3.3.2
+
+commit 2cb9beda35f6892b00d32b3dfa261821e2d280d3
+Merge: baae1b6 5d88506
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sun Jun 10 10:12:41 2018 -0400
+
+    Merge pull request #16 from regro-cf-autotick-bot/3.3.1
+    
+    aiohttp v3.3.1
+
+commit 5d885069ec9e55d0df99591e0e7a991a57661f00
+Author: Travis CI User <travis@example.org>
+Date:   Wed Jun 6 02:19:20 2018 +0000
+
+    updated v3.3.1
+
+commit baae1b6183f04a354eccf429fd8a9886f8b51d56
+Merge: 4738aa3 f4a06af
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Mon Jun 4 21:56:58 2018 -0400
+
+    Merge pull request #13 from regro-cf-autotick-bot/3.3.0
+    
+    aiohttp v3.3.0
+
+commit f4a06afc03ab2e60554230a6d9f3da8b68a26622
+Merge: 59f646e 4738aa3
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Mon Jun 4 21:55:56 2018 -0400
+
+    Merge branch 'master' into 3.3.0
+
+commit 4738aa350ac3218040df5f907f8d88a64cd389f1
+Merge: a305303 422f035
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Mon Jun 4 21:46:31 2018 -0400
+
+    Merge pull request #15 from epruesse/patch-1
+    
+    Fix async_timeout dependency version (fixes #14)
+
+commit 422f0351b0a89e41d7c1d0c41b5e63a9c70bd6d9
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Mon Jun 4 21:41:39 2018 -0400
+
+    Bump build number
+
+commit 093f4e5cea3fb3e98e153f2c5a8cf2eb1c4a8668
+Author: Elmar Pruesse <epruesse@users.noreply.github.com>
+Date:   Mon Jun 4 15:19:36 2018 -0600
+
+    Fix async_timeout dependency version (fixes #14)
+
+commit 59f646e71abee8ea6a8d978a1092e25d9f1f0a31
+Author: Travis CI User <travis@example.org>
+Date:   Fri Jun 1 11:06:17 2018 +0000
+
+    MNT: Re-rendered with conda-smithy 3.1.5 and pinning 2018.05.22
+
+commit 363761c80d8389ddedd311e3e9563d2037f5a6e7
+Author: Travis CI User <travis@example.org>
+Date:   Fri Jun 1 11:06:01 2018 +0000
+
+    updated v3.3.0
+
+commit a3053031f1b04c671b0bd7f3069bd54b77737b44
+Merge: dce3a46 ff80cde
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Thu May 10 20:45:03 2018 -0300
+
+    Merge pull request #12 from regro-cf-autotick-bot/3.2.1
+    
+    aiohttp v3.2.1
+
+commit ff80cdef82efa947cf4742e3c1a4efcd052d9f1a
+Author: Travis CI User <travis@example.org>
+Date:   Thu May 10 10:53:28 2018 +0000
+
+    updated v3.2.1
+
+commit dce3a4676ed4612e68cdd28138ce625f1c2779e0
+Merge: d07d47c 2434e25
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Fri Apr 13 20:57:22 2018 -0400
+
+    Merge pull request #10 from regro-cf-autotick-bot/3.1.3
+    
+    aiohttp v3.1.3
+
+commit 2434e252b77b38619445cb3253149786823f7389
+Author: Travis CI User <travis@example.org>
+Date:   Fri Apr 13 10:42:11 2018 +0000
+
+    updated v3.1.3
+
+commit d07d47ce9844102f93d53f94c9db36b5f9ef3289
+Merge: 71abc01 f578209
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Fri Apr 6 21:15:02 2018 -0400
+
+    Merge pull request #9 from regro-cf-autotick-bot/3.1.2
+    
+    aiohttp v3.1.2
+
+commit f5782090f975e66e274111837dd1f777f5dd4292
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Fri Apr 6 19:24:41 2018 -0400
+
+    Conform to upstream dependency on attires
+
+commit b17e80ab8544c47948e697f90b19b2b49010f953
+Author: Travis CI User <travis@example.org>
+Date:   Thu Apr 5 22:41:30 2018 +0000
+
+    updated v3.1.2
+
+commit 71abc01531e43b73eac41a311be13b6cb2fdda1c
+Merge: dda001f 604060e
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Wed Mar 28 16:17:11 2018 -0400
+
+    Merge pull request #8 from regro-cf-autotick-bot/3.1.1
+    
+    aiohttp v3.1.1
+
+commit 604060e3784da966b2a3720644e74010bc6f7dd8
+Author: Travis CI User <travis@example.org>
+Date:   Tue Mar 27 17:03:44 2018 +0000
+
+    updated v3.1.1
+
+commit dda001fbb7171351c1bf68825066bf9919d6d0f2
+Merge: dae14d0 8c811bb
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Fri Mar 23 13:06:41 2018 -0400
+
+    Merge pull request #7 from regro-cf-autotick-bot/3.1.0
+    
+    aiohttp v3.1.0
+
+commit 8c811bb121537065b21f8bde7e9ace2757985e5b
+Merge: 6de18d4 dae14d0
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Thu Mar 22 20:03:04 2018 -0400
+
+    Merge branch 'master' into 3.1.0
+
+commit dae14d0fc1f2d364d231bbcb6f9e3fb1c003c713
+Merge: ef80c4e a7fc423
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Thu Mar 22 00:28:50 2018 -0400
+
+    Merge pull request #6 from regro-cf-autotick-bot/3.0.9
+    
+    aiohttp v3.0.9
+
+commit a7fc4235f3e90ef6a52859f3658b3c8cc8bc6bc5
+Merge: 0764e13 ef80c4e
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Wed Mar 21 13:48:12 2018 -0400
+
+    Merge branch 'master' into 3.0.9
+
+commit 6de18d402e6b32edf9dcb5567f66caa2d7b7d07a
+Author: Travis CI User <travis@example.org>
+Date:   Wed Mar 21 17:01:20 2018 +0000
+
+    updated v3.1.0
+
+commit ef80c4e308e7427be24c7c218abe9aa221af16dc
+Merge: dcb64dd e503d7d
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Wed Mar 14 16:23:41 2018 -0400
+
+    Merge pull request #5 from regro-cf-autotick-bot/3.0.8
+    
+    aiohttp v3.0.8
+
+commit 0764e1371b5000443228dba65931e535f4a565df
+Author: Travis CI User <travis@example.org>
+Date:   Wed Mar 14 16:47:08 2018 +0000
+
+    updated v3.0.9
+
+commit e503d7dfa4c58aca8684676eb8fc4770cbacbdb9
+Author: Travis CI User <travis@example.org>
+Date:   Tue Mar 13 23:10:43 2018 +0000
+
+    updated v3.0.8
+
+commit dcb64dd309ebd1391e07342d8edf22ec266c9602
+Merge: 07adea2 91f76b5
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Sat Mar 10 23:01:23 2018 -0500
+
+    Merge pull request #4 from regro-cf-autotick-bot/3.0.7
+    
+    aiohttp v3.0.7
+
+commit 91f76b53c2530764e9f29ea6f46fb3f35f46ab98
+Author: Travis CI User <travis@example.org>
+Date:   Thu Mar 8 21:45:26 2018 +0000
+
+    updated v3.0.7
+
+commit 07adea250f6bb7e83187c60600f99cc872aeb372
+Merge: 57fe70e ffae840
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Mon Mar 5 22:47:15 2018 -0500
+
+    Merge pull request #3 from regro-cf-autotick-bot/3.0.6
+    
+    aiohttp v3.0.6
+
+commit ffae840fecfa41074844e6a13a3bc586475ed0ef
+Author: Travis CI User <travis@example.org>
+Date:   Mon Mar 5 21:17:32 2018 +0000
+
+    updated v3.0.6
+
+commit 57fe70e7c64942f773f6346ae9495c97cd411df7
+Merge: e1bff61 1c2dc92
+Author: Patrick Sodré <psodre@gmail.com>
+Date:   Thu Mar 1 01:22:16 2018 -0500
+
+    Merge pull request #2 from regro-cf-autotick-bot/3.0.5
+    
+    aiohttp v3.0.5
+
+commit 1c2dc92ca1d30827ed31c24f4ebd5ab5f63b76aa
+Author: Travis CI User <travis@example.org>
+Date:   Wed Feb 28 21:53:49 2018 +0000
+
+    updated v3.0.5
+
+commit e1bff61723ba457ddf2f7a3ff1e136a28d9d8273
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Tue Feb 27 23:48:26 2018 -0500
+
+    aiohttp v3.0.2 (#1)
+    
+    * MNT: Re-rendered with conda-smithy 2.4.5
+    
+    * Update dependencies
+
+commit 65eac276278db2b27d8934006079c2dcd26eee3c
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Sat Aug 26 22:27:26 2017 +0000
+
+    [ci skip] [skip ci] Update anaconda token
+
+commit 1bdb22195fa51f5af6f0d0e0809a40623736241f
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Thu May 4 19:49:23 2017 +0000
+
+    Re-render the feedstock after CI registration.
+
+commit 7336dc1b960c48168a0cd5da0f0252f66b28760b
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Thu May 4 19:45:20 2017 +0000
+
+    Initial feedstock commit with conda-smithy 2.3.0.

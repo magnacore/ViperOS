@@ -55,7 +55,7 @@ class QParameter;
 class QTechniquePrivate;
 class QGraphicsApiFilter;
 
-class Q_3DRENDERSHARED_EXPORT QTechnique : public Qt3DCore::QNode
+class QT3DRENDERSHARED_EXPORT QTechnique : public Qt3DCore::QNode
 {
     Q_OBJECT
     Q_PROPERTY(Qt3DRender::QGraphicsApiFilter *graphicsApiFilter READ graphicsApiFilter CONSTANT)
@@ -77,7 +77,6 @@ public:
     QVector<QRenderPass *> renderPasses() const;
 
     QGraphicsApiFilter *graphicsApiFilter();
-    const QGraphicsApiFilter *graphicsApiFilter() const;
 
 protected:
     explicit QTechnique(QTechniquePrivate &dd, Qt3DCore::QNode *parent = nullptr);
@@ -85,7 +84,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(QTechnique)
     Q_PRIVATE_SLOT(d_func(), void _q_graphicsApiFilterChanged())
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 }

@@ -76,9 +76,7 @@ public:
         Append = 0x0004,
         Truncate = 0x0008,
         Text = 0x0010,
-        Unbuffered = 0x0020,
-        NewOnly = 0x0040,
-        ExistingOnly = 0x0080
+        Unbuffered = 0x0020
     };
     Q_DECLARE_FLAGS(OpenMode, OpenModeFlag)
 
@@ -138,7 +136,6 @@ public:
 
     qint64 peek(char *data, qint64 maxlen);
     QByteArray peek(qint64 maxlen);
-    qint64 skip(qint64 maxSize);
 
     virtual bool waitForReadyRead(int msecs);
     virtual bool waitForBytesWritten(int msecs);
@@ -163,7 +160,7 @@ protected:
 #ifdef QT_NO_QOBJECT
     QIODevice(QIODevicePrivate &dd);
 #else
-    QIODevice(QIODevicePrivate &dd, QObject *parent = nullptr);
+    QIODevice(QIODevicePrivate &dd, QObject *parent = Q_NULLPTR);
 #endif
     virtual qint64 readData(char *data, qint64 maxlen) = 0;
     virtual qint64 readLineData(char *data, qint64 maxlen);

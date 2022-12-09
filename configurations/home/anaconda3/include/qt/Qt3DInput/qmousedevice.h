@@ -53,11 +53,10 @@ class QMouseHandler;
 class QMouseInput;
 
 
-class Q_3DINPUTSHARED_EXPORT QMouseDevice : public Qt3DInput::QAbstractPhysicalDevice
+class QT3DINPUTSHARED_EXPORT QMouseDevice : public Qt3DInput::QAbstractPhysicalDevice
 {
     Q_OBJECT
     Q_PROPERTY(float sensitivity READ sensitivity WRITE setSensitivity NOTIFY sensitivityChanged)
-    Q_PROPERTY(bool updateAxesContinuously READ updateAxesContinuously WRITE setUpdateAxesContinuously NOTIFY updateAxesContinuouslyChanged REVISION 15)
 public:
     explicit QMouseDevice(Qt3DCore::QNode *parent = nullptr);
     ~QMouseDevice();
@@ -70,30 +69,27 @@ public:
     };
     Q_ENUM(Axis) // LCOV_EXCL_LINE
 
-    int axisCount() const final;
-    int buttonCount() const final;
-    QStringList axisNames() const final;
-    QStringList buttonNames() const final;
-    int axisIdentifier(const QString &name) const final;
-    int buttonIdentifier(const QString &name) const final;
+    int axisCount() const Q_DECL_FINAL;
+    int buttonCount() const Q_DECL_FINAL;
+    QStringList axisNames() const Q_DECL_FINAL;
+    QStringList buttonNames() const Q_DECL_FINAL;
+    int axisIdentifier(const QString &name) const Q_DECL_FINAL;
+    int buttonIdentifier(const QString &name) const Q_DECL_FINAL;
 
     float sensitivity() const;
-    bool updateAxesContinuously() const;
 
 public Q_SLOTS:
     void setSensitivity(float value);
-    void setUpdateAxesContinuously(bool updateAxesContinuously);
 
 Q_SIGNALS:
     void sensitivityChanged(float value);
-    void updateAxesContinuouslyChanged(bool updateAxesContinuously);
 
 protected:
-    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override;
+    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(QMouseDevice)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DInput

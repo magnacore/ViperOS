@@ -1,0 +1,30 @@
+package:
+  name: google-cloud-sdk
+  version: 407.0.0
+source:
+  sha256: 0eba817fd37de10f57206638ed259f7cee56f73eef80ef14e93be949cf6a1ffe
+  url: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-407.0.0-linux-x86_64.tar.gz
+build:
+  number: '0'
+requirements:
+  build: null
+  host:
+    - python
+  run:
+    - python
+test:
+  commands:
+    - gcloud version
+    - gcloud components list
+about:
+  home: https://cloud.google.com/sdk/
+  license: Apache v2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: Command-line interface for Google Cloud Platform products and services
+extra:
+  final: null
+  recipe-maintainers:
+    - chapmanb
+    - scopatz
+    - nehaljwani

@@ -27,7 +27,6 @@
  * Forward declarations of the structures we define.
  */
 
-#define PhotoModel PhotoMaster
 typedef struct ColorTableId	ColorTableId;
 typedef struct ColorTable	ColorTable;
 typedef struct PhotoInstance	PhotoInstance;
@@ -138,11 +137,11 @@ struct ColorTable {
 #define MAP_COLORS		8
 
 /*
- * Definition of the data associated with each photo image model.
+ * Definition of the data associated with each photo image master.
  */
 
 struct PhotoMaster {
-    Tk_ImageMaster tkMaster;	/* Tk's token for image model. NULL means the
+    Tk_ImageMaster tkMaster;	/* Tk's token for image master. NULL means the
 				 * image is being deleted. */
     Tcl_Interp *interp;		/* Interpreter associated with the application
 				 * using this image. */
@@ -165,7 +164,7 @@ struct PhotoMaster {
     TkRegion validRegion;	/* Tk region indicating which parts of the
 				 * image have valid image data. */
     PhotoInstance *instancePtr;	/* First in the list of instances associated
-				 * with this model. */
+				 * with this master. */
 };
 
 /*
@@ -196,17 +195,17 @@ struct PhotoMaster {
  */
 
 struct PhotoInstance {
-    PhotoMaster *masterPtr;	/* Pointer to model for image. */
+    PhotoMaster *masterPtr;	/* Pointer to master for image. */
     Display *display;		/* Display for windows using this instance. */
     Colormap colormap;		/* The image may only be used in windows with
 				 * this particular colormap. */
     PhotoInstance *nextPtr;	/* Pointer to the next instance in the list of
-				 * instances associated with this model. */
+				 * instances associated with this master. */
     int refCount;		/* Number of instances using this structure. */
     Tk_Uid palette;		/* Palette for these particular instances. */
     double gamma;		/* Gamma value for these instances. */
     Tk_Uid defaultPalette;	/* Default palette to use if a palette is not
-				 * specified for the model. */
+				 * specified for the master. */
     ColorTable *colorTablePtr;	/* Pointer to information about colors
 				 * allocated for image display in windows like
 				 * this one. */

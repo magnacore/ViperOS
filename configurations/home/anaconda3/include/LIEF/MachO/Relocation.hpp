@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ namespace MachO {
 
 class BinaryParser;
 
-//! Object modeling relocation
+//! @brief Object modeling relocation
 //!
 //! @see:
 //!   * MachO::RelocationObject
@@ -57,19 +57,19 @@ class LIEF_API Relocation : public LIEF::Relocation {
 
     virtual Relocation* clone(void) const = 0;
 
-    // For @link MachO::FILE_TYPES::MH_OBJECT object @endlink this is an
-    // offset from the start of the @link MachO::Section section @endlink
-    // to the item containing the address requiring relocation.
+    //! @brief For @link MachO::FILE_TYPES::MH_OBJECT object @endlink this is an
+    //! offset from the start of the @link MachO::Section section @endlink
+    //! to the item containing the address requiring relocation.
     //virtual uint64_t address(void) const override;
 
-    //! Indicates whether the item containing the address to be
+    //! @brief Indicates whether the item containing the address to be
     //! relocated is part of a CPU instruction that uses PC-relative addressing.
     //!
     //! For addresses contained in PC-relative instructions, the CPU adds the address of
     //! the instruction to the address contained in the instruction.
     virtual bool is_pc_relative(void) const = 0;
 
-    //! Type of the relocation according to the
+    //! @brief Type of the relocation according to the
     //! @link Relocation::architecture architecture@endlink and/or
     //! @link Relocation::origin origin@endlink
     //!
@@ -82,30 +82,30 @@ class LIEF_API Relocation : public LIEF::Relocation {
     //!   * MachO::REBASE_TYPES
     virtual uint8_t type(void) const;
 
-    //! @link Relocation::architecture architecture @endlink of the relocation
+    //! @brief @link Relocation::architecture architecture @endlink of the relocation
     CPU_TYPES architecture(void) const;
 
-    //! Origin of the relocation
+    //! @brief Origin of the relocation
     virtual RELOCATION_ORIGINS origin(void) const = 0;
 
-    //! ``true`` if the relocation has a symbol associated with
+    //! @brief ``true`` if the relocation has a symbol associated with
     bool has_symbol(void) const;
 
-    //! Symbol associated with the relocation (if any)
+    //! @brief Symbol associated with the relocation (if any)
     Symbol& symbol(void);
     const Symbol& symbol(void) const;
 
-    //! ``true`` if the relocation has a section associated with
+    //! @brief ``true`` if the relocation has a section associated with
     bool has_section(void) const;
 
-    //! Section associated with the relocation (if any)
+    //! @brief Section associated with the relocation (if any)
     Section& section(void);
     const Section& section(void) const;
 
-    //! ``true`` if the relocation has a SegmentCommand associated with
+    //! @brief ``true`` if the relocation has a SegmentCommand associated with
     bool has_segment(void) const;
 
-    //! SegmentCommand associated with the relocation (if any)
+    //! @brief SegmentCommand associated with the relocation (if any)
     SegmentCommand& segment(void);
     const SegmentCommand& segment(void) const;
 

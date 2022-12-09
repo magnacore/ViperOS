@@ -1,0 +1,25 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.5"
+  ],
+  "features": "",
+  "fn": "cachetools-4.2.2-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "ecf637b000b212d5f07f5f1be454549b",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "d9e4cca23e6472a886cb8ed3f9d8a9b3",
+  "name": "cachetools",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "fd58885c4c01aa8fd0a9d2aadcbd9eb04b002507baa89272cb9142fe4703417c",
+  "size": 13164,
+  "subdir": "noarch",
+  "timestamp": 1619597427663,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/cachetools-4.2.2-pyhd3eb1b0_0.conda",
+  "version": "4.2.2"
+}

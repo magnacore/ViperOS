@@ -45,16 +45,15 @@
 %token semicolon "[semicolon];"
 %token class "[class]class[ \\t]+(?<name>[A-Za-z_][A-Za-z0-9_]+)[ \\t]*"
 %token pod "[pod]POD[ \\t]*(?<name>[A-Za-z_][A-Za-z0-9_]+)[ \\t]*\\((?<types>[^\\)]*)\\);?[ \\t]*"
-%token enum "[enum][ \\t]*ENUM[ \\t]+(?<name>[A-Za-z_][A-Za-z0-9_]*)[ \\t]*"
-%token enum_param "[enum_param][ \\t]*(?<name>[A-Za-z_][A-Za-z0-9_]*)[ \\t]*(=[ \\t]*(?<value>-\\d+|0[xX][0-9A-Fa-f]+|\\d+))?[ \\t]*"
+%token enum "[enum][ \\t]*ENUM[ \\t]+(?<name>[A-Za-z_][A-Za-z0-9_]+)[ \\t]*"
+%token enum_param "[enum_param][ \\t]*(?<name>[A-Za-z_][A-Za-z0-9_]+)[ \\t]*(=[ \\t]*(?<value>-\\d+|0[xX][0-9A-Fa-f]+|\\d+))?[ \\t]*"
 %token prop "[prop][ \\t]*PROP[ \\t]*\\((?<args>[^\\)]+)\\);?[ \\t]*"
 %token use_enum "[use_enum]USE_ENUM[ \\t]*\\((?<name>[^\\)]*)\\);?[ \\t]*"
 %token signal "[signal][ \\t]*SIGNAL[ \\t]*\\([ \\t]*(?<name>\\S+)[ \\t]*\\((?<args>[^\\)]*)\\)[ \\t]*\\);?[ \\t]*"
 %token slot "[slot][ \\t]*SLOT[ \\t]*\\((?<type>[^\\(]*)\\((?<args>[^\\)]*)\\)[ \\t]*\\);?[ \\t]*"
 %token model "[model][ \\t]*MODEL[ \\t]+(?<name>[A-Za-z_][A-Za-z0-9_]+)\\((?<args>[^\\)]+)\\)[ \\t]*;?[ \\t]*"
-%token childrep "[childrep][ \\t]*CLASS[ \\t]+(?<name>[A-Za-z_][A-Za-z0-9_]+)\\((?<type>[^\\)]+)\\)[ \\t]*;?[ \\t]*"
-%token start "[start][ \\t]*\\{[ \\t]*"
-%token stop "[stop][ \\t]*\\};?[ \\t]*"
+%token start "[start]\\{[ \\t]*"
+%token stop "[stop]\\};?[ \\t]*"
 %token comma "[comma],"
 %token comment "[comment](?<comment>[ \\t]*//[^\\n]*\\n)"
 %token preprocessor_directive "[preprocessor_directive](?<preprocessor_directive>#[ \\t]*[^\\n]*\\n)"
@@ -83,20 +82,17 @@ struct ASTProperty
         Constant,
         ReadOnly,
         ReadPush,
-        ReadWrite,
-        SourceOnlySetter
+        ReadWrite
     };
 
     ASTProperty();
-    ASTProperty(const QString &type, const QString &name, const QString &defaultValue, Modifier modifier, bool persisted,
-                bool isPointer=false);
+    ASTProperty(const QString &type, const QString &name, const QString &defaultValue, Modifier modifier, bool persisted);
 
     QString type;
     QString name;
     QString defaultValue;
     Modifier modifier;
     bool persisted;
-    bool isPointer;
 };
 Q_DECLARE_TYPEINFO(ASTProperty, Q_MOVABLE_TYPE);
 
@@ -181,10 +177,10 @@ Q_DECLARE_TYPEINFO(ASTModelRole, Q_MOVABLE_TYPE);
 
 struct ASTModel
 {
-    ASTModel(int index = -1) : propertyIndex(index) {}
+    explicit ASTModel(const QString &name = QString());
 
     QVector<ASTModelRole> roles;
-    int propertyIndex;
+    QString name;
 };
 Q_DECLARE_TYPEINFO(ASTModel, Q_MOVABLE_TYPE);
 
@@ -194,7 +190,6 @@ struct ASTClass
     explicit ASTClass(const QString& name = QString());
 
     bool isValid() const;
-    bool hasPointerObjects() const;
 
     QString name;
     QVector<ASTProperty> properties;
@@ -202,8 +197,7 @@ struct ASTClass
     QVector<ASTFunction> slotsList;
     QVector<ASTEnum> enums;
     bool hasPersisted;
-    QVector<ASTModel> modelMetadata;
-    QVector<int> subClassPropertyIndices;
+    QVector<ASTModel> models;
 };
 Q_DECLARE_TYPEINFO(ASTClass, Q_MOVABLE_TYPE);
 
@@ -244,9 +238,9 @@ public:
     explicit RepParser(QIODevice &outputDevice);
     virtual ~RepParser() {}
 
-    bool parse() override { return QRegexParser<RepParser, $table>::parse(); }
+    bool parse() Q_DECL_OVERRIDE { return QRegexParser<RepParser, $table>::parse(); }
 
-    void reset() override;
+    void reset() Q_DECL_OVERRIDE;
     int nextToken();
     bool consumeRule(int ruleno);
 
@@ -322,12 +316,12 @@ static QByteArray normalizeType(const QByteArray &ba, bool fixScope = false)
 }
 
 ASTProperty::ASTProperty()
-    : modifier(ReadPush), persisted(false), isPointer(false)
+    : modifier(ReadPush), persisted(false)
 {
 }
 
-ASTProperty::ASTProperty(const QString &type, const QString &name, const QString &defaultValue, Modifier modifier, bool persisted, bool isPointer)
-    : type(type), name(name), defaultValue(defaultValue), modifier(modifier), persisted(persisted), isPointer(isPointer)
+ASTProperty::ASTProperty(const QString &type, const QString &name, const QString &defaultValue, Modifier modifier, bool persisted)
+    : type(type), name(name), defaultValue(defaultValue), modifier(modifier), persisted(persisted)
 {
 }
 
@@ -352,13 +346,13 @@ ASTFunction::ASTFunction(const QString &name, const QString &returnType)
 QString ASTFunction::paramsAsString(ParamsAsStringFormat format) const
 {
     QString str;
-    for (const ASTDeclaration &param : params) {
+    foreach (const ASTDeclaration &param, params) {
         QString paramStr = param.asString(format != Normalized);
         if (format == Normalized) {
             paramStr = QString::fromLatin1(::normalizeType(paramStr.toLatin1().constData()));
             str += paramStr + QLatin1Char(',');
         } else {
-            str += paramStr + QLatin1String(", ");
+            str += paramStr + QStringLiteral(", ");
         }
     }
 
@@ -370,14 +364,19 @@ QString ASTFunction::paramsAsString(ParamsAsStringFormat format) const
 QStringList ASTFunction::paramNames() const
 {
     QStringList names;
-    names.reserve(params.size());
-    for (const ASTDeclaration &param : params)
+    foreach (const ASTDeclaration &param, params) {
         names << param.name;
+    }
     return names;
 }
 
 ASTEnum::ASTEnum(const QString &name)
     : name(name), isSigned(false), max(0)
+{
+}
+
+ASTModel::ASTModel(const QString &name)
+    : name(name)
 {
 }
 
@@ -389,12 +388,6 @@ ASTClass::ASTClass(const QString &name)
 bool ASTClass::isValid() const
 {
     return !name.isEmpty();
-}
-
-bool ASTClass::hasPointerObjects() const
-{
-    int count = modelMetadata.size() + subClassPropertyIndices.size();
-    return count > 0;
 }
 
 RepParser::RepParser(QIODevice &outputDevice)
@@ -426,44 +419,30 @@ bool RepParser::parseModifierFlag(const QString &flag, ASTProperty::Modifier &mo
             modifier = ASTProperty::Constant;
             return true;
         } else {
-            setErrorString(QLatin1String("Invalid property declaration: combination not allowed (%1)").arg(flag));
+            setErrorString(QStringLiteral("Invalid property declaration: combination not allowed (%1)").arg(flag));
             return false;
         }
     }
     const QString &f = flags.at(0);
-    if (f == QLatin1String("READONLY"))
+    if (f == QStringLiteral("READONLY"))
         modifier = ASTProperty::ReadOnly;
-    else if (f == QLatin1String("CONSTANT"))
+    else if (f == QStringLiteral("CONSTANT"))
         modifier = ASTProperty::Constant;
-    else if (f == QLatin1String("READPUSH"))
+    else if (f == QStringLiteral("READPUSH"))
         modifier = ASTProperty::ReadPush;
-    else if (f == QLatin1String("READWRITE"))
+    else if (f == QStringLiteral("READWRITE"))
         modifier = ASTProperty::ReadWrite;
-    else if (f == QLatin1String("SOURCEONLYSETTER"))
-        modifier = ASTProperty::SourceOnlySetter;
     else {
-        setErrorString(QLatin1String("Invalid property declaration: flag %1 is unknown").arg(flag));
+        setErrorString(QStringLiteral("Invalid property declaration: flag %1 is unknown").arg(flag));
         return false;
     }
 
     return true;
 }
 
-QString stripArgs(const QString &arguments)
-{
-    // This repc parser searches for the longest possible matches, which can be multiline.
-    // This method "cleans" the string input, removing comments and converting to a single
-    // line for subsequent parsing.
-    QStringList lines = arguments.split(QRegExp(QStringLiteral("\r?\n")));
-    for (auto & line : lines)
-        line.replace(QRegExp(QStringLiteral("//.*")),QString());
-    return lines.join(QString());
-}
-
 bool RepParser::parseProperty(ASTClass &astClass, const QString &propertyDeclaration)
 {
-    QString input = stripArgs(propertyDeclaration).trimmed();
-    const QRegExp whitespace(QStringLiteral("\\s"));
+    QString input = propertyDeclaration.trimmed();
 
     QString propertyType;
     QString propertyName;
@@ -487,7 +466,7 @@ bool RepParser::parseProperty(ASTClass &astClass, const QString &propertyDeclara
             --templateDepth;
             if (templateDepth == 0)
                 inTemplate = false;
-        } else if (inputChar.isSpace()) {
+        } else if (inputChar == QLatin1Char(' ')) {
             if (!inTemplate) {
                 nameIndex = i;
                 break;
@@ -500,7 +479,7 @@ bool RepParser::parseProperty(ASTClass &astClass, const QString &propertyDeclara
     }
 
     if (nameIndex == -1) {
-        setErrorString(QLatin1String("PROP: Invalid property declaration: %1").arg(propertyDeclaration));
+        setErrorString(QStringLiteral("PROP: Invalid property declaration: %1").arg(propertyDeclaration));
         return false;
     }
 
@@ -512,26 +491,19 @@ bool RepParser::parseProperty(ASTClass &astClass, const QString &propertyDeclara
         propertyName = input.left(equalSignIndex).trimmed();
 
         input = input.mid(equalSignIndex + 1).trimmed();
-        const int lastQuoteIndex = input.lastIndexOf(QLatin1Char('"'));
-        if (lastQuoteIndex != -1) {
-            propertyDefaultValue = input.left(lastQuoteIndex + 1);
-            input = input.mid(lastQuoteIndex + 1);
-        }
-        const int whitespaceIndex = input.indexOf(whitespace);
+        const int whitespaceIndex = input.indexOf(QLatin1Char(' '));
         if (whitespaceIndex == -1) { // no flag given
-            if (propertyDefaultValue.isEmpty())
-                propertyDefaultValue = input;
+            propertyDefaultValue = input;
             propertyModifier = ASTProperty::ReadPush;
         } else { // flag given
-            if (propertyDefaultValue.isEmpty())
-                propertyDefaultValue = input.left(whitespaceIndex).trimmed();
+            propertyDefaultValue = input.left(whitespaceIndex).trimmed();
 
             const QString flag = input.mid(whitespaceIndex + 1).trimmed();
             if (!parseModifierFlag(flag, propertyModifier, persisted))
                 return false;
         }
     } else { // there is no default value
-        const int whitespaceIndex = input.indexOf(whitespace);
+        const int whitespaceIndex = input.indexOf(QLatin1Char(' '));
         if (whitespaceIndex == -1) { // no flag given
             propertyName = input;
             propertyModifier = ASTProperty::ReadPush;
@@ -570,7 +542,6 @@ AST RepParser::ast() const
 
 void RepParser::TypeParser::parseArguments(const QString &arguments)
 {
-    const QString strippedArgs = stripArgs(arguments);
     int templateDepth = 0;
     bool inTemplate = false;
     bool inVariable = false;
@@ -578,8 +549,8 @@ void RepParser::TypeParser::parseArguments(const QString &arguments)
     QString variableName;
     ASTDeclaration::VariableTypes variableType = ASTDeclaration::None;
     int variableNameIndex = 0;
-    for (int i = 0; i < strippedArgs.size(); ++i) {
-        const QChar inputChar(strippedArgs.at(i));
+    for (int i = 0; i < arguments.size(); ++i) {
+        const QChar inputChar(arguments.at(i));
         if (inputChar == QLatin1Char('<')) {
             propertyType += inputChar;
             inTemplate = true;
@@ -589,7 +560,7 @@ void RepParser::TypeParser::parseArguments(const QString &arguments)
             --templateDepth;
             if (templateDepth == 0)
                 inTemplate = false;
-        } else if (inputChar.isSpace()) {
+        } else if (inputChar == QLatin1Char(' ')) {
             if (inTemplate)
                 propertyType += inputChar;
             else if (!propertyType.isEmpty()) {
@@ -635,13 +606,14 @@ void RepParser::TypeParser::generateFunctionParameter(QString variableName, cons
 
 void RepParser::TypeParser::appendParams(ASTFunction &slot)
 {
-    for (const ASTDeclaration &arg : qAsConst(arguments))
+    Q_FOREACH (const ASTDeclaration &arg, arguments) {
         slot.params << arg;
+    }
 }
 
 void RepParser::TypeParser::appendPods(POD &pods)
 {
-    for (const ASTDeclaration &arg : qAsConst(arguments)) {
+    Q_FOREACH (const ASTDeclaration &arg, arguments) {
         PODAttribute attr;
         attr.type = arg.type;
         attr.name = arg.name;
@@ -670,7 +642,6 @@ Type: PreprocessorDirective | PreprocessorDirective Newlines;
 Type: Pod | Pod Newlines;
 Type: Class;
 Type: UseEnum | UseEnum Newlines;
-Type: Comments | Comments Newlines;
 Type: Enum;
 /.
     case $rule_number:
@@ -730,7 +701,7 @@ Class: ClassStart Start Stop;
 ./
 
 ClassTypes: ClassType | ClassType ClassTypes;
-ClassType: DecoratedProp | DecoratedSignal | DecoratedSlot | DecoratedModel | DecoratedClass | Comments;
+ClassType: DecoratedProp | DecoratedSignal | DecoratedSlot | DecoratedModel;
 ClassType: Enum;
 /.
     case $rule_number:
@@ -744,7 +715,6 @@ DecoratedSlot: Slot | Comments Slot | Slot Newlines | Comments Slot Newlines;
 DecoratedSignal: Signal | Comments Signal | Signal Newlines | Comments Signal Newlines;
 DecoratedProp: Prop | Comments Prop | Prop Newlines | Comments Prop Newlines;
 DecoratedModel: Model | Comments Model | Model Newlines | Comments Model Newlines;
-DecoratedClass: ChildRep | Comments ChildRep | ChildRep Newlines | Comments ChildRep Newlines;
 DecoratedEnumParam: EnumParam | Comments EnumParam | EnumParam Newlines | Comments EnumParam Newlines;
 
 Start: start | Comments start | start Newlines | Comments start Newlines;
@@ -779,7 +749,7 @@ EnumParam: enum_param;
         value = value.trimmed();
         if (value.isEmpty())
             param.value = ++m_astEnumValue;
-        else if (value.startsWith(QLatin1String("0x"), Qt::CaseInsensitive))
+        else if (value.startsWith(QStringLiteral("0x"), Qt::CaseInsensitive))
             param.value = m_astEnumValue = value.toInt(0,16);
         else
             param.value = m_astEnumValue = value.toInt();
@@ -829,13 +799,13 @@ Slot: slot;
         const QString argString = captured().value(QLatin1String("args")).trimmed();
 
         // compat code with old SLOT declaration: "SLOT(func(...))"
-        const bool hasWhitespace = returnTypeAndName.indexOf(u' ') != -1;
+        const bool hasWhitespace = returnTypeAndName.indexOf(QStringLiteral(" ")) != -1;
         if (!hasWhitespace) {
             qWarning() << "[repc] - Adding 'void' for unspecified return type on" << qPrintable(returnTypeAndName);
-            returnTypeAndName.prepend(QLatin1String("void "));
+            returnTypeAndName.prepend(QStringLiteral("void "));
         }
 
-        const int startOfFunctionName = returnTypeAndName.lastIndexOf(u' ') + 1;
+        const int startOfFunctionName = returnTypeAndName.lastIndexOf(QStringLiteral(" ")) + 1;
 
         ASTFunction slot;
         slot.returnType = returnTypeAndName.mid(0, startOfFunctionName-1);
@@ -853,30 +823,16 @@ Model: model;
 /.
     case $rule_number:
     {
-        ASTModel model(m_astClass.properties.size());
-        const QString name = captured().value(QLatin1String("name")).trimmed();
+        ASTModel model;
+        model.name = captured().value(QLatin1String("name")).trimmed();
         const QString argString = captured().value(QLatin1String("args")).trimmed();
 
         if (!parseRoles(model, argString))
             return false;
 
-        m_astClass.modelMetadata << model;
-        m_astClass.properties << ASTProperty(QStringLiteral("QAbstractItemModel"), name, QStringLiteral("nullptr"), ASTProperty::SourceOnlySetter, false, true);
+        m_astClass.models << model;
     }
     break;
-./
-
-ChildRep: childrep;
-/.
-case $rule_number:
-{
-    const QString name = captured().value(QLatin1String("name")).trimmed();
-    const QString type = captured().value(QLatin1String("type")).trimmed();
-
-    m_astClass.subClassPropertyIndices << m_astClass.properties.size();
-    m_astClass.properties << ASTProperty(type, name, QStringLiteral("nullptr"), ASTProperty::SourceOnlySetter, false, true);
-}
-break;
 ./
 
 ClassStart: class Newlines;
@@ -966,16 +922,6 @@ Type: Model;
     case $rule_number:
     {
         setErrorString(QStringLiteral("MODEL: Can only be used in class scope"));
-        return false;
-    }
-    break;
-./
-
-Type: ChildRep;
-/.
-    case $rule_number:
-    {
-        setErrorString(QStringLiteral("CLASS: Can only be used in class scope"));
         return false;
     }
     break;

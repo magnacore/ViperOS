@@ -1,5 +1,5 @@
 #!/bin/sh
-_CONDA_ROOT="/home/goldust/anaconda3"
+_CONDA_ROOT="/home/manuj/anaconda3"
 # Copyright (C) 2012 Anaconda, Inc
 # SPDX-License-Identifier: BSD-3-Clause
 \echo >&2 "DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'."

@@ -3,7 +3,7 @@
 ** Copyright (C) 2016 Klaralvdalens Datakonsult AB (KDAB)
 ** Contact: https://www.qt.io/licensing/
 **
-** This file is part of the QtOpenGLExtensions module of the Qt Toolkit.
+** This file is part of the QtGui module of the Qt Toolkit.
 **
 ** $QT_BEGIN_LICENSE:BSD$
 ** Commercial License Usage
@@ -66,15 +66,9 @@
 
 #include <QtGui/qopengl.h>
 
-// MemoryBarrier is a macro on some architectures on Windows
-#ifdef Q_OS_WIN
-#pragma push_macro("MemoryBarrier")
-#undef MemoryBarrier
-#endif
+class QOpenGLContext;
 
 QT_BEGIN_NAMESPACE
-
-class QOpenGLContext;
 
 #if 0
 // silence syncqt warnings
@@ -120,7 +114,7 @@ class QOpenGLExtension_3DFX_tbuffer : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_3DFX_tbuffer();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTbufferMask3DFX(GLuint mask);
 
@@ -148,7 +142,7 @@ class QOpenGLExtension_AMD_debug_output : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_AMD_debug_output();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLuint glGetDebugMessageLogAMD(GLuint count, GLsizei bufsize, GLenum *categories, GLuint *severities, GLuint *ids, GLsizei *lengths, GLchar *message);
     void glDebugMessageCallbackAMD(GLDEBUGPROCAMD callback, GLvoid *userParam);
@@ -197,7 +191,7 @@ class QOpenGLExtension_AMD_draw_buffers_blend : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_AMD_draw_buffers_blend();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glBlendEquationSeparateIndexedAMD(GLuint buf, GLenum modeRGB, GLenum modeAlpha);
     void glBlendEquationIndexedAMD(GLuint buf, GLenum mode);
@@ -244,7 +238,7 @@ class QOpenGLExtension_AMD_multi_draw_indirect : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_AMD_multi_draw_indirect();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMultiDrawElementsIndirectAMD(GLenum mode, GLenum type, const GLvoid *indirect, GLsizei primcount, GLsizei stride);
     void glMultiDrawArraysIndirectAMD(GLenum mode, const GLvoid *indirect, GLsizei primcount, GLsizei stride);
@@ -278,7 +272,7 @@ class QOpenGLExtension_AMD_name_gen_delete : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_AMD_name_gen_delete();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLboolean glIsNameAMD(GLenum identifier, GLuint name);
     void glDeleteNamesAMD(GLenum identifier, GLuint num, const GLuint *names);
@@ -327,7 +321,7 @@ class QOpenGLExtension_AMD_performance_monitor : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_AMD_performance_monitor();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetPerfMonitorCounterDataAMD(GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten);
     void glEndPerfMonitorAMD(GLuint monitor);
@@ -422,7 +416,7 @@ class QOpenGLExtension_AMD_sample_positions : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_AMD_sample_positions();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glSetMultisamplefvAMD(GLenum pname, GLuint index, const GLfloat *val);
 
@@ -447,7 +441,7 @@ class QOpenGLExtension_AMD_sparse_texture : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_AMD_sparse_texture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexStorageSparseAMD(GLenum target, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLsizei layers, GLbitfield flags);
 
@@ -472,7 +466,7 @@ class QOpenGLExtension_AMD_stencil_operation_extended : public QAbstractOpenGLEx
 public:
     QOpenGLExtension_AMD_stencil_operation_extended();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glStencilOpValueAMD(GLenum face, GLuint value);
 
@@ -498,7 +492,7 @@ class QOpenGLExtension_AMD_vertex_shader_tesselator : public QAbstractOpenGLExte
 public:
     QOpenGLExtension_AMD_vertex_shader_tesselator();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTessellationModeAMD(GLenum mode);
     void glTessellationFactorAMD(GLfloat factor);
@@ -534,7 +528,7 @@ class QOpenGLExtension_APPLE_element_array : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_APPLE_element_array();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMultiDrawRangeElementArrayAPPLE(GLenum mode, GLuint start, GLuint end, const GLint *first, const GLsizei *count, GLsizei primcount);
     void glMultiDrawElementArrayAPPLE(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount);
@@ -594,7 +588,7 @@ class QOpenGLExtension_APPLE_fence : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_APPLE_fence();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glFinishObjectAPPLE(GLenum object, GLint name);
     GLboolean glTestObjectAPPLE(GLenum object, GLuint name);
@@ -669,7 +663,7 @@ class QOpenGLExtension_APPLE_flush_buffer_range : public QAbstractOpenGLExtensio
 public:
     QOpenGLExtension_APPLE_flush_buffer_range();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glFlushMappedBufferRangeAPPLE(GLenum target, GLintptr offset, GLsizeiptr size);
     void glBufferParameteriAPPLE(GLenum target, GLenum pname, GLint param);
@@ -703,7 +697,7 @@ class QOpenGLExtension_APPLE_object_purgeable : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_APPLE_object_purgeable();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetObjectParameterivAPPLE(GLenum objectType, GLuint name, GLenum pname, GLint *params);
     GLenum glObjectUnpurgeableAPPLE(GLenum objectType, GLuint name, GLenum option);
@@ -743,7 +737,7 @@ class QOpenGLExtension_APPLE_texture_range : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_APPLE_texture_range();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetTexParameterPointervAPPLE(GLenum target, GLenum pname, GLvoid* *params);
     void glTextureRangeAPPLE(GLenum target, GLsizei length, const GLvoid *pointer);
@@ -778,7 +772,7 @@ class QOpenGLExtension_APPLE_vertex_array_object : public QAbstractOpenGLExtensi
 public:
     QOpenGLExtension_APPLE_vertex_array_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLboolean glIsVertexArrayAPPLE(GLuint array);
     void glGenVertexArraysAPPLE(GLsizei n, GLuint *arrays);
@@ -826,7 +820,7 @@ class QOpenGLExtension_APPLE_vertex_array_range : public QAbstractOpenGLExtensio
 public:
     QOpenGLExtension_APPLE_vertex_array_range();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexArrayParameteriAPPLE(GLenum pname, GLint param);
     void glFlushVertexArrayRangeAPPLE(GLsizei length, GLvoid *pointer);
@@ -871,7 +865,7 @@ class QOpenGLExtension_APPLE_vertex_program_evaluators : public QAbstractOpenGLE
 public:
     QOpenGLExtension_APPLE_vertex_program_evaluators();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMapVertexAttrib2fAPPLE(GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, const GLfloat *points);
     void glMapVertexAttrib2dAPPLE(GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, const GLdouble *points);
@@ -942,7 +936,7 @@ class QOpenGLExtension_ARB_ES2_compatibility : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_ES2_compatibility();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glClearDepthf(GLfloat dd);
     void glDepthRangef(GLfloat n, GLfloat f);
@@ -997,7 +991,7 @@ class QOpenGLExtension_ARB_base_instance : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_base_instance();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawElementsInstancedBaseVertexBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLint basevertex, GLuint baseinstance);
     void glDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLuint baseinstance);
@@ -1037,7 +1031,7 @@ class QOpenGLExtension_ARB_blend_func_extended : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_blend_func_extended();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLint glGetFragDataIndex(GLuint program, const GLchar *name);
     void glBindFragDataLocationIndexed(GLuint program, GLuint colorNumber, GLuint index, const GLchar *name);
@@ -1069,7 +1063,7 @@ class QOpenGLExtension_ARB_cl_event : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_cl_event();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLsync glCreateSyncFromCLeventARB(struct _cl_context * context, struct _cl_event * event, GLbitfield flags);
 
@@ -1095,7 +1089,7 @@ class QOpenGLExtension_ARB_clear_buffer_object : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_clear_buffer_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glClearBufferSubData(GLenum target, GLenum internalformat, GLintptr offset, GLsizeiptr size, GLenum format, GLenum type, const void *data);
     void glClearBufferData(GLenum target, GLenum internalformat, GLenum format, GLenum type, const void *data);
@@ -1127,7 +1121,7 @@ class QOpenGLExtension_ARB_color_buffer_float : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_color_buffer_float();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glClampColorARB(GLenum target, GLenum clamp);
 
@@ -1153,7 +1147,7 @@ class QOpenGLExtension_ARB_compute_shader : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_compute_shader();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDispatchComputeIndirect(GLintptr indirect);
     void glDispatchCompute(GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z);
@@ -1185,7 +1179,7 @@ class QOpenGLExtension_ARB_copy_buffer : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_copy_buffer();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size);
 
@@ -1210,7 +1204,7 @@ class QOpenGLExtension_ARB_copy_image : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_copy_image();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glCopyImageSubData(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth);
 
@@ -1238,7 +1232,7 @@ class QOpenGLExtension_ARB_debug_output : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_debug_output();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLuint glGetDebugMessageLogARB(GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog);
     void glDebugMessageCallbackARB(GLDEBUGPROCARB callback, const GLvoid *userParam);
@@ -1284,7 +1278,7 @@ class QOpenGLExtension_ARB_draw_buffers : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_draw_buffers();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawBuffersARB(GLsizei n, const GLenum *bufs);
 
@@ -1312,7 +1306,7 @@ class QOpenGLExtension_ARB_draw_buffers_blend : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_draw_buffers_blend();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glBlendFuncSeparateiARB(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
     void glBlendFunciARB(GLuint buf, GLenum src, GLenum dst);
@@ -1361,7 +1355,7 @@ class QOpenGLExtension_ARB_draw_elements_base_vertex : public QAbstractOpenGLExt
 public:
     QOpenGLExtension_ARB_draw_elements_base_vertex();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei drawcount, const GLint *basevertex);
     void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei instancecount, GLint basevertex);
@@ -1408,7 +1402,7 @@ class QOpenGLExtension_ARB_draw_indirect : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_draw_indirect();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawElementsIndirect(GLenum mode, GLenum type, const GLvoid *indirect);
     void glDrawArraysIndirect(GLenum mode, const GLvoid *indirect);
@@ -1441,7 +1435,7 @@ class QOpenGLExtension_ARB_draw_instanced : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_draw_instanced();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawElementsInstancedARB(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount);
     void glDrawArraysInstancedARB(GLenum mode, GLint first, GLsizei count, GLsizei primcount);
@@ -1474,7 +1468,7 @@ class QOpenGLExtension_ARB_framebuffer_no_attachments : public QAbstractOpenGLEx
 public:
     QOpenGLExtension_ARB_framebuffer_no_attachments();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetFramebufferParameteriv(GLenum target, GLenum pname, GLint *params);
     void glFramebufferParameteri(GLenum target, GLenum pname, GLint param);
@@ -1525,7 +1519,7 @@ class QOpenGLExtension_ARB_framebuffer_object : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_framebuffer_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glFramebufferTextureLayer(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer);
     void glRenderbufferStorageMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
@@ -1686,7 +1680,7 @@ class QOpenGLExtension_ARB_geometry_shader4 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_geometry_shader4();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glFramebufferTextureFaceARB(GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face);
     void glFramebufferTextureLayerARB(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer);
@@ -1734,7 +1728,7 @@ class QOpenGLExtension_ARB_get_program_binary : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_get_program_binary();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glProgramParameteri(GLuint program, GLenum pname, GLint value);
     void glProgramBinary(GLuint program, GLenum binaryFormat, const GLvoid *binary, GLsizei length);
@@ -1790,7 +1784,7 @@ class QOpenGLExtension_ARB_gpu_shader_fp64 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_gpu_shader_fp64();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetUniformdv(GLuint program, GLint location, GLdouble *params);
     void glUniformMatrix4x3dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
@@ -1934,7 +1928,7 @@ class QOpenGLExtension_ARB_instanced_arrays : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_instanced_arrays();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexAttribDivisorARB(GLuint index, GLuint divisor);
 
@@ -1959,7 +1953,7 @@ class QOpenGLExtension_ARB_internalformat_query : public QAbstractOpenGLExtensio
 public:
     QOpenGLExtension_ARB_internalformat_query();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetInternalformativ(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint *params);
 
@@ -1984,7 +1978,7 @@ class QOpenGLExtension_ARB_internalformat_query2 : public QAbstractOpenGLExtensi
 public:
     QOpenGLExtension_ARB_internalformat_query2();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetInternalformati64v(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint64 *params);
 
@@ -2014,7 +2008,7 @@ class QOpenGLExtension_ARB_invalidate_subdata : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_invalidate_subdata();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glInvalidateSubFramebuffer(GLenum target, GLsizei numAttachments, const GLenum *attachments, GLint x, GLint y, GLsizei width, GLsizei height);
     void glInvalidateFramebuffer(GLenum target, GLsizei numAttachments, const GLenum *attachments);
@@ -2075,7 +2069,7 @@ class QOpenGLExtension_ARB_map_buffer_range : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_map_buffer_range();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glFlushMappedBufferRange(GLenum target, GLintptr offset, GLsizeiptr length);
     GLvoid* glMapBufferRange(GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access);
@@ -2111,7 +2105,7 @@ class QOpenGLExtension_ARB_matrix_palette : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_matrix_palette();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMatrixIndexPointerARB(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
     void glMatrixIndexuivARB(GLint size, const GLuint *indices);
@@ -2165,7 +2159,7 @@ class QOpenGLExtension_ARB_multi_draw_indirect : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_multi_draw_indirect();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMultiDrawElementsIndirect(GLenum mode, GLenum type, const void *indirect, GLsizei drawcount, GLsizei stride);
     void glMultiDrawArraysIndirect(GLenum mode, const void *indirect, GLsizei drawcount, GLsizei stride);
@@ -2197,7 +2191,7 @@ class QOpenGLExtension_ARB_multisample : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_multisample();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glSampleCoverageARB(GLfloat value, GLboolean invert);
 
@@ -2255,7 +2249,7 @@ class QOpenGLExtension_ARB_multitexture : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_multitexture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMultiTexCoord4svARB(GLenum target, const GLshort *v);
     void glMultiTexCoord4sARB(GLenum target, GLshort s, GLshort t, GLshort r, GLshort q);
@@ -2518,7 +2512,7 @@ class QOpenGLExtension_ARB_occlusion_query : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_occlusion_query();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetQueryObjectuivARB(GLuint id, GLenum pname, GLuint *params);
     void glGetQueryObjectivARB(GLuint id, GLenum pname, GLint *params);
@@ -2593,7 +2587,7 @@ class QOpenGLExtension_ARB_point_parameters : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_point_parameters();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glPointParameterfvARB(GLenum pname, const GLfloat *params);
     void glPointParameterfARB(GLenum pname, GLfloat param);
@@ -2630,7 +2624,7 @@ class QOpenGLExtension_ARB_program_interface_query : public QAbstractOpenGLExten
 public:
     QOpenGLExtension_ARB_program_interface_query();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLint glGetProgramResourceLocationIndex(GLuint program, GLenum programInterface, const GLchar *name);
     GLint glGetProgramResourceLocation(GLuint program, GLenum programInterface, const GLchar *name);
@@ -2690,7 +2684,7 @@ class QOpenGLExtension_ARB_provoking_vertex : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_provoking_vertex();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glProvokingVertex(GLenum mode);
 
@@ -2734,7 +2728,7 @@ class QOpenGLExtension_ARB_robustness : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_robustness();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetnUniformdvARB(GLuint program, GLint location, GLsizei bufSize, GLdouble *params);
     void glGetnUniformuivARB(GLuint program, GLint location, GLsizei bufSize, GLuint *params);
@@ -2892,7 +2886,7 @@ class QOpenGLExtension_ARB_sample_shading : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_sample_shading();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMinSampleShadingARB(GLfloat value);
 
@@ -2930,7 +2924,7 @@ class QOpenGLExtension_ARB_sampler_objects : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_sampler_objects();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetSamplerParameterIuiv(GLuint sampler, GLenum pname, GLuint *params);
     void glGetSamplerParameterfv(GLuint sampler, GLenum pname, GLfloat *params);
@@ -3105,7 +3099,7 @@ class QOpenGLExtension_ARB_separate_shader_objects : public QAbstractOpenGLExten
 public:
     QOpenGLExtension_ARB_separate_shader_objects();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetProgramPipelineInfoLog(GLuint pipeline, GLsizei bufSize, GLsizei *length, GLchar *infoLog);
     void glValidateProgramPipeline(GLuint pipeline);
@@ -3543,7 +3537,7 @@ class QOpenGLExtension_ARB_shader_atomic_counters : public QAbstractOpenGLExtens
 public:
     QOpenGLExtension_ARB_shader_atomic_counters();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetActiveAtomicCounterBufferiv(GLuint program, GLuint bufferIndex, GLenum pname, GLint *params);
 
@@ -3569,7 +3563,7 @@ class QOpenGLExtension_ARB_shader_image_load_store : public QAbstractOpenGLExten
 public:
     QOpenGLExtension_ARB_shader_image_load_store();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMemoryBarrier(GLbitfield barriers);
     void glBindImageTexture(GLuint unit, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLenum format);
@@ -3639,7 +3633,7 @@ class QOpenGLExtension_ARB_shader_objects : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_shader_objects();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetShaderSourceARB(GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *source);
     void glGetUniformivARB(GLhandleARB programObj, GLint location, GLint *params);
@@ -3930,7 +3924,7 @@ class QOpenGLExtension_ARB_shader_storage_buffer_object : public QAbstractOpenGL
 public:
     QOpenGLExtension_ARB_shader_storage_buffer_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glShaderStorageBlockBinding(GLuint program, GLuint storageBlockIndex, GLuint storageBlockBinding);
 
@@ -3962,7 +3956,7 @@ class QOpenGLExtension_ARB_shader_subroutine : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_shader_subroutine();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetProgramStageiv(GLuint program, GLenum shadertype, GLenum pname, GLint *values);
     void glGetUniformSubroutineuiv(GLenum shadertype, GLint location, GLuint *params);
@@ -4041,7 +4035,7 @@ class QOpenGLExtension_ARB_shading_language_include : public QAbstractOpenGLExte
 public:
     QOpenGLExtension_ARB_shading_language_include();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetNamedStringivARB(GLint namelen, const GLchar *name, GLenum pname, GLint *params);
     void glGetNamedStringARB(GLint namelen, const GLchar *name, GLsizei bufSize, GLint *stringlen, GLchar *string);
@@ -4107,7 +4101,7 @@ class QOpenGLExtension_ARB_sync : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_sync();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetSynciv(GLsync sync, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values);
     void glGetInteger64v(GLenum pname, GLint64 *params);
@@ -4175,7 +4169,7 @@ class QOpenGLExtension_ARB_tessellation_shader : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_tessellation_shader();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glPatchParameterfv(GLenum pname, const GLfloat *values);
     void glPatchParameteri(GLenum pname, GLint value);
@@ -4207,7 +4201,7 @@ class QOpenGLExtension_ARB_texture_buffer_object : public QAbstractOpenGLExtensi
 public:
     QOpenGLExtension_ARB_texture_buffer_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexBufferARB(GLenum target, GLenum internalformat, GLuint buffer);
 
@@ -4232,7 +4226,7 @@ class QOpenGLExtension_ARB_texture_buffer_range : public QAbstractOpenGLExtensio
 public:
     QOpenGLExtension_ARB_texture_buffer_range();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexBufferRange(GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size);
 
@@ -4263,7 +4257,7 @@ class QOpenGLExtension_ARB_texture_compression : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_texture_compression();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetCompressedTexImageARB(GLenum target, GLint level, GLvoid *img);
     void glCompressedTexSubImage1DARB(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *data);
@@ -4333,7 +4327,7 @@ class QOpenGLExtension_ARB_texture_multisample : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_texture_multisample();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glSampleMaski(GLuint index, GLbitfield mask);
     void glGetMultisamplefv(GLenum pname, GLuint index, GLfloat *val);
@@ -4381,7 +4375,7 @@ class QOpenGLExtension_ARB_texture_storage : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_texture_storage();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexStorage3D(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth);
     void glTexStorage2D(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height);
@@ -4421,7 +4415,7 @@ class QOpenGLExtension_ARB_texture_storage_multisample : public QAbstractOpenGLE
 public:
     QOpenGLExtension_ARB_texture_storage_multisample();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexStorage3DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
     void glTexStorage2DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations);
@@ -4453,7 +4447,7 @@ class QOpenGLExtension_ARB_texture_view : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_texture_view();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTextureView(GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers);
 
@@ -4480,7 +4474,7 @@ class QOpenGLExtension_ARB_timer_query : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_timer_query();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetQueryObjectui64v(GLuint id, GLenum pname, GLuint64 *params);
     void glGetQueryObjecti64v(GLuint id, GLenum pname, GLint64 *params);
@@ -4525,7 +4519,7 @@ class QOpenGLExtension_ARB_transform_feedback2 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_transform_feedback2();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawTransformFeedback(GLenum mode, GLuint id);
     void glResumeTransformFeedback();
@@ -4595,7 +4589,7 @@ class QOpenGLExtension_ARB_transform_feedback3 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_transform_feedback3();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetQueryIndexediv(GLenum target, GLuint index, GLenum pname, GLint *params);
     void glEndQueryIndexed(GLenum target, GLuint index);
@@ -4642,7 +4636,7 @@ class QOpenGLExtension_ARB_transform_feedback_instanced : public QAbstractOpenGL
 public:
     QOpenGLExtension_ARB_transform_feedback_instanced();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawTransformFeedbackStreamInstanced(GLenum mode, GLuint id, GLuint stream, GLsizei instancecount);
     void glDrawTransformFeedbackInstanced(GLenum mode, GLuint id, GLsizei instancecount);
@@ -4677,7 +4671,7 @@ class QOpenGLExtension_ARB_transpose_matrix : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_transpose_matrix();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMultTransposeMatrixdARB(const GLdouble *m);
     void glMultTransposeMatrixfARB(const GLfloat *m);
@@ -4729,7 +4723,7 @@ class QOpenGLExtension_ARB_uniform_buffer_object : public QAbstractOpenGLExtensi
 public:
     QOpenGLExtension_ARB_uniform_buffer_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glUniformBlockBinding(GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding);
     void glGetActiveUniformBlockName(GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformBlockName);
@@ -4799,7 +4793,7 @@ class QOpenGLExtension_ARB_vertex_array_object : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_vertex_array_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLboolean glIsVertexArray(GLuint array);
     void glGenVertexArrays(GLsizei n, GLuint *arrays);
@@ -4854,7 +4848,7 @@ class QOpenGLExtension_ARB_vertex_attrib_64bit : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_vertex_attrib_64bit();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetVertexAttribLdv(GLuint index, GLenum pname, GLdouble *params);
     void glVertexAttribLPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
@@ -4947,7 +4941,7 @@ class QOpenGLExtension_ARB_vertex_attrib_binding : public QAbstractOpenGLExtensi
 public:
     QOpenGLExtension_ARB_vertex_attrib_binding();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexBindingDivisor(GLuint bindingindex, GLuint divisor);
     void glVertexAttribBinding(GLuint attribindex, GLuint bindingindex);
@@ -5016,7 +5010,7 @@ class QOpenGLExtension_ARB_vertex_blend : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_vertex_blend();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexBlendARB(GLint count);
     void glWeightPointerARB(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
@@ -5114,7 +5108,7 @@ class QOpenGLExtension_ARB_vertex_buffer_object : public QAbstractOpenGLExtensio
 public:
     QOpenGLExtension_ARB_vertex_buffer_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetBufferPointervARB(GLenum target, GLenum pname, GLvoid* *params);
     void glGetBufferParameterivARB(GLenum target, GLenum pname, GLint *params);
@@ -5270,7 +5264,7 @@ class QOpenGLExtension_ARB_vertex_program : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_vertex_program();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLboolean glIsProgramARB(GLuint program);
     void glGetVertexAttribPointervARB(GLuint index, GLenum pname, GLvoid* *pointer);
@@ -5724,7 +5718,7 @@ class QOpenGLExtension_ARB_vertex_shader : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_vertex_shader();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLint glGetAttribLocationARB(GLhandleARB programObj, const GLcharARB *name);
     void glGetActiveAttribARB(GLhandleARB programObj, GLuint index, GLsizei maxLength, GLsizei *length, GLint *size, GLenum *type, GLcharARB *name);
@@ -5800,7 +5794,7 @@ class QOpenGLExtension_ARB_vertex_type_2_10_10_10_rev : public QAbstractOpenGLEx
 public:
     QOpenGLExtension_ARB_vertex_type_2_10_10_10_rev();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexAttribP4uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint *value);
     void glVertexAttribP4ui(GLuint index, GLenum type, GLboolean normalized, GLuint value);
@@ -6093,7 +6087,7 @@ class QOpenGLExtension_ARB_viewport_array : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_viewport_array();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetDoublei_v(GLenum target, GLuint index, GLdouble *data);
     void glGetFloati_v(GLenum target, GLuint index, GLfloat *data);
@@ -6196,7 +6190,7 @@ class QOpenGLExtension_ARB_window_pos : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ARB_window_pos();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glWindowPos3svARB(const GLshort *v);
     void glWindowPos3sARB(GLshort x, GLshort y, GLshort z);
@@ -6326,7 +6320,7 @@ class QOpenGLExtension_ATI_draw_buffers : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ATI_draw_buffers();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawBuffersATI(GLsizei n, const GLenum *bufs);
 
@@ -6353,7 +6347,7 @@ class QOpenGLExtension_ATI_element_array : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ATI_element_array();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawRangeElementArrayATI(GLenum mode, GLuint start, GLuint end, GLsizei count);
     void glDrawElementArrayATI(GLenum mode, GLsizei count);
@@ -6395,7 +6389,7 @@ class QOpenGLExtension_ATI_envmap_bumpmap : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ATI_envmap_bumpmap();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetTexBumpParameterfvATI(GLenum pname, GLfloat *param);
     void glGetTexBumpParameterivATI(GLenum pname, GLint *param);
@@ -6454,7 +6448,7 @@ class QOpenGLExtension_ATI_fragment_shader : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ATI_fragment_shader();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glSetFragmentShaderConstantATI(GLuint dst, const GLfloat *value);
     void glAlphaFragmentOp3ATI(GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod, GLuint arg3, GLuint arg3Rep, GLuint arg3Mod);
@@ -6571,7 +6565,7 @@ class QOpenGLExtension_ATI_map_object_buffer : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ATI_map_object_buffer();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glUnmapObjectBufferATI(GLuint buffer);
     GLvoid* glMapObjectBufferATI(GLuint buffer);
@@ -6604,7 +6598,7 @@ class QOpenGLExtension_ATI_pn_triangles : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ATI_pn_triangles();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glPNTrianglesfATI(GLenum pname, GLfloat param);
     void glPNTrianglesiATI(GLenum pname, GLint param);
@@ -6637,7 +6631,7 @@ class QOpenGLExtension_ATI_separate_stencil : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ATI_separate_stencil();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glStencilFuncSeparateATI(GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask);
     void glStencilOpSeparateATI(GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass);
@@ -6680,7 +6674,7 @@ class QOpenGLExtension_ATI_vertex_array_object : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ATI_vertex_array_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetVariantArrayObjectivATI(GLuint id, GLenum pname, GLint *params);
     void glGetVariantArrayObjectfvATI(GLuint id, GLenum pname, GLfloat *params);
@@ -6784,7 +6778,7 @@ class QOpenGLExtension_ATI_vertex_attrib_array_object : public QAbstractOpenGLEx
 public:
     QOpenGLExtension_ATI_vertex_attrib_array_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetVertexAttribArrayObjectivATI(GLuint index, GLenum pname, GLint *params);
     void glGetVertexAttribArrayObjectfvATI(GLuint index, GLenum pname, GLfloat *params);
@@ -6867,7 +6861,7 @@ class QOpenGLExtension_ATI_vertex_streams : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ATI_vertex_streams();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexBlendEnvfATI(GLenum pname, GLfloat param);
     void glVertexBlendEnviATI(GLenum pname, GLint param);
@@ -7202,7 +7196,7 @@ class QOpenGLExtension_EXT_bindable_uniform : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_bindable_uniform();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLintptr glGetUniformOffsetEXT(GLuint program, GLint location);
     GLint glGetUniformBufferSizeEXT(GLuint program, GLint location);
@@ -7241,7 +7235,7 @@ class QOpenGLExtension_EXT_blend_color : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_blend_color();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glBlendColorEXT(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
 
@@ -7266,7 +7260,7 @@ class QOpenGLExtension_EXT_blend_equation_separate : public QAbstractOpenGLExten
 public:
     QOpenGLExtension_EXT_blend_equation_separate();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glBlendEquationSeparateEXT(GLenum modeRGB, GLenum modeAlpha);
 
@@ -7291,7 +7285,7 @@ class QOpenGLExtension_EXT_blend_func_separate : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_blend_func_separate();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glBlendFuncSeparateEXT(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
 
@@ -7316,7 +7310,7 @@ class QOpenGLExtension_EXT_blend_minmax : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_blend_minmax();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glBlendEquationEXT(GLenum mode);
 
@@ -7342,7 +7336,7 @@ class QOpenGLExtension_EXT_color_subtable : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_color_subtable();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glCopyColorSubTableEXT(GLenum target, GLsizei start, GLint x, GLint y, GLsizei width);
     void glColorSubTableEXT(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const GLvoid *data);
@@ -7375,7 +7369,7 @@ class QOpenGLExtension_EXT_compiled_vertex_array : public QAbstractOpenGLExtensi
 public:
     QOpenGLExtension_EXT_compiled_vertex_array();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glUnlockArraysEXT();
     void glLockArraysEXT(GLint first, GLsizei count);
@@ -7419,7 +7413,7 @@ class QOpenGLExtension_EXT_convolution : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_convolution();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glSeparableFilter2DEXT(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *row, const GLvoid *column);
     void glGetSeparableFilterEXT(GLenum target, GLenum format, GLenum type, GLvoid *row, GLvoid *column, GLvoid *span);
@@ -7549,7 +7543,7 @@ class QOpenGLExtension_EXT_coordinate_frame : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_coordinate_frame();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glBinormalPointerEXT(GLenum type, GLsizei stride, const GLvoid *pointer);
     void glTangentPointerEXT(GLenum type, GLsizei stride, const GLvoid *pointer);
@@ -7725,7 +7719,7 @@ class QOpenGLExtension_EXT_copy_texture : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_copy_texture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glCopyTexSubImage3DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
     void glCopyTexSubImage2DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height);
@@ -7779,7 +7773,7 @@ class QOpenGLExtension_EXT_cull_vertex : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_cull_vertex();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glCullParameterfvEXT(GLenum pname, GLfloat *params);
     void glCullParameterdvEXT(GLenum pname, GLdouble *params);
@@ -7811,7 +7805,7 @@ class QOpenGLExtension_EXT_depth_bounds_test : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_depth_bounds_test();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDepthBoundsEXT(GLclampd zmin, GLclampd zmax);
 
@@ -8057,7 +8051,7 @@ class QOpenGLExtension_EXT_direct_state_access : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_direct_state_access();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glProgramUniformMatrix4x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
     void glProgramUniformMatrix4x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
@@ -9634,7 +9628,7 @@ class QOpenGLExtension_EXT_draw_buffers2 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_draw_buffers2();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLboolean glIsEnabledIndexedEXT(GLenum target, GLuint index);
     void glDisableIndexedEXT(GLenum target, GLuint index);
@@ -9695,7 +9689,7 @@ class QOpenGLExtension_EXT_draw_instanced : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_draw_instanced();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawElementsInstancedEXT(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount);
     void glDrawArraysInstancedEXT(GLenum mode, GLint start, GLsizei count, GLsizei primcount);
@@ -9727,7 +9721,7 @@ class QOpenGLExtension_EXT_draw_range_elements : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_draw_range_elements();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawRangeElementsEXT(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices);
 
@@ -9756,7 +9750,7 @@ class QOpenGLExtension_EXT_fog_coord : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_fog_coord();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glFogCoordPointerEXT(GLenum type, GLsizei stride, const GLvoid *pointer);
     void glFogCoorddvEXT(const GLdouble *coord);
@@ -9809,7 +9803,7 @@ class QOpenGLExtension_EXT_framebuffer_blit : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_framebuffer_blit();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glBlitFramebufferEXT(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
 
@@ -9834,7 +9828,7 @@ class QOpenGLExtension_EXT_framebuffer_multisample : public QAbstractOpenGLExten
 public:
     QOpenGLExtension_EXT_framebuffer_multisample();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glRenderbufferStorageMultisampleEXT(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
 
@@ -9875,7 +9869,7 @@ class QOpenGLExtension_EXT_framebuffer_object : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_framebuffer_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGenerateMipmapEXT(GLenum target);
     void glGetFramebufferAttachmentParameterivEXT(GLenum target, GLenum attachment, GLenum pname, GLint *params);
@@ -10012,7 +10006,7 @@ class QOpenGLExtension_EXT_geometry_shader4 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_geometry_shader4();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glProgramParameteriEXT(GLuint program, GLenum pname, GLint value);
 
@@ -10038,7 +10032,7 @@ class QOpenGLExtension_EXT_gpu_program_parameters : public QAbstractOpenGLExtens
 public:
     QOpenGLExtension_EXT_gpu_program_parameters();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glProgramLocalParameters4fvEXT(GLenum target, GLuint index, GLsizei count, const GLfloat *params);
     void glProgramEnvParameters4fvEXT(GLenum target, GLuint index, GLsizei count, const GLfloat *params);
@@ -10080,7 +10074,7 @@ class QOpenGLExtension_EXT_gpu_shader4 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_gpu_shader4();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glUniform4uivEXT(GLint location, GLsizei count, const GLuint *value);
     void glUniform3uivEXT(GLint location, GLsizei count, const GLuint *value);
@@ -10184,7 +10178,7 @@ class QOpenGLExtension_EXT_histogram : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_histogram();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glResetMinmaxEXT(GLenum target);
     void glResetHistogramEXT(GLenum target);
@@ -10272,7 +10266,7 @@ class QOpenGLExtension_EXT_index_func : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_index_func();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glIndexFuncEXT(GLenum func, GLclampf ref);
 
@@ -10297,7 +10291,7 @@ class QOpenGLExtension_EXT_index_material : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_index_material();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glIndexMaterialEXT(GLenum face, GLenum mode);
 
@@ -10324,7 +10318,7 @@ class QOpenGLExtension_EXT_light_texture : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_light_texture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTextureMaterialEXT(GLenum face, GLenum mode);
     void glTextureLightEXT(GLenum pname);
@@ -10364,7 +10358,7 @@ class QOpenGLExtension_EXT_multi_draw_arrays : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_multi_draw_arrays();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMultiDrawElementsEXT(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount);
     void glMultiDrawArraysEXT(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount);
@@ -10397,7 +10391,7 @@ class QOpenGLExtension_EXT_multisample : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_multisample();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glSamplePatternEXT(GLenum pattern);
     void glSampleMaskEXT(GLclampf value, GLboolean invert);
@@ -10432,7 +10426,7 @@ class QOpenGLExtension_EXT_paletted_texture : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_paletted_texture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetColorTableParameterfvEXT(GLenum target, GLenum pname, GLfloat *params);
     void glGetColorTableParameterivEXT(GLenum target, GLenum pname, GLint *params);
@@ -10483,7 +10477,7 @@ class QOpenGLExtension_EXT_pixel_transform : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_pixel_transform();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetPixelTransformParameterfvEXT(GLenum target, GLenum pname, GLfloat *params);
     void glGetPixelTransformParameterivEXT(GLenum target, GLenum pname, GLint *params);
@@ -10544,7 +10538,7 @@ class QOpenGLExtension_EXT_point_parameters : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_point_parameters();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glPointParameterfvEXT(GLenum pname, const GLfloat *params);
     void glPointParameterfEXT(GLenum pname, GLfloat param);
@@ -10576,7 +10570,7 @@ class QOpenGLExtension_EXT_polygon_offset : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_polygon_offset();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glPolygonOffsetEXT(GLfloat factor, GLfloat bias);
 
@@ -10601,7 +10595,7 @@ class QOpenGLExtension_EXT_provoking_vertex : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_provoking_vertex();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glProvokingVertexEXT(GLenum mode);
 
@@ -10642,7 +10636,7 @@ class QOpenGLExtension_EXT_secondary_color : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_secondary_color();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glSecondaryColorPointerEXT(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
     void glSecondaryColor3usvEXT(const GLushort *v);
@@ -10781,7 +10775,7 @@ class QOpenGLExtension_EXT_separate_shader_objects : public QAbstractOpenGLExten
 public:
     QOpenGLExtension_EXT_separate_shader_objects();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLuint glCreateShaderProgramEXT(GLenum type, const GLchar *string);
     void glActiveProgramEXT(GLuint program);
@@ -10821,7 +10815,7 @@ class QOpenGLExtension_EXT_shader_image_load_store : public QAbstractOpenGLExten
 public:
     QOpenGLExtension_EXT_shader_image_load_store();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMemoryBarrierEXT(GLbitfield barriers);
     void glBindImageTextureEXT(GLuint index, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLint format);
@@ -10853,7 +10847,7 @@ class QOpenGLExtension_EXT_stencil_clear_tag : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_stencil_clear_tag();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glStencilClearTagEXT(GLsizei stencilTagBits, GLuint stencilClearTag);
 
@@ -10878,7 +10872,7 @@ class QOpenGLExtension_EXT_stencil_two_side : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_stencil_two_side();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glActiveStencilFaceEXT(GLenum face);
 
@@ -10904,7 +10898,7 @@ class QOpenGLExtension_EXT_subtexture : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_subtexture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexSubImage2DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels);
     void glTexSubImage1DEXT(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels);
@@ -10937,7 +10931,7 @@ class QOpenGLExtension_EXT_texture3D : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_texture3D();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexSubImage3DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels);
     void glTexImage3DEXT(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels);
@@ -10969,7 +10963,7 @@ class QOpenGLExtension_EXT_texture_buffer_object : public QAbstractOpenGLExtensi
 public:
     QOpenGLExtension_EXT_texture_buffer_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexBufferEXT(GLenum target, GLenum internalformat, GLuint buffer);
 
@@ -10999,7 +10993,7 @@ class QOpenGLExtension_EXT_texture_integer : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_texture_integer();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glClearColorIuiEXT(GLuint red, GLuint green, GLuint blue, GLuint alpha);
     void glClearColorIiEXT(GLint red, GLint green, GLint blue, GLint alpha);
@@ -11064,7 +11058,7 @@ class QOpenGLExtension_EXT_texture_object : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_texture_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glPrioritizeTexturesEXT(GLsizei n, const GLuint *textures, const GLclampf *priorities);
     GLboolean glIsTextureEXT(GLuint texture);
@@ -11124,7 +11118,7 @@ class QOpenGLExtension_EXT_texture_perturb_normal : public QAbstractOpenGLExtens
 public:
     QOpenGLExtension_EXT_texture_perturb_normal();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTextureNormalEXT(GLenum mode);
 
@@ -11150,7 +11144,7 @@ class QOpenGLExtension_EXT_timer_query : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_timer_query();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetQueryObjectui64vEXT(GLuint id, GLenum pname, GLuint64EXT *params);
     void glGetQueryObjecti64vEXT(GLuint id, GLenum pname, GLint64EXT *params);
@@ -11188,7 +11182,7 @@ class QOpenGLExtension_EXT_transform_feedback : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_transform_feedback();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetTransformFeedbackVaryingEXT(GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name);
     void glTransformFeedbackVaryingsEXT(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode);
@@ -11263,7 +11257,7 @@ class QOpenGLExtension_EXT_vertex_array : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_vertex_array();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexPointerEXT(GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer);
     void glTexCoordPointerEXT(GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer);
@@ -11354,7 +11348,7 @@ class QOpenGLExtension_EXT_vertex_attrib_64bit : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_vertex_attrib_64bit();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexArrayVertexAttribLOffsetEXT(GLuint vaobj, GLuint buffer, GLuint index, GLint size, GLenum type, GLsizei stride, GLintptr offset);
     void glGetVertexAttribLdvEXT(GLuint index, GLenum pname, GLdouble *params);
@@ -11490,7 +11484,7 @@ class QOpenGLExtension_EXT_vertex_shader : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_vertex_shader();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetLocalConstantFloatvEXT(GLuint id, GLenum value, GLfloat *data);
     void glGetLocalConstantIntegervEXT(GLuint id, GLenum value, GLint *data);
@@ -11804,7 +11798,7 @@ class QOpenGLExtension_EXT_vertex_weighting : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_vertex_weighting();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexWeightPointerEXT(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
     void glVertexWeightfvEXT(const GLfloat *weight);
@@ -11843,7 +11837,7 @@ class QOpenGLExtension_EXT_x11_sync_object : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_x11_sync_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLsync glImportSyncEXT(GLenum external_sync_type, GLintptr external_sync, GLbitfield flags);
 
@@ -11868,7 +11862,7 @@ class QOpenGLExtension_GREMEDY_frame_terminator : public QAbstractOpenGLExtensio
 public:
     QOpenGLExtension_GREMEDY_frame_terminator();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glFrameTerminatorGREMEDY();
 
@@ -11893,7 +11887,7 @@ class QOpenGLExtension_GREMEDY_string_marker : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_GREMEDY_string_marker();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glStringMarkerGREMEDY(GLsizei len, const GLvoid *string);
 
@@ -11923,7 +11917,7 @@ class QOpenGLExtension_HP_image_transform : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_HP_image_transform();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetImageTransformParameterfvHP(GLenum target, GLenum pname, GLfloat *params);
     void glGetImageTransformParameterivHP(GLenum target, GLenum pname, GLint *params);
@@ -11984,7 +11978,7 @@ class QOpenGLExtension_IBM_multimode_draw_arrays : public QAbstractOpenGLExtensi
 public:
     QOpenGLExtension_IBM_multimode_draw_arrays();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMultiModeDrawElementsIBM(const GLenum *mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, GLint modestride);
     void glMultiModeDrawArraysIBM(const GLenum *mode, const GLint *first, const GLsizei *count, GLsizei primcount, GLint modestride);
@@ -12023,7 +12017,7 @@ class QOpenGLExtension_IBM_vertex_array_lists : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_IBM_vertex_array_lists();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexPointerListIBM(GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride);
     void glTexCoordPointerListIBM(GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride);
@@ -12097,7 +12091,7 @@ class QOpenGLExtension_INGR_blend_func_separate : public QAbstractOpenGLExtensio
 public:
     QOpenGLExtension_INGR_blend_func_separate();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glBlendFuncSeparateINGR(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
 
@@ -12125,7 +12119,7 @@ class QOpenGLExtension_INTEL_parallel_arrays : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_INTEL_parallel_arrays();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexCoordPointervINTEL(GLint size, GLenum type, const GLvoid* *pointer);
     void glColorPointervINTEL(GLint size, GLenum type, const GLvoid* *pointer);
@@ -12180,7 +12174,7 @@ class QOpenGLExtension_KHR_debug : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_KHR_debug();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetObjectPtrLabel(const void *ptr, GLsizei bufSize, GLsizei *length, GLchar *label);
     void glObjectPtrLabel(const void *ptr, GLsizei length, const GLchar *label);
@@ -12268,7 +12262,7 @@ class QOpenGLExtension_MESA_resize_buffers : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_MESA_resize_buffers();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glResizeBuffersMESA();
 
@@ -12316,7 +12310,7 @@ class QOpenGLExtension_MESA_window_pos : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_MESA_window_pos();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glWindowPos4svMESA(const GLshort *v);
     void glWindowPos4sMESA(GLshort x, GLshort y, GLshort z, GLshort w);
@@ -12514,7 +12508,7 @@ class QOpenGLExtension_NV_bindless_texture : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_bindless_texture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLboolean glIsImageHandleResidentNV(GLuint64 handle);
     GLboolean glIsTextureHandleResidentNV(GLuint64 handle);
@@ -12624,7 +12618,7 @@ class QOpenGLExtension_NV_conditional_render : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_conditional_render();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glEndConditionalRenderNV();
     void glBeginConditionalRenderNV(GLuint id, GLenum mode);
@@ -12656,7 +12650,7 @@ class QOpenGLExtension_NV_copy_image : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_copy_image();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glCopyImageSubDataNV(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
 
@@ -12683,7 +12677,7 @@ class QOpenGLExtension_NV_depth_buffer_float : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_depth_buffer_float();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDepthBoundsdNV(GLdouble zmin, GLdouble zmax);
     void glClearDepthdNV(GLdouble depth);
@@ -12730,7 +12724,7 @@ class QOpenGLExtension_NV_evaluators : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_evaluators();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glEvalMapsNV(GLenum target, GLenum mode);
     void glGetMapAttribParameterfvNV(GLenum target, GLuint index, GLenum pname, GLfloat *params);
@@ -12813,7 +12807,7 @@ class QOpenGLExtension_NV_explicit_multisample : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_explicit_multisample();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexRenderbufferNV(GLenum target, GLuint renderbuffer);
     void glSampleMaskIndexedNV(GLuint index, GLbitfield mask);
@@ -12858,7 +12852,7 @@ class QOpenGLExtension_NV_fence : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_fence();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glSetFenceNV(GLuint fence, GLenum condition);
     void glFinishFenceNV(GLuint fence);
@@ -12930,7 +12924,7 @@ class QOpenGLExtension_NV_fragment_program : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_fragment_program();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetProgramNamedParameterdvNV(GLuint id, GLsizei len, const GLubyte *name, GLdouble *params);
     void glGetProgramNamedParameterfvNV(GLuint id, GLsizei len, const GLubyte *name, GLfloat *params);
@@ -12990,7 +12984,7 @@ class QOpenGLExtension_NV_framebuffer_multisample_coverage : public QAbstractOpe
 public:
     QOpenGLExtension_NV_framebuffer_multisample_coverage();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glRenderbufferStorageMultisampleCoverageNV(GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height);
 
@@ -13018,7 +13012,7 @@ class QOpenGLExtension_NV_geometry_program4 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_geometry_program4();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glFramebufferTextureFaceEXT(GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face);
     void glFramebufferTextureLayerEXT(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer);
@@ -13079,7 +13073,7 @@ class QOpenGLExtension_NV_gpu_program4 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_gpu_program4();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetProgramEnvParameterIuivNV(GLenum target, GLuint index, GLuint *params);
     void glGetProgramEnvParameterIivNV(GLenum target, GLuint index, GLint *params);
@@ -13210,7 +13204,7 @@ class QOpenGLExtension_NV_gpu_program5 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_gpu_program5();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetProgramSubroutineParameteruivNV(GLenum target, GLuint index, GLuint *param);
     void glProgramSubroutineParametersuivNV(GLenum target, GLsizei count, const GLuint *params);
@@ -13274,7 +13268,7 @@ class QOpenGLExtension_NV_gpu_shader5 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_gpu_shader5();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glProgramUniform4ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
     void glProgramUniform3ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
@@ -13568,7 +13562,7 @@ class QOpenGLExtension_NV_half_float : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_half_float();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexAttribs4hvNV(GLuint index, GLsizei n, const GLhalfNV *v);
     void glVertexAttribs3hvNV(GLuint index, GLsizei n, const GLhalfNV *v);
@@ -13914,7 +13908,7 @@ class QOpenGLExtension_NV_occlusion_query : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_occlusion_query();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetOcclusionQueryuivNV(GLuint id, GLenum pname, GLuint *params);
     void glGetOcclusionQueryivNV(GLuint id, GLenum pname, GLint *params);
@@ -13983,7 +13977,7 @@ class QOpenGLExtension_NV_parameter_buffer_object : public QAbstractOpenGLExtens
 public:
     QOpenGLExtension_NV_parameter_buffer_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glProgramBufferParametersIuivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLuint *params);
     void glProgramBufferParametersIivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLint *params);
@@ -14070,7 +14064,7 @@ class QOpenGLExtension_NV_path_rendering : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_path_rendering();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLboolean glPointAlongPathNV(GLuint path, GLsizei startSegment, GLsizei numSegments, GLfloat distance, GLfloat *x, GLfloat *y, GLfloat *tangentX, GLfloat *tangentY);
     GLfloat glGetPathLengthNV(GLuint path, GLsizei startSegment, GLsizei numSegments);
@@ -14432,7 +14426,7 @@ class QOpenGLExtension_NV_pixel_data_range : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_pixel_data_range();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glFlushPixelDataRangeNV(GLenum target);
     void glPixelDataRangeNV(GLenum target, GLsizei length, const GLvoid *pointer);
@@ -14465,7 +14459,7 @@ class QOpenGLExtension_NV_point_sprite : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_point_sprite();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glPointParameterivNV(GLenum pname, const GLint *params);
     void glPointParameteriNV(GLenum pname, GLint param);
@@ -14502,7 +14496,7 @@ class QOpenGLExtension_NV_present_video : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_present_video();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetVideoui64vNV(GLuint video_slot, GLenum pname, GLuint64EXT *params);
     void glGetVideoi64vNV(GLuint video_slot, GLenum pname, GLint64EXT *params);
@@ -14563,7 +14557,7 @@ class QOpenGLExtension_NV_primitive_restart : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_primitive_restart();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glPrimitiveRestartIndexNV(GLuint index);
     void glPrimitiveRestartNV();
@@ -14607,7 +14601,7 @@ class QOpenGLExtension_NV_register_combiners : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_register_combiners();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetFinalCombinerInputParameterivNV(GLenum variable, GLenum pname, GLint *params);
     void glGetFinalCombinerInputParameterfvNV(GLenum variable, GLenum pname, GLfloat *params);
@@ -14717,7 +14711,7 @@ class QOpenGLExtension_NV_register_combiners2 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_register_combiners2();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetCombinerStageParameterfvNV(GLenum stage, GLenum pname, GLfloat *params);
     void glCombinerStageParameterfvNV(GLenum stage, GLenum pname, const GLfloat *params);
@@ -14762,7 +14756,7 @@ class QOpenGLExtension_NV_shader_buffer_load : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_shader_buffer_load();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glProgramUniformui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
     void glProgramUniformui64NV(GLuint program, GLint location, GLuint64EXT value);
@@ -14878,7 +14872,7 @@ class QOpenGLExtension_NV_texture_barrier : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_texture_barrier();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTextureBarrierNV();
 
@@ -14908,7 +14902,7 @@ class QOpenGLExtension_NV_texture_multisample : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_texture_multisample();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTextureImage3DMultisampleCoverageNV(GLuint texture, GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations);
     void glTextureImage2DMultisampleCoverageNV(GLuint texture, GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations);
@@ -14979,7 +14973,7 @@ class QOpenGLExtension_NV_transform_feedback : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_transform_feedback();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTransformFeedbackStreamAttribsNV(GLsizei count, const GLint *attribs, GLsizei nbuffers, const GLint *bufstreams, GLenum bufferMode);
     void glGetTransformFeedbackVaryingNV(GLuint program, GLuint index, GLint *location);
@@ -15087,7 +15081,7 @@ class QOpenGLExtension_NV_transform_feedback2 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_transform_feedback2();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawTransformFeedbackNV(GLenum mode, GLuint id);
     void glResumeTransformFeedbackNV();
@@ -15163,7 +15157,7 @@ class QOpenGLExtension_NV_vdpau_interop : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_vdpau_interop();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVDPAUUnmapSurfacesNV(GLsizei numSurface, const GLvdpauSurfaceNV *surfaces);
     void glVDPAUMapSurfacesNV(GLsizei numSurfaces, const GLvdpauSurfaceNV *surfaces);
@@ -15252,7 +15246,7 @@ class QOpenGLExtension_NV_vertex_array_range : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_vertex_array_range();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexArrayRangeNV(GLsizei length, const GLvoid *pointer);
     void glFlushVertexArrayRangeNV();
@@ -15302,7 +15296,7 @@ class QOpenGLExtension_NV_vertex_attrib_integer_64bit : public QAbstractOpenGLEx
 public:
     QOpenGLExtension_NV_vertex_attrib_integer_64bit();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexAttribLFormatNV(GLuint index, GLint size, GLenum type, GLsizei stride);
     void glGetVertexAttribLui64vNV(GLuint index, GLenum pname, GLuint64EXT *params);
@@ -15464,7 +15458,7 @@ class QOpenGLExtension_NV_vertex_buffer_unified_memory : public QAbstractOpenGLE
 public:
     QOpenGLExtension_NV_vertex_buffer_unified_memory();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetIntegerui64i_vNV(GLenum value, GLuint index, GLuint64EXT *result);
     void glVertexAttribIFormatNV(GLuint index, GLint size, GLenum type, GLsizei stride);
@@ -15629,7 +15623,7 @@ class QOpenGLExtension_NV_vertex_program : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_vertex_program();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVertexAttribs4ubvNV(GLuint index, GLsizei count, const GLubyte *v);
     void glVertexAttribs4svNV(GLuint index, GLsizei count, const GLshort *v);
@@ -16117,7 +16111,7 @@ class QOpenGLExtension_NV_vertex_program4 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_vertex_program4();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetVertexAttribIuivEXT(GLuint index, GLenum pname, GLuint *params);
     void glGetVertexAttribIivEXT(GLuint index, GLenum pname, GLint *params);
@@ -16307,7 +16301,7 @@ class QOpenGLExtension_NV_video_capture : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_video_capture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glVideoCaptureStreamParameterdvNV(GLuint video_capture_slot, GLuint stream, GLenum pname, const GLdouble *params);
     void glVideoCaptureStreamParameterfvNV(GLuint video_capture_slot, GLuint stream, GLenum pname, const GLfloat *params);
@@ -16409,7 +16403,7 @@ class QOpenGLExtension_PGI_misc_hints : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_PGI_misc_hints();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glHintPGI(GLenum target, GLint mode);
 
@@ -16435,7 +16429,7 @@ class QOpenGLExtension_SGIS_detail_texture : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIS_detail_texture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetDetailTexFuncSGIS(GLenum target, GLfloat *points);
     void glDetailTexFuncSGIS(GLenum target, GLsizei n, const GLfloat *points);
@@ -16468,7 +16462,7 @@ class QOpenGLExtension_SGIS_fog_function : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIS_fog_function();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetFogFuncSGIS(GLfloat *points);
     void glFogFuncSGIS(GLsizei n, const GLfloat *points);
@@ -16501,7 +16495,7 @@ class QOpenGLExtension_SGIS_multisample : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIS_multisample();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glSamplePatternSGIS(GLenum pattern);
     void glSampleMaskSGIS(GLclampf value, GLboolean invert);
@@ -16538,7 +16532,7 @@ class QOpenGLExtension_SGIS_pixel_texture : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIS_pixel_texture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetPixelTexGenParameterfvSGIS(GLenum pname, GLfloat *params);
     void glGetPixelTexGenParameterivSGIS(GLenum pname, GLint *params);
@@ -16599,7 +16593,7 @@ class QOpenGLExtension_SGIS_point_parameters : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIS_point_parameters();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glPointParameterfvSGIS(GLenum pname, const GLfloat *params);
     void glPointParameterfSGIS(GLenum pname, GLfloat param);
@@ -16632,7 +16626,7 @@ class QOpenGLExtension_SGIS_sharpen_texture : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIS_sharpen_texture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetSharpenTexFuncSGIS(GLenum target, GLfloat *points);
     void glSharpenTexFuncSGIS(GLenum target, GLsizei n, const GLfloat *points);
@@ -16665,7 +16659,7 @@ class QOpenGLExtension_SGIS_texture4D : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIS_texture4D();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexSubImage4DSGIS(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint woffset, GLsizei width, GLsizei height, GLsizei depth, GLsizei size4d, GLenum format, GLenum type, const GLvoid *pixels);
     void glTexImage4DSGIS(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLsizei size4d, GLint border, GLenum format, GLenum type, const GLvoid *pixels);
@@ -16697,7 +16691,7 @@ class QOpenGLExtension_SGIS_texture_color_mask : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIS_texture_color_mask();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTextureColorMaskSGIS(GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha);
 
@@ -16723,7 +16717,7 @@ class QOpenGLExtension_SGIS_texture_filter4 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIS_texture_filter4();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexFilterFuncSGIS(GLenum target, GLenum filter, GLsizei n, const GLfloat *weights);
     void glGetTexFilterFuncSGIS(GLenum target, GLenum filter, GLfloat *weights);
@@ -16760,7 +16754,7 @@ class QOpenGLExtension_SGIX_async : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIX_async();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLboolean glIsAsyncMarkerSGIX(GLuint marker);
     void glDeleteAsyncMarkersSGIX(GLuint marker, GLsizei range);
@@ -16820,7 +16814,7 @@ class QOpenGLExtension_SGIX_flush_raster : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIX_flush_raster();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glFlushRasterSGIX();
 
@@ -16862,7 +16856,7 @@ class QOpenGLExtension_SGIX_fragment_lighting : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIX_fragment_lighting();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glLightEnviSGIX(GLenum pname, GLint param);
     void glGetFragmentMaterialivSGIX(GLenum face, GLenum pname, GLint *params);
@@ -17006,7 +17000,7 @@ class QOpenGLExtension_SGIX_framezoom : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIX_framezoom();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glFrameZoomSGIX(GLint factor);
 
@@ -17031,7 +17025,7 @@ class QOpenGLExtension_SGIX_igloo_interface : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIX_igloo_interface();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glIglooInterfaceSGIX(GLenum pname, const GLvoid *params);
 
@@ -17061,7 +17055,7 @@ class QOpenGLExtension_SGIX_instruments : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIX_instruments();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glStopInstrumentsSGIX(GLint marker);
     void glStartInstrumentsSGIX();
@@ -17126,7 +17120,7 @@ class QOpenGLExtension_SGIX_list_priority : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIX_list_priority();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glListParameterivSGIX(GLuint list, GLenum pname, const GLint *params);
     void glListParameteriSGIX(GLuint list, GLenum pname, GLint param);
@@ -17186,7 +17180,7 @@ class QOpenGLExtension_SGIX_pixel_texture : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIX_pixel_texture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glPixelTexGenSGIX(GLenum mode);
 
@@ -17214,7 +17208,7 @@ class QOpenGLExtension_SGIX_polynomial_ffd : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIX_polynomial_ffd();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glLoadIdentityDeformationMapSGIX(GLbitfield mask);
     void glDeformSGIX(GLbitfield mask);
@@ -17260,7 +17254,7 @@ class QOpenGLExtension_SGIX_reference_plane : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIX_reference_plane();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glReferencePlaneSGIX(const GLdouble *equation);
 
@@ -17288,7 +17282,7 @@ class QOpenGLExtension_SGIX_sprite : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIX_sprite();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glSpriteParameterivSGIX(GLenum pname, const GLint *params);
     void glSpriteParameteriSGIX(GLenum pname, GLint param);
@@ -17334,7 +17328,7 @@ class QOpenGLExtension_SGIX_tag_sample_buffer : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGIX_tag_sample_buffer();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTagSampleBufferSGIX();
 
@@ -17365,7 +17359,7 @@ class QOpenGLExtension_SGI_color_table : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SGI_color_table();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetColorTableParameterivSGI(GLenum target, GLenum pname, GLint *params);
     void glGetColorTableParameterfvSGI(GLenum target, GLenum pname, GLfloat *params);
@@ -17432,7 +17426,7 @@ class QOpenGLExtension_SUNX_constant_data : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SUNX_constant_data();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glFinishTextureSUNX();
 
@@ -17464,7 +17458,7 @@ class QOpenGLExtension_SUN_global_alpha : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SUN_global_alpha();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGlobalAlphaFactoruiSUN(GLuint factor);
     void glGlobalAlphaFactorusSUN(GLushort factor);
@@ -17538,7 +17532,7 @@ class QOpenGLExtension_SUN_mesh_array : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SUN_mesh_array();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawMeshArraysSUN(GLenum mode, GLint first, GLsizei count, GLsizei width);
 
@@ -17569,7 +17563,7 @@ class QOpenGLExtension_SUN_triangle_list : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SUN_triangle_list();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glReplacementCodePointerSUN(GLenum type, GLsizei stride, const GLvoid* *pointer);
     void glReplacementCodeubvSUN(const GLubyte *code);
@@ -17675,7 +17669,7 @@ class QOpenGLExtension_SUN_vertex : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_SUN_vertex();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(const GLuint *rc, const GLfloat *tc, const GLfloat *c, const GLfloat *n, const GLfloat *v);
     void glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(GLuint rc, GLfloat s, GLfloat t, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z);
@@ -17977,7 +17971,7 @@ class QOpenGLExtension_OES_EGL_image : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_OES_EGL_image();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glEGLImageTargetTexture2DOES(GLenum target, GLeglImageOES image);
     void glEGLImageTargetRenderbufferStorageOES(GLenum target, GLeglImageOES image);
@@ -18010,7 +18004,7 @@ class QOpenGLExtension_OES_get_program_binary : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_OES_get_program_binary();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetProgramBinaryOES(GLuint program, GLsizei bufSize, GLsizei *length, GLenum *binaryFormat, GLvoid *binary);
     void glProgramBinaryOES(GLuint program, GLenum binaryFormat, const GLvoid *binary, GLint length);
@@ -18044,7 +18038,7 @@ class QOpenGLExtension_OES_mapbuffer : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_OES_mapbuffer();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void* glMapBufferOES(GLenum target, GLenum access);
     GLboolean glUnmapBufferOES(GLenum target);
@@ -18088,7 +18082,7 @@ class QOpenGLExtension_OES_texture_3D : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_OES_texture_3D();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexImage3DOES(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid* pixels);
     void glTexSubImage3DOES(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid* pixels);
@@ -18151,7 +18145,7 @@ class QOpenGLExtension_OES_vertex_array_object : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_OES_vertex_array_object();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glBindVertexArrayOES(GLuint array);
     void glDeleteVertexArraysOES(GLsizei n, const GLuint *arrays);
@@ -18207,7 +18201,7 @@ class QOpenGLExtension_AMD_performance_monitor : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_AMD_performance_monitor();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetPerfMonitorGroupsAMD(GLint *numGroups, GLsizei groupsSize, GLuint *groups);
     void glGetPerfMonitorCountersAMD(GLuint group, GLint *numCounters, GLint *maxActiveCounters, GLsizei counterSize, GLuint *counters);
@@ -18302,7 +18296,7 @@ class QOpenGLExtension_ANGLE_framebuffer_blit : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ANGLE_framebuffer_blit();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glBlitFramebufferANGLE(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
 
@@ -18327,7 +18321,7 @@ class QOpenGLExtension_ANGLE_framebuffer_multisample : public QAbstractOpenGLExt
 public:
     QOpenGLExtension_ANGLE_framebuffer_multisample();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glRenderbufferStorageMultisampleANGLE(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
 
@@ -18354,7 +18348,7 @@ class QOpenGLExtension_ANGLE_instanced_arrays : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_ANGLE_instanced_arrays();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawArraysInstancedANGLE(GLenum mode, GLint first, GLsizei count, GLsizei primcount);
     void glDrawElementsInstancedANGLE(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount);
@@ -18393,7 +18387,7 @@ class QOpenGLExtension_ANGLE_translated_shader_source : public QAbstractOpenGLEx
 public:
     QOpenGLExtension_ANGLE_translated_shader_source();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetTranslatedShaderSourceANGLE(GLuint shader, GLsizei bufsize, GLsizei *length, GLchar *source);
 
@@ -18419,7 +18413,7 @@ class QOpenGLExtension_APPLE_framebuffer_multisample : public QAbstractOpenGLExt
 public:
     QOpenGLExtension_APPLE_framebuffer_multisample();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glRenderbufferStorageMultisampleAPPLE(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
     void glResolveMultisampleFramebufferAPPLE(void);
@@ -18452,7 +18446,7 @@ class QOpenGLExtension_EXT_debug_label : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_debug_label();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glLabelObjectEXT(GLenum type, GLuint object, GLsizei length, const GLchar *label);
     void glGetObjectLabelEXT(GLenum type, GLuint object, GLsizei bufSize, GLsizei *length, GLchar *label);
@@ -18486,7 +18480,7 @@ class QOpenGLExtension_EXT_debug_marker : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_debug_marker();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glInsertEventMarkerEXT(GLsizei length, const GLchar *marker);
     void glPushGroupMarkerEXT(GLsizei length, const GLchar *marker);
@@ -18525,7 +18519,7 @@ class QOpenGLExtension_EXT_discard_framebuffer : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_discard_framebuffer();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDiscardFramebufferEXT(GLenum target, GLsizei numAttachments, const GLenum *attachments);
 
@@ -18551,7 +18545,7 @@ class QOpenGLExtension_EXT_multisampled_render_to_texture : public QAbstractOpen
 public:
     QOpenGLExtension_EXT_multisampled_render_to_texture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glRenderbufferStorageMultisampleEXT(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
     void glFramebufferTexture2DMultisampleEXT(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
@@ -18584,7 +18578,7 @@ class QOpenGLExtension_EXT_multi_draw_arrays : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_multi_draw_arrays();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glMultiDrawArraysEXT(GLenum mode, GLint *first, GLsizei *count, GLsizei primcount);
     void glMultiDrawElementsEXT(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount);
@@ -18622,7 +18616,7 @@ class QOpenGLExtension_EXT_occlusion_query_boolean : public QAbstractOpenGLExten
 public:
     QOpenGLExtension_EXT_occlusion_query_boolean();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGenQueriesEXT(GLsizei n, GLuint *ids);
     void glDeleteQueriesEXT(GLsizei n, const GLuint *ids);
@@ -18692,7 +18686,7 @@ class QOpenGLExtension_EXT_robustness : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_robustness();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     GLenum glGetGraphicsResetStatusEXT(void);
     void glReadnPixelsEXT(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLsizei bufSize, void *data);
@@ -18767,7 +18761,7 @@ class QOpenGLExtension_EXT_separate_shader_objects : public QAbstractOpenGLExten
 public:
     QOpenGLExtension_EXT_separate_shader_objects();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glUseProgramStagesEXT(GLuint pipeline, GLbitfield stages, GLuint program);
     void glActiveShaderProgramEXT(GLuint pipeline, GLuint program);
@@ -19000,7 +18994,7 @@ class QOpenGLExtension_EXT_texture_storage : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_EXT_texture_storage();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glTexStorage1DEXT(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width);
     void glTexStorage2DEXT(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height);
@@ -19061,7 +19055,7 @@ class QOpenGLExtension_IMG_multisampled_render_to_texture : public QAbstractOpen
 public:
     QOpenGLExtension_IMG_multisampled_render_to_texture();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glRenderbufferStorageMultisampleIMG(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
     void glFramebufferTexture2DMultisampleIMG(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
@@ -19094,7 +19088,7 @@ class QOpenGLExtension_NV_coverage_sample : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_coverage_sample();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glCoverageMaskNV(GLboolean mask);
     void glCoverageOperationNV(GLenum operation);
@@ -19126,7 +19120,7 @@ class QOpenGLExtension_NV_draw_buffers : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_draw_buffers();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDrawBuffersNV(GLsizei n, const GLenum *bufs);
 
@@ -19157,7 +19151,7 @@ class QOpenGLExtension_NV_fence : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_fence();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glDeleteFencesNV(GLsizei n, const GLuint *fences);
     void glGenFencesNV(GLsizei n, GLuint *fences);
@@ -19224,7 +19218,7 @@ class QOpenGLExtension_NV_read_buffer : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_NV_read_buffer();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glReadBufferNV(GLenum mode);
 
@@ -19249,7 +19243,7 @@ class QOpenGLExtension_QCOM_alpha_test : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_QCOM_alpha_test();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glAlphaFuncQCOM(GLenum func, GLclampf ref);
 
@@ -19277,7 +19271,7 @@ class QOpenGLExtension_QCOM_driver_control : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_QCOM_driver_control();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glGetDriverControlsQCOM(GLint *num, GLsizei size, GLuint *driverControls);
     void glGetDriverControlStringQCOM(GLuint driverControl, GLsizei bufSize, GLsizei *length, GLchar *driverControlString);
@@ -19330,7 +19324,7 @@ class QOpenGLExtension_QCOM_extended_get : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_QCOM_extended_get();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glExtGetTexturesQCOM(GLuint *textures, GLint maxTextures, GLint *numTextures);
     void glExtGetBuffersQCOM(GLuint *buffers, GLint maxBuffers, GLint *numBuffers);
@@ -19407,7 +19401,7 @@ class QOpenGLExtension_QCOM_extended_get2 : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_QCOM_extended_get2();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glExtGetShadersQCOM(GLuint *shaders, GLint maxShaders, GLint *numShaders);
     void glExtGetProgramsQCOM(GLuint *programs, GLint maxPrograms, GLint *numPrograms);
@@ -19454,7 +19448,7 @@ class QOpenGLExtension_QCOM_tiled_rendering : public QAbstractOpenGLExtension
 public:
     QOpenGLExtension_QCOM_tiled_rendering();
 
-    bool initializeOpenGLFunctions() final;
+    bool initializeOpenGLFunctions() Q_DECL_FINAL;
 
     void glStartTilingQCOM(GLuint x, GLuint y, GLuint width, GLuint height, GLbitfield preserveMask);
     void glEndTilingQCOM(GLbitfield preserveMask);
@@ -19478,10 +19472,6 @@ inline void QOpenGLExtension_QCOM_tiled_rendering::glEndTilingQCOM(GLbitfield pr
 #endif
 
 QT_END_NAMESPACE
-
-#ifdef Q_OS_WIN
-#pragma pop_macro("MemoryBarrier")
-#endif
 
 #endif // QT_NO_OPENGL
 

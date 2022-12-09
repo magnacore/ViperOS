@@ -6,27 +6,27 @@
   "depends": [
     "python >=2.7"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/toml-0.10.2-pyhd3eb1b0_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/toml-0.10.2-pyhd3eb1b0_0",
   "features": "",
   "files": [
-    "lib/python3.9/site-packages/toml-0.10.2.dist-info/INSTALLER",
-    "lib/python3.9/site-packages/toml-0.10.2.dist-info/LICENSE",
-    "lib/python3.9/site-packages/toml-0.10.2.dist-info/METADATA",
-    "lib/python3.9/site-packages/toml-0.10.2.dist-info/RECORD",
-    "lib/python3.9/site-packages/toml-0.10.2.dist-info/REQUESTED",
-    "lib/python3.9/site-packages/toml-0.10.2.dist-info/WHEEL",
-    "lib/python3.9/site-packages/toml-0.10.2.dist-info/direct_url.json",
-    "lib/python3.9/site-packages/toml-0.10.2.dist-info/top_level.txt",
-    "lib/python3.9/site-packages/toml/__init__.py",
-    "lib/python3.9/site-packages/toml/decoder.py",
-    "lib/python3.9/site-packages/toml/encoder.py",
-    "lib/python3.9/site-packages/toml/ordered.py",
-    "lib/python3.9/site-packages/toml/tz.py",
-    "lib/python3.9/site-packages/toml/__pycache__/__init__.cpython-39.pyc",
-    "lib/python3.9/site-packages/toml/__pycache__/decoder.cpython-39.pyc",
-    "lib/python3.9/site-packages/toml/__pycache__/encoder.cpython-39.pyc",
-    "lib/python3.9/site-packages/toml/__pycache__/ordered.cpython-39.pyc",
-    "lib/python3.9/site-packages/toml/__pycache__/tz.cpython-39.pyc"
+    "lib/python3.8/site-packages/toml-0.10.2.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/toml-0.10.2.dist-info/LICENSE",
+    "lib/python3.8/site-packages/toml-0.10.2.dist-info/METADATA",
+    "lib/python3.8/site-packages/toml-0.10.2.dist-info/RECORD",
+    "lib/python3.8/site-packages/toml-0.10.2.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/toml-0.10.2.dist-info/WHEEL",
+    "lib/python3.8/site-packages/toml-0.10.2.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/toml-0.10.2.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/toml/__init__.py",
+    "lib/python3.8/site-packages/toml/decoder.py",
+    "lib/python3.8/site-packages/toml/encoder.py",
+    "lib/python3.8/site-packages/toml/ordered.py",
+    "lib/python3.8/site-packages/toml/tz.py",
+    "lib/python3.8/site-packages/toml/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/toml/__pycache__/decoder.cpython-38.pyc",
+    "lib/python3.8/site-packages/toml/__pycache__/encoder.cpython-38.pyc",
+    "lib/python3.8/site-packages/toml/__pycache__/ordered.cpython-38.pyc",
+    "lib/python3.8/site-packages/toml/__pycache__/tz.cpython-38.pyc"
   ],
   "fn": "toml-0.10.2-pyhd3eb1b0_0.conda",
   "legacy_bz2_md5": "c879bdd2c6714030b3b0f7aea4e84f0d",
@@ -34,34 +34,34 @@
   "license": "MIT",
   "license_family": "MIT",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/toml-0.10.2-pyhd3eb1b0_0",
+    "source": "/home/manuj/anaconda3/pkgs/toml-0.10.2-pyhd3eb1b0_0",
     "type": 1
   },
   "md5": "cda05f5f6d8509529d1a2743288d197a",
   "name": "toml",
   "noarch": "python",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/toml-0.10.2-pyhd3eb1b0_0.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/toml-0.10.2-pyhd3eb1b0_0.conda",
   "package_type": "noarch_python",
   "paths_data": {
     "paths": [
       {
-        "_path": "lib/python3.9/site-packages/toml/__pycache__/__init__.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/toml/__pycache__/__init__.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/toml/__pycache__/decoder.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/toml/__pycache__/decoder.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/toml/__pycache__/encoder.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/toml/__pycache__/encoder.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/toml/__pycache__/ordered.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/toml/__pycache__/ordered.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/toml/__pycache__/tz.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/toml/__pycache__/tz.cpython-38.pyc",
         "path_type": "pyc_file"
       }
     ],

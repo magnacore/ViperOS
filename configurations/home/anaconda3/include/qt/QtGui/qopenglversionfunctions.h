@@ -61,12 +61,6 @@
 #include <QtCore/qpair.h>
 #include <QtGui/qopengl.h>
 
-// MemoryBarrier is a macro on some architectures on Windows
-#ifdef Q_OS_WIN
-#pragma push_macro("MemoryBarrier")
-#undef MemoryBarrier
-#endif
-
 QT_BEGIN_NAMESPACE
 
 class QOpenGLContext;
@@ -103,7 +97,7 @@ struct QOpenGLVersionStatus
     OpenGLStatus status;
 };
 
-inline uint qHash(const QOpenGLVersionStatus &v, uint seed = 0) noexcept
+inline uint qHash(const QOpenGLVersionStatus &v, uint seed = 0) Q_DECL_NOTHROW
 {
     return qHash(static_cast<int>(v.status * 1000)
                + v.version.first * 100 + v.version.second * 10, seed);
@@ -199,7 +193,7 @@ class QAbstractOpenGLFunctionsPrivate
 {
 public:
     QAbstractOpenGLFunctionsPrivate()
-        : owningContext(nullptr),
+        : owningContext(Q_NULLPTR),
           initialized(false)
     {}
 
@@ -220,7 +214,6 @@ public:
 
     virtual bool initializeOpenGLFunctions();
 
-    Q_DISABLE_COPY(QAbstractOpenGLFunctions)
     Q_DECLARE_PRIVATE(QAbstractOpenGLFunctions)
 
 protected:
@@ -1902,10 +1895,6 @@ public:
 
 
 QT_END_NAMESPACE
-
-#ifdef Q_OS_WIN
-#pragma pop_macro("MemoryBarrier")
-#endif
 
 #endif // QT_NO_OPENGL
 

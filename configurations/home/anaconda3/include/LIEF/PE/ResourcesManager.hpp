@@ -1,6 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
- * Copyright 2017 - 2021 K. Nakagawa
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,18 +21,16 @@
 
 #include "LIEF/visibility.h"
 #include "LIEF/Object.hpp"
+#include "LIEF/BinaryStream/VectorStream.hpp"
 
 #include "LIEF/PE/type_traits.hpp"
+#include "LIEF/PE/ResourceDirectory.hpp"
 
 #include "LIEF/PE/resources/ResourceVersion.hpp"
 #include "LIEF/PE/resources/ResourceIcon.hpp"
 #include "LIEF/PE/resources/ResourceDialog.hpp"
-#include "LIEF/PE/resources/ResourceStringTable.hpp"
-#include "LIEF/PE/resources/ResourceAccelerator.hpp"
 
 namespace LIEF {
-class VectorStream;
-
 namespace PE {
 
 //! @brief The Resource Manager provides an enhanced API to
@@ -119,33 +116,6 @@ class LIEF_API ResourcesManager : public Object {
   //! @brief Return the list of the dialogs present in the resource
   std::vector<ResourceDialog> dialogs(void) const;
 
-  // String table
-  // =====
-
-  //! @brief ``true`` if resources contain @link LIEF::PE::ResourceStringTable @endlink
-  bool has_string_table(void) const;
-
-  //! @brief Return the list of the string table in the resource
-  std::vector<ResourceStringTable> string_table(void) const;
-
-  // HTML
-  // ====
-
-  //! @brief ``true`` if resources contain html
-  bool has_html(void) const;
-
-  //! @brief Return the list of the html resource
-  std::vector<std::string> html(void) const;
-
-  // Accelerator
-  // =====
-
-  //! @brief ``true`` if resources contain @link LIEF::PE::ResourceAccelerator @endlink
-  bool has_accelerator(void) const;
-
-  //! @brief Return the list of the accelerator in the resource
-  std::vector<ResourceAccelerator> accelerator(void) const;
-
   // Print
   // =====
 
@@ -173,7 +143,7 @@ class LIEF_API ResourcesManager : public Object {
   ResourceVarFileInfo get_var_file_info(const VectorStream& stream, uint16_t type, std::u16string key, size_t start, size_t struct_length) const;
 
 
-  ResourceNode *resources_{nullptr};
+  ResourceNode *resources_;
 };
 
 } // namespace PE

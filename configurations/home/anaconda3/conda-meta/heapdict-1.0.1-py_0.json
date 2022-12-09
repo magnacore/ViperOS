@@ -1,0 +1,52 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/heapdict-1.0.1-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/HeapDict-1.0.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/HeapDict-1.0.1.dist-info/LICENSE",
+    "lib/python3.8/site-packages/HeapDict-1.0.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/HeapDict-1.0.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/HeapDict-1.0.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/HeapDict-1.0.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/HeapDict-1.0.1.dist-info/zip-safe",
+    "lib/python3.8/site-packages/heapdict.py",
+    "lib/python3.8/site-packages/__pycache__/heapdict.cpython-38.pyc"
+  ],
+  "fn": "heapdict-1.0.1-py_0.conda",
+  "legacy_bz2_md5": "37d054691d631966fbe1aeb929b8dd8d",
+  "legacy_bz2_size": 9504,
+  "license": "BSD 3-Clause",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/heapdict-1.0.1-py_0",
+    "type": 1
+  },
+  "md5": "ad144fb43ed5d9cf77c55f373642fd0e",
+  "name": "heapdict",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/heapdict-1.0.1-py_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/__pycache__/heapdict.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "heapdict==1.0.1=py_0",
+  "sha256": "9ce9386395947049703e52dbd5a852a05113b12d8dfad2badb7871b2d819590e",
+  "size": 9499,
+  "subdir": "noarch",
+  "timestamp": 1569462768431,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/heapdict-1.0.1-py_0.conda",
+  "version": "1.0.1"
+}

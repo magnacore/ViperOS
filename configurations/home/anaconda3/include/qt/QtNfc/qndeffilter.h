@@ -41,7 +41,7 @@
 #define QNDEFFILTER_H
 
 #include <QtCore/QSharedDataPointer>
-#include <QtNfc/qtnfcglobal.h>
+#include <QtNfc/qnfcglobal.h>
 #include <QtNfc/QNdefRecord>
 
 QT_BEGIN_NAMESPACE

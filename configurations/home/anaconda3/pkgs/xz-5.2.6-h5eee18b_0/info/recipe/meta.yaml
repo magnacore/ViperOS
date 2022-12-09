@@ -1,0 +1,86 @@
+# This file created by conda-build 3.22.0
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Tue Sep 27 13:57:26 2022
+# ------------------------------------------------
+
+package:
+  name: xz
+  version: 5.2.6
+source:
+  patches:
+    - 0001-Add-vs2008-support-via-cmake.patch
+    - 0002-Add-gettimeofday-for-VS2008.patch
+  sha256: 13e3402e301b6018f6a71ef0e497f714c6d11e214ae82dab156b81c2a64acb25
+  url: https://downloads.sourceforge.net/project/lzmautils/xz-5.2.6.tar.bz2
+build:
+  number: '0'
+  run_exports:
+    - xz >=5.2.6,<6.0a0
+  string: h5eee18b_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - autoconf 2.69 pl526hebd4dad_5
+    - automake 1.16.2 pl526_0
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libtool 2.4.6 h295c915_1008
+    - m4 1.4.18 h4e445db_0
+    - make 4.2.1 h1bed415_1
+    - patch 2.7.6 h7b6447c_1001
+    - perl 5.26.2 h14c3975_0
+    - sysroot_linux-64 2.17 h57e8cba_10
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+  run:
+    - libgcc-ng >=11.2.0
+test:
+  commands:
+    - xz --help
+    - unxz --help
+    - lzma --help
+    - conda inspect linkages -p $PREFIX $PKG_NAME
+  requires:
+    - conda-build
+about:
+  description: 'XZ Utils is free general-purpose data compression software with a
+    high
+
+    compression ratio. XZ Utils were written for POSIX-like systems, but also
+
+    work on some not-so-POSIX systems.
+
+    '
+  dev_url: https://git.tukaani.org/
+  doc_source_url: https://github.com/xz-mirror/xz/blob/master/README
+  doc_url: https://tukaani.org/xz/
+  home: https://tukaani.org/xz/
+  license: LGPL-2.1-or-later and GPL-2.0-or-later
+  license_family: GPL2
+  license_file: COPYING
+  summary: Data compression software with high compression ratio
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: b74567af-38ec-4490-942f-c39a2ac14dd0
+  recipe-maintainers:
+    - mingwandroid
+    - msarahan
+    - nehaljwani
+    - ocefpaf
+    - scopatz
+  remote_url: git@github.com:AnacondaRecipes/xz-feedstock.git
+  sha: 04841998d76f717f7b4638de433446f6a9d003f5

@@ -31,10 +31,10 @@
 
 #include <QtDesigner/sdk_global.h>
 
-#include <QtCore/qshareddata.h>
-#include <QtCore/qmetatype.h>
-#include <QtWidgets/qwidget.h>
-#include <QtGui/qicon.h>
+#include <QtCore/QSharedDataPointer>
+#include <QtCore/QMetaType>
+#include <QtWidgets/QWidget>
+#include <QtGui/QIcon>
 
 QT_BEGIN_NAMESPACE
 
@@ -71,9 +71,7 @@ public:
         QSharedDataPointer<QDesignerWidgetBoxWidgetData> m_data;
     };
 
-#if QT_VERSION < QT_VERSION_CHECK(6,0,0)
-    using WidgetList = QList<Widget>;
-#endif
+    typedef QList<Widget> WidgetList;
 
     class Category {
     public:
@@ -98,9 +96,9 @@ public:
         Type m_type;
         QList<Widget> m_widget_list;
     };
-    using CategoryList = QList<Category>;
+    typedef QList<Category> CategoryList;
 
-    explicit QDesignerWidgetBoxInterface(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
+    explicit QDesignerWidgetBoxInterface(QWidget *parent = Q_NULLPTR, Qt::WindowFlags flags = Qt::WindowFlags());
     virtual ~QDesignerWidgetBoxInterface();
 
     virtual int categoryCount() const = 0;

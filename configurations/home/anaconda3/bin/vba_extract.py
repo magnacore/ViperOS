@@ -1,12 +1,11 @@
-#!/home/goldust/anaconda3/bin/python
+#!/home/manuj/anaconda3/bin/python
 
 ##############################################################################
 #
 # vba_extract - A simple utility to extract a vbaProject.bin binary from an
 # Excel 2007+ xlsm file for insertion into an XlsxWriter file.
 #
-# SPDX-License-Identifier: BSD-2-Clause
-# Copyright 2013-2022, John McNamara, jmcnamara@cpan.org
+# Copyright 2013-2021, John McNamara, jmcnamara@cpan.org
 #
 import sys
 from zipfile import ZipFile

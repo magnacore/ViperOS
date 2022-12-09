@@ -1,0 +1,58 @@
+{
+  "build": "py38hff7bd54_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/msgpack-python-1.0.2-py38hff7bd54_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/msgpack-1.0.2.dist-info/COPYING",
+    "lib/python3.8/site-packages/msgpack-1.0.2.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/msgpack-1.0.2.dist-info/METADATA",
+    "lib/python3.8/site-packages/msgpack-1.0.2.dist-info/RECORD",
+    "lib/python3.8/site-packages/msgpack-1.0.2.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/msgpack-1.0.2.dist-info/WHEEL",
+    "lib/python3.8/site-packages/msgpack-1.0.2.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/msgpack-1.0.2.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/msgpack/__init__.py",
+    "lib/python3.8/site-packages/msgpack/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/msgpack/__pycache__/_version.cpython-38.pyc",
+    "lib/python3.8/site-packages/msgpack/__pycache__/exceptions.cpython-38.pyc",
+    "lib/python3.8/site-packages/msgpack/__pycache__/ext.cpython-38.pyc",
+    "lib/python3.8/site-packages/msgpack/__pycache__/fallback.cpython-38.pyc",
+    "lib/python3.8/site-packages/msgpack/_cmsgpack.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/msgpack/_version.py",
+    "lib/python3.8/site-packages/msgpack/exceptions.py",
+    "lib/python3.8/site-packages/msgpack/ext.py",
+    "lib/python3.8/site-packages/msgpack/fallback.py"
+  ],
+  "fn": "msgpack-python-1.0.2-py38hff7bd54_1.conda",
+  "legacy_bz2_md5": "9ed763a494805755db569d62f9e941f4",
+  "legacy_bz2_size": 90090,
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/msgpack-python-1.0.2-py38hff7bd54_1",
+    "type": 1
+  },
+  "md5": "258bacbc29874305ea2593c4e046127a",
+  "name": "msgpack-python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/msgpack-python-1.0.2-py38hff7bd54_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "msgpack-python==1.0.2=py38hff7bd54_1",
+  "sha256": "679ae1b5e41dd595aae39913a03c90d1ecec8847edf68ef48cf74f9a9bef43f2",
+  "size": 85008,
+  "subdir": "linux-64",
+  "timestamp": 1612287200369,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/msgpack-python-1.0.2-py38hff7bd54_1.conda",
+  "version": "1.0.2"
+}

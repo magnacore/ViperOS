@@ -12,6 +12,9 @@
  * help@hdfgroup.org.                                                        *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
+// Class LinkCreatPropList represents the HDF5 file access property list and
+// inherits from DataType.
+
 #ifndef __H5LinkCreatPropList_H
 #define __H5LinkCreatPropList_H
 
@@ -19,15 +22,15 @@ namespace H5 {
 
 /*! \class LinkCreatPropList
     \brief Class LinkCreatPropList inherits from PropList and provides
-    wrappers for the HDF5 link creation property list.
+    wrappers for the HDF5 file access property list.
 */
 // Inheritance: PropList -> IdComponent
 class H5_DLLCPP LinkCreatPropList : public PropList {
    public:
-        ///\brief Default link creation property list.
+        ///\brief Default file access property list.
         static const LinkCreatPropList& DEFAULT;
 
-        // Creates a link creation property list.
+        // Creates a file access property list.
         LinkCreatPropList();
 
         ///\brief Returns this class name.
@@ -36,17 +39,9 @@ class H5_DLLCPP LinkCreatPropList : public PropList {
         // Copy constructor: same as the original LinkCreatPropList.
         LinkCreatPropList(const LinkCreatPropList& original);
 
-        // Creates a copy of an existing link creation property list
+        // Creates a copy of an existing file access property list
         // using the property list id.
         LinkCreatPropList (const hid_t plist_id);
-
-        // Specifies in property list whether to create missing
-        // intermediate groups
-        void setCreateIntermediateGroup(bool crt_intmd_group) const;
-
-        // Determines whether property is set to enable creating missing
-        // intermediate groups
-        bool getCreateIntermediateGroup() const;
 
         // Sets the character encoding of the string.
         void setCharEncoding(H5T_cset_t encoding) const;

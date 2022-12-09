@@ -66,8 +66,7 @@ public:
         UnknownType,
         RectangleType,
         CircleType,
-        PathType,
-        PolygonType
+        PathType
     };
 
     ShapeType type() const;

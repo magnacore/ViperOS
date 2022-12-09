@@ -37,7 +37,7 @@ typedef struct ProtocolHandler {
 } ProtocolHandler;
 
 /* The following data structure is used in the TkWmInfo to maintain a list of all of the
- * transient windows belonging to a given container.
+ * transient windows belonging to a given master.
  */
 
 typedef struct Transient {
@@ -46,7 +46,6 @@ typedef struct Transient {
     struct Transient *nextPtr;
 } Transient;
 
-#define WITHDRAWN_BY_CONTAINER 0x1
 #define WITHDRAWN_BY_MASTER 0x1
 
 /*
@@ -66,8 +65,8 @@ typedef struct TkWmInfo {
     Tk_Uid titleUid;		/* Title to display in window caption. If NULL,
 				 * use name of widget. */
     char *iconName;		/* Name to display in icon. */
-    Tk_Window container;		/* Container window for TRANSIENT_FOR property,
-				 * or None. */
+    Tk_Window master;		/* Master window for TRANSIENT_FOR property, or
+				 * None. */
     XWMHints hints;		/* Various pieces of information for window
 				 * manager. */
     char *leaderName;		/* Path name of leader of window group

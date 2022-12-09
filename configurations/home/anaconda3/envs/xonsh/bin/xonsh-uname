@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' /home/goldust/anaconda3/envs/xonsh/bin/python "$0" "$@"
+'''exec' /home/manuj/anaconda3/envs/xonsh/bin/python "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# Copyright (C) 2000-2021 by
+# Copyright (C) 2000-2020 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -14,7 +14,7 @@ export LC_ALL
 
 
 # if `pkg-config' is available, use values from `freetype2.pc'
-/usr/bin/pkg-config --atleast-pkgconfig-version 0.24 >/dev/null 2>&1
+ --atleast-pkgconfig-version 0.24 >/dev/null 2>&1
 if test $? -eq 0 ; then
   # note that option `--variable' is not affected by the
   # PKG_CONFIG_SYSROOT_DIR environment variable
@@ -23,29 +23,29 @@ if test $? -eq 0 ; then
     export PKG_CONFIG_SYSROOT_DIR
   fi
 
-  prefix=`/usr/bin/pkg-config --variable prefix freetype2`
-  exec_prefix=`/usr/bin/pkg-config --variable exec_prefix freetype2`
+  prefix=` --variable prefix freetype2`
+  exec_prefix=` --variable exec_prefix freetype2`
 
-  includedir=`/usr/bin/pkg-config --variable includedir freetype2`
-  libdir=`/usr/bin/pkg-config --variable libdir freetype2`
+  includedir=` --variable includedir freetype2`
+  libdir=` --variable libdir freetype2`
 
-  version=`/usr/bin/pkg-config --modversion freetype2`
+  version=` --modversion freetype2`
 
-  cflags=`/usr/bin/pkg-config --cflags freetype2`
-  dynamic_libs=`/usr/bin/pkg-config --libs freetype2`
-  static_libs=`/usr/bin/pkg-config --static --libs freetype2`
+  cflags=` --cflags freetype2`
+  dynamic_libs=` --libs freetype2`
+  static_libs=` --static --libs freetype2`
 else
-  prefix="/home/goldust/anaconda3"
-  exec_prefix="/home/goldust/anaconda3"
+  prefix="/home/manuj/anaconda3"
+  exec_prefix="/home/manuj/anaconda3"
 
-  includedir="/home/goldust/anaconda3/include"
-  libdir="/home/goldust/anaconda3/lib"
+  includedir="/home/manuj/anaconda3/include"
+  libdir="/home/manuj/anaconda3/lib"
 
-  version=24.0.18
+  version=23.4.17
 
   cflags="-I${SYSROOT}$includedir/freetype2"
   dynamic_libs="-lfreetype"
-  static_libs="-lfreetype -L/home/goldust/anaconda3/lib -lz -L/home/goldust/anaconda3/lib -lpng16 -lm -lz"
+  static_libs="-lfreetype -lz -L/home/manuj/anaconda3/lib -lpng16 -lm -lz -lm"
   if test "${SYSROOT}$libdir" != "/usr/lib"   &&
      test "${SYSROOT}$libdir" != "/usr/lib64" ; then
     libs_L="-L${SYSROOT}$libdir"

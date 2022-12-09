@@ -1,0 +1,66 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.4"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/more-itertools-8.7.0-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/more_itertools-8.7.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/more_itertools-8.7.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/more_itertools-8.7.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/more_itertools-8.7.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/more_itertools-8.7.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/more_itertools-8.7.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/more_itertools-8.7.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/more_itertools-8.7.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/more_itertools/__init__.py",
+    "lib/python3.8/site-packages/more_itertools/more.py",
+    "lib/python3.8/site-packages/more_itertools/recipes.py",
+    "lib/python3.8/site-packages/more_itertools/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/more_itertools/__pycache__/more.cpython-38.pyc",
+    "lib/python3.8/site-packages/more_itertools/__pycache__/recipes.cpython-38.pyc"
+  ],
+  "fn": "more-itertools-8.7.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "ba880eab3e7ca1a7fd32095308a64139",
+  "legacy_bz2_size": 40445,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/more-itertools-8.7.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "26c8405a83e12348dbb902dea075bae5",
+  "name": "more-itertools",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/more-itertools-8.7.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/more_itertools/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/more_itertools/__pycache__/more.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/more_itertools/__pycache__/recipes.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "more-itertools==8.7.0=pyhd3eb1b0_0",
+  "sha256": "26a0a933af9b0f1ad2c8c1e8484bf150112623e1ab3db59e3d8fd1ef94aeecbe",
+  "size": 42681,
+  "subdir": "noarch",
+  "timestamp": 1613676736955,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/more-itertools-8.7.0-pyhd3eb1b0_0.conda",
+  "version": "8.7.0"
+}

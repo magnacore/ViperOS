@@ -46,6 +46,7 @@
 #include <QtQml/qjsengine.h>
 #include <QtQml/qqml.h>
 #include <QtQml/qqmlerror.h>
+#include <QtQml/qqmldebug.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -96,8 +97,8 @@ class Q_QML_EXPORT QQmlEngine : public QJSEngine
     Q_PROPERTY(QString offlineStoragePath READ offlineStoragePath WRITE setOfflineStoragePath)
     Q_OBJECT
 public:
-    explicit QQmlEngine(QObject *p = nullptr);
-    ~QQmlEngine() override;
+    explicit QQmlEngine(QObject *p = Q_NULLPTR);
+    virtual ~QQmlEngine();
 
     QQmlContext *rootContext() const;
 
@@ -114,9 +115,7 @@ public:
 
     bool addNamedBundle(const QString &name, const QString &fileName);
 
-#if QT_CONFIG(library)
     bool importPlugin(const QString &filePath, const QString &uri, QList<QQmlError> *errors);
-#endif
 
 #if QT_CONFIG(qml_network)
     void setNetworkAccessManagerFactory(QQmlNetworkAccessManagerFactory *);
@@ -145,13 +144,6 @@ public:
     bool outputWarningsToStandardError() const;
     void setOutputWarningsToStandardError(bool);
 
-    template<typename T>
-    T singletonInstance(int qmlTypeId);
-
-public Q_SLOTS:
-    void retranslate();
-
-public:
     static QQmlContext *contextForObject(const QObject *);
     static void setContextForObject(QObject *, QQmlContext *);
 
@@ -171,14 +163,6 @@ private:
     Q_DISABLE_COPY(QQmlEngine)
     Q_DECLARE_PRIVATE(QQmlEngine)
 };
-
-template<>
-Q_QML_EXPORT QJSValue QQmlEngine::singletonInstance<QJSValue>(int qmlTypeId);
-
-template<typename T>
-T QQmlEngine::singletonInstance(int qmlTypeId) {
-    return qobject_cast<T>(singletonInstance<QJSValue>(qmlTypeId).toQObject());
-}
 
 QT_END_NAMESPACE
 

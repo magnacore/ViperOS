@@ -71,7 +71,7 @@ public:
         YCbCr_xvYCC601,
         YCbCr_xvYCC709,
         YCbCr_JPEG,
-#ifndef Q_QDOC
+#ifndef qdoc
         YCbCr_CustomMatrix
 #endif
     };
@@ -116,9 +116,6 @@ public:
 
     YCbCrColorSpace yCbCrColorSpace() const;
     void setYCbCrColorSpace(YCbCrColorSpace colorSpace);
-
-    bool isMirrored() const;
-    void setMirrored(bool mirrored);
 
     QSize sizeHint() const;
 

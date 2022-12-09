@@ -50,7 +50,7 @@ namespace Qt3DExtras {
 
 class QGoochMaterialPrivate;
 
-class Q_3DEXTRASSHARED_EXPORT QGoochMaterial : public Qt3DRender::QMaterial
+class QT3DEXTRASSHARED_EXPORT QGoochMaterial : public Qt3DRender::QMaterial
 {
     Q_OBJECT
     Q_PROPERTY(QColor diffuse READ diffuse WRITE setDiffuse NOTIFY diffuseChanged)

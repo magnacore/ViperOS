@@ -31,8 +31,8 @@
 
 #include <QtDesigner/sdk_global.h>
 
-#include <QtCore/qobject.h>
-#include <QtCore/qpointer.h>
+#include <QtCore/QObject>
+#include <QtCore/QPointer>
 
 QT_BEGIN_NAMESPACE
 
@@ -65,7 +65,7 @@ class QDESIGNER_SDK_EXPORT QDesignerFormEditorInterface : public QObject
 {
     Q_OBJECT
 public:
-    explicit QDesignerFormEditorInterface(QObject *parent = nullptr);
+    explicit QDesignerFormEditorInterface(QObject *parent = Q_NULLPTR);
     virtual ~QDesignerFormEditorInterface();
 
     QExtensionManager *extensionManager() const;

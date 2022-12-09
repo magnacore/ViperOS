@@ -60,7 +60,7 @@ class Q_WIDGETS_EXPORT QDialog : public QWidget
     Q_PROPERTY(bool modal READ isModal WRITE setModal)
 
 public:
-    explicit QDialog(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
+    explicit QDialog(QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = Qt::WindowFlags());
     ~QDialog();
 
     enum DialogCode { Rejected, Accepted };
@@ -69,12 +69,11 @@ public:
 
     void setVisible(bool visible) override;
 
-#if QT_DEPRECATED_SINCE(5, 13)
-    QT_DEPRECATED_X("Use show/hide on the affected widget instead") void setOrientation(Qt::Orientation orientation);
-    QT_DEPRECATED_X("Use show/hide on the affected widget instead") Qt::Orientation orientation() const;
-    QT_DEPRECATED_X("Use show/hide on the affected widget instead") void setExtension(QWidget* extension);
-    QT_DEPRECATED_X("Use show/hide on the affected widget instead") QWidget* extension() const;
-#endif
+    void setOrientation(Qt::Orientation orientation);
+    Qt::Orientation orientation() const;
+
+    void setExtension(QWidget* extension);
+    QWidget* extension() const;
 
     QSize sizeHint() const override;
     QSize minimumSizeHint() const override;
@@ -97,9 +96,7 @@ public Q_SLOTS:
     virtual void accept();
     virtual void reject();
 
-#if QT_DEPRECATED_SINCE(5, 13)
-    QT_DEPRECATED_X("Use show/hide on the affected widget instead") void showExtension(bool);
-#endif
+    void showExtension(bool);
 
 protected:
     QDialog(QDialogPrivate &, QWidget *parent, Qt::WindowFlags f = Qt::WindowFlags());

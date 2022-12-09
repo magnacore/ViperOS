@@ -38,7 +38,7 @@
 QT_CHARTS_BEGIN_NAMESPACE
 class QBarSetPrivate;
 
-class Q_CHARTS_EXPORT QBarSet : public QObject
+class QT_CHARTS_EXPORT QBarSet : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString label READ label WRITE setLabel NOTIFY labelChanged)
@@ -51,7 +51,7 @@ class Q_CHARTS_EXPORT QBarSet : public QObject
     Q_PROPERTY(QColor labelColor READ labelColor WRITE setLabelColor NOTIFY labelColorChanged)
 
 public:
-    explicit QBarSet(const QString label, QObject *parent = nullptr);
+    explicit QBarSet(const QString label, QObject *parent = Q_NULLPTR);
     virtual ~QBarSet();
 
     void setLabel(const QString label);

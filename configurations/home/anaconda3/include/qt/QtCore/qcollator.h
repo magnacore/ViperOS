@@ -57,9 +57,11 @@ public:
     QCollatorSortKey(const QCollatorSortKey &other);
     ~QCollatorSortKey();
     QCollatorSortKey &operator=(const QCollatorSortKey &other);
-    inline QCollatorSortKey &operator=(QCollatorSortKey &&other) noexcept
+#ifdef Q_COMPILER_RVALUE_REFS
+    inline QCollatorSortKey &operator=(QCollatorSortKey &&other) Q_DECL_NOTHROW
     { swap(other); return *this; }
-    void swap(QCollatorSortKey &other) noexcept
+#endif
+    void swap(QCollatorSortKey &other) Q_DECL_NOTHROW
     { d.swap(other.d); }
 
     int compare(const QCollatorSortKey &key) const;
@@ -81,17 +83,18 @@ inline bool operator<(const QCollatorSortKey &lhs, const QCollatorSortKey &rhs)
 class Q_CORE_EXPORT QCollator
 {
 public:
-    QCollator();
-    explicit QCollator(const QLocale &locale);
+    explicit QCollator(const QLocale &locale = QLocale());
     QCollator(const QCollator &);
     ~QCollator();
     QCollator &operator=(const QCollator &);
-    QCollator(QCollator &&other) noexcept
-        : d(other.d) { other.d = nullptr; }
-    QCollator &operator=(QCollator &&other) noexcept
+#ifdef Q_COMPILER_RVALUE_REFS
+    QCollator(QCollator &&other) Q_DECL_NOTHROW
+        : d(other.d) { other.d = Q_NULLPTR; }
+    QCollator &operator=(QCollator &&other) Q_DECL_NOTHROW
     { swap(other); return *this; }
+#endif
 
-    void swap(QCollator &other) noexcept
+    void swap(QCollator &other) Q_DECL_NOTHROW
     { qSwap(d, other.d); }
 
     void setLocale(const QLocale &locale);
@@ -106,17 +109,11 @@ public:
     void setIgnorePunctuation(bool on);
     bool ignorePunctuation() const;
 
-#if QT_STRINGVIEW_LEVEL < 2
     int compare(const QString &s1, const QString &s2) const;
     int compare(const QStringRef &s1, const QStringRef &s2) const;
     int compare(const QChar *s1, int len1, const QChar *s2, int len2) const;
 
     bool operator()(const QString &s1, const QString &s2) const
-    { return compare(s1, s2) < 0; }
-#endif
-    int compare(QStringView s1, QStringView s2) const;
-
-    bool operator()(QStringView s1, QStringView s2) const
     { return compare(s1, s2) < 0; }
 
     QCollatorSortKey sortKey(const QString &string) const;

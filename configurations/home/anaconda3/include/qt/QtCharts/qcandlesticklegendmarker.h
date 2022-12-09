@@ -37,7 +37,7 @@ QT_CHARTS_BEGIN_NAMESPACE
 
 class QCandlestickLegendMarkerPrivate;
 
-class Q_CHARTS_EXPORT QCandlestickLegendMarker : public QLegendMarker
+class QT_CHARTS_EXPORT QCandlestickLegendMarker : public QLegendMarker
 {
     Q_OBJECT
 

@@ -1,4 +1,4 @@
-QT.webenginewidgets.VERSION = 5.15.9
+QT.webenginewidgets.VERSION = 5.9.7
 QT.webenginewidgets.name = QtWebEngineWidgets
 QT.webenginewidgets.module = Qt5WebEngineWidgets
 QT.webenginewidgets.libs = $$QT_MODULE_LIB_BASE
@@ -6,7 +6,7 @@ QT.webenginewidgets.includes = $$QT_MODULE_INCLUDE_BASE $$QT_MODULE_INCLUDE_BASE
 QT.webenginewidgets.frameworks =
 QT.webenginewidgets.bins = $$QT_MODULE_BIN_BASE
 QT.webenginewidgets.depends = core gui webenginecore widgets network quick printsupport
-QT.webenginewidgets.run_depends = quick_private gui_private core_private widgets_private quickwidgets webenginecore_private
+QT.webenginewidgets.run_depends = quick_private gui_private core_private widgets_private quickwidgets
 QT.webenginewidgets.uses =
 QT.webenginewidgets.module_config = v2
 QT.webenginewidgets.DEFINES = QT_WEBENGINEWIDGETS_LIB

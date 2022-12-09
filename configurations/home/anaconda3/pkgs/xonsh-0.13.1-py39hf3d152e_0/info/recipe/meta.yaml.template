@@ -1,0 +1,66 @@
+{% set version = "0.13.1" %}
+
+package:
+  name: xonsh
+  version: {{ version }}
+
+source:
+  fn: xonsh-{{ version }}.tar.gz
+  url: https://github.com/xonsh/xonsh/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 34dc91a1e8228d21e70234f0a911405a8021f9b4f0249ee3e3ab5588e921e127
+
+build:
+  script: {{ PYTHON }} -m pip install . -vv  # [not win]
+  entry_points:
+    - xonsh = xonsh.main:main
+    - xonsh-cat = xonsh.xoreutils.cat:cat_main
+  number: 0
+  skip: true  # [py<38]
+
+requirements:
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+  host:
+    - python
+    - pip
+    - jupyter_client
+  run:
+    - python
+    - prompt_toolkit
+    - pygments >=2.2
+    - pyperclip
+    - setproctitle
+    - conda-suggest
+
+test:
+  requires:
+    - pytest
+  imports:
+    - xonsh
+  commands:
+    - USER=test xonsh -h  # [unix]
+    - xonsh -h  # [win]
+
+about:
+  home: http://xon.sh
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: license
+  summary: Python-powered, cross-platform, Unix-gazing shell
+  description: |
+    Xonsh is a Python-powered, cross-platform, Unix-gazing shell shell language
+    and command prompt. The language is a superset of Python 3.4+ with additional
+    shell primitives that you are used to from Bash and IPython. It works on all
+    major systems including Linux, Mac OSX, and Windows. Xonsh is meant for the
+    daily use of experts and novices alike.
+  doc_url: http://xon.sh
+  dev_url: https://github.com/xonsh/xonsh
+
+extra:
+  recipe-maintainers:
+    - scopatz
+    - ocefpaf
+    - melund
+    - gforsyth
+    - mitnk

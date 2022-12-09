@@ -31,7 +31,7 @@
 
 #include <QtDesigner/sdk_global.h>
 
-#include <QtWidgets/qwidget.h>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 

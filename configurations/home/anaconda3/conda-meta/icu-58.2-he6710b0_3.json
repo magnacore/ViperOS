@@ -7,7 +7,7 @@
     "libgcc-ng >=7.3.0",
     "libstdcxx-ng >=7.3.0"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/icu-58.2-he6710b0_3",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/icu-58.2-he6710b0_3",
   "features": "",
   "files": [
     "bin/derb",
@@ -247,12 +247,12 @@
   "legacy_bz2_size": 23805906,
   "license": "MIT",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/icu-58.2-he6710b0_3",
+    "source": "/home/manuj/anaconda3/pkgs/icu-58.2-he6710b0_3",
     "type": 1
   },
   "md5": "48cc14d5ad1a9bcd8dac17211a8deb8b",
   "name": "icu",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/icu-58.2-he6710b0_3.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/icu-58.2-he6710b0_3.conda",
   "paths_data": {
     "paths": [
       {
@@ -261,7 +261,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
         "sha256": "a87475af4c946937faad5b2a0936e9b134de77625c88c19bdbd6f3dcaad225b9",
-        "sha256_in_prefix": "d19ff1e3ee1945c6827dd0baf8012d65f5b72d2449d52e8d47a5cd75b308968b",
+        "sha256_in_prefix": "b72ebd800a32584918fcffc96490289ee6067089d67fc50db3230e60b6fcf2aa",
         "size_in_bytes": 22498
       },
       {
@@ -270,7 +270,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
         "sha256": "b636cc3d3409f7a76554a4958fbd52c040a529a738e4d817d2d8df36fc2b2592",
-        "sha256_in_prefix": "ba1c657df7f57efe91ec75f905357bdf205ec542626a19821f44d4ba5bf7d551",
+        "sha256_in_prefix": "a73b963c08b89ad76d5de1053050c1c717a44a222e72074b62c9a6da299fc0e3",
         "size_in_bytes": 10241
       },
       {
@@ -279,7 +279,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
         "sha256": "6d5a271eea9e3eef6fbe52ce753e51b9b06bbc9317decedd322122b3861b9609",
-        "sha256_in_prefix": "97fdeab6c5b387679360b445b0d2a68cbb0230c6bb3d75685c660337727e8026",
+        "sha256_in_prefix": "34a75c609c230aaa7d9c6b428944ca717d59b886bfcd3e5871eafd78a0ea8097",
         "size_in_bytes": 1966
       },
       {
@@ -288,7 +288,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
         "sha256": "730b824c5d1ab1de38fdfd9e36bc177d16bbc853df0d3d374cc652d82066f0a9",
-        "sha256_in_prefix": "7d8b6f4af5cf65e0e9c4ecb5e0dbcfeac2d173c75ff3ab3949325db247c7e41c",
+        "sha256_in_prefix": "85cdb9b10194412e22122e116bbbc6073901f52cb5c134aa28f6bc2aa4acda23",
         "size_in_bytes": 1267
       },
       {
@@ -297,7 +297,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
         "sha256": "2a7ece445cb03abdb0a400ff74b06a5ef9148d60f39034a6a1c883b414b6c46c",
-        "sha256_in_prefix": "93d2fe1b2441eec9aa74afac5eb118054ab2aced7ddd2c89e024dd211833c8b7",
+        "sha256_in_prefix": "a725e09368c72376db4f2aa0639162b6cb4b95bafff44aebff2abb3d3ba2a30f",
         "size_in_bytes": 1259
       },
       {
@@ -306,7 +306,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
         "sha256": "d02fa5dd53c3607d6257a3ef4845c82b52d98125cddb5f8b7c092280d31962d3",
-        "sha256_in_prefix": "2340f7ec6d79c4eac131ce56171522e132b2c086f0f4d896814432663bafd8d0",
+        "sha256_in_prefix": "92285b303a9f717b1e9d55600a8aca56bfdde2f4adbe5821d6c2b3edcfa71cd0",
         "size_in_bytes": 1291
       }
     ],

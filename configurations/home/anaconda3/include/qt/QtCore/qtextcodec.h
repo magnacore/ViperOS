@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** Copyright (C) 2018 The Qt Company Ltd.
+** Copyright (C) 2016 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
 ** This file is part of the QtCore module of the Qt Toolkit.
@@ -43,9 +43,10 @@
 #include <QtCore/qstring.h>
 #include <QtCore/qlist.h>
 
-QT_REQUIRE_CONFIG(textcodec);
-
 QT_BEGIN_NAMESPACE
+
+
+#ifndef QT_NO_TEXTCODEC
 
 class QTextCodec;
 class QIODevice;
@@ -78,17 +79,11 @@ public:
     static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec);
 
     bool canEncode(QChar) const;
-#if QT_STRINGVIEW_LEVEL < 2
     bool canEncode(const QString&) const;
-#endif
-    bool canEncode(QStringView) const;
 
     QString toUnicode(const QByteArray&) const;
     QString toUnicode(const char* chars) const;
-#if QT_STRINGVIEW_LEVEL < 2
     QByteArray fromUnicode(const QString& uc) const;
-#endif
-    QByteArray fromUnicode(QStringView uc) const;
     enum ConversionFlag {
         DefaultConversion,
         ConvertInvalidToNull = 0x80000000,
@@ -99,7 +94,7 @@ public:
 
     struct Q_CORE_EXPORT ConverterState {
         ConverterState(ConversionFlags f = DefaultConversion)
-            : flags(f), remainingChars(0), invalidChars(0), d(nullptr) { state_data[0] = state_data[1] = state_data[2] = 0; }
+            : flags(f), remainingChars(0), invalidChars(0), d(Q_NULLPTR) { state_data[0] = state_data[1] = state_data[2] = 0; }
         ~ConverterState();
         ConversionFlags flags;
         int remainingChars;
@@ -110,9 +105,9 @@ public:
         Q_DISABLE_COPY(ConverterState)
     };
 
-    QString toUnicode(const char *in, int length, ConverterState *state = nullptr) const
+    QString toUnicode(const char *in, int length, ConverterState *state = Q_NULLPTR) const
         { return convertToUnicode(in, length, state); }
-    QByteArray fromUnicode(const QChar *in, int length, ConverterState *state = nullptr) const
+    QByteArray fromUnicode(const QChar *in, int length, ConverterState *state = Q_NULLPTR) const
         { return convertFromUnicode(in, length, state); }
 
     QTextDecoder* makeDecoder(ConversionFlags flags = DefaultConversion) const;
@@ -138,12 +133,9 @@ class Q_CORE_EXPORT QTextEncoder {
     Q_DISABLE_COPY(QTextEncoder)
 public:
     explicit QTextEncoder(const QTextCodec *codec) : c(codec), state() {}
-    explicit QTextEncoder(const QTextCodec *codec, QTextCodec::ConversionFlags flags);
+    QTextEncoder(const QTextCodec *codec, QTextCodec::ConversionFlags flags);
     ~QTextEncoder();
-#if QT_STRINGVIEW_LEVEL < 2
     QByteArray fromUnicode(const QString& str);
-#endif
-    QByteArray fromUnicode(QStringView str);
     QByteArray fromUnicode(const QChar *uc, int len);
     bool hasFailure() const;
 private:
@@ -155,17 +147,18 @@ class Q_CORE_EXPORT QTextDecoder {
     Q_DISABLE_COPY(QTextDecoder)
 public:
     explicit QTextDecoder(const QTextCodec *codec) : c(codec), state() {}
-    explicit QTextDecoder(const QTextCodec *codec, QTextCodec::ConversionFlags flags);
+    QTextDecoder(const QTextCodec *codec, QTextCodec::ConversionFlags flags);
     ~QTextDecoder();
     QString toUnicode(const char* chars, int len);
     QString toUnicode(const QByteArray &ba);
     void toUnicode(QString *target, const char *chars, int len);
     bool hasFailure() const;
-    bool needsMoreData() const;
 private:
     const QTextCodec *c;
     QTextCodec::ConverterState state;
 };
+
+#endif // QT_NO_TEXTCODEC
 
 QT_END_NAMESPACE
 

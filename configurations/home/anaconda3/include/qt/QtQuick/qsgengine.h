@@ -54,7 +54,6 @@ class QSGRectangleNode;
 class QSGImageNode;
 class QSGNinePatchNode;
 
-#if QT_DEPRECATED_SINCE(5, 15)
 class Q_QUICK_EXPORT QSGEngine : public QObject
 {
     Q_OBJECT
@@ -67,12 +66,10 @@ public:
         TextureIsOpaque         = 0x0010
     };
     Q_DECLARE_FLAGS(CreateTextureOptions, CreateTextureOption)
-    Q_FLAG(CreateTextureOptions)
 
-    explicit QSGEngine(QObject *parent = nullptr);
-    ~QSGEngine() override;
+    explicit QSGEngine(QObject *parent = Q_NULLPTR);
+    ~QSGEngine();
 
-    QT_DEPRECATED_X("QSGEngine is going to be removed in Qt 6.0. Use QQuickRenderControl instead.")
     void initialize(QOpenGLContext *context);
     void invalidate();
 
@@ -84,7 +81,6 @@ public:
     QSGImageNode *createImageNode() const;
     QSGNinePatchNode *createNinePatchNode() const;
 };
-#endif
 
 QT_END_NAMESPACE
 

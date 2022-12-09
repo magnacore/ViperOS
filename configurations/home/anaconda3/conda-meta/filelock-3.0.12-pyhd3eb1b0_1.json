@@ -1,0 +1,52 @@
+{
+  "build": "pyhd3eb1b0_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/filelock-3.0.12-pyhd3eb1b0_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/filelock-3.0.12.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/filelock-3.0.12.dist-info/LICENSE",
+    "lib/python3.8/site-packages/filelock-3.0.12.dist-info/METADATA",
+    "lib/python3.8/site-packages/filelock-3.0.12.dist-info/RECORD",
+    "lib/python3.8/site-packages/filelock-3.0.12.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/filelock-3.0.12.dist-info/WHEEL",
+    "lib/python3.8/site-packages/filelock-3.0.12.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/filelock-3.0.12.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/filelock.py",
+    "lib/python3.8/site-packages/__pycache__/filelock.cpython-38.pyc"
+  ],
+  "fn": "filelock-3.0.12-pyhd3eb1b0_1.tar.bz2",
+  "license": "Public Domain",
+  "license_family": "Public-Domain",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/filelock-3.0.12-pyhd3eb1b0_1",
+    "type": 1
+  },
+  "md5": "7d0f57e8f5d965d31222fb6254e4bd31",
+  "name": "filelock",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/filelock-3.0.12-pyhd3eb1b0_1.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/__pycache__/filelock.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "filelock==3.0.12=pyhd3eb1b0_1",
+  "sha256": "cf8aff3a5d2acdc5594688d263db5fa634056a446c40266d9613a3388fa43dd2",
+  "size": 10014,
+  "subdir": "noarch",
+  "timestamp": 1610993982592,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/filelock-3.0.12-pyhd3eb1b0_1.tar.bz2",
+  "version": "3.0.12"
+}

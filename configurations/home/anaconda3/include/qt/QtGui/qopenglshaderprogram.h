@@ -50,6 +50,13 @@
 #include <QtGui/qvector4d.h>
 #include <QtGui/qmatrix4x4.h>
 
+#if defined(Q_CLANG_QDOC)
+#undef GLint
+typedef int GLint;
+#undef GLfloat
+typedef double GLfloat;
+#endif
+
 QT_BEGIN_NAMESPACE
 
 
@@ -72,8 +79,8 @@ public:
     };
     Q_DECLARE_FLAGS(ShaderType, ShaderTypeBit)
 
-    explicit QOpenGLShader(QOpenGLShader::ShaderType type, QObject *parent = nullptr);
-    ~QOpenGLShader();
+    explicit QOpenGLShader(QOpenGLShader::ShaderType type, QObject *parent = Q_NULLPTR);
+    virtual ~QOpenGLShader();
 
     QOpenGLShader::ShaderType shaderType() const;
 
@@ -89,7 +96,7 @@ public:
 
     GLuint shaderId() const;
 
-    static bool hasOpenGLShaders(ShaderType type, QOpenGLContext *context = nullptr);
+    static bool hasOpenGLShaders(ShaderType type, QOpenGLContext *context = Q_NULLPTR);
 
 private:
     friend class QOpenGLShaderProgram;
@@ -107,8 +114,8 @@ class Q_GUI_EXPORT QOpenGLShaderProgram : public QObject
 {
     Q_OBJECT
 public:
-    explicit QOpenGLShaderProgram(QObject *parent = nullptr);
-    ~QOpenGLShaderProgram();
+    explicit QOpenGLShaderProgram(QObject *parent = Q_NULLPTR);
+    virtual ~QOpenGLShaderProgram();
 
     bool addShader(QOpenGLShader *shader);
     void removeShader(QOpenGLShader *shader);
@@ -299,7 +306,7 @@ public:
     void setUniformValueArray(const char *name, const QMatrix4x3 *values, int count);
     void setUniformValueArray(const char *name, const QMatrix4x4 *values, int count);
 
-    static bool hasOpenGLShaderPrograms(QOpenGLContext *context = nullptr);
+    static bool hasOpenGLShaderPrograms(QOpenGLContext *context = Q_NULLPTR);
 
 private Q_SLOTS:
     void shaderDestroyed();

@@ -1,0 +1,29 @@
+{
+  "arch": "x86_64",
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [
+    "grpcio >=1.0.0,<2.0.0"
+  ],
+  "depends": [
+    "libprotobuf",
+    "protobuf >=3.15.0,<5.0.0",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "features": "",
+  "fn": "googleapis-common-protos-1.56.4-py39h06a4308_0.conda",
+  "legacy_bz2_md5": "490de98b7be1174d94f0c93171117a9d",
+  "license": "Apache-2.0",
+  "license_family": "APACHE",
+  "md5": "e35c9e845ff4208c45e177f9692299fe",
+  "name": "googleapis-common-protos",
+  "platform": "linux",
+  "sha256": "5338f16b76e671104dcb12659683fffbce81a4c56c68bd801638254452a559d7",
+  "size": 131823,
+  "subdir": "linux-64",
+  "timestamp": 1660256263647,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/googleapis-common-protos-1.56.4-py39h06a4308_0.conda",
+  "version": "1.56.4"
+}

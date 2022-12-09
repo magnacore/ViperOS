@@ -51,7 +51,7 @@ namespace Qt3DRender {
 
 class QLevelOfDetailBoundingSpherePrivate;
 
-class Q_3DRENDERSHARED_EXPORT QLevelOfDetailBoundingSphere
+class QT3DRENDERSHARED_EXPORT QLevelOfDetailBoundingSphere
 {
     Q_GADGET
     Q_PROPERTY(QVector3D center READ center CONSTANT)

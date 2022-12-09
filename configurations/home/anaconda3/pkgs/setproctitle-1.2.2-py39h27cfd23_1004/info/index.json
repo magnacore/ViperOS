@@ -1,0 +1,16 @@
+{
+  "arch": "x86_64",
+  "build": "py39h27cfd23_1004",
+  "build_number": 1004,
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "license": "BSD 3-clause",
+  "license_family": "BSD",
+  "name": "setproctitle",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1611517581520,
+  "version": "1.2.2"
+}

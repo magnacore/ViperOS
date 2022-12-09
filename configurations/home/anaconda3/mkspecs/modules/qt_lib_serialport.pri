@@ -1,4 +1,4 @@
-QT.serialport.VERSION = 5.15.2
+QT.serialport.VERSION = 5.9.7
 QT.serialport.name = QtSerialPort
 QT.serialport.module = Qt5SerialPort
 QT.serialport.libs = $$QT_MODULE_LIB_BASE

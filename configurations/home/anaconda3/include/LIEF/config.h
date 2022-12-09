@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 A. Guinet
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 A. Guinet
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
 // LIEF options
 #define LIEF_JSON_SUPPORT    1
 #define LIEF_LOGGING_SUPPORT 1
-#define LIEF_LOGGING_DEBUG   1
 #define LIEF_FROZEN_ENABLED  1
 
 #ifdef __cplusplus
@@ -47,9 +46,7 @@ static constexpr bool lief_art_support     = 1;
 
 static constexpr bool lief_json_support    = 1;
 static constexpr bool lief_logging_support = 1;
-static constexpr bool lief_logging_debug   = 1;
 static constexpr bool lief_frozen_enabled  = 1;
-
 
 #endif // __cplusplus
 

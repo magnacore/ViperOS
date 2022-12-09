@@ -1,4 +1,4 @@
-QT.testlib.VERSION = 5.15.2
+QT.testlib.VERSION = 5.9.7
 QT.testlib.name = QtTest
 QT.testlib.module = Qt5Test
 QT.testlib.libs = $$QT_MODULE_LIB_BASE
@@ -10,7 +10,7 @@ QT.testlib.uses =
 QT.testlib.module_config = v2
 QT.testlib.CONFIG = console testlib_defines
 QT.testlib.DEFINES = QT_TESTLIB_LIB
-QT.testlib.enabled_features = itemmodeltester valgrind
-QT.testlib.disabled_features = testlib_selfcover
+QT.testlib.enabled_features =
+QT.testlib.disabled_features =
 QT_CONFIG +=
 QT_MODULES += testlib

@@ -42,6 +42,7 @@
 
 #include <QtQuick/qquickwindow.h>
 #include <QtCore/qurl.h>
+#include <QtQml/qqmldebug.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -59,11 +60,10 @@ class Q_QUICK_EXPORT QQuickView : public QQuickWindow
     Q_PROPERTY(Status status READ status NOTIFY statusChanged)
     Q_PROPERTY(QUrl source READ source WRITE setSource DESIGNABLE true)
 public:
-    explicit QQuickView(QWindow *parent = nullptr);
+    explicit QQuickView(QWindow *parent = Q_NULLPTR);
     QQuickView(QQmlEngine* engine, QWindow *parent);
-    explicit QQuickView(const QUrl &source, QWindow *parent = nullptr);
-    QQuickView(const QUrl &source, QQuickRenderControl *renderControl);
-    ~QQuickView() override;
+    explicit QQuickView(const QUrl &source, QWindow *parent = Q_NULLPTR);
+    virtual ~QQuickView();
 
     QUrl source() const;
 
@@ -88,7 +88,6 @@ public:
 
 public Q_SLOTS:
     void setSource(const QUrl&);
-    void setInitialProperties(const QVariantMap &initialProperties);
     void setContent(const QUrl& url, QQmlComponent *component, QObject *item);
 
 Q_SIGNALS:

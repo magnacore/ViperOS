@@ -3,7 +3,7 @@
 ** Copyright (C) 2016 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
-** This file is part of the QtConcurrent module of the Qt Toolkit.
+** This file is part of the QtCore module of the Qt Toolkit.
 **
 ** $QT_BEGIN_LICENSE:LGPL$
 ** Commercial License Usage
@@ -42,7 +42,7 @@
 
 #include <QtConcurrent/qtconcurrent_global.h>
 
-#if !defined(QT_NO_CONCURRENT) ||defined(Q_CLANG_QDOC)
+#ifndef QT_NO_CONCURRENT
 
 #include <QtCore/qvector.h>
 
@@ -51,6 +51,7 @@
 QT_BEGIN_NAMESPACE
 
 
+#ifndef Q_QDOC
 
 namespace QtConcurrent {
 
@@ -135,7 +136,6 @@ public:
     MedianDouble()
         : currentMedian(), currentIndex(0), valid(false), dirty(true)
     {
-        std::fill_n(values, static_cast<int>(BufferSize), 0.0);
     }
 
     void reset()
@@ -195,6 +195,7 @@ private:
 
 } // namespace QtConcurrent
 
+#endif //Q_QDOC
 
 QT_END_NAMESPACE
 

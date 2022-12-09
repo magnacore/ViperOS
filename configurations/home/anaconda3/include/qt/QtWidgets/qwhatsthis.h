@@ -48,25 +48,21 @@ QT_REQUIRE_CONFIG(whatsthis);
 
 QT_BEGIN_NAMESPACE
 
-#if QT_CONFIG(action)
 class QAction;
-#endif // QT_CONFIG(action)
 
 class Q_WIDGETS_EXPORT QWhatsThis
 {
-    QWhatsThis() = delete;
+    QWhatsThis() Q_DECL_EQ_DELETE;
 
 public:
     static void enterWhatsThisMode();
     static bool inWhatsThisMode();
     static void leaveWhatsThisMode();
 
-    static void showText(const QPoint &pos, const QString &text, QWidget *w = nullptr);
+    static void showText(const QPoint &pos, const QString &text, QWidget *w = Q_NULLPTR);
     static void hideText();
 
-#if QT_CONFIG(action)
-    static QAction *createAction(QObject *parent = nullptr);
-#endif // QT_CONFIG(action)
+    static QAction *createAction(QObject *parent = Q_NULLPTR);
 
 };
 

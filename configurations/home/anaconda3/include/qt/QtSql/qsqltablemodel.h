@@ -44,8 +44,6 @@
 #include <QtSql/qsqldatabase.h>
 #include <QtSql/qsqlquerymodel.h>
 
-QT_REQUIRE_CONFIG(sqlmodel);
-
 QT_BEGIN_NAMESPACE
 
 
@@ -62,28 +60,25 @@ class Q_SQL_EXPORT QSqlTableModel: public QSqlQueryModel
 public:
     enum EditStrategy {OnFieldChange, OnRowChange, OnManualSubmit};
 
-    explicit QSqlTableModel(QObject *parent = nullptr, QSqlDatabase db = QSqlDatabase());
+    explicit QSqlTableModel(QObject *parent = Q_NULLPTR, QSqlDatabase db = QSqlDatabase());
     virtual ~QSqlTableModel();
 
     virtual void setTable(const QString &tableName);
     QString tableName() const;
 
-    Qt::ItemFlags flags(const QModelIndex &index) const override;
+    Qt::ItemFlags flags(const QModelIndex &index) const Q_DECL_OVERRIDE;
 
     QSqlRecord record() const;
     QSqlRecord record(int row) const;
-    QVariant data(const QModelIndex &idx, int role = Qt::DisplayRole) const override;
-    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-    bool clearItemData(const QModelIndex &index) override;
-#endif
+    QVariant data(const QModelIndex &idx, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) Q_DECL_OVERRIDE;
 
-    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
+    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
     bool isDirty() const;
     bool isDirty(const QModelIndex &index) const;
 
-    void clear() override;
+    void clear() Q_DECL_OVERRIDE;
 
     virtual void setEditStrategy(EditStrategy strategy);
     EditStrategy editStrategy() const;
@@ -92,17 +87,17 @@ public:
     QSqlDatabase database() const;
     int fieldIndex(const QString &fieldName) const;
 
-    void sort(int column, Qt::SortOrder order) override;
+    void sort(int column, Qt::SortOrder order) Q_DECL_OVERRIDE;
     virtual void setSort(int column, Qt::SortOrder order);
 
     QString filter() const;
     virtual void setFilter(const QString &filter);
 
-    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
 
-    bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex()) override;
-    bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
-    bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
+    bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex()) Q_DECL_OVERRIDE;
+    bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) Q_DECL_OVERRIDE;
+    bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex()) Q_DECL_OVERRIDE;
 
     bool insertRecord(int row, const QSqlRecord &record);
     bool setRecord(int row, const QSqlRecord &record);
@@ -113,8 +108,8 @@ public Q_SLOTS:
     virtual bool select();
     virtual bool selectRow(int row);
 
-    bool submit() override;
-    void revert() override;
+    bool submit() Q_DECL_OVERRIDE;
+    void revert() Q_DECL_OVERRIDE;
 
     bool submitAll();
     void revertAll();
@@ -127,7 +122,7 @@ Q_SIGNALS:
     void beforeDelete(int row);
 
 protected:
-    QSqlTableModel(QSqlTableModelPrivate &dd, QObject *parent = nullptr, QSqlDatabase db = QSqlDatabase());
+    QSqlTableModel(QSqlTableModelPrivate &dd, QObject *parent = Q_NULLPTR, QSqlDatabase db = QSqlDatabase());
 
     virtual bool updateRowInTable(int row, const QSqlRecord &values);
     virtual bool insertRowIntoTable(const QSqlRecord &values);
@@ -137,7 +132,7 @@ protected:
 
     void setPrimaryKey(const QSqlIndex &key);
     void setQuery(const QSqlQuery &query);
-    QModelIndex indexInQuery(const QModelIndex &item) const override;
+    QModelIndex indexInQuery(const QModelIndex &item) const Q_DECL_OVERRIDE;
     QSqlRecord primaryValues(int row) const;
 };
 

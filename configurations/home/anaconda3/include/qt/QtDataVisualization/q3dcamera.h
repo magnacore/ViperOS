@@ -79,7 +79,7 @@ public:
         CameraPresetDirectlyBelow
     };
 
-    explicit Q3DCamera(QObject *parent = nullptr);
+    explicit Q3DCamera(QObject *parent = Q_NULLPTR);
     virtual ~Q3DCamera();
 
     float xRotation() const;

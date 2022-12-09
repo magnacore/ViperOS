@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,8 @@
 #include "LIEF/Object.hpp"
 #include "LIEF/visibility.h"
 
+#include "LIEF/ELF/Note.hpp"
+
 namespace LIEF {
 namespace ELF {
 
@@ -37,7 +39,6 @@ class LIEF_API NoteDetails : public Object {
   friend class Binary;
 
   public:
-  using description_t = std::vector<uint8_t>;
   NoteDetails();
 
   protected:
@@ -48,7 +49,7 @@ class LIEF_API NoteDetails : public Object {
 
   virtual NoteDetails* clone(void) const;
 
-  const description_t& description(void) const;
+  const Note::description_t& description(void) const;
 
   virtual void dump(std::ostream& os) const;
 
@@ -63,13 +64,13 @@ class LIEF_API NoteDetails : public Object {
   virtual void parse(void);
   virtual void build(void);
 
-  description_t& description(void);
+  Note::description_t& description(void);
   Binary* binary(void);
   const Binary* binary(void) const;
 
   private:
-  Note* note_{nullptr};
-  description_t empty_;
+  Note*                note_;
+  Note::description_t  empty_;
 };
 
 

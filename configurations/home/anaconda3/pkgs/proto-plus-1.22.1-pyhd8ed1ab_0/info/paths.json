@@ -1,0 +1,203 @@
+{
+  "paths": [
+    {
+      "_path": "site-packages/proto/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "e2d0a3b23322b9a9567165f73262870bc05f12192169adac67924f95e4b6ac60",
+      "size_in_bytes": 1660
+    },
+    {
+      "_path": "site-packages/proto/_file_info.py",
+      "path_type": "hardlink",
+      "sha256": "e1a47b159ca7674a1851ee7cead6b4e0ceff790f177ee97ef93f80094b40177d",
+      "size_in_bytes": 7914
+    },
+    {
+      "_path": "site-packages/proto/_package_info.py",
+      "path_type": "hardlink",
+      "sha256": "51d17e579135f7792f3adfc8a94a9eca527377163507f45161cefe68230c97ce",
+      "size_in_bytes": 1906
+    },
+    {
+      "_path": "site-packages/proto/datetime_helpers.py",
+      "path_type": "hardlink",
+      "sha256": "0c1c536be2eca5c04224c10caf65d2e209d8022add9065d6c8ad6d8bbc00693f",
+      "size_in_bytes": 7388
+    },
+    {
+      "_path": "site-packages/proto/enums.py",
+      "path_type": "hardlink",
+      "sha256": "d2e1d3308e867f389da4a8d58ce5efaa4bf48404d748c19246e84c123985bc42",
+      "size_in_bytes": 5490
+    },
+    {
+      "_path": "site-packages/proto/fields.py",
+      "path_type": "hardlink",
+      "sha256": "a81a10fd397b65185e0f5ecfce6651e835e46c44ff9d9604191a5052d31f8b11",
+      "size_in_bytes": 5372
+    },
+    {
+      "_path": "site-packages/proto/marshal/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "ba085dc41813a59fc6b4e5a74b659acf5c9511b0a7a3eeb59b97915266316d2a",
+      "size_in_bytes": 630
+    },
+    {
+      "_path": "site-packages/proto/marshal/collections/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "997d9b3be1d3be9e2f716c350ee7bd58c7fbd7bf903fded984d787be45c626cc",
+      "size_in_bytes": 755
+    },
+    {
+      "_path": "site-packages/proto/marshal/collections/maps.py",
+      "path_type": "hardlink",
+      "sha256": "3de0452e7187c87770463b99584c88becd99ad6b6d60dfdc364f19e87520ba7a",
+      "size_in_bytes": 2921
+    },
+    {
+      "_path": "site-packages/proto/marshal/collections/repeated.py",
+      "path_type": "hardlink",
+      "sha256": "2afbee4d0db7139180dd6ff0001e8911982f62cb49d5de1abffe70950588c210",
+      "size_in_bytes": 6774
+    },
+    {
+      "_path": "site-packages/proto/marshal/compat.py",
+      "path_type": "hardlink",
+      "sha256": "e01437950066b592b8981ffe705997bb2444525a09deb1a5913144e896c2cb1e",
+      "size_in_bytes": 1617
+    },
+    {
+      "_path": "site-packages/proto/marshal/marshal.py",
+      "path_type": "hardlink",
+      "sha256": "b2bb16099c4e9cdaf640dea04bbfcaaeda23e2307f448592b73cfa34a83cd42a",
+      "size_in_bytes": 11015
+    },
+    {
+      "_path": "site-packages/proto/marshal/rules/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "addb6d8ff8b47b8229459617f686524ece409e3016e1997ffc1a0d1df5141e95",
+      "size_in_bytes": 575
+    },
+    {
+      "_path": "site-packages/proto/marshal/rules/bytes.py",
+      "path_type": "hardlink",
+      "sha256": "01fdba986e5ed47aa7d2dcb93710b186ad26ec2c5a7985936ad390f214cdd233",
+      "size_in_bytes": 1593
+    },
+    {
+      "_path": "site-packages/proto/marshal/rules/dates.py",
+      "path_type": "hardlink",
+      "sha256": "5db54017839889f4009d52eb6225169dd32532868bf956336afe7656dbb5e372",
+      "size_in_bytes": 3135
+    },
+    {
+      "_path": "site-packages/proto/marshal/rules/enums.py",
+      "path_type": "hardlink",
+      "sha256": "f4d648436d78b2063745cc91eb8d134569ca2c7e2b977ea64561b2539e8403ee",
+      "size_in_bytes": 2213
+    },
+    {
+      "_path": "site-packages/proto/marshal/rules/field_mask.py",
+      "path_type": "hardlink",
+      "sha256": "fc21bd92f95ae3edf6a6a1d5633a172433df0bdcb2489cc424200a6500bed88a",
+      "size_in_bytes": 1182
+    },
+    {
+      "_path": "site-packages/proto/marshal/rules/message.py",
+      "path_type": "hardlink",
+      "sha256": "718ec8ecc74d58dd5663d63268c6e4b101fd46f39d0e0d2ca646ad8bef9ffbc1",
+      "size_in_bytes": 1841
+    },
+    {
+      "_path": "site-packages/proto/marshal/rules/stringy_numbers.py",
+      "path_type": "hardlink",
+      "sha256": "b0eb02a25f9d07b7a96d50a3fc066ed59118a39b9a966839ce6e219345f59255",
+      "size_in_bytes": 1787
+    },
+    {
+      "_path": "site-packages/proto/marshal/rules/struct.py",
+      "path_type": "hardlink",
+      "sha256": "918da21993b473c231a23805f0e9657ee0dbeb79667698c7fb9b41a1de732e84",
+      "size_in_bytes": 5226
+    },
+    {
+      "_path": "site-packages/proto/marshal/rules/wrappers.py",
+      "path_type": "hardlink",
+      "sha256": "14356ec0bc570a7866efb8f4919f85d615466383e596681085afd31fdbe31377",
+      "size_in_bytes": 2280
+    },
+    {
+      "_path": "site-packages/proto/message.py",
+      "path_type": "hardlink",
+      "sha256": "4d6d78a5586265d987c8dccac5a42ab90df6d1126a0d84fca512087a09dccc27",
+      "size_in_bytes": 32396
+    },
+    {
+      "_path": "site-packages/proto/modules.py",
+      "path_type": "hardlink",
+      "sha256": "d60dc70195b4256071ecb0ab94c3da99438c1f169a7fe405c1b61aeb3822a658",
+      "size_in_bytes": 1585
+    },
+    {
+      "_path": "site-packages/proto/primitives.py",
+      "path_type": "hardlink",
+      "sha256": "170bba290767d62eaf54f3c3dccc505c72af6f3ef3e41e364253b049391c89d2",
+      "size_in_bytes": 1000
+    },
+    {
+      "_path": "site-packages/proto/utils.py",
+      "path_type": "hardlink",
+      "sha256": "e7e0ea7b658e3c943482c4f931388c88f4c36bcab9e957c3f8472a2090f8783d",
+      "size_in_bytes": 1651
+    },
+    {
+      "_path": "site-packages/proto_plus-1.22.1.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "site-packages/proto_plus-1.22.1.dist-info/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size_in_bytes": 11358
+    },
+    {
+      "_path": "site-packages/proto_plus-1.22.1.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "69a64234604c9dc12db9b0125c45bcfb436273905ca80c276bea67db87422694",
+      "size_in_bytes": 2130
+    },
+    {
+      "_path": "site-packages/proto_plus-1.22.1.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "6ad1bbd1e58c3e6cd273337d3e4c81d899eeae8652fd63a49d252e4dd92927ae",
+      "size_in_bytes": 4133
+    },
+    {
+      "_path": "site-packages/proto_plus-1.22.1.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "site-packages/proto_plus-1.22.1.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "1b5e87e00dc87a84269cead8578b9e6462928e18a95f1f3373c9eef451a5bcc0",
+      "size_in_bytes": 92
+    },
+    {
+      "_path": "site-packages/proto_plus-1.22.1.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "b4ef9a56a7aae4663729c41397900ab740fe0c5882f08f31cb80211cd7e1b394",
+      "size_in_bytes": 106
+    },
+    {
+      "_path": "site-packages/proto_plus-1.22.1.dist-info/top_level.txt",
+      "path_type": "hardlink",
+      "sha256": "1c583f356f55c610f24b3a860e6531a9487ac3c4199552e1e190c8c5892c4c23",
+      "size_in_bytes": 6
+    }
+  ],
+  "paths_version": 1
+}

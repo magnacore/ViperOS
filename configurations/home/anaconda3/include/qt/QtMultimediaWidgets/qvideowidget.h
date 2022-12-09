@@ -51,7 +51,6 @@ QT_BEGIN_NAMESPACE
 class QMediaObject;
 
 class QVideoWidgetPrivate;
-class QAbstractVideoSurface;
 class Q_MULTIMEDIAWIDGETS_EXPORT QVideoWidget : public QWidget, public QMediaBindableInterface
 {
     Q_OBJECT
@@ -63,14 +62,12 @@ class Q_MULTIMEDIAWIDGETS_EXPORT QVideoWidget : public QWidget, public QMediaBin
     Q_PROPERTY(int contrast READ contrast WRITE setContrast NOTIFY contrastChanged)
     Q_PROPERTY(int hue READ hue WRITE setHue NOTIFY hueChanged)
     Q_PROPERTY(int saturation READ saturation WRITE setSaturation NOTIFY saturationChanged)
-    Q_PROPERTY(QAbstractVideoSurface* videoSurface READ videoSurface CONSTANT)
 
 public:
-    explicit QVideoWidget(QWidget *parent = nullptr);
+    explicit QVideoWidget(QWidget *parent = Q_NULLPTR);
     ~QVideoWidget();
 
     QMediaObject *mediaObject() const override;
-    QAbstractVideoSurface *videoSurface() const;
 
 #ifdef Q_QDOC
     bool isFullScreen() const;
@@ -84,13 +81,6 @@ public:
     int saturation() const;
 
     QSize sizeHint() const override;
-#if defined(Q_OS_WIN)
-#  if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-    bool nativeEvent(const QByteArray &eventType, void *message, qintptr *result) override;
-#  else
-    bool nativeEvent(const QByteArray &eventType, void *message, long *result) override;
-#  endif
-#endif
 
 public Q_SLOTS:
     void setFullScreen(bool fullScreen);
@@ -116,6 +106,10 @@ protected:
     void paintEvent(QPaintEvent *event) override;
 
     bool setMediaObject(QMediaObject *object) override;
+
+#if defined(Q_WS_WIN)
+    bool winEvent(MSG *message, long *result);
+#endif
 
     QVideoWidget(QVideoWidgetPrivate &dd, QWidget *parent);
     QVideoWidgetPrivate *d_ptr;

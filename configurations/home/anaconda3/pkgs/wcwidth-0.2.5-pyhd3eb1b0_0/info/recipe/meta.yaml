@@ -1,0 +1,56 @@
+# This file created by conda-build 3.21.4
+# meta.yaml template originally from:
+# /Users/ktietz/demo/src/aggregate/wcwidth-feedstock/recipe, last modified Sat Aug  7 09:30:42 2021
+# ------------------------------------------------
+
+package:
+  name: wcwidth
+  version: 0.2.5
+source:
+  sha256: c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83
+  url: https://pypi.io/packages/source/w/wcwidth/wcwidth-0.2.5.tar.gz
+build:
+  noarch: python
+  number: '0'
+  script: /Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla/bin/python
+    -m pip install . -vv
+  string: pyhd3eb1b0_0
+requirements:
+  host:
+    - ca-certificates 2021.7.5 hca03da5_1
+    - certifi 2021.5.30 py39hca03da5_0
+    - expat 2.4.1 hc377ac9_2
+    - libcxx 12.0.0 hf6beb65_1
+    - libffi 3.3 hc4ed4cf_2
+    - libiconv 1.16 h1230e6a_0
+    - ncurses 6.2 hc4ed4cf_0
+    - openssl 1.1.1j h1230e6a_0
+    - pip 21.2.3 py39hca03da5_0
+    - python 3.9.6 hc70090a_5
+    - readline 8.1 h1230e6a_0
+    - setuptools 52.0.0 py39hca03da5_0
+    - sqlite 3.36.0 h1058600_0
+    - tk 8.6.10 h6b60437_0
+    - tzdata 2021a h5d7bf9c_0
+    - wheel 0.37.0 pyhd3eb1b0_1
+    - xz 5.2.5 h1a28f6b_0
+    - zlib 1.2.11 hca03da5_3
+  run:
+    - python
+test:
+  commands:
+    - pip check
+  imports:
+    - wcwidth
+  requires:
+    - pip
+about:
+  home: https://github.com/jquast/wcwidth
+  license: MIT
+  license_file: LICENSE
+  summary: Measures number of Terminal column cells of wide-character codes.
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - ocefpaf

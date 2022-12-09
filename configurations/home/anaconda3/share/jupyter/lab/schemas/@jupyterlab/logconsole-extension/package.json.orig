@@ -1,6 +1,6 @@
 {
   "name": "@jupyterlab/logconsole-extension",
-  "version": "3.4.4",
+  "version": "3.0.9",
   "description": "JupyterLab - Log Console Extension",
   "homepage": "https://github.com/jupyterlab/jupyterlab",
   "bugs": {
@@ -30,22 +30,24 @@
   "scripts": {
     "build": "tsc -b",
     "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
+    "prepublishOnly": "npm run build",
     "watch": "tsc -w --listEmittedFiles"
   },
   "dependencies": {
-    "@jupyterlab/application": "^3.4.4",
-    "@jupyterlab/apputils": "^3.4.4",
-    "@jupyterlab/coreutils": "^5.4.4",
-    "@jupyterlab/logconsole": "^3.4.4",
-    "@jupyterlab/notebook": "^3.4.4",
-    "@jupyterlab/rendermime": "^3.4.4",
-    "@jupyterlab/settingregistry": "^3.4.4",
-    "@jupyterlab/statusbar": "^3.4.4",
-    "@jupyterlab/translation": "^3.4.4",
-    "@jupyterlab/ui-components": "^3.4.4",
-    "@lumino/coreutils": "^1.11.0",
-    "@lumino/signaling": "^1.10.0",
-    "@lumino/widgets": "^1.33.0",
+    "@jupyterlab/application": "^3.0.9",
+    "@jupyterlab/apputils": "^3.0.7",
+    "@jupyterlab/coreutils": "^5.0.5",
+    "@jupyterlab/logconsole": "^3.0.8",
+    "@jupyterlab/mainmenu": "^3.0.7",
+    "@jupyterlab/notebook": "^3.0.9",
+    "@jupyterlab/rendermime": "^3.0.8",
+    "@jupyterlab/settingregistry": "^3.0.5",
+    "@jupyterlab/statusbar": "^3.0.7",
+    "@jupyterlab/translation": "^3.0.7",
+    "@jupyterlab/ui-components": "^3.0.6",
+    "@lumino/coreutils": "^1.5.3",
+    "@lumino/signaling": "^1.4.3",
+    "@lumino/widgets": "^1.16.1",
     "react": "^17.0.1"
   },
   "devDependencies": {
@@ -59,5 +61,6 @@
     "extension": true,
     "schemaDir": "schema"
   },
-  "styleModule": "style/index.js"
+  "styleModule": "style/index.js",
+  "gitHead": "004ee4ba413ba845d2e1dd66e51d3a1bf1bf4ca5"
 }

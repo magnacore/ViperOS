@@ -56,24 +56,15 @@ class QNode;
 
 typedef QSharedPointer<QEntity> QEntityPtr;
 
-class Q_3DCORESHARED_EXPORT QAspectEngine : public QObject
+class QT3DCORESHARED_EXPORT QAspectEngine : public QObject
 {
     Q_OBJECT
 public:
-    enum RunMode {
-        Manual = 0,
-        Automatic
-    };
-    Q_ENUM(RunMode)
-
     explicit QAspectEngine(QObject *parent = nullptr);
     ~QAspectEngine();
 
     void setRootEntity(QEntityPtr root);
     QEntityPtr rootEntity() const;
-
-    void setRunMode(RunMode mode);
-    RunMode runMode() const;
 
     void registerAspect(QAbstractAspect *aspect);
     void registerAspect(const QString &name);
@@ -83,8 +74,6 @@ public:
     QVector<QAbstractAspect*> aspects() const;
 
     QVariant executeCommand(const QString &command);
-
-    void processFrame();
 
 private:
     Q_DECLARE_PRIVATE(QAspectEngine)

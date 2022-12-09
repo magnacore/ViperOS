@@ -1,0 +1,17 @@
+{
+  "paths": [
+    {
+      "_path": ".crates2.json",
+      "path_type": "hardlink",
+      "sha256": "348ae6e91aa6091c40c522f9b17dff46ba0d05dcb1279ad7364497b3a1072165",
+      "size_in_bytes": 484
+    },
+    {
+      "_path": "bin/zoxide",
+      "path_type": "hardlink",
+      "sha256": "b407f5957815787fb1da57c3788b8a7a5182ed10d801416b1c744d09d14f7902",
+      "size_in_bytes": 969064
+    }
+  ],
+  "paths_version": 1
+}

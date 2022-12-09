@@ -70,9 +70,6 @@ public:
     HttpRequestMethod httpRequestMethod() const;
     void setHttpRequestMethod(HttpRequestMethod method);
 
-    QByteArray customMethodString() const;
-    void setCustomMethodString(const QByteArray &verb);
-
     QUrl url() const;
     void setUrl(const QUrl &url);
 
@@ -93,9 +90,10 @@ public:
 
     QByteArray hmacSha1() const;
     QByteArray rsaSha1() const;
-    QByteArray plainText() const;
+    QByteArray plainText(const QString &clientIdentifier) const;
 
-    static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret);
+    static QByteArray plainText(const QString &clientIdentifier, const QString clientSharedKey);
+    static QByteArray plainText(const QPair<QString, QString> &clientCredentials);
 
     void swap(QOAuth1Signature &other);
     QOAuth1Signature &operator=(const QOAuth1Signature &other);

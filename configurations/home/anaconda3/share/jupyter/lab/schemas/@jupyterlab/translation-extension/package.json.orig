@@ -1,6 +1,6 @@
 {
   "name": "@jupyterlab/translation-extension",
-  "version": "3.4.4",
+  "version": "3.0.9",
   "description": "JupyterLab - Translation services",
   "keywords": [
     "jupyter",
@@ -35,14 +35,17 @@
     "clean": "rimraf lib tsconfig.tsbuildinfo",
     "eslint": "eslint . --ext .ts,.tsx --fix",
     "eslint:check": "eslint . --ext .ts,.tsx",
+    "prepare": "jlpm run clean && jlpm run build",
+    "prepublishOnly": "npm run build",
     "watch": "tsc -w"
   },
   "dependencies": {
-    "@jupyterlab/application": "^3.4.4",
-    "@jupyterlab/apputils": "^3.4.4",
-    "@jupyterlab/mainmenu": "^3.4.4",
-    "@jupyterlab/settingregistry": "^3.4.4",
-    "@jupyterlab/translation": "^3.4.4"
+    "@jupyterlab/application": "^3.0.9",
+    "@jupyterlab/apputils": "^3.0.7",
+    "@jupyterlab/mainmenu": "^3.0.7",
+    "@jupyterlab/settingregistry": "^3.0.5",
+    "@jupyterlab/translation": "^3.0.7",
+    "@lumino/widgets": "^1.16.1"
   },
   "devDependencies": {
     "rimraf": "~3.0.0",
@@ -55,5 +58,6 @@
     "extension": true,
     "schemaDir": "schema"
   },
-  "styleModule": "style/index.js"
+  "styleModule": "style/index.js",
+  "gitHead": "004ee4ba413ba845d2e1dd66e51d3a1bf1bf4ca5"
 }

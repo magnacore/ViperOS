@@ -61,13 +61,13 @@ class Q_WIDGETS_EXPORT QPushButton : public QAbstractButton
     Q_PROPERTY(bool flat READ isFlat WRITE setFlat)
 
 public:
-    explicit QPushButton(QWidget *parent = nullptr);
-    explicit QPushButton(const QString &text, QWidget *parent = nullptr);
-    QPushButton(const QIcon& icon, const QString &text, QWidget *parent = nullptr);
+    explicit QPushButton(QWidget *parent = Q_NULLPTR);
+    explicit QPushButton(const QString &text, QWidget *parent = Q_NULLPTR);
+    QPushButton(const QIcon& icon, const QString &text, QWidget *parent = Q_NULLPTR);
     ~QPushButton();
 
-    QSize sizeHint() const override;
-    QSize minimumSizeHint() const override;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
 
     bool autoDefault() const;
     void setAutoDefault(bool);
@@ -88,14 +88,13 @@ public Q_SLOTS:
 #endif
 
 protected:
-    bool event(QEvent *e) override;
-    void paintEvent(QPaintEvent *) override;
-    void keyPressEvent(QKeyEvent *) override;
-    void focusInEvent(QFocusEvent *) override;
-    void focusOutEvent(QFocusEvent *) override;
+    bool event(QEvent *e) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *) Q_DECL_OVERRIDE;
+    void focusInEvent(QFocusEvent *) Q_DECL_OVERRIDE;
+    void focusOutEvent(QFocusEvent *) Q_DECL_OVERRIDE;
     void initStyleOption(QStyleOptionButton *option) const;
-    bool hitButton(const QPoint &pos) const override;
-    QPushButton(QPushButtonPrivate &dd, QWidget* parent = nullptr);
+    QPushButton(QPushButtonPrivate &dd, QWidget* parent = Q_NULLPTR);
 
 public:
 

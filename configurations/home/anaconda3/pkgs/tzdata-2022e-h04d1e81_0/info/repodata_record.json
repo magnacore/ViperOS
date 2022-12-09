@@ -1,0 +1,22 @@
+{
+  "build": "h04d1e81_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [],
+  "features": "",
+  "fn": "tzdata-2022e-h04d1e81_0.conda",
+  "legacy_bz2_md5": "56daab53593f861fdea46070bfb0b680",
+  "license": "CC-PDDC OR BSD-3-Clause",
+  "md5": "6411bbf25efc374244576726c267d9a4",
+  "name": "tzdata",
+  "noarch": "generic",
+  "package_type": "noarch_generic",
+  "sha256": "53b5fcd5543fac0693a43b9c35bc9a62f98396eb4c5115da6608e529765824dc",
+  "size": 109196,
+  "subdir": "noarch",
+  "timestamp": 1666036016054,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/tzdata-2022e-h04d1e81_0.conda",
+  "version": "2022e"
+}

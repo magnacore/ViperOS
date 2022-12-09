@@ -43,7 +43,7 @@
 
 #include <QtCore/qmimetype.h>
 
-QT_REQUIRE_CONFIG(mimetype);
+#ifndef QT_NO_MIMETYPE
 
 #include <QtCore/qstringlist.h>
 
@@ -92,4 +92,5 @@ private:
 
 QT_END_NAMESPACE
 
+#endif // QT_NO_MIMETYPE
 #endif // QMIMEDATABASE_H

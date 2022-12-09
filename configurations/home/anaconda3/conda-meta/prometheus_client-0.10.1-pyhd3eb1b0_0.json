@@ -1,0 +1,199 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/prometheus_client-0.10.1-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/prometheus_client-0.10.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/prometheus_client-0.10.1.dist-info/LICENSE",
+    "lib/python3.8/site-packages/prometheus_client-0.10.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/prometheus_client-0.10.1.dist-info/NOTICE",
+    "lib/python3.8/site-packages/prometheus_client-0.10.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/prometheus_client-0.10.1.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/prometheus_client-0.10.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/prometheus_client-0.10.1.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/prometheus_client-0.10.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/prometheus_client/__init__.py",
+    "lib/python3.8/site-packages/prometheus_client/asgi.py",
+    "lib/python3.8/site-packages/prometheus_client/bridge/__init__.py",
+    "lib/python3.8/site-packages/prometheus_client/bridge/graphite.py",
+    "lib/python3.8/site-packages/prometheus_client/context_managers.py",
+    "lib/python3.8/site-packages/prometheus_client/core.py",
+    "lib/python3.8/site-packages/prometheus_client/decorator.py",
+    "lib/python3.8/site-packages/prometheus_client/exposition.py",
+    "lib/python3.8/site-packages/prometheus_client/gc_collector.py",
+    "lib/python3.8/site-packages/prometheus_client/metrics.py",
+    "lib/python3.8/site-packages/prometheus_client/metrics_core.py",
+    "lib/python3.8/site-packages/prometheus_client/mmap_dict.py",
+    "lib/python3.8/site-packages/prometheus_client/multiprocess.py",
+    "lib/python3.8/site-packages/prometheus_client/openmetrics/__init__.py",
+    "lib/python3.8/site-packages/prometheus_client/openmetrics/exposition.py",
+    "lib/python3.8/site-packages/prometheus_client/openmetrics/parser.py",
+    "lib/python3.8/site-packages/prometheus_client/parser.py",
+    "lib/python3.8/site-packages/prometheus_client/platform_collector.py",
+    "lib/python3.8/site-packages/prometheus_client/process_collector.py",
+    "lib/python3.8/site-packages/prometheus_client/registry.py",
+    "lib/python3.8/site-packages/prometheus_client/samples.py",
+    "lib/python3.8/site-packages/prometheus_client/twisted/__init__.py",
+    "lib/python3.8/site-packages/prometheus_client/twisted/_exposition.py",
+    "lib/python3.8/site-packages/prometheus_client/utils.py",
+    "lib/python3.8/site-packages/prometheus_client/values.py",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/asgi.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/bridge/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/bridge/__pycache__/graphite.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/context_managers.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/core.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/decorator.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/exposition.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/gc_collector.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/metrics.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/metrics_core.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/mmap_dict.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/multiprocess.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/openmetrics/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/openmetrics/__pycache__/exposition.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/openmetrics/__pycache__/parser.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/parser.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/platform_collector.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/process_collector.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/registry.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/samples.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/twisted/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/twisted/__pycache__/_exposition.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/utils.cpython-38.pyc",
+    "lib/python3.8/site-packages/prometheus_client/__pycache__/values.cpython-38.pyc"
+  ],
+  "fn": "prometheus_client-0.10.1-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "6d1dba001ad56357311e92c725e02a24",
+  "legacy_bz2_size": 47265,
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/prometheus_client-0.10.1-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "806d64d02b5477f2b008c7b18809601a",
+  "name": "prometheus_client",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/prometheus_client-0.10.1-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/asgi.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/bridge/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/bridge/__pycache__/graphite.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/context_managers.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/core.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/decorator.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/exposition.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/gc_collector.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/metrics.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/metrics_core.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/mmap_dict.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/multiprocess.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/openmetrics/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/openmetrics/__pycache__/exposition.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/openmetrics/__pycache__/parser.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/parser.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/platform_collector.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/process_collector.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/registry.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/samples.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/twisted/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/twisted/__pycache__/_exposition.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/utils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/prometheus_client/__pycache__/values.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "prometheus_client==0.10.1=pyhd3eb1b0_0",
+  "sha256": "0ea82020046df89a2943abb8e7389acfb71e33b7a854d3083b484c661df0239d",
+  "size": 47133,
+  "subdir": "noarch",
+  "timestamp": 1618088526891,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/prometheus_client-0.10.1-pyhd3eb1b0_0.conda",
+  "version": "0.10.1"
+}

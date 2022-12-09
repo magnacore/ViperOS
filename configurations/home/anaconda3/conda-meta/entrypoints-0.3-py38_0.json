@@ -1,0 +1,40 @@
+{
+  "build": "py38_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/entrypoints-0.3-py38_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/__pycache__/entrypoints.cpython-38.pyc",
+    "lib/python3.8/site-packages/entrypoints-0.3-py3.8.egg-info",
+    "lib/python3.8/site-packages/entrypoints.py"
+  ],
+  "fn": "entrypoints-0.3-py38_0.conda",
+  "legacy_bz2_md5": "9730fa5909d198b04d02c53550215f78",
+  "legacy_bz2_size": 10202,
+  "license": "MIT License",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/entrypoints-0.3-py38_0",
+    "type": 1
+  },
+  "md5": "f21a05dd7fbcb93d709e629afc215745",
+  "name": "entrypoints",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/entrypoints-0.3-py38_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "entrypoints==0.3=py38_0",
+  "sha256": "6f5eefe16fee02b809d034217e0425380101a45c01a7c9a776a02b52a0c32d49",
+  "size": 10426,
+  "subdir": "linux-64",
+  "timestamp": 1572514983215,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/entrypoints-0.3-py38_0.conda",
+  "version": "0.3"
+}

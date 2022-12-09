@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "constrains": [
+    "grpcio-status >=1.33.2,<2.0dev",
+    "grpcio >=1.33.2,<2.0dev",
+    "grpcio-gcp >=0.2.2,<1.0dev"
+  ],
+  "depends": [
+    "google-auth >=1.25.0,<3.0dev",
+    "googleapis-common-protos >=1.56.2,<2.0dev",
+    "protobuf >=3.20.1",
+    "python >=3.9,<3.10.0a0",
+    "requests >=2.18.0,<3.0.0dev"
+  ],
+  "license": "Apache-2.0",
+  "license_family": "APACHE",
+  "name": "google-api-core",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1663638739929,
+  "version": "2.10.1"
+}

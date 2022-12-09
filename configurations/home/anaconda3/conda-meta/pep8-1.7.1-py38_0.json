@@ -1,0 +1,56 @@
+{
+  "build": "py38_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/pep8-1.7.1-py38_0",
+  "features": "",
+  "files": [
+    "bin/pep8",
+    "lib/python3.8/site-packages/__pycache__/pep8.cpython-38.pyc",
+    "lib/python3.8/site-packages/pep8-1.7.1-py3.8.egg-info/PKG-INFO",
+    "lib/python3.8/site-packages/pep8-1.7.1-py3.8.egg-info/SOURCES.txt",
+    "lib/python3.8/site-packages/pep8-1.7.1-py3.8.egg-info/dependency_links.txt",
+    "lib/python3.8/site-packages/pep8-1.7.1-py3.8.egg-info/entry_points.txt",
+    "lib/python3.8/site-packages/pep8-1.7.1-py3.8.egg-info/namespace_packages.txt",
+    "lib/python3.8/site-packages/pep8-1.7.1-py3.8.egg-info/not-zip-safe",
+    "lib/python3.8/site-packages/pep8-1.7.1-py3.8.egg-info/top_level.txt",
+    "lib/python3.8/site-packages/pep8.py"
+  ],
+  "fn": "pep8-1.7.1-py38_0.conda",
+  "legacy_bz2_md5": "6c29ec857b3a8c46b249b134b7393f81",
+  "legacy_bz2_size": 53334,
+  "license": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/pep8-1.7.1-py38_0",
+    "type": 1
+  },
+  "md5": "db7a0375bde4cb8773242376e115f799",
+  "name": "pep8",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/pep8-1.7.1-py38_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/pep8",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "e8c88c66298575282539f1f27c6df235ac3757c25b6d02e751b1420034e3bffe",
+        "sha256_in_prefix": "3833a95b0897a25ed8208a82a33f9a0d2d40da70859c6b93b6a0c1ea694ca886",
+        "size_in_bytes": 236
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pep8==1.7.1=py38_0",
+  "sha256": "12b89d4aa6609ce0957a9a06dc95b06e0a66d139c8cb7a5701cfcaa182c1f7c0",
+  "size": 54390,
+  "subdir": "linux-64",
+  "timestamp": 1573489521707,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pep8-1.7.1-py38_0.conda",
+  "version": "1.7.1"
+}

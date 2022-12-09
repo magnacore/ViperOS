@@ -193,20 +193,16 @@ typedef gboolean (*GSourceFunc)       (gpointer user_data);
 /**
  * GChildWatchFunc:
  * @pid: the process id of the child process
- * @wait_status: Status information about the child process, encoded
- *               in a platform-specific manner
+ * @status: Status information about the child process, encoded
+ *     in a platform-specific manner
  * @user_data: user data passed to g_child_watch_add()
  *
  * Prototype of a #GChildWatchSource callback, called when a child
- * process has exited.
- *
- * To interpret @wait_status, see the documentation
- * for g_spawn_check_wait_status(). In particular,
- * on Unix platforms, note that it is usually not equal
- * to the integer passed to `exit()` or returned from `main()`.
+ * process has exited.  To interpret @status, see the documentation
+ * for g_spawn_check_exit_status().
  */
 typedef void     (*GChildWatchFunc)   (GPid     pid,
-                                       gint     wait_status,
+                                       gint     status,
                                        gpointer user_data);
 
 
@@ -268,8 +264,8 @@ typedef void (*GSourceDummyMarshal) (void);
 struct _GSourceFuncs
 {
   gboolean (*prepare)  (GSource    *source,
-                        gint       *timeout_);/* Can be NULL */
-  gboolean (*check)    (GSource    *source);/* Can be NULL */
+                        gint       *timeout_);
+  gboolean (*check)    (GSource    *source);
   gboolean (*dispatch) (GSource    *source,
                         GSourceFunc callback,
                         gpointer    user_data);
@@ -605,9 +601,6 @@ gboolean g_source_is_destroyed    (GSource        *source);
 GLIB_AVAILABLE_IN_ALL
 void                 g_source_set_name       (GSource        *source,
                                               const char     *name);
-GLIB_AVAILABLE_IN_2_70
-void                 g_source_set_static_name (GSource        *source,
-                                               const char     *name);
 GLIB_AVAILABLE_IN_ALL
 const char *         g_source_get_name       (GSource        *source);
 GLIB_AVAILABLE_IN_ALL
@@ -787,15 +780,6 @@ GLIB_AVAILABLE_IN_ALL
 void     g_main_context_invoke      (GMainContext   *context,
                                      GSourceFunc     function,
                                      gpointer        data);
-
-GLIB_AVAILABLE_STATIC_INLINE_IN_2_70
-static inline int
-g_steal_fd (int *fd_ptr)
-{
-  int fd = *fd_ptr;
-  *fd_ptr = -1;
-  return fd;
-}
 
 /* Hook for GClosure / GSource integration. Don't touch */
 GLIB_VAR GSourceFuncs g_timeout_funcs;

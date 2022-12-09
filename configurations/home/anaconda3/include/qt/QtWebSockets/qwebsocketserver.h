@@ -52,10 +52,6 @@
 #include <QtNetwork/QSslError>
 #endif
 
-#if QT_HAS_INCLUDE(<chrono>)
-#include <chrono>
-#endif
-
 QT_BEGIN_NAMESPACE
 
 class QTcpSocket;
@@ -69,6 +65,8 @@ class Q_WEBSOCKETS_EXPORT QWebSocketServer : public QObject
     Q_DISABLE_COPY(QWebSocketServer)
     Q_DECLARE_PRIVATE(QWebSocketServer)
 
+    Q_ENUMS(SslMode)
+
 public:
     enum SslMode {
 #ifndef QT_NO_SSL
@@ -76,11 +74,10 @@ public:
 #endif
         NonSecureMode = 1
     };
-    Q_ENUM(SslMode)
 
     explicit QWebSocketServer(const QString &serverName, SslMode secureMode,
-                              QObject *parent = nullptr);
-    ~QWebSocketServer() override;
+                              QObject *parent = Q_NULLPTR);
+    virtual ~QWebSocketServer();
 
     bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0);
     void close();
@@ -90,37 +87,14 @@ public:
     void setMaxPendingConnections(int numConnections);
     int maxPendingConnections() const;
 
-#if QT_HAS_INCLUDE(<chrono>) || defined(Q_CLANG_QDOC)
-    void setHandshakeTimeout(std::chrono::milliseconds msec)
-    {
-        setHandshakeTimeout(int(msec.count()));
-    }
-    std::chrono::milliseconds handshakeTimeout() const
-    {
-        return std::chrono::milliseconds(handshakeTimeoutMS());
-    }
-#endif
-    void setHandshakeTimeout(int msec);
-    int handshakeTimeoutMS() const;
-
     quint16 serverPort() const;
     QHostAddress serverAddress() const;
     QUrl serverUrl() const;
 
     SslMode secureMode() const;
 
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
-    bool setSocketDescriptor(qintptr socketDescriptor);
-    qintptr socketDescriptor() const;
-    bool setNativeDescriptor(qintptr descriptor) { return setSocketDescriptor(descriptor); }
-    qintptr nativeDescriptor() const { return socketDescriptor(); }
-#else // ### Qt 6: Remove leftovers
-    Q_DECL_DEPRECATED_X("Use setNativeDescriptor") bool setSocketDescriptor(int socketDescriptor);
-    Q_DECL_DEPRECATED_X("Use nativeDescriptor") int socketDescriptor() const;
-    bool setNativeDescriptor(qintptr descriptor);
-    qintptr nativeDescriptor() const;
-#endif // (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
-
+    bool setSocketDescriptor(int socketDescriptor);
+    int socketDescriptor() const;
 
     bool hasPendingConnections() const;
     virtual QWebSocket *nextPendingConnection();

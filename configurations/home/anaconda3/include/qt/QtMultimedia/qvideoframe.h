@@ -101,8 +101,6 @@ public:
 
         Format_CameraRaw,
         Format_AdobeDng,
-        Format_ABGR32, // ### Qt 6: reorder
-        Format_YUV422P,
 
 #ifndef Q_QDOC
         NPixelFormats,
@@ -121,7 +119,6 @@ public:
     bool operator==(const QVideoFrame &other) const;
     bool operator!=(const QVideoFrame &other) const;
 
-    QAbstractVideoBuffer *buffer() const;
     bool isValid() const;
 
     PixelFormat pixelFormat() const;
@@ -165,8 +162,6 @@ public:
     QVariantMap availableMetaData() const;
     QVariant metaData(const QString &key) const;
     void setMetaData(const QString &key, const QVariant &value);
-
-    QImage image() const;
 
     static PixelFormat pixelFormatFromImageFormat(QImage::Format format);
     static QImage::Format imageFormatFromPixelFormat(PixelFormat format);

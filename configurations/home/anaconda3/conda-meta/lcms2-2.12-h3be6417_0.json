@@ -8,7 +8,7 @@
     "libgcc-ng >=7.3.0",
     "libtiff >=4.1.0,<5.0a0"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/lcms2-2.12-h3be6417_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/lcms2-2.12-h3be6417_0",
   "features": "",
   "files": [
     "bin/jpgicc",
@@ -35,12 +35,12 @@
   "license": "MIT",
   "license_family": "MIT",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/lcms2-2.12-h3be6417_0",
+    "source": "/home/manuj/anaconda3/pkgs/lcms2-2.12-h3be6417_0",
     "type": 1
   },
   "md5": "719db47afba9f6586eecb5eacac70bff",
   "name": "lcms2",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/lcms2-2.12-h3be6417_0.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/lcms2-2.12-h3be6417_0.conda",
   "paths_data": {
     "paths": [
       {
@@ -49,7 +49,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/tmp/build/80754af9/lcms2_1617648591416/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
         "sha256": "dc1e9a8a52bf8e19b980aefc911879370e7b0fe014f8d35c4b140b0c648a89a0",
-        "sha256_in_prefix": "f318faaf3f1c2b526262290d56f2a9650d869011820ba8294c52aaf12652b0b8",
+        "sha256_in_prefix": "926c003d0350347deb19f3829f6e6e877d158761883dcee0d3413d50d224a6b1",
         "size_in_bytes": 489
       }
     ],

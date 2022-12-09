@@ -53,7 +53,7 @@ class Q_CORE_EXPORT QEventLoop : public QObject
     Q_DECLARE_PRIVATE(QEventLoop)
 
 public:
-    explicit QEventLoop(QObject *parent = nullptr);
+    explicit QEventLoop(QObject *parent = Q_NULLPTR);
     ~QEventLoop();
 
     enum ProcessEventsFlag {
@@ -76,7 +76,7 @@ public:
 
     void wakeUp();
 
-    bool event(QEvent *event) override;
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
     void quit();

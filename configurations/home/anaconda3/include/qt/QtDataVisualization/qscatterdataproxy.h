@@ -33,12 +33,15 @@
 #include <QtDataVisualization/qabstractdataproxy.h>
 #include <QtDataVisualization/qscatterdataitem.h>
 
+namespace QtDataVisualization {
+// typedef introduced this way because QDoc doesn't understand namespace macros
+typedef QVector<QScatterDataItem> QScatterDataArray;
+}
+
 QT_BEGIN_NAMESPACE_DATAVISUALIZATION
 
 class QScatterDataProxyPrivate;
 class QScatter3DSeries;
-
-typedef QVector<QScatterDataItem> QScatterDataArray;
 
 class QT_DATAVISUALIZATION_EXPORT QScatterDataProxy : public QAbstractDataProxy
 {
@@ -48,7 +51,7 @@ class QT_DATAVISUALIZATION_EXPORT QScatterDataProxy : public QAbstractDataProxy
     Q_PROPERTY(QScatter3DSeries *series READ series NOTIFY seriesChanged)
 
 public:
-    explicit QScatterDataProxy(QObject *parent = nullptr);
+    explicit QScatterDataProxy(QObject *parent = Q_NULLPTR);
     virtual ~QScatterDataProxy();
 
     QScatter3DSeries *series() const;
@@ -80,7 +83,7 @@ Q_SIGNALS:
     void seriesChanged(QScatter3DSeries *series);
 
 protected:
-    explicit QScatterDataProxy(QScatterDataProxyPrivate *d, QObject *parent = nullptr);
+    explicit QScatterDataProxy(QScatterDataProxyPrivate *d, QObject *parent = Q_NULLPTR);
     QScatterDataProxyPrivate *dptr();
     const QScatterDataProxyPrivate *dptrc() const;
 

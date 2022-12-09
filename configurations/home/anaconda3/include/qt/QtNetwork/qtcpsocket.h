@@ -53,13 +53,13 @@ class Q_NETWORK_EXPORT QTcpSocket : public QAbstractSocket
 {
     Q_OBJECT
 public:
-    explicit QTcpSocket(QObject *parent = nullptr);
+    explicit QTcpSocket(QObject *parent = Q_NULLPTR);
     virtual ~QTcpSocket();
 
 protected:
-    QTcpSocket(QTcpSocketPrivate &dd, QObject *parent = nullptr);
+    QTcpSocket(QTcpSocketPrivate &dd, QObject *parent = Q_NULLPTR);
     QTcpSocket(QAbstractSocket::SocketType socketType, QTcpSocketPrivate &dd,
-               QObject *parent = nullptr);
+               QObject *parent = Q_NULLPTR);
 
 private:
     Q_DISABLE_COPY(QTcpSocket)

@@ -1,0 +1,44 @@
+{
+  "build": "py38h1ba5d50_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libcurl >=7.71.1,<8.0a0",
+    "libgcc-ng >=7.3.0",
+    "openssl >=1.1.1h,<1.1.2a",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/pycurl-7.43.0.6-py38h1ba5d50_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/curl/__init__.py",
+    "lib/python3.8/site-packages/curl/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/pycurl-7.43.0.6-py3.8.egg-info",
+    "lib/python3.8/site-packages/pycurl.cpython-38-x86_64-linux-gnu.so"
+  ],
+  "fn": "pycurl-7.43.0.6-py38h1ba5d50_0.conda",
+  "legacy_bz2_md5": "f621d3504d2e7ff8f292f334a7d59884",
+  "legacy_bz2_size": 72647,
+  "license": "LGPL, MIT",
+  "license_family": "LGPL",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/pycurl-7.43.0.6-py38h1ba5d50_0",
+    "type": 1
+  },
+  "md5": "81454275aa594c811a995f93edf46813",
+  "name": "pycurl",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/pycurl-7.43.0.6-py38h1ba5d50_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "pycurl==7.43.0.6=py38h1ba5d50_0",
+  "sha256": "8d5e0c7c2c8fc5a6ca13f662ffb897aaea5df936c1c69a413256c100ba4fbbf7",
+  "size": 69643,
+  "subdir": "linux-64",
+  "timestamp": 1602278720983,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pycurl-7.43.0.6-py38h1ba5d50_0.conda",
+  "version": "7.43.0.6"
+}

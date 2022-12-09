@@ -50,7 +50,7 @@ namespace Qt3DInput {
 
 class QAxisSettingPrivate;
 
-class Q_3DINPUTSHARED_EXPORT QAxisSetting : public Qt3DCore::QNode
+class QT3DINPUTSHARED_EXPORT QAxisSetting : public Qt3DCore::QNode
 {
     Q_OBJECT
     Q_PROPERTY(float deadZoneRadius READ deadZoneRadius WRITE setDeadZoneRadius NOTIFY deadZoneRadiusChanged)
@@ -77,7 +77,7 @@ Q_SIGNALS:
 
 private:
     Q_DECLARE_PRIVATE(QAxisSetting)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DInput

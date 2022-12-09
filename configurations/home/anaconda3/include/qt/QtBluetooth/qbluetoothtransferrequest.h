@@ -40,7 +40,7 @@
 #ifndef QBLUETOOTHTRANSFERREQUEST_H
 #define QBLUETOOTHTRANSFERREQUEST_H
 
-#include <QtBluetooth/qtbluetoothglobal.h>
+#include <QtBluetooth/qbluetoothglobal.h>
 #include <QtBluetooth/QBluetoothAddress>
 
 #include <QtCore/QtGlobal>

@@ -1,0 +1,100 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/qdarkstyle-2.8.1-py_0",
+  "features": "",
+  "files": [
+    "bin/qdarkstyle",
+    "lib/python3.8/site-packages/QDarkStyle-2.8.1.dist-info/AUTHORS.rst",
+    "lib/python3.8/site-packages/QDarkStyle-2.8.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/QDarkStyle-2.8.1.dist-info/LICENSE.rst",
+    "lib/python3.8/site-packages/QDarkStyle-2.8.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/QDarkStyle-2.8.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/QDarkStyle-2.8.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/QDarkStyle-2.8.1.dist-info/entry_points.txt",
+    "lib/python3.8/site-packages/QDarkStyle-2.8.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/qdarkstyle/__init__.py",
+    "lib/python3.8/site-packages/qdarkstyle/__main__.py",
+    "lib/python3.8/site-packages/qdarkstyle/palette.py",
+    "lib/python3.8/site-packages/qdarkstyle/style_rc.py",
+    "lib/python3.8/site-packages/qdarkstyle/utils/__init__.py",
+    "lib/python3.8/site-packages/qdarkstyle/utils/images.py",
+    "lib/python3.8/site-packages/qdarkstyle/utils/scss.py",
+    "lib/python3.8/site-packages/qdarkstyle/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/qdarkstyle/__pycache__/__main__.cpython-38.pyc",
+    "lib/python3.8/site-packages/qdarkstyle/__pycache__/palette.cpython-38.pyc",
+    "lib/python3.8/site-packages/qdarkstyle/__pycache__/style_rc.cpython-38.pyc",
+    "lib/python3.8/site-packages/qdarkstyle/utils/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/qdarkstyle/utils/__pycache__/images.cpython-38.pyc",
+    "lib/python3.8/site-packages/qdarkstyle/utils/__pycache__/scss.cpython-38.pyc"
+  ],
+  "fn": "qdarkstyle-2.8.1-py_0.conda",
+  "legacy_bz2_md5": "4a7004c4b3316e0fb11ce71ceae37318",
+  "legacy_bz2_size": 160204,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/qdarkstyle-2.8.1-py_0",
+    "type": 1
+  },
+  "md5": "acf57f4dc04438e54eb81aa30e27512a",
+  "name": "qdarkstyle",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/qdarkstyle-2.8.1-py_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "python-scripts/qdarkstyle",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "18719be5bf3ec27550d18da74c3f93747cbd0d1eebf0d6a1d5d5f41ec33dcc14",
+        "sha256_in_prefix": "a096e51a43244a42af1b716279933bd41b5140dea24978828d7f26c058d28454",
+        "size_in_bytes": 278
+      },
+      {
+        "_path": "lib/python3.8/site-packages/qdarkstyle/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/qdarkstyle/__pycache__/__main__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/qdarkstyle/__pycache__/palette.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/qdarkstyle/__pycache__/style_rc.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/qdarkstyle/utils/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/qdarkstyle/utils/__pycache__/images.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/qdarkstyle/utils/__pycache__/scss.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "qdarkstyle==2.8.1=py_0",
+  "sha256": "2da6050d878df5f31e5c0ec13f224965fb5322eeb1a314254b887fcd0b0354d5",
+  "size": 179719,
+  "subdir": "noarch",
+  "timestamp": 1587400228507,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/qdarkstyle-2.8.1-py_0.conda",
+  "version": "2.8.1"
+}

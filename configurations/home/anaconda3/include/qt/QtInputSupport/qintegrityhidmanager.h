@@ -52,7 +52,7 @@ class QIntegrityHIDManager : public QThread
 {
     Q_OBJECT
 public:
-    QIntegrityHIDManager(const QString &key, const QString &specification, QObject *parent = nullptr);
+    QIntegrityHIDManager(const QString &key, const QString &specification, QObject *parent = 0);
     ~QIntegrityHIDManager();
 
     void run(void);

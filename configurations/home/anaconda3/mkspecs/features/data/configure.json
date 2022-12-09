@@ -17,15 +17,5 @@
             "list-features": "void",
             "list-libraries": "void"
         }
-    },
-
-    "testTypeDependencies": {
-        "library": [ "library-paths" ]
-    },
-
-    "features": {
-        "library-paths": {
-            "output": [ "libraryPaths" ]
-        }
     }
 }

@@ -62,25 +62,27 @@ public:
 
     bool isNull() const;
 
-    int devType() const override;
+    int devType() const Q_DECL_OVERRIDE;
     uint size() const;
     const char* data() const;
     virtual void setData(const char* data, uint size);
 
     bool play(QPainter *p);
 
-    bool load(QIODevice *dev, const char *format = nullptr);
-    bool load(const QString &fileName, const char *format = nullptr);
-    bool save(QIODevice *dev, const char *format = nullptr);
-    bool save(const QString &fileName, const char *format = nullptr);
+    bool load(QIODevice *dev, const char *format = Q_NULLPTR);
+    bool load(const QString &fileName, const char *format = Q_NULLPTR);
+    bool save(QIODevice *dev, const char *format = Q_NULLPTR);
+    bool save(const QString &fileName, const char *format = Q_NULLPTR);
 
     QRect boundingRect() const;
     void setBoundingRect(const QRect &r);
 
     QPicture& operator=(const QPicture &p);
-    inline QPicture &operator=(QPicture &&other) noexcept
+#ifdef Q_COMPILER_RVALUE_REFS
+    inline QPicture &operator=(QPicture &&other) Q_DECL_NOEXCEPT
     { qSwap(d_ptr, other.d_ptr); return *this; }
-    inline void swap(QPicture &other) noexcept
+#endif
+    inline void swap(QPicture &other) Q_DECL_NOEXCEPT
     { d_ptr.swap(other.d_ptr); }
     void detach();
     bool isDetached() const;
@@ -88,20 +90,18 @@ public:
     friend Q_GUI_EXPORT QDataStream &operator<<(QDataStream &in, const QPicture &p);
     friend Q_GUI_EXPORT QDataStream &operator>>(QDataStream &in, QPicture &p);
 
-#if QT_DEPRECATED_SINCE(5, 10)
-    static QT_DEPRECATED const char* pictureFormat(const QString &fileName);
-    static QT_DEPRECATED QList<QByteArray> inputFormats();
-    static QT_DEPRECATED QList<QByteArray> outputFormats();
-    static QT_DEPRECATED QStringList inputFormatList();
-    static QT_DEPRECATED QStringList outputFormatList();
-#endif // QT_DEPRECATED_SINCE(5, 10)
+    static const char* pictureFormat(const QString &fileName);
+    static QList<QByteArray> inputFormats();
+    static QList<QByteArray> outputFormats();
+    static QStringList inputFormatList();
+    static QStringList outputFormatList();
 
-    QPaintEngine *paintEngine() const override;
+    QPaintEngine *paintEngine() const Q_DECL_OVERRIDE;
 
 protected:
     QPicture(QPicturePrivate &data);
 
-    int metric(PaintDeviceMetric m) const override;
+    int metric(PaintDeviceMetric m) const Q_DECL_OVERRIDE;
 
 private:
     bool exec(QPainter *p, QDataStream &ds, int i);

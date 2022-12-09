@@ -1,0 +1,99 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/json5-0.9.5-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/json5-0.9.5.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/json5-0.9.5.dist-info/METADATA",
+    "lib/python3.8/site-packages/json5-0.9.5.dist-info/RECORD",
+    "lib/python3.8/site-packages/json5-0.9.5.dist-info/WHEEL",
+    "lib/python3.8/site-packages/json5-0.9.5.dist-info/entry_points.txt",
+    "lib/python3.8/site-packages/json5-0.9.5.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/json5/__init__.py",
+    "lib/python3.8/site-packages/json5/__main__.py",
+    "lib/python3.8/site-packages/json5/arg_parser.py",
+    "lib/python3.8/site-packages/json5/host.py",
+    "lib/python3.8/site-packages/json5/lib.py",
+    "lib/python3.8/site-packages/json5/parser.py",
+    "lib/python3.8/site-packages/json5/tool.py",
+    "lib/python3.8/site-packages/json5/version.py",
+    "lib/python3.8/site-packages/json5/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/json5/__pycache__/__main__.cpython-38.pyc",
+    "lib/python3.8/site-packages/json5/__pycache__/arg_parser.cpython-38.pyc",
+    "lib/python3.8/site-packages/json5/__pycache__/host.cpython-38.pyc",
+    "lib/python3.8/site-packages/json5/__pycache__/lib.cpython-38.pyc",
+    "lib/python3.8/site-packages/json5/__pycache__/parser.cpython-38.pyc",
+    "lib/python3.8/site-packages/json5/__pycache__/tool.cpython-38.pyc",
+    "lib/python3.8/site-packages/json5/__pycache__/version.cpython-38.pyc",
+    "bin/pyjson5"
+  ],
+  "fn": "json5-0.9.5-py_0.conda",
+  "legacy_bz2_md5": "286447d8c97985ae62d3d60cbf5bcb4c",
+  "legacy_bz2_size": 22188,
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/json5-0.9.5-py_0",
+    "type": 1
+  },
+  "md5": "8059103c4ea13b8a57462e434054d05d",
+  "name": "json5",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/json5-0.9.5-py_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/json5/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/json5/__pycache__/__main__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/json5/__pycache__/arg_parser.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/json5/__pycache__/host.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/json5/__pycache__/lib.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/json5/__pycache__/parser.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/json5/__pycache__/tool.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/json5/__pycache__/version.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/pyjson5",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "json5==0.9.5=py_0",
+  "sha256": "35d594709d0dabbc6f64c72b2a75d901c9cc9d19a8b262767c59c7a23ada6e25",
+  "size": 22250,
+  "subdir": "noarch",
+  "timestamp": 1591727027261,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/json5-0.9.5-py_0.conda",
+  "version": "0.9.5"
+}

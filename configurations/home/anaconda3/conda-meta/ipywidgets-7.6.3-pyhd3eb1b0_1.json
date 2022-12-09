@@ -1,0 +1,363 @@
+{
+  "build": "pyhd3eb1b0_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "ipykernel >=4.5.1",
+    "ipython >=4.0.0",
+    "jupyterlab_widgets >=1.0.0",
+    "nbformat >=4.2.0",
+    "python",
+    "traitlets >=4.3.1,<6.0.0",
+    "widgetsnbextension >=3.5.0,<3.6.0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/ipywidgets-7.6.3-pyhd3eb1b0_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/ipywidgets-7.6.3.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/ipywidgets-7.6.3.dist-info/LICENSE",
+    "lib/python3.8/site-packages/ipywidgets-7.6.3.dist-info/METADATA",
+    "lib/python3.8/site-packages/ipywidgets-7.6.3.dist-info/RECORD",
+    "lib/python3.8/site-packages/ipywidgets-7.6.3.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/ipywidgets-7.6.3.dist-info/WHEEL",
+    "lib/python3.8/site-packages/ipywidgets-7.6.3.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/ipywidgets-7.6.3.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/ipywidgets/__init__.py",
+    "lib/python3.8/site-packages/ipywidgets/_version.py",
+    "lib/python3.8/site-packages/ipywidgets/embed.py",
+    "lib/python3.8/site-packages/ipywidgets/state.schema.json",
+    "lib/python3.8/site-packages/ipywidgets/tests/__init__.py",
+    "lib/python3.8/site-packages/ipywidgets/tests/test_embed.py",
+    "lib/python3.8/site-packages/ipywidgets/view.schema.json",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__init__.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/docutils.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/domwidget.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/interaction.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__init__.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/data/jupyter-logo-transparent.png",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_docutils.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_interaction.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_link.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_selectioncontainer.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_send_state.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_set_state.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_traits.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_widget.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_widget_box.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_widget_float.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_widget_image.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_widget_output.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_widget_selection.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_widget_string.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_widget_templates.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/test_widget_upload.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/utils.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/trait_types.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/util.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/valuewidget.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_bool.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_box.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_button.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_color.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_controller.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_core.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_date.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_description.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_float.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_int.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_layout.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_link.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_media.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_output.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_selection.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_selectioncontainer.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_string.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_style.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_templates.py",
+    "lib/python3.8/site-packages/ipywidgets/widgets/widget_upload.py",
+    "lib/python3.8/site-packages/ipywidgets/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/__pycache__/_version.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/__pycache__/embed.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/tests/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/tests/__pycache__/test_embed.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/docutils.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/domwidget.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/interaction.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_docutils.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_interaction.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_link.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_selectioncontainer.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_send_state.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_set_state.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_traits.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_box.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_float.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_image.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_output.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_selection.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_string.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_templates.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_upload.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/utils.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/trait_types.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/util.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/valuewidget.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_bool.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_box.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_button.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_color.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_controller.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_core.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_date.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_description.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_float.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_int.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_layout.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_link.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_media.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_output.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_selection.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_selectioncontainer.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_string.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_style.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_templates.cpython-38.pyc",
+    "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_upload.cpython-38.pyc"
+  ],
+  "fn": "ipywidgets-7.6.3-pyhd3eb1b0_1.conda",
+  "legacy_bz2_md5": "830a1afc86ec4deac134f3c67c56ec18",
+  "legacy_bz2_size": 111728,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/ipywidgets-7.6.3-pyhd3eb1b0_1",
+    "type": 1
+  },
+  "md5": "7a84479f991f15f3f960953540f2eac2",
+  "name": "ipywidgets",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/ipywidgets-7.6.3-pyhd3eb1b0_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/__pycache__/_version.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/__pycache__/embed.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/tests/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/tests/__pycache__/test_embed.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/docutils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/domwidget.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/interaction.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_docutils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_interaction.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_link.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_selectioncontainer.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_send_state.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_set_state.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_traits.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_box.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_float.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_image.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_output.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_selection.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_string.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_templates.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/test_widget_upload.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/tests/__pycache__/utils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/trait_types.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/util.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/valuewidget.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_bool.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_box.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_button.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_color.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_controller.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_core.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_date.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_description.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_float.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_int.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_layout.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_link.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_media.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_output.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_selection.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_selectioncontainer.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_string.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_style.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_templates.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/ipywidgets/widgets/__pycache__/widget_upload.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "ipywidgets==7.6.3=pyhd3eb1b0_1",
+  "sha256": "09b184ee99c714f6d585626adcb57d5913043ffa7616579aa5fdec9c35a8659c",
+  "size": 107628,
+  "subdir": "noarch",
+  "timestamp": 1610481971312,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/ipywidgets-7.6.3-pyhd3eb1b0_1.conda",
+  "version": "7.6.3"
+}

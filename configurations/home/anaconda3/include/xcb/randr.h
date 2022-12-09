@@ -90,9 +90,6 @@ typedef struct xcb_randr_bad_output_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_randr_bad_output_error_t;
 
 /** Opcode for xcb_randr_bad_crtc. */
@@ -105,9 +102,6 @@ typedef struct xcb_randr_bad_crtc_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_randr_bad_crtc_error_t;
 
 /** Opcode for xcb_randr_bad_mode. */
@@ -120,9 +114,6 @@ typedef struct xcb_randr_bad_mode_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_randr_bad_mode_error_t;
 
 /** Opcode for xcb_randr_bad_provider. */
@@ -135,9 +126,6 @@ typedef struct xcb_randr_bad_provider_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_randr_bad_provider_error_t;
 
 typedef enum xcb_randr_rotation_t {
@@ -4492,10 +4480,9 @@ xcb_randr_create_lease_reply (xcb_connection_t                 *c,
  * @param c      The connection
  * @param reply  The reply
  *
- * Returns a pointer to the array of reply fds of the reply.
+ * Returns the array of reply fds of the request asked by
  *
- * The returned value points into the reply and must not be free().
- * The fds are not managed by xcb. You must close() them before freeing the reply.
+ * The returned value must be freed by the caller using free().
  */
 int *
 xcb_randr_create_lease_reply_fds (xcb_connection_t                *c  /**< */,

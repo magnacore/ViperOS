@@ -25,22 +25,22 @@
 #
 
 # Configurable parameters set by autoconf
-version_string="Kerberos 5 release 1.19.2"
+version_string="Kerberos 5 release 1.18.2"
 
-prefix=/home/goldust/anaconda3
+prefix=/home/manuj/anaconda3
 exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib
 CC_LINK='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
 KDB5_DB_LIB=
-LDFLAGS='-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,-rpath,/home/goldust/anaconda3/lib -Wl,-rpath-link,/home/goldust/anaconda3/lib -L/home/goldust/anaconda3/lib -L/home/goldust/anaconda3/lib -Wl,--disable-new-dtags'
+LDFLAGS='-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,-rpath,/home/manuj/anaconda3/lib -Wl,-rpath-link,/home/manuj/anaconda3/lib -L/home/manuj/anaconda3/lib -L/home/manuj/anaconda3/lib -Wl,--disable-new-dtags'
 RPATH_FLAG='-Wl,--enable-new-dtags -Wl,-rpath -Wl,'
 PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
 PTHREAD_CFLAGS='-pthread'
 DL_LIB='-ldl'
 DEFCCNAME='FILE:/tmp/krb5cc_%{uid}'
 DEFKTNAME='FILE:/etc/krb5.keytab'
-DEFCKTNAME='FILE:/home/goldust/anaconda3/var/krb5/user/%{euid}/client.keytab'
+DEFCKTNAME='FILE:/opt/conda/var/krb5/user/%{euid}/client.keytab'
 
 LIBS='-lcrypto -lresolv '
 GEN_LIB=
@@ -70,7 +70,8 @@ while test $# != 0; do
 	--defktname)
 	    do_defktname=1
 	    ;;
-	--deps) # historically a no-op
+	--deps)
+	    do_deps=1
 	    ;;
 	--exec-prefix)
 	    do_exec_prefix=1

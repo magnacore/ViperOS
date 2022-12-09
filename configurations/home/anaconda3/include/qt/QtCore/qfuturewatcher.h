@@ -41,9 +41,10 @@
 #define QFUTUREWATCHER_H
 
 #include <QtCore/qfuture.h>
-#include <QtCore/qobject.h>
 
-QT_REQUIRE_CONFIG(future);
+#ifndef QT_NO_QFUTURE
+
+#include <QtCore/qobject.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -57,7 +58,7 @@ class Q_CORE_EXPORT QFutureWatcherBase : public QObject
     Q_DECLARE_PRIVATE(QFutureWatcherBase)
 
 public:
-    explicit QFutureWatcherBase(QObject *parent = nullptr);
+    explicit QFutureWatcherBase(QObject *parent = Q_NULLPTR);
     // de-inline dtor
 
     int progressValue() const;
@@ -75,7 +76,7 @@ public:
 
     void setPendingResultsLimit(int limit);
 
-    bool event(QEvent *event) override;
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     void started();
@@ -97,8 +98,8 @@ public Q_SLOTS:
     void togglePaused();
 
 protected:
-    void connectNotify (const QMetaMethod &signal) override;
-    void disconnectNotify (const QMetaMethod &signal) override;
+    void connectNotify (const QMetaMethod &signal) Q_DECL_OVERRIDE;
+    void disconnectNotify (const QMetaMethod &signal) Q_DECL_OVERRIDE;
 
     // called from setFuture() implemented in template sub-classes
     void connectOutputInterface();
@@ -165,8 +166,8 @@ public Q_SLOTS:
 
 private:
     QFuture<T> m_future;
-    const QFutureInterfaceBase &futureInterface() const override { return m_future.d; }
-    QFutureInterfaceBase &futureInterface() override { return m_future.d; }
+    const QFutureInterfaceBase &futureInterface() const Q_DECL_OVERRIDE { return m_future.d; }
+    QFutureInterfaceBase &futureInterface() Q_DECL_OVERRIDE { return m_future.d; }
 };
 
 template <typename T>
@@ -184,7 +185,7 @@ template <>
 class QFutureWatcher<void> : public QFutureWatcherBase
 {
 public:
-    explicit QFutureWatcher(QObject *_parent = nullptr)
+    explicit QFutureWatcher(QObject *_parent = Q_NULLPTR)
         : QFutureWatcherBase(_parent)
     { }
     ~QFutureWatcher()
@@ -196,8 +197,8 @@ public:
 
 private:
     QFuture<void> m_future;
-    const QFutureInterfaceBase &futureInterface() const override { return m_future.d; }
-    QFutureInterfaceBase &futureInterface() override { return m_future.d; }
+    const QFutureInterfaceBase &futureInterface() const Q_DECL_OVERRIDE { return m_future.d; }
+    QFutureInterfaceBase &futureInterface() Q_DECL_OVERRIDE { return m_future.d; }
 };
 
 Q_INLINE_TEMPLATE void QFutureWatcher<void>::setFuture(const QFuture<void> &_future)
@@ -211,5 +212,6 @@ Q_INLINE_TEMPLATE void QFutureWatcher<void>::setFuture(const QFuture<void> &_fut
 }
 
 QT_END_NAMESPACE
+#endif // QT_NO_QFUTURE
 
 #endif // QFUTUREWATCHER_H

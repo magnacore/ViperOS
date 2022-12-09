@@ -70,7 +70,7 @@ public:
     bool write(const QTextDocument *document);
     bool write(const QTextDocumentFragment &fragment);
 
-#if QT_CONFIG(textcodec)
+#ifndef QT_NO_TEXTCODEC
     void setCodec(QTextCodec *codec);
     QTextCodec *codec() const;
 #endif

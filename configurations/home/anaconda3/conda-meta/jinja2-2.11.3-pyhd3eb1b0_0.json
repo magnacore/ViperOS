@@ -8,194 +8,194 @@
     "python",
     "setuptools"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/jinja2-2.11.3-pyhd3eb1b0_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/jinja2-2.11.3-pyhd3eb1b0_0",
   "features": "",
   "files": [
-    "lib/python3.9/site-packages/Jinja2-2.11.3.dist-info/INSTALLER",
-    "lib/python3.9/site-packages/Jinja2-2.11.3.dist-info/LICENSE.rst",
-    "lib/python3.9/site-packages/Jinja2-2.11.3.dist-info/METADATA",
-    "lib/python3.9/site-packages/Jinja2-2.11.3.dist-info/RECORD",
-    "lib/python3.9/site-packages/Jinja2-2.11.3.dist-info/REQUESTED",
-    "lib/python3.9/site-packages/Jinja2-2.11.3.dist-info/WHEEL",
-    "lib/python3.9/site-packages/Jinja2-2.11.3.dist-info/direct_url.json",
-    "lib/python3.9/site-packages/Jinja2-2.11.3.dist-info/entry_points.txt",
-    "lib/python3.9/site-packages/Jinja2-2.11.3.dist-info/top_level.txt",
-    "lib/python3.9/site-packages/jinja2/__init__.py",
-    "lib/python3.9/site-packages/jinja2/_compat.py",
-    "lib/python3.9/site-packages/jinja2/_identifier.py",
-    "lib/python3.9/site-packages/jinja2/asyncfilters.py",
-    "lib/python3.9/site-packages/jinja2/asyncsupport.py",
-    "lib/python3.9/site-packages/jinja2/bccache.py",
-    "lib/python3.9/site-packages/jinja2/compiler.py",
-    "lib/python3.9/site-packages/jinja2/constants.py",
-    "lib/python3.9/site-packages/jinja2/debug.py",
-    "lib/python3.9/site-packages/jinja2/defaults.py",
-    "lib/python3.9/site-packages/jinja2/environment.py",
-    "lib/python3.9/site-packages/jinja2/exceptions.py",
-    "lib/python3.9/site-packages/jinja2/ext.py",
-    "lib/python3.9/site-packages/jinja2/filters.py",
-    "lib/python3.9/site-packages/jinja2/idtracking.py",
-    "lib/python3.9/site-packages/jinja2/lexer.py",
-    "lib/python3.9/site-packages/jinja2/loaders.py",
-    "lib/python3.9/site-packages/jinja2/meta.py",
-    "lib/python3.9/site-packages/jinja2/nativetypes.py",
-    "lib/python3.9/site-packages/jinja2/nodes.py",
-    "lib/python3.9/site-packages/jinja2/optimizer.py",
-    "lib/python3.9/site-packages/jinja2/parser.py",
-    "lib/python3.9/site-packages/jinja2/runtime.py",
-    "lib/python3.9/site-packages/jinja2/sandbox.py",
-    "lib/python3.9/site-packages/jinja2/tests.py",
-    "lib/python3.9/site-packages/jinja2/utils.py",
-    "lib/python3.9/site-packages/jinja2/visitor.py",
-    "lib/python3.9/site-packages/jinja2/__pycache__/__init__.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/_compat.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/_identifier.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/asyncfilters.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/asyncsupport.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/bccache.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/compiler.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/constants.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/debug.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/defaults.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/environment.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/exceptions.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/ext.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/filters.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/idtracking.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/lexer.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/loaders.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/meta.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/nativetypes.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/nodes.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/optimizer.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/parser.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/runtime.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/sandbox.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/tests.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/utils.cpython-39.pyc",
-    "lib/python3.9/site-packages/jinja2/__pycache__/visitor.cpython-39.pyc"
+    "lib/python3.8/site-packages/Jinja2-2.11.3.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/Jinja2-2.11.3.dist-info/LICENSE.rst",
+    "lib/python3.8/site-packages/Jinja2-2.11.3.dist-info/METADATA",
+    "lib/python3.8/site-packages/Jinja2-2.11.3.dist-info/RECORD",
+    "lib/python3.8/site-packages/Jinja2-2.11.3.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/Jinja2-2.11.3.dist-info/WHEEL",
+    "lib/python3.8/site-packages/Jinja2-2.11.3.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/Jinja2-2.11.3.dist-info/entry_points.txt",
+    "lib/python3.8/site-packages/Jinja2-2.11.3.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/jinja2/__init__.py",
+    "lib/python3.8/site-packages/jinja2/_compat.py",
+    "lib/python3.8/site-packages/jinja2/_identifier.py",
+    "lib/python3.8/site-packages/jinja2/asyncfilters.py",
+    "lib/python3.8/site-packages/jinja2/asyncsupport.py",
+    "lib/python3.8/site-packages/jinja2/bccache.py",
+    "lib/python3.8/site-packages/jinja2/compiler.py",
+    "lib/python3.8/site-packages/jinja2/constants.py",
+    "lib/python3.8/site-packages/jinja2/debug.py",
+    "lib/python3.8/site-packages/jinja2/defaults.py",
+    "lib/python3.8/site-packages/jinja2/environment.py",
+    "lib/python3.8/site-packages/jinja2/exceptions.py",
+    "lib/python3.8/site-packages/jinja2/ext.py",
+    "lib/python3.8/site-packages/jinja2/filters.py",
+    "lib/python3.8/site-packages/jinja2/idtracking.py",
+    "lib/python3.8/site-packages/jinja2/lexer.py",
+    "lib/python3.8/site-packages/jinja2/loaders.py",
+    "lib/python3.8/site-packages/jinja2/meta.py",
+    "lib/python3.8/site-packages/jinja2/nativetypes.py",
+    "lib/python3.8/site-packages/jinja2/nodes.py",
+    "lib/python3.8/site-packages/jinja2/optimizer.py",
+    "lib/python3.8/site-packages/jinja2/parser.py",
+    "lib/python3.8/site-packages/jinja2/runtime.py",
+    "lib/python3.8/site-packages/jinja2/sandbox.py",
+    "lib/python3.8/site-packages/jinja2/tests.py",
+    "lib/python3.8/site-packages/jinja2/utils.py",
+    "lib/python3.8/site-packages/jinja2/visitor.py",
+    "lib/python3.8/site-packages/jinja2/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/_compat.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/_identifier.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/asyncfilters.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/asyncsupport.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/bccache.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/compiler.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/constants.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/debug.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/defaults.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/environment.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/exceptions.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/ext.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/filters.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/idtracking.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/lexer.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/loaders.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/meta.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/nativetypes.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/nodes.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/optimizer.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/parser.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/runtime.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/sandbox.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/tests.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/utils.cpython-38.pyc",
+    "lib/python3.8/site-packages/jinja2/__pycache__/visitor.cpython-38.pyc"
   ],
   "fn": "jinja2-2.11.3-pyhd3eb1b0_0.conda",
   "legacy_bz2_md5": "e3d2afca7f53449172cb027b2164df6b",
   "legacy_bz2_size": 96029,
   "license": "BSD-3-Clause",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/jinja2-2.11.3-pyhd3eb1b0_0",
+    "source": "/home/manuj/anaconda3/pkgs/jinja2-2.11.3-pyhd3eb1b0_0",
     "type": 1
   },
   "md5": "ca09ae9e8fd75176f050af93410ef8ac",
   "name": "jinja2",
   "noarch": "python",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/jinja2-2.11.3-pyhd3eb1b0_0.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/jinja2-2.11.3-pyhd3eb1b0_0.conda",
   "package_type": "noarch_python",
   "paths_data": {
     "paths": [
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/__init__.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/__init__.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/_compat.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/_compat.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/_identifier.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/_identifier.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/asyncfilters.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/asyncfilters.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/asyncsupport.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/asyncsupport.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/bccache.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/bccache.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/compiler.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/compiler.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/constants.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/constants.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/debug.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/debug.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/defaults.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/defaults.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/environment.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/environment.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/exceptions.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/exceptions.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/ext.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/ext.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/filters.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/filters.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/idtracking.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/idtracking.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/lexer.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/lexer.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/loaders.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/loaders.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/meta.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/meta.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/nativetypes.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/nativetypes.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/nodes.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/nodes.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/optimizer.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/optimizer.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/parser.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/parser.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/runtime.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/runtime.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/sandbox.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/sandbox.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/tests.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/tests.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/utils.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/utils.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/jinja2/__pycache__/visitor.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/jinja2/__pycache__/visitor.cpython-38.pyc",
         "path_type": "pyc_file"
       }
     ],

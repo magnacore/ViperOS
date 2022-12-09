@@ -1,0 +1,53 @@
+{
+  "build": "h7b6447c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/pixman-0.40.0-h7b6447c_0",
+  "features": "",
+  "files": [
+    "include/pixman-1/pixman-version.h",
+    "include/pixman-1/pixman.h",
+    "lib/libpixman-1.a",
+    "lib/libpixman-1.so",
+    "lib/libpixman-1.so.0",
+    "lib/libpixman-1.so.0.40.0",
+    "lib/pkgconfig/pixman-1.pc"
+  ],
+  "fn": "pixman-0.40.0-h7b6447c_0.conda",
+  "legacy_bz2_md5": "bb906197b503ff0389a830bb828b7651",
+  "legacy_bz2_size": 642711,
+  "license": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/pixman-0.40.0-h7b6447c_0",
+    "type": 1
+  },
+  "md5": "d0795722579384430a722ab916695e3e",
+  "name": "pixman",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/pixman-0.40.0-h7b6447c_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/pixman-1.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "dd1971ed958e78827a3036b1d62df48f03101814707fa82fa8da34a4f29de778",
+        "sha256_in_prefix": "f5d305e495654d4bf11b4d2d76d070ace96b02b7179367d3600ccc937e3394b9",
+        "size_in_bytes": 254
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pixman==0.40.0=h7b6447c_0",
+  "sha256": "c0092d518567b55bc88fdc2f85fa63f2dd2aefa278cf1a4f417394f3339967bb",
+  "size": 378986,
+  "subdir": "linux-64",
+  "timestamp": 1592924281332,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pixman-0.40.0-h7b6447c_0.conda",
+  "version": "0.40.0"
+}

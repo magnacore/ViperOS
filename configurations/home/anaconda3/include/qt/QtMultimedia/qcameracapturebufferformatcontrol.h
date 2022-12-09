@@ -59,10 +59,10 @@ public:
     virtual void setBufferFormat(QVideoFrame::PixelFormat format) = 0;
 
 Q_SIGNALS:
-    void bufferFormatChanged(QVideoFrame::PixelFormat format);
+    void bufferFormatChanged(QVideoFrame::PixelFormat);
 
 protected:
-    explicit QCameraCaptureBufferFormatControl(QObject *parent = nullptr);
+    explicit QCameraCaptureBufferFormatControl(QObject *parent = Q_NULLPTR);
 };
 
 #define QCameraCaptureBufferFormatControl_iid "org.qt-project.qt.cameracapturebufferformatcontrol/5.0"

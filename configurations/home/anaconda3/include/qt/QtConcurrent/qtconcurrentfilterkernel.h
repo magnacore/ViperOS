@@ -3,7 +3,7 @@
 ** Copyright (C) 2016 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
-** This file is part of the QtConcurrent module of the Qt Toolkit.
+** This file is part of the QtCore module of the Qt Toolkit.
 **
 ** $QT_BEGIN_LICENSE:LGPL$
 ** Commercial License Usage
@@ -42,7 +42,7 @@
 
 #include <QtConcurrent/qtconcurrent_global.h>
 
-#if !defined(QT_NO_CONCURRENT) || defined (Q_CLANG_QDOC)
+#ifndef QT_NO_CONCURRENT
 
 #include <QtConcurrent/qtconcurrentiteratekernel.h>
 #include <QtConcurrent/qtconcurrentmapkernel.h>
@@ -51,6 +51,7 @@
 QT_BEGIN_NAMESPACE
 
 
+#ifndef Q_QDOC
 
 namespace QtConcurrent {
 
@@ -266,7 +267,7 @@ public:
         if (keep(*it))
             this->reportResult(&(*it), index);
         else
-            this->reportResult(nullptr, index);
+            this->reportResult(0, index);
         return false;
     }
 
@@ -291,7 +292,6 @@ public:
     }
 };
 
-//! [QtConcurrent-2]
 template <typename Iterator, typename KeepFunctor>
 inline
 ThreadEngineStarter<typename qValueType<Iterator>::value_type>
@@ -300,7 +300,6 @@ startFiltered(Iterator begin, Iterator end, KeepFunctor functor)
     return startThreadEngine(new FilteredEachKernel<Iterator, KeepFunctor>(begin, end, functor));
 }
 
-//! [QtConcurrent-3]
 template <typename Sequence, typename KeepFunctor>
 inline ThreadEngineStarter<typename Sequence::value_type>
 startFiltered(const Sequence &sequence, KeepFunctor functor)
@@ -312,7 +311,6 @@ startFiltered(const Sequence &sequence, KeepFunctor functor)
         return startThreadEngine(new SequenceHolderType(sequence, functor));
 }
 
-//! [QtConcurrent-4]
 template <typename ResultType, typename Sequence, typename MapFunctor, typename ReduceFunctor>
 inline ThreadEngineStarter<ResultType> startFilteredReduced(const Sequence & sequence,
                                                            MapFunctor mapFunctor, ReduceFunctor reduceFunctor,
@@ -326,7 +324,6 @@ inline ThreadEngineStarter<ResultType> startFilteredReduced(const Sequence & seq
 }
 
 
-//! [QtConcurrent-5]
 template <typename ResultType, typename Iterator, typename MapFunctor, typename ReduceFunctor>
 inline ThreadEngineStarter<ResultType> startFilteredReduced(Iterator begin, Iterator end,
                                                            MapFunctor mapFunctor, ReduceFunctor reduceFunctor,
@@ -340,6 +337,7 @@ inline ThreadEngineStarter<ResultType> startFilteredReduced(Iterator begin, Iter
 
 } // namespace QtConcurrent
 
+#endif // Q_QDOC
 
 QT_END_NAMESPACE
 

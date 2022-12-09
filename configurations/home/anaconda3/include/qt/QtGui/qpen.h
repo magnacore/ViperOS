@@ -65,16 +65,18 @@ public:
     QPen(const QColor &color);
     QPen(const QBrush &brush, qreal width, Qt::PenStyle s = Qt::SolidLine,
          Qt::PenCapStyle c = Qt::SquareCap, Qt::PenJoinStyle j = Qt::BevelJoin);
-    QPen(const QPen &pen) noexcept;
+    QPen(const QPen &pen) Q_DECL_NOTHROW;
 
     ~QPen();
 
-    QPen &operator=(const QPen &pen) noexcept;
-    QPen(QPen &&other) noexcept
-        : d(other.d) { other.d = nullptr; }
-    QPen &operator=(QPen &&other) noexcept
+    QPen &operator=(const QPen &pen) Q_DECL_NOTHROW;
+#ifdef Q_COMPILER_RVALUE_REFS
+    QPen(QPen &&other) Q_DECL_NOTHROW
+        : d(other.d) { other.d = Q_NULLPTR; }
+    QPen &operator=(QPen &&other) Q_DECL_NOTHROW
     { qSwap(d, other.d); return *this; }
-    void swap(QPen &other) noexcept { qSwap(d, other.d); }
+#endif
+    void swap(QPen &other) Q_DECL_NOTHROW { qSwap(d, other.d); }
 
     Qt::PenStyle style() const;
     void setStyle(Qt::PenStyle);

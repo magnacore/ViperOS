@@ -56,7 +56,6 @@ QT_BEGIN_NAMESPACE
 class QSvgRendererPrivate;
 class QPainter;
 class QByteArray;
-class QTransform;
 
 class Q_SVG_EXPORT QSvgRenderer : public QObject
 {
@@ -65,12 +64,11 @@ class Q_SVG_EXPORT QSvgRenderer : public QObject
     Q_PROPERTY(QRectF viewBox READ viewBoxF WRITE setViewBox)
     Q_PROPERTY(int framesPerSecond READ framesPerSecond WRITE setFramesPerSecond)
     Q_PROPERTY(int currentFrame READ currentFrame WRITE setCurrentFrame)
-    Q_PROPERTY(Qt::AspectRatioMode aspectRatioMode READ aspectRatioMode WRITE setAspectRatioMode)
 public:
-    QSvgRenderer(QObject *parent = nullptr);
-    QSvgRenderer(const QString &filename, QObject *parent = nullptr);
-    QSvgRenderer(const QByteArray &contents, QObject *parent = nullptr);
-    QSvgRenderer(QXmlStreamReader *contents, QObject *parent = nullptr);
+    QSvgRenderer(QObject *parent = Q_NULLPTR);
+    QSvgRenderer(const QString &filename, QObject *parent = Q_NULLPTR);
+    QSvgRenderer(const QByteArray &contents, QObject *parent = Q_NULLPTR);
+    QSvgRenderer(QXmlStreamReader *contents, QObject *parent = Q_NULLPTR);
     ~QSvgRenderer();
 
     bool isValid() const;
@@ -82,9 +80,6 @@ public:
     void setViewBox(const QRect &viewbox);
     void setViewBox(const QRectF &viewbox);
 
-    Qt::AspectRatioMode aspectRatioMode() const;
-    void setAspectRatioMode(Qt::AspectRatioMode mode);
-
     bool animated() const;
     int framesPerSecond() const;
     void setFramesPerSecond(int num);
@@ -94,11 +89,7 @@ public:
 
     QRectF boundsOnElement(const QString &id) const;
     bool elementExists(const QString &id) const;
-#if QT_DEPRECATED_SINCE(5, 15)
-    QT_DEPRECATED_X("Use transformForElement()")
     QMatrix matrixForElement(const QString &id) const;
-#endif // QT_DEPRECATED_SINCE(5, 15)
-    QTransform transformForElement(const QString &id) const;
 
 public Q_SLOTS:
     bool load(const QString &filename);

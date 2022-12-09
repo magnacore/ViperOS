@@ -31,9 +31,9 @@
 
 #include <QtDesigner/sdk_global.h>
 
-#include <QtCore/qobject.h>
-#include <QtCore/qlist.h>
-#include <QtCore/qhash.h>
+#include <QtCore/QObject>
+#include <QtCore/QList>
+#include <QtCore/QHash>
 
 QT_BEGIN_NAMESPACE
 
@@ -62,7 +62,7 @@ class QDESIGNER_SDK_EXPORT QDesignerMetaDataBaseInterface: public QObject
 {
     Q_OBJECT
 public:
-    explicit QDesignerMetaDataBaseInterface(QObject *parent = nullptr);
+    explicit QDesignerMetaDataBaseInterface(QObject *parent = Q_NULLPTR);
     virtual ~QDesignerMetaDataBaseInterface();
 
     virtual QDesignerMetaDataBaseItemInterface *item(QObject *object) const = 0;

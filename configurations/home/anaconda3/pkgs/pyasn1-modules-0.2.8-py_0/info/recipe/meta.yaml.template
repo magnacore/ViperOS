@@ -1,0 +1,46 @@
+{% set name = "pyasn1-modules" %}
+{% set version = "0.2.8" %}
+{% set bundle = "tar.gz" %}
+{% set sha256 = "905f84c712230b2c592c19470d3ca8d552de726050d1d1716282a1f6146be65e" %}
+{% set build = 0 %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  sha256: {{ sha256 }}
+
+build:
+  noarch: python
+  number: {{ build }}
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - pyasn1 >=0.4.6,<0.5.0
+
+test:
+  imports:
+    - pyasn1_modules
+
+about:
+  home: http://pyasn1.sourceforge.net/
+  license_file: LICENSE.txt
+  license: BSD 2-Clause
+  license_family: BSD
+  summary: A collection of ASN.1-based protocols modules.
+  dev_url: https://github.com/etingof/pyasn1-modules
+  doc_url: http://pyasn1.sourceforge.net/
+
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - pmlandwehr

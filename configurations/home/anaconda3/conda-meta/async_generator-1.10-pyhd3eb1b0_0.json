@@ -1,0 +1,96 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >2.7"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/async_generator-1.10-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/async_generator-1.10.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/async_generator-1.10.dist-info/LICENSE",
+    "lib/python3.8/site-packages/async_generator-1.10.dist-info/LICENSE.APACHE2",
+    "lib/python3.8/site-packages/async_generator-1.10.dist-info/LICENSE.MIT",
+    "lib/python3.8/site-packages/async_generator-1.10.dist-info/METADATA",
+    "lib/python3.8/site-packages/async_generator-1.10.dist-info/RECORD",
+    "lib/python3.8/site-packages/async_generator-1.10.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/async_generator-1.10.dist-info/WHEEL",
+    "lib/python3.8/site-packages/async_generator-1.10.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/async_generator-1.10.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/async_generator/__init__.py",
+    "lib/python3.8/site-packages/async_generator/_impl.py",
+    "lib/python3.8/site-packages/async_generator/_tests/__init__.py",
+    "lib/python3.8/site-packages/async_generator/_tests/conftest.py",
+    "lib/python3.8/site-packages/async_generator/_tests/test_async_generator.py",
+    "lib/python3.8/site-packages/async_generator/_tests/test_util.py",
+    "lib/python3.8/site-packages/async_generator/_util.py",
+    "lib/python3.8/site-packages/async_generator/_version.py",
+    "lib/python3.8/site-packages/async_generator/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/async_generator/__pycache__/_impl.cpython-38.pyc",
+    "lib/python3.8/site-packages/async_generator/_tests/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/async_generator/_tests/__pycache__/conftest.cpython-38.pyc",
+    "lib/python3.8/site-packages/async_generator/_tests/__pycache__/test_async_generator.cpython-38.pyc",
+    "lib/python3.8/site-packages/async_generator/_tests/__pycache__/test_util.cpython-38.pyc",
+    "lib/python3.8/site-packages/async_generator/__pycache__/_util.cpython-38.pyc",
+    "lib/python3.8/site-packages/async_generator/__pycache__/_version.cpython-38.pyc"
+  ],
+  "fn": "async_generator-1.10-pyhd3eb1b0_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/async_generator-1.10-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "c1a2aee62319a0fd9a40460b5c1d3b54",
+  "name": "async_generator",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/async_generator-1.10-pyhd3eb1b0_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/async_generator/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/async_generator/__pycache__/_impl.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/async_generator/_tests/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/async_generator/_tests/__pycache__/conftest.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/async_generator/_tests/__pycache__/test_async_generator.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/async_generator/_tests/__pycache__/test_util.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/async_generator/__pycache__/_util.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/async_generator/__pycache__/_version.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "async_generator==1.10=pyhd3eb1b0_0",
+  "sha256": "ca065e670afbbaa8d99a0cbae8f31ad4320c92dfb9a3d148f302f168033f34ac",
+  "size": 23642,
+  "subdir": "noarch",
+  "timestamp": 1611928005518,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/async_generator-1.10-pyhd3eb1b0_0.tar.bz2",
+  "version": "1.10"
+}

@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,6 +15,8 @@
  */
 #ifndef LIEF_MACHO_SOURCE_VERSION_COMMAND_H_
 #define LIEF_MACHO_SOURCE_VERSION_COMMAND_H_
+#include <string>
+#include <vector>
 #include <iostream>
 #include <array>
 
@@ -25,36 +27,36 @@
 
 namespace LIEF {
 namespace MachO {
-struct source_version_command;
+
 class LIEF_API SourceVersion : public LoadCommand {
 
   public:
-  //! @brief Version is an array of **5** integers
-  using version_t = std::array<uint32_t, 5>;
+    //! @brief Version is an array of **5** integers
+    using version_t = std::array<uint32_t, 5>;
 
-  SourceVersion(void);
-  SourceVersion(const source_version_command *version_cmd);
+    SourceVersion(void);
+    SourceVersion(const source_version_command *version_cmd);
 
-  SourceVersion& operator=(const SourceVersion& copy);
-  SourceVersion(const SourceVersion& copy);
+    SourceVersion& operator=(const SourceVersion& copy);
+    SourceVersion(const SourceVersion& copy);
 
-  virtual SourceVersion* clone(void) const override;
+    virtual SourceVersion* clone(void) const override;
 
-  virtual ~SourceVersion(void);
+    virtual ~SourceVersion(void);
 
-  //! @brief Return the version as an array
-  const SourceVersion::version_t& version(void) const;
-  void version(const SourceVersion::version_t& version);
+    //! @brief Return the version as an array
+    const SourceVersion::version_t& version(void) const;
+    void version(const SourceVersion::version_t& version);
 
-  bool operator==(const SourceVersion& rhs) const;
-  bool operator!=(const SourceVersion& rhs) const;
+    bool operator==(const SourceVersion& rhs) const;
+    bool operator!=(const SourceVersion& rhs) const;
 
-  virtual void accept(Visitor& visitor) const override;
+    virtual void accept(Visitor& visitor) const override;
 
-  virtual std::ostream& print(std::ostream& os) const override;
+    virtual std::ostream& print(std::ostream& os) const override;
 
   private:
-  SourceVersion::version_t version_;
+    SourceVersion::version_t version_;
 };
 
 }

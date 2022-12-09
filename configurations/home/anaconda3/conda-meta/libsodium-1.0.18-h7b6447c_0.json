@@ -6,7 +6,7 @@
   "depends": [
     "libgcc-ng >=7.3.0"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/libsodium-1.0.18-h7b6447c_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/libsodium-1.0.18-h7b6447c_0",
   "features": "",
   "files": [
     "include/sodium.h",
@@ -83,12 +83,12 @@
   "legacy_bz2_size": 396743,
   "license": "ISC",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/libsodium-1.0.18-h7b6447c_0",
+    "source": "/home/manuj/anaconda3/pkgs/libsodium-1.0.18-h7b6447c_0",
     "type": 1
   },
   "md5": "c8783b20f0e14bc1d701352c26c264d5",
   "name": "libsodium",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/libsodium-1.0.18-h7b6447c_0.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/libsodium-1.0.18-h7b6447c_0.conda",
   "paths_data": {
     "paths": [
       {
@@ -97,7 +97,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
         "sha256": "a0cc4026253e4c13bf681e64fa36e40388db95a5f2f2cb897e713ec20e1f7ef5",
-        "sha256_in_prefix": "6050a7be285a1340092d5f4ec6b4e7bb7b191d99db7b166dd12f510655033ea0",
+        "sha256_in_prefix": "ab60ae6dcde8d03b84380669833f46c4d3bab1efa0c3c0c7f8e06ef22346cbb2",
         "size_in_bytes": 280
       }
     ],

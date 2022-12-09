@@ -1,4 +1,4 @@
-QT.serialbus.VERSION = 5.15.2
+QT.serialbus.VERSION = 5.9.7
 QT.serialbus.name = QtSerialBus
 QT.serialbus.module = Qt5SerialBus
 QT.serialbus.libs = $$QT_MODULE_LIB_BASE
@@ -11,7 +11,7 @@ QT.serialbus.run_depends = network serialport
 QT.serialbus.uses =
 QT.serialbus.module_config = v2
 QT.serialbus.DEFINES = QT_SERIALBUS_LIB
-QT.serialbus.enabled_features = modbus-serialport
+QT.serialbus.enabled_features =
 QT.serialbus.disabled_features =
 QT_CONFIG +=
 QT_MODULES += serialbus

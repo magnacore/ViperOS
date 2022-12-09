@@ -48,7 +48,7 @@ namespace Qt3DRender {
 
 class QDirectionalLightPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QDirectionalLight : public QAbstractLight
+class QT3DRENDERSHARED_EXPORT QDirectionalLight : public QAbstractLight
 {
     Q_OBJECT
     Q_PROPERTY(QVector3D worldDirection READ worldDirection WRITE setWorldDirection NOTIFY worldDirectionChanged)

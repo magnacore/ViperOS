@@ -40,14 +40,8 @@
 #ifndef QSHAREDMEMORY_H
 #define QSHAREDMEMORY_H
 
-#include <QtCore/qglobal.h>
-#ifndef QT_NO_QOBJECT
-# include <QtCore/qobject.h>
-#else
-# include <QtCore/qobjectdefs.h>
-# include <QtCore/qscopedpointer.h>
-# include <QtCore/qstring.h>
-#endif
+#include <QtCore/qobject.h>
+
 QT_BEGIN_NAMESPACE
 
 
@@ -55,14 +49,9 @@ QT_BEGIN_NAMESPACE
 
 class QSharedMemoryPrivate;
 
-class Q_CORE_EXPORT QSharedMemory
-#ifndef QT_NO_QOBJECT
-    : public QObject
-#endif
+class Q_CORE_EXPORT QSharedMemory : public QObject
 {
-#ifndef QT_NO_QOBJECT
     Q_OBJECT
-#endif
     Q_DECLARE_PRIVATE(QSharedMemory)
 
 public:
@@ -85,17 +74,8 @@ public:
         UnknownError
     };
 
-#ifndef QT_NO_QOBJECT
-    QSharedMemory(QObject *parent = nullptr);
-    QSharedMemory(const QString &key, QObject *parent = nullptr);
-#else
-    QSharedMemory();
-    QSharedMemory(const QString &key);
-    static QString tr(const char * str)
-    {
-        return QString::fromLatin1(str);
-    }
-#endif
+    QSharedMemory(QObject *parent = Q_NULLPTR);
+    QSharedMemory(const QString &key, QObject *parent = Q_NULLPTR);
     ~QSharedMemory();
 
     void setKey(const QString &key);
@@ -124,9 +104,6 @@ public:
 
 private:
     Q_DISABLE_COPY(QSharedMemory)
-#ifdef QT_NO_QOBJECT
-    QScopedPointer<QSharedMemoryPrivate> d_ptr;
-#endif
 };
 
 #endif // QT_NO_SHAREDMEMORY

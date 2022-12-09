@@ -98,8 +98,6 @@ private:
     QSharedDataPointer<QPlaceSearchRequestPrivate> d_ptr;
     inline QPlaceSearchRequestPrivate *d_func();
     inline const QPlaceSearchRequestPrivate *d_func() const;
-
-    friend class QPlaceSearchRequestPrivate;
 };
 
 QT_END_NAMESPACE

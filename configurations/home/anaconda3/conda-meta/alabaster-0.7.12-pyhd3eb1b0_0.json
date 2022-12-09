@@ -6,56 +6,56 @@
   "depends": [
     "python"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/alabaster-0.7.12-pyhd3eb1b0_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/alabaster-0.7.12-pyhd3eb1b0_0",
   "features": "",
   "files": [
-    "lib/python3.9/site-packages/alabaster-0.7.12.dist-info/INSTALLER",
-    "lib/python3.9/site-packages/alabaster-0.7.12.dist-info/LICENSE",
-    "lib/python3.9/site-packages/alabaster-0.7.12.dist-info/METADATA",
-    "lib/python3.9/site-packages/alabaster-0.7.12.dist-info/RECORD",
-    "lib/python3.9/site-packages/alabaster-0.7.12.dist-info/REQUESTED",
-    "lib/python3.9/site-packages/alabaster-0.7.12.dist-info/WHEEL",
-    "lib/python3.9/site-packages/alabaster-0.7.12.dist-info/direct_url.json",
-    "lib/python3.9/site-packages/alabaster-0.7.12.dist-info/entry_points.txt",
-    "lib/python3.9/site-packages/alabaster-0.7.12.dist-info/top_level.txt",
-    "lib/python3.9/site-packages/alabaster/__init__.py",
-    "lib/python3.9/site-packages/alabaster/_version.py",
-    "lib/python3.9/site-packages/alabaster/about.html",
-    "lib/python3.9/site-packages/alabaster/donate.html",
-    "lib/python3.9/site-packages/alabaster/layout.html",
-    "lib/python3.9/site-packages/alabaster/navigation.html",
-    "lib/python3.9/site-packages/alabaster/relations.html",
-    "lib/python3.9/site-packages/alabaster/static/alabaster.css_t",
-    "lib/python3.9/site-packages/alabaster/static/custom.css",
-    "lib/python3.9/site-packages/alabaster/support.py",
-    "lib/python3.9/site-packages/alabaster/theme.conf",
-    "lib/python3.9/site-packages/alabaster/__pycache__/__init__.cpython-39.pyc",
-    "lib/python3.9/site-packages/alabaster/__pycache__/_version.cpython-39.pyc",
-    "lib/python3.9/site-packages/alabaster/__pycache__/support.cpython-39.pyc"
+    "lib/python3.8/site-packages/alabaster-0.7.12.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/alabaster-0.7.12.dist-info/LICENSE",
+    "lib/python3.8/site-packages/alabaster-0.7.12.dist-info/METADATA",
+    "lib/python3.8/site-packages/alabaster-0.7.12.dist-info/RECORD",
+    "lib/python3.8/site-packages/alabaster-0.7.12.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/alabaster-0.7.12.dist-info/WHEEL",
+    "lib/python3.8/site-packages/alabaster-0.7.12.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/alabaster-0.7.12.dist-info/entry_points.txt",
+    "lib/python3.8/site-packages/alabaster-0.7.12.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/alabaster/__init__.py",
+    "lib/python3.8/site-packages/alabaster/_version.py",
+    "lib/python3.8/site-packages/alabaster/about.html",
+    "lib/python3.8/site-packages/alabaster/donate.html",
+    "lib/python3.8/site-packages/alabaster/layout.html",
+    "lib/python3.8/site-packages/alabaster/navigation.html",
+    "lib/python3.8/site-packages/alabaster/relations.html",
+    "lib/python3.8/site-packages/alabaster/static/alabaster.css_t",
+    "lib/python3.8/site-packages/alabaster/static/custom.css",
+    "lib/python3.8/site-packages/alabaster/support.py",
+    "lib/python3.8/site-packages/alabaster/theme.conf",
+    "lib/python3.8/site-packages/alabaster/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/alabaster/__pycache__/_version.cpython-38.pyc",
+    "lib/python3.8/site-packages/alabaster/__pycache__/support.cpython-38.pyc"
   ],
   "fn": "alabaster-0.7.12-pyhd3eb1b0_0.tar.bz2",
   "license": "BSD 3-Clause",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/alabaster-0.7.12-pyhd3eb1b0_0",
+    "source": "/home/manuj/anaconda3/pkgs/alabaster-0.7.12-pyhd3eb1b0_0",
     "type": 1
   },
   "md5": "21ad3b69a5ce6c22e724e9dbb4cffa65",
   "name": "alabaster",
   "noarch": "python",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/alabaster-0.7.12-pyhd3eb1b0_0.tar.bz2",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/alabaster-0.7.12-pyhd3eb1b0_0.tar.bz2",
   "package_type": "noarch_python",
   "paths_data": {
     "paths": [
       {
-        "_path": "lib/python3.9/site-packages/alabaster/__pycache__/__init__.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/alabaster/__pycache__/__init__.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/alabaster/__pycache__/_version.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/alabaster/__pycache__/_version.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/alabaster/__pycache__/support.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/alabaster/__pycache__/support.cpython-38.pyc",
         "path_type": "pyc_file"
       }
     ],

@@ -50,7 +50,6 @@ QT_BEGIN_NAMESPACE
 
 class QIconPrivate;
 class QIconEngine;
-class QPainter;
 
 class Q_GUI_EXPORT QIcon
 {
@@ -58,19 +57,23 @@ public:
     enum Mode { Normal, Disabled, Active, Selected };
     enum State { On, Off };
 
-    QIcon() noexcept;
+    QIcon() Q_DECL_NOEXCEPT;
     QIcon(const QPixmap &pixmap);
     QIcon(const QIcon &other);
-    QIcon(QIcon &&other) noexcept
+#ifdef Q_COMPILER_RVALUE_REFS
+    QIcon(QIcon &&other) Q_DECL_NOEXCEPT
         : d(other.d)
-    { other.d = nullptr; }
+    { other.d = Q_NULLPTR; }
+#endif
     explicit QIcon(const QString &fileName); // file or resource name
     explicit QIcon(QIconEngine *engine);
     ~QIcon();
     QIcon &operator=(const QIcon &other);
-    inline QIcon &operator=(QIcon &&other) noexcept
+#ifdef Q_COMPILER_RVALUE_REFS
+    inline QIcon &operator=(QIcon &&other) Q_DECL_NOEXCEPT
     { swap(other); return *this; }
-    inline void swap(QIcon &other) noexcept
+#endif
+    inline void swap(QIcon &other) Q_DECL_NOEXCEPT
     { qSwap(d, other.d); }
 
     operator QVariant() const;
@@ -115,14 +118,8 @@ public:
     static QStringList themeSearchPaths();
     static void setThemeSearchPaths(const QStringList &searchpath);
 
-    static QStringList fallbackSearchPaths();
-    static void setFallbackSearchPaths(const QStringList &paths);
-
     static QString themeName();
     static void setThemeName(const QString &path);
-
-    static QString fallbackThemeName();
-    static void setFallbackThemeName(const QString &name);
 
     Q_DUMMY_COMPARISON_OPERATOR(QIcon)
 
@@ -150,7 +147,7 @@ Q_GUI_EXPORT QDebug operator<<(QDebug dbg, const QIcon &);
 #endif
 
 Q_GUI_EXPORT QString qt_findAtNxFile(const QString &baseFileName, qreal targetDevicePixelRatio,
-                                     qreal *sourceDevicePixelRatio = nullptr);
+                                     qreal *sourceDevicePixelRatio = Q_NULLPTR);
 
 QT_END_NAMESPACE
 

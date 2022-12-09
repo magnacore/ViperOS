@@ -6,44 +6,44 @@
   "depends": [
     "python >=3.5"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/sphinxcontrib-jsmath-1.0.1-pyhd3eb1b0_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/sphinxcontrib-jsmath-1.0.1-pyhd3eb1b0_0",
   "features": "",
   "files": [
-    "lib/python3.9/site-packages/sphinxcontrib/jsmath/__init__.py",
-    "lib/python3.9/site-packages/sphinxcontrib/jsmath/version.py",
-    "lib/python3.9/site-packages/sphinxcontrib_jsmath-1.0.1-py3.9-nspkg.pth",
-    "lib/python3.9/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/INSTALLER",
-    "lib/python3.9/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/LICENSE",
-    "lib/python3.9/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/METADATA",
-    "lib/python3.9/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/RECORD",
-    "lib/python3.9/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/REQUESTED",
-    "lib/python3.9/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/WHEEL",
-    "lib/python3.9/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/direct_url.json",
-    "lib/python3.9/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/namespace_packages.txt",
-    "lib/python3.9/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/top_level.txt",
-    "lib/python3.9/site-packages/sphinxcontrib/jsmath/__pycache__/__init__.cpython-39.pyc",
-    "lib/python3.9/site-packages/sphinxcontrib/jsmath/__pycache__/version.cpython-39.pyc"
+    "lib/python3.8/site-packages/sphinxcontrib/jsmath/__init__.py",
+    "lib/python3.8/site-packages/sphinxcontrib/jsmath/version.py",
+    "lib/python3.8/site-packages/sphinxcontrib_jsmath-1.0.1-py3.9-nspkg.pth",
+    "lib/python3.8/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/LICENSE",
+    "lib/python3.8/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/namespace_packages.txt",
+    "lib/python3.8/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/sphinxcontrib/jsmath/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/sphinxcontrib/jsmath/__pycache__/version.cpython-38.pyc"
   ],
   "fn": "sphinxcontrib-jsmath-1.0.1-pyhd3eb1b0_0.tar.bz2",
   "license": "BSD-2-Clause",
   "license_family": "BSD",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/sphinxcontrib-jsmath-1.0.1-pyhd3eb1b0_0",
+    "source": "/home/manuj/anaconda3/pkgs/sphinxcontrib-jsmath-1.0.1-pyhd3eb1b0_0",
     "type": 1
   },
   "md5": "e43f8de7d6a717935ab220a0c957771d",
   "name": "sphinxcontrib-jsmath",
   "noarch": "python",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/sphinxcontrib-jsmath-1.0.1-pyhd3eb1b0_0.tar.bz2",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/sphinxcontrib-jsmath-1.0.1-pyhd3eb1b0_0.tar.bz2",
   "package_type": "noarch_python",
   "paths_data": {
     "paths": [
       {
-        "_path": "lib/python3.9/site-packages/sphinxcontrib/jsmath/__pycache__/__init__.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/sphinxcontrib/jsmath/__pycache__/__init__.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/sphinxcontrib/jsmath/__pycache__/version.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/sphinxcontrib/jsmath/__pycache__/version.cpython-38.pyc",
         "path_type": "pyc_file"
       }
     ],

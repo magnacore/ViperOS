@@ -1,0 +1,80 @@
+{
+  "build": "py38h22e1b3c_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "blas 1.0 mkl",
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0",
+    "mkl >=2021.2.0,<2022.0a0",
+    "mkl-service >=2.3.0,<3.0a0",
+    "numpy >=1.16.6,<2.0a0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/numexpr-2.7.3-py38h22e1b3c_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/numexpr-2.7.3.dist-info/AUTHORS.txt",
+    "lib/python3.8/site-packages/numexpr-2.7.3.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/numexpr-2.7.3.dist-info/LICENSE.txt",
+    "lib/python3.8/site-packages/numexpr-2.7.3.dist-info/METADATA",
+    "lib/python3.8/site-packages/numexpr-2.7.3.dist-info/RECORD",
+    "lib/python3.8/site-packages/numexpr-2.7.3.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/numexpr-2.7.3.dist-info/WHEEL",
+    "lib/python3.8/site-packages/numexpr-2.7.3.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/numexpr-2.7.3.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/numexpr/__config__.py",
+    "lib/python3.8/site-packages/numexpr/__init__.py",
+    "lib/python3.8/site-packages/numexpr/__pycache__/__config__.cpython-38.pyc",
+    "lib/python3.8/site-packages/numexpr/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/numexpr/__pycache__/cpuinfo.cpython-38.pyc",
+    "lib/python3.8/site-packages/numexpr/__pycache__/expressions.cpython-38.pyc",
+    "lib/python3.8/site-packages/numexpr/__pycache__/necompiler.cpython-38.pyc",
+    "lib/python3.8/site-packages/numexpr/__pycache__/utils.cpython-38.pyc",
+    "lib/python3.8/site-packages/numexpr/__pycache__/version.cpython-38.pyc",
+    "lib/python3.8/site-packages/numexpr/cpuinfo.py",
+    "lib/python3.8/site-packages/numexpr/expressions.py",
+    "lib/python3.8/site-packages/numexpr/interpreter.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/numexpr/necompiler.py",
+    "lib/python3.8/site-packages/numexpr/tests/__init__.py",
+    "lib/python3.8/site-packages/numexpr/tests/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/numexpr/tests/__pycache__/test_numexpr.cpython-38.pyc",
+    "lib/python3.8/site-packages/numexpr/tests/test_numexpr.py",
+    "lib/python3.8/site-packages/numexpr/utils.py",
+    "lib/python3.8/site-packages/numexpr/version.py"
+  ],
+  "fn": "numexpr-2.7.3-py38h22e1b3c_1.conda",
+  "legacy_bz2_md5": "0779facbb2c02de5085ffa3588da5a11",
+  "legacy_bz2_size": 204800,
+  "license": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/numexpr-2.7.3-py38h22e1b3c_1",
+    "type": 1
+  },
+  "md5": "fdd4dd744e6409461fbc9543e30da04f",
+  "name": "numexpr",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/numexpr-2.7.3-py38h22e1b3c_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/numexpr/__config__.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/numexpr_1618856167419/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "52dfb16f9cd1cc07f6553a4045d51e025426565ba92ea71c7d1484ae39f53ca2",
+        "sha256_in_prefix": "fd19cc249b68b07fbcfdfcc693317b68a0130a8c00f37e99bfc789c0799ccd94",
+        "size_in_bytes": 1596
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "numexpr==2.7.3=py38h22e1b3c_1",
+  "sha256": "f41dc5784a6dab2fe738c61d23c22de923bc50065be563042689ba6436152dc7",
+  "size": 192098,
+  "subdir": "linux-64",
+  "timestamp": 1618856281691,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/numexpr-2.7.3-py38h22e1b3c_1.conda",
+  "version": "2.7.3"
+}

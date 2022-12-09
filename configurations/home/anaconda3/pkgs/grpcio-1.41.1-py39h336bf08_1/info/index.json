@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "py39h336bf08_1",
+  "build_number": 1,
+  "depends": [
+    "c-ares >=1.18.1,<2.0a0",
+    "libgcc-ng >=9.4.0",
+    "libstdcxx-ng >=9.4.0",
+    "libzlib >=1.2.11,<1.3.0a0",
+    "openssl >=3.0.0,<4.0a0",
+    "python >=3.9,<3.10.0a0",
+    "python_abi 3.9.* *_cp39",
+    "setuptools",
+    "six >=1.5.2",
+    "zlib >=1.2.11,<1.3.0a0"
+  ],
+  "license": "Apache-2.0",
+  "license_family": "APACHE",
+  "name": "grpcio",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1635853781229,
+  "version": "1.41.1"
+}

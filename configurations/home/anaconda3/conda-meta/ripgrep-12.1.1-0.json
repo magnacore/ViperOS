@@ -1,0 +1,34 @@
+{
+  "build": "0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/ripgrep-12.1.1-0",
+  "features": "",
+  "files": [
+    "bin/rg"
+  ],
+  "fn": "ripgrep-12.1.1-0.conda",
+  "legacy_bz2_md5": "5e6ca5028e467c2fba0616a0b0992764",
+  "legacy_bz2_size": 1615614,
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/ripgrep-12.1.1-0",
+    "type": 1
+  },
+  "md5": "fb7a5cc01742dcf093a43edae37b1ea1",
+  "name": "ripgrep",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/ripgrep-12.1.1-0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "ripgrep==12.1.1=0",
+  "sha256": "361b26d5ab71bf29dfeede4f26cea164ff3125a67e1d31fbc741b4648ddb284e",
+  "size": 1418663,
+  "subdir": "linux-64",
+  "timestamp": 1601295780529,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/ripgrep-12.1.1-0.conda",
+  "version": "12.1.1"
+}

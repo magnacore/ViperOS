@@ -68,10 +68,8 @@ public:
     void setLine(int);
     int column() const;
     void setColumn(int);
-
     QObject *object() const;
     void setObject(QObject *);
-
     QtMsgType messageType() const;
     void setMessageType(QtMsgType messageType);
 

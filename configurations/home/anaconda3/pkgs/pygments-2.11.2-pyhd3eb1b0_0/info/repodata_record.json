@@ -1,0 +1,25 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.5"
+  ],
+  "features": "",
+  "fn": "pygments-2.11.2-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "f73d9994217739e61c17daebee774080",
+  "license": "BSD-2-Clause",
+  "license_family": "BSD",
+  "md5": "eff55c770961f459a734cf86768aac98",
+  "name": "pygments",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "c764e23bddaa42add41931581cb97f6c5857b4075ec4f3470c59dd8d84954a68",
+  "size": 776825,
+  "subdir": "noarch",
+  "timestamp": 1644249152044,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/pygments-2.11.2-pyhd3eb1b0_0.conda",
+  "version": "2.11.2"
+}

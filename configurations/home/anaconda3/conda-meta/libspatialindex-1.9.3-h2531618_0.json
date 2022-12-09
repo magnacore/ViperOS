@@ -7,7 +7,7 @@
     "libgcc-ng >=7.3.0",
     "libstdcxx-ng >=7.3.0"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/libspatialindex-1.9.3-h2531618_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/libspatialindex-1.9.3-h2531618_0",
   "features": "",
   "files": [
     "include/spatialindex/LineSegment.h",
@@ -52,12 +52,12 @@
   "legacy_bz2_size": 3283214,
   "license": "MIT",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/libspatialindex-1.9.3-h2531618_0",
+    "source": "/home/manuj/anaconda3/pkgs/libspatialindex-1.9.3-h2531618_0",
     "type": 1
   },
   "md5": "2944eeda0125389c979af67e4460a510",
   "name": "libspatialindex",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/libspatialindex-1.9.3-h2531618_0.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/libspatialindex-1.9.3-h2531618_0.conda",
   "paths_data": {
     "paths": [],
     "paths_version": 1

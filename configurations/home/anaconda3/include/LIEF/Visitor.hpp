@@ -1,19 +1,18 @@
-/* Copyright 2017 - 2021 R. Thomas
-* Copyright 2017 - 2021 Quarkslab
-* Copyright 2017 - 2021 K. Nakagawa
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-*     http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 #ifndef LIEF_VISITOR_H_
 #define LIEF_VISITOR_H_
 #include <set>
@@ -77,25 +76,11 @@ LIEF_PE_FORWARD(LangCodeItem)
 LIEF_PE_FORWARD(ResourceIcon)
 LIEF_PE_FORWARD(ResourceDialog)
 LIEF_PE_FORWARD(ResourceDialogItem)
-LIEF_PE_FORWARD(ResourceStringTable)
-LIEF_PE_FORWARD(ResourceAccelerator)
-
 LIEF_PE_FORWARD(Signature)
 LIEF_PE_FORWARD(x509)
 LIEF_PE_FORWARD(SignerInfo)
 LIEF_PE_FORWARD(ContentInfo)
-LIEF_PE_FORWARD(Attribute)
-LIEF_PE_FORWARD(ContentType)
-LIEF_PE_FORWARD(GenericType)
-//LIEF_PE_FORWARD(MsCounterSign)
-LIEF_PE_FORWARD(MsSpcNestedSignature)
-LIEF_PE_FORWARD(MsSpcStatementType)
-LIEF_PE_FORWARD(PKCS9AtSequenceNumber)
-LIEF_PE_FORWARD(PKCS9CounterSignature)
-LIEF_PE_FORWARD(PKCS9MessageDigest)
-LIEF_PE_FORWARD(PKCS9SigningTime)
-LIEF_PE_FORWARD(SpcSpOpusInfo)
-
+LIEF_PE_FORWARD(AuthenticatedAttributes)
 LIEF_PE_FORWARD(CodeIntegrity)
 LIEF_PE_FORWARD(LoadConfiguration)
 LIEF_PE_FORWARD(LoadConfigurationV0)
@@ -353,12 +338,6 @@ class LIEF_API Visitor {
   //! Method to visit a LIEF::PE::ResourceVarFileInfo
   LIEF_PE_VISITABLE(ResourceVarFileInfo)
 
-  //! Method to visit a LIEF::PE::ResourceStringTable
-  LIEF_PE_VISITABLE(ResourceStringTable)
-
-  //! Method to visit a LIEF::PE::ResourceAccelerator
-  LIEF_PE_VISITABLE(ResourceAccelerator)
-
   //! Method to visit a LIEF::PE::LangCodeItem
   LIEF_PE_VISITABLE(LangCodeItem)
 
@@ -383,38 +362,11 @@ class LIEF_API Visitor {
   //! Method to visit a LIEF::PE::ContentInfo
   LIEF_PE_VISITABLE(ContentInfo)
 
-  //! Method to visit a LIEF::PE::Attribute
-  LIEF_PE_VISITABLE(Attribute)
+  //! Method to visit a LIEF::PE::AuthenticatedAttributes
+  LIEF_PE_VISITABLE(AuthenticatedAttributes)
 
-  //! Method to visit a LIEF::PE::ContentType
-  LIEF_PE_VISITABLE(ContentType)
-
-  //! Method to visit a LIEF::PE::GenericType
-  LIEF_PE_VISITABLE(GenericType)
-
-  //! Method to visit a LIEF::PE::MsCounterSign
-  //LIEF_PE_VISITABLE(MsCounterSign)
-
-  //! Method to visit a LIEF::PE::MsSpcNestedSignature
-  LIEF_PE_VISITABLE(MsSpcNestedSignature)
-
-  //! Method to visit a LIEF::PE::MsSpcStatementType
-  LIEF_PE_VISITABLE(MsSpcStatementType)
-
-  //! Method to visit a LIEF::PE::PKCS9AtSequenceNumber
-  LIEF_PE_VISITABLE(PKCS9AtSequenceNumber)
-
-  //! Method to visit a LIEF::PE::PKCS9CounterSignature
-  LIEF_PE_VISITABLE(PKCS9CounterSignature)
-
-  //! Method to visit a LIEF::PE::PKCS9MessageDigest
-  LIEF_PE_VISITABLE(PKCS9MessageDigest)
-
-  //! Method to visit a LIEF::PE::PKCS9SigningTime
-  LIEF_PE_VISITABLE(PKCS9SigningTime)
-
-  //! Method to visit a LIEF::PE::SpcSpOpusInfo
-  LIEF_PE_VISITABLE(SpcSpOpusInfo)
+  //! Method to visit a LIEF::PE::issuer_t
+  LIEF_PE_VISITABLE(issuer_t)
 
   //! Method to visit a LIEF::PE::LoadConfiguration
   LIEF_PE_VISITABLE(LoadConfiguration)

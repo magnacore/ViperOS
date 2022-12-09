@@ -49,7 +49,6 @@
 #include <QtDBus/qdbusmessage.h>
 #include <QtDBus/qdbusextratypes.h>
 #include <QtDBus/qdbusconnection.h>
-#include <QtDBus/qdbuspendingcall.h>
 
 #ifdef interface
 #undef interface
@@ -68,7 +67,7 @@ class QDBusAbstractInterfacePrivate;
 class Q_DBUS_EXPORT QDBusAbstractInterfaceBase: public QObject
 {
 public:
-    int qt_metacall(QMetaObject::Call, int, void**) override;
+    int qt_metacall(QMetaObject::Call, int, void**) Q_DECL_OVERRIDE;
 protected:
     QDBusAbstractInterfaceBase(QDBusAbstractInterfacePrivate &dd, QObject *parent);
 private:
@@ -99,52 +98,26 @@ public:
     void setTimeout(int timeout);
     int timeout() const;
 
-    QDBusMessage call(const QString &method)
-    {
-        return doCall(QDBus::AutoDetect, method, nullptr, 0);
-    }
-
-    template <typename...Args>
-    QDBusMessage call(const QString &method, Args &&...args)
-    {
-        const QVariant variants[] = { QVariant(std::forward<Args>(args))... };
-        return doCall(QDBus::AutoDetect, method, variants, sizeof...(args));
-    }
-
-    QDBusMessage call(QDBus::CallMode mode, const QString &method)
-    {
-        return doCall(mode, method, nullptr, 0);
-    }
-
-    template <typename...Args>
-    QDBusMessage call(QDBus::CallMode mode, const QString &method, Args &&...args)
-    {
-        const QVariant variants[] = { QVariant(std::forward<Args>(args))... };
-        return doCall(mode, method, variants, sizeof...(args));
-    }
-
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QDBusMessage call(const QString &method,
-                      const QVariant &arg1,
-                      const QVariant &arg2,
-                      const QVariant &arg3,
-                      const QVariant &arg4,
-                      const QVariant &arg5,
-                      const QVariant &arg6,
-                      const QVariant &arg7,
-                      const QVariant &arg8);
+                      const QVariant &arg1 = QVariant(),
+                      const QVariant &arg2 = QVariant(),
+                      const QVariant &arg3 = QVariant(),
+                      const QVariant &arg4 = QVariant(),
+                      const QVariant &arg5 = QVariant(),
+                      const QVariant &arg6 = QVariant(),
+                      const QVariant &arg7 = QVariant(),
+                      const QVariant &arg8 = QVariant());
 
     QDBusMessage call(QDBus::CallMode mode,
                       const QString &method,
-                      const QVariant &arg1,
-                      const QVariant &arg2,
-                      const QVariant &arg3,
-                      const QVariant &arg4,
-                      const QVariant &arg5,
-                      const QVariant &arg6,
-                      const QVariant &arg7,
-                      const QVariant &arg8);
-#endif // Qt 5
+                      const QVariant &arg1 = QVariant(),
+                      const QVariant &arg2 = QVariant(),
+                      const QVariant &arg3 = QVariant(),
+                      const QVariant &arg4 = QVariant(),
+                      const QVariant &arg5 = QVariant(),
+                      const QVariant &arg6 = QVariant(),
+                      const QVariant &arg7 = QVariant(),
+                      const QVariant &arg8 = QVariant());
 
     QDBusMessage callWithArgumentList(QDBus::CallMode mode,
                                       const QString &method,
@@ -157,30 +130,15 @@ public:
                           const QList<QVariant> &args,
                           QObject *receiver, const char *member);
 
-    QDBusPendingCall asyncCall(const QString &method)
-    {
-        return doAsyncCall(method, nullptr, 0);
-    }
-
-    template <typename...Args>
-    QDBusPendingCall asyncCall(const QString &method, Args&&...args)
-    {
-        const QVariant variants[] = { QVariant(std::forward<Args>(args))... };
-        return doAsyncCall(method, variants, sizeof...(args));
-    }
-
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QDBusPendingCall asyncCall(const QString &method,
-                               const QVariant &arg1,
-                               const QVariant &arg2,
-                               const QVariant &arg3,
-                               const QVariant &arg4,
-                               const QVariant &arg5,
-                               const QVariant &arg6,
-                               const QVariant &arg7,
-                               const QVariant &arg8);
-#endif // Qt 5
-
+                               const QVariant &arg1 = QVariant(),
+                               const QVariant &arg2 = QVariant(),
+                               const QVariant &arg3 = QVariant(),
+                               const QVariant &arg4 = QVariant(),
+                               const QVariant &arg5 = QVariant(),
+                               const QVariant &arg6 = QVariant(),
+                               const QVariant &arg7 = QVariant(),
+                               const QVariant &arg8 = QVariant());
     QDBusPendingCall asyncCallWithArgumentList(const QString &method,
                                                const QList<QVariant> &args);
 
@@ -189,17 +147,13 @@ protected:
                            const QDBusConnection &connection, QObject *parent);
     QDBusAbstractInterface(QDBusAbstractInterfacePrivate &, QObject *parent);
 
-    void connectNotify(const QMetaMethod &signal) override;
-    void disconnectNotify(const QMetaMethod &signal) override;
+    void connectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE;
+    void disconnectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE;
     QVariant internalPropGet(const char *propname) const;
     void internalPropSet(const char *propname, const QVariant &value);
     QDBusMessage internalConstCall(QDBus::CallMode mode,
                                    const QString &method,
                                    const QList<QVariant> &args = QList<QVariant>()) const;
-
-private:
-    QDBusMessage doCall(QDBus::CallMode mode, const QString &method, const QVariant *args, size_t numArgs);
-    QDBusPendingCall doAsyncCall(const QString &method, const QVariant *args, size_t numArgs);
 
 private:
     Q_DECLARE_PRIVATE(QDBusAbstractInterface)

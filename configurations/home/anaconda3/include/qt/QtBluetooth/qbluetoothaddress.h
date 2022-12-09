@@ -40,7 +40,7 @@
 #ifndef QBLUETOOTHADDRESS_H
 #define QBLUETOOTHADDRESS_H
 
-#include <QtBluetooth/qtbluetoothglobal.h>
+#include <QtBluetooth/qbluetoothglobal.h>
 
 #include <QtCore/QByteArray>
 #include <QtCore/QString>

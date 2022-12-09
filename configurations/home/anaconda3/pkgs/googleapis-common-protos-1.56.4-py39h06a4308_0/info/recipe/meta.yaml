@@ -1,0 +1,129 @@
+# This file created by conda-build 3.21.9
+# ------------------------------------------------
+
+package:
+  name: googleapis-common-protos
+  version: 1.56.4
+source:
+  sha256: c25873c47279387cfdcbdafa36149887901d36202cb645a0e4f29686bf6e4417
+  url: https://pypi.io/packages/source/g/googleapis-common-protos/googleapis-common-protos-1.56.4.tar.gz
+build:
+  number: 0
+  script: python -m pip install . --no-deps --ignore-installed --verbose
+  string: py39h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - ca-certificates 2022.07.19 h06a4308_0
+    - certifi 2022.6.15 py39h06a4308_0
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.3 he6710b0_2
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - ncurses 6.3 h5eee18b_3
+    - openssl 1.1.1q h7f8727e_0
+    - pip 22.1.2 py39h06a4308_0
+    - python 3.9.12 h12debd9_1
+    - readline 8.1.2 h7f8727e_1
+    - setuptools 61.2.0 py39h06a4308_0
+    - sqlite 3.39.2 h5082296_0
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2022a hda174b7_0
+    - wheel 0.37.1 pyhd3eb1b0_0
+    - xz 5.2.5 h7f8727e_1
+    - zlib 1.2.12 h7f8727e_2
+  run:
+    - libprotobuf
+    - protobuf >=3.15.0,<5.0.0
+    - python >=3.9,<3.10.0a0
+  run_constrained:
+    - grpcio >=1.0.0,<2.0.0
+test:
+  imports:
+    - google.api
+    - google.api.annotations_pb2
+    - google.api.auth_pb2
+    - google.api.backend_pb2
+    - google.api.billing_pb2
+    - google.api.client_pb2
+    - google.api.config_change_pb2
+    - google.api.consumer_pb2
+    - google.api.context_pb2
+    - google.api.control_pb2
+    - google.api.distribution_pb2
+    - google.api.documentation_pb2
+    - google.api.endpoint_pb2
+    - google.api.field_behavior_pb2
+    - google.api.http_pb2
+    - google.api.httpbody_pb2
+    - google.api.label_pb2
+    - google.api.launch_stage_pb2
+    - google.api.log_pb2
+    - google.api.logging_pb2
+    - google.api.metric_pb2
+    - google.api.monitored_resource_pb2
+    - google.api.monitoring_pb2
+    - google.api.quota_pb2
+    - google.api.resource_pb2
+    - google.api.service_pb2
+    - google.api.source_info_pb2
+    - google.api.system_parameter_pb2
+    - google.api.usage_pb2
+    - google.longrunning
+    - google.longrunning.operations_pb2
+    - google.longrunning.operations_proto
+    - google.longrunning.operations_proto_pb2
+    - google.rpc
+    - google.rpc.code_pb2
+    - google.rpc.error_details_pb2
+    - google.rpc.status_pb2
+    - google.type
+    - google.type.calendar_period_pb2
+    - google.type.color_pb2
+    - google.type.date_pb2
+    - google.type.dayofweek_pb2
+    - google.type.expr_pb2
+    - google.type.fraction_pb2
+    - google.type.latlng_pb2
+    - google.type.money_pb2
+    - google.type.postal_address_pb2
+    - google.type.quaternion_pb2
+    - google.type.timeofday_pb2
+about:
+  description: 'This repository contains the original interface definitions of public
+
+    Google APIs that support both REST and gRPC protocols. Reading the original
+
+    interface definitions can provide a better understanding of Google APIs and
+
+    help you to utilize them more efficiently. You can also use these definitions
+
+    with open source tools to generate client libraries, documentation,
+
+    and other artifacts. NOTE: to enable gRPC support, the grcpio package must
+
+    also be installed. The googleapis-common-protos-grpc metapackage accomplishes
+    this.
+
+    '
+  dev_url: https://github.com/googleapis/googleapis
+  doc_source_url: https://github.com/googleapis/googleapis/blob/master/README.md
+  doc_url: https://github.com/googleapis/googleapis/blob/master/README.md
+  home: https://github.com/googleapis/api-common-protos
+  license: Apache-2.0
+  license_family: APACHE
+  license_file: LICENSE
+  summary: Common protobufs used in Google APIs
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: dc9f1a29-eb24-4ac8-a6ac-d10ff5ff3564
+  recipe-maintainers:
+    - BrentDorsey
+    - leahecole
+    - parthea
+    - tswast
+  remote_url: git@github.com:AnacondaRecipes/googleapis-common-protos-feedstock.git
+  sha: df01eb8c8575177d0387e596273a79355f3b5ada

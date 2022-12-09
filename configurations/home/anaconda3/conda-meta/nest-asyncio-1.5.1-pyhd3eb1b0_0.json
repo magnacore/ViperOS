@@ -1,0 +1,54 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.5"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/nest-asyncio-1.5.1-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/nest_asyncio-1.5.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/nest_asyncio-1.5.1.dist-info/LICENSE",
+    "lib/python3.8/site-packages/nest_asyncio-1.5.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/nest_asyncio-1.5.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/nest_asyncio-1.5.1.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/nest_asyncio-1.5.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/nest_asyncio-1.5.1.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/nest_asyncio-1.5.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/nest_asyncio.py",
+    "lib/python3.8/site-packages/__pycache__/nest_asyncio.cpython-38.pyc"
+  ],
+  "fn": "nest-asyncio-1.5.1-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "86bd86632c7796370ddf41e232cec084",
+  "legacy_bz2_size": 9641,
+  "license": "BSD-2-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/nest-asyncio-1.5.1-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "de1248e84dd58965e5199beff21adedd",
+  "name": "nest-asyncio",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/nest-asyncio-1.5.1-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/__pycache__/nest_asyncio.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "nest-asyncio==1.5.1=pyhd3eb1b0_0",
+  "sha256": "6f2ff8e872a18e2e50cfc8a0bed4fd3c0423634094535d90d0e5a0698c43cb8d",
+  "size": 10557,
+  "subdir": "noarch",
+  "timestamp": 1613680588727,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/nest-asyncio-1.5.1-pyhd3eb1b0_0.conda",
+  "version": "1.5.1"
+}

@@ -41,7 +41,6 @@
 #define QGEOPATH_H
 
 #include <QtPositioning/QGeoShape>
-#include <QtCore/QVariantList>
 
 QT_BEGIN_NAMESPACE
 
@@ -51,7 +50,7 @@ class QGeoPathPrivate;
 class Q_POSITIONING_EXPORT QGeoPath : public QGeoShape
 {
     Q_GADGET
-    Q_PROPERTY(QVariantList path READ variantPath WRITE setVariantPath)
+    Q_PROPERTY(QList<QGeoCoordinate> path READ path WRITE setPath)
     Q_PROPERTY(qreal width READ width WRITE setWidth)
 
 public:
@@ -72,9 +71,6 @@ public:
 
     void setPath(const QList<QGeoCoordinate> &path);
     const QList<QGeoCoordinate> &path() const;
-    void clearPath();
-    void setVariantPath(const QVariantList &path);
-    QVariantList variantPath() const;
 
     void setWidth(const qreal &width);
     qreal width() const;
@@ -82,7 +78,6 @@ public:
     Q_INVOKABLE void translate(double degreesLatitude, double degreesLongitude);
     Q_INVOKABLE QGeoPath translated(double degreesLatitude, double degreesLongitude) const;
     Q_INVOKABLE double length(int indexFrom = 0, int indexTo = -1) const;
-    Q_INVOKABLE int size() const;
     Q_INVOKABLE void addCoordinate(const QGeoCoordinate &coordinate);
     Q_INVOKABLE void insertCoordinate(int index, const QGeoCoordinate &coordinate);
     Q_INVOKABLE void replaceCoordinate(int index, const QGeoCoordinate &coordinate);

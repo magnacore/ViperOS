@@ -1,0 +1,44 @@
+{
+  "build": "py38_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0",
+    "six"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/cycler-0.10.0-py38_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/__pycache__/cycler.cpython-38.pyc",
+    "lib/python3.8/site-packages/cycler-0.10.0-py3.8.egg-info/PKG-INFO",
+    "lib/python3.8/site-packages/cycler-0.10.0-py3.8.egg-info/SOURCES.txt",
+    "lib/python3.8/site-packages/cycler-0.10.0-py3.8.egg-info/dependency_links.txt",
+    "lib/python3.8/site-packages/cycler-0.10.0-py3.8.egg-info/requires.txt",
+    "lib/python3.8/site-packages/cycler-0.10.0-py3.8.egg-info/top_level.txt",
+    "lib/python3.8/site-packages/cycler.py"
+  ],
+  "fn": "cycler-0.10.0-py38_0.conda",
+  "legacy_bz2_md5": "a19b7c7c595fe562ec22f2455e910486",
+  "legacy_bz2_size": 14188,
+  "license": "BSD 3-Clause",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/cycler-0.10.0-py38_0",
+    "type": 1
+  },
+  "md5": "59bc042b0900f52a43a2a1ca50dfb60a",
+  "name": "cycler",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/cycler-0.10.0-py38_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "cycler==0.10.0=py38_0",
+  "sha256": "064394dc9e0ea308067263f3e7e3a0e51eafc801f6a69b70407fe89943cbcb36",
+  "size": 14177,
+  "subdir": "linux-64",
+  "timestamp": 1573741605355,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/cycler-0.10.0-py38_0.conda",
+  "version": "0.10.0"
+}

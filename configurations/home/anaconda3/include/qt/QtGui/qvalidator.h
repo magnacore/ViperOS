@@ -45,9 +45,7 @@
 #include <QtCore/qobject.h>
 #include <QtCore/qstring.h>
 #include <QtCore/qregexp.h>
-#if QT_CONFIG(regularexpression)
-#  include <QtCore/qregularexpression.h>
-#endif
+#include <QtCore/qregularexpression.h>
 #include <QtCore/qlocale.h>
 
 QT_BEGIN_NAMESPACE
@@ -61,7 +59,7 @@ class Q_GUI_EXPORT QValidator : public QObject
 {
     Q_OBJECT
 public:
-    explicit QValidator(QObject * parent = nullptr);
+    explicit QValidator(QObject * parent = Q_NULLPTR);
     ~QValidator();
 
     enum State {
@@ -69,7 +67,6 @@ public:
         Intermediate,
         Acceptable
     };
-    Q_ENUM(State)
 
     void setLocale(const QLocale &locale);
     QLocale locale() const;
@@ -96,12 +93,12 @@ class Q_GUI_EXPORT QIntValidator : public QValidator
     Q_PROPERTY(int top READ top WRITE setTop NOTIFY topChanged)
 
 public:
-    explicit QIntValidator(QObject * parent = nullptr);
-    QIntValidator(int bottom, int top, QObject *parent = nullptr);
+    explicit QIntValidator(QObject * parent = Q_NULLPTR);
+    QIntValidator(int bottom, int top, QObject *parent = Q_NULLPTR);
     ~QIntValidator();
 
-    QValidator::State validate(QString &, int &) const override;
-    void fixup(QString &input) const override;
+    QValidator::State validate(QString &, int &) const Q_DECL_OVERRIDE;
+    void fixup(QString &input) const Q_DECL_OVERRIDE;
 
     void setBottom(int);
     void setTop(int);
@@ -133,8 +130,8 @@ class Q_GUI_EXPORT QDoubleValidator : public QValidator
     Q_PROPERTY(Notation notation READ notation WRITE setNotation NOTIFY notationChanged)
 
 public:
-    explicit QDoubleValidator(QObject * parent = nullptr);
-    QDoubleValidator(double bottom, double top, int decimals, QObject *parent = nullptr);
+    explicit QDoubleValidator(QObject * parent = Q_NULLPTR);
+    QDoubleValidator(double bottom, double top, int decimals, QObject *parent = Q_NULLPTR);
     ~QDoubleValidator();
 
     enum Notation {
@@ -142,7 +139,7 @@ public:
         ScientificNotation
     };
     Q_ENUM(Notation)
-    QValidator::State validate(QString &, int &) const override;
+    QValidator::State validate(QString &, int &) const Q_DECL_OVERRIDE;
 
     virtual void setRange(double bottom, double top, int decimals = 0);
     void setBottom(double);
@@ -177,11 +174,11 @@ class Q_GUI_EXPORT QRegExpValidator : public QValidator
     Q_PROPERTY(QRegExp regExp READ regExp WRITE setRegExp NOTIFY regExpChanged)
 
 public:
-    explicit QRegExpValidator(QObject *parent = nullptr);
-    explicit QRegExpValidator(const QRegExp& rx, QObject *parent = nullptr);
+    explicit QRegExpValidator(QObject *parent = Q_NULLPTR);
+    explicit QRegExpValidator(const QRegExp& rx, QObject *parent = Q_NULLPTR);
     ~QRegExpValidator();
 
-    virtual QValidator::State validate(QString& input, int& pos) const override;
+    virtual QValidator::State validate(QString& input, int& pos) const Q_DECL_OVERRIDE;
 
     void setRegExp(const QRegExp& rx);
     const QRegExp& regExp() const { return r; }
@@ -197,7 +194,7 @@ private:
 
 #endif // QT_NO_REGEXP
 
-#if QT_CONFIG(regularexpression)
+#ifndef QT_NO_REGULAREXPRESSION
 
 class QRegularExpressionValidatorPrivate;
 
@@ -207,11 +204,11 @@ class Q_GUI_EXPORT QRegularExpressionValidator : public QValidator
     Q_PROPERTY(QRegularExpression regularExpression READ regularExpression WRITE setRegularExpression NOTIFY regularExpressionChanged)
 
 public:
-    explicit QRegularExpressionValidator(QObject *parent = nullptr);
-    explicit QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = nullptr);
+    explicit QRegularExpressionValidator(QObject *parent = Q_NULLPTR);
+    explicit QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = Q_NULLPTR);
     ~QRegularExpressionValidator();
 
-    virtual QValidator::State validate(QString &input, int &pos) const override;
+    virtual QValidator::State validate(QString &input, int &pos) const Q_DECL_OVERRIDE;
 
     QRegularExpression regularExpression() const;
 
@@ -226,7 +223,7 @@ private:
     Q_DECLARE_PRIVATE(QRegularExpressionValidator)
 };
 
-#endif // QT_CONFIG(regularexpression)
+#endif // QT_NO_REGULAREXPRESSION
 
 #endif // QT_NO_VALIDATOR
 

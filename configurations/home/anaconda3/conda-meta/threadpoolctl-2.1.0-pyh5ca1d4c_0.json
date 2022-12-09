@@ -1,0 +1,52 @@
+{
+  "build": "pyh5ca1d4c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.5"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/threadpoolctl-2.1.0-pyh5ca1d4c_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/threadpoolctl-2.1.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/threadpoolctl-2.1.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/threadpoolctl-2.1.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/threadpoolctl-2.1.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/threadpoolctl-2.1.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/threadpoolctl-2.1.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/threadpoolctl.py",
+    "lib/python3.8/site-packages/__pycache__/threadpoolctl.cpython-38.pyc"
+  ],
+  "fn": "threadpoolctl-2.1.0-pyh5ca1d4c_0.conda",
+  "legacy_bz2_md5": "6b13756a6f1fecb4f54a1b3f9cc8d8f4",
+  "legacy_bz2_size": 16846,
+  "license": "BSD 3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/threadpoolctl-2.1.0-pyh5ca1d4c_0",
+    "type": 1
+  },
+  "md5": "d7fb4986840739d43bfdc97f860464bd",
+  "name": "threadpoolctl",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/threadpoolctl-2.1.0-pyh5ca1d4c_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/__pycache__/threadpoolctl.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "threadpoolctl==2.1.0=pyh5ca1d4c_0",
+  "sha256": "54ef8b50efe6283df068e3544ebeabaf50099508cfc1d3bf5c1813ed15b91c2e",
+  "size": 17250,
+  "subdir": "noarch",
+  "timestamp": 1592429752036,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/threadpoolctl-2.1.0-pyh5ca1d4c_0.conda",
+  "version": "2.1.0"
+}

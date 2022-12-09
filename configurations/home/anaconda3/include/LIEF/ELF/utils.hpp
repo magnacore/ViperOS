@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,12 +28,14 @@ namespace ELF {
 //! @brief Check if the given file is an ELF one.
 LIEF_API bool is_elf(const std::string& file);
 
-//! @brief check if the raw data is a ELF file
+//! @brief check if the raw data is a ELF file
 LIEF_API bool is_elf(const std::vector<uint8_t>& raw);
 
 LIEF_API unsigned long hash32(const char* name);
 LIEF_API unsigned long hash64(const char* name);
 LIEF_API uint32_t dl_new_hash(const char* name);
+
+
 }
 }
 

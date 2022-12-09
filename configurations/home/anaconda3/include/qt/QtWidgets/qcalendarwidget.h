@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** Copyright (C) 2018 The Qt Company Ltd.
+** Copyright (C) 2016 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
 ** This file is part of the QtWidgets module of the Qt Toolkit.
@@ -89,11 +89,11 @@ public:
     };
     Q_ENUM(SelectionMode)
 
-    explicit QCalendarWidget(QWidget *parent = nullptr);
+    explicit QCalendarWidget(QWidget *parent = Q_NULLPTR);
     ~QCalendarWidget();
 
-    virtual QSize sizeHint() const override;
-    virtual QSize minimumSizeHint() const override;
+    virtual QSize sizeHint() const Q_DECL_OVERRIDE;
+    virtual QSize minimumSizeHint() const Q_DECL_OVERRIDE;
 
     QDate selectedDate() const;
 
@@ -111,9 +111,6 @@ public:
 
     bool isNavigationBarVisible() const;
     bool isGridVisible() const;
-
-    QCalendar calendar() const;
-    void setCalendar(QCalendar calendar);
 
     SelectionMode selectionMode() const;
     void setSelectionMode(SelectionMode mode);
@@ -141,11 +138,11 @@ public:
     void setDateEditAcceptDelay(int delay);
 
 protected:
-    bool event(QEvent *event) override;
-    bool eventFilter(QObject *watched, QEvent *event) override;
-    void mousePressEvent(QMouseEvent *event) override;
-    void resizeEvent(QResizeEvent * event) override;
-    void keyPressEvent(QKeyEvent * event) override;
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
+    void mousePressEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent * event) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent * event) Q_DECL_OVERRIDE;
 
     virtual void paintCell(QPainter *painter, const QRect &rect, const QDate &date) const;
     void updateCell(const QDate &date);

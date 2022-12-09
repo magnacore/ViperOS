@@ -18,8 +18,6 @@
 #include "tkMacOSXInt.h"
 #endif
 
-/*
- * Currently nothing needs to be declared here.
- */
+MODULE_SCOPE void TkMacOSXFlushWindows(void);
 
 #endif

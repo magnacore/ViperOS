@@ -1,0 +1,62 @@
+{% set name = "aiohttp" %}
+{% set version = "3.8.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: fc5471e1a54de15ef71c1bc6ebe80d4dc681ea600e68bfd1cbce40427f0b7578
+
+build:
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py<36]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - python
+    - pip
+    - cython
+    - setuptools >=46.4.0
+    - wheel
+  run:
+    - python
+    - aiosignal >=1.1.2
+    - async-timeout >=4.0.0a3,<5.0
+    - asynctest 0.13.0              # [py<38]
+    - attrs >=17.3.0
+    - charset-normalizer >=2.0,<3.0
+    - frozenlist >=1.1.1
+    - idna_ssl >=1.0                # [py<37]
+    - multidict >=4.5,<7.0
+    - typing-extensions >=3.7.4     # [py<38]
+    - yarl >=1.0,<2.0
+
+test:
+  imports:
+    - aiohttp
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://github.com/aio-libs/aiohttp
+  license: Apache-2.0
+  license_file: LICENSE.txt
+  license_family: Apache
+  summary: Async http client/server framework (asyncio)
+
+  doc_url: https://aiohttp.readthedocs.io/
+  dev_url: https://github.com/aio-libs/aiohttp
+  doc_source_url: https://github.com/aio-libs/aiohttp/tree/master/docs
+
+extra:
+  recipe-maintainers:
+    - sodre
+    - xhochy
+    - ocefpaf

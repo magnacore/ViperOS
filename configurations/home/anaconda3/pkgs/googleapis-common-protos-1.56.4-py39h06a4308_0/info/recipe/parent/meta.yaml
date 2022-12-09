@@ -1,0 +1,182 @@
+{% set sha256 = "c25873c47279387cfdcbdafa36149887901d36202cb645a0e4f29686bf6e4417" %}
+{% set version = "1.56.4" %}
+{% set name = "googleapis-common-protos" %}
+
+package:
+  name: {{ name|lower }}-feedstock
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  skip: true  # [py<37]
+
+outputs:
+  - name: {{ name }}
+    build:
+      script: python -m pip install . --no-deps --ignore-installed --verbose
+    requirements:
+      host:
+        - python
+        - pip
+        - setuptools
+        - wheel
+      run:
+        - python
+        - protobuf >=3.15.0,<5.0.0
+        - libprotobuf
+      run_constrained:
+        - grpcio >=1.0.0,<2.0.0
+    test:
+      imports:
+        - google.api
+        - google.api.annotations_pb2
+        - google.api.auth_pb2
+        - google.api.backend_pb2
+        - google.api.billing_pb2
+        - google.api.client_pb2
+        - google.api.config_change_pb2
+        - google.api.consumer_pb2
+        - google.api.context_pb2
+        - google.api.control_pb2
+        - google.api.distribution_pb2
+        - google.api.documentation_pb2
+        - google.api.endpoint_pb2
+        - google.api.field_behavior_pb2
+        - google.api.http_pb2
+        - google.api.httpbody_pb2
+        - google.api.label_pb2
+        - google.api.launch_stage_pb2
+        - google.api.log_pb2
+        - google.api.logging_pb2
+        - google.api.metric_pb2
+        - google.api.monitored_resource_pb2
+        - google.api.monitoring_pb2
+        - google.api.quota_pb2
+        - google.api.resource_pb2
+        - google.api.service_pb2
+        - google.api.source_info_pb2
+        - google.api.system_parameter_pb2
+        - google.api.usage_pb2
+        - google.longrunning
+        - google.longrunning.operations_pb2
+        - google.longrunning.operations_proto
+        - google.longrunning.operations_proto_pb2
+        - google.rpc
+        - google.rpc.code_pb2
+        - google.rpc.error_details_pb2
+        - google.rpc.status_pb2
+        - google.type
+        - google.type.calendar_period_pb2
+        - google.type.color_pb2
+        - google.type.date_pb2
+        - google.type.dayofweek_pb2
+        - google.type.expr_pb2
+        - google.type.fraction_pb2
+        - google.type.latlng_pb2
+        - google.type.money_pb2
+        - google.type.postal_address_pb2
+        - google.type.quaternion_pb2
+        - google.type.timeofday_pb2
+
+  - name: {{ name }}-grpc
+    requirements:
+      host:
+        - python
+      run:
+        - python
+        - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
+        - grpcio >=1.0.0,<2.0.0
+    test:
+      imports:
+        - google.api
+        - google.api.annotations_pb2
+        - google.api.auth_pb2
+        - google.api.backend_pb2
+        - google.api.billing_pb2
+        - google.api.client_pb2
+        - google.api.config_change_pb2
+        - google.api.consumer_pb2
+        - google.api.context_pb2
+        - google.api.control_pb2
+        - google.api.distribution_pb2
+        - google.api.documentation_pb2
+        - google.api.endpoint_pb2
+        - google.api.field_behavior_pb2
+        - google.api.http_pb2
+        - google.api.httpbody_pb2
+        - google.api.label_pb2
+        - google.api.launch_stage_pb2
+        - google.api.log_pb2
+        - google.api.logging_pb2
+        - google.api.metric_pb2
+        - google.api.monitored_resource_pb2
+        - google.api.monitoring_pb2
+        - google.api.quota_pb2
+        - google.api.resource_pb2
+        - google.api.service_pb2
+        - google.api.source_info_pb2
+        - google.api.system_parameter_pb2
+        - google.api.usage_pb2
+        - google.longrunning
+        - google.longrunning.operations_grpc
+        - google.longrunning.operations_grpc_pb2
+        - google.longrunning.operations_pb2
+        - google.longrunning.operations_proto
+        - google.longrunning.operations_proto_pb2
+        - google.rpc
+        - google.rpc.code_pb2
+        - google.rpc.error_details_pb2
+        - google.rpc.status_pb2
+        - google.type
+        - google.type.calendar_period_pb2
+        - google.type.color_pb2
+        - google.type.date_pb2
+        - google.type.dayofweek_pb2
+        - google.type.expr_pb2
+        - google.type.fraction_pb2
+        - google.type.latlng_pb2
+        - google.type.money_pb2
+        - google.type.postal_address_pb2
+        - google.type.quaternion_pb2
+        - google.type.timeofday_pb2
+    about:
+      home: https://github.com/googleapis/api-common-protos
+      license: Apache-2.0
+      license_file: LICENSE
+      license_family: APACHE
+      summary: Extra grpc requirements for {{ name }}
+      description: |
+        This package installs {{ name }} as well as the additional
+        dependency required to enable grpc support.
+      doc_url: https://github.com/googleapis/api-common-protos/blob/master/README.md
+      doc_source_url: https://github.com/googleapis/api-common-protos/blob/master/README.md
+      dev_url: https://github.com/googleapis/api-common-protos
+
+about:
+  home: https://github.com/googleapis/api-common-protos
+  license: Apache-2.0
+  license_file: LICENSE
+  license_family: APACHE
+  summary: Common protobufs used in Google APIs
+  description: |
+    This repository contains the original interface definitions of public
+    Google APIs that support both REST and gRPC protocols. Reading the original
+    interface definitions can provide a better understanding of Google APIs and
+    help you to utilize them more efficiently. You can also use these definitions
+    with open source tools to generate client libraries, documentation,
+    and other artifacts. NOTE: to enable gRPC support, the grcpio package must
+    also be installed. The {{ name }}-grpc metapackage accomplishes this.
+  doc_url: https://github.com/googleapis/googleapis/blob/master/README.md
+  doc_source_url: https://github.com/googleapis/googleapis/blob/master/README.md
+  dev_url: https://github.com/googleapis/googleapis
+
+extra:
+  recipe-maintainers:
+    - BrentDorsey
+    - leahecole
+    - parthea
+    - tswast

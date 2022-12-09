@@ -1,0 +1,58 @@
+{
+  "build": "py38h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "ptyprocess",
+    "python >=3.8,<3.9.0a0",
+    "tornado >=4"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/terminado-0.9.4-py38h06a4308_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/terminado-0.9.4-py3.8.egg-info/PKG-INFO",
+    "lib/python3.8/site-packages/terminado-0.9.4-py3.8.egg-info/SOURCES.txt",
+    "lib/python3.8/site-packages/terminado-0.9.4-py3.8.egg-info/dependency_links.txt",
+    "lib/python3.8/site-packages/terminado-0.9.4-py3.8.egg-info/not-zip-safe",
+    "lib/python3.8/site-packages/terminado-0.9.4-py3.8.egg-info/requires.txt",
+    "lib/python3.8/site-packages/terminado-0.9.4-py3.8.egg-info/top_level.txt",
+    "lib/python3.8/site-packages/terminado/__init__.py",
+    "lib/python3.8/site-packages/terminado/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/terminado/__pycache__/management.cpython-38.pyc",
+    "lib/python3.8/site-packages/terminado/__pycache__/uimodule.cpython-38.pyc",
+    "lib/python3.8/site-packages/terminado/__pycache__/websocket.cpython-38.pyc",
+    "lib/python3.8/site-packages/terminado/_static/terminado.js",
+    "lib/python3.8/site-packages/terminado/management.py",
+    "lib/python3.8/site-packages/terminado/tests/__init__.py",
+    "lib/python3.8/site-packages/terminado/tests/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/terminado/tests/__pycache__/basic_test.cpython-38.pyc",
+    "lib/python3.8/site-packages/terminado/tests/basic_test.py",
+    "lib/python3.8/site-packages/terminado/uimod_embed.js",
+    "lib/python3.8/site-packages/terminado/uimodule.py",
+    "lib/python3.8/site-packages/terminado/websocket.py"
+  ],
+  "fn": "terminado-0.9.4-py38h06a4308_0.conda",
+  "legacy_bz2_md5": "01ca0fddea3957eb499151dcf15722c6",
+  "legacy_bz2_size": 24930,
+  "license": "BSD-2-Clause",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/terminado-0.9.4-py38h06a4308_0",
+    "type": 1
+  },
+  "md5": "b3cd142104de2795c9bbb34cbc308eb2",
+  "name": "terminado",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/terminado-0.9.4-py38h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "terminado==0.9.4=py38h06a4308_0",
+  "sha256": "c10653e827f2d77d5c1d3205cc760a3daa92c5cc793ad96f46bf6014dc559741",
+  "size": 26054,
+  "subdir": "linux-64",
+  "timestamp": 1617136557217,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/terminado-0.9.4-py38h06a4308_0.conda",
+  "version": "0.9.4"
+}

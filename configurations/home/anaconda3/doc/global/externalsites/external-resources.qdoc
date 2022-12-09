@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** Copyright (C) 2020 The Qt Company Ltd.
+** Copyright (C) 2016 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
 ** This file is part of the documentation of the Qt Toolkit.
@@ -24,22 +24,6 @@
 ** $QT_END_LICENSE$
 **
 ****************************************************************************/
-/*!
-    \externalpage https://source.android.com/setup/start/build-numbers
-    \title Android: Build Numbers
-*/
-/*!
-    \externalpage https://developer.android.com/guide/topics/manifest/uses-feature-element
-    \title Android: <uses-feature>
-*/
-/*!
-    \externalpage https://developer.android.com/guide/topics/manifest/uses-permission-element
-    \title Android: <uses-permission>
-*/
-/*!
-    \externalpage https://developer.android.com/studio/publish/versioning#appversioning
-    \title Android: App Versioning
-*/
 /*!
     \externalpage http://www.freedesktop.org/
     \title freedesktop.org
@@ -78,37 +62,28 @@
 */
 
 /*!
-    \externalpage https://cmake.org/cmake/help/latest/command/find_package.html
+    \externalpage http://www.cmake.org/cmake/help/v2.8.11/cmake.html#command:find_package
     \title CMake find_package Documentation
 */
 
 /*!
-    \externalpage https://cmake.org/cmake/help/latest/manual/cmake-qt.7.html#automoc
+    \externalpage http://www.cmake.org/cmake/help/v2.8.11/cmake.html#prop_tgt:AUTOMOC
     \title CMake AUTOMOC Documentation
 */
 
-/*!
-    \externalpage https://cmake.org/cmake/help/latest/manual/cmake-qt.7.html#autorcc
-    \title CMake AUTORCC Documentation
-*/
 
 /*!
-    \externalpage https://cmake.org/cmake/help/latest/manual/cmake-qt.7.html#autouic
-    \title CMake AUTOUIC Documentation
-*/
-
-/*!
-    \externalpage https://cmake.org/cmake/help/latest/prop_tgt/LOCATION.html
+    \externalpage http://www.cmake.org/cmake/help/v2.8.11/cmake.html#prop_tgt:LOCATION
     \title CMake LOCATION Documentation
 */
 
 /*!
-    \externalpage https://cmake.org/cmake/help/latest/prop_tgt/POSITION_INDEPENDENT_CODE.html
+    \externalpage http://www.cmake.org/cmake/help/v2.8.11/cmake.html#prop_tgt:POSITION_INDEPENDENT_CODE
     \title CMake POSITION_INDEPENDENT_CODE Documentation
 */
 
 /*!
-    \externalpage https://cmake.org/cmake/help/latest/command/target_link_libraries.html
+    \externalpage http://www.cmake.org/cmake/help/v2.8.11/cmake.html#command:target_link_libraries
     \title CMake target_link_libraries Documentation
 */
 
@@ -496,11 +471,6 @@
 /*!
     \externalpage http://www.khronos.org/registry/gles/
     \title Khronos OpenGL ES API Registry
-*/
-
-/*!
-    \externalpage https://www.khronos.org/opengl/wiki/Array_Texture
-    \title Array Texture
 */
 
 /*!

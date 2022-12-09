@@ -43,6 +43,7 @@
 #include <QtWidgets/qwidget.h>
 #include <QtQuick/qquickwindow.h>
 #include <QtCore/qurl.h>
+#include <QtQml/qqmldebug.h>
 #include <QtQuickWidgets/qtquickwidgetsglobal.h>
 #include <QtGui/qimage.h>
 
@@ -63,10 +64,10 @@ class Q_QUICKWIDGETS_EXPORT QQuickWidget : public QWidget
     Q_PROPERTY(QUrl source READ source WRITE setSource DESIGNABLE true)
 
 public:
-    explicit QQuickWidget(QWidget *parent = nullptr);
+    explicit QQuickWidget(QWidget *parent = Q_NULLPTR);
     QQuickWidget(QQmlEngine* engine, QWidget *parent);
-    explicit QQuickWidget(const QUrl &source, QWidget *parent = nullptr);
-    ~QQuickWidget() override;
+    explicit QQuickWidget(const QUrl &source, QWidget *parent = Q_NULLPTR);
+    virtual ~QQuickWidget();
 
     QUrl source() const;
 
@@ -112,7 +113,6 @@ private Q_SLOTS:
     void createFramebufferObject();
     void destroyFramebufferObject();
     void triggerUpdate();
-    void propagateFocusObjectChanged(QObject *focusObject);
 
 protected:
     void resizeEvent(QResizeEvent *) override;
@@ -135,7 +135,7 @@ protected:
     void wheelEvent(QWheelEvent *) override;
 #endif
 
-#if QT_CONFIG(quick_draganddrop)
+#if QT_CONFIG(draganddrop)
     void dragEnterEvent(QDragEnterEvent *) override;
     void dragMoveEvent(QDragMoveEvent *) override;
     void dragLeaveEvent(QDragLeaveEvent *) override;
@@ -144,7 +144,6 @@ protected:
 
     bool event(QEvent *) override;
     void paintEvent(QPaintEvent *event) override;
-    bool focusNextPrevChild(bool next) override;
 
 private:
     Q_DISABLE_COPY(QQuickWidget)

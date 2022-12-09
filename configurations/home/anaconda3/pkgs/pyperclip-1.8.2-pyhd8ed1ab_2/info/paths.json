@@ -1,0 +1,71 @@
+{
+  "paths": [
+    {
+      "_path": "site-packages/pyperclip-1.8.2.dist-info/AUTHORS.txt",
+      "path_type": "hardlink",
+      "sha256": "4dc406eb461c167270ebeee83efdb54435deb24f503ffc1fbe0e1d27a9971124",
+      "size_in_bytes": 1925
+    },
+    {
+      "_path": "site-packages/pyperclip-1.8.2.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "site-packages/pyperclip-1.8.2.dist-info/LICENSE.txt",
+      "path_type": "hardlink",
+      "sha256": "f5793f4c4b281de1f2f92cdeb28e31e57e2dab802ce967b0bbd107ed5bbc2e35",
+      "size_in_bytes": 1514
+    },
+    {
+      "_path": "site-packages/pyperclip-1.8.2.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "ebb44ee7001b95d2898c8a6c8cd8c10316b8ae081561aca1861a7e6ff626f892",
+      "size_in_bytes": 2259
+    },
+    {
+      "_path": "site-packages/pyperclip-1.8.2.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "1db9d466f1f5b7e80470daf4ffd4f7688f34d8878a819be34c3592edaafd60c0",
+      "size_in_bytes": 1034
+    },
+    {
+      "_path": "site-packages/pyperclip-1.8.2.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "site-packages/pyperclip-1.8.2.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "3aa464174798e461ecb0ca2b16395b4c8ab4ef6be91e917ad1f21003a952f710",
+      "size_in_bytes": 92
+    },
+    {
+      "_path": "site-packages/pyperclip-1.8.2.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "d89f6d2c127c2ddcde5cdceece1bde61f68e1b1173d4490b7a420188a0499461",
+      "size_in_bytes": 105
+    },
+    {
+      "_path": "site-packages/pyperclip-1.8.2.dist-info/top_level.txt",
+      "path_type": "hardlink",
+      "sha256": "95e23938f91428039a425f404ec9b7820bbe0c0ff7dc31fbeb10bf9cb18f1fe2",
+      "size_in_bytes": 10
+    },
+    {
+      "_path": "site-packages/pyperclip/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "22abd6b6d66b484119076c2ac9144c7a84fb7a821d3db370acc7b7bf433e689b",
+      "size_in_bytes": 26043
+    },
+    {
+      "_path": "site-packages/pyperclip/__main__.py",
+      "path_type": "hardlink",
+      "sha256": "8ad20e97f97a18d1d7c7bd3b25139388d3dcbd9894df1ba1024eba764df19706",
+      "size_in_bytes": 765
+    }
+  ],
+  "paths_version": 1
+}

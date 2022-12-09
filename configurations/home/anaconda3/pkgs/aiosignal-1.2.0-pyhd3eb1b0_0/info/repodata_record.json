@@ -1,0 +1,26 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "frozenlist >=1.1.0",
+    "python >=3.6"
+  ],
+  "features": "",
+  "fn": "aiosignal-1.2.0-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "69ca1242900a1537435a8cdc6901100a",
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "md5": "b06b2926e101269f76c8131873483edc",
+  "name": "aiosignal",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "edd72cab72261a01a897e3d0e3bfffc8e26d60ba4cc7c7566fb0b3549575a4b5",
+  "size": 11953,
+  "subdir": "noarch",
+  "timestamp": 1637843091841,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/aiosignal-1.2.0-pyhd3eb1b0_0.conda",
+  "version": "1.2.0"
+}

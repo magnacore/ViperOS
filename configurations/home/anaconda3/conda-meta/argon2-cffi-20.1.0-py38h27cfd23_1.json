@@ -1,0 +1,68 @@
+{
+  "build": "py38h27cfd23_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [
+    "argon2_cffi ==999"
+  ],
+  "depends": [
+    "cffi >=1.0.0",
+    "libgcc-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0",
+    "six"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/argon2-cffi-20.1.0-py38h27cfd23_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/argon2/__init__.py",
+    "lib/python3.8/site-packages/argon2/__main__.py",
+    "lib/python3.8/site-packages/argon2/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/argon2/__pycache__/__main__.cpython-38.pyc",
+    "lib/python3.8/site-packages/argon2/__pycache__/_ffi_build.cpython-38.pyc",
+    "lib/python3.8/site-packages/argon2/__pycache__/_legacy.cpython-38.pyc",
+    "lib/python3.8/site-packages/argon2/__pycache__/_password_hasher.cpython-38.pyc",
+    "lib/python3.8/site-packages/argon2/__pycache__/_utils.cpython-38.pyc",
+    "lib/python3.8/site-packages/argon2/__pycache__/exceptions.cpython-38.pyc",
+    "lib/python3.8/site-packages/argon2/__pycache__/low_level.cpython-38.pyc",
+    "lib/python3.8/site-packages/argon2/_ffi.abi3.so",
+    "lib/python3.8/site-packages/argon2/_ffi_build.py",
+    "lib/python3.8/site-packages/argon2/_legacy.py",
+    "lib/python3.8/site-packages/argon2/_password_hasher.py",
+    "lib/python3.8/site-packages/argon2/_utils.py",
+    "lib/python3.8/site-packages/argon2/exceptions.py",
+    "lib/python3.8/site-packages/argon2/low_level.py",
+    "lib/python3.8/site-packages/argon2_cffi-20.1.0.dist-info/AUTHORS.rst",
+    "lib/python3.8/site-packages/argon2_cffi-20.1.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/argon2_cffi-20.1.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/argon2_cffi-20.1.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/argon2_cffi-20.1.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/argon2_cffi-20.1.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/argon2_cffi-20.1.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/argon2_cffi-20.1.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/argon2_cffi-20.1.0.dist-info/top_level.txt"
+  ],
+  "fn": "argon2-cffi-20.1.0-py38h27cfd23_1.conda",
+  "legacy_bz2_md5": "fbc538a3f7744ee8c0c28a4bcb434636",
+  "legacy_bz2_size": 50414,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/argon2-cffi-20.1.0-py38h27cfd23_1",
+    "type": 1
+  },
+  "md5": "9d915ab1205a2e1881bb28fde360630b",
+  "name": "argon2-cffi",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/argon2-cffi-20.1.0-py38h27cfd23_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "argon2-cffi==20.1.0=py38h27cfd23_1",
+  "sha256": "4e720aa8383cb2a58b5af982eec0de7fa193ec9ffb6c80d56c029c1354d18a90",
+  "size": 47426,
+  "subdir": "linux-64",
+  "timestamp": 1613037152435,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/argon2-cffi-20.1.0-py38h27cfd23_1.conda",
+  "version": "20.1.0"
+}

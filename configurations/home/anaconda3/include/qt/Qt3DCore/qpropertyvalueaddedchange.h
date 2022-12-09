@@ -50,10 +50,10 @@ namespace Qt3DCore {
 
 class QPropertyValueAddedChangePrivate;
 
-class Q_3DCORESHARED_EXPORT QPropertyValueAddedChange : public QStaticPropertyValueAddedChangeBase
+class QT3DCORESHARED_EXPORT QPropertyValueAddedChange : public QStaticPropertyValueAddedChangeBase
 {
 public:
-    Q3D_DECL_DEPRECATED explicit QPropertyValueAddedChange(QNodeId subjectId);
+    explicit QPropertyValueAddedChange(QNodeId subjectId);
     ~QPropertyValueAddedChange();
 
     void setAddedValue(const QVariant &value);
@@ -63,7 +63,7 @@ private:
     Q_DECLARE_PRIVATE(QPropertyValueAddedChange)
 };
 
-Q3D_DECL_DEPRECATED typedef QSharedPointer<QPropertyValueAddedChange> QPropertyValueAddedChangePtr;
+typedef QSharedPointer<QPropertyValueAddedChange> QPropertyValueAddedChangePtr;
 
 } // namespace Qt3DCore
 

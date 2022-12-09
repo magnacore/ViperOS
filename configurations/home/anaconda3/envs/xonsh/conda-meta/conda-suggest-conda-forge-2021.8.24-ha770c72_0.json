@@ -1,10 +1,11 @@
 {
+  "arch": "x86_64",
   "build": "ha770c72_0",
   "build_number": 0,
   "channel": "https://conda.anaconda.org/conda-forge/linux-64",
   "constrains": [],
   "depends": [],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/conda-suggest-conda-forge-2021.8.24-ha770c72_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/conda-suggest-conda-forge-2021.8.24-ha770c72_0",
   "features": "",
   "files": [
     "share/conda-suggest/conda-forge.linux-64.map",
@@ -14,12 +15,12 @@
   "license": "BSD-3-Clause",
   "license_family": "BSD",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/conda-suggest-conda-forge-2021.8.24-ha770c72_0",
+    "source": "/home/manuj/anaconda3/pkgs/conda-suggest-conda-forge-2021.8.24-ha770c72_0",
     "type": 1
   },
   "md5": "6c6d6156bfa501278216f8f6958d1a07",
   "name": "conda-suggest-conda-forge",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/conda-suggest-conda-forge-2021.8.24-ha770c72_0.tar.bz2",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/conda-suggest-conda-forge-2021.8.24-ha770c72_0.tar.bz2",
   "paths_data": {
     "paths": [
       {
@@ -39,7 +40,8 @@
     ],
     "paths_version": 1
   },
-  "requested_spec": "None",
+  "platform": "linux",
+  "requested_spec": "conda-forge/linux-64::conda-suggest-conda-forge==2021.8.24=ha770c72_0",
   "sha256": "5095a8485f583fbb8146b36475a9e469339b5e623fc1cda73ba997cb3fa096e7",
   "size": 123121,
   "subdir": "linux-64",

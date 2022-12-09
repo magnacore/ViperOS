@@ -55,9 +55,7 @@ public:
     enum RequiredStatus { Unknown = -1, Optional = 0, Required = 1 };
 
     explicit QSqlField(const QString& fieldName = QString(),
-                       QVariant::Type type = {});
-    QSqlField(const QString &fieldName, QVariant::Type type,
-              const QString &tableName);
+                       QVariant::Type type = QVariant::Invalid);
 
     QSqlField(const QSqlField& other);
     QSqlField& operator=(const QSqlField& other);
@@ -70,8 +68,6 @@ public:
     { return val; }
     void setName(const QString& name);
     QString name() const;
-    void setTableName(const QString &tableName);
-    QString tableName() const;
     bool isNull() const;
     void setReadOnly(bool readOnly);
     bool isReadOnly() const;

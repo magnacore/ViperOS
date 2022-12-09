@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +15,10 @@
  */
 #ifndef LIEF_MACHO_ENCRYPTION_INFO_COMMAND_H_
 #define LIEF_MACHO_ENCRYPTION_INFO_COMMAND_H_
+#include <string>
+#include <vector>
 #include <iostream>
+#include <array>
 
 #include "LIEF/visibility.h"
 #include "LIEF/types.hpp"
@@ -24,7 +27,7 @@
 
 namespace LIEF {
 namespace MachO {
-struct encryption_info_command;
+
 class LIEF_API EncryptionInfo : public LoadCommand {
   public:
   EncryptionInfo(void);

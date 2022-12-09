@@ -38,17 +38,17 @@ QT_CHARTS_BEGIN_NAMESPACE
 
 class QLineSeriesPrivate;
 
-class Q_CHARTS_EXPORT QLineSeries : public QXYSeries
+class QT_CHARTS_EXPORT QLineSeries : public QXYSeries
 {
     Q_OBJECT
 
 public:
-    explicit QLineSeries(QObject *parent = nullptr);
+    explicit QLineSeries(QObject *parent = Q_NULLPTR);
     ~QLineSeries();
     QAbstractSeries::SeriesType type() const;
 
 protected:
-    QLineSeries(QLineSeriesPrivate &d, QObject *parent = nullptr);
+    QLineSeries(QLineSeriesPrivate &d, QObject *parent = Q_NULLPTR);
 
 private:
     Q_DECLARE_PRIVATE(QLineSeries)

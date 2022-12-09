@@ -41,24 +41,17 @@
 #define QT3DCORE_GLOBAL_H
 
 #include <QtCore/qglobal.h>
-#include <Qt3DCore/qt3dcore-config.h>
 
 QT_BEGIN_NAMESPACE
 
 #if defined(QT_SHARED) || !defined(QT_STATIC)
 #  if defined(QT_BUILD_3DCORE_LIB)
-#    define Q_3DCORESHARED_EXPORT Q_DECL_EXPORT
+#    define QT3DCORESHARED_EXPORT Q_DECL_EXPORT
 #  else
-#    define Q_3DCORESHARED_EXPORT Q_DECL_IMPORT
+#    define QT3DCORESHARED_EXPORT Q_DECL_IMPORT
 #  endif
 #else
-#  define Q_3DCORESHARED_EXPORT
-#endif
-
-#ifdef BUILD_QT3D_MODULE
-#define Q3D_DECL_DEPRECATED
-#else
-#define Q3D_DECL_DEPRECATED Q_DECL_DEPRECATED
+#  define QT3DCORESHARED_EXPORT
 #endif
 
 #define QT3D_DECLARE_TYPEINFO(NS, Class, Flags) \

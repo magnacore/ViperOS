@@ -1,0 +1,27 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "backports",
+    "python",
+    "setuptools"
+  ],
+  "features": "",
+  "fn": "backports.functools_lru_cache-1.6.4-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "22ce153d48ef45d7f2e91e4e00a6a631",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "473e6bcfbea4b93db271540d2bbc6e7e",
+  "name": "backports.functools_lru_cache",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "cfb1cdf68acde202cc75092e3c0764a1f19b1599c8d06020d811ba495508f6b4",
+  "size": 9618,
+  "subdir": "noarch",
+  "timestamp": 1618170204423,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/backports.functools_lru_cache-1.6.4-pyhd3eb1b0_0.conda",
+  "version": "1.6.4"
+}

@@ -49,7 +49,6 @@
 QT_BEGIN_NAMESPACE
 
 class QSslConfiguration;
-class QHttp2Configuration;
 
 class QNetworkRequestPrivate;
 class Q_NETWORK_EXPORT QNetworkRequest
@@ -64,11 +63,7 @@ public:
         SetCookieHeader,
         ContentDispositionHeader,  // added for QMultipartMessage
         UserAgentHeader,
-        ServerHeader,
-        IfModifiedSinceHeader,
-        ETagHeader,
-        IfMatchHeader,
-        IfNoneMatchHeader
+        ServerHeader
     };
     enum Attribute {
         HttpStatusCodeAttribute,
@@ -89,23 +84,14 @@ public:
         DownloadBufferAttribute, // internal
         SynchronousRequestAttribute, // internal
         BackgroundRequestAttribute,
-#if QT_DEPRECATED_SINCE(5, 15)
         SpdyAllowedAttribute,
         SpdyWasUsedAttribute,
-#endif // QT_DEPRECATED_SINCE(5, 15)
-        EmitAllUploadProgressSignalsAttribute = BackgroundRequestAttribute + 3,
-        FollowRedirectsAttribute Q_DECL_ENUMERATOR_DEPRECATED_X("Use RedirectPolicyAttribute"),
-        Http2AllowedAttribute,
-        Http2WasUsedAttribute,
-#if QT_DEPRECATED_SINCE(5, 15)
-        HTTP2AllowedAttribute Q_DECL_ENUMERATOR_DEPRECATED_X("Use Http2AllowedAttribute") = Http2AllowedAttribute,
-        HTTP2WasUsedAttribute Q_DECL_ENUMERATOR_DEPRECATED_X("Use Http2WasUsedAttribute"),
-#endif // QT_DEPRECATED_SINCE(5, 15)
+        EmitAllUploadProgressSignalsAttribute,
+        FollowRedirectsAttribute,
+        HTTP2AllowedAttribute,
+        HTTP2WasUsedAttribute,
         OriginalContentLengthAttribute,
         RedirectPolicyAttribute,
-        Http2DirectAttribute,
-        ResourceTypeAttribute, // internal
-        AutoDeleteReplyOnFinishAttribute,
 
         User = 1000,
         UserMax = 32767
@@ -134,18 +120,16 @@ public:
         UserVerifiedRedirectPolicy
     };
 
-    enum TransferTimeoutConstant {
-        DefaultTransferTimeoutConstant = 30000
-    };
 
-    QNetworkRequest();
-    explicit QNetworkRequest(const QUrl &url);
+    explicit QNetworkRequest(const QUrl &url = QUrl());
     QNetworkRequest(const QNetworkRequest &other);
     ~QNetworkRequest();
-    QNetworkRequest &operator=(QNetworkRequest &&other) noexcept { swap(other); return *this; }
+#ifdef Q_COMPILER_RVALUE_REFS
+    QNetworkRequest &operator=(QNetworkRequest &&other) Q_DECL_NOTHROW { swap(other); return *this; }
+#endif
     QNetworkRequest &operator=(const QNetworkRequest &other);
 
-    void swap(QNetworkRequest &other) noexcept { qSwap(d, other.d); }
+    void swap(QNetworkRequest &other) Q_DECL_NOTHROW { qSwap(d, other.d); }
 
     bool operator==(const QNetworkRequest &other) const;
     inline bool operator!=(const QNetworkRequest &other) const
@@ -183,16 +167,6 @@ public:
     int maximumRedirectsAllowed() const;
     void setMaximumRedirectsAllowed(int maximumRedirectsAllowed);
 
-    QString peerVerifyName() const;
-    void setPeerVerifyName(const QString &peerName);
-#if QT_CONFIG(http) || defined(Q_CLANG_QDOC)
-    QHttp2Configuration http2Configuration() const;
-    void setHttp2Configuration(const QHttp2Configuration &configuration);
-#endif // QT_CONFIG(http) || defined(Q_CLANG_QDOC)
-#if QT_CONFIG(http) || defined(Q_CLANG_QDOC) || defined (Q_OS_WASM)
-    int transferTimeout() const;
-    void setTransferTimeout(int timeout = DefaultTransferTimeoutConstant);
-#endif // QT_CONFIG(http) || defined(Q_CLANG_QDOC) || defined (Q_OS_WASM)
 private:
     QSharedDataPointer<QNetworkRequestPrivate> d;
     friend class QNetworkRequestPrivate;

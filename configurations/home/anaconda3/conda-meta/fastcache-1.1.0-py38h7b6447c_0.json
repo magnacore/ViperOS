@@ -1,0 +1,58 @@
+{
+  "build": "py38h7b6447c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/fastcache-1.1.0-py38h7b6447c_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/__pycache__/_sysconfigdata_x86_64_conda_cos6_linux_gnu.cpython-38.pyc",
+    "lib/python3.8/site-packages/fastcache-1.1.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/fastcache-1.1.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/fastcache-1.1.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/fastcache-1.1.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/fastcache-1.1.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/fastcache-1.1.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/fastcache/__init__.py",
+    "lib/python3.8/site-packages/fastcache/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/fastcache/__pycache__/benchmark.cpython-38.pyc",
+    "lib/python3.8/site-packages/fastcache/_lrucache.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/fastcache/benchmark.py",
+    "lib/python3.8/site-packages/fastcache/tests/__init__.py",
+    "lib/python3.8/site-packages/fastcache/tests/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/fastcache/tests/__pycache__/test_clrucache.cpython-38.pyc",
+    "lib/python3.8/site-packages/fastcache/tests/__pycache__/test_functools.cpython-38.pyc",
+    "lib/python3.8/site-packages/fastcache/tests/__pycache__/test_thread.cpython-38.pyc",
+    "lib/python3.8/site-packages/fastcache/tests/test_clrucache.py",
+    "lib/python3.8/site-packages/fastcache/tests/test_functools.py",
+    "lib/python3.8/site-packages/fastcache/tests/test_thread.py"
+  ],
+  "fn": "fastcache-1.1.0-py38h7b6447c_0.conda",
+  "legacy_bz2_md5": "dc2a2ceac4762c21efffdc9afce39afb",
+  "legacy_bz2_size": 37508,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/fastcache-1.1.0-py38h7b6447c_0",
+    "type": 1
+  },
+  "md5": "b719e0a5dea7eeab7e9a472fe6edab72",
+  "name": "fastcache",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/fastcache-1.1.0-py38h7b6447c_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "fastcache==1.1.0=py38h7b6447c_0",
+  "sha256": "8ffa2c5e5714440addae1e4e94f976f06f65de4f9250e1036fe7b0388dfffc66",
+  "size": 36989,
+  "subdir": "linux-64",
+  "timestamp": 1572880642654,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/fastcache-1.1.0-py38h7b6447c_0.conda",
+  "version": "1.1.0"
+}

@@ -49,7 +49,7 @@ namespace Qt3DCore {
 
 class QStaticPropertyValueAddedChangeBasePrivate;
 
-class Q_3DCORESHARED_EXPORT QStaticPropertyValueAddedChangeBase : public QPropertyValueAddedChangeBase
+class QT3DCORESHARED_EXPORT QStaticPropertyValueAddedChangeBase : public QPropertyValueAddedChangeBase
 {
 public:
     ~QStaticPropertyValueAddedChangeBase();
@@ -59,7 +59,7 @@ public:
 
 protected:
     Q_DECLARE_PRIVATE(QStaticPropertyValueAddedChangeBase)
-    Q3D_DECL_DEPRECATED explicit QStaticPropertyValueAddedChangeBase(QNodeId subjectId);
+    explicit QStaticPropertyValueAddedChangeBase(QNodeId subjectId);
     QStaticPropertyValueAddedChangeBase(QStaticPropertyValueAddedChangeBasePrivate &dd,
                                         QNodeId subjectId);
 };

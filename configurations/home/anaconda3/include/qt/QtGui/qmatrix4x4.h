@@ -72,9 +72,7 @@ public:
 
     QMatrix4x4(const float *values, int cols, int rows);
     QMatrix4x4(const QTransform& transform);
-#if QT_DEPRECATED_SINCE(5, 15)
     QMatrix4x4(const QMatrix& matrix);
-#endif // QT_DEPRECATED_SINCE(5, 15)
 
     inline const float& operator()(int row, int column) const;
     inline float& operator()(int row, int column);
@@ -95,7 +93,7 @@ public:
     inline void fill(float value);
 
     double determinant() const;
-    QMatrix4x4 inverted(bool *invertible = nullptr) const;
+    QMatrix4x4 inverted(bool *invertible = Q_NULLPTR) const;
     QMatrix4x4 transposed() const;
     QMatrix3x3 normalMatrix() const;
 
@@ -158,9 +156,7 @@ public:
 
     void copyDataTo(float *values) const;
 
-#if QT_DEPRECATED_SINCE(5, 15)
-    QT_DEPRECATED_X("Use toTransform()") QMatrix toAffine() const;
-#endif // QT_DEPRECATED_SINCE(5, 15)
+    QMatrix toAffine() const;
     QTransform toTransform() const;
     QTransform toTransform(float distanceToPlane) const;
 
@@ -219,7 +215,6 @@ private:
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_CLANG("-Wfloat-equal")
 QT_WARNING_DISABLE_GCC("-Wfloat-equal")
-QT_WARNING_DISABLE_INTEL(1572)
 Q_DECLARE_TYPEINFO(QMatrix4x4, Q_MOVABLE_TYPE);
 
 inline QMatrix4x4::QMatrix4x4
@@ -864,8 +859,8 @@ inline QPointF operator*(const QPointF& point, const QMatrix4x4& matrix)
 {
     float xin, yin;
     float x, y, w;
-    xin = float(point.x());
-    yin = float(point.y());
+    xin = point.x();
+    yin = point.y();
     x = xin * matrix.m[0][0] +
         yin * matrix.m[0][1] +
         matrix.m[0][3];
@@ -1099,7 +1094,7 @@ inline float *QMatrix4x4::data()
 
 inline void QMatrix4x4::viewport(const QRectF &rect)
 {
-    viewport(float(rect.x()), float(rect.y()), float(rect.width()), float(rect.height()));
+    viewport(rect.x(), rect.y(), rect.width(), rect.height());
 }
 
 QT_WARNING_POP

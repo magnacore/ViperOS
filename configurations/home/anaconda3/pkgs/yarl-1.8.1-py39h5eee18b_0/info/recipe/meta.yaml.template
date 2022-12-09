@@ -1,0 +1,54 @@
+{% set name = "yarl" %}
+{% set version = "1.8.1" %}
+{% set sha256 = "af887845b8c2e060eb5605ff72b6f2dd2aab7a761379373fd89d314f4752abbf" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [py<=36]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - python
+    - pip
+    - setuptools >=40
+    - wheel
+  run:
+    - python
+    - multidict >=4.0
+    - idna >=2.0
+    - typing-extensions >=3.7.4 # [py<38]
+
+test:
+  source_files:
+    - tests
+  requires:
+    - pytest
+  commands:
+    - py.test tests
+
+about:
+  home: https://github.com/aio-libs/yarl
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE
+  license_url: https://www.apache.org/licenses/LICENSE-2.0
+  summary: Yet another URL library
+  doc_url: https://yarl.readthedocs.io
+  dev_url: https://github.com/aio-libs/yarl
+  doc_source_url: https://github.com/aio-libs/yarl/tree/master/docs
+
+extra:
+  recipe-maintainers:
+    - sodre

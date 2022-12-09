@@ -61,23 +61,9 @@ public:
         ClearStencilBuffer  = 0x0004
     };
     Q_DECLARE_FLAGS(ClearMode, ClearModeBit)
-    Q_FLAG(ClearMode)
 
-    enum MatrixTransformFlag
-    {
-        MatrixTransformFlipY = 0x01
-    };
-    Q_DECLARE_FLAGS(MatrixTransformFlags, MatrixTransformFlag)
-    Q_FLAG(MatrixTransformFlags)
+    virtual ~QSGAbstractRenderer();
 
-    ~QSGAbstractRenderer() override;
-
-    // just have a warning about becoming private, ifdefing the whole class is not feasible
-#if !defined(QT_BUILD_QUICK_LIB)
-#if QT_DEPRECATED_SINCE(5, 15)
-    QT_DEPRECATED_X("QSGAbstractRenderer is no longer going to be public in Qt 6.0. QSGEngine-based workflows are expected to migrate to QQuickRenderControl instead.")
-#endif
-#endif
     void setRootNode(QSGRootNode *node);
     QSGRootNode *rootNode() const;
     void setDeviceRect(const QRect &rect);
@@ -89,11 +75,8 @@ public:
     QRect viewportRect() const;
 
     void setProjectionMatrixToRect(const QRectF &rect);
-    void setProjectionMatrixToRect(const QRectF &rect, MatrixTransformFlags flags);
     void setProjectionMatrix(const QMatrix4x4 &matrix);
-    void setProjectionMatrixWithNativeNDC(const QMatrix4x4 &matrix);
     QMatrix4x4 projectionMatrix() const;
-    QMatrix4x4 projectionMatrixWithNativeNDC() const;
 
     void setClearColor(const QColor &color);
     QColor clearColor() const;
@@ -107,7 +90,7 @@ Q_SIGNALS:
     void sceneGraphChanged();
 
 protected:
-    explicit QSGAbstractRenderer(QObject *parent = nullptr);
+    explicit QSGAbstractRenderer(QObject *parent = Q_NULLPTR);
     virtual void nodeChanged(QSGNode *node, QSGNode::DirtyState state) = 0;
 
 private:

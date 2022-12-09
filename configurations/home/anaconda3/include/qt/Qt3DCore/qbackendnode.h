@@ -42,7 +42,6 @@
 
 #include <Qt3DCore/qnodecreatedchange.h>
 #include <Qt3DCore/qnodeid.h>
-#include <Qt3DCore/qnodecommand.h>
 #include <Qt3DCore/qscenechange.h>
 #include <Qt3DCore/qt3dcore_global.h>
 
@@ -58,18 +57,18 @@ class QAspectEngine;
 class QBackendNodeTester;
 #endif
 
-class Q_3DCORESHARED_EXPORT QBackendNodeMapper
+class QT3DCORESHARED_EXPORT QBackendNodeMapper
 {
 public:
     virtual ~QBackendNodeMapper();
-    virtual QBackendNode *create(const QNodeCreatedChangeBasePtr &change) const = 0;        // TODO QT6 change to only take a NodeId
+    virtual QBackendNode *create(const QNodeCreatedChangeBasePtr &change) const = 0;
     virtual QBackendNode *get(QNodeId id) const = 0;
     virtual void destroy(QNodeId id) const = 0;
 };
 
 typedef QSharedPointer<QBackendNodeMapper> QBackendNodeMapperPtr;
 
-class Q_3DCORESHARED_EXPORT QBackendNode
+class QT3DCORESHARED_EXPORT QBackendNode
 {
 public:
     enum Mode {
@@ -90,18 +89,15 @@ public:
 protected:
     Q_DECLARE_PRIVATE(QBackendNode)
     explicit QBackendNode(QBackendNodePrivate &dd);
-    Q3D_DECL_DEPRECATED void notifyObservers(const QSceneChangePtr &e);
-    Q3D_DECL_DEPRECATED QNodeCommand::CommandId sendCommand(const QString &name, const QVariant &data,
-                                                          QNodeCommand::CommandId replyTo = QNodeCommand::CommandId());
-    Q3D_DECL_DEPRECATED void sendReply(const QNodeCommandPtr &command);
-    Q3D_DECL_DEPRECATED virtual void sceneChangeEvent(const QSceneChangePtr &e);
+    void notifyObservers(const QSceneChangePtr &e);
+    virtual void sceneChangeEvent(const QSceneChangePtr &e);
 
     QBackendNodePrivate *d_ptr;
 
 private:
     Q_DISABLE_COPY(QBackendNode)
     void setPeerId(QNodeId id) Q_DECL_NOEXCEPT;
-    Q3D_DECL_DEPRECATED virtual void initializeFromPeer(const QNodeCreatedChangeBasePtr &change);
+    virtual void initializeFromPeer(const QNodeCreatedChangeBasePtr &change);
 
     friend class QBackendNodePropertyChange;
     friend class QAbstractAspectPrivate;

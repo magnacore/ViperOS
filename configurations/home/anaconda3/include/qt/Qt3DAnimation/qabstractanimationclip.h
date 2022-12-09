@@ -47,7 +47,7 @@ namespace Qt3DAnimation {
 
 class QAbstractAnimationClipPrivate;
 
-class Q_3DANIMATIONSHARED_EXPORT QAbstractAnimationClip : public Qt3DCore::QNode
+class QT3DANIMATIONSHARED_EXPORT QAbstractAnimationClip : public Qt3DCore::QNode
 {
     Q_OBJECT
     Q_PROPERTY(float duration READ duration NOTIFY durationChanged)
@@ -62,8 +62,8 @@ Q_SIGNALS:
 
 protected:
     QAbstractAnimationClip(QAbstractAnimationClipPrivate &dd, Qt3DCore::QNode *parent = nullptr);
-    // TODO Unused remove in Qt6
-    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override;
+    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) Q_DECL_OVERRIDE;
+
 private:
     Q_DECLARE_PRIVATE(QAbstractAnimationClip)
 };

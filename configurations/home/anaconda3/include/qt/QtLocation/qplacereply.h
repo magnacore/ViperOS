@@ -71,7 +71,7 @@ public:
         MatchReply
     };
 
-    explicit QPlaceReply(QObject *parent = nullptr);
+    explicit QPlaceReply(QObject *parent = Q_NULLPTR);
     ~QPlaceReply();
 
     bool isFinished() const;
@@ -86,12 +86,11 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void finished();
-    void contentUpdated();
     void aborted();
     void error(QPlaceReply::Error error, const QString &errorString = QString());
 
 protected:
-    explicit QPlaceReply(QPlaceReplyPrivate *, QObject *parent = nullptr);
+    explicit QPlaceReply(QPlaceReplyPrivate *, QObject *parent = Q_NULLPTR);
     void setFinished(bool finished);
     void setError(QPlaceReply::Error error, const QString &errorString);
     QPlaceReplyPrivate *d_ptr;

@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,19 +15,20 @@
  */
 #ifndef LIEF_PE_LOAD_CONFIGURATION_V2_H_
 #define LIEF_PE_LOAD_CONFIGURATION_V2_H_
+#include <array>
+#include <set>
+#include <functional>
+#include <algorithm>
 #include <iostream>
 
 #include "LIEF/visibility.h"
 
-#include "LIEF/PE/enums.hpp"
+#include "LIEF/PE/Structures.hpp"
 #include "LIEF/PE/CodeIntegrity.hpp"
 #include "LIEF/PE/LoadConfigurations/LoadConfigurationV1.hpp"
 
 namespace LIEF {
 namespace PE {
-
-template<class T>
-struct load_configuration_v2;
 
 //! @brief LoadConfiguration enhanced with code integrity
 class LIEF_API LoadConfigurationV2 : public LoadConfigurationV1 {

@@ -49,7 +49,7 @@ namespace Qt3DRender {
 
 class QBlendEquationArgumentsPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QBlendEquationArguments : public QRenderState
+class QT3DRENDERSHARED_EXPORT QBlendEquationArguments : public QRenderState
 {
     Q_OBJECT
     Q_PROPERTY(Blending sourceRgb READ sourceRgb WRITE setSourceRgb NOTIFY sourceRgbChanged)
@@ -66,8 +66,8 @@ public:
         One = 1,
         SourceColor = 0x0300,
         SourceAlpha = 0x0302,
-        Source1Alpha, // ### Qt 6: Fix -> has same value as OneMinusSourceAlpha
-        Source1Color, // ### Qt 6: Fix -> has same value as DestinationAlpha
+        Source1Alpha,
+        Source1Color,
         DestinationColor = 0x0306,
         DestinationAlpha = 0x0304,
         SourceAlphaSaturate = 0x0308,
@@ -117,7 +117,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(QBlendEquationArguments)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DRender

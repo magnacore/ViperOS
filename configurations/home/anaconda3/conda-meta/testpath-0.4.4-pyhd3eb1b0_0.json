@@ -1,0 +1,77 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/testpath-0.4.4-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/testpath-0.4.4.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/testpath-0.4.4.dist-info/LICENSE",
+    "lib/python3.8/site-packages/testpath-0.4.4.dist-info/METADATA",
+    "lib/python3.8/site-packages/testpath-0.4.4.dist-info/RECORD",
+    "lib/python3.8/site-packages/testpath-0.4.4.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/testpath-0.4.4.dist-info/WHEEL",
+    "lib/python3.8/site-packages/testpath-0.4.4.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/testpath/__init__.py",
+    "lib/python3.8/site-packages/testpath/asserts.py",
+    "lib/python3.8/site-packages/testpath/cli-32.exe",
+    "lib/python3.8/site-packages/testpath/cli-64.exe",
+    "lib/python3.8/site-packages/testpath/commands.py",
+    "lib/python3.8/site-packages/testpath/env.py",
+    "lib/python3.8/site-packages/testpath/tempdir.py",
+    "lib/python3.8/site-packages/testpath/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/testpath/__pycache__/asserts.cpython-38.pyc",
+    "lib/python3.8/site-packages/testpath/__pycache__/commands.cpython-38.pyc",
+    "lib/python3.8/site-packages/testpath/__pycache__/env.cpython-38.pyc",
+    "lib/python3.8/site-packages/testpath/__pycache__/tempdir.cpython-38.pyc"
+  ],
+  "fn": "testpath-0.4.4-pyhd3eb1b0_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/testpath-0.4.4-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "063b37d548764c4f4a9848bddc525312",
+  "name": "testpath",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/testpath-0.4.4-pyhd3eb1b0_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/testpath/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/testpath/__pycache__/asserts.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/testpath/__pycache__/commands.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/testpath/__pycache__/env.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/testpath/__pycache__/tempdir.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "testpath==0.4.4=pyhd3eb1b0_0",
+  "sha256": "9603e32066d3d95ce77be181679647d5aaa8f90ca334c5f7a15958f842937fc3",
+  "size": 87471,
+  "subdir": "noarch",
+  "timestamp": 1611930617099,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/testpath-0.4.4-pyhd3eb1b0_0.tar.bz2",
+  "version": "0.4.4"
+}

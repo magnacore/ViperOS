@@ -1,0 +1,28 @@
+{
+  "arch": "x86_64",
+  "build": "py39h5eee18b_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "idna >=2.0",
+    "libgcc-ng >=11.2.0",
+    "multidict >=4.0",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "features": "",
+  "fn": "yarl-1.8.1-py39h5eee18b_0.conda",
+  "legacy_bz2_md5": "54143c55d6c764019c93572ceb3bb8a3",
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "md5": "f1d404bb6092d44910f2e45286de9522",
+  "name": "yarl",
+  "platform": "linux",
+  "sha256": "78dca85db8fff9e06ffa05867038541809025c8ca27000d9ba481065a029bc42",
+  "size": 88601,
+  "subdir": "linux-64",
+  "timestamp": 1661437260076,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/yarl-1.8.1-py39h5eee18b_0.conda",
+  "version": "1.8.1"
+}

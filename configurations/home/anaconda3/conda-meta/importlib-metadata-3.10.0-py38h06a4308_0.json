@@ -1,0 +1,57 @@
+{
+  "build": "py38h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0",
+    "zipp >=0.5"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/importlib-metadata-3.10.0-py38h06a4308_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/importlib_metadata-3.10.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/importlib_metadata-3.10.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/importlib_metadata-3.10.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/importlib_metadata-3.10.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/importlib_metadata-3.10.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/importlib_metadata-3.10.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/importlib_metadata-3.10.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/importlib_metadata-3.10.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/importlib_metadata/__init__.py",
+    "lib/python3.8/site-packages/importlib_metadata/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/importlib_metadata/__pycache__/_collections.cpython-38.pyc",
+    "lib/python3.8/site-packages/importlib_metadata/__pycache__/_compat.cpython-38.pyc",
+    "lib/python3.8/site-packages/importlib_metadata/__pycache__/_functools.cpython-38.pyc",
+    "lib/python3.8/site-packages/importlib_metadata/__pycache__/_itertools.cpython-38.pyc",
+    "lib/python3.8/site-packages/importlib_metadata/_collections.py",
+    "lib/python3.8/site-packages/importlib_metadata/_compat.py",
+    "lib/python3.8/site-packages/importlib_metadata/_functools.py",
+    "lib/python3.8/site-packages/importlib_metadata/_itertools.py",
+    "lib/python3.8/site-packages/importlib_metadata/py.typed"
+  ],
+  "fn": "importlib-metadata-3.10.0-py38h06a4308_0.conda",
+  "legacy_bz2_md5": "8e0f600b4b152b5c274230f75edd0dba",
+  "legacy_bz2_size": 33992,
+  "license": "Apache-2.0",
+  "license_family": "APACHE",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/importlib-metadata-3.10.0-py38h06a4308_0",
+    "type": 1
+  },
+  "md5": "b064c19266a568270f06245b9d4dc4ec",
+  "name": "importlib-metadata",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/importlib-metadata-3.10.0-py38h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "importlib-metadata==3.10.0=py38h06a4308_0",
+  "sha256": "0f9102dece65a255ac90fb370763da17c73ed52364969c2360790cb51b25c57b",
+  "size": 34024,
+  "subdir": "linux-64",
+  "timestamp": 1617874510790,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/importlib-metadata-3.10.0-py38h06a4308_0.conda",
+  "version": "3.10.0"
+}

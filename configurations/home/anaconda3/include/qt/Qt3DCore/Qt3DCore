@@ -2,8 +2,6 @@
 #define QT_QT3DCORE_MODULE_H
 #include <Qt3DCore/Qt3DCoreDepends>
 #include "qabstractaspect.h"
-#include "qabstractskeleton.h"
-#include "qarmature.h"
 #include "qaspectengine.h"
 #include "qaspectjob.h"
 #include "qbackendnode.h"
@@ -12,9 +10,7 @@
 #include "qcomponentremovedchange.h"
 #include "qdynamicpropertyupdatedchange.h"
 #include "qentity.h"
-#include "qjoint.h"
 #include "qnode.h"
-#include "qnodecommand.h"
 #include "qnodecreatedchange.h"
 #include "qnodedestroyedchange.h"
 #include "qnodeid.h"
@@ -27,8 +23,6 @@
 #include "qpropertyvalueremovedchange.h"
 #include "qpropertyvalueremovedchangebase.h"
 #include "qscenechange.h"
-#include "qskeleton.h"
-#include "qskeletonloader.h"
 #include "qstaticpropertyupdatedchangebase.h"
 #include "qstaticpropertyvalueaddedchangebase.h"
 #include "qstaticpropertyvalueremovedchangebase.h"

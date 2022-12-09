@@ -6,7 +6,7 @@
 .\"
 .\" License: GNU GPLv2+
 .\"
-.TH XZGREP 1 "2022-07-19" "Tukaani" "XZ Utils"
+.TH XZGREP 1 "2011-03-19" "Tukaani" "XZ Utils"
 .SH NAME
 xzgrep \- search compressed files for a regular expression
 .SH SYNOPSIS
@@ -14,22 +14,22 @@ xzgrep \- search compressed files for a regular expression
 .RI [ grep_options ]
 .RB [ \-e ]
 .I pattern
-.RI [ file... ]
+.IR file "..."
 .br
 .B xzegrep
-\&...
+.RB ...
 .br
 .B xzfgrep
-\&...
+.RB ...
 .br
 .B lzgrep
-\&...
+.RB ...
 .br
 .B lzegrep
-\&...
+.RB ...
 .br
 .B lzfgrep
-\&...
+.RB ...
 .SH DESCRIPTION
 .B xzgrep
 invokes
@@ -41,9 +41,8 @@ which may be either uncompressed or compressed with
 .BR lzma (1),
 .BR gzip (1),
 .BR bzip2 (1),
-.BR lzop (1),
 or
-.BR zstd (1).
+.BR lzop (1).
 All options specified are passed directly to
 .BR grep (1).
 .PP
@@ -55,9 +54,8 @@ and fed to
 When reading from standard input,
 .BR gzip (1),
 .BR bzip2 (1),
-.BR lzop (1),
 and
-.BR zstd (1)
+.BR lzop (1)
 compressed files are not supported.
 .PP
 If
@@ -67,9 +65,9 @@ is invoked as
 or
 .B xzfgrep
 then
-.B grep \-E
+.BR egrep (1)
 or
-.B grep \-F
+.BR fgrep (1)
 is used instead of
 .BR grep (1).
 The same applies to names
@@ -78,19 +76,7 @@ The same applies to names
 and
 .BR lzfgrep ,
 which are provided for backward compatibility with LZMA Utils.
-.SH EXIT STATUS
-.TP
-0
-At least one match was found from at least one of the input files.
-No errors occurred.
-.TP
-1
-No matches were found from any of the input files.
-No errors occurred.
-.TP
->1
-One or more errors occurred.
-It is unknown if matches were found.
+.PP
 .SH ENVIRONMENT
 .TP
 .B GREP
@@ -100,14 +86,13 @@ environment variable is set,
 .B xzgrep
 uses it instead of
 .BR grep (1),
-.BR "grep \-E" ,
+.BR egrep (1),
 or
-.BR "grep \-F" .
+.BR fgrep (1).
 .SH "SEE ALSO"
 .BR grep (1),
 .BR xz (1),
 .BR gzip (1),
 .BR bzip2 (1),
 .BR lzop (1),
-.BR zstd (1),
 .BR zgrep (1)

@@ -48,7 +48,7 @@ namespace Qt3DRender {
 
 class QMemoryBarrierPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QMemoryBarrier : public QFrameGraphNode
+class QT3DRENDERSHARED_EXPORT QMemoryBarrier : public QFrameGraphNode
 {
     Q_OBJECT
 public:
@@ -89,7 +89,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(QMemoryBarrier)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // Qt3DRender

@@ -1,0 +1,47 @@
+{
+  "build": "py38he6710b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0",
+    "unixodbc >=2.3.7,<2.4.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/pyodbc-4.0.30-py38he6710b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/pyodbc-4.0.0_unsupported.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/pyodbc-4.0.0_unsupported.dist-info/LICENSE.txt",
+    "lib/python3.8/site-packages/pyodbc-4.0.0_unsupported.dist-info/METADATA",
+    "lib/python3.8/site-packages/pyodbc-4.0.0_unsupported.dist-info/RECORD",
+    "lib/python3.8/site-packages/pyodbc-4.0.0_unsupported.dist-info/WHEEL",
+    "lib/python3.8/site-packages/pyodbc-4.0.0_unsupported.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/pyodbc.cpython-38-x86_64-linux-gnu.so"
+  ],
+  "fn": "pyodbc-4.0.30-py38he6710b0_0.conda",
+  "legacy_bz2_md5": "8670f92d430f74326b0b3552148227c6",
+  "legacy_bz2_size": 74931,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/pyodbc-4.0.30-py38he6710b0_0",
+    "type": 1
+  },
+  "md5": "5515784f98df4ad12ac173fa8d3a7d37",
+  "name": "pyodbc",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/pyodbc-4.0.30-py38he6710b0_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "pyodbc==4.0.30=py38he6710b0_0",
+  "sha256": "554030ae5c9d95930dbd20e362076e6084920005d9348e4eebcbd8a67eedaf28",
+  "size": 73427,
+  "subdir": "linux-64",
+  "timestamp": 1581353596961,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pyodbc-4.0.30-py38he6710b0_0.conda",
+  "version": "4.0.30"
+}

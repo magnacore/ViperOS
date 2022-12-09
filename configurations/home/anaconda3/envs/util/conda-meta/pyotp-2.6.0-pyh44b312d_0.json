@@ -1,0 +1,188 @@
+{
+  "build": "pyh44b312d_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/pyotp-2.6.0-pyh44b312d_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/pyotp-2.6.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/pyotp-2.6.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/pyotp-2.6.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/pyotp-2.6.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/pyotp-2.6.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/pyotp-2.6.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/pyotp-2.6.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/pyotp-2.6.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/pyotp/__init__.py",
+    "lib/python3.8/site-packages/pyotp/compat.py",
+    "lib/python3.8/site-packages/pyotp/hotp.py",
+    "lib/python3.8/site-packages/pyotp/otp.py",
+    "lib/python3.8/site-packages/pyotp/py.typed",
+    "lib/python3.8/site-packages/pyotp/totp.py",
+    "lib/python3.8/site-packages/pyotp/utils.py",
+    "lib/python3.8/site-packages/pyotp/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyotp/__pycache__/compat.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyotp/__pycache__/hotp.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyotp/__pycache__/otp.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyotp/__pycache__/totp.cpython-38.pyc",
+    "lib/python3.8/site-packages/pyotp/__pycache__/utils.cpython-38.pyc"
+  ],
+  "fn": "pyotp-2.6.0-pyh44b312d_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/pyotp-2.6.0-pyh44b312d_0",
+    "type": 1
+  },
+  "md5": "fa76f2e1af918e4e109153e72e0659a2",
+  "name": "pyotp",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/pyotp-2.6.0-pyh44b312d_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/pyotp-2.6.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/pyotp-2.6.0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "795885123341458172aad6ebfab31b071cc7b40524929e6901662d5dbbf57ea3",
+        "sha256_in_prefix": "795885123341458172aad6ebfab31b071cc7b40524929e6901662d5dbbf57ea3",
+        "size_in_bytes": 1174
+      },
+      {
+        "_path": "site-packages/pyotp-2.6.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "6dae7dfa570ee2078e4a084f5e9904da7ea839d3582d2ddc639f8e38a04e15e6",
+        "sha256_in_prefix": "6dae7dfa570ee2078e4a084f5e9904da7ea839d3582d2ddc639f8e38a04e15e6",
+        "size_in_bytes": 8515
+      },
+      {
+        "_path": "site-packages/pyotp-2.6.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "5f4e51399dbd6f799c106a24e6921826319badf6cfe7cc74ed2323473865a7bd",
+        "sha256_in_prefix": "5f4e51399dbd6f799c106a24e6921826319badf6cfe7cc74ed2323473865a7bd",
+        "size_in_bytes": 1399
+      },
+      {
+        "_path": "site-packages/pyotp-2.6.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pyotp-2.6.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "67e9f2629c2b712ab17ddbb1e4c6e7fc3439db988fec9d831b72601af398c934",
+        "sha256_in_prefix": "67e9f2629c2b712ab17ddbb1e4c6e7fc3439db988fec9d831b72601af398c934",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/pyotp-2.6.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "234410c58ae73dcfcb900e1111c5d8ad5f2123f982fc35a200a6bb5cc21b0d81",
+        "sha256_in_prefix": "234410c58ae73dcfcb900e1111c5d8ad5f2123f982fc35a200a6bb5cc21b0d81",
+        "size_in_bytes": 101
+      },
+      {
+        "_path": "site-packages/pyotp-2.6.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "ac50e0cfa4a6e276e4624ead95246231c24fc9876763a2dc66201a613c557399",
+        "sha256_in_prefix": "ac50e0cfa4a6e276e4624ead95246231c24fc9876763a2dc66201a613c557399",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/pyotp/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "2885db365fe2b63457558dab06999bd442bc1046112b5a0d902a4418d96eabdc",
+        "sha256_in_prefix": "2885db365fe2b63457558dab06999bd442bc1046112b5a0d902a4418d96eabdc",
+        "size_in_bytes": 3487
+      },
+      {
+        "_path": "site-packages/pyotp/compat.py",
+        "path_type": "hardlink",
+        "sha256": "8bea717115a94a1c6431332e72a3c974f2626d851a56d1212fda72c1e290f389",
+        "sha256_in_prefix": "8bea717115a94a1c6431332e72a3c974f2626d851a56d1212fda72c1e290f389",
+        "size_in_bytes": 209
+      },
+      {
+        "_path": "site-packages/pyotp/hotp.py",
+        "path_type": "hardlink",
+        "sha256": "22d76661fb05d98c46876bfb6a017f7c8ab787ba99e3d603a5ebadc05af98874",
+        "sha256_in_prefix": "22d76661fb05d98c46876bfb6a017f7c8ab787ba99e3d603a5ebadc05af98874",
+        "size_in_bytes": 2585
+      },
+      {
+        "_path": "site-packages/pyotp/otp.py",
+        "path_type": "hardlink",
+        "sha256": "1de5f6512f6598aaca283d9f85ed8e5bf41f372609b4849a9fc769aed2796d7c",
+        "sha256_in_prefix": "1de5f6512f6598aaca283d9f85ed8e5bf41f372609b4849a9fc769aed2796d7c",
+        "size_in_bytes": 2132
+      },
+      {
+        "_path": "site-packages/pyotp/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pyotp/totp.py",
+        "path_type": "hardlink",
+        "sha256": "a32c265201a5b4caca1c3def3c1db0920ca611e90c0173bb8300c2f74819d67d",
+        "sha256_in_prefix": "a32c265201a5b4caca1c3def3c1db0920ca611e90c0173bb8300c2f74819d67d",
+        "size_in_bytes": 3979
+      },
+      {
+        "_path": "site-packages/pyotp/utils.py",
+        "path_type": "hardlink",
+        "sha256": "67211cef897d69a50445a62265ddb7fc678df10c2913b9fafdce4ec45ecf7b94",
+        "sha256_in_prefix": "67211cef897d69a50445a62265ddb7fc678df10c2913b9fafdce4ec45ecf7b94",
+        "size_in_bytes": 3129
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyotp/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyotp/__pycache__/compat.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyotp/__pycache__/hotp.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyotp/__pycache__/otp.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyotp/__pycache__/totp.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/pyotp/__pycache__/utils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pyotp",
+  "sha256": "c3195b0afec918d44e6243153f767ec7c8ea21f43345b61f2ed3d034aeb1e0b5",
+  "size": 13653,
+  "subdir": "noarch",
+  "timestamp": 1612473286398,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pyotp-2.6.0-pyh44b312d_0.tar.bz2",
+  "version": "2.6.0"
+}

@@ -71,9 +71,11 @@ public:
     ~QCommandLineOption();
 
     QCommandLineOption &operator=(const QCommandLineOption &other);
-    QCommandLineOption &operator=(QCommandLineOption &&other) noexcept { swap(other); return *this; }
+#ifdef Q_COMPILER_RVALUE_REFS
+    QCommandLineOption &operator=(QCommandLineOption &&other) Q_DECL_NOTHROW { swap(other); return *this; }
+#endif
 
-    void swap(QCommandLineOption &other) noexcept
+    void swap(QCommandLineOption &other) Q_DECL_NOTHROW
     { qSwap(d, other.d); }
 
     QStringList names() const;

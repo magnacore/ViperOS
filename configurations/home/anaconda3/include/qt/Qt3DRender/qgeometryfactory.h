@@ -50,7 +50,7 @@ namespace Qt3DRender {
 
 class QGeometry;
 
-class Q_3DRENDERSHARED_EXPORT QGeometryFactory : public QAbstractFunctor
+class QT3DRENDERSHARED_EXPORT QGeometryFactory : public QAbstractFunctor
 {
 public:
     virtual ~QGeometryFactory();

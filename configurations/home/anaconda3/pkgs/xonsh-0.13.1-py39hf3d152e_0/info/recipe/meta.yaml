@@ -1,0 +1,103 @@
+# This file created by conda-build 3.21.9
+# meta.yaml template originally from:
+# /home/conda/recipe_root, last modified Wed Aug 10 18:48:22 2022
+# ------------------------------------------------
+
+package:
+  name: xonsh
+  version: 0.13.1
+source:
+  fn: xonsh-0.13.1.tar.gz
+  sha256: 34dc91a1e8228d21e70234f0a911405a8021f9b4f0249ee3e3ab5588e921e127
+  url: https://github.com/xonsh/xonsh/archive/refs/tags/0.13.1.tar.gz
+build:
+  entry_points:
+    - xonsh = xonsh.main:main
+    - xonsh-cat = xonsh.xoreutils.cat:cat_main
+  number: '0'
+  script: /home/conda/feedstock_root/build_artifacts/xonsh_1660157371028/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place/bin/python
+    -m pip install . -vv
+  string: py39hf3d152e_0
+requirements:
+  build: []
+  host:
+    - _libgcc_mutex 0.1 conda_forge
+    - _openmp_mutex 4.5 2_gnu
+    - bzip2 1.0.8 h7f98852_4
+    - ca-certificates 2022.6.15 ha878542_0
+    - entrypoints 0.4 pyhd8ed1ab_0
+    - jupyter_client 7.3.4 pyhd8ed1ab_0
+    - jupyter_core 4.11.1 py39hf3d152e_0
+    - ld_impl_linux-64 2.36.1 hea4e1c9_2
+    - libffi 3.4.2 h7f98852_5
+    - libgcc-ng 12.1.0 h8d9b700_16
+    - libgomp 12.1.0 h8d9b700_16
+    - libnsl 2.0.0 h7f98852_0
+    - libsodium 1.0.18 h36c2ea0_1
+    - libstdcxx-ng 12.1.0 ha89aaad_16
+    - libuuid 2.32.1 h7f98852_1000
+    - libzlib 1.2.12 h166bdaf_2
+    - ncurses 6.3 h27087fc_1
+    - nest-asyncio 1.5.5 pyhd8ed1ab_0
+    - openssl 3.0.5 h166bdaf_1
+    - pip 22.2.2 pyhd8ed1ab_0
+    - python 3.9.13 h2660328_0_cpython
+    - python-dateutil 2.8.2 pyhd8ed1ab_0
+    - python_abi 3.9 2_cp39
+    - pyzmq 23.2.0 py39headdf64_0
+    - readline 8.1.2 h0f457ee_0
+    - setuptools 63.4.2 py39hf3d152e_0
+    - six 1.16.0 pyh6c4a22f_0
+    - sqlite 3.39.2 h4ff8645_0
+    - tk 8.6.12 h27826a3_0
+    - tornado 6.2 py39hb9d737c_0
+    - traitlets 5.3.0 pyhd8ed1ab_0
+    - tzdata 2022a h191b570_0
+    - wheel 0.37.1 pyhd8ed1ab_0
+    - xz 5.2.5 h516909a_1
+    - zeromq 4.3.4 h9c3ff4c_1
+    - zlib 1.2.12 h166bdaf_2
+  run:
+    - conda-suggest
+    - prompt_toolkit
+    - pygments >=2.2
+    - pyperclip
+    - python >=3.9,<3.10.0a0
+    - python_abi 3.9.* *_cp39
+    - setproctitle
+test:
+  commands:
+    - USER=test xonsh -h
+  imports:
+    - xonsh
+  requires:
+    - pytest
+about:
+  description: 'Xonsh is a Python-powered, cross-platform, Unix-gazing shell shell
+    language
+
+    and command prompt. The language is a superset of Python 3.4+ with additional
+
+    shell primitives that you are used to from Bash and IPython. It works on all
+
+    major systems including Linux, Mac OSX, and Windows. Xonsh is meant for the
+
+    daily use of experts and novices alike.
+
+    '
+  dev_url: https://github.com/xonsh/xonsh
+  doc_url: http://xon.sh
+  home: http://xon.sh
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: license
+  summary: Python-powered, cross-platform, Unix-gazing shell
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - gforsyth
+    - melund
+    - mitnk
+    - ocefpaf
+    - scopatz

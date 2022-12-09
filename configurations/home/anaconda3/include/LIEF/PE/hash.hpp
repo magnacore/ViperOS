@@ -1,6 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
- * Copyright 2017 - 2021 K. Nakagawa
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,71 +18,11 @@
 
 #include "LIEF/visibility.h"
 #include "LIEF/hash.hpp"
+#include "LIEF/PE.hpp"
 #include "LIEF/Abstract/hash.hpp"
 
 namespace LIEF {
 namespace PE {
-
-class Binary;
-class DosHeader;
-class RichHeader;
-class RichEntry;
-class Header;
-class OptionalHeader;
-class DataDirectory;
-class Section;
-class Relocation;
-class RelocationEntry;
-class Export;
-class ExportEntry;
-class TLS;
-class Symbol;
-class Debug;
-class CodeView;
-class CodeViewPDB;
-class Import;
-class ImportEntry;
-class ResourceNode;
-class ResourceData;
-class ResourceDirectory;
-class ResourcesManager;
-class ResourceVersion;
-class ResourceStringFileInfo;
-class ResourceFixedFileInfo;
-class ResourceVarFileInfo;
-class LangCodeItem;
-class ResourceIcon;
-class ResourceDialog;
-class ResourceDialogItem;
-class ResourceStringTable;
-class ResourceAccelerator;
-class Signature;
-class x509;
-class SignerInfo;
-class ContentInfo;
-class Attribute;
-class ContentType;
-class GenericType;
-//class MsCounterSign;
-class MsSpcNestedSignature;
-class MsSpcStatementType;
-class PKCS9AtSequenceNumber;
-class PKCS9CounterSignature;
-class PKCS9MessageDigest;
-class PKCS9SigningTime;
-class SpcSpOpusInfo;
-class CodeIntegrity;
-class LoadConfiguration;
-class LoadConfigurationV0;
-class LoadConfigurationV1;
-class LoadConfigurationV2;
-class LoadConfigurationV3;
-class LoadConfigurationV4;
-class LoadConfigurationV5;
-class LoadConfigurationV6;
-class LoadConfigurationV7;
-class Pogo;
-class PogoEntry;
 
 class LIEF_API Hash : public LIEF::Hash {
   public:
@@ -126,33 +65,22 @@ class LIEF_API Hash : public LIEF::Hash {
   virtual void visit(const ResourceIcon& resource_icon)           override;
   virtual void visit(const ResourceDialog& dialog)                override;
   virtual void visit(const ResourceDialogItem& dialog_item)       override;
-  virtual void visit(const ResourceStringTable& string_table)     override;
-  virtual void visit(const ResourceAccelerator& acc)              override;
   virtual void visit(const Signature& signature)                  override;
   virtual void visit(const x509& x509)                            override;
   virtual void visit(const SignerInfo& signerinfo)                override;
-  virtual void visit(const ContentInfo& contentinfo)              override;
-  virtual void visit(const Attribute& attr)                       override;
-  virtual void visit(const ContentType& attr)                     override;
-  virtual void visit(const GenericType& attr)                     override;
-  //virtual void visit(const MsCounterSign& attr)                 override;
-  virtual void visit(const MsSpcNestedSignature& attr)            override;
-  virtual void visit(const MsSpcStatementType& attr)              override;
-  virtual void visit(const PKCS9AtSequenceNumber& attr)           override;
-  virtual void visit(const PKCS9CounterSignature& attr)           override;
-  virtual void visit(const PKCS9MessageDigest& attr)              override;
-  virtual void visit(const PKCS9SigningTime& attr)                override;
-  virtual void visit(const SpcSpOpusInfo& attr)                   override;
+  //virtual void visit(const ContentInfo& contentinfo)              override;
+  virtual void visit(const AuthenticatedAttributes& auth)         override;
   virtual void visit(const CodeIntegrity& code_integrity)         override;
-  virtual void visit(const LoadConfiguration& config)             override;
-  virtual void visit(const LoadConfigurationV0& config)           override;
-  virtual void visit(const LoadConfigurationV1& config)           override;
-  virtual void visit(const LoadConfigurationV2& config)           override;
-  virtual void visit(const LoadConfigurationV3& config)           override;
-  virtual void visit(const LoadConfigurationV4& config)           override;
-  virtual void visit(const LoadConfigurationV5& config)           override;
-  virtual void visit(const LoadConfigurationV6& config)           override;
-  virtual void visit(const LoadConfigurationV7& config)           override;
+
+  virtual void visit(const LoadConfiguration& config)    override;
+  virtual void visit(const LoadConfigurationV0& config)  override;
+  virtual void visit(const LoadConfigurationV1& config)  override;
+  virtual void visit(const LoadConfigurationV2& config)  override;
+  virtual void visit(const LoadConfigurationV3& config)  override;
+  virtual void visit(const LoadConfigurationV4& config)  override;
+  virtual void visit(const LoadConfigurationV5& config)  override;
+  virtual void visit(const LoadConfigurationV6& config)  override;
+  virtual void visit(const LoadConfigurationV7& config)  override;
 
   virtual void visit(const Pogo& pogo)        override;
   virtual void visit(const PogoEntry& entry)  override;

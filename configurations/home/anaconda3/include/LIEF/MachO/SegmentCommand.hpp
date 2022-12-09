@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,23 +19,20 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <functional>
 
 #include "LIEF/types.hpp"
 #include "LIEF/visibility.h"
 
 #include "LIEF/MachO/type_traits.hpp"
 #include "LIEF/MachO/LoadCommand.hpp"
+#include "LIEF/MachO/Section.hpp"
 
 
 namespace LIEF {
 namespace MachO {
-
 class BinaryParser;
 class Binary;
-class Section;
-
-struct segment_command_32;
-struct segment_command_64;
 
 //! @class SegmentCommand
 //! @brief Class which represent a MachO Segment
@@ -117,13 +114,21 @@ class LIEF_API SegmentCommand : public LoadCommand {
 
   //! @brief Indicates the offset in this file of the data to be mapped at virtualAddress_.
   uint64_t fileOffset_{0};
+
   uint64_t fileSize_{0};
+
   uint32_t maxProtection_{0};
+
   uint32_t initProtection_{0};
+
   uint32_t nbSections_{0};
+
   uint32_t flags_{0};
+
   content_t data_;
+
   sections_t    sections_;
+
   relocations_t relocations_;
 
 

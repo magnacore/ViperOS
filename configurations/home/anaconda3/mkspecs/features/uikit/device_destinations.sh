@@ -40,12 +40,10 @@
 #############################################################################
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-scheme=$1
-shift
-booted_simulator=$($DIR/devices.py --state booted $@ | tail -n 1)
+booted_simulator=$($DIR/devices.pl "$1" "Booted" "NOT unavailable" | tail -n 1)
 echo "SIMULATOR_DEVICES = $booted_simulator"
 
-xcodebuild test -scheme $scheme -destination 'id=0' -destination-timeout 1 2>&1| sed -n 's/{ \(platform:.*\) }/\1/p' | while read destination; do
+xcodebuild test -scheme $2 -destination 'id=0' -destination-timeout 1 2>&1| sed -n 's/{ \(platform:.*\) }/\1/p' | while read destination; do
     id=$(echo $destination | sed -n -E 's/.*id:([^ ,]+).*/\1/p')
     [[ $id == *"placeholder"* ]] && continue
 

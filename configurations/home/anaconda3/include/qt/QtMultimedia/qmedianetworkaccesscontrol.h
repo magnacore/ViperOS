@@ -41,25 +41,17 @@
 #ifndef QMEDIANETWORKACCESSCONTROL_H
 #define QMEDIANETWORKACCESSCONTROL_H
 
-#if 0
-#pragma qt_class(QMediaNetworkAccessControl)
-#endif
-
 #include <QtMultimedia/qmediacontrol.h>
 
 #include <QtCore/qlist.h>
 #include <QtNetwork/qnetworkconfiguration.h>
 
-#ifndef QT_NO_BEARERMANAGEMENT
-
 QT_BEGIN_NAMESPACE
-
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
 
 // Required for QDoc workaround
 class QString;
-class QT_DEPRECATED_VERSION_5_15 Q_MULTIMEDIA_EXPORT QMediaNetworkAccessControl : public QMediaControl
+
+class Q_MULTIMEDIA_EXPORT QMediaNetworkAccessControl : public QMediaControl
 {
     Q_OBJECT
 public:
@@ -73,16 +65,13 @@ Q_SIGNALS:
     void configurationChanged(const QNetworkConfiguration& configuration);
 
 protected:
-    explicit QMediaNetworkAccessControl(QObject *parent = nullptr);
+    explicit QMediaNetworkAccessControl(QObject *parent = Q_NULLPTR);
 };
 
 #define QMediaNetworkAccessControl_iid "org.qt-project.qt.medianetworkaccesscontrol/5.0"
 Q_MEDIA_DECLARE_CONTROL(QMediaNetworkAccessControl, QMediaNetworkAccessControl_iid)
 
-QT_WARNING_POP
-
 QT_END_NAMESPACE
 
-#endif
 
 #endif

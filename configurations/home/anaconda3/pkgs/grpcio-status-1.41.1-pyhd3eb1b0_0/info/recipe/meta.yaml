@@ -1,0 +1,64 @@
+# This file created by conda-build 3.21.7
+# meta.yaml template originally from:
+# /tmp/build/80754af9/rsync-recipes/grpcio-status-1.41.1-on-linux_64, last modified Thu Dec 16 17:09:00 2021
+# ------------------------------------------------
+
+package:
+  name: grpcio-status
+  version: 1.41.1
+source:
+  sha256: 6c37cf353902143e22c69a9c44a8a584ebbe84f373fba9e298679e6db63421f4
+  url: https://pypi.io/packages/source/g/grpcio-status/grpcio-status-1.41.1.tar.gz
+build:
+  noarch: python
+  number: '0'
+  script: /tmp/build/80754af9/grpcio-status_1639661000156/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_/bin/python
+    -m pip install . -vv
+  string: pyhd3eb1b0_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 4.5 1_gnu
+    - bzip2 1.0.8 h7b6447c_0
+    - ca-certificates 2021.10.26 h06a4308_2
+    - certifi 2021.5.30 py310h06a4308_0
+    - ld_impl_linux-64 2.35.1 h7274673_9
+    - libffi 3.3 he6710b0_2
+    - libgcc-ng 9.3.0 h5101ec6_17
+    - libgomp 9.3.0 h5101ec6_17
+    - libstdcxx-ng 9.3.0 hd4cf53a_17
+    - libuuid 1.0.3 h7f8727e_2
+    - ncurses 6.3 h7f8727e_2
+    - openssl 1.1.1l h7f8727e_0
+    - pip 21.2.4 py310h06a4308_0
+    - python 3.10.0 h151d27f_3
+    - readline 8.1 h27cfd23_0
+    - setuptools 58.0.4 py310h06a4308_0
+    - sqlite 3.36.0 hc218d9a_0
+    - tk 8.6.11 h1ccaba5_0
+    - tzdata 2021e hda174b7_0
+    - wheel 0.37.0 pyhd3eb1b0_1
+    - xz 5.2.5 h7b6447c_0
+    - zlib 1.2.11 h7b6447c_3
+  run:
+    - googleapis-common-protos >=1.5.5
+    - grpcio >=1.41.1
+    - protobuf >=3.6.0
+    - python >=3.6
+test:
+  commands:
+    - pip check
+  imports:
+    - grpc_status
+  requires:
+    - pip
+about:
+  home: https://grpc.io
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: Status proto mapping for gRPC
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - hadim

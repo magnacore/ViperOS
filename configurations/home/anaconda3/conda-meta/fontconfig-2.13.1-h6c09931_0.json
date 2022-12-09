@@ -9,7 +9,7 @@
     "libuuid >=1.0.3,<2.0a0",
     "libxml2 >=2.9.10,<2.10.0a0"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/fontconfig-2.13.1-h6c09931_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/fontconfig-2.13.1-h6c09931_0",
   "features": "",
   "files": [
     "bin/fc-cache",
@@ -94,12 +94,12 @@
   "legacy_bz2_size": 306671,
   "license": "MIT",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/fontconfig-2.13.1-h6c09931_0",
+    "source": "/home/manuj/anaconda3/pkgs/fontconfig-2.13.1-h6c09931_0",
     "type": 1
   },
   "md5": "fa04e89166d4b44326c6d76e2f708715",
   "name": "fontconfig",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/fontconfig-2.13.1-h6c09931_0.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/fontconfig-2.13.1-h6c09931_0.conda",
   "paths_data": {
     "paths": [
       {
@@ -108,7 +108,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/tmp/build/80754af9/fontconfig_1612452876777/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
         "sha256": "cf38bba0c103d4f0395d710d2448c289028b3eb95b5fe5f948b4eee2c65911b5",
-        "sha256_in_prefix": "62d614ce89d0492ab124e75d9576e80f7a4b5c800ea1840ddae8b577ef3f7e64",
+        "sha256_in_prefix": "6433f1fa67f475600412fb3c9397ffbb370016aa9e1c95796a1dc28a7ddc358d",
         "size_in_bytes": 3059
       },
       {
@@ -117,7 +117,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/tmp/build/80754af9/fontconfig_1612452876777/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
         "sha256": "81d2041df3f88ccc1b9b7d05c8457f6b9663278e69c55ec7cac41356de551771",
-        "sha256_in_prefix": "f0edc05092602e2b10ebd2a9ff141690ac42d62c3fba5611581d7ec367e58903",
+        "sha256_in_prefix": "5f6852cad49da461ce8728f2504dc957292b54f0b20c272145e1c25c848374b8",
         "size_in_bytes": 329448
       },
       {
@@ -126,7 +126,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/tmp/build/80754af9/fontconfig_1612452876777/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
         "sha256": "7e590e6870fcbb867e73806e17a3478b01e537a2f4957fa563895c7ac81ca510",
-        "sha256_in_prefix": "ce26f93dfe002be65bd95bea59a435ed95377dc2c4f70660882910e31ef0312a",
+        "sha256_in_prefix": "dfd0af427bd63ef2d084fb90fc46e481d05b13e0f275dc652639f2be3291e622",
         "size_in_bytes": 722
       }
     ],

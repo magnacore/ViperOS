@@ -68,11 +68,13 @@ public:
 
     QDBusMessage();
     QDBusMessage(const QDBusMessage &other);
-    QDBusMessage &operator=(QDBusMessage &&other) noexcept { swap(other); return *this; }
+#ifdef Q_COMPILER_RVALUE_REFS
+    QDBusMessage &operator=(QDBusMessage &&other) Q_DECL_NOTHROW { swap(other); return *this; }
+#endif
     QDBusMessage &operator=(const QDBusMessage &other);
     ~QDBusMessage();
 
-    void swap(QDBusMessage &other) noexcept { qSwap(d_ptr, other.d_ptr); }
+    void swap(QDBusMessage &other) Q_DECL_NOTHROW { qSwap(d_ptr, other.d_ptr); }
 
     static QDBusMessage createSignal(const QString &path, const QString &interface,
                                      const QString &name);
@@ -116,9 +118,6 @@ public:
 
     void setAutoStartService(bool enable);
     bool autoStartService() const;
-
-    void setInteractiveAuthorizationAllowed(bool enable);
-    bool isInteractiveAuthorizationAllowed() const;
 
     void setArguments(const QList<QVariant> &arguments);
     QList<QVariant> arguments() const;

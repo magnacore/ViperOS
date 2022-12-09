@@ -2,4 +2,3 @@ module QtQuick.Templates
 plugin qtquicktemplates2plugin
 classname QtQuickTemplates2Plugin
 depends QtQuick.Window 2.2
-depends QtQuick 2.9

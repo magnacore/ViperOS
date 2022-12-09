@@ -1,0 +1,50 @@
+{
+  "build": "h06a4308_610",
+  "build_number": 610,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [
+    "__glibc >=2.17"
+  ],
+  "depends": [],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/intel-openmp-2021.2.0-h06a4308_610",
+  "features": "",
+  "files": [
+    "lib/libiomp5.so",
+    "lib/libiomp5_db.so",
+    "lib/libiompstubs5.so",
+    "lib/libomp-fallback-cassert.o",
+    "lib/libomp-fallback-cmath-fp64.o",
+    "lib/libomp-fallback-cmath.o",
+    "lib/libomp-fallback-complex-fp64.o",
+    "lib/libomp-fallback-complex.o",
+    "lib/libomptarget.rtl.level0.so",
+    "lib/libomptarget.rtl.opencl.so",
+    "lib/libomptarget.rtl.x86_64.so",
+    "lib/libomptarget.so",
+    "licensing/compiler/openmp/third-party-programs.txt"
+  ],
+  "fn": "intel-openmp-2021.2.0-h06a4308_610.conda",
+  "legacy_bz2_md5": "ff7b205b335400e53ad6af39fafe2be0",
+  "legacy_bz2_size": 2007161,
+  "license": "LicenseRef-ProprietaryIntel",
+  "license_family": "Proprietary",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/intel-openmp-2021.2.0-h06a4308_610",
+    "type": 1
+  },
+  "md5": "39673e59a1d6195fa3a7aff31ea0ab52",
+  "name": "intel-openmp",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/intel-openmp-2021.2.0-h06a4308_610.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "intel-openmp==2021.2.0=h06a4308_610",
+  "sha256": "a1c78a2d9d80bbd625e8199cd3b8c7ced6542cbe7ddfcf7a834caba69d07ac38",
+  "size": 1403466,
+  "subdir": "linux-64",
+  "timestamp": 1618534005074,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/intel-openmp-2021.2.0-h06a4308_610.conda",
+  "version": "2021.2.0"
+}

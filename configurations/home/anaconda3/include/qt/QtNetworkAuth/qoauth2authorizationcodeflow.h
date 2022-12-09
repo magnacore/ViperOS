@@ -72,6 +72,8 @@ public:
 
     ~QOAuth2AuthorizationCodeFlow();
 
+    QString responseType() const override;
+
     QUrl accessTokenUrl() const;
     void setAccessTokenUrl(const QUrl &accessTokenUrl);
 

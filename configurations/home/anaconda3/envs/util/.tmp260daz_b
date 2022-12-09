@@ -1,0 +1,3 @@
+eval "$(/home/manuj/anaconda3/bin/conda shell.posix hook)"
+conda activate  /home/manuj/anaconda3/envs/util
+clipboard-convert-text_b

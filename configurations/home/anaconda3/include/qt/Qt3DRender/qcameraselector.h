@@ -49,7 +49,7 @@ namespace Qt3DRender {
 
 class QCameraSelectorPrivate;
 
-class Q_3DRENDERSHARED_EXPORT QCameraSelector : public QFrameGraphNode
+class QT3DRENDERSHARED_EXPORT QCameraSelector : public QFrameGraphNode
 {
     Q_OBJECT
     Q_PROPERTY(Qt3DCore::QEntity *camera READ camera WRITE setCamera NOTIFY cameraChanged)
@@ -71,7 +71,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(QCameraSelector)
-    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override;
+    Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DRender

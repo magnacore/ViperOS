@@ -1,6 +1,5 @@
 /****************************************************************************
 **
-** Copyright (C) 2019 The Qt Company Ltd.
 ** Copyright (C) 2016 by Southwest Research Institute (R)
 ** Contact: http://www.qt-project.org/legal
 **
@@ -41,7 +40,6 @@
 #ifndef QFLOAT16_H
 #define QFLOAT16_H
 
-#include <limits>
 #include <QtCore/qglobal.h>
 #include <QtCore/qmetatype.h>
 #include <string.h>
@@ -68,42 +66,15 @@ QT_BEGIN_NAMESPACE
 
 class qfloat16
 {
-    struct Wrap
-    {
-        // To let our private constructor work, without other code seeing
-        // ambiguity when constructing from int, double &c.
-        quint16 b16;
-        constexpr inline explicit Wrap(int value) : b16(value) {}
-    };
 public:
-    constexpr inline qfloat16() noexcept : b16(0) {}
-    inline qfloat16(float f) noexcept;
-    inline operator float() const noexcept;
-
-    // Support for qIs{Inf,NaN,Finite}:
-    bool isInf() const noexcept { return (b16 & 0x7fff) == 0x7c00; }
-    bool isNaN() const noexcept { return (b16 & 0x7fff) > 0x7c00; }
-    bool isFinite() const noexcept { return (b16 & 0x7fff) < 0x7c00; }
-    Q_CORE_EXPORT int fpClassify() const noexcept;
-    // Can't specialize std::copysign() for qfloat16
-    qfloat16 copySign(qfloat16 sign) const noexcept
-    { return qfloat16(Wrap((sign.b16 & 0x8000) | (b16 & 0x7fff))); }
-    // Support for std::numeric_limits<qfloat16>
-    static constexpr qfloat16 _limit_epsilon()    noexcept { return qfloat16(Wrap(0x1400)); }
-    static constexpr qfloat16 _limit_min()        noexcept { return qfloat16(Wrap(0x400)); }
-    static constexpr qfloat16 _limit_denorm_min() noexcept { return qfloat16(Wrap(1)); }
-    static constexpr qfloat16 _limit_max()        noexcept { return qfloat16(Wrap(0x7bff)); }
-    static constexpr qfloat16 _limit_lowest()     noexcept { return qfloat16(Wrap(0xfbff)); }
-    static constexpr qfloat16 _limit_infinity()   noexcept { return qfloat16(Wrap(0x7c00)); }
-    static constexpr qfloat16 _limit_quiet_NaN()  noexcept { return qfloat16(Wrap(0x7e00)); }
-#if QT_CONFIG(signaling_nan)
-    static constexpr qfloat16 _limit_signaling_NaN() noexcept { return qfloat16(Wrap(0x7d00)); }
+#ifndef Q_QDOC
+    Q_DECL_CONSTEXPR inline qfloat16() Q_DECL_NOTHROW : b16(0) { }
+    inline qfloat16(float f) Q_DECL_NOTHROW;
+    inline operator float() const Q_DECL_NOTHROW;
 #endif
-    inline constexpr bool isNormal() const noexcept
-    { return (b16 & 0x7c00) && (b16 & 0x7c00) != 0x7c00; }
+
 private:
     quint16 b16;
-    constexpr inline explicit qfloat16(Wrap nibble) noexcept : b16(nibble.b16) {}
 
     Q_CORE_EXPORT static const quint32 mantissatable[];
     Q_CORE_EXPORT static const quint32 exponenttable[];
@@ -111,32 +82,24 @@ private:
     Q_CORE_EXPORT static const quint32 basetable[];
     Q_CORE_EXPORT static const quint32 shifttable[];
 
-    friend bool qIsNull(qfloat16 f) noexcept;
-#if !defined(QT_NO_FLOAT16_OPERATORS)
-    friend qfloat16 operator-(qfloat16 a) noexcept;
-#endif
+    friend bool qIsNull(qfloat16 f) Q_DECL_NOTHROW;
+    friend qfloat16 operator-(qfloat16 a) Q_DECL_NOTHROW;
 };
 
 Q_DECLARE_TYPEINFO(qfloat16, Q_PRIMITIVE_TYPE);
 
-Q_CORE_EXPORT void qFloatToFloat16(qfloat16 *, const float *, qsizetype length) noexcept;
-Q_CORE_EXPORT void qFloatFromFloat16(float *, const qfloat16 *, qsizetype length) noexcept;
-
-// Complement qnumeric.h:
-Q_REQUIRED_RESULT inline bool qIsInf(qfloat16 f) noexcept { return f.isInf(); }
-Q_REQUIRED_RESULT inline bool qIsNaN(qfloat16 f) noexcept { return f.isNaN(); }
-Q_REQUIRED_RESULT inline bool qIsFinite(qfloat16 f) noexcept { return f.isFinite(); }
-Q_REQUIRED_RESULT inline int qFpClassify(qfloat16 f) noexcept { return f.fpClassify(); }
-// Q_REQUIRED_RESULT quint32 qFloatDistance(qfloat16 a, qfloat16 b);
+Q_REQUIRED_RESULT Q_CORE_EXPORT bool qIsInf(qfloat16 f) Q_DECL_NOTHROW;    // complements qnumeric.h
+Q_REQUIRED_RESULT Q_CORE_EXPORT bool qIsNaN(qfloat16 f) Q_DECL_NOTHROW;    // complements qnumeric.h
+Q_REQUIRED_RESULT Q_CORE_EXPORT bool qIsFinite(qfloat16 f) Q_DECL_NOTHROW; // complements qnumeric.h
 
 // The remainder of these utility functions complement qglobal.h
-Q_REQUIRED_RESULT inline int qRound(qfloat16 d) noexcept
+Q_REQUIRED_RESULT inline int qRound(qfloat16 d) Q_DECL_NOTHROW
 { return qRound(static_cast<float>(d)); }
 
-Q_REQUIRED_RESULT inline qint64 qRound64(qfloat16 d) noexcept
+Q_REQUIRED_RESULT inline qint64 qRound64(qfloat16 d) Q_DECL_NOTHROW
 { return qRound64(static_cast<float>(d)); }
 
-Q_REQUIRED_RESULT inline bool qFuzzyCompare(qfloat16 p1, qfloat16 p2) noexcept
+Q_REQUIRED_RESULT inline bool qFuzzyCompare(qfloat16 p1, qfloat16 p2) Q_DECL_NOTHROW
 {
     float f1 = static_cast<float>(p1);
     float f2 = static_cast<float>(p2);
@@ -149,26 +112,25 @@ Q_REQUIRED_RESULT inline bool qFuzzyCompare(qfloat16 p1, qfloat16 p2) noexcept
     return (qAbs(f1 - f2) * 102.5f <= qMin(qAbs(f1), qAbs(f2)));
 }
 
-Q_REQUIRED_RESULT inline bool qIsNull(qfloat16 f) noexcept
+Q_REQUIRED_RESULT inline bool qIsNull(qfloat16 f) Q_DECL_NOTHROW
 {
     return (f.b16 & static_cast<quint16>(0x7fff)) == 0;
 }
 
-inline int qIntCast(qfloat16 f) noexcept
+inline int qIntCast(qfloat16 f) Q_DECL_NOTHROW
 { return int(static_cast<float>(f)); }
 
-#ifndef Q_QDOC
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_CLANG("-Wc99-extensions")
 QT_WARNING_DISABLE_GCC("-Wold-style-cast")
-inline qfloat16::qfloat16(float f) noexcept
+inline qfloat16::qfloat16(float f) Q_DECL_NOTHROW
 {
 #if defined(QT_COMPILER_SUPPORTS_F16C) && defined(__F16C__)
     __m128 packsingle = _mm_set_ss(f);
     __m128i packhalf = _mm_cvtps_ph(packsingle, 0);
     b16 = _mm_extract_epi16(packhalf, 0);
 #elif defined (__ARM_FP16_FORMAT_IEEE)
-    __fp16 f16 = __fp16(f);
+    __fp16 f16 = f;
     memcpy(&b16, &f16, sizeof(quint16));
 #else
     quint32 u;
@@ -179,7 +141,7 @@ inline qfloat16::qfloat16(float f) noexcept
 }
 QT_WARNING_POP
 
-inline qfloat16::operator float() const noexcept
+inline qfloat16::operator float() const Q_DECL_NOTHROW
 {
 #if defined(QT_COMPILER_SUPPORTS_F16C) && defined(__F16C__)
     __m128i packhalf = _mm_cvtsi32_si128(b16);
@@ -197,27 +159,24 @@ inline qfloat16::operator float() const noexcept
     return f;
 #endif
 }
-#endif
 
-#if !defined(QT_NO_FLOAT16_OPERATORS)
-inline qfloat16 operator-(qfloat16 a) noexcept
+inline qfloat16 operator-(qfloat16 a) Q_DECL_NOTHROW
 {
     qfloat16 f;
     f.b16 = a.b16 ^ quint16(0x8000);
     return f;
 }
 
-inline qfloat16 operator+(qfloat16 a, qfloat16 b) noexcept { return qfloat16(static_cast<float>(a) + static_cast<float>(b)); }
-inline qfloat16 operator-(qfloat16 a, qfloat16 b) noexcept { return qfloat16(static_cast<float>(a) - static_cast<float>(b)); }
-inline qfloat16 operator*(qfloat16 a, qfloat16 b) noexcept { return qfloat16(static_cast<float>(a) * static_cast<float>(b)); }
-inline qfloat16 operator/(qfloat16 a, qfloat16 b) noexcept { return qfloat16(static_cast<float>(a) / static_cast<float>(b)); }
+inline qfloat16 operator+(qfloat16 a, qfloat16 b) Q_DECL_NOTHROW { return qfloat16(static_cast<float>(a) + static_cast<float>(b)); }
+inline qfloat16 operator-(qfloat16 a, qfloat16 b) Q_DECL_NOTHROW { return qfloat16(static_cast<float>(a) - static_cast<float>(b)); }
+inline qfloat16 operator*(qfloat16 a, qfloat16 b) Q_DECL_NOTHROW { return qfloat16(static_cast<float>(a) * static_cast<float>(b)); }
+inline qfloat16 operator/(qfloat16 a, qfloat16 b) Q_DECL_NOTHROW { return qfloat16(static_cast<float>(a) / static_cast<float>(b)); }
 
 #define QF16_MAKE_ARITH_OP_FP(FP, OP) \
-    inline FP operator OP(qfloat16 lhs, FP rhs) noexcept { return static_cast<FP>(lhs) OP rhs; } \
-    inline FP operator OP(FP lhs, qfloat16 rhs) noexcept { return lhs OP static_cast<FP>(rhs); }
+    inline FP operator OP(qfloat16 lhs, FP rhs) Q_DECL_NOTHROW { return static_cast<FP>(lhs) OP rhs; } \
+    inline FP operator OP(FP lhs, qfloat16 rhs) Q_DECL_NOTHROW { return lhs OP static_cast<FP>(rhs); }
 #define QF16_MAKE_ARITH_OP_EQ_FP(FP, OP_EQ, OP) \
-    inline qfloat16& operator OP_EQ(qfloat16& lhs, FP rhs) noexcept \
-    { lhs = qfloat16(float(static_cast<FP>(lhs) OP rhs)); return lhs; }
+    inline qfloat16& operator OP_EQ(qfloat16& lhs, FP rhs) Q_DECL_NOTHROW { lhs = qfloat16(static_cast<FP>(lhs) OP rhs); return lhs; }
 #define QF16_MAKE_ARITH_OP(FP) \
     QF16_MAKE_ARITH_OP_FP(FP, +) \
     QF16_MAKE_ARITH_OP_FP(FP, -) \
@@ -234,8 +193,8 @@ QF16_MAKE_ARITH_OP(float)
 #undef QF16_MAKE_ARITH_OP_FP
 
 #define QF16_MAKE_ARITH_OP_INT(OP) \
-    inline double operator OP(qfloat16 lhs, int rhs) noexcept { return static_cast<double>(lhs) OP rhs; } \
-    inline double operator OP(int lhs, qfloat16 rhs) noexcept { return lhs OP static_cast<double>(rhs); }
+    inline double operator OP(qfloat16 lhs, int rhs) Q_DECL_NOTHROW { return static_cast<double>(lhs) OP rhs; } \
+    inline double operator OP(int lhs, qfloat16 rhs) Q_DECL_NOTHROW { return lhs OP static_cast<double>(rhs); }
 QF16_MAKE_ARITH_OP_INT(+)
 QF16_MAKE_ARITH_OP_INT(-)
 QF16_MAKE_ARITH_OP_INT(*)
@@ -245,18 +204,17 @@ QF16_MAKE_ARITH_OP_INT(/)
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_CLANG("-Wfloat-equal")
 QT_WARNING_DISABLE_GCC("-Wfloat-equal")
-QT_WARNING_DISABLE_INTEL(1572)
 
-inline bool operator>(qfloat16 a, qfloat16 b)  noexcept { return static_cast<float>(a) >  static_cast<float>(b); }
-inline bool operator<(qfloat16 a, qfloat16 b)  noexcept { return static_cast<float>(a) <  static_cast<float>(b); }
-inline bool operator>=(qfloat16 a, qfloat16 b) noexcept { return static_cast<float>(a) >= static_cast<float>(b); }
-inline bool operator<=(qfloat16 a, qfloat16 b) noexcept { return static_cast<float>(a) <= static_cast<float>(b); }
-inline bool operator==(qfloat16 a, qfloat16 b) noexcept { return static_cast<float>(a) == static_cast<float>(b); }
-inline bool operator!=(qfloat16 a, qfloat16 b) noexcept { return static_cast<float>(a) != static_cast<float>(b); }
+inline bool operator>(qfloat16 a, qfloat16 b)  Q_DECL_NOTHROW { return static_cast<float>(a) >  static_cast<float>(b); }
+inline bool operator<(qfloat16 a, qfloat16 b)  Q_DECL_NOTHROW { return static_cast<float>(a) <  static_cast<float>(b); }
+inline bool operator>=(qfloat16 a, qfloat16 b) Q_DECL_NOTHROW { return static_cast<float>(a) >= static_cast<float>(b); }
+inline bool operator<=(qfloat16 a, qfloat16 b) Q_DECL_NOTHROW { return static_cast<float>(a) <= static_cast<float>(b); }
+inline bool operator==(qfloat16 a, qfloat16 b) Q_DECL_NOTHROW { return static_cast<float>(a) == static_cast<float>(b); }
+inline bool operator!=(qfloat16 a, qfloat16 b) Q_DECL_NOTHROW { return static_cast<float>(a) != static_cast<float>(b); }
 
 #define QF16_MAKE_BOOL_OP_FP(FP, OP) \
-    inline bool operator OP(qfloat16 lhs, FP rhs) noexcept { return static_cast<FP>(lhs) OP rhs; } \
-    inline bool operator OP(FP lhs, qfloat16 rhs) noexcept { return lhs OP static_cast<FP>(rhs); }
+    inline bool operator OP(qfloat16 lhs, FP rhs) Q_DECL_NOTHROW { return static_cast<FP>(lhs) OP rhs; } \
+    inline bool operator OP(FP lhs, qfloat16 rhs) Q_DECL_NOTHROW { return lhs OP static_cast<FP>(rhs); }
 #define QF16_MAKE_BOOL_OP(FP) \
     QF16_MAKE_BOOL_OP_FP(FP, <) \
     QF16_MAKE_BOOL_OP_FP(FP, >) \
@@ -271,8 +229,8 @@ QF16_MAKE_BOOL_OP(float)
 #undef QF16_MAKE_BOOL_OP_FP
 
 #define QF16_MAKE_BOOL_OP_INT(OP) \
-    inline bool operator OP(qfloat16 a, int b) noexcept { return static_cast<float>(a) OP b; } \
-    inline bool operator OP(int a, qfloat16 b) noexcept { return a OP static_cast<float>(b); }
+    inline bool operator OP(qfloat16 a, int b) Q_DECL_NOTHROW { return static_cast<float>(a) OP b; } \
+    inline bool operator OP(int a, qfloat16 b) Q_DECL_NOTHROW { return a OP static_cast<float>(b); }
 QF16_MAKE_BOOL_OP_INT(>)
 QF16_MAKE_BOOL_OP_INT(<)
 QF16_MAKE_BOOL_OP_INT(>=)
@@ -282,12 +240,11 @@ QF16_MAKE_BOOL_OP_INT(!=)
 #undef QF16_MAKE_BOOL_OP_INT
 
 QT_WARNING_POP
-#endif // QT_NO_FLOAT16_OPERATORS
 
 /*!
   \internal
 */
-Q_REQUIRED_RESULT inline bool qFuzzyIsNull(qfloat16 f) noexcept
+Q_REQUIRED_RESULT inline bool qFuzzyIsNull(qfloat16 f) Q_DECL_NOTHROW
 {
     return qAbs(static_cast<float>(f)) <= 0.001f;
 }
@@ -295,62 +252,5 @@ Q_REQUIRED_RESULT inline bool qFuzzyIsNull(qfloat16 f) noexcept
 QT_END_NAMESPACE
 
 Q_DECLARE_METATYPE(qfloat16)
-
-namespace std {
-template<>
-class numeric_limits<QT_PREPEND_NAMESPACE(qfloat16)> : public numeric_limits<float>
-{
-public:
-    /*
-      Treat quint16 b16 as if it were:
-      uint S: 1; // b16 >> 15 (sign); can be set for zero
-      uint E: 5; // (b16 >> 10) & 0x1f (offset exponent)
-      uint M: 10; // b16 & 0x3ff (adjusted mantissa)
-
-      for E == 0: magnitude is M / 2.^{24}
-      for 0 < E < 31: magnitude is (1. + M / 2.^{10}) * 2.^{E - 15)
-      for E == 31: not finite
-     */
-    static constexpr int digits = 11;
-    static constexpr int min_exponent = -13;
-    static constexpr int max_exponent = 16;
-
-    static constexpr int digits10 = 3;
-    static constexpr int max_digits10 = 5;
-    static constexpr int min_exponent10 = -4;
-    static constexpr int max_exponent10 = 4;
-
-    static constexpr QT_PREPEND_NAMESPACE(qfloat16) epsilon()
-    { return QT_PREPEND_NAMESPACE(qfloat16)::_limit_epsilon(); }
-    static constexpr QT_PREPEND_NAMESPACE(qfloat16) (min)()
-    { return QT_PREPEND_NAMESPACE(qfloat16)::_limit_min(); }
-    static constexpr QT_PREPEND_NAMESPACE(qfloat16) denorm_min()
-    { return QT_PREPEND_NAMESPACE(qfloat16)::_limit_denorm_min(); }
-    static constexpr QT_PREPEND_NAMESPACE(qfloat16) (max)()
-    { return QT_PREPEND_NAMESPACE(qfloat16)::_limit_max(); }
-    static constexpr QT_PREPEND_NAMESPACE(qfloat16) lowest()
-    { return QT_PREPEND_NAMESPACE(qfloat16)::_limit_lowest(); }
-    static constexpr QT_PREPEND_NAMESPACE(qfloat16) infinity()
-    { return QT_PREPEND_NAMESPACE(qfloat16)::_limit_infinity(); }
-    static constexpr QT_PREPEND_NAMESPACE(qfloat16) quiet_NaN()
-    { return QT_PREPEND_NAMESPACE(qfloat16)::_limit_quiet_NaN(); }
-#if QT_CONFIG(signaling_nan)
-    static constexpr QT_PREPEND_NAMESPACE(qfloat16) signaling_NaN()
-    { return QT_PREPEND_NAMESPACE(qfloat16)::_limit_signaling_NaN(); }
-#else
-    static constexpr bool has_signaling_NaN = false;
-#endif
-};
-
-template<> class numeric_limits<const QT_PREPEND_NAMESPACE(qfloat16)>
-    : public numeric_limits<QT_PREPEND_NAMESPACE(qfloat16)> {};
-template<> class numeric_limits<volatile QT_PREPEND_NAMESPACE(qfloat16)>
-    : public numeric_limits<QT_PREPEND_NAMESPACE(qfloat16)> {};
-template<> class numeric_limits<const volatile QT_PREPEND_NAMESPACE(qfloat16)>
-    : public numeric_limits<QT_PREPEND_NAMESPACE(qfloat16)> {};
-
-// Adding overloads to std isn't allowed, so we can't extend this to support
-// for fpclassify(), isnormal() &c. (which, furthermore, are macros on MinGW).
-} // namespace std
 
 #endif // QFLOAT16_H

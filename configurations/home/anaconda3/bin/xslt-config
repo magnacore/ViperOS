@@ -1,6 +1,6 @@
 #! /bin/sh
 
-prefix=/home/goldust/anaconda3
+prefix=/home/manuj/anaconda3
 exec_prefix=${prefix}
 exec_prefix_set=no
 includedir=${prefix}/include
@@ -60,12 +60,12 @@ while test $# -gt 0; do
 	;;
 
     --version)
-	echo 1.1.35
+	echo 1.1.34
 	exit 0
 	;;
 
     --plugins)
-	echo /home/goldust/anaconda3/lib/libxslt-plugins
+	echo /home/manuj/anaconda3/lib/libxslt-plugins
 	exit 0
 	;;
 
@@ -74,7 +74,7 @@ while test $# -gt 0; do
 	;;
 
     --cflags)
-        cflags="-I/home/goldust/anaconda3/include/libxml2 -I/home/goldust/anaconda3/include"
+        cflags="-I/home/manuj/anaconda3/include/libxml2 -I/home/manuj/anaconda3/include"
         if test "$includedir" != "/usr/include"; then
             cflags="$cflags -I${includedir}"
         fi
@@ -83,16 +83,16 @@ while test $# -gt 0; do
     --libs)
         if [ "$2" = "--dynamic" ]; then
             shift
-            libs="-lxslt -L/home/goldust/anaconda3/lib -lxml2 -L/home/goldust/anaconda3/lib -L/home/goldust/anaconda3/lib -lpthread -L/home/goldust/anaconda3/lib -L/home/goldust/anaconda3/lib -licui18n -licuuc -licudata -lm -ldl"
+            libs="-lxslt -L/home/manuj/anaconda3/lib -lxml2 -L/home/manuj/anaconda3/lib -L/home/manuj/anaconda3/lib -lpthread -L/home/manuj/anaconda3/lib -L/home/manuj/anaconda3/lib -licui18n -licuuc -licudata -lm -ldl"
         else
-            libs="-lxslt -L/home/goldust/anaconda3/lib -lxml2 -L/home/goldust/anaconda3/lib -L/home/goldust/anaconda3/lib -lpthread -L/home/goldust/anaconda3/lib -L/home/goldust/anaconda3/lib -licui18n -licuuc -licudata -lm -ldl -lm"
+            libs="-lxslt -L/home/manuj/anaconda3/lib -lxml2 -L/home/manuj/anaconda3/lib -L/home/manuj/anaconda3/lib -lpthread -L/home/manuj/anaconda3/lib -L/home/manuj/anaconda3/lib -licui18n -licuuc -licudata -lm -ldl -lm"
         fi
 
         if [ "-L${libdir}" != "-L/usr/lib" -a "-L${libdir}" != "-L/usr/lib64" ]; then
             libs="-L${libdir} $libs"
         fi
 
-        libs="$libs "
+        libs="$libs  -lrt"
        	;;
 
     *)

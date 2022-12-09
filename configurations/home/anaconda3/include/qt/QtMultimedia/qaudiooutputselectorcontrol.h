@@ -68,7 +68,7 @@ Q_SIGNALS:
     void availableOutputsChanged();
 
 protected:
-    explicit QAudioOutputSelectorControl(QObject *parent = nullptr);
+    explicit QAudioOutputSelectorControl(QObject *parent = Q_NULLPTR);
 };
 
 #define QAudioOutputSelectorControl_iid "org.qt-project.qt.audiooutputselectorcontrol/5.0"

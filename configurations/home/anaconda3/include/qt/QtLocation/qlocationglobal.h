@@ -50,10 +50,6 @@ QT_BEGIN_NAMESPACE
 #    define Q_LOCATION_EXPORT
 #endif
 
-#ifdef Q_CLANG_QDOC
-#include "QtLocation/qlocation.h"
-#endif
-
 QT_END_NAMESPACE
 
 #endif // QLOCATIONGLOBAL_H

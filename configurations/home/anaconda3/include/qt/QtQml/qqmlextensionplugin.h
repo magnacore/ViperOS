@@ -58,8 +58,8 @@ class Q_QML_EXPORT QQmlExtensionPlugin
     Q_INTERFACES(QQmlExtensionInterface)
     Q_INTERFACES(QQmlTypesExtensionInterface)
 public:
-    explicit QQmlExtensionPlugin(QObject *parent = nullptr);
-    ~QQmlExtensionPlugin() override;
+    explicit QQmlExtensionPlugin(QObject *parent = Q_NULLPTR);
+    ~QQmlExtensionPlugin();
 
     QUrl baseUrl() const;
 
@@ -68,19 +68,6 @@ public:
 
 private:
     Q_DISABLE_COPY(QQmlExtensionPlugin)
-};
-
-class Q_QML_EXPORT QQmlEngineExtensionPlugin
-        : public QObject
-        , public QQmlEngineExtensionInterface
-{
-    Q_OBJECT
-    Q_DISABLE_COPY_MOVE(QQmlEngineExtensionPlugin)
-    Q_INTERFACES(QQmlEngineExtensionInterface)
-public:
-    explicit QQmlEngineExtensionPlugin(QObject *parent = nullptr);
-    ~QQmlEngineExtensionPlugin() override;
-    void initializeEngine(QQmlEngine *engine, const char *uri) override;
 };
 
 QT_END_NAMESPACE

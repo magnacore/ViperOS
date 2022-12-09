@@ -8,19 +8,19 @@
     "python",
     "setuptools"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/backports.functools_lru_cache-1.6.4-pyhd3eb1b0_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/backports.functools_lru_cache-1.6.4-pyhd3eb1b0_0",
   "features": "",
   "files": [
-    "lib/python3.9/site-packages/backports.functools_lru_cache-1.6.4.dist-info/INSTALLER",
-    "lib/python3.9/site-packages/backports.functools_lru_cache-1.6.4.dist-info/LICENSE",
-    "lib/python3.9/site-packages/backports.functools_lru_cache-1.6.4.dist-info/METADATA",
-    "lib/python3.9/site-packages/backports.functools_lru_cache-1.6.4.dist-info/RECORD",
-    "lib/python3.9/site-packages/backports.functools_lru_cache-1.6.4.dist-info/REQUESTED",
-    "lib/python3.9/site-packages/backports.functools_lru_cache-1.6.4.dist-info/WHEEL",
-    "lib/python3.9/site-packages/backports.functools_lru_cache-1.6.4.dist-info/direct_url.json",
-    "lib/python3.9/site-packages/backports.functools_lru_cache-1.6.4.dist-info/top_level.txt",
-    "lib/python3.9/site-packages/backports/functools_lru_cache.py",
-    "lib/python3.9/site-packages/backports/__pycache__/functools_lru_cache.cpython-39.pyc"
+    "lib/python3.8/site-packages/backports.functools_lru_cache-1.6.4.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/backports.functools_lru_cache-1.6.4.dist-info/LICENSE",
+    "lib/python3.8/site-packages/backports.functools_lru_cache-1.6.4.dist-info/METADATA",
+    "lib/python3.8/site-packages/backports.functools_lru_cache-1.6.4.dist-info/RECORD",
+    "lib/python3.8/site-packages/backports.functools_lru_cache-1.6.4.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/backports.functools_lru_cache-1.6.4.dist-info/WHEEL",
+    "lib/python3.8/site-packages/backports.functools_lru_cache-1.6.4.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/backports.functools_lru_cache-1.6.4.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/backports/functools_lru_cache.py",
+    "lib/python3.8/site-packages/backports/__pycache__/functools_lru_cache.cpython-38.pyc"
   ],
   "fn": "backports.functools_lru_cache-1.6.4-pyhd3eb1b0_0.conda",
   "legacy_bz2_md5": "22ce153d48ef45d7f2e91e4e00a6a631",
@@ -28,18 +28,18 @@
   "license": "MIT",
   "license_family": "MIT",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/backports.functools_lru_cache-1.6.4-pyhd3eb1b0_0",
+    "source": "/home/manuj/anaconda3/pkgs/backports.functools_lru_cache-1.6.4-pyhd3eb1b0_0",
     "type": 1
   },
   "md5": "473e6bcfbea4b93db271540d2bbc6e7e",
   "name": "backports.functools_lru_cache",
   "noarch": "python",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/backports.functools_lru_cache-1.6.4-pyhd3eb1b0_0.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/backports.functools_lru_cache-1.6.4-pyhd3eb1b0_0.conda",
   "package_type": "noarch_python",
   "paths_data": {
     "paths": [
       {
-        "_path": "lib/python3.9/site-packages/backports/__pycache__/functools_lru_cache.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/backports/__pycache__/functools_lru_cache.cpython-38.pyc",
         "path_type": "pyc_file"
       }
     ],

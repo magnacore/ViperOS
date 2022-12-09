@@ -699,9 +699,6 @@ typedef struct xcb_x_print_bad_context_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_x_print_bad_context_error_t;
 
 /** Opcode for xcb_x_print_bad_sequence. */
@@ -714,9 +711,6 @@ typedef struct xcb_x_print_bad_sequence_error_t {
     uint8_t  response_type;
     uint8_t  error_code;
     uint16_t sequence;
-    uint32_t bad_value;
-    uint16_t minor_opcode;
-    uint8_t  major_opcode;
 } xcb_x_print_bad_sequence_error_t;
 
 /**

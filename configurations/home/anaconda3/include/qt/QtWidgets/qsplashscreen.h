@@ -55,11 +55,7 @@ class Q_WIDGETS_EXPORT QSplashScreen : public QWidget
     Q_OBJECT
 public:
     explicit QSplashScreen(const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = Qt::WindowFlags());
-    QSplashScreen(QScreen *screen, const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = Qt::WindowFlags());
-#if QT_DEPRECATED_SINCE(5, 15)
-    QT_DEPRECATED_VERSION_X_5_15("Use the constructor taking a QScreen *")
     QSplashScreen(QWidget *parent, const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = Qt::WindowFlags());
-#endif
     virtual ~QSplashScreen();
 
     void setPixmap(const QPixmap &pixmap);
@@ -77,9 +73,9 @@ Q_SIGNALS:
     void messageChanged(const QString &message);
 
 protected:
-    bool event(QEvent *e) override;
+    bool event(QEvent *e) Q_DECL_OVERRIDE;
     virtual void drawContents(QPainter *painter);
-    void mousePressEvent(QMouseEvent *) override;
+    void mousePressEvent(QMouseEvent *) Q_DECL_OVERRIDE;
 
 private:
     Q_DISABLE_COPY(QSplashScreen)

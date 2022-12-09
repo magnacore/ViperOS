@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 #define LIEF_PE_ENUM_TO_STRING_H
 
 #include "LIEF/visibility.h"
-#include "LIEF/PE/enums.hpp"
+#include "LIEF/PE/Structures.hpp"
 
 namespace LIEF {
 namespace PE {
@@ -63,12 +63,7 @@ LIEF_API const char* to_string(FIXED_VERSION_FILE_SUB_TYPES e);
 LIEF_API const char* to_string(WIN_VERSION e);
 
 LIEF_API const char* to_string(GUARD_CF_FLAGS e);
-
-LIEF_API const char* to_string(ACCELERATOR_FLAGS e);
-LIEF_API const char* to_string(ACCELERATOR_VK_CODES e);
-
-LIEF_API const char* to_string(ALGORITHMS e);
-LIEF_API const char* to_string(SIG_ATTRIBUTE_TYPES e);
+LIEF_API const char* to_string(GUARD_RF_FLAGS e);
 
 } // namespace PE
 } // namespace LIEF

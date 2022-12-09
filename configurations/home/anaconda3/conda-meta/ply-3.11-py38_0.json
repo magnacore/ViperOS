@@ -1,0 +1,53 @@
+{
+  "build": "py38_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/ply-3.11-py38_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/ply-3.11-py3.8.egg-info/PKG-INFO",
+    "lib/python3.8/site-packages/ply-3.11-py3.8.egg-info/SOURCES.txt",
+    "lib/python3.8/site-packages/ply-3.11-py3.8.egg-info/dependency_links.txt",
+    "lib/python3.8/site-packages/ply-3.11-py3.8.egg-info/top_level.txt",
+    "lib/python3.8/site-packages/ply/__init__.py",
+    "lib/python3.8/site-packages/ply/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/ply/__pycache__/cpp.cpython-38.pyc",
+    "lib/python3.8/site-packages/ply/__pycache__/ctokens.cpython-38.pyc",
+    "lib/python3.8/site-packages/ply/__pycache__/lex.cpython-38.pyc",
+    "lib/python3.8/site-packages/ply/__pycache__/yacc.cpython-38.pyc",
+    "lib/python3.8/site-packages/ply/__pycache__/ygen.cpython-38.pyc",
+    "lib/python3.8/site-packages/ply/cpp.py",
+    "lib/python3.8/site-packages/ply/ctokens.py",
+    "lib/python3.8/site-packages/ply/lex.py",
+    "lib/python3.8/site-packages/ply/yacc.py",
+    "lib/python3.8/site-packages/ply/ygen.py"
+  ],
+  "fn": "ply-3.11-py38_0.conda",
+  "legacy_bz2_md5": "cdc32d4656069ea380a3e0bbc7fe30ed",
+  "legacy_bz2_size": 81502,
+  "license": "BSD 3-clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/ply-3.11-py38_0",
+    "type": 1
+  },
+  "md5": "d6a69c576c6e4d19e3074eaae3d149f2",
+  "name": "ply",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/ply-3.11-py38_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "ply==3.11=py38_0",
+  "sha256": "dc81ddcba0de3d39dbd9f609a82eb2e66269f872c7c1fdc52a27273a27fc782f",
+  "size": 82451,
+  "subdir": "linux-64",
+  "timestamp": 1573040646911,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/ply-3.11-py38_0.conda",
+  "version": "3.11"
+}

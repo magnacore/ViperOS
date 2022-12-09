@@ -49,7 +49,6 @@ class QQuickTextDocumentPrivate;
 class Q_QUICK_EXPORT QQuickTextDocument : public QObject
 {
     Q_OBJECT
-    QML_ANONYMOUS
 
 public:
     QQuickTextDocument(QQuickItem *parent);

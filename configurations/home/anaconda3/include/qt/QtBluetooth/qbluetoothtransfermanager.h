@@ -40,7 +40,7 @@
 #ifndef QBLUETOOTHTRANSFERMANAGER_H
 #define QBLUETOOTHTRANSFERMANAGER_H
 
-#include <QtBluetooth/qtbluetoothglobal.h>
+#include <QtBluetooth/qbluetoothglobal.h>
 #include <QtBluetooth/QBluetoothAddress>
 
 #include <QtCore/QObject>
@@ -58,7 +58,7 @@ class Q_BLUETOOTH_EXPORT QBluetoothTransferManager : public QObject
     Q_OBJECT
 
 public:
-    explicit QBluetoothTransferManager(QObject *parent = nullptr);
+    explicit QBluetoothTransferManager(QObject *parent = Q_NULLPTR);
     ~QBluetoothTransferManager();
 
     QBluetoothTransferReply *put(const QBluetoothTransferRequest &request, QIODevice *data);

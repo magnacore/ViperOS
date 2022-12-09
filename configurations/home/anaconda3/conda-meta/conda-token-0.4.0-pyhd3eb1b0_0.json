@@ -9,64 +9,161 @@
     "packaging",
     "python"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/conda-token-0.4.0-pyhd3eb1b0_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/conda-token-0.4.0-pyhd3eb1b0_0",
   "features": "",
   "files": [
-    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/INSTALLER",
-    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/LICENSE",
-    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/METADATA",
-    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/RECORD",
-    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/REQUESTED",
-    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/WHEEL",
-    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/direct_url.json",
-    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/entry_points.txt",
-    "lib/python3.9/site-packages/conda_token-0.4.0.dist-info/top_level.txt",
-    "lib/python3.9/site-packages/conda_token/__init__.py",
-    "lib/python3.9/site-packages/conda_token/__main__.py",
-    "lib/python3.9/site-packages/conda_token/_version.py",
-    "lib/python3.9/site-packages/conda_token/cli.py",
-    "lib/python3.9/site-packages/conda_token/repo_config.py",
-    "lib/python3.9/site-packages/conda_token/__pycache__/__init__.cpython-39.pyc",
-    "lib/python3.9/site-packages/conda_token/__pycache__/__main__.cpython-39.pyc",
-    "lib/python3.9/site-packages/conda_token/__pycache__/_version.cpython-39.pyc",
-    "lib/python3.9/site-packages/conda_token/__pycache__/cli.cpython-39.pyc",
-    "lib/python3.9/site-packages/conda_token/__pycache__/repo_config.cpython-39.pyc",
+    "lib/python3.8/site-packages/conda_token-0.4.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/conda_token-0.4.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/conda_token-0.4.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/conda_token-0.4.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/conda_token-0.4.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/conda_token-0.4.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/conda_token-0.4.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/conda_token-0.4.0.dist-info/entry_points.txt",
+    "lib/python3.8/site-packages/conda_token-0.4.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/conda_token/__init__.py",
+    "lib/python3.8/site-packages/conda_token/__main__.py",
+    "lib/python3.8/site-packages/conda_token/_version.py",
+    "lib/python3.8/site-packages/conda_token/cli.py",
+    "lib/python3.8/site-packages/conda_token/repo_config.py",
+    "lib/python3.8/site-packages/conda_token/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/conda_token/__pycache__/__main__.cpython-38.pyc",
+    "lib/python3.8/site-packages/conda_token/__pycache__/_version.cpython-38.pyc",
+    "lib/python3.8/site-packages/conda_token/__pycache__/cli.cpython-38.pyc",
+    "lib/python3.8/site-packages/conda_token/__pycache__/repo_config.cpython-38.pyc",
     "bin/conda-token"
   ],
   "fn": "conda-token-0.4.0-pyhd3eb1b0_0.conda",
   "legacy_bz2_md5": "4c72bba48f8549d67b2b49390d5d7076",
-  "legacy_bz2_size": 12341,
   "license": "BSD-3-Clause",
   "license_family": "BSD",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/conda-token-0.4.0-pyhd3eb1b0_0",
+    "source": "/home/manuj/anaconda3/pkgs/conda-token-0.4.0-pyhd3eb1b0_0",
     "type": 1
   },
   "md5": "92e52e52f3ff3785f721021639fb1ced",
   "name": "conda-token",
   "noarch": "python",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/conda-token-0.4.0-pyhd3eb1b0_0.conda",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/conda-token-0.4.0-pyhd3eb1b0_0.conda",
   "package_type": "noarch_python",
   "paths_data": {
     "paths": [
       {
-        "_path": "lib/python3.9/site-packages/conda_token/__pycache__/__init__.cpython-39.pyc",
+        "_path": "site-packages/conda_token-0.4.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/conda_token-0.4.0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "25642ade9495d3333293e6137c2005d443e20302aaf5272ee2f374e5d685f287",
+        "sha256_in_prefix": "25642ade9495d3333293e6137c2005d443e20302aaf5272ee2f374e5d685f287",
+        "size_in_bytes": 1533
+      },
+      {
+        "_path": "site-packages/conda_token-0.4.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "37d529a737b2d10047b9feea1556a41bb4a850bfa727dbafa7cf2155ba0ee42b",
+        "sha256_in_prefix": "37d529a737b2d10047b9feea1556a41bb4a850bfa727dbafa7cf2155ba0ee42b",
+        "size_in_bytes": 580
+      },
+      {
+        "_path": "site-packages/conda_token-0.4.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "ed573151b140627d2daf2613f8d57b06d551e14bf32920967857463d73c53cdc",
+        "sha256_in_prefix": "ed573151b140627d2daf2613f8d57b06d551e14bf32920967857463d73c53cdc",
+        "size_in_bytes": 1534
+      },
+      {
+        "_path": "site-packages/conda_token-0.4.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/conda_token-0.4.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "cfd8f4c406bf26650a3299b3ef62b464600b48cfe7fb04159866e5797c765478",
+        "sha256_in_prefix": "cfd8f4c406bf26650a3299b3ef62b464600b48cfe7fb04159866e5797c765478",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/conda_token-0.4.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "ae5c1c8f4a66dc08ab2e0ba426de831d461a577afa4a58c5f9f9ad2f9f2810af",
+        "sha256_in_prefix": "ae5c1c8f4a66dc08ab2e0ba426de831d461a577afa4a58c5f9f9ad2f9f2810af",
+        "size_in_bytes": 109
+      },
+      {
+        "_path": "site-packages/conda_token-0.4.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "20c691f106b64aa29c10347a1832eb7e933f8d62fa6b383b433fdd87b738e1d7",
+        "sha256_in_prefix": "20c691f106b64aa29c10347a1832eb7e933f8d62fa6b383b433fdd87b738e1d7",
+        "size_in_bytes": 52
+      },
+      {
+        "_path": "site-packages/conda_token-0.4.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "4fc1fac5d7f0faf16b7ee9ed42ebf4fc33da5474d887aa8d7ceb7e4268074360",
+        "sha256_in_prefix": "4fc1fac5d7f0faf16b7ee9ed42ebf4fc33da5474d887aa8d7ceb7e4268074360",
+        "size_in_bytes": 12
+      },
+      {
+        "_path": "site-packages/conda_token/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "fba938f9f3472bcf08fd84678d1964bb15560983967be6c27473349d158ca101",
+        "sha256_in_prefix": "fba938f9f3472bcf08fd84678d1964bb15560983967be6c27473349d158ca101",
+        "size_in_bytes": 354
+      },
+      {
+        "_path": "site-packages/conda_token/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "c8c85f379ca0a572f22f07a2351fa8ce0a77a8cf081c03d0ab76d49068520c9b",
+        "sha256_in_prefix": "c8c85f379ca0a572f22f07a2351fa8ce0a77a8cf081c03d0ab76d49068520c9b",
+        "size_in_bytes": 39
+      },
+      {
+        "_path": "site-packages/conda_token/_version.py",
+        "path_type": "hardlink",
+        "sha256": "116000a9df4f81d1e7b00580519b0feabbb0308b1df8e41e5918cc7fd90a84d0",
+        "sha256_in_prefix": "116000a9df4f81d1e7b00580519b0feabbb0308b1df8e41e5918cc7fd90a84d0",
+        "size_in_bytes": 497
+      },
+      {
+        "_path": "site-packages/conda_token/cli.py",
+        "path_type": "hardlink",
+        "sha256": "431185ff086eed8fed061cbe0c75b05242eff425edb9d8767ae3e37eb7566844",
+        "sha256_in_prefix": "431185ff086eed8fed061cbe0c75b05242eff425edb9d8767ae3e37eb7566844",
+        "size_in_bytes": 4486
+      },
+      {
+        "_path": "site-packages/conda_token/repo_config.py",
+        "path_type": "hardlink",
+        "sha256": "460ce1c8c5ecd1402efbd025a9ba9deda73d009db4848acddd226b3244e38160",
+        "sha256_in_prefix": "460ce1c8c5ecd1402efbd025a9ba9deda73d009db4848acddd226b3244e38160",
+        "size_in_bytes": 10815
+      },
+      {
+        "_path": "lib/python3.8/site-packages/conda_token/__pycache__/__init__.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/conda_token/__pycache__/__main__.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/conda_token/__pycache__/__main__.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/conda_token/__pycache__/_version.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/conda_token/__pycache__/_version.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/conda_token/__pycache__/cli.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/conda_token/__pycache__/cli.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "lib/python3.9/site-packages/conda_token/__pycache__/repo_config.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/conda_token/__pycache__/repo_config.cpython-38.pyc",
         "path_type": "pyc_file"
       },
       {
@@ -76,7 +173,7 @@
     ],
     "paths_version": 1
   },
-  "requested_spec": "conda-token==0.4.0=pyhd3eb1b0_0",
+  "requested_spec": "None",
   "sha256": "4dad9d120276c2f1e3c5c52cb880ad026616cdd946def2a9a363bc80c0031ff3",
   "size": 13011,
   "subdir": "noarch",

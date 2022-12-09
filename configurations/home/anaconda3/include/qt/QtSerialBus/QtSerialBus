@@ -1,7 +1,7 @@
 #ifndef QT_QTSERIALBUS_MODULE_H
 #define QT_QTSERIALBUS_MODULE_H
 #include <QtSerialBus/QtSerialBusDepends>
-#include "qtserialbusglobal.h"
+#include "qserialbusglobal.h"
 #include "qcanbus.h"
 #include "qcanbusdevice.h"
 #include "qcanbusdeviceinfo.h"

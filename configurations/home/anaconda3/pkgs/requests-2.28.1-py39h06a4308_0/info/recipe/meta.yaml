@@ -1,0 +1,84 @@
+# This file created by conda-build 3.21.8
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Wed Jul 13 17:50:24 2022
+# ------------------------------------------------
+
+package:
+  name: requests
+  version: 2.28.1
+source:
+  sha256: 7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983
+  url: https://pypi.io/packages/source/r/requests/requests-2.28.1.tar.gz
+build:
+  number: '0'
+  script: /opt/conda/conda-bld/requests_1657734628632/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/bin/python
+    -m pip install . -vv
+  string: py39h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - ca-certificates 2022.4.26 h06a4308_0
+    - certifi 2022.6.15 py39h06a4308_0
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.3 he6710b0_2
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - ncurses 6.3 h5eee18b_3
+    - openssl 1.1.1q h7f8727e_0
+    - pip 22.1.2 py39h06a4308_0
+    - python 3.9.12 h12debd9_1
+    - readline 8.1.2 h7f8727e_1
+    - setuptools 61.2.0 py39h06a4308_0
+    - sqlite 3.38.5 hc218d9a_0
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2022a hda174b7_0
+    - wheel 0.37.1 pyhd3eb1b0_0
+    - xz 5.2.5 h7f8727e_1
+    - zlib 1.2.12 h7f8727e_2
+  run:
+    - certifi >=2017.4.17
+    - charset-normalizer >=2.0.0,<3
+    - idna >=2.5,<4
+    - python >=3.9,<3.10.0a0
+    - urllib3 >=1.21.1,<1.27
+test:
+  commands:
+    - pip check
+    - conda create -v --dry-run -n requests-test numpy
+  imports:
+    - requests
+  requires:
+    - conda
+    - pip
+about:
+  description: 'Requests is the only Non-GMO HTTP library for Python, safe for human
+
+    consumption.
+
+    '
+  dev_url: https://github.com/psf/requests
+  doc_url: https://requests.readthedocs.io/en/latest/
+  home: https://requests.readthedocs.io/en/latest/
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: "Requests is an elegant and simple HTTP library for Python, built with\
+    \ \u2665."
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: b44b8dae-a7db-4f4d-8d2c-80fda3c110b8
+  recipe-maintainers:
+    - carlodri
+    - jakirkham
+    - kalefranz
+    - mcg1969
+    - mingwandroid
+    - msarahan
+    - ocefpaf
+    - pelson
+    - sigmavirus24
+  remote_url: git@github.com:AnacondaRecipes/requests-feedstock.git
+  sha: fc507dd7cdff17b78acb5e29afb215b9e44b6984

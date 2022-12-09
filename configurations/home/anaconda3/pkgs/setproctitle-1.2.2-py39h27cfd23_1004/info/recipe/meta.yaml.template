@@ -1,0 +1,41 @@
+{% set version = "1.2.2" %}
+
+package:
+  name: setproctitle
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/s/setproctitle/setproctitle-{{ version }}.tar.gz
+  sha256: 7dfb472c8852403d34007e01d6e3c68c57eb66433fb8a5c77b13b89a160d97df
+
+build:
+  number: 1004
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+
+requirements:
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - {{ compiler('c') }}
+  host:
+    - python
+    - pip
+  run:
+    - python
+
+test:
+  imports:
+    - setproctitle
+
+about:
+  home: http://code.google.com/p/py-setproctitle/
+  license: BSD 3-clause
+  license_file: COPYRIGHT
+  license_family: BSD
+  summary: 'A library to allow customization of the process title.'
+
+extra:
+  recipe-maintainers:
+    - pelson
+    - ocefpaf
+    - scopatz

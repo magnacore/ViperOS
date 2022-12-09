@@ -1,0 +1,45 @@
+{
+  "build": "pyhd3eb1b0_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/backports-1.0-pyhd3eb1b0_2",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/backports/__init__.py",
+    "lib/python3.8/site-packages/backports/__pycache__/__init__.cpython-38.pyc"
+  ],
+  "fn": "backports-1.0-pyhd3eb1b0_2.conda",
+  "legacy_bz2_md5": "231b03327fa1584a5d27a5dff042cd71",
+  "legacy_bz2_size": 189867,
+  "license": "BSD",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/backports-1.0-pyhd3eb1b0_2",
+    "type": 1
+  },
+  "md5": "89d7f90ab01dff218fa28fc4256e95a9",
+  "name": "backports",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/backports-1.0-pyhd3eb1b0_2.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/backports/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "backports==1.0=pyhd3eb1b0_2",
+  "sha256": "f7d85db723ac2e4c40bd4b0085434225c4bd7ec4e792cc01e7db834819181b71",
+  "size": 214545,
+  "subdir": "noarch",
+  "timestamp": 1605305077210,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/backports-1.0-pyhd3eb1b0_2.conda",
+  "version": "1.0"
+}

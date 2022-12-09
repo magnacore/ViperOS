@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0"
+  ],
+  "features": "",
+  "fn": "async-timeout-4.0.2-py39h06a4308_0.conda",
+  "legacy_bz2_md5": "4a415c0e86274f84b1732b2844e7bb5b",
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "md5": "3cbd9e45b0f6322b3e0b4207252e42f3",
+  "name": "async-timeout",
+  "platform": "linux",
+  "sha256": "317ed3f6c2b332d5fafa1dcaaee7804a4c84bb6182b2ad5ca4bb0729f1ccc85d",
+  "size": 11756,
+  "subdir": "linux-64",
+  "timestamp": 1664876394563,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/async-timeout-4.0.2-py39h06a4308_0.conda",
+  "version": "4.0.2"
+}

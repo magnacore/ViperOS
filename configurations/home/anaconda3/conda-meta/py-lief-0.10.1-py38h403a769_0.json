@@ -1,0 +1,41 @@
+{
+  "build": "py38h403a769_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "liblief 0.10.1 he6710b0_0",
+    "libstdcxx-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/py-lief-0.10.1-py38h403a769_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/lief.cpython-38-x86_64-linux-gnu.so"
+  ],
+  "fn": "py-lief-0.10.1-py38h403a769_0.conda",
+  "legacy_bz2_md5": "7437e7418060dfef082db5fca9538503",
+  "legacy_bz2_size": 1378538,
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/py-lief-0.10.1-py38h403a769_0",
+    "type": 1
+  },
+  "md5": "ad8be42248839b5464e2b08636ca36f0",
+  "name": "py-lief",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/py-lief-0.10.1-py38h403a769_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "py-lief==0.10.1=py38h403a769_0",
+  "sha256": "50d5548447bccd22b632e798f938a646b9a5d750ced0dd58963feef5c1b4003a",
+  "size": 1079298,
+  "subdir": "linux-64",
+  "timestamp": 1588594034625,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/py-lief-0.10.1-py38h403a769_0.conda",
+  "version": "0.10.1"
+}

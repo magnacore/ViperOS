@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@
 #include <LIEF/config.h>
 
 #ifdef LIEF_JSON_SUPPORT
-#include <LIEF/third-party/json.hpp>
+#include <json.hpp>
 
 using json = nlohmann::json;
 #endif

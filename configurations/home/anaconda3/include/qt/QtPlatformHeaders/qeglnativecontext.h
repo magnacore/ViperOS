@@ -46,16 +46,11 @@
 
 QT_BEGIN_NAMESPACE
 
-#if defined(Q_CLANG_QDOC)
-typedef int EGLContext;
-typedef int EGLDisplay;
-#endif
-
 struct QEGLNativeContext
 {
     QEGLNativeContext()
-        : m_context(nullptr),
-          m_display(nullptr)
+        : m_context(0),
+          m_display(0)
     { }
 
     QEGLNativeContext(EGLContext ctx, EGLDisplay dpy)

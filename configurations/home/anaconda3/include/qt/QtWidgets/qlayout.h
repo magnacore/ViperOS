@@ -63,9 +63,7 @@ class Q_WIDGETS_EXPORT QLayout : public QObject, public QLayoutItem
     Q_OBJECT
     Q_DECLARE_PRIVATE(QLayout)
 
-#if QT_DEPRECATED_SINCE(5, 13)
     Q_PROPERTY(int margin READ margin WRITE setMargin)
-#endif
     Q_PROPERTY(int spacing READ spacing WRITE setSpacing)
     Q_PROPERTY(SizeConstraint sizeConstraint READ sizeConstraint WRITE setSizeConstraint)
 public:
@@ -83,12 +81,10 @@ public:
     QLayout();
     ~QLayout();
 
-#if QT_DEPRECATED_SINCE(5, 13)
     int margin() const;
-    void setMargin(int);
-#endif
-
     int spacing() const;
+
+    void setMargin(int);
     void setSpacing(int);
 
     void setContentsMargins(int left, int top, int right, int bottom);
@@ -108,8 +104,8 @@ public:
 
     QWidget *parentWidget() const;
 
-    void invalidate() override;
-    QRect geometry() const override;
+    void invalidate() Q_DECL_OVERRIDE;
+    QRect geometry() const Q_DECL_OVERRIDE;
     bool activate();
     void update();
 
@@ -119,26 +115,25 @@ public:
     void removeWidget(QWidget *w);
     void removeItem(QLayoutItem *);
 
-    Qt::Orientations expandingDirections() const override;
-    QSize minimumSize() const override;
-    QSize maximumSize() const override;
-    virtual void setGeometry(const QRect&) override;
+    Qt::Orientations expandingDirections() const Q_DECL_OVERRIDE;
+    QSize minimumSize() const Q_DECL_OVERRIDE;
+    QSize maximumSize() const Q_DECL_OVERRIDE;
+    virtual void setGeometry(const QRect&) Q_DECL_OVERRIDE;
     virtual QLayoutItem *itemAt(int index) const = 0;
     virtual QLayoutItem *takeAt(int index) = 0;
     virtual int indexOf(QWidget *) const;
-    QT6_VIRTUAL int indexOf(QLayoutItem *) const;
     virtual int count() const = 0;
-    bool isEmpty() const override;
-    QSizePolicy::ControlTypes controlTypes() const override;
+    bool isEmpty() const Q_DECL_OVERRIDE;
+    QSizePolicy::ControlTypes controlTypes() const Q_DECL_OVERRIDE;
 
-    QT6_VIRTUAL QLayoutItem *replaceWidget(QWidget *from, QWidget *to,
-                                           Qt::FindChildOptions options = Qt::FindChildrenRecursively);
+    // ### Qt 6 make this function virtual
+    QLayoutItem *replaceWidget(QWidget *from, QWidget *to, Qt::FindChildOptions options = Qt::FindChildrenRecursively);
 
     int totalHeightForWidth(int w) const;
     QSize totalMinimumSize() const;
     QSize totalMaximumSize() const;
     QSize totalSizeHint() const;
-    QLayout *layout() override;
+    QLayout *layout() Q_DECL_OVERRIDE;
 
     void setEnabled(bool);
     bool isEnabled() const;
@@ -148,7 +143,7 @@ public:
 
 protected:
     void widgetEvent(QEvent *);
-    void childEvent(QChildEvent *e) override;
+    void childEvent(QChildEvent *e) Q_DECL_OVERRIDE;
     void addChildLayout(QLayout *l);
     void addChildWidget(QWidget *w);
     bool adoptLayout(QLayout *layout);

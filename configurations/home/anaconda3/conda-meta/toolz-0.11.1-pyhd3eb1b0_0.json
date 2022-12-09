@@ -1,0 +1,219 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.5"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/toolz-0.11.1-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/tlz/__init__.py",
+    "lib/python3.8/site-packages/tlz/_build_tlz.py",
+    "lib/python3.8/site-packages/toolz-0.11.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/toolz-0.11.1.dist-info/LICENSE.txt",
+    "lib/python3.8/site-packages/toolz-0.11.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/toolz-0.11.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/toolz-0.11.1.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/toolz-0.11.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/toolz-0.11.1.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/toolz-0.11.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/toolz/__init__.py",
+    "lib/python3.8/site-packages/toolz/_signatures.py",
+    "lib/python3.8/site-packages/toolz/_version.py",
+    "lib/python3.8/site-packages/toolz/compatibility.py",
+    "lib/python3.8/site-packages/toolz/curried/__init__.py",
+    "lib/python3.8/site-packages/toolz/curried/exceptions.py",
+    "lib/python3.8/site-packages/toolz/curried/operator.py",
+    "lib/python3.8/site-packages/toolz/dicttoolz.py",
+    "lib/python3.8/site-packages/toolz/functoolz.py",
+    "lib/python3.8/site-packages/toolz/itertoolz.py",
+    "lib/python3.8/site-packages/toolz/recipes.py",
+    "lib/python3.8/site-packages/toolz/sandbox/__init__.py",
+    "lib/python3.8/site-packages/toolz/sandbox/core.py",
+    "lib/python3.8/site-packages/toolz/sandbox/parallel.py",
+    "lib/python3.8/site-packages/toolz/tests/test_compatibility.py",
+    "lib/python3.8/site-packages/toolz/tests/test_curried.py",
+    "lib/python3.8/site-packages/toolz/tests/test_curried_doctests.py",
+    "lib/python3.8/site-packages/toolz/tests/test_dicttoolz.py",
+    "lib/python3.8/site-packages/toolz/tests/test_functoolz.py",
+    "lib/python3.8/site-packages/toolz/tests/test_inspect_args.py",
+    "lib/python3.8/site-packages/toolz/tests/test_itertoolz.py",
+    "lib/python3.8/site-packages/toolz/tests/test_recipes.py",
+    "lib/python3.8/site-packages/toolz/tests/test_serialization.py",
+    "lib/python3.8/site-packages/toolz/tests/test_signatures.py",
+    "lib/python3.8/site-packages/toolz/tests/test_tlz.py",
+    "lib/python3.8/site-packages/toolz/tests/test_utils.py",
+    "lib/python3.8/site-packages/toolz/utils.py",
+    "lib/python3.8/site-packages/tlz/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/tlz/__pycache__/_build_tlz.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/__pycache__/_signatures.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/__pycache__/_version.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/__pycache__/compatibility.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/curried/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/curried/__pycache__/exceptions.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/curried/__pycache__/operator.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/__pycache__/dicttoolz.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/__pycache__/functoolz.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/__pycache__/itertoolz.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/__pycache__/recipes.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/sandbox/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/sandbox/__pycache__/core.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/sandbox/__pycache__/parallel.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/tests/__pycache__/test_compatibility.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/tests/__pycache__/test_curried.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/tests/__pycache__/test_curried_doctests.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/tests/__pycache__/test_dicttoolz.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/tests/__pycache__/test_functoolz.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/tests/__pycache__/test_inspect_args.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/tests/__pycache__/test_itertoolz.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/tests/__pycache__/test_recipes.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/tests/__pycache__/test_serialization.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/tests/__pycache__/test_signatures.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/tests/__pycache__/test_tlz.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/tests/__pycache__/test_utils.cpython-38.pyc",
+    "lib/python3.8/site-packages/toolz/__pycache__/utils.cpython-38.pyc"
+  ],
+  "fn": "toolz-0.11.1-pyhd3eb1b0_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/toolz-0.11.1-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "00dfc93d10439703a4771d2b6c8624de",
+  "name": "toolz",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/toolz-0.11.1-pyhd3eb1b0_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.8/site-packages/tlz/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/tlz/__pycache__/_build_tlz.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/__pycache__/_signatures.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/__pycache__/_version.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/__pycache__/compatibility.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/curried/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/curried/__pycache__/exceptions.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/curried/__pycache__/operator.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/__pycache__/dicttoolz.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/__pycache__/functoolz.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/__pycache__/itertoolz.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/__pycache__/recipes.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/sandbox/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/sandbox/__pycache__/core.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/sandbox/__pycache__/parallel.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/tests/__pycache__/test_compatibility.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/tests/__pycache__/test_curried.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/tests/__pycache__/test_curried_doctests.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/tests/__pycache__/test_dicttoolz.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/tests/__pycache__/test_functoolz.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/tests/__pycache__/test_inspect_args.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/tests/__pycache__/test_itertoolz.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/tests/__pycache__/test_recipes.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/tests/__pycache__/test_serialization.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/tests/__pycache__/test_signatures.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/tests/__pycache__/test_tlz.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/tests/__pycache__/test_utils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.8/site-packages/toolz/__pycache__/utils.cpython-38.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "toolz==0.11.1=pyhd3eb1b0_0",
+  "sha256": "7e96095864809ccfadfe66938b7aa4312e2785630056c0ca2b25c5aba3ede23b",
+  "size": 47351,
+  "subdir": "noarch",
+  "timestamp": 1610987907513,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/toolz-0.11.1-pyhd3eb1b0_0.tar.bz2",
+  "version": "0.11.1"
+}

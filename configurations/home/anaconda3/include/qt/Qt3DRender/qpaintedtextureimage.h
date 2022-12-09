@@ -50,7 +50,7 @@ namespace Qt3DRender {
 
 class QPaintedTextureImagePrivate;
 
-class Q_3DRENDERSHARED_EXPORT QPaintedTextureImage : public QAbstractTextureImage
+class QT3DRENDERSHARED_EXPORT QPaintedTextureImage : public QAbstractTextureImage
 {
     Q_OBJECT
     Q_PROPERTY(int width READ width WRITE setWidth NOTIFY widthChanged)
@@ -83,7 +83,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(QPaintedTextureImage)
 
-    QTextureImageDataGeneratorPtr dataGenerator() const override;
+    QTextureImageDataGeneratorPtr dataGenerator() const Q_DECL_OVERRIDE;
 };
 
 } // namespace Qt3DRender

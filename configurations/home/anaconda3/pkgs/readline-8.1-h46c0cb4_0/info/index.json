@@ -1,0 +1,15 @@
+{
+  "arch": "x86_64",
+  "build": "h46c0cb4_0",
+  "build_number": 0,
+  "depends": [
+    "libgcc-ng >=9.3.0",
+    "ncurses >=6.2,<6.3.0a0"
+  ],
+  "license": "GPL-3.0-only",
+  "name": "readline",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1618862995311,
+  "version": "8.1"
+}

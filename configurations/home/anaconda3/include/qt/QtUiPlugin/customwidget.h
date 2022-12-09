@@ -29,9 +29,9 @@
 #ifndef CUSTOMWIDGET_H
 #define CUSTOMWIDGET_H
 
-#include <QtCore/qobject.h>
-#include <QtCore/qstring.h>
-#include <QtGui/qicon.h>
+#include <QtCore/QObject>
+#include <QtCore/QString>
+#include <QtGui/QIcon>
 
 QT_BEGIN_NAMESPACE
 

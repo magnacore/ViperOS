@@ -1,0 +1,16 @@
+{
+  "arch": null,
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "depends": [
+    "protobuf >=3.19.0,<5.0.0dev",
+    "python >=3.6"
+  ],
+  "license": "Apache-2.0",
+  "name": "proto-plus",
+  "noarch": "python",
+  "platform": null,
+  "subdir": "noarch",
+  "timestamp": 1661885350473,
+  "version": "1.22.1"
+}

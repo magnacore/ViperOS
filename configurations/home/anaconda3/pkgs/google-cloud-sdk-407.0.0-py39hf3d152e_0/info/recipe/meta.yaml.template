@@ -1,0 +1,45 @@
+{% set version = "407.0.0" %}
+
+package:
+  name: google-cloud-sdk
+  version: {{ version }}
+
+source:
+  url: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-{{ version }}-linux-x86_64.tar.gz  # [linux]
+  sha256: 0eba817fd37de10f57206638ed259f7cee56f73eef80ef14e93be949cf6a1ffe  # [linux]
+  url: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-{{ version }}-darwin-x86_64.tar.gz  # [osx and build_platform == "osx-64"]
+  sha256: c79e98ca75204b7b043388c1617f6362233557a6c327ba37e10233cf31afcb81  # [osx and build_platform == "osx-64"]
+  url: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-{{ version }}-darwin-arm.tar.gz  # [osx and build_platform == "osx-arm64"]
+  sha256: f72f96987bdf87da77e7649c8564fa16d9c727e39833d7b7a74fabf5c984faa6  # [osx and build_platform == "osx-arm64"]
+
+build:
+  number: 0
+  skip: true  # [win]
+
+requirements:
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+  host:
+    - python
+  run:
+    - python
+
+test:
+  commands:
+    - gcloud version
+    - gsutil help  # [py2k]
+    - gcloud components list
+
+about:
+  home: https://cloud.google.com/sdk/
+  license: Apache v2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: Command-line interface for Google Cloud Platform products and services
+
+extra:
+  recipe-maintainers:
+    - chapmanb
+    - scopatz
+    - nehaljwani

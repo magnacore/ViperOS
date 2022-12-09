@@ -1,0 +1,110 @@
+commit 4f61c887032da8c585f554f24da8e41d97e5b4a8
+Merge: 8476ed1 d8ea55d
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Mon Nov 15 15:40:48 2021 -0300
+
+    Merge pull request #6 from ocefpaf/winpypy37
+    
+    Win pypy3.7
+
+commit d8ea55df4562ec6e8441953cfe3af54d8ad9023b
+Author: Filipe Fernandes <ocefpaf@gmail.com>
+Date:   Mon Nov 15 15:19:47 2021 -0300
+
+    MNT: Re-rendered with conda-build 3.21.6, conda-smithy 3.14.3, and conda-forge-pinning 2021.11.14.20.28.34
+
+commit 8476ed1396b6d76fb8f61358e0a9bb9419266bdd
+Merge: 2894fba 99f73c5
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Tue Nov 9 21:25:37 2021 -0300
+
+    Merge pull request #5 from regro-cf-autotick-bot/bot-pr_arm_osx_h022b9f
+    
+    ARM OSX Migrator
+
+commit 99f73c588b50f37af1dc25ffd3ef6575999e9737
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Tue Nov 9 21:43:00 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.6, conda-smithy 3.14.3, and conda-forge-pinning 2021.11.09.18.53.34
+
+commit 4006f3eea28df25d3acf59a2a8499eb942d1cc94
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Tue Nov 9 21:42:19 2021 +0000
+
+    migration: OSXArm
+
+commit 2894fbab2ac66a29dc9f8031dc3c45e59d5419a0
+Merge: 0cc4d21 1afb028
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Tue Nov 9 14:05:14 2021 +0100
+
+    Merge pull request #3 from regro-cf-autotick-bot/bot-pr_arch_hc67d5c
+    
+    Arch Migrator
+
+commit 1afb028c2f106fc5239a12decbb558f06c42a28e
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Tue Nov 9 01:41:28 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.14.3, and conda-forge-pinning 2021.11.09.00.35.45
+
+commit aaadc198ec4fdf219b968c9ad8c66456a23a5468
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Tue Nov 9 01:40:54 2021 +0000
+
+    migration: ArchRebuild
+
+commit 0cc4d21bc024fa03da84a46691d4a9301ba9ed03
+Merge: 15dcfb2 846ec5d
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Sun Nov 7 09:02:38 2021 -0300
+
+    Merge pull request #2 from regro-cf-autotick-bot/rebuild-python310-0-1_h625e7c
+    
+    Rebuild for python310
+
+commit 846ec5deaadf353b6b30425b9549a3da99f4471d
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sun Nov 7 05:37:55 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.14.3, and conda-forge-pinning 2021.11.05.20.51.02
+
+commit 72b099f618968c43c7104b4f3e63a308daf49959
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sun Nov 7 05:37:28 2021 +0000
+
+    Rebuild for python310
+
+commit 15dcfb25e4c1270a192db9c224e51d281c5ffe84
+Merge: eb65630 cfe357d
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Fri Nov 5 11:00:36 2021 +0100
+
+    Merge pull request #1 from regro-cf-autotick-bot/rebuild-pypy37-0-1_hdf6fb5
+    
+    Rebuild for pypy37
+
+commit cfe357d3b37c770a6e491ca2544911c85d0a760e
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Thu Nov 4 20:12:44 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.14.3, and conda-forge-pinning 2021.11.04.14.33.12
+
+commit ff76e7c417bb5596537575a30c7d3362a0a9e36e
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Thu Nov 4 20:12:12 2021 +0000
+
+    Rebuild for pypy37
+
+commit eb65630ba08a84a97d457bf1b714bee730515f79
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Thu Nov 4 18:43:53 2021 +0000
+
+    Re-render the feedstock after CI registration.
+
+commit f10fe30e228de70e23ea884487aa5ba67d9a982b
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Thu Nov 4 18:38:38 2021 +0000
+
+    Initial feedstock commit with conda-smithy 3.14.3.

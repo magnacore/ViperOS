@@ -1,0 +1,77 @@
+# keep this without major version to let the bot pick it up
+{% set version = "21.9" %}
+# protobuf doesn't add the major version in the tag...
+{% set major = "4" %}
+# libprotobuf now has a different major version than protobuf
+{% set lib_major = "3" %}
+
+package:
+  name: protobuf
+  version: {{ major + "." + version }}
+
+source:
+  url: https://github.com/protocolbuffers/protobuf/archive/v{{ version }}/protobuf-v{{ version }}.tar.gz
+  sha256: 0aa7df8289c957a4c54cbe694fbabe99b180e64ca0f8fdb5e2f76dcf56ff2422
+  patches:
+    - patches/0001-do-not-link-msvc-runtime-statically.patch
+    - patches/0002-fix-paths-for-include-lib-directories.patch
+    - patches/0003-adapt-to-name-of-protobuf-lib-on-windows.patch
+    - patches/0004-fix-build-with-python-311.patch
+
+build:
+  number: 0
+  script:
+    - cd python
+    - {{ PYTHON }} -m pip install . -vv --install-option="--cpp_implementation"
+
+requirements:
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - libprotobuf {{ lib_major + "." + version }}  # [build_platform != target_platform]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - python
+    - pip
+    - libprotobuf {{ lib_major + "." + version }}         # [unix]
+    - libprotobuf-static {{ lib_major + "." + version }}  # [win]
+  run:
+    - python
+    - setuptools
+    - libprotobuf {{ lib_major + "." + version }}
+
+test:
+  commands:
+    - python -c "from google.protobuf.internal import api_implementation; assert api_implementation.Type() == 'cpp'"     # [python_impl != "pypy"]
+    - python -c "from google.protobuf.internal import api_implementation; assert api_implementation.Type() == 'python'"  # [python_impl == "pypy"]
+  imports:
+    - google
+    - google.protobuf
+    - google.protobuf.internal
+    - google.protobuf.pyext
+    - google.protobuf.util
+    - google.protobuf.compiler
+
+about:
+  home: https://developers.google.com/protocol-buffers/
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Protocol Buffers - Google's data interchange format.
+  description: |
+    Protocol buffers are Google's language-neutral, platform-neutral, extensible
+    mechanism for serializing structured data,think XML, but smaller, faster, and simpler.
+  dev_url: https://github.com/protocolbuffers/protobuf
+  doc_url: https://developers.google.com/protocol-buffers/docs/tutorials
+  doc_source_url: https://github.com/protocolbuffers/protobuf/blob/master/README.md
+
+extra:
+  recipe-maintainers:
+    - xylar
+    - dopplershift
+    - jakirkham
+    - ocefpaf
+    - hajapy
+    - xhochy
+    - conda-forge/libprotobuf

@@ -1,0 +1,17 @@
+commit f3da3dff3622de41227f4cf9823932ff2c2dfc13
+Author: Serhii Kupriienko <skupriienko@anaconda.com>
+Date:   Wed Nov 24 15:49:40 2021 +0000
+
+    Update dependencies, skip py<36, add license_family, dev, doc urls
+
+commit bea414f98ea477c42f4258604fe1abd93fead880
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Fri Nov 5 06:30:51 2021 +0000
+
+    Re-render the feedstock after CI registration.
+
+commit 8b2d26aaf62b3f0ca326a3c1a25c3be318b43036
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Fri Nov 5 06:26:04 2021 +0000
+
+    Initial feedstock commit with conda-smithy 3.14.3.

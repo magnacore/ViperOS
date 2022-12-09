@@ -1,0 +1,57 @@
+{
+  "build": "py38h27cfd23_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/bitarray-2.1.0-py38h27cfd23_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/bitarray-2.1.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/bitarray-2.1.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/bitarray-2.1.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/bitarray-2.1.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/bitarray-2.1.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/bitarray-2.1.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/bitarray-2.1.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/bitarray/__init__.py",
+    "lib/python3.8/site-packages/bitarray/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/bitarray/__pycache__/test_bitarray.cpython-38.pyc",
+    "lib/python3.8/site-packages/bitarray/__pycache__/test_util.cpython-38.pyc",
+    "lib/python3.8/site-packages/bitarray/__pycache__/util.cpython-38.pyc",
+    "lib/python3.8/site-packages/bitarray/_bitarray.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/bitarray/_util.cpython-38-x86_64-linux-gnu.so",
+    "lib/python3.8/site-packages/bitarray/bitarray.h",
+    "lib/python3.8/site-packages/bitarray/pythoncapi_compat.h",
+    "lib/python3.8/site-packages/bitarray/test_bitarray.py",
+    "lib/python3.8/site-packages/bitarray/test_data.pickle",
+    "lib/python3.8/site-packages/bitarray/test_util.py",
+    "lib/python3.8/site-packages/bitarray/util.py"
+  ],
+  "fn": "bitarray-2.1.0-py38h27cfd23_1.conda",
+  "legacy_bz2_md5": "98d525371f15fcc65430eb317df12dfd",
+  "legacy_bz2_size": 120280,
+  "license": "PSF",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/bitarray-2.1.0-py38h27cfd23_1",
+    "type": 1
+  },
+  "md5": "58f90a7a78b1a1f64db7badfb32efb6d",
+  "name": "bitarray",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/bitarray-2.1.0-py38h27cfd23_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "bitarray==2.1.0=py38h27cfd23_1",
+  "sha256": "38a7b53237212fe917b5d1f0cfa46e6e324c0043e27587e8b458ed69da30c6d6",
+  "size": 122980,
+  "subdir": "linux-64",
+  "timestamp": 1620827598629,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/bitarray-2.1.0-py38h27cfd23_1.conda",
+  "version": "2.1.0"
+}

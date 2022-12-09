@@ -42,14 +42,13 @@
 
 #include <QtRemoteObjects/qtremoteobjectglobal.h>
 
-#include <QtCore/qsharedpointer.h>
+#include <QtCore/QSharedPointer>
 
 QT_BEGIN_NAMESPACE
 
-class QObjectPrivate;
 class QRemoteObjectPendingCall;
-class QRemoteObjectReplicaImplementation;
-class QReplicaImplementationInterface;
+class QRemoteObjectReplicaPrivate;
+class QReplicaPrivateInterface;
 class QRemoteObjectNode;
 
 class Q_REMOTEOBJECTS_EXPORT QRemoteObjectReplica : public QObject
@@ -68,24 +67,22 @@ public:
     Q_ENUM(State)
 
 public:
-    ~QRemoteObjectReplica() override;
+    virtual ~QRemoteObjectReplica();
 
     bool isReplicaValid() const;
     bool waitForSource(int timeout = 30000);
     bool isInitialized() const;
     State state() const;
     QRemoteObjectNode *node() const;
-    virtual void setNode(QRemoteObjectNode *node);
+    void setNode(QRemoteObjectNode *node);
 
 Q_SIGNALS:
     void initialized();
-    void notified();
     void stateChanged(State state, State oldState);
 
 protected:
     enum ConstructorType {DefaultConstructor, ConstructWithNode};
     explicit QRemoteObjectReplica(ConstructorType t = DefaultConstructor);
-    QRemoteObjectReplica(QObjectPrivate &dptr, QObject *parent);
 
     virtual void initialize();
     void send(QMetaObject::Call call, int index, const QVariantList &args);
@@ -93,15 +90,13 @@ protected:
 
 protected:
     void setProperties(const QVariantList &);
-    void setChild(int i, const QVariant &);
     const QVariant propAsVariant(int i) const;
     void persistProperties(const QString &repName, const QByteArray &repSig, const QVariantList &props) const;
     QVariantList retrieveProperties(const QString &repName, const QByteArray &repSig) const;
     void initializeNode(QRemoteObjectNode *node, const QString &name = QString());
-    QSharedPointer<QReplicaImplementationInterface> d_impl;
+    QSharedPointer<QReplicaPrivateInterface> d_ptr;
 private:
     friend class QRemoteObjectNodePrivate;
-    friend class QConnectedReplicaImplementation;
 };
 
 QT_END_NAMESPACE

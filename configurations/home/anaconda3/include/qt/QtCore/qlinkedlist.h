@@ -40,48 +40,33 @@
 #ifndef QLINKEDLIST_H
 #define QLINKEDLIST_H
 
-#include <QtCore/qglobal.h>
-
-#ifndef QT_NO_LINKED_LIST
-
 #include <QtCore/qiterator.h>
 #include <QtCore/qrefcount.h>
-#include <QtCore/qcontainertools_impl.h>
-#include <QtCore/qdatastream.h>
-#include <QtCore/qtypeinfo.h>
 
-#include <algorithm>
-#include <initializer_list>
 #include <iterator>
 #include <list>
 
+#include <algorithm>
 
-#if 0
-// This is needed because of QTBUG-80347
-#pragma qt_class(QLinkedList)
-#pragma qt_class(QLinkedListData)
-#pragma qt_class(QLinkedListNode)
+#if defined(Q_COMPILER_INITIALIZER_LISTS)
+# include <initializer_list>
 #endif
-
-#if QT_DEPRECATED_SINCE(5, 15)
-
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
 
 QT_BEGIN_NAMESPACE
 
-struct QT_DEPRECATED_VERSION_5_15 QLinkedListData
+
+struct Q_CORE_EXPORT QLinkedListData
 {
     QLinkedListData *n, *p;
     QtPrivate::RefCount ref;
     int size;
     uint sharable : 1;
 
-    Q_CORE_EXPORT static const QLinkedListData shared_null;
+    static const QLinkedListData shared_null;
 };
 
 template <typename T>
-struct QT_DEPRECATED_VERSION_5_15 QLinkedListNode
+struct QLinkedListNode
 {
     inline QLinkedListNode(const T &arg): t(arg) { }
     QLinkedListNode *n, *p;
@@ -89,29 +74,30 @@ struct QT_DEPRECATED_VERSION_5_15 QLinkedListNode
 };
 
 template <class T>
-class QT_DEPRECATED_VERSION_X_5_15("Use std::list instead") QLinkedList
+class QLinkedList
 {
     typedef QLinkedListNode<T> Node;
     union { QLinkedListData *d; QLinkedListNode<T> *e; };
 
 public:
-    inline QLinkedList() noexcept : d(const_cast<QLinkedListData *>(&QLinkedListData::shared_null)) { }
+    inline QLinkedList() Q_DECL_NOTHROW : d(const_cast<QLinkedListData *>(&QLinkedListData::shared_null)) { }
     inline QLinkedList(const QLinkedList<T> &l) : d(l.d) { d->ref.ref(); if (!d->sharable) detach(); }
+#if defined(Q_COMPILER_INITIALIZER_LISTS)
     inline QLinkedList(std::initializer_list<T> list)
-        : QLinkedList(list.begin(), list.end()) {}
-    template <typename InputIterator, QtPrivate::IfIsInputIterator<InputIterator> = true>
-    inline QLinkedList(InputIterator first, InputIterator last)
-        : QLinkedList()
+        : d(const_cast<QLinkedListData *>(&QLinkedListData::shared_null))
     {
-        std::copy(first, last, std::back_inserter(*this));
+        std::copy(list.begin(), list.end(), std::back_inserter(*this));
     }
+#endif
     ~QLinkedList();
     QLinkedList<T> &operator=(const QLinkedList<T> &);
-    QLinkedList(QLinkedList<T> &&other) noexcept
+#ifdef Q_COMPILER_RVALUE_REFS
+    QLinkedList(QLinkedList<T> &&other) Q_DECL_NOTHROW
         : d(other.d) { other.d = const_cast<QLinkedListData *>(&QLinkedListData::shared_null); }
-    QLinkedList<T> &operator=(QLinkedList<T> &&other) noexcept
+    QLinkedList<T> &operator=(QLinkedList<T> &&other) Q_DECL_NOTHROW
     { QLinkedList moved(std::move(other)); swap(moved); return *this; }
-    inline void swap(QLinkedList<T> &other) noexcept { qSwap(d, other.d); }
+#endif
+    inline void swap(QLinkedList<T> &other) Q_DECL_NOTHROW { qSwap(d, other.d); }
     bool operator==(const QLinkedList<T> &l) const;
     inline bool operator!=(const QLinkedList<T> &l) const { return !(*this == l); }
 
@@ -148,13 +134,13 @@ public:
         typedef T *pointer;
         typedef T &reference;
         Node *i;
-        inline iterator() : i(nullptr) {}
+        inline iterator() : i(Q_NULLPTR) {}
         inline iterator(Node *n) : i(n) {}
 #if QT_VERSION < QT_VERSION_CHECK(6,0,0)
-        iterator(const iterator &other) noexcept : i(other.i) {}
-        iterator &operator=(const iterator &other) noexcept { i = other.i; return *this; }
-        iterator(iterator &&other) noexcept : i(other.i) {}
-        iterator &operator=(iterator &&other) noexcept { return *this = other; }
+        iterator(const iterator &other) Q_DECL_NOTHROW : i(other.i) {}
+        iterator &operator=(const iterator &other) Q_DECL_NOTHROW { i = other.i; return *this; }
+        iterator(iterator &&other) Q_DECL_NOTHROW : i(other.i) {}
+        iterator &operator=(iterator &&other) Q_DECL_NOTHROW { return *this = other; }
 #endif
         inline T &operator*() const { return i->t; }
         inline T *operator->() const { return &i->t; }
@@ -173,7 +159,6 @@ public:
         inline iterator operator-(int j) const { return operator+(-j); }
         inline iterator &operator+=(int j) { return *this = *this + j; }
         inline iterator &operator-=(int j) { return *this = *this - j; }
-        friend inline iterator operator+(int j, iterator k) { return k + j; }
     };
     friend class iterator;
 
@@ -186,14 +171,14 @@ public:
         typedef const T *pointer;
         typedef const T &reference;
         Node *i;
-        inline const_iterator() : i(nullptr) {}
+        inline const_iterator() : i(Q_NULLPTR) {}
         inline const_iterator(Node *n) : i(n) {}
         inline const_iterator(iterator ci) : i(ci.i){}
 #if QT_VERSION < QT_VERSION_CHECK(6,0,0)
-        const_iterator(const const_iterator &other) noexcept : i(other.i) {}
-        const_iterator &operator=(const const_iterator &other) noexcept { i = other.i; return *this; }
-        const_iterator(const_iterator &&other) noexcept : i(other.i) {}
-        const_iterator &operator=(const_iterator &&other) noexcept { return *this = other; }
+        const_iterator(const const_iterator &other) Q_DECL_NOTHROW : i(other.i) {}
+        const_iterator &operator=(const const_iterator &other) Q_DECL_NOTHROW { i = other.i; return *this; }
+        const_iterator(const_iterator &&other) Q_DECL_NOTHROW : i(other.i) {}
+        const_iterator &operator=(const_iterator &&other) Q_DECL_NOTHROW { return *this = other; }
 #endif
         inline const T &operator*() const { return i->t; }
         inline const T *operator->() const { return &i->t; }
@@ -208,7 +193,6 @@ public:
         inline const_iterator operator-(int j) const { return operator+(-j); }
         inline const_iterator &operator+=(int j) { return *this = *this + j; }
         inline const_iterator &operator-=(int j) { return *this = *this - j; }
-        friend inline const_iterator operator+(int j, const_iterator k) { return k + j; }
     };
     friend class const_iterator;
 
@@ -217,20 +201,20 @@ public:
     typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
     inline iterator begin() { detach(); return e->n; }
-    inline const_iterator begin() const noexcept { return e->n; }
-    inline const_iterator cbegin() const noexcept { return e->n; }
-    inline const_iterator constBegin() const noexcept { return e->n; }
+    inline const_iterator begin() const Q_DECL_NOTHROW { return e->n; }
+    inline const_iterator cbegin() const Q_DECL_NOTHROW { return e->n; }
+    inline const_iterator constBegin() const Q_DECL_NOTHROW { return e->n; }
     inline iterator end() { detach(); return e; }
-    inline const_iterator end() const noexcept { return e; }
-    inline const_iterator cend() const noexcept { return e; }
-    inline const_iterator constEnd() const noexcept { return e; }
+    inline const_iterator end() const Q_DECL_NOTHROW { return e; }
+    inline const_iterator cend() const Q_DECL_NOTHROW { return e; }
+    inline const_iterator constEnd() const Q_DECL_NOTHROW { return e; }
 
     reverse_iterator rbegin() { return reverse_iterator(end()); }
     reverse_iterator rend() { return reverse_iterator(begin()); }
-    const_reverse_iterator rbegin() const noexcept { return const_reverse_iterator(end()); }
-    const_reverse_iterator rend() const noexcept { return const_reverse_iterator(begin()); }
-    const_reverse_iterator crbegin() const noexcept { return const_reverse_iterator(end()); }
-    const_reverse_iterator crend() const noexcept { return const_reverse_iterator(begin()); }
+    const_reverse_iterator rbegin() const Q_DECL_NOTHROW { return const_reverse_iterator(end()); }
+    const_reverse_iterator rend() const Q_DECL_NOTHROW { return const_reverse_iterator(begin()); }
+    const_reverse_iterator crbegin() const Q_DECL_NOTHROW { return const_reverse_iterator(end()); }
+    const_reverse_iterator crend() const Q_DECL_NOTHROW { return const_reverse_iterator(begin()); }
 
     iterator insert(iterator before, const T &t);
     iterator erase(iterator pos);
@@ -284,15 +268,6 @@ private:
     iterator detach_helper2(iterator);
     void freeData(QLinkedListData*);
 };
-template <typename T>
-Q_DECLARE_TYPEINFO_BODY(QLinkedList<T>, Q_MOVABLE_TYPE|Q_RELOCATABLE_TYPE);
-
-#if defined(__cpp_deduction_guides) && __cpp_deduction_guides >= 201606
-template <typename InputIterator,
-          typename ValueType = typename std::iterator_traits<InputIterator>::value_type,
-          QtPrivate::IfIsInputIterator<InputIterator> = true>
-QLinkedList(InputIterator, InputIterator) -> QLinkedList<ValueType>;
-#endif
 
 template <typename T>
 inline QLinkedList<T>::~QLinkedList()
@@ -363,7 +338,7 @@ void QLinkedList<T>::freeData(QLinkedListData *x)
 {
     Node *y = reinterpret_cast<Node*>(x);
     Node *i = y->n;
-    Q_ASSERT(x->ref.atomic.loadRelaxed() == 0);
+    Q_ASSERT(x->ref.atomic.load() == 0);
     while (i != y) {
         Node *n = i;
         i = i->n;
@@ -473,7 +448,7 @@ bool QLinkedList<T>::removeOne(const T &_t)
 template <typename T>
 inline T QLinkedList<T>::takeFirst()
 {
-    T t = std::move(first());
+    T t = first();
     removeFirst();
     return t;
 }
@@ -481,7 +456,7 @@ inline T QLinkedList<T>::takeFirst()
 template <typename T>
 inline T QLinkedList<T>::takeLast()
 {
-    T t = std::move(last());
+    T t = last();
     removeLast();
     return t;
 }
@@ -588,28 +563,6 @@ QLinkedList<T> QLinkedList<T>::operator+(const QLinkedList<T> &l) const
 Q_DECLARE_SEQUENTIAL_ITERATOR(LinkedList)
 Q_DECLARE_MUTABLE_SEQUENTIAL_ITERATOR(LinkedList)
 
-#ifndef QT_NO_DATASTREAM
-template <typename T>
-inline QDataStream &operator>>(QDataStream &s, QLinkedList<T> &l)
-{
-    return QtPrivate::readListBasedContainer(s, l);
-}
-
-template <typename T>
-inline QDataStream &operator<<(QDataStream &s, const QLinkedList<T> &l)
-{
-    return QtPrivate::writeSequentialContainer(s, l);
-}
-#endif
-
 QT_END_NAMESPACE
-
-Q_DECLARE_SEQUENTIAL_CONTAINER_METATYPE(QLinkedList)
-
-QT_WARNING_POP
-
-#endif // QT_DEPRECATED_SINCE(5, 15)
-
-#endif // QT_NO_LINKED_LIST
 
 #endif // QLINKEDLIST_H

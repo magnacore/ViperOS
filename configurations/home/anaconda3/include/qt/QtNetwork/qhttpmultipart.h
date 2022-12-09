@@ -60,10 +60,12 @@ public:
     QHttpPart();
     QHttpPart(const QHttpPart &other);
     ~QHttpPart();
-    QHttpPart &operator=(QHttpPart &&other) noexcept { swap(other); return *this; }
+#ifdef Q_COMPILER_RVALUE_REFS
+    QHttpPart &operator=(QHttpPart &&other) Q_DECL_NOTHROW { swap(other); return *this; }
+#endif
     QHttpPart &operator=(const QHttpPart &other);
 
-    void swap(QHttpPart &other) noexcept { qSwap(d, other.d); }
+    void swap(QHttpPart &other) Q_DECL_NOTHROW { qSwap(d, other.d); }
 
     bool operator==(const QHttpPart &other) const;
     inline bool operator!=(const QHttpPart &other) const
@@ -98,8 +100,8 @@ public:
         AlternativeType
     };
 
-    explicit QHttpMultiPart(QObject *parent = nullptr);
-    explicit QHttpMultiPart(ContentType contentType, QObject *parent = nullptr);
+    explicit QHttpMultiPart(QObject *parent = Q_NULLPTR);
+    explicit QHttpMultiPart(ContentType contentType, QObject *parent = Q_NULLPTR);
     ~QHttpMultiPart();
 
     void append(const QHttpPart &httpPart);

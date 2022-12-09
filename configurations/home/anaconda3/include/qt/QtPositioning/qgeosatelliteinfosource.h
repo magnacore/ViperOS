@@ -67,8 +67,6 @@ public:
 
     static QGeoSatelliteInfoSource *createDefaultSource(QObject *parent);
     static QGeoSatelliteInfoSource *createSource(const QString &sourceName, QObject *parent);
-    static QGeoSatelliteInfoSource *createDefaultSource(const QVariantMap &parameters, QObject *parent);
-    static QGeoSatelliteInfoSource *createSource(const QString &sourceName, const QVariantMap &parameters, QObject *parent);
     static QStringList availableSources();
 
     QString sourceName() const;
@@ -90,13 +88,9 @@ Q_SIGNALS:
     void requestTimeout();
     void error(QGeoSatelliteInfoSource::Error);
 
-protected:
-    explicit QGeoSatelliteInfoSource(QGeoSatelliteInfoSourcePrivate &dd, QObject *parent);
-
 private:
     Q_DISABLE_COPY(QGeoSatelliteInfoSource)
     QGeoSatelliteInfoSourcePrivate *d;
-    friend class QGeoSatelliteInfoSourcePrivate;
 };
 
 QT_END_NAMESPACE

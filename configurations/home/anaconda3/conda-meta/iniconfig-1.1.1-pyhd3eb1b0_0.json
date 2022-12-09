@@ -6,37 +6,37 @@
   "depends": [
     "python"
   ],
-  "extracted_package_dir": "/home/goldust/anaconda3/pkgs/iniconfig-1.1.1-pyhd3eb1b0_0",
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/iniconfig-1.1.1-pyhd3eb1b0_0",
   "features": "",
   "files": [
-    "lib/python3.9/site-packages/iniconfig-1.1.1.dist-info/INSTALLER",
-    "lib/python3.9/site-packages/iniconfig-1.1.1.dist-info/LICENSE",
-    "lib/python3.9/site-packages/iniconfig-1.1.1.dist-info/METADATA",
-    "lib/python3.9/site-packages/iniconfig-1.1.1.dist-info/RECORD",
-    "lib/python3.9/site-packages/iniconfig-1.1.1.dist-info/REQUESTED",
-    "lib/python3.9/site-packages/iniconfig-1.1.1.dist-info/WHEEL",
-    "lib/python3.9/site-packages/iniconfig-1.1.1.dist-info/direct_url.json",
-    "lib/python3.9/site-packages/iniconfig-1.1.1.dist-info/top_level.txt",
-    "lib/python3.9/site-packages/iniconfig/__init__.py",
-    "lib/python3.9/site-packages/iniconfig/__init__.pyi",
-    "lib/python3.9/site-packages/iniconfig/py.typed",
-    "lib/python3.9/site-packages/iniconfig/__pycache__/__init__.cpython-39.pyc"
+    "lib/python3.8/site-packages/iniconfig-1.1.1.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/iniconfig-1.1.1.dist-info/LICENSE",
+    "lib/python3.8/site-packages/iniconfig-1.1.1.dist-info/METADATA",
+    "lib/python3.8/site-packages/iniconfig-1.1.1.dist-info/RECORD",
+    "lib/python3.8/site-packages/iniconfig-1.1.1.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/iniconfig-1.1.1.dist-info/WHEEL",
+    "lib/python3.8/site-packages/iniconfig-1.1.1.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/iniconfig-1.1.1.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/iniconfig/__init__.py",
+    "lib/python3.8/site-packages/iniconfig/__init__.pyi",
+    "lib/python3.8/site-packages/iniconfig/py.typed",
+    "lib/python3.8/site-packages/iniconfig/__pycache__/__init__.cpython-38.pyc"
   ],
   "fn": "iniconfig-1.1.1-pyhd3eb1b0_0.tar.bz2",
   "license": "MIT",
   "link": {
-    "source": "/home/goldust/anaconda3/pkgs/iniconfig-1.1.1-pyhd3eb1b0_0",
+    "source": "/home/manuj/anaconda3/pkgs/iniconfig-1.1.1-pyhd3eb1b0_0",
     "type": 1
   },
   "md5": "e40edff2c5708f342cef43c7f280c507",
   "name": "iniconfig",
   "noarch": "python",
-  "package_tarball_full_path": "/home/goldust/anaconda3/pkgs/iniconfig-1.1.1-pyhd3eb1b0_0.tar.bz2",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/iniconfig-1.1.1-pyhd3eb1b0_0.tar.bz2",
   "package_type": "noarch_python",
   "paths_data": {
     "paths": [
       {
-        "_path": "lib/python3.9/site-packages/iniconfig/__pycache__/__init__.cpython-39.pyc",
+        "_path": "lib/python3.8/site-packages/iniconfig/__pycache__/__init__.cpython-38.pyc",
         "path_type": "pyc_file"
       }
     ],

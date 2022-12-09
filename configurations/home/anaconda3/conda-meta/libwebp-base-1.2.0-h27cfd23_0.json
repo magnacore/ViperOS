@@ -1,0 +1,92 @@
+{
+  "build": "h27cfd23_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [
+    "libwebp 1.2.0"
+  ],
+  "depends": [
+    "libgcc-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/libwebp-base-1.2.0-h27cfd23_0",
+  "features": "",
+  "files": [
+    "bin/webpinfo",
+    "bin/webpmux",
+    "include/webp/decode.h",
+    "include/webp/encode.h",
+    "include/webp/mux.h",
+    "include/webp/mux_types.h",
+    "include/webp/types.h",
+    "lib/libwebp.a",
+    "lib/libwebp.so",
+    "lib/libwebp.so.7",
+    "lib/libwebp.so.7.1.1",
+    "lib/libwebpdecoder.a",
+    "lib/libwebpdecoder.so",
+    "lib/libwebpdecoder.so.3",
+    "lib/libwebpdecoder.so.3.1.1",
+    "lib/libwebpmux.a",
+    "lib/libwebpmux.so",
+    "lib/libwebpmux.so.3",
+    "lib/libwebpmux.so.3.0.6",
+    "lib/pkgconfig/libwebp.pc",
+    "lib/pkgconfig/libwebpdecoder.pc",
+    "lib/pkgconfig/libwebpmux.pc",
+    "share/man/man1/cwebp.1",
+    "share/man/man1/dwebp.1",
+    "share/man/man1/webpinfo.1",
+    "share/man/man1/webpmux.1"
+  ],
+  "fn": "libwebp-base-1.2.0-h27cfd23_0.conda",
+  "legacy_bz2_md5": "4ca6639366b19e17628f10515080885f",
+  "legacy_bz2_size": 869130,
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/libwebp-base-1.2.0-h27cfd23_0",
+    "type": 1
+  },
+  "md5": "4d1ba466be28f57eeba2c341ae1390f4",
+  "name": "libwebp-base",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/libwebp-base-1.2.0-h27cfd23_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/libwebp.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/libwebp-base_1612214051831/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p",
+        "sha256": "7c78be36fa9c65a3ece1b33c960a7a64e773c479efe05acd8382f2e3b167d338",
+        "sha256_in_prefix": "6f7e096a7ddc91e1efd054ff3d86ee379083a95a046cd4f77c8a617d45b09711",
+        "size_in_bytes": 497
+      },
+      {
+        "_path": "lib/pkgconfig/libwebpdecoder.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/libwebp-base_1612214051831/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p",
+        "sha256": "18a481847b37f45289a966b27b99dee7b922a3d199d5d380401463d89f3a01fa",
+        "sha256_in_prefix": "d2b6474d9135839ab5b0dcb357f88260c64f0480f08474f496f2d98af0af778d",
+        "size_in_bytes": 525
+      },
+      {
+        "_path": "lib/pkgconfig/libwebpmux.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/tmp/build/80754af9/libwebp-base_1612214051831/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p",
+        "sha256": "3dc7e9bf4556830a6c5009dd9dfc52092a1f8e3d9665493898c2a85e46079f1e",
+        "sha256_in_prefix": "966c2a641f7190246aebd820ef35a3fdc01334693819afef2fdd686855f6acd6",
+        "size_in_bytes": 543
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "libwebp-base==1.2.0=h27cfd23_0",
+  "sha256": "a894ef4837385c2bb9ac9abcbb4527e0c5f5051979156179fbbfde21f10f49e1",
+  "size": 447750,
+  "subdir": "linux-64",
+  "timestamp": 1612214102400,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libwebp-base-1.2.0-h27cfd23_0.conda",
+  "version": "1.2.0"
+}

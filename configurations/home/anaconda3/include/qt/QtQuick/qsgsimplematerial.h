@@ -44,8 +44,6 @@
 
 QT_BEGIN_NAMESPACE
 
-#if QT_DEPRECATED_SINCE(5, 15)
-
 template <typename State>
 class QSGSimpleMaterialShader : public QSGMaterialShader
 {
@@ -79,7 +77,6 @@ public:
 
     void updateState(const RenderState &state, QSGMaterial *newMaterial, QSGMaterial *oldMaterial) override;
 
-    QT_DEPRECATED_X("QSGSimpleMaterialShader is going to be removed in Qt 6.0. Use QSGMaterialShader instead.")
     virtual void updateState(const State *newState, const State *oldState) = 0;
 
     virtual void resolveUniforms() {}
@@ -141,15 +138,13 @@ template <typename State>
 class QSGSimpleMaterial : public QSGMaterial
 {
 public:
-#ifndef Q_CLANG_QDOC
-    QT_DEPRECATED_X("QSGSimpleMaterial is going to be removed in Qt 6.0. Use QSGMaterial instead.")
+#ifndef qdoc
     QSGSimpleMaterial(const State &aState, PtrShaderCreateFunc func)
         : m_state(aState)
         , m_func(func)
     {
     }
 
-    QT_DEPRECATED_X("QSGSimpleMaterial is going to be removed in Qt 6.0. Use QSGMaterial instead.")
     QSGSimpleMaterial(PtrShaderCreateFunc func)
         : m_func(func)
     {
@@ -190,7 +185,7 @@ public:
     QSGSimpleMaterialComparableMaterial(PtrShaderCreateFunc func)
         : QSGSimpleMaterial<State>(func) {}
 
-    int compare(const QSGMaterial *other) const override {
+    int compare(const QSGMaterial *other) const {
         return QSGSimpleMaterialComparableMaterial<State>::state()->compare(static_cast<const QSGSimpleMaterialComparableMaterial<State> *>(other)->state());
     }
 };
@@ -212,13 +207,11 @@ Q_INLINE_TEMPLATE void QSGSimpleMaterialShader<State>::updateState(const RenderS
     Q_UNUSED(state)
 #endif
     State *ns = static_cast<QSGSimpleMaterial<State> *>(newMaterial)->state();
-    State *old = nullptr;
+    State *old = 0;
     if (oldMaterial)
         old = static_cast<QSGSimpleMaterial<State> *>(oldMaterial)->state();
     updateState(ns, old);
 }
-
-#endif
 
 QT_END_NAMESPACE
 

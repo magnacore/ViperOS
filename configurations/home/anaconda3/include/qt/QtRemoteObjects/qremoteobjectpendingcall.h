@@ -42,7 +42,7 @@
 
 #include <QtRemoteObjects/qtremoteobjectglobal.h>
 
-#include <QtCore/qvariant.h>
+#include <QVariant>
 
 QT_BEGIN_NAMESPACE
 
@@ -79,7 +79,7 @@ protected:
     QExplicitlySharedDataPointer<QRemoteObjectPendingCallData> d;
 
 private:
-    friend class QConnectedReplicaImplementation;
+    friend class QConnectedReplicaPrivate;
 };
 
 QT_END_NAMESPACE
@@ -92,7 +92,7 @@ class Q_REMOTEOBJECTS_EXPORT QRemoteObjectPendingCallWatcher: public QObject, pu
 
 public:
     QRemoteObjectPendingCallWatcher(const QRemoteObjectPendingCall &call, QObject *parent = nullptr);
-    ~QRemoteObjectPendingCallWatcher() override;
+    ~QRemoteObjectPendingCallWatcher();
 
     bool isFinished() const;
 
@@ -103,6 +103,7 @@ Q_SIGNALS:
 
 private:
     Q_DECLARE_PRIVATE(QRemoteObjectPendingCallWatcher)
+    Q_PRIVATE_SLOT(d_func(), void _q_finished())
 };
 
 template<typename T>
@@ -111,11 +112,18 @@ class QRemoteObjectPendingReply : public QRemoteObjectPendingCall
 public:
     typedef T Type;
 
-    QRemoteObjectPendingReply() = default;
-    explicit QRemoteObjectPendingReply(const QRemoteObjectPendingCall &call)
-        : QRemoteObjectPendingCall(call)
+    inline QRemoteObjectPendingReply()
     {
     }
+    inline QRemoteObjectPendingReply(const QRemoteObjectPendingReply &other)
+        : QRemoteObjectPendingCall(other)
+    {
+    }
+    explicit inline QRemoteObjectPendingReply(const QRemoteObjectPendingCall &call)
+    {
+        *this = call;
+    }
+    inline ~QRemoteObjectPendingReply() {}
 
     QRemoteObjectPendingReply &operator=(const QRemoteObjectPendingCall &other)
     {
@@ -128,36 +136,6 @@ public:
         return qvariant_cast<Type>(QRemoteObjectPendingCall::returnValue());
     }
 
-};
-
-// NOTE: manual expansion of Q_DECLARE_METATYPE_TEMPLATE_1ARG, minus the IsSequentialContainer
-template <typename T>
-struct QMetaTypeId< QRemoteObjectPendingReply<T> >
-{
-    enum {
-        Defined = QMetaTypeId2<T>::Defined
-    };
-    static int qt_metatype_id()
-    {
-        static QBasicAtomicInt metatype_id = Q_BASIC_ATOMIC_INITIALIZER(0);
-        if (const int id = metatype_id.loadRelaxed())
-            return id;
-        const char *tName = QMetaType::typeName(qMetaTypeId<T>());
-        Q_ASSERT(tName);
-        const int tNameLen = int(qstrlen(tName));
-        QByteArray typeName;
-        typeName.reserve(int(sizeof("QRemoteObjectPendingReply")) + 1 + tNameLen + 1 + 1);
-        typeName.append("QRemoteObjectPendingReply", int(sizeof("QRemoteObjectPendingReply")) - 1)
-            .append('<').append(tName, tNameLen);
-        if (typeName.endsWith('>'))
-            typeName.append(' ');
-        typeName.append('>');
-        const int newId = qRegisterNormalizedMetaType< QRemoteObjectPendingReply<T> >(
-                        typeName,
-                        reinterpret_cast< QRemoteObjectPendingReply<T> *>(quintptr(-1)));
-        metatype_id.storeRelease(newId);
-        return newId;
-    }
 };
 
 QT_END_NAMESPACE

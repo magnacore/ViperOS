@@ -1,0 +1,27 @@
+{
+  "arch": "x86_64",
+  "build": "hf930737_3_cpython",
+  "build_number": 3,
+  "constrains": [
+    "python_abi 3.9.* *_cp39"
+  ],
+  "depends": [
+    "ld_impl_linux-64 >=2.36.1",
+    "libffi >=3.4.2,<3.5.0a0",
+    "libgcc-ng >=9.4.0",
+    "ncurses >=6.2,<6.3.0a0",
+    "openssl >=3.0.0,<4.0a0",
+    "readline >=8.1,<9.0a0",
+    "sqlite >=3.36.0,<4.0a0",
+    "tk >=8.6.11,<8.7.0a0",
+    "tzdata",
+    "xz >=5.2.5,<5.3.0a0",
+    "zlib >=1.2.11,<1.3.0a0"
+  ],
+  "license": "Python-2.0",
+  "name": "python",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1632944405649,
+  "version": "3.9.7"
+}

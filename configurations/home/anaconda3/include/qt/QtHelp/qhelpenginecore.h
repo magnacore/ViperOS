@@ -49,24 +49,19 @@
 
 QT_BEGIN_NAMESPACE
 
+
 class QHelpEngineCorePrivate;
-class QHelpFilterEngine;
-struct QHelpLink;
 
 class QHELP_EXPORT QHelpEngineCore : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool autoSaveFilter READ autoSaveFilter WRITE setAutoSaveFilter)
     Q_PROPERTY(QString collectionFile READ collectionFile WRITE setCollectionFile)
-#if QT_DEPRECATED_SINCE(5, 15)
     Q_PROPERTY(QString currentFilter READ currentFilter WRITE setCurrentFilter)
-#endif
 
 public:
-    explicit QHelpEngineCore(const QString &collectionFile, QObject *parent = nullptr);
+    explicit QHelpEngineCore(const QString &collectionFile, QObject *parent = Q_NULLPTR);
     virtual ~QHelpEngineCore();
-
-    QHelpFilterEngine *filterEngine() const;
 
     bool setupData();
 
@@ -79,10 +74,7 @@ public:
     bool registerDocumentation(const QString &documentationFileName);
     bool unregisterDocumentation(const QString &namespaceName);
     QString documentationFileName(const QString &namespaceName);
-    QStringList registeredDocumentations() const;
-    QByteArray fileData(const QUrl &url) const;
 
-#if QT_DEPRECATED_SINCE(5,13)
     QStringList customFilters() const;
     bool removeCustomFilter(const QString &filterName);
     bool addCustomFilter(const QString &filterName,
@@ -94,28 +86,16 @@ public:
     QString currentFilter() const;
     void setCurrentFilter(const QString &filterName);
 
+    QStringList registeredDocumentations() const;
     QList<QStringList> filterAttributeSets(const QString &namespaceName) const;
     QList<QUrl> files(const QString namespaceName,
         const QStringList &filterAttributes,
         const QString &extensionFilter = QString());
-#endif
-
-    QList<QUrl> files(const QString namespaceName,
-                      const QString &filterName,
-                      const QString &extensionFilter = QString());
     QUrl findFile(const QUrl &url) const;
+    QByteArray fileData(const QUrl &url) const;
 
-#if QT_DEPRECATED_SINCE(5, 15)
-    QT_DEPRECATED_X("Use documentsForIdentifier() instead")
     QMap<QString, QUrl> linksForIdentifier(const QString &id) const;
-    QT_DEPRECATED_X("Use documentsForKeyword() instead")
     QMap<QString, QUrl> linksForKeyword(const QString &keyword) const;
-#endif
-
-    QList<QHelpLink> documentsForIdentifier(const QString &id) const;
-    QList<QHelpLink> documentsForIdentifier(const QString &id, const QString &filterName) const;
-    QList<QHelpLink> documentsForKeyword(const QString &keyword) const;
-    QList<QHelpLink> documentsForKeyword(const QString &keyword, const QString &filterName) const;
 
     bool removeCustomValue(const QString &key);
     QVariant customValue(const QString &key,
@@ -130,18 +110,12 @@ public:
     void setAutoSaveFilter(bool save);
     bool autoSaveFilter() const;
 
-    void setUsesFilterEngine(bool uses);
-    bool usesFilterEngine() const;
-
 Q_SIGNALS:
     void setupStarted();
     void setupFinished();
-    void warning(const QString &msg);
-
-#if QT_DEPRECATED_SINCE(5,13)
     void currentFilterChanged(const QString &newFilter);
+    void warning(const QString &msg);
     void readersAboutToBeInvalidated();
-#endif
 
 protected:
     QHelpEngineCore(QHelpEngineCorePrivate *helpEngineCorePrivate,

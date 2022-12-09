@@ -45,7 +45,7 @@
 #include <QtCore/QMetaType>
 #include <QtCore/QObject>
 #include <QtCore/QSharedDataPointer>
-#include <QtNfc/qtnfcglobal.h>
+#include <QtNfc/qnfcglobal.h>
 
 QT_BEGIN_NAMESPACE
 class QString;
@@ -118,7 +118,7 @@ public:
         QSharedDataPointer<RequestIdPrivate> d;
     };
 
-    explicit QNearFieldTarget(QObject *parent = nullptr);
+    explicit QNearFieldTarget(QObject *parent = Q_NULLPTR);
     virtual ~QNearFieldTarget();
 
     virtual QByteArray uid() const = 0;
@@ -152,8 +152,6 @@ public:
 protected:
     Q_INVOKABLE virtual bool handleResponse(const QNearFieldTarget::RequestId &id,
                                             const QByteArray &response);
-
-    void reportError(QNearFieldTarget::Error error, const QNearFieldTarget::RequestId &id);
 
 Q_SIGNALS:
     void disconnected();

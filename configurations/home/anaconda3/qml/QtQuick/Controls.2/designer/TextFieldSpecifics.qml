@@ -34,9 +34,9 @@
 **
 ****************************************************************************/
 
-import QtQuick 2.12
+import QtQuick 2.1
 import HelperWidgets 2.0
-import QtQuick.Layouts 1.12
+import QtQuick.Layouts 1.0
 
 Column {
     width: parent.width
@@ -57,29 +57,6 @@ Column {
                 }
 
             }
-
-            Label {
-                text: qsTr("Hover")
-                tooltip: qsTr("Whether text field accepts hover events.")
-            }
-            SecondColumnLayout {
-                CheckBox {
-                    text: backendValues.hoverEnabled.valueToString
-                    backendValue: backendValues.hoverEnabled
-                    Layout.fillWidth: true
-                }
-            }
-        }
-    }
-
-    Section {
-        width: parent.width
-        caption: qsTr("Placeholder Text Color")
-
-        ColorEditor {
-            caption: qsTr("Placeholder Text Color")
-            backendValue: backendValues.placeholderTextColor
-            supportGradient: false
         }
     }
 
@@ -92,10 +69,6 @@ Column {
     }
 
     PaddingSection {
-        width: parent.width
-    }
-
-    InsetSection {
         width: parent.width
     }
 }

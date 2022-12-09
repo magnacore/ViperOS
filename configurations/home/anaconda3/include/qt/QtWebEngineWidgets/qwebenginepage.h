@@ -41,7 +41,7 @@
 #define QWEBENGINEPAGE_H
 
 #include <QtWebEngineWidgets/qtwebenginewidgetsglobal.h>
-#include <QtWebEngineWidgets/qwebengineclientcertificateselection.h>
+#include <QtWebEngineWidgets/qwebenginecertificateerror.h>
 #include <QtWebEngineWidgets/qwebenginedownloaditem.h>
 #include <QtWebEngineCore/qwebenginecallback.h>
 #include <QtWebEngineCore/qwebenginehttprequest.h>
@@ -57,27 +57,22 @@ QT_BEGIN_NAMESPACE
 class QMenu;
 class QPrinter;
 
-class QContextMenuBuilder;
 class QWebChannel;
-class QWebEngineCertificateError;
-class QWebEngineClientCertificateSelection;
 class QWebEngineContextMenuData;
-class QWebEngineFindTextResult;
 class QWebEngineFullScreenRequest;
 class QWebEngineHistory;
 class QWebEnginePage;
 class QWebEnginePagePrivate;
 class QWebEngineProfile;
-class QWebEngineQuotaRequest;
-class QWebEngineRegisterProtocolHandlerRequest;
 class QWebEngineScriptCollection;
 class QWebEngineSettings;
-class QWebEngineUrlRequestInterceptor;
 
 class QWEBENGINEWIDGETS_EXPORT QWebEnginePage : public QObject {
     Q_OBJECT
     Q_PROPERTY(QString selectedText READ selectedText)
     Q_PROPERTY(bool hasSelection READ hasSelection)
+
+    // Ex-QWebFrame properties
     Q_PROPERTY(QUrl requestedUrl READ requestedUrl)
     Q_PROPERTY(qreal zoomFactor READ zoomFactor WRITE setZoomFactor)
     Q_PROPERTY(QString title READ title)
@@ -89,10 +84,6 @@ class QWEBENGINEWIDGETS_EXPORT QWebEnginePage : public QObject {
     Q_PROPERTY(QPointF scrollPosition READ scrollPosition NOTIFY scrollPositionChanged)
     Q_PROPERTY(bool audioMuted READ isAudioMuted WRITE setAudioMuted NOTIFY audioMutedChanged)
     Q_PROPERTY(bool recentlyAudible READ recentlyAudible NOTIFY recentlyAudibleChanged)
-    Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibleChanged)
-    Q_PROPERTY(LifecycleState lifecycleState READ lifecycleState WRITE setLifecycleState NOTIFY lifecycleStateChanged)
-    Q_PROPERTY(LifecycleState recommendedState READ recommendedState NOTIFY recommendedStateChanged)
-    Q_PROPERTY(qint64 renderProcessPid READ renderProcessPid NOTIFY renderProcessPidChanged)
 
 public:
     enum WebAction {
@@ -137,22 +128,6 @@ public:
         SavePage,
         OpenLinkInNewBackgroundTab,
         ViewSource,
-
-        ToggleBold,
-        ToggleItalic,
-        ToggleUnderline,
-        ToggleStrikethrough,
-
-        AlignLeft,
-        AlignCenter,
-        AlignRight,
-        AlignJustified,
-        Indent,
-        Outdent,
-
-        InsertOrderedList,
-        InsertUnorderedList,
-
         WebActionCount
     };
     Q_ENUM(WebAction)
@@ -185,20 +160,19 @@ public:
         NavigationTypeFormSubmitted,
         NavigationTypeBackForward,
         NavigationTypeReload,
-        NavigationTypeOther,
-        NavigationTypeRedirect,
+        NavigationTypeOther
     };
     Q_ENUM(NavigationType)
 
     enum Feature {
+#ifndef Q_QDOC
         Notifications = 0,
+#endif
         Geolocation = 1,
         MediaAudioCapture = 2,
         MediaVideoCapture,
         MediaAudioVideoCapture,
-        MouseLock,
-        DesktopVideoCapture,
-        DesktopAudioVideoCapture
+        MouseLock
     };
     Q_ENUM(Feature)
 
@@ -227,14 +201,6 @@ public:
     };
     Q_ENUM(RenderProcessTerminationStatus)
 
-    // must match WebContentsAdapterClient::LifecycleState
-    enum class LifecycleState {
-        Active,
-        Frozen,
-        Discarded,
-    };
-    Q_ENUM(LifecycleState)
-
     explicit QWebEnginePage(QObject *parent = Q_NULLPTR);
     QWebEnginePage(QWebEngineProfile *profile, QObject *parent = Q_NULLPTR);
     ~QWebEnginePage();
@@ -255,24 +221,29 @@ public:
 
     void replaceMisspelledWord(const QString &replacement);
 
-    bool event(QEvent*) override;
-
+    virtual bool event(QEvent*);
+#ifdef Q_QDOC
+    void findText(const QString &subString, FindFlags options = FindFlags());
+    void findText(const QString &subString, FindFlags options, FunctorOrLambda resultCallback);
+#else
     void findText(const QString &subString, FindFlags options = FindFlags(), const QWebEngineCallback<bool> &resultCallback = QWebEngineCallback<bool>());
-
-#if QT_CONFIG(menu)
-    QMenu *createStandardContextMenu();
 #endif
+    QMenu *createStandardContextMenu();
 
     void setFeaturePermission(const QUrl &securityOrigin, Feature feature, PermissionPolicy policy);
 
     void load(const QUrl &url);
     void load(const QWebEngineHttpRequest &request);
-    void download(const QUrl &url, const QString &filename = QString());
     void setHtml(const QString &html, const QUrl &baseUrl = QUrl());
     void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl());
 
+#ifdef Q_QDOC
+    void toHtml(FunctorOrLambda resultCallback) const;
+    void toPlainText(FunctorOrLambda resultCallback) const;
+#else
     void toHtml(const QWebEngineCallback<const QString &> &resultCallback) const;
     void toPlainText(const QWebEngineCallback<const QString &> &resultCallback) const;
+#endif
 
     QString title() const;
     void setUrl(const QUrl &url);
@@ -289,8 +260,13 @@ public:
 
     void runJavaScript(const QString& scriptSource);
     void runJavaScript(const QString& scriptSource, quint32 worldId);
+#ifdef Q_QDOC
+    void runJavaScript(const QString& scriptSource, FunctorOrLambda resultCallback);
+    void runJavaScript(const QString& scriptSource, quint32 worldId, FunctorOrLambda resultCallback);
+#else
     void runJavaScript(const QString& scriptSource, const QWebEngineCallback<const QVariant &> &resultCallback);
     void runJavaScript(const QString& scriptSource, quint32 worldId, const QWebEngineCallback<const QVariant &> &resultCallback);
+#endif
     QWebEngineScriptCollection &scripts();
     QWebEngineSettings *settings() const;
 
@@ -306,28 +282,21 @@ public:
     bool isAudioMuted() const;
     void setAudioMuted(bool muted);
     bool recentlyAudible() const;
-    qint64 renderProcessPid() const;
 
     void printToPdf(const QString &filePath, const QPageLayout &layout = QPageLayout(QPageSize(QPageSize::A4), QPageLayout::Portrait, QMarginsF()));
+#ifdef Q_QDOC
+    void printToPdf(FunctorOrLambda resultCallback, const QPageLayout &layout = QPageLayout(QPageSize(QPageSize::A4), QPageLayout::Portrait, QMarginsF()));
+#else
     void printToPdf(const QWebEngineCallback<const QByteArray&> &resultCallback, const QPageLayout &layout = QPageLayout(QPageSize(QPageSize::A4), QPageLayout::Portrait, QMarginsF()));
+#endif
+
+#ifdef Q_QDOC
+    void print(QPrinter *printer, FunctorOrLambda resultCallback);
+#else
     void print(QPrinter *printer, const QWebEngineCallback<bool> &resultCallback);
-
-    void setInspectedPage(QWebEnginePage *page);
-    QWebEnginePage *inspectedPage() const;
-    void setDevToolsPage(QWebEnginePage *page);
-    QWebEnginePage *devToolsPage() const;
-
-    void setUrlRequestInterceptor(QWebEngineUrlRequestInterceptor *interceptor);
+#endif // QDOC
 
     const QWebEngineContextMenuData &contextMenuData() const;
-
-    LifecycleState lifecycleState() const;
-    void setLifecycleState(LifecycleState state);
-
-    LifecycleState recommendedState() const;
-
-    bool isVisible() const;
-    void setVisible(bool visible);
 
 Q_SIGNALS:
     void loadStarted();
@@ -342,11 +311,6 @@ Q_SIGNALS:
     void featurePermissionRequested(const QUrl &securityOrigin, QWebEnginePage::Feature feature);
     void featurePermissionRequestCanceled(const QUrl &securityOrigin, QWebEnginePage::Feature feature);
     void fullScreenRequested(QWebEngineFullScreenRequest fullScreenRequest);
-    void quotaRequested(QWebEngineQuotaRequest quotaRequest);
-    void registerProtocolHandlerRequested(QWebEngineRegisterProtocolHandlerRequest request);
-#if !defined(QT_NO_SSL) || QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-    void selectClientCertificate(QWebEngineClientCertificateSelection clientCertSelection);
-#endif
 
     void authenticationRequired(const QUrl &requestUrl, QAuthenticator *authenticator);
     void proxyAuthenticationRequired(const QUrl &requestUrl, QAuthenticator *authenticator, const QString &proxyHost);
@@ -363,17 +327,8 @@ Q_SIGNALS:
     void contentsSizeChanged(const QSizeF &size);
     void audioMutedChanged(bool muted);
     void recentlyAudibleChanged(bool recentlyAudible);
-    void renderProcessPidChanged(qint64 pid);
 
     void pdfPrintingFinished(const QString &filePath, bool success);
-    void printRequested();
-
-    void visibleChanged(bool visible);
-
-    void lifecycleStateChanged(LifecycleState state);
-    void recommendedStateChanged(LifecycleState state);
-
-    void findTextFinished(const QWebEngineFindTextResult &result);
 
 protected:
     virtual QWebEnginePage *createWindow(WebWindowType type);
@@ -393,7 +348,6 @@ private:
     Q_PRIVATE_SLOT(d_func(), void _q_webActionTriggered(bool checked))
 #endif
 
-    friend class QContextMenuBuilder;
     friend class QWebEngineFullScreenRequest;
     friend class QWebEngineView;
     friend class QWebEngineViewPrivate;
@@ -402,7 +356,6 @@ private:
 #endif // QT_NO_ACCESSIBILITY
 };
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(QWebEnginePage::FindFlags)
 
 QT_END_NAMESPACE
 

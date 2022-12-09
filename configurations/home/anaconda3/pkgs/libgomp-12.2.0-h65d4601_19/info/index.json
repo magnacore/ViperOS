@@ -1,0 +1,14 @@
+{
+  "arch": "x86_64",
+  "build": "h65d4601_19",
+  "build_number": 19,
+  "depends": [
+    "_libgcc_mutex 0.1 conda_forge"
+  ],
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "name": "libgomp",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1666519598453,
+  "version": "12.2.0"
+}

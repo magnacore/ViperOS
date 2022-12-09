@@ -1,10 +1,10 @@
-#!/home/goldust/anaconda3/bin/python
+#!/home/manuj/anaconda3/bin/python
 
 # -*- coding: utf-8 -*-
 import re
 import sys
 
-from pytest import console_main
+from py.test import console_main
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])

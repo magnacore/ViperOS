@@ -79,15 +79,8 @@ protected:
     friend class QLowEnergyCharacteristic;
     friend class QLowEnergyService;
     friend class QLowEnergyControllerPrivate;
-    friend class QLowEnergyControllerPrivateAndroid;
-    friend class QLowEnergyControllerPrivateBluez;
-    friend class QLowEnergyControllerPrivateBluezDBus;
-    friend class QLowEnergyControllerPrivateCommon;
-    friend class QLowEnergyControllerPrivateWin32;
-    friend class QLowEnergyControllerPrivateDarwin;
-    friend class QLowEnergyControllerPrivateWinRT;
-    friend class QLowEnergyControllerPrivateWinRTNew;
-    QLowEnergyDescriptorPrivate *data = nullptr;
+    friend class QLowEnergyControllerPrivateOSX;
+    QLowEnergyDescriptorPrivate *data;
 
     QLowEnergyDescriptor(QSharedPointer<QLowEnergyServicePrivate> p,
                              QLowEnergyHandle charHandle,
@@ -95,7 +88,5 @@ protected:
 };
 
 QT_END_NAMESPACE
-
-Q_DECLARE_METATYPE(QLowEnergyDescriptor)
 
 #endif // QLOWENERGYDESCRIPTOR_H

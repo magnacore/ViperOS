@@ -1,0 +1,128 @@
+# This file created by conda-build 3.22.0
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Wed Oct 12 22:10:41 2022
+# ------------------------------------------------
+
+package:
+  name: cryptography
+  version: 38.0.1
+source:
+  sha256: 1db3d807a14931fa317f96435695d9ec386be7b84b618cc61cfa5d08b0ae33d7
+  url: https://pypi.io/packages/source/c/cryptography/cryptography-38.0.1.tar.gz
+build:
+  number: '0'
+  script: /croot/cryptography_1665612644927/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/bin/python
+    -m pip install . -vv
+  string: py39h9ce1e76_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - binutils_impl_linux-64 2.33.1 he6710b0_7
+    - binutils_linux-64 2.33.1 h9595d00_15
+    - gcc_impl_linux-64 7.3.0 habb00fd_1
+    - gcc_linux-64 7.3.0 h553295d_15
+    - gxx_impl_linux-64 7.3.0 hdf63c60_1
+    - gxx_linux-64 7.3.0 h553295d_15
+    - ld_impl_linux-64 2.33.1 h53a641e_7
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - rust 1.56.0 h06a4308_0
+    - rust_linux-64 1.46.0 hf484d3e_0
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - ca-certificates 2022.07.19 h06a4308_0
+    - certifi 2022.9.24 py39h06a4308_0
+    - cffi 1.15.1 py39h74dc2b5_0
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.3 he6710b0_2
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - ncurses 6.3 h5eee18b_3
+    - openssl 1.1.1q h7f8727e_0
+    - pip 22.2.2 py39h06a4308_0
+    - pycparser 2.21 pyhd3eb1b0_0
+    - python 3.9.13 haa1d7c7_1
+    - readline 8.1.2 h7f8727e_1
+    - semantic_version 2.8.5 pyhd3eb1b0_0
+    - setuptools 63.4.1 py39h06a4308_0
+    - setuptools-rust 0.12.1 pyhd3eb1b0_0
+    - sqlite 3.39.3 h5082296_0
+    - tk 8.6.12 h1ccaba5_0
+    - toml 0.10.2 pyhd3eb1b0_0
+    - tzdata 2022c h04d1e81_0
+    - wheel 0.37.1 pyhd3eb1b0_0
+    - xz 5.2.6 h5eee18b_0
+    - zlib 1.2.12 h5eee18b_3
+  run:
+    - cffi >=1.12
+    - libgcc-ng
+    - openssl
+    - python >=3.9,<3.10.0a0
+test:
+  commands:
+    - pip check
+    - pytest -n auto
+  imports:
+    - cryptography
+    - cryptography.fernet
+    - cryptography.hazmat
+    - cryptography.hazmat.backends
+    - cryptography.hazmat.backends.openssl
+    - cryptography.hazmat.bindings
+    - cryptography.hazmat.bindings.openssl
+    - cryptography.hazmat.primitives
+    - cryptography.hazmat.primitives.asymmetric
+    - cryptography.hazmat.primitives.ciphers
+    - cryptography.hazmat.primitives.kdf
+    - cryptography.hazmat.primitives.twofactor
+    - cryptography.x509
+  requires:
+    - cryptography-vectors 38.0.1.*
+    - hypothesis >=1.11.4,!=3.79.2
+    - iso8601
+    - pip
+    - pretend
+    - pytest >=6.2.0
+    - pytest-benchmark
+    - pytest-subtests
+    - pytest-xdist
+    - pytz
+  source_files:
+    - tests
+about:
+  description: 'Cryptography is a package which provides cryptographic recipes and
+
+    primitives to Python developers. Our goal is for it to be your
+
+    "cryptographic standard library". It supports Python 3.6+ and PyPy3 7.2+.
+
+    cryptography includes both high level recipes and low level interfaces to
+
+    common cryptographic algorithms such as symmetric ciphers, message digests,
+
+    and key derivation functions.
+
+    '
+  dev_url: https://github.com/pyca/cryptography
+  doc_source_url: https://github.com/pyca/cryptography/blob/38.0.1/docs/index.rst
+  doc_url: https://cryptography.io/en/38.0.1/
+  home: https://github.com/pyca/cryptography
+  license: (BSD-3-Clause OR Apache-2.0) AND PSF-2.0 AND MIT
+  license_family: BSD
+  license_file: LICENSE
+  license_url: https://github.com/pyca/cryptography/blob/38.0.1/vectors/LICENSE
+  summary: Provides cryptographic recipes and primitives to Python developers
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: 539655a9-fd88-45b9-83ee-8fa842c19eac
+  recipe-maintainers:
+    - chenghlee
+    - jakirkham
+    - ocefpaf
+  remote_url: git@github.com:AnacondaRecipes/cryptography-feedstock.git
+  sha: 256a94b06cbc66b494341eb105a32e7f481bd531

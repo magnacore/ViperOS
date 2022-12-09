@@ -1,11 +1,9 @@
 #! /bin/sh
 
-prefix=/home/goldust/anaconda3
+prefix=/home/manuj/anaconda3
 exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib
-cflags=
-libs=
 
 usage()
 {
@@ -58,7 +56,7 @@ while test $# -gt 0; do
       ;;
 
     --version)
-	echo 2.9.14
+	echo 2.9.10
 	exit 0
 	;;
 
@@ -67,7 +65,7 @@ while test $# -gt 0; do
 	;;
 
     --cflags)
-        cflags="-I${includedir}/libxml2 -I/home/goldust/anaconda3/include "
+        cflags="-I${includedir}/libxml2 -I/home/manuj/anaconda3/include "
        	;;
 
     --libtool-libs)
@@ -86,7 +84,7 @@ while test $# -gt 0; do
             shift
             libs="-lxml2"
         else
-            libs="-lxml2 -L/home/goldust/anaconda3/lib -lz -L/home/goldust/anaconda3/lib -llzma -lpthread -L/home/goldust/anaconda3/lib -L/home/goldust/anaconda3/lib -licui18n -licuuc -licudata -lm  -ldl"
+            libs="-lxml2 -L/home/manuj/anaconda3/lib -lz -L/home/manuj/anaconda3/lib -llzma -lpthread -L/home/manuj/anaconda3/lib -L/home/manuj/anaconda3/lib -licui18n -licuuc -licudata -lm  -ldl"
         fi
 
         if [ "-L${libdir}" != "-L/usr/lib" -a "-L${libdir}" != "-L/usr/lib64" ]; then
@@ -97,13 +95,14 @@ while test $# -gt 0; do
         ;;
 
     *)
-	usage 1
+	usage
+	exit 1
 	;;
     esac
     shift
 done
 
-if test -n "$cflags$libs"; then
+if test "$cflags" -o "$libs"; then
     echo $cflags $libs
 fi
 

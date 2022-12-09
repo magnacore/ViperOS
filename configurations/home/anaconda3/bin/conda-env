@@ -1,4 +1,6 @@
-#!/home/goldust/anaconda3/bin/python
+#!/bin/sh
+'''exec' "/home/manuj/anaconda3/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import sys
 

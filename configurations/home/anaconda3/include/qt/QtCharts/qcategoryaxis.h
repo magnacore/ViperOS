@@ -37,7 +37,7 @@ QT_CHARTS_BEGIN_NAMESPACE
 
 class QCategoryAxisPrivate;
 
-class Q_CHARTS_EXPORT QCategoryAxis : public QValueAxis
+class QT_CHARTS_EXPORT QCategoryAxis : public QValueAxis
 {
     Q_OBJECT
     Q_PROPERTY(qreal startValue READ startValue WRITE setStartValue)
@@ -53,11 +53,11 @@ public:
         AxisLabelsPositionOnValue = 0x1
     };
 
-    explicit QCategoryAxis(QObject *parent = nullptr);
+    explicit QCategoryAxis(QObject *parent = Q_NULLPTR);
     ~QCategoryAxis();
 
 protected:
-    QCategoryAxis(QCategoryAxisPrivate &d, QObject *parent = nullptr);
+    QCategoryAxis(QCategoryAxisPrivate &d, QObject *parent = Q_NULLPTR);
 
 public:
     AxisType type() const;

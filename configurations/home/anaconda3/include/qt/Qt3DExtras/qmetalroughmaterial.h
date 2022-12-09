@@ -54,42 +54,30 @@ namespace Qt3DExtras {
 
 class QMetalRoughMaterialPrivate;
 
-class Q_3DEXTRASSHARED_EXPORT QMetalRoughMaterial : public Qt3DRender::QMaterial
+class QT3DEXTRASSHARED_EXPORT QMetalRoughMaterial : public Qt3DRender::QMaterial
 {
     Q_OBJECT
-    Q_PROPERTY(QVariant baseColor READ baseColor WRITE setBaseColor NOTIFY baseColorChanged)
-    Q_PROPERTY(QVariant metalness READ metalness WRITE setMetalness NOTIFY metalnessChanged)
-    Q_PROPERTY(QVariant roughness READ roughness WRITE setRoughness NOTIFY roughnessChanged)
-    Q_PROPERTY(QVariant ambientOcclusion READ ambientOcclusion WRITE setAmbientOcclusion NOTIFY ambientOcclusionChanged REVISION 10)
-    Q_PROPERTY(QVariant normal READ normal WRITE setNormal NOTIFY normalChanged REVISION 10)
-    Q_PROPERTY(float textureScale READ textureScale WRITE setTextureScale NOTIFY textureScaleChanged REVISION 10)
+    Q_PROPERTY(QColor baseColor READ baseColor WRITE setBaseColor NOTIFY baseColorChanged)
+    Q_PROPERTY(float metalness READ metalness WRITE setMetalness NOTIFY metalnessChanged)
+    Q_PROPERTY(float roughness READ roughness WRITE setRoughness NOTIFY roughnessChanged)
 
 public:
     explicit QMetalRoughMaterial(Qt3DCore::QNode *parent = nullptr);
     ~QMetalRoughMaterial();
 
-    QVariant baseColor() const;
-    QVariant metalness() const;
-    QVariant roughness() const;
-    QVariant ambientOcclusion() const;
-    QVariant normal() const;
-    float textureScale() const;
+    QColor baseColor() const;
+    float metalness() const;
+    float roughness() const;
 
 public Q_SLOTS:
-    void setBaseColor(const QVariant &baseColor);
-    void setMetalness(const QVariant &metalness);
-    void setRoughness(const QVariant &roughness);
-    void setAmbientOcclusion(const QVariant &ambientOcclusion);
-    void setNormal(const QVariant &normal);
-    void setTextureScale(float textureScale);
+    void setBaseColor(const QColor &baseColor);
+    void setMetalness(float metalness);
+    void setRoughness(float roughness);
 
 Q_SIGNALS:
-    void baseColorChanged(const QVariant &baseColor);
-    void metalnessChanged(const QVariant &metalness);
-    void roughnessChanged(const QVariant &roughness);
-    void ambientOcclusionChanged(const QVariant &ambientOcclusion);
-    void normalChanged(const QVariant &normal);
-    void textureScaleChanged(float textureScale);
+    void baseColorChanged(const QColor &baseColor);
+    void metalnessChanged(float metalness);
+    void roughnessChanged(float roughness);
 
 protected:
     explicit QMetalRoughMaterial(QMetalRoughMaterialPrivate &dd, Qt3DCore::QNode *parent = nullptr);

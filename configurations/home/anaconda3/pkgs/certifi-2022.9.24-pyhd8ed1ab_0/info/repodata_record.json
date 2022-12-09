@@ -1,0 +1,23 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.7"
+  ],
+  "features": "",
+  "fn": "certifi-2022.9.24-pyhd8ed1ab_0.tar.bz2",
+  "license": "ISC",
+  "md5": "f66309b099374af91369e67e84af397d",
+  "name": "certifi",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "52e7459b3c457e888e2b6a4e6d13ab7f8675999bc12d20a83e34f12591a8771a",
+  "size": 158709,
+  "subdir": "noarch",
+  "timestamp": 1664051606056,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/certifi-2022.9.24-pyhd8ed1ab_0.tar.bz2",
+  "version": "2022.9.24"
+}

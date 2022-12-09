@@ -53,7 +53,7 @@ class QAbstractState;
 class QState;
 class QStateMachine;
 
-#if QT_CONFIG(animation)
+#ifndef QT_NO_ANIMATION
 class QAbstractAnimation;
 #endif
 
@@ -72,7 +72,7 @@ public:
     };
     Q_ENUM(TransitionType)
 
-    QAbstractTransition(QState *sourceState = nullptr);
+    QAbstractTransition(QState *sourceState = Q_NULLPTR);
     virtual ~QAbstractTransition();
 
     QState *sourceState() const;
@@ -86,7 +86,7 @@ public:
 
     QStateMachine *machine() const;
 
-#if QT_CONFIG(animation)
+#ifndef QT_NO_ANIMATION
     void addAnimation(QAbstractAnimation *animation);
     void removeAnimation(QAbstractAnimation *animation);
     QList<QAbstractAnimation*> animations() const;
@@ -102,7 +102,7 @@ protected:
 
     virtual void onTransition(QEvent *event) = 0;
 
-    bool event(QEvent *e) override;
+    bool event(QEvent *e) Q_DECL_OVERRIDE;
 
 protected:
     QAbstractTransition(QAbstractTransitionPrivate &dd, QState *parent);

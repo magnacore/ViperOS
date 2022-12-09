@@ -1,0 +1,16 @@
+{
+  "arch": "x86_64",
+  "build": "py39h06a4308_0",
+  "build_number": 0,
+  "depends": [
+    "python >=3.9,<3.10.0a0",
+    "typing_extensions >=3.10"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "pypdf2",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1662469803867,
+  "version": "2.10.5"
+}

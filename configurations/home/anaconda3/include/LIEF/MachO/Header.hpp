@@ -1,5 +1,5 @@
-/* Copyright 2017 - 2021 R. Thomas
- * Copyright 2017 - 2021 Quarkslab
+/* Copyright 2017 R. Thomas
+ * Copyright 2017 Quarkslab
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,13 +24,10 @@
 
 #include "LIEF/Abstract/enums.hpp"
 
-#include "LIEF/MachO/enums.hpp"
+#include "LIEF/MachO/Structures.hpp"
 
 namespace LIEF {
 namespace MachO {
-struct mach_header_64;
-struct mach_header;
-
 class LIEF_API Header : public Object {
   public:
   using flags_list_t = std::set<HEADER_FLAGS>;

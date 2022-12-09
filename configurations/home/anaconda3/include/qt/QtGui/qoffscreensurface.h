@@ -57,12 +57,11 @@ class Q_GUI_EXPORT QOffscreenSurface : public QObject, public QSurface
     Q_DECLARE_PRIVATE(QOffscreenSurface)
 
 public:
-    // ### Qt 6: merge overloads
-    explicit QOffscreenSurface(QScreen *screen, QObject *parent);
-    explicit QOffscreenSurface(QScreen *screen = nullptr);
-    ~QOffscreenSurface();
 
-    SurfaceType surfaceType() const override;
+    explicit QOffscreenSurface(QScreen *screen = Q_NULLPTR);
+    virtual ~QOffscreenSurface();
+
+    SurfaceType surfaceType() const Q_DECL_OVERRIDE;
 
     void create();
     void destroy();
@@ -70,10 +69,10 @@ public:
     bool isValid() const;
 
     void setFormat(const QSurfaceFormat &format);
-    QSurfaceFormat format() const override;
+    QSurfaceFormat format() const Q_DECL_OVERRIDE;
     QSurfaceFormat requestedFormat() const;
 
-    QSize size() const override;
+    QSize size() const Q_DECL_OVERRIDE;
 
     QScreen *screen() const;
     void setScreen(QScreen *screen);
@@ -91,7 +90,7 @@ private Q_SLOTS:
 
 private:
 
-    QPlatformSurface *surfaceHandle() const override;
+    QPlatformSurface *surfaceHandle() const Q_DECL_OVERRIDE;
 
     Q_DISABLE_COPY(QOffscreenSurface)
 };

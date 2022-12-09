@@ -1,0 +1,58 @@
+{
+  "build": "py38h06a4308_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.8,<3.9.0a0"
+  ],
+  "extracted_package_dir": "/home/manuj/anaconda3/pkgs/sniffio-1.2.0-py38h06a4308_1",
+  "features": "",
+  "files": [
+    "lib/python3.8/site-packages/sniffio-1.2.0.dist-info/INSTALLER",
+    "lib/python3.8/site-packages/sniffio-1.2.0.dist-info/LICENSE",
+    "lib/python3.8/site-packages/sniffio-1.2.0.dist-info/LICENSE.APACHE2",
+    "lib/python3.8/site-packages/sniffio-1.2.0.dist-info/LICENSE.MIT",
+    "lib/python3.8/site-packages/sniffio-1.2.0.dist-info/METADATA",
+    "lib/python3.8/site-packages/sniffio-1.2.0.dist-info/RECORD",
+    "lib/python3.8/site-packages/sniffio-1.2.0.dist-info/REQUESTED",
+    "lib/python3.8/site-packages/sniffio-1.2.0.dist-info/WHEEL",
+    "lib/python3.8/site-packages/sniffio-1.2.0.dist-info/direct_url.json",
+    "lib/python3.8/site-packages/sniffio-1.2.0.dist-info/top_level.txt",
+    "lib/python3.8/site-packages/sniffio/__init__.py",
+    "lib/python3.8/site-packages/sniffio/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/sniffio/__pycache__/_impl.cpython-38.pyc",
+    "lib/python3.8/site-packages/sniffio/__pycache__/_version.cpython-38.pyc",
+    "lib/python3.8/site-packages/sniffio/_impl.py",
+    "lib/python3.8/site-packages/sniffio/_tests/__init__.py",
+    "lib/python3.8/site-packages/sniffio/_tests/__pycache__/__init__.cpython-38.pyc",
+    "lib/python3.8/site-packages/sniffio/_tests/__pycache__/test_sniffio.cpython-38.pyc",
+    "lib/python3.8/site-packages/sniffio/_tests/test_sniffio.py",
+    "lib/python3.8/site-packages/sniffio/_version.py",
+    "lib/python3.8/site-packages/sniffio/py.typed"
+  ],
+  "fn": "sniffio-1.2.0-py38h06a4308_1.conda",
+  "legacy_bz2_md5": "884ea8d949dedfb11505f8d0e27c022e",
+  "legacy_bz2_size": 15671,
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/manuj/anaconda3/pkgs/sniffio-1.2.0-py38h06a4308_1",
+    "type": 1
+  },
+  "md5": "95d3411f0f78c324a6655a2b370df2c5",
+  "name": "sniffio",
+  "package_tarball_full_path": "/home/manuj/anaconda3/pkgs/sniffio-1.2.0-py38h06a4308_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "sniffio==1.2.0=py38h06a4308_1",
+  "sha256": "32718ccaffe34f63aa69ec1343ed5f992a16f510feed9223b0784c898643b527",
+  "size": 14959,
+  "subdir": "linux-64",
+  "timestamp": 1614030513783,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/sniffio-1.2.0-py38h06a4308_1.conda",
+  "version": "1.2.0"
+}

@@ -49,17 +49,14 @@ namespace Qt3DAnimation {
 
 class QAnimationClip;
 class QChannelMapper;
-class QClock;
 class QAbstractClipAnimatorPrivate;
 
-class Q_3DANIMATIONSHARED_EXPORT QAbstractClipAnimator : public Qt3DCore::QComponent
+class QT3DANIMATIONSHARED_EXPORT QAbstractClipAnimator : public Qt3DCore::QComponent
 {
     Q_OBJECT
     Q_PROPERTY(bool running READ isRunning WRITE setRunning NOTIFY runningChanged)
     Q_PROPERTY(int loops READ loopCount WRITE setLoopCount NOTIFY loopCountChanged)
     Q_PROPERTY(Qt3DAnimation::QChannelMapper *channelMapper READ channelMapper WRITE setChannelMapper NOTIFY channelMapperChanged)
-    Q_PROPERTY(Qt3DAnimation::QClock *clock READ clock WRITE setClock NOTIFY clockChanged)
-    Q_PROPERTY(float normalizedTime READ normalizedTime WRITE setNormalizedTime NOTIFY normalizedTimeChanged)
 
 public:
     enum Loops { Infinite = -1 };
@@ -70,15 +67,11 @@ public:
     bool isRunning() const;
     Qt3DAnimation::QChannelMapper *channelMapper() const;
     int loopCount() const;
-    Qt3DAnimation::QClock *clock() const;
-    float normalizedTime() const;
 
 public Q_SLOTS:
     void setRunning(bool running);
     void setChannelMapper(Qt3DAnimation::QChannelMapper *channelMapper);
     void setLoopCount(int loops);
-    void setClock(Qt3DAnimation::QClock *clock);
-    void setNormalizedTime(float timeFraction);
 
     void start();
     void stop();
@@ -87,15 +80,11 @@ Q_SIGNALS:
     void runningChanged(bool running);
     void channelMapperChanged(Qt3DAnimation::QChannelMapper *channelMapper);
     void loopCountChanged(int loops);
-    void clockChanged(Qt3DAnimation::QClock *clock);
-    void normalizedTimeChanged(float index);
 
 protected:
     explicit QAbstractClipAnimator(Qt3DCore::QNode *parent = nullptr);
     QAbstractClipAnimator(QAbstractClipAnimatorPrivate &dd, Qt3DCore::QNode *parent = nullptr);
 
-    // TODO Unused remove in Qt6
-    void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override;
 private:
     Q_DECLARE_PRIVATE(QAbstractClipAnimator)
 };

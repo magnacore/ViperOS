@@ -1,4 +1,4 @@
-QT.nfc.VERSION = 5.15.2
+QT.nfc.VERSION = 5.9.7
 QT.nfc.name = QtNfc
 QT.nfc.module = Qt5Nfc
 QT.nfc.libs = $$QT_MODULE_LIB_BASE

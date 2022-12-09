@@ -40,7 +40,7 @@
 #ifndef QNDEFNFCTEXTRECORD_H
 #define QNDEFNFCTEXTRECORD_H
 
-#include <QtNfc/qtnfcglobal.h>
+#include <QtNfc/qnfcglobal.h>
 #include <QtNfc/QNdefRecord>
 
 QT_BEGIN_NAMESPACE

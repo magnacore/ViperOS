@@ -50,19 +50,21 @@ class Q_CORE_EXPORT QBitArray
 {
     friend Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QBitArray &);
     friend Q_CORE_EXPORT QDataStream &operator>>(QDataStream &, QBitArray &);
-    friend Q_CORE_EXPORT uint qHash(const QBitArray &key, uint seed) noexcept;
+    friend Q_CORE_EXPORT uint qHash(const QBitArray &key, uint seed) Q_DECL_NOTHROW;
     QByteArray d;
 
 public:
-    inline QBitArray() noexcept {}
+    inline QBitArray() Q_DECL_NOTHROW {}
     explicit QBitArray(int size, bool val = false);
     QBitArray(const QBitArray &other) : d(other.d) {}
     inline QBitArray &operator=(const QBitArray &other) { d = other.d; return *this; }
-    inline QBitArray(QBitArray &&other) noexcept : d(std::move(other.d)) {}
-    inline QBitArray &operator=(QBitArray &&other) noexcept
+#ifdef Q_COMPILER_RVALUE_REFS
+    inline QBitArray(QBitArray &&other) Q_DECL_NOTHROW : d(std::move(other.d)) {}
+    inline QBitArray &operator=(QBitArray &&other) Q_DECL_NOTHROW
     { qSwap(d, other.d); return *this; }
+#endif
 
-    inline void swap(QBitArray &other) noexcept { qSwap(d, other.d); }
+    inline void swap(QBitArray &other) Q_DECL_NOTHROW { qSwap(d, other.d); }
 
     inline int size() const { return (d.size() << 3) - *d.constData(); }
     inline int count() const { return (d.size() << 3) - *d.constData(); }
@@ -101,9 +103,6 @@ public:
     void fill(bool val, int first, int last);
 
     inline void truncate(int pos) { if (pos < size()) resize(pos); }
-
-    const char *bits() const { return isEmpty() ? nullptr : d.constData() + 1; }
-    static QBitArray fromBits(const char *data, qsizetype len);
 
 public:
     typedef QByteArray::DataPtr DataPtr;
@@ -149,7 +148,6 @@ private:
     inline QBitRef(QBitArray& array, int idx) : a(array), i(idx) {}
     friend class QBitArray;
 public:
-    QBitRef(const QBitRef &) = default;
     inline operator bool() const { return a.testBit(i); }
     inline bool operator!() const { return !a.testBit(i); }
     QBitRef& operator=(const QBitRef& val) { a.setBit(i, val); return *this; }
