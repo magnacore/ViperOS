@@ -422,6 +422,9 @@ wget
 -xfce4-eyes-plugin
 -xfce4-sensors-plugin
 
+echo "---------------------------------------------------";
+echo "| install packages                                  |";
+echo "---------------------------------------------------";
 # ViperOS Modification
 @fonts
 @hardware-support
@@ -525,10 +528,14 @@ java-1.8.0-openjdk.x86_64
 flatpak
 p7zip
 zoxide
-# catfile search is already installed
+# catfish search is already installed
 qdirstat
 
 -gnumeric
+
+echo "---------------------------------------------------";
+echo "| install packages end                              |";
+echo "---------------------------------------------------";
 
 %end
 
@@ -541,6 +548,9 @@ qdirstat
 # Enable domain resolveing
 cp --remove-destination /etc/resolv.conf /mnt/sysimage/etc/resolv.conf
 
+echo "---------------------------------------------------";
+echo "| Copy configs                                    |";
+echo "---------------------------------------------------";
 # Create needed directories
 mkdir -p /mnt/sysimage/etc/skel/.config
 mkdir -p /mnt/sysimage/etc/skel/.local
@@ -628,6 +638,10 @@ chmod 640 /var/lib/plocate/plocate.db
 cp -fr /builddir/custom-config/ViperOS/configurations/executables/ueberzug/ueberzug /mnt/sysimage/etc/skel/anaconda3/envs/util/bin
 chmod 755 /mnt/sysimage/etc/skel/anaconda3/envs/util/bin/ueberzug
 
+echo "---------------------------------------------------";
+echo "| Copy configs end                                  |";
+echo "---------------------------------------------------";
+
 # Change fedora logos & anaconda logos
 # Copy initrd with brynux boot screen to livecd root
 # Copy Boot icon
@@ -683,6 +697,9 @@ echo "---------------------------------------------------";
 # Set plymouth theme
 plymouth-set-default-theme details -R
 
+echo "---------------------------------------------------";
+echo "| Install flatpaks                                 |";
+echo "---------------------------------------------------";
 # Install Flatpaks
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
@@ -723,6 +740,10 @@ flatpak install flathub se.manyver.Manyverse -y
 flatpak install flathub org.gnome.seahorse.Application -y
 flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub com.github.micahflee.torbrowser-launcher -y
+
+echo "---------------------------------------------------";
+echo "| Install flatpaks end                             |";
+echo "---------------------------------------------------";
 
 # Install rpms
 dnf -y install https://launchpad.net/veracrypt/trunk/1.25.9/+download/veracrypt-1.25.9-CentOS-8-x86_64.rpm
